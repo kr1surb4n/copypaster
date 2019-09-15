@@ -3,9 +3,8 @@
 
 ** in
 
-*** write all objects
-
 ** started
+
 
 ** done
 
@@ -22,6 +21,18 @@
 
 ***** in toolbar:
 - 4 buttons
+
+*** DONE write all objects
+    CLOSED: [2019-09-15 nie 19:37]
+
+*** DONE add toolbar
+    CLOSED: [2019-09-15 nie 19:36]
+
+*** DONE add main widget
+    CLOSED: [2019-09-15 nie 19:36]
+
+*** DONE finish adding simple dialog
+    CLOSED: [2019-09-15 nie 19:37]
 
 * architecture
 *** objects 

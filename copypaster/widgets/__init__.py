@@ -5,6 +5,9 @@ import time
 import tkinter
 import tkinter.ttk as ttk
 from tkinter.filedialog import askopenfilename
+
+import gi
+gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio
 
 # All translations provided for illustrative purposes only.
@@ -12,114 +15,70 @@ from gi.repository import Gtk, Gio
 _ = lambda s: s
 
 
-
-class PopupDialog(ttk.Frame):
-    "Sample popup dialog implemented to provide feedback."
-
-    def __init__(self, parent, title, body):
-        ttk.Frame.__init__(self, parent)
-        self.top = tkinter.Toplevel(parent)
-        _label = ttk.Label(self.top, text=body, justify=tkinter.LEFT)
-        _label.pack(padx=10, pady=10)
-        _button = ttk.Button(self.top, text=_("OK"), command=self.ok_button)
-        _button.pack(pady=5)
-        self.top.title(title)
-
-    def ok_button(self):
-        "OK button feedback."
-
-        self.top.destroy()
-
-
-
-class NavigationBar(ttk.Frame):
-    "Sample navigation pane provided by cookiecutter switch."
-
-    def __init__(self, parent):
-        ttk.Frame.__init__(self, parent)
-        self.config(border=1, relief=tkinter.GROOVE)
-
-        self.scrollbar = ttk.Scrollbar(self, orient=tkinter.VERTICAL)
-        self.scrollbar.pack(side=tkinter.RIGHT, fill=tkinter.Y, expand=1)
-
-        self.listbox = tkinter.Listbox(self, bg='white')
-        self.listbox.pack(side=tkinter.LEFT, fill=tkinter.BOTH, expand=1)
-        for i in range(1, 100):
-            self.listbox.insert(tkinter.END, _('Navigation ') + str(i))
-        self.listbox.config(yscrollcommand=self.scrollbar.set)
-        self.scrollbar.config(command=self.listbox.yview)
-        self.bind_all('<<ListboxSelect>>', self.onselect)
-        self.pack()
-
-    def onselect(self, event):
-        """Sample function provided to show how navigation commands may be \
-        received."""
-
-        widget = event.widget
-        _index = int(widget.curselection()[0])
-        _value = widget.get(_index)
-        print(_('List item'), ' %d / %s' % (_index, _value))
-
-
-        self.statusbar = Gtk.Statusbar()
-        # its context_id - not shown in the UI but needed to uniquely identify
-        # the source of a message
-        self.context_id = self.statusbar.get_context_id("example")
-        # we push a message onto the statusbar's stack
-        self.statusbar.push(
-            self.context_id, "Waiting for you to do something...")
-
-class StatusBar(Gtk.StatusBar):
-
+class StatusBar(Gtk.Statusbar):
     def __init__(self):
-        Gtk.StatusBar.__init__(self)
+        Gtk.Statusbar.__init__(self)
 
 
-class ToolBar(ttk.Frame):
+class ToolBar(Gtk.Toolbar):
     "Sample toolbar provided by cookiecutter switch."
 
-    def __init__(self, parent):
-        ttk.Frame.__init__(self, parent)
-        self.buttons = []
-        self.config(border=1, relief=tkinter.GROOVE)
-        for i in range(1, 5):
-            _button_text = _('Tool ') + str(i)
-            self.buttons.append(ttk.Button(self, text=_button_text,
-                                           command=lambda i=i:
-                                           self.run_tool(i)))
-            self.buttons[i - 1].grid(row=0)
+    def __init__(self):
+        # a toolbar
+        Gtk.Toolbar.__init__(self)
 
-    def run_tool(self, number):
-        "Sample function provided to show how a toolbar command may be used."
+        # which is the primary toolbar of the application
+        self.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
+        self.set_hexpand(True)
+        # create a button for the "new" action, with a stock image
+        new_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_NEW)
+        # label is shown
+        new_button.set_is_important(True)
+        # insert the button at position in the toolbar
 
-        print(_('Toolbar button'), number, _('pressed'))
+        self.insert(new_button, 0)
+        # show the button
+        new_button.show()
+        # set the name of the action associated with the button.
+        # The action controls the application (app)
+        new_button.set_action_name("app.new")
+        """
+        # button for the "open" action
+        open_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_OPEN)
+        open_button.set_is_important(True)
+        self.insert(open_button, 1)
+        open_button.show()
+        open_button.set_action_name("app.open")
 
+        # button for the "undo" action
+        undo_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_UNDO)
+        undo_button.set_is_important(True)
+        self.insert(undo_button, 2)
+        undo_button.show()
+        undo_button.set_action_name("win.undo")
 
+        # button for the "fullscreen/leave fullscreen" action
+        self.fullscreen_button = Gtk.ToolButton.new_from_stock(
+            Gtk.STOCK_FULLSCREEN)
+        self.fullscreen_button.set_is_important(True)
+        self.insert(self.fullscreen_button, 3)
+        self.fullscreen_button.set_action_name("win.fullscreen")
+        """
 
-class MainFrame(ttk.Frame):
+class MainFrame(Gtk.FlowBox):
     "Main area of user interface content."
 
-    past_time = datetime.datetime.now()
+    def __init__(self):
+        Gtk.FlowBox.__init__(self)
 
-    def __init__(self, parent):
-        ttk.Frame.__init__(self, parent)
+        self.set_valign(Gtk.Align.START)
+        self.set_max_children_per_line(3)
+        self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        self.buttons = []
-
-        j = 0
-        _buttons_in_row = 6
-        for i in range(81):
-            column = i % _buttons_in_row + 1
-            _button_text = 'Button %s' % column
-            _is_start = i == 0
-            self.buttons.append(ttk.Button(self, text=_button_text,
-                                           command=None))
-            self.buttons[i - 1].grid(row=j, column=column, sticky=tkinter.W) # , fill=tkinter.X
-            # self.buttons[i - 1].pack(side=tkinter.LEFT, padx=5, pady=3) # , fill=tkinter.X
-
-            if i % _buttons_in_row == 0 and not _is_start:
-                j += 1
-
+        for i in range(6):
+            _button_text = 'Button %s' % i
+            button = Gtk.Button(label=_button_text)
+            self.add(button)
 
 class MenuBar(Gio.Menu):
     "Menu bar appearing with expected components."
@@ -140,6 +99,27 @@ class AppCallbacks:
     # callback function for "about"
     def about_callback(self, action, parameter):
         print("No AboutDialog for you. This is only a demonstration.")
+        dialog = Gtk.Dialog()
+        dialog.set_title("A Gtk+ Dialog")
+        dialog.set_transient_for(self)
+        dialog.set_modal(True)
+        dialog.add_button(button_text="OK", response_id=Gtk.ResponseType.OK)
+        # connect the "response" signal (the button has been clicked) to the
+        # function on_response()
+        dialog.connect("response", self.on_response)
+
+        # get the content area of the dialog, add a label to it
+        content_area = dialog.get_content_area()
+        label = Gtk.Label("This demonstrates a dialog with a label")
+        content_area.add(label)
+        # show the dialog
+        dialog.show_all()
+
+    def on_response(self, widget, response_id):
+        print( "response_id is %s" % response_id)
+        # destroy the widget (the dialog) when the function on_response() is called
+        # (that is, when the button of the dialog has been clicked)
+        widget.destroy()
 
     # callback function for "quit"
     def quit_callback(self, action, parameter):
@@ -147,12 +127,42 @@ class AppCallbacks:
         self.quit()
 
 
-class MainWindow(AppCallbacks, Gtk.ApplicationWindow):
+class MainWindow(Gtk.ApplicationWindow):
     # constructor: the title is "Welcome to GNOME" and the window belongs
     # to the application app
 
     def __init__(self, app):
         Gtk.Window.__init__(self, title="Welcome to GNOME", application=app)
+
+        self.statusbar = StatusBar()
+        self.context_id = self.statusbar.get_context_id("example")
+        self.statusbar.push(
+            self.context_id, "Waiting for you to do something...")
+
+        # a toolbar created in the method create_toolbar (see below)
+        self.toolbar = ToolBar()
+        self.main = MainFrame()
+
+        # grid
+        self.grid = Gtk.Grid()
+        self.grid.set_orientation(Gtk.Orientation.VERTICAL)
+        # attach the toolbar to the grid
+        self.grid.add(self.toolbar)
+        self.grid.add(self.main)
+        self.grid.add(self.statusbar)
+        # add the grid to the window
+        self.add(self.grid)
+
+        self.toolbar.show()
+        self.main.show()
+        self.statusbar.show()
+        # add status bar to some grid or shit
+
+class Application(AppCallbacks, Gtk.Application):
+    # constructor of the Gtk Application
+
+    def __init__(self):
+        Gtk.Application.__init__(self)
 
         self.set_app_menu(MenuBar())
 
@@ -165,20 +175,6 @@ class MainWindow(AppCallbacks, Gtk.ApplicationWindow):
             action = Gio.SimpleAction.new(action_name, None)
             action.connect("activate", callback)
             self.add_action(action)
-
-        statusbar = StatusBar()
-        self.context_id = statusbar.get_context_id("example")
-
-        statusbar.push(
-            self.context_id, "Waiting for you to do something...")
-
-        # add status bar to some grid or shit
-
-class Application(Gtk.Application):
-    # constructor of the Gtk Application
-
-    def __init__(self):
-        Gtk.Application.__init__(self)
 
     # create and activate a MyWindow, with self (the MyApplication) as
     # application the window belongs to.
@@ -193,45 +189,6 @@ class Application(Gtk.Application):
     # Note that the function in C startup() becomes do_startup() in Python
     def do_startup(self):
         Gtk.Application.do_startup(self)
-
-
-
-
-class Application(tkinter.Tk):
-    "Create top-level Tkinter widget containing all other widgets."
-
-    def __init__(self):
-        tkinter.Tk.__init__(self)
-        menubar = MenuBar(self)
-        self.config(menu=menubar)
-        self.wm_title('Py3 Tkinter')
-        self.wm_geometry('640x480')
-
-# Status bar selection == 'y'
-        self.statusbar = StatusBar(self)
-        self.statusbar.grid(row=2)
-        self.bind_all('<Enter>', lambda e: self.statusbar.set_text(0,
-                      'Mouse: 1'))
-        self.bind_all('<Leave>', lambda e: self.statusbar.set_text(0,
-                      'Mouse: 0'))
-        self.bind_all('<Button-1>', lambda e: self.statusbar.set_text(1,
-                      'Clicked at x = ' + str(e.x) + ' y = ' + str(e.y)))
-        self.start_time = datetime.datetime.now()
-        self.uptime()
-
-# Tool bar selection == 'y'
-        self.toolbar = ToolBar(self)
-        self.toolbar.grid(row=0)
-
-
-        self.mainframe = MainFrame(self)
-        self.mainframe.grid(row=1)
-
-# Status bar selection == 'y'
-    def uptime(self):
-        _upseconds = str(int(round((datetime.datetime.now() - self.start_time).total_seconds())))
-        self.statusbar.set_text(2, _('Uptime') + ': ' + _upseconds)
-        self.after(1000, self.uptime)
 
 
 if __name__ == '__main__':
