@@ -1,0 +1,73 @@
+
+* board
+
+** in
+
+*** write all objects
+
+** started
+
+** done
+
+*** DONE list out all needed objects
+
+**** objects 
+- menu
+- toolbar
+- main window : fill x fill y
+- status bar
+
+***** in main window: 
+- 1, 2, 5, 6, 9, 10, 15, 16, 20 buttons
+
+***** in toolbar:
+- 4 buttons
+
+* architecture
+*** objects 
+- menu
+- toolbar
+- main window : fill x fill y
+- status bar
+
+**** in main window: 
+- 1, 2, 5, 6, 9, 10, 15, 16, 20 buttons
+
+**** in toolbar:
+ - 4 buttons
+
+* diary
+
+** <2019-09-13 pią>
+today i started to think about the way
+i should start this project
+
+i need to start from the test.
+but to how i should start?
+
+skeleton is hanging all the meat.
+lets build a skeleton of the app
+and then we see.
+
+i will build all the components
+in a static state. this will
+also include all possible states.
+
+** <2019-09-14 sob>
+the skeleton was build
+but aligning all objects inside a frame
+is complicated
+
+i will try now to use gtk3 with pygobjects
+
+** <2019-09-15 nie>
+
+im reading the gtk manual but i have to write stuff up
+and see where this will take me
+
+
+also i need to run the git inside here
+
+there where apps written in python in gtk3.
+where are they and why i dont have them on my hard drive?
+
