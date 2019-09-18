@@ -2,24 +2,29 @@ import datetime
 import gettext
 import sys
 import time
-import tkinter
-import tkinter.ttk as ttk
-from tkinter.filedialog import askopenfilename
-
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio
+
+from manager import Register, register_instance
 
 # All translations provided for illustrative purposes only.
  # english
 _ = lambda s: s
 
+CONTEXT = 'Button'
 
+@register_instance
 class StatusBar(Gtk.Statusbar):
     def __init__(self):
         Gtk.Statusbar.__init__(self)
+        self.context_id = self.get_context_id(CONTEXT)
+
+    def send(self, message):
+        self.push(self.context_id, message)
 
 
+@register_instance
 class ToolBar(Gtk.Toolbar):
     "Sample toolbar provided by cookiecutter switch."
 
@@ -65,6 +70,7 @@ class ToolBar(Gtk.Toolbar):
         self.fullscreen_button.set_action_name("win.fullscreen")
         """
 
+@register_instance
 class MainFrame(Gtk.FlowBox):
     "Main area of user interface content."
 
@@ -78,8 +84,15 @@ class MainFrame(Gtk.FlowBox):
         for i in range(6):
             _button_text = 'Button %s' % i
             button = Gtk.Button(label=_button_text)
+            button.number = i
+            button.connect('clicked', self.on_button_click)
             self.add(button)
 
+    def on_button_click(self, button):
+        Register['StatusBar'].send('Clicked button number %s' % button.number)
+
+
+@register_instance
 class MenuBar(Gio.Menu):
     "Menu bar appearing with expected components."
 
@@ -126,7 +139,7 @@ class AppCallbacks:
         print("You have quit.")
         self.quit()
 
-
+@register_instance
 class MainWindow(Gtk.ApplicationWindow):
     # constructor: the title is "Welcome to GNOME" and the window belongs
     # to the application app
@@ -135,9 +148,7 @@ class MainWindow(Gtk.ApplicationWindow):
         Gtk.Window.__init__(self, title="Welcome to GNOME", application=app)
 
         self.statusbar = StatusBar()
-        self.context_id = self.statusbar.get_context_id("example")
-        self.statusbar.push(
-            self.context_id, "Waiting for you to do something...")
+        self.statusbar.send("Waiting for you to do something...")
 
         # a toolbar created in the method create_toolbar (see below)
         self.toolbar = ToolBar()
@@ -158,6 +169,8 @@ class MainWindow(Gtk.ApplicationWindow):
         self.statusbar.show()
         # add status bar to some grid or shit
 
+
+@register_instance
 class Application(AppCallbacks, Gtk.Application):
     # constructor of the Gtk Application
 
