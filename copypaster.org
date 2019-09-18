@@ -5,6 +5,18 @@
 
 ** started
 
+*** run app from pytest
+
+*** run app from command line
+
+*** build dialog
+
+
+*** DONE set update action to status bar for clicking buttons
+    CLOSED: [2019-09-18 śro 18:41]
+
+*** DONE create instance object manager
+    CLOSED: [2019-09-18 śro 18:41]
 
 ** done
 
@@ -81,4 +93,21 @@ also i need to run the git inside here
 
 there where apps written in python in gtk3.
 where are they and why i dont have them on my hard drive?
+
+** <2019-09-18 śro>
+
+so today i will come back and do some
+projects
+
+what i need are diagrams of what am i doing
+
+i need to install dia
+dia was installed but i did diagrams by hand faster
+
+i made simple register based on decorators
+it holds objects and allows me to send messages
+with status bar from other buttons
+
+doing so i found a set of decorators code that
+can be useful during work
 
