@@ -6,13 +6,22 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio
 
-from manager import Register, register_instance
+from copypaster.widgets.register import Register, register_instance
 
 # All translations provided for illustrative purposes only.
  # english
 _ = lambda s: s
 
 CONTEXT = 'Button'
+
+class AnAction (Gio.SimpleAction):
+
+    @classmethod
+    def new(cls, name, parameter_type=None, callback=None):
+        action = Gio.SimpleAction.new(name, parameter_type)
+        action.connect("activate", callback)
+        return action
+
 
 @register_instance
 class StatusBar(Gtk.Statusbar):
@@ -184,9 +193,9 @@ class Application(AppCallbacks, Gtk.Application):
         ("about", self.about_callback,),
         ("quit", self.quit_callback,)]
 
+
         for action_name, callback in actions:
-            action = Gio.SimpleAction.new(action_name, None)
-            action.connect("activate", callback)
+            action = AnAction.new(action_name, None, callback)
             self.add_action(action)
 
     # create and activate a MyWindow, with self (the MyApplication) as
@@ -205,8 +214,4 @@ class Application(AppCallbacks, Gtk.Application):
 
 
 if __name__ == '__main__':
-    # create and run the application, exit with the value returned by
-    # running the program
-    app = Application()
-    exit_status = app.run(sys.argv)
-    sys.exit(exit_status)
+    main_function()

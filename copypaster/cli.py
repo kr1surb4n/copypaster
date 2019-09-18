@@ -4,6 +4,7 @@
 import sys
 import click
 
+from copypaster.copypaster import main_function
 
 @click.command()
 def main(args=None):
@@ -11,7 +12,8 @@ def main(args=None):
     click.echo("Replace this message by putting your code into "
                "copypaster.cli.main")
     click.echo("See click documentation at https://click.palletsprojects.com/")
-    return 0
+
+    return main_function()
 
 
 if __name__ == "__main__":
