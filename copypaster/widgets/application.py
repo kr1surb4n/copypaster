@@ -20,7 +20,7 @@ class AnAction (Gio.SimpleAction):
     @classmethod
     def new(cls, name, parameter_type=None, callback=None):
         action = Gio.SimpleAction.new(name, parameter_type)
-        action.connect("activate", callback)    # TODO check this code
+        action.connect("activate", callback)
         return action
 
 
@@ -28,7 +28,7 @@ class AnAction (Gio.SimpleAction):
 class StatusBar(Gtk.Statusbar):
     def __init__(self):
         Gtk.Statusbar.__init__(self)
-        self.context_id = self.get_context_id(CONTEXT)   # TODO check whats with the context
+        self.context_id = self.get_context_id(CONTEXT)
 
     def send(self, message):
         self.push(self.context_id, message)
@@ -110,7 +110,6 @@ class MenuBar(Gio.Menu):
     def __init__(self):
         Gio.Menu.__init__(self)
 
-        # setup actions
         self.append("New", "app.new")
         self.append("About", "app.about")
         self.append("Quit", "app.quit")
@@ -190,7 +189,7 @@ class Application(AppCallbacks, Gtk.Application):
     def __init__(self):
         Gtk.Application.__init__(self)
 
-        # self.set_app_menu(MenuBar())
+        self.set_app_menu(MenuBar())
 
         actions = [("new", self.new_callback,),
                    ("about", self.about_callback,),

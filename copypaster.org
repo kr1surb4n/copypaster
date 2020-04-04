@@ -5,12 +5,14 @@
 
 ** started
 
-*** run app from pytest
-
-*** run app from command line
-
 *** build dialog
 
+
+*** DONE run app from pytest
+    CLOSED: [2019-09-18 śro 20:04]
+
+*** DONE run app from command line
+    CLOSED: [2019-09-18 śro 20:04]
 
 *** DONE set update action to status bar for clicking buttons
     CLOSED: [2019-09-18 śro 18:41]
