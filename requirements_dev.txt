@@ -1,3 +1,6 @@
+-r requirements.txt
+
+
 pip
 bump2version
 wheel
@@ -14,6 +17,3 @@ pytest-runner
 pyflakes
 pylint
 # sudo python3 -m easy_install clonedigger
-
-Click
-PyGObject

@@ -1,11 +1,14 @@
-from copypaster.widgets.register import Register, register_instance
-from gi.repository import Gtk, Gio
-import datetime
-import gettext
-import sys
+from copypaster.widgets.buttons import CopyButton
+from copypaster.register import Register, register_instance
+
+from copypaster import logger
 import time
+import sys
+import gettext
+import datetime
 import gi
 gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, Gio  # noqa
 
 
 # All translations provided for illustrative purposes only.
@@ -28,7 +31,8 @@ class AnAction (Gio.SimpleAction):
 class StatusBar(Gtk.Statusbar):
     def __init__(self):
         Gtk.Statusbar.__init__(self)
-        self.context_id = self.get_context_id(CONTEXT)   # TODO check whats with the context
+        # TODO check whats with the context
+        self.context_id = self.get_context_id(CONTEXT)
 
     def send(self, message):
         self.push(self.context_id, message)
@@ -73,7 +77,7 @@ class ToolBar(Gtk.Toolbar):
         undo_button.set_action_name("win.undo")
 
         # button for the "fullscreen/leave fullscreen" action
-        self.fullscreen_button = Gtk.ToolButton.new_from_stock(
+        self.fullscreen_button = Gtk.ToolButton.new_fro _stock(
             Gtk.STOCK_FULLSCREEN)
         self.fullscreen_button.set_is_important(True)
         self.insert(self.fullscreen_button, 3)
@@ -89,31 +93,15 @@ class MainFrame(Gtk.FlowBox):
         Gtk.FlowBox.__init__(self)
 
         self.set_valign(Gtk.Align.START)
-        self.set_max_children_per_line(3)
+        self.set_max_children_per_line(4)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        for i in range(6):
-            _button_text = 'Button %s' % i
-            button = Gtk.Button(label=_button_text)
-            button.number = i
-            button.connect('clicked', self.on_button_click)
+        for kwargs in Register['Deck'].get_buttons():
+            button = CopyButton(**kwargs)
             self.add(button)
 
-    def on_button_click(self, button):
-        Register['StatusBar'].send('Clicked button number %s' % button.number)
-
-
-@register_instance
-class MenuBar(Gio.Menu):
-    "Menu bar appearing with expected components."
-
-    def __init__(self):
-        Gio.Menu.__init__(self)
-
-        # setup actions
-        self.append("New", "app.new")
-        self.append("About", "app.about")
-        self.append("Quit", "app.quit")
+    def load_buttons(self):
+        pass
 
 
 class AppCallbacks:
@@ -156,9 +144,18 @@ class AppCallbacks:
 class MainWindow(Gtk.ApplicationWindow):
     # constructor: the title is "Welcome to GNOME" and the window belongs
     # to the application app
+    screen = None
+    calculated_width = 0
+    calculated_height = 0
 
     def __init__(self, app):
-        Gtk.Window.__init__(self, title="Welcome to GNOME", application=app)
+        Gtk.Window.__init__(self, title="CopyPaster", application=app)
+        self.screen = self.get_screen()
+
+        self.calculated_width = int((self.screen.get_width() / 100) * 20)
+        self.calculated_height = self.screen.get_height()
+
+        self.set_default_size(self.calculated_width, self.calculated_height)
 
         self.statusbar = StatusBar()
         self.statusbar.send("Waiting for you to do something...")
@@ -177,9 +174,7 @@ class MainWindow(Gtk.ApplicationWindow):
         # add the grid to the window
         self.add(self.grid)
 
-        self.toolbar.show()
-        self.main.show()
-        self.statusbar.show()
+        self.toolbar.show() and self.main.show() and self.statusbar.show()
         # add status bar to some grid or shit
 
 
