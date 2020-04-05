@@ -1,0 +1,5 @@
+Click
+PyGObject
+copypaste
+xerox
+pyyaml
