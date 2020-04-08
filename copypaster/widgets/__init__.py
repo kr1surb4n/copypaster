@@ -1,14 +1,15 @@
 from copypaster.widgets.buttons import CopyButton
 from copypaster.register import Register, register_instance
 
-from copypaster import logger
+from copypaster import logger, CURRENT_DIR
 import time
 import sys
+import os
 import gettext
 import datetime
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gio  # noqa
+from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
 # All translations provided for illustrative purposes only.
@@ -85,8 +86,36 @@ class ToolBar(Gtk.Toolbar):
         """
 
 
+class NewNote(Gtk.FlowBox):
+    def __init__(self):
+        Gtk.ListBox.__init__(self)
+        self.init_forms()
+
+    def init_forms(self):
+
+        save_button = Gtk.Button(label="save from paste")
+        save_form = Gtk.Button(label="save from form")
+
+        scrolledwindow = Gtk.ScrolledWindow()
+        scrolledwindow.set_hexpand(True)
+        scrolledwindow.set_vexpand(True)
+
+        textview = Gtk.TextView()
+        textbuffer = textview.get_buffer()
+        textbuffer.set_text("")
+
+        self.add(save_button)
+
+        scrolledwindow.add(textview)
+        box.add(scrolledwindow)
+        #box.pack_start(save_form, False, True, 0)
+
+        self.add(box)
+        # textview.grab_focus()
+
+
 @register_instance
-class MainFrame(Gtk.FlowBox):
+class DirtyNotes(Gtk.FlowBox):
     "Main area of user interface content."
 
     def __init__(self):
@@ -96,12 +125,64 @@ class MainFrame(Gtk.FlowBox):
         self.set_max_children_per_line(4)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        for kwargs in Register['Deck'].get_buttons():
+        for kwargs in Register['Simple'].get_buttons():
+            button = CopyButton(**kwargs)
+            self.add(button)
+
+    def init_forms(self):
+        pass
+
+
+@register_instance
+class ButtonGrid(Gtk.FlowBox):
+    "Main area of user interface content."
+
+    def __init__(self, buttons):
+        Gtk.FlowBox.__init__(self)
+
+        self.set_valign(Gtk.Align.START)
+        self.set_max_children_per_line(4)
+        self.set_selection_mode(Gtk.SelectionMode.NONE)
+
+        for kwargs in Register[buttons].get_buttons():
             button = CopyButton(**kwargs)
             self.add(button)
 
     def load_buttons(self):
         pass
+
+
+@register_instance
+class FileCabinet(Gtk.Notebook):
+    """Here we keep the buttons grids and stuff"""
+
+    def __init__(self):
+        Gtk.Notebook.__init__(self)
+        self.pages = []
+
+        self.add_page("Dirty notes", DirtyNotes())
+        self.add_page("Simple", ButtonGrid('Simple'))
+        self.add_page("Python", ButtonGrid('Python'))
+        self.add_page("Bash", ButtonGrid('Bash'))
+
+    def add_page(self, title, _object):
+        #page = Gtk.Box()
+        # page.set_border_width(10)
+        # page.add(_object)
+        self.pages += [_object]
+        self.append_page(_object, Gtk.Label(title))
+
+
+@register_instance
+class MainFrame(Gtk.ListBox):
+    "Main area of user interface content."
+
+    def __init__(self):
+        Gtk.ListBox.__init__(self)
+
+        # self.set_valign(Gtk.Align.START)
+        self.file_cabinet = FileCabinet()
+        self.add(self.file_cabinet)
 
 
 class AppCallbacks:
@@ -184,6 +265,16 @@ class Application(AppCallbacks, Gtk.Application):
 
     def __init__(self):
         Gtk.Application.__init__(self)
+
+        style_provider = Gtk.CssProvider()
+
+        style_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
+
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(),
+            style_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+        )
 
         # self.set_app_menu(MenuBar())
 

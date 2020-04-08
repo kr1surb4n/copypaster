@@ -13,5 +13,10 @@ class Jimmy:
         # copy(text)
         xerox.copy(text)
 
+    def recieve(self):
+        contents = xerox.paste()
+        logger.debug("Pasting: {}".format(contents))
+        return contents
+
 
 jimmy = Jimmy()
