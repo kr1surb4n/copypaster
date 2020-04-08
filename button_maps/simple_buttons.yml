@@ -15,3 +15,12 @@ buttons:
   - value: "elif"
   - value: "VALUE or VALUE"
   - value: "VALUE and VALUE"
+  - value: "dupa jasio pierdzi stasio"
+    name: pierdzioszek
+  - value: ["path/", 10, 20]
+    name:
+
+  - value: |
+      - value:
+        name:
+    name: button definition

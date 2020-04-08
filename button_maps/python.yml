@@ -1,0 +1,34 @@
+info:
+  - name: "Simple buttons"
+  - category: python
+buttons:
+  - value: "#!/usr/bin/env python3"
+    name: shebang
+
+  - value: |
+      #!/usr/bin/env python3
+      # -*- coding: utf-8 -*-
+    name: shebang with encoding
+
+  - value: "# -*- coding: utf-8 -*-"
+    name: encoding
+
+  - value: print(s)
+
+  - value: "spam = 1"
+
+  - value: "3 * 'un' + 'ium'"
+
+  - value: "'Py' 'thon'"
+    name: concat two strings
+
+  - value: |
+      text = ('Put several strings within parentheses '
+              'to have them joined together.')
+    name: break long text
+
+  - value: squares = [1, 4, 9, 16, 25]
+    name: list init
+
+  - value: squares[:]
+    name: list slicing

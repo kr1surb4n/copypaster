@@ -16,7 +16,8 @@ class CopyButton(Gtk.Button):
         self.name = kwargs.get('name', None)
         self.value = kwargs.get('value', None)
 
-        assert self.value is not None, "There is no value"
+        assert self.value is not None, "There is no value for {}".format(
+            self.name)
 
         self.value = str(self.value)
         del kwargs['value']

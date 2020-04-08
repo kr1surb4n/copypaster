@@ -1,0 +1,161 @@
+info:
+  - name: "Simple buttons"
+  - category: tests
+buttons:
+  - value: "#!/usr/bin/env bash"
+    name: shebang
+  - value: echo Hello
+  - value: 'Variable="Some string"'
+  - value: echo $Variable
+  - value: '"$Variable"'
+  - value: '"$Variable"'
+  - value: "${Variable}"
+  - value: "${Variable/Some/A}"
+    name: substitute string
+  - value: "${Variable:0:Length}"
+    name: substing
+  - value: "${#Variable}"
+    name: string length
+  - value: '${Foo:-"DefaultValueIfFooIsMissingOrEmpty"}'
+    name: default value
+  - value: "array0=(one two three four five six)"
+    name: Declare an array
+  - value: "$array0"
+    name: print first element
+  - value: "${array0[0]}"
+    name: print first element
+  - value: "${array0[@]}"
+    name: Print all elements
+  - value: "${array0[2]}"
+    name: Print third element
+  - value: "${array0[@]:3:2}"
+    name: Print 2 elements starting from forth
+  - value: |
+      for i in "${array0[@]}"; do
+        echo "$i"
+      done
+    name: Print all elements. in a loop
+  - value: "echo {1..10}"
+    name: generate arbitrary strings - numbers
+  - value: "{a..z}"
+    name: generate arbitrary strings - letters
+  - value: 'echo "Last programs return value: $?"'
+    name: Last program's return value
+  - value: 'echo "Scripts PID: $$"'
+    name: Script's PID
+  - value: 'echo "Number of arguments passed to script: $#"'
+    name: Number of arguments
+  - value: 'echo "All arguments passed to script: $@"'
+    name: All arguments
+  - value: 'echo "Scripts arguments separated into different variables: $1 $2..."'
+    name: Script's arguments, one by one
+  - value: "read Name"
+    name: Read to variable
+  - value: "clear"
+    name: Clear screen
+  - value: |
+      if [ "$Name" != $USER ]
+      then
+          echo "Your name isn't your username"
+      else
+          echo "Your name is your username"
+      fi
+    name: full if
+  - value: 'echo "Always executed" || echo "Only executed if first command fails"'
+    name: OR used in expression
+  - value: 'echo "Always executed" && echo "Only executed if first command does NOT fail"'
+    name: AND used in expression
+
+  - value: 'if [ "$Name" == "Daniya" ] || [ "$Name" == "Zach" ]'
+    name: OR used in IF
+
+  - value: 'if [ "$Name" == "Steve" ] && [ "$Age" -eq 15 ]'
+    name: AND used in IF
+
+  - value: "Contents=$(cat file.txt)"
+    name: contents of command
+
+  - value: '(echo "First, Im here: $PWD") && (cd someDir; echo "Then, Im here: $PWD")'
+    name: Use subshells to work across directories
+
+  - value: |
+      cat > hello.py << EOF
+      #!/usr/bin/env python
+      from __future__ import print_function
+      import sys
+      print("#stdout", file=sys.stdout)
+      print("#stderr", file=sys.stderr)
+      for line in sys.stdin:
+          print(line, file=sys.stdout)
+      EOF
+    name: Contents to CAT a file
+
+  - value: 'python hello.py < "input.in" '
+    name: input in
+  - value: 'python hello.py 2> "error.err"'
+    name: error output
+
+  - value: 'python hello.py > "output-and-error.log" 2>&1'
+    name: redirect both output and errors to output-and-error.log
+
+  - value: |
+      cat > output.out <(echo "#helloworld")
+      echo "#helloworld" > output.out
+      echo "#helloworld" | cat > output.out
+      echo "#helloworld" | tee output.out >/dev/null
+    name: Overwrite output.out with "#helloworld"
+  - value: |
+      case "$Variable" in
+          #List patterns for the conditions you want to meet
+          0) echo "There is a zero.";;
+          1) echo "There is a one.";;
+          *) echo "It is not null.";;
+      esac
+    name: "`case` statement"
+
+  - value: |
+      for Variable in {1..3}
+      do
+          echo "$Variable"
+      done
+    name: "`foreach` loops"
+
+  - value: |
+      for ((a=1; a <= 3; a++))
+      do
+          echo $a
+      done
+    name: "`for` loops"
+
+  - value: |
+      while [ true ]
+      do
+          echo "loop body here..."
+          break
+      done
+    name: "`while` loops"
+
+  - value: for Variable in file1 file2
+    name: "`for` loops act on files"
+
+  - value: for Output in $(ls)
+    name: "`for` loops act on output"
+
+  - value: for Output in $(ls)
+    name: "`for` loops act on output"
+
+  - value: |
+      function foo ()
+      {
+          echo "Arguments work just like script arguments: $@"
+          echo "And: $1 $2..."
+          echo "This is a function"
+          return 0
+      }
+    name: full function definition
+  - value: |
+      foo ()
+      {
+          return 0
+      }
+    name: light function definition
