@@ -38,3 +38,22 @@ class CopyButton(Gtk.Button):
 
         Register['Jimmy'].send(button.value)
         Register['StatusBar'].send('Clicked button number %s' % button.value)
+
+
+class PasteButton(Gtk.Button):
+
+    def __init__(self, *args, **kwargs):
+        kwargs['label'] = "Save from Clip"
+        super(PasteButton, self).__init__(*args, **kwargs)
+
+        self.connect('clicked', self.on_button_click)
+
+    def on_button_click(self, button):
+        logger.debug(
+            "Clicked button: {} and copied value".format(button.value))
+
+        contents = Register['Jimmy'].recieve()
+        if contents:
+            Register['Jimmy'].send(button.value)
+            Register['StatusBar'].send(
+                'Clicked button number %s' % button.value)

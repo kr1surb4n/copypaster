@@ -8,8 +8,8 @@ from copypaster.register import Register, register_instance
 from copypaster.widgets import Application
 
 """ Initialize services """
-from copypaster.clipboard import Jimmy
-from copypaster.file_loader import Deck
+import copypaster.clipboard
+import copypaster.file_loader
 
 """Main module."""
 
