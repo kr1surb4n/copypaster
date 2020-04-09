@@ -20,6 +20,15 @@ def _(s): return s
 CONTEXT = 'Button'
 
 
+def wrap(widget):
+    sw = Gtk.ScrolledWindow()
+    sw.add(widget)
+    sw.set_policy(Gtk.PolicyType.AUTOMATIC,
+                  Gtk.PolicyType.AUTOMATIC)
+    sw.set_border_width(1)
+    return sw
+
+
 class AnAction (Gio.SimpleAction):
     @classmethod
     def new(cls, name, parameter_type=None, callback=None):
@@ -86,9 +95,9 @@ class ToolBar(Gtk.Toolbar):
         """
 
 
-class NewNote(Gtk.FlowBox):
+class NewNote(Gtk.Grid):
     def __init__(self):
-        Gtk.ListBox.__init__(self)
+        Gtk.Grid.__init__(self, orientation=Gtk.Orientation.VERTICAL)
         self.init_forms()
 
     def init_forms(self):
@@ -96,21 +105,26 @@ class NewNote(Gtk.FlowBox):
         save_button = Gtk.Button(label="save from paste")
         save_form = Gtk.Button(label="save from form")
 
-        scrolledwindow = Gtk.ScrolledWindow()
-        scrolledwindow.set_hexpand(True)
-        scrolledwindow.set_vexpand(True)
-
         textview = Gtk.TextView()
+        textview.set_cursor_visible(True)
+        textview.set_wrap_mode(Gtk.WrapMode.WORD)
+
         textbuffer = textview.get_buffer()
-        textbuffer.set_text("")
-
+        textbuffer.set_text("This is some text inside of a Gtk.TextView. "
+                            + "Select text and click one of the buttons 'bold', 'italic', "
+                            + "or 'underline' to modify the text accordingly.")
+        #textview.connect('focus', lambda x: x.grab_focus())
+        wig = wrap(textview)
         self.add(save_button)
-
-        scrolledwindow.add(textview)
-        box.add(scrolledwindow)
+        self.attach_next_to(wig, save_button, Gtk.PositionType.BOTTOM, 6, 1)
+        # self.add(wig)
+        self.attach_next_to(save_form, wig, Gtk.PositionType.RIGHT, 2, 1)
+        self.resize_children()
+        # self.add(textview)
+        # self.add(entry)
         #box.pack_start(save_form, False, True, 0)
 
-        self.add(box)
+        # self.add(box)
         # textview.grab_focus()
 
 
@@ -174,15 +188,16 @@ class FileCabinet(Gtk.Notebook):
 
 
 @register_instance
-class MainFrame(Gtk.ListBox):
+class MainFrame(Gtk.Box):
     "Main area of user interface content."
 
     def __init__(self):
-        Gtk.ListBox.__init__(self)
-
+        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=6)
         # self.set_valign(Gtk.Align.START)
         self.file_cabinet = FileCabinet()
-        self.add(self.file_cabinet)
+        self.adding = NewNote()
+        self.pack_start(self.adding, True, True, 0)
+        self.pack_start(self.file_cabinet, True, True, 0)
 
 
 class AppCallbacks:
@@ -230,7 +245,8 @@ class MainWindow(Gtk.ApplicationWindow):
     calculated_height = 0
 
     def __init__(self, app):
-        Gtk.Window.__init__(self, title="CopyPaster", application=app)
+        Gtk.ApplicationWindow.__init__(
+            self, title="CopyPaster", application=app)
         self.screen = self.get_screen()
 
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
