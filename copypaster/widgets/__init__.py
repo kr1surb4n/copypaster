@@ -29,6 +29,22 @@ def wrap(widget):
     return sw
 
 
+class DialogError(Gtk.Dialog):
+
+    def __init__(self, parent, massage):  # lol
+        Gtk.Dialog.__init__(self)
+        self.set_modal(True)
+        self.add_button(button_text="OK", response_id=Gtk.ResponseType.OK)
+        self.set_transient_for(parent)
+        self.set_default_size(150, 100)
+
+        label = Gtk.Label(massage)
+
+        box = self.get_content_area()
+        box.add(label)
+        self.show_all()
+
+
 class AnAction (Gio.SimpleAction):
     @classmethod
     def new(cls, name, parameter_type=None, callback=None):
@@ -97,35 +113,98 @@ class ToolBar(Gtk.Toolbar):
 
 class NewNote(Gtk.Grid):
     def __init__(self):
-        Gtk.Grid.__init__(self, orientation=Gtk.Orientation.VERTICAL)
-        self.init_forms()
+        Gtk.Grid.__init__(
+            self, orientation=Gtk.Orientation.VERTICAL, hexpand=True, column_spacing=10, row_spacing=10)
 
-    def init_forms(self):
+        self.notes = Register['Dirty']
+        self.dirty_notes = Register['DirtyNotes']
 
-        save_button = Gtk.Button(label="save from paste")
-        save_form = Gtk.Button(label="save from form")
+        self.entry = Gtk.Entry()
+        self.entry.set_placeholder_text("Put name here or value will be used")
 
-        textview = Gtk.TextView()
-        textview.set_cursor_visible(True)
-        textview.set_wrap_mode(Gtk.WrapMode.WORD)
+        self.save_button = Gtk.Button(label="QuickSave")
+        self.save_button.connect('clicked', self.quick_save)
 
-        textbuffer = textview.get_buffer()
-        textbuffer.set_text("This is some text inside of a Gtk.TextView. "
-                            + "Select text and click one of the buttons 'bold', 'italic', "
-                            + "or 'underline' to modify the text accordingly.")
+        self.save_form = Gtk.Button(label="Save")
+        self.save_form.connect('clicked', self.save)
+
+        self.textview = Gtk.TextView()
+        self.textview.set_cursor_visible(True)
+        self.textview.set_hexpand(True)
+        self.textview.set_vexpand(False)
+        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)
+
+        self.textbuffer = self.textview.get_buffer()
+        self.textbuffer.set_text("")
         #textview.connect('focus', lambda x: x.grab_focus())
-        wig = wrap(textview)
-        self.add(save_button)
-        self.attach_next_to(wig, save_button, Gtk.PositionType.BOTTOM, 6, 1)
+        self.wrapped_textview = wrap(self.textview)
+        self.add(self.save_button)
+        self.attach_next_to(self.entry, self.save_button,
+                            Gtk.PositionType.RIGHT, 2, 1)
+
+        self.attach_next_to(self.wrapped_textview, self.save_button,
+                            Gtk.PositionType.BOTTOM, 2, 3)
         # self.add(wig)
-        self.attach_next_to(save_form, wig, Gtk.PositionType.RIGHT, 2, 1)
-        self.resize_children()
+        self.attach_next_to(self.save_form, self.wrapped_textview,
+                            Gtk.PositionType.RIGHT, 2, 3)
+        # self.resize_children()
         # self.add(textview)
         # self.add(entry)
         #box.pack_start(save_form, False, True, 0)
 
         # self.add(box)
         # textview.grab_focus()
+
+    def clean_after(self):
+        self.textbuffer.set_text("")
+        self.entry.set_text("")
+        Register['Jimmy'].clean_clipboard()
+
+    def quick_save(self, button):
+        name = value = Register['Jimmy'].recieve()
+
+        if not value:
+            logger.error("No value to save - aborting")
+            self.clean_after()
+            return False
+
+        if self.entry.get_text().strip():
+            name = self.entry.get_text().strip()
+
+        b = self.notes.add_button(name=name,
+                                  value=value)
+        self.dirty_notes.add(b)
+        b.show()
+
+        self.clean_after()
+
+    def save(self, button):
+        value = self.textbuffer.get_text(
+            self.textbuffer.get_start_iter(), self.textbuffer.get_end_iter(), False).strip()
+        name = self.entry.get_text().strip()
+
+        if not value:
+            logger.error("No value to save - aborting")
+            self.clean_after()
+            return False
+
+        if not name:
+            dialog = DialogError(
+                Register['Application'].win, "Soo, the name is missing, it's required.")
+            response = dialog.run()
+
+            # if response == Gtk.ResponseType.OK:
+            #     print("The OK button was clicked")
+            # elif response == Gtk.ResponseType.CANCEL:
+            #     print("The Cancel button was clicked")
+            dialog.destroy()
+        else:
+            b = self.notes.add_button(name=name,
+                                      value=value)
+            self.dirty_notes.add(b)
+            b.show()
+
+        self.clean_after()
 
 
 @register_instance
@@ -139,15 +218,13 @@ class DirtyNotes(Gtk.FlowBox):
         self.set_max_children_per_line(4)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        for kwargs in Register['Simple'].get_buttons():
-            button = CopyButton(**kwargs)
+        for button in Register['Dirty'].get_buttons():
             self.add(button)
 
     def init_forms(self):
         pass
 
 
-@register_instance
 class ButtonGrid(Gtk.FlowBox):
     "Main area of user interface content."
 
@@ -158,8 +235,7 @@ class ButtonGrid(Gtk.FlowBox):
         self.set_max_children_per_line(4)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        for kwargs in Register[buttons].get_buttons():
-            button = CopyButton(**kwargs)
+        for button in Register[buttons].get_buttons():
             self.add(button)
 
     def load_buttons(self):
@@ -171,7 +247,7 @@ class FileCabinet(Gtk.Notebook):
     """Here we keep the buttons grids and stuff"""
 
     def __init__(self):
-        Gtk.Notebook.__init__(self)
+        Gtk.Notebook.__init__(self, vexpand=True)
         self.pages = []
 
         self.add_page("Dirty notes", DirtyNotes())
@@ -184,20 +260,21 @@ class FileCabinet(Gtk.Notebook):
         # page.set_border_width(10)
         # page.add(_object)
         self.pages += [_object]
-        self.append_page(_object, Gtk.Label(title))
+        self.append_page(wrap(_object), Gtk.Label(title))
 
 
 @register_instance
-class MainFrame(Gtk.Box):
+class MainFrame(Gtk.Grid):
     "Main area of user interface content."
 
     def __init__(self):
-        Gtk.Box.__init__(self, orientation=Gtk.Orientation.VERTICAL, spacing=6)
+        Gtk.Grid.__init__(
+            self, orientation=Gtk.Orientation.VERTICAL)
         # self.set_valign(Gtk.Align.START)
         self.file_cabinet = FileCabinet()
         self.adding = NewNote()
-        self.pack_start(self.adding, True, True, 0)
-        self.pack_start(self.file_cabinet, True, True, 0)
+        self.add(self.adding)
+        self.add(self.file_cabinet)
 
 
 class AppCallbacks:
@@ -252,6 +329,9 @@ class MainWindow(Gtk.ApplicationWindow):
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
         self.calculated_height = self.screen.get_height()
 
+        Register['calculated_width'] = self.calculated_width
+        Register['calculated_height'] = self.calculated_height
+
         self.set_default_size(self.calculated_width, self.calculated_height)
 
         self.statusbar = StatusBar()
@@ -278,6 +358,7 @@ class MainWindow(Gtk.ApplicationWindow):
 @register_instance
 class Application(AppCallbacks, Gtk.Application):
     # constructor of the Gtk Application
+    win = None
 
     def __init__(self):
         Gtk.Application.__init__(self)
@@ -306,10 +387,10 @@ class Application(AppCallbacks, Gtk.Application):
     # application the window belongs to.
     # Note that the function in C activate() becomes do_activate() in Python
     def do_activate(self):
-        win = MainWindow(self)
+        self.win = MainWindow(self)
         # show the window and all its content
         # this line could go in the constructor of MyWindow as well
-        win.show_all()
+        self.win.show_all()
 
     # start up the application
     # Note that the function in C startup() becomes do_startup() in Python

@@ -3,7 +3,7 @@ import time
 import sys
 import gettext
 import datetime
-
+import hashlib
 from copypaster.register import Register, register_instance
 import gi
 gi.require_version('Gtk', '3.0')
@@ -11,6 +11,10 @@ from gi.repository import Gtk, Gio  # noqa
 
 
 class CopyButton(Gtk.Button):
+
+    def hash(self):
+        val = self.name + self.value
+        return hashlib.md5(val.encode()).hexdigest()
 
     def __init__(self, *args, **kwargs):
         self.name = kwargs.get('name', None)
@@ -26,6 +30,8 @@ class CopyButton(Gtk.Button):
             self.name = str(self.value)
         else:
             del kwargs['name']
+
+        self.id = self.hash()
 
         kwargs['label'] = self.name
         super(CopyButton, self).__init__(*args, **kwargs)

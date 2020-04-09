@@ -13,6 +13,10 @@ class Jimmy:
         # copy(text)
         xerox.copy(text)
 
+    def clean_clipboard(self):
+        logger.debug("cleaning clipboard")
+        self.send("")
+
     def recieve(self):
         contents = xerox.paste()
         logger.debug("Pasting: {}".format(contents))
