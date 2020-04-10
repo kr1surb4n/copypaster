@@ -10,6 +10,7 @@ class Deck:
 
     def __init__(self):
         self.buttons = {}
+        self.path = ""
         self.contents = None
 
     def load(self, path):
@@ -17,17 +18,33 @@ class Deck:
             self.contents = yaml.load(f.read(), Loader=yaml.FullLoader)
 
     def init_buttons(self):
-        for _button in self.contents['buttons']:
-            self.add_button(**_button)
+        try:
+            for _button in self.contents.get('buttons', []):
+                self.add_button(**_button)
+        except IndexError:
+            pass  # yes, cause this value exists
 
     def add_button(self, **kwargs):
+        c = self.buttons.get(str(kwargs.get('value', None)), None)
+        if c:
+            raise IndexError('There is such value')
+
         c = CopyButton(**kwargs)
-        self.buttons[c.id] = c
+        self.buttons[c.value] = c
         return c
+
+    def update_contents(self):
+        self.contents['buttons'] = []
+        for button in self.buttons.values():
+            self.contents['buttons'] += [button.serialize()]
+
+    def save_buttons(self):
+        self.update_contents()
+        self.save(self.contents, self.path)
 
     def save(self, data, path):
         with open(path, 'w') as f:
-            f.write(yaml.dump(data, encoding='utf-8'))
+            f.write(yaml.dump(data))
 
     def category(self):
         return self.contents['info']['category']
@@ -45,7 +62,8 @@ class Dirty(Deck):
 
     def __init__(self):
         Deck.__init__(self)
-        self.load(p.join(PROJECT_DIR, "button_maps/dirty.yml"))
+        self.path = p.join(PROJECT_DIR, "button_maps/dirty.yml")
+        self.load(self.path)
         self.init_buttons()
 
 
@@ -55,7 +73,8 @@ class Simple(Deck):
 
     def __init__(self):
         Deck.__init__(self)
-        self.load(p.join(PROJECT_DIR, "button_maps/simple_buttons.yml"))
+        self.path = p.join(PROJECT_DIR, "button_maps/simple_buttons.yml")
+        self.load(self.path)
         self.init_buttons()
 
 
@@ -65,7 +84,8 @@ class Python(Deck):
 
     def __init__(self):
         Deck.__init__(self)
-        self.load(p.join(PROJECT_DIR, "button_maps/python.yml"))
+        self.path = p.join(PROJECT_DIR, "button_maps/python.yml")
+        self.load(self.path)
         self.init_buttons()
 
 
@@ -75,7 +95,8 @@ class Bash(Deck):
 
     def __init__(self):
         Deck.__init__(self)
-        self.load(p.join(PROJECT_DIR, "button_maps/bash.yml"))
+        self.path = p.join(PROJECT_DIR, "button_maps/bash.yml")
+        self.load(self.path)
         self.init_buttons()
 
 

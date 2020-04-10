@@ -1,4 +1,4 @@
-from copypaster import logger
+from copypaster import logger, State, NORMAL, AUTOSAVE, REMOVE, EDIT
 import time
 import sys
 import gettext
@@ -15,6 +15,9 @@ class CopyButton(Gtk.Button):
     def hash(self):
         val = self.name + self.value
         return hashlib.md5(val.encode()).hexdigest()
+
+    def serialize(self):
+        return {'name': self.name, 'value': self.value}
 
     def __init__(self, *args, **kwargs):
         self.name = kwargs.get('name', None)
@@ -42,8 +45,19 @@ class CopyButton(Gtk.Button):
         logger.debug(
             "Clicked button: {} and copied value".format(button.value))
 
-        Register['Jimmy'].send(button.value)
-        Register['StatusBar'].send('Clicked button number %s' % button.value)
+        state = State['app']
+
+        if state == REMOVE:
+            del self.get_parent().get_parent().button_deck.buttons[self.value]
+            self.get_parent().remove(self)
+
+        if state in [NORMAL, AUTOSAVE]:
+            Register['Jimmy'].send(button.value)
+            Register['StatusBar'].send(
+                'Clicked button number %s' % button.value)
+
+        if state == EDIT:
+            Register['NewNote'].edit(**self.serialize())
 
 
 class PasteButton(Gtk.Button):

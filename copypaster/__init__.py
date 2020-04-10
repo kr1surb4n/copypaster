@@ -19,3 +19,10 @@ ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 
 logger.addHandler(ch)
+
+NORMAL = 'NORMAL'
+AUTOSAVE = 'AUTOSAVE'
+REMOVE = 'REMOVE'
+EDIT = 'EDIT'
+
+State = {}  # global application state

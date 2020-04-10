@@ -1,4 +1,4 @@
-info:
-  - name: "Simple buttons"
-  - category: tests
 buttons: []
+info:
+- name: Simple buttons
+- category: tests
