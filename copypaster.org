@@ -120,8 +120,30 @@ list is for stuff that is selected
 
 
 Application
-|--ApplicationWindow
-    |--Grid
-        |--toolbar
-        |--MainFrame (Box)
-        |--StatusBar
+|** style_provider
+|--ApplicationWindow  - state set to NORMAL
+|    |--Grid
+|        |--Toolbar
+            |- ToolButton (add)
+            |- ToolButton (open)
+            |- ToolButton (save_current)
+            |- ToolButton (save_dirty_as)
+|        |--MainFrame (Grid)
+|        |      |--NewNote (Grid)
+                        |- Entry
+                        |- Button(QuickSave)
+                        |- Button(Save)
+                        |- TextView
+|        |      |--FileCabinet (Notebook)
+|        |              |- DirtyNotes (FlowBox)
+                        |- ButtonGrid (FlowBox)
+|        |--StatusBar
+|
+#-AppCallbacks
+    - new_callback
+    - about_callback
+    - quit_callback
+    - add_new_notebook
+    - open_notebookopen_notebook
+    - save_current_notebook
+    - save_dirty_notebook

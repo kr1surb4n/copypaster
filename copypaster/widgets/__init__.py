@@ -1,7 +1,8 @@
 from copypaster.widgets.buttons import CopyButton
 from copypaster.register import Register, register_instance
 
-from copypaster import logger, CURRENT_DIR
+from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMOVE
+import time
 import time
 import sys
 import os
@@ -49,6 +50,7 @@ class AnAction (Gio.SimpleAction):
     @classmethod
     def new(cls, name, parameter_type=None, callback=None):
         action = Gio.SimpleAction.new(name, parameter_type)
+        action.enabled = True
         action.connect("activate", callback)    # TODO check this code
         return action
 
@@ -68,6 +70,14 @@ class StatusBar(Gtk.Statusbar):
 class ToolBar(Gtk.Toolbar):
     "Sample toolbar provided by cookiecutter switch."
 
+    def init_toolbutton(self, stock, callback, pos):
+        button = Gtk.ToolButton(stock)
+        button.set_is_important(True)
+        # insert the button at position in the toolbar
+        self.insert(button, pos)
+        button.show()
+        button.connect("clicked", callback)
+
     def __init__(self):
         # a toolbar
         Gtk.Toolbar.__init__(self)
@@ -75,18 +85,16 @@ class ToolBar(Gtk.Toolbar):
         # which is the primary toolbar of the application
         self.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
         self.set_hexpand(True)
-        # create a button for the "new" action, with a stock image
-        new_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_NEW)
-        # label is shown
-        new_button.set_is_important(True)
-        # insert the button at position in the toolbar
 
-        self.insert(new_button, 0)
-        # show the button
-        new_button.show()
-        # set the name of the action associated with the button.
-        # The action controls the application (app)
-        new_button.set_action_name("app.new")
+        self.init_toolbutton(
+            Gtk.STOCK_ADD, Register['Application'].add_new_notebook, 0)
+        self.init_toolbutton(
+            Gtk.STOCK_OPEN, Register['Application'].open_notebook, 1)
+        self.init_toolbutton(
+            Gtk.STOCK_SAVE, Register['Application'].save_current_notebook, 2)
+        self.init_toolbutton(
+            Gtk.STOCK_SAVE_AS, Register['Application'].save_dirty_notebook, 3)
+
         """
         # button for the "open" action
         open_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_OPEN)
@@ -111,6 +119,7 @@ class ToolBar(Gtk.Toolbar):
         """
 
 
+@register_instance
 class NewNote(Gtk.Grid):
     def __init__(self):
         Gtk.Grid.__init__(
@@ -158,7 +167,16 @@ class NewNote(Gtk.Grid):
     def clean_after(self):
         self.textbuffer.set_text("")
         self.entry.set_text("")
-        Register['Jimmy'].clean_clipboard()
+
+    def add_button(self, name, value):
+        try:
+            b = self.notes.add_button(name=name,
+                                      value=value)
+
+            self.dirty_notes.add(b)
+            b.show()
+        except IndexError:
+            pass  # yes, cause this value exists
 
     def quick_save(self, button):
         name = value = Register['Jimmy'].recieve()
@@ -171,12 +189,12 @@ class NewNote(Gtk.Grid):
         if self.entry.get_text().strip():
             name = self.entry.get_text().strip()
 
-        b = self.notes.add_button(name=name,
-                                  value=value)
-        self.dirty_notes.add(b)
-        b.show()
-
+        self.add_button(name, value)
         self.clean_after()
+
+    def edit(self, name, value):
+        self.entry.set_text(name)
+        self.textbuffer.set_text(value)
 
     def save(self, button):
         value = self.textbuffer.get_text(
@@ -199,12 +217,77 @@ class NewNote(Gtk.Grid):
             #     print("The Cancel button was clicked")
             dialog.destroy()
         else:
-            b = self.notes.add_button(name=name,
-                                      value=value)
-            self.dirty_notes.add(b)
-            b.show()
+            self.add_button(name, value)
 
         self.clean_after()
+
+
+@register_instance
+class StateButtons(Gtk.Box):
+
+    def __init__(self):
+        Gtk.Box.__init__(self, spacing=6)
+        hbox = Gtk.Box(spacing=6)
+        self.add(hbox)
+        self.clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+        self.handle = None
+
+        self.autosave = Gtk.ToggleButton("Autosave")
+        self.autosave.connect("toggled", self.on_autosave, "1")
+        hbox.pack_start(self.autosave, True, True, 0)
+
+        self.edit = Gtk.ToggleButton("Edit button")
+        self.edit.connect("toggled", self.on_edit, "2")
+        hbox.pack_start(self.edit, True, True, 0)
+
+        self.remove = Gtk.ToggleButton("Remove button")
+        self.remove.connect("toggled", self.on_remove, "2")
+        hbox.pack_start(self.remove, True, True, 0)
+
+    def on_autosave(self, button, name):
+        self.edit.get_active() and self.edit.set_active(False)
+        self.remove.get_active() and self.remove.set_active(False)
+
+        if button.get_active():
+            State['app'] = AUTOSAVE
+            self.handle = self.clip.connect(
+                'owner-change', self.auto_clipboard)
+        else:
+            State['app'] = NORMAL
+            self.clip.disconnect(self.handle)
+        logger.debug('Autosave on')
+
+    def auto_clipboard(self, clipboard, parameter):
+        if State['app'] != AUTOSAVE:
+            return False
+
+        name = value = clipboard.wait_for_text()
+
+        if not value:
+            logger.error("No value to save - aborting")
+            return False
+
+        Register['NewNote'].add_button(name, value)
+
+    def on_edit(self, button, name):
+        self.autosave.get_active() and self.autosave.set_active(False)
+        self.remove.get_active() and self.remove.set_active(False)
+
+        if button.get_active():
+            State['app'] = EDIT
+        else:
+            State['app'] = NORMAL
+        logger.debug('Edit on')
+
+    def on_remove(self, button, name):
+        self.edit.get_active() and self.edit.set_active(False)
+        self.autosave.get_active() and self.autosave.set_active(False)
+
+        if button.get_active():
+            State['app'] = REMOVE
+        else:
+            State['app'] = NORMAL
+        logger.debug('Remove on')
 
 
 @register_instance
@@ -214,15 +297,17 @@ class DirtyNotes(Gtk.FlowBox):
     def __init__(self):
         Gtk.FlowBox.__init__(self)
 
+        self.button_deck = Register['Dirty']
+
         self.set_valign(Gtk.Align.START)
         self.set_max_children_per_line(4)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        for button in Register['Dirty'].get_buttons():
+        for button in self.button_deck.get_buttons():
             self.add(button)
 
-    def init_forms(self):
-        pass
+    def save_deck(self):
+        self.button_deck.save_buttons()
 
 
 class ButtonGrid(Gtk.FlowBox):
@@ -231,15 +316,17 @@ class ButtonGrid(Gtk.FlowBox):
     def __init__(self, buttons):
         Gtk.FlowBox.__init__(self)
 
+        self.button_deck = Register[buttons]
+
         self.set_valign(Gtk.Align.START)
         self.set_max_children_per_line(4)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
 
-        for button in Register[buttons].get_buttons():
+        for button in self.button_deck.get_buttons():
             self.add(button)
 
-    def load_buttons(self):
-        pass
+    def save_deck(self):
+        self.button_deck.save_buttons()
 
 
 @register_instance
@@ -273,6 +360,8 @@ class MainFrame(Gtk.Grid):
         # self.set_valign(Gtk.Align.START)
         self.file_cabinet = FileCabinet()
         self.adding = NewNote()
+        self.state_buttons = StateButtons()
+        self.add(self.state_buttons)
         self.add(self.adding)
         self.add(self.file_cabinet)
 
@@ -311,6 +400,19 @@ class AppCallbacks:
     def quit_callback(self, action, parameter):
         print("You have quit.")
         self.quit()
+
+    def add_new_notebook(self, action):
+        pass
+
+    def open_notebook(self, action):
+        pass
+
+    def save_current_notebook(self, action):
+        cabinet = Register['FileCabinet']
+        cabinet.pages[cabinet.get_current_page()].save_deck()
+
+    def save_dirty_notebook(self, action):
+        pass
 
 
 @register_instance
@@ -377,7 +479,13 @@ class Application(AppCallbacks, Gtk.Application):
 
         actions = [("new", self.new_callback,),
                    ("about", self.about_callback,),
-                   ("quit", self.quit_callback,)]
+                   ("quit", self.quit_callback,),
+
+                   #("app.add", self.add_new_notebook,),
+                   #("app.open", self.open_notebook,),
+                   #("app.save_current", self.save_current_notebook,),
+                   #("app.save_dirty_as", self.save_dirty_notebook,),
+                   ]
 
         for action_name, callback in actions:
             action = AnAction.new(action_name, None, callback)
@@ -391,6 +499,7 @@ class Application(AppCallbacks, Gtk.Application):
         # show the window and all its content
         # this line could go in the constructor of MyWindow as well
         self.win.show_all()
+        State['app'] = NORMAL
 
     # start up the application
     # Note that the function in C startup() becomes do_startup() in Python
