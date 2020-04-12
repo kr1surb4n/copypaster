@@ -1,0 +1,306 @@
+buttons:
+  - name: x or y
+    value: x or y
+  - name: x and y
+    value: x and y
+  - name: not x
+    value: not x
+  - name: "True"
+    value: "True"
+  - name: "False"
+    value: "False"
+  - name: <
+    value: <
+  - name: <=
+    value: <=
+  - name: ">"
+    value: ">"
+  - name: ">="
+    value: ">="
+  - name: ==
+    value: ==
+  - name: "!="
+    value: "!="
+  - name: is
+    value: is
+  - name: is not
+    value: is not
+  - name: x + y
+    value: x + y
+  - name: x - y
+    value: x - y
+  - name: x * y
+    value: x * y
+  - name: x / y
+    value: x / y
+  - name: x // y
+    value: x // y
+  - name: x % y
+    value: x % y
+  - name: -x
+    value: -x
+  - name: +x
+    value: +x
+  - name: abs(x)
+    value: abs(x)
+  - name: abs()
+    value: abs()
+  - name: int(x)
+    value: int(x)
+  - name: int()
+    value: int()
+  - name: float(x)
+    value: float(x)
+  - name: float()
+    value: float()
+  - name: complex(re, im)
+    value: complex(re, im)
+  - name: complex()
+    value: complex()
+  - name: c.conjugate()
+    value: c.conjugate()
+  - name: divmod(x, y)
+    value: divmod(x, y)
+  - name: (x // y, x % y)
+    value: (x // y, x % y)
+  - name: divmod()
+    value: divmod()
+  - name: pow(x, y)
+    value: pow(x, y)
+  - name: pow()
+    value: pow()
+  - name: x ** y
+    value: x ** y
+  - name: math.trunc(x)
+    value: math.trunc(x)
+  - name: Integral
+    value: Integral
+  - name: "round(x[,\tn])"
+    value: "round(x[,\tn])"
+  - name: math.floor(x)
+    value: math.floor(x)
+  - name: math.ceil(x)
+    value: math.ceil(x)
+  - name: x | y
+    value: x | y
+  - name: x ^ y
+    value: x ^ y
+  - name: x & y
+    value: x & y
+  - name: x << n
+    value: x << n
+  - name: x >> n
+    value: x >> n
+  - name: ~x
+    value: ~x
+  - name: x in s
+    value: x in s
+  - name: x not in s
+    value: x not in s
+  - name: s + t
+    value: s + t
+  - name: s * n
+    value: s * n
+  - name: n * s
+    value: n * s
+  - name: s[i]
+    value: s[i]
+  - name: s[i:j]
+    value: s[i:j]
+  - name: s[i:j:k]
+    value: s[i:j:k]
+  - name: len(s)
+    value: len(s)
+  - name: min(s)
+    value: min(s)
+  - name: max(s)
+    value: max(s)
+  - name: s.index(x[, i[, j]])
+    value: s.index(x[, i[, j]])
+  - name: s.count(x)
+    value: s.count(x)
+  - name: s[i] = x
+    value: s[i] = x
+  - name: s[i:j] = t
+    value: s[i:j] = t
+  - name: del s[i:j]
+    value: del s[i:j]
+  - name: s[i:j] = []
+    value: s[i:j] = []
+  - name: s[i:j:k] = t
+    value: s[i:j:k] = t
+  - name: del s[i:j:k]
+    value: del s[i:j:k]
+  - name: s.append(x)
+    value: s.append(x)
+  - name: s[len(s):len(s)] = [x]
+    value: s[len(s):len(s)] = [x]
+  - name: s.clear()
+    value: s.clear()
+  - name: del s[:]
+    value: del s[:]
+  - name: s.copy()
+    value: s.copy()
+  - name: s[:]
+    value: s[:]
+  - name: s.extend(t)
+    value: s.extend(t)
+  - name: s += t
+    value: s += t
+  - name: s[len(s):len(s)] = t
+    value: s[len(s):len(s)] = t
+  - name: s *= n
+    value: s *= n
+  - name: s.insert(i, x)
+    value: s.insert(i, x)
+  - name: s[i:i] = [x]
+    value: s[i:i] = [x]
+  - name: s.pop([i])
+    value: s.pop([i])
+  - name: s.remove(x)
+    value: s.remove(x)
+  - name: s.reverse()
+    value: s.reverse()
+  - name: \n
+    value: \n
+  - name: \r
+    value: \r
+  - name: \r\n
+    value: \r\n
+  - name: repr()
+    value: repr()
+  - name: str()
+    value: str()
+  - name: ascii()
+    value: ascii()
+  - name: __bytes__()
+    value: __bytes__()
+  - name: repr
+    value: repr(obj).encode("ascii", backslashreplace)
+  - name: None
+    value: None
+  - name: Not Implemented
+    value: NotImplemented
+  - name: Ellipsis
+    value: Ellipsis
+  - name: __debug__
+    value: __debug__
+  - name: quit(code=None)
+    value: quit(code=None)
+  - name: exit(code=None)
+    value: exit(code=None)
+  - name: copyright
+    value: copyright
+  - name: credits
+    value: credits
+  - name: license
+    value: license
+  - name: all(iterable)
+    value: all(iterable)
+  - name: any(iterable)
+    value: any(iterable)
+  - name: ascii(object)
+    value: ascii(object)
+  - name: bin(x)
+    value: bin(x)
+  - name: breakpoint
+    value: breakpoint(*args, **kws)
+  - name: callable(object)
+    value: callable(object)
+  - name: chr(i)
+    value: chr(i)
+  - name: "@classmethod"
+    value: "@classmethod"
+  - name: compile
+    value: compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1)
+  - name: delattr
+    value: delattr(object, name)
+  - name: dir([object])
+    value: dir([object])
+  - name: divmod(a, b)
+    value: divmod(a, b)
+  - name: enumerate
+    value: enumerate(iterable, start=0)
+  - name: eval
+    value: eval(expression[, globals[, locals]])
+  - name: exec
+    value: exec(object[, globals[, locals]])
+  - name: filter
+    value: filter(function, iterable)
+  - name: format
+    value: format(value[, format_spec])
+  - name: getattr
+    value: getattr(object, name[, default])
+  - name: globals()
+    value: globals()
+  - name: hasattr
+    value: hasattr(object, name)
+  - name: hash(object)
+    value: hash(object)
+  - name: help([object])
+    value: help([object])
+  - name: hex(x)
+    value: hex(x)
+  - name: id(object)
+    value: id(object)
+  - name: input([prompt])
+    value: input([prompt])
+  - name: isinstance
+    value: isinstance(object, classinfo)
+  - name: issubclass
+    value: issubclass(class, classinfo)
+  - name: iter
+    value: iter(object[, sentinel])
+  - name: locals()
+    value: locals()
+  - name: map
+    value: map(function, iterable, ...)
+  - name: max
+    value: max(iterable, *[, key, default])
+  - name: max
+    value: max(arg1, arg2, *args[, key])
+  - name: mix
+    value: min(iterable, *[, key, default])
+  - name: min
+    value: min(arg1, arg2, *args[, key])
+  - name: next
+    value: next(iterator[, default])
+  - name: oct(x)
+    value: oct(x)
+  - name: open
+    value:
+      open(file, mode='r', buffering=-1, encoding=None, errors=None, newline=None,
+      closefd=True, opener=None)
+  - name: ord(c)
+    value: ord(c)
+  - name: pow
+    value: pow(base, exp[, mod])
+  - name: print
+    value: "print(*objects, sep=' ', end='
+
+      ', file=sys.stdout, flush=False)"
+  - name: repr(object)
+    value: repr(object)
+  - name: reversed(seq)
+    value: reversed(seq)
+  - name: round
+    value: round(number[, ndigits])
+  - name: setattr
+    value: setattr(object, name, value)
+  - name: " sorted"
+    value: sorted(iterable, *, key=None, reverse=False)
+  - name: "@staticmethod"
+    value: "@staticmethod"
+  - name: sum
+    value: sum(iterable, /, start=0)
+  - name: super
+    value: super([type[, object-or-type]])
+  - name: vars([object])
+    value: vars([object])
+  - name: zip
+    value: zip(*iterables)
+  - name: __import__
+    value: __import__(name, globals=None, locals=None, fromlist=(), level=0)
+info:
+  - name: Python
+  - category: python

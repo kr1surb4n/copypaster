@@ -1,4 +1,46 @@
-buttons: []
+buttons:
+- name: basic JS object
+  value: "const person = {\n  name: ['Bob', 'Smith'],\n  age: 32,\n  gender: 'male',\n\
+    \  interests: ['music', 'skiing'],\n  bio: function() {\n    alert(this.name[0]\
+    \ + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0]\
+    \ + ' and ' + this.interests[1] + '.');\n  },\n  greeting: function() {\n    alert('Hi!\
+    \ I\\'m ' + this.name[0] + '.');\n  }\n};"
+- name: const person = {};
+  value: const person = {};
+- name: person.age
+  value: person.age
+- name: object constructor
+  value: "function Person(name) {\n  this.name = name;\n  this.greeting = function()\
+    \ {\n    alert('Hi! I\\'m ' + this.name + '.');\n  };\n}"
+- name: new Object
+  value: let person1 = new Person('Bob');
+- name: Object.create(person1);
+  value: Object.create(person1);
+- name: use of prototype
+  value: "Person.prototype.farewell = function() {\n  alert(this.name.first + ' has\
+    \ left the building. Bye for now!');\n};"
+- name: person1
+  value: person1
+- name: simple object
+  value: "function Brick() {\n  this.width = 10;\n  this.height = 20;\n}"
+- name: inheritance example
+  value: "function BlueGlassBrick() {\n  Brick.call(this);\n\n  this.opacity = 0.5;\n\
+    \  this.color = 'blue';\n}"
+- name: full JS class
+  value: "class Person {\n  constructor(first, last, age, gender, interests) {\n \
+    \   this.name = {\n      first,\n      last\n    };\n    this.age = age;\n   \
+    \ this.gender = gender;\n    this.interests = interests;\n  }\n\n  greeting()\
+    \ {\n    console.log(`Hi! I'm ${this.name.first}`);\n  };\n\n  farewell() {\n\
+    \    console.log(`${this.name.first} has left the building. Bye for now!`);\n\
+    \  };\n}"
+- name: JS class
+  value: "class Teacher extends Person {\n  constructor(subject, grade) { \n    super();\
+    \ // Now 'this' is initialized by calling the parent constructor.\n    this.subject\
+    \ = subject;   \n    this.grade = grade; \n  }\n}"
+- name: getter example
+  value: "  get subject() {\n    return this._subject;\n  }"
+- name: setter example
+  value: "  set subject(newSubject) {\n    this._subject = newSubject;\n  }"
 info:
 - name: Simple buttons
 - category: tests

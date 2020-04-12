@@ -9,7 +9,7 @@ from copypaster.widgets import Application
 
 """ Initialize services """
 import copypaster.clipboard
-import copypaster.file_loader
+#import copypaster.file_loader
 
 """Main module."""
 
@@ -19,17 +19,18 @@ class Config:
     cfg = None
 
     def __init__(self, config_file=None):
-        config_env = os.environ('COPYPASTER_CONFIG', None)
+        config_env = os.environ.get('COPYPASTER_CONFIG', None)
 
         if config_env is not None:
             config = config_env
         elif config_file is not None:
             config = config_file
-        else:
-            config = os.path.join(PROJECT_DIR, "config/example.conf")
 
         self.cfg = configparser.ConfigParser()
         self.cfg.read(config)
+
+    def get_decks(self):
+        return {sec: self.cfg['decks'][sec] for sec in self.cfg['decks']}
 
 
 def main_function():

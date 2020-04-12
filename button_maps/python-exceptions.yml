@@ -1,0 +1,140 @@
+buttons:
+- name: Base Exception
+  value: BaseException
+- name: Exception
+  value: Exception
+- name: Arithmetic Error
+  value: ArithmeticError
+- name: Buffer Error
+  value: BufferError
+- name: Lookup Error
+  value: LookupError
+- name: Assertion Error
+  value: AssertionError
+- name: Attribute Error
+  value: AttributeError
+- name: EOFError
+  value: EOFError
+- name: Floating Point Error
+  value: FloatingPointError
+- name: Generator Exit
+  value: GeneratorExit
+- name: Import Error
+  value: ImportError
+- name: Module Not Found Error
+  value: ModuleNotFoundError
+- name: Index Error
+  value: IndexError
+- name: Key Error
+  value: KeyError
+- name: Keyboard Interrupt
+  value: KeyboardInterrupt
+- name: Memory Error
+  value: MemoryError
+- name: Name Error
+  value: NameError
+- name: Not Implemented Error
+  value: NotImplementedError
+- name: OSError([arg])
+  value: OSError([arg])
+- name: OSError(errno, strerror[, filename[, winerror[, filename2]]])
+  value: OSError(errno, strerror[, filename[, winerror[, filename2]]])
+- name: Overflow Error
+  value: OverflowError
+- name: Recursion Error
+  value: RecursionError
+- name: Reference Error
+  value: ReferenceError
+- name: Runtime Error
+  value: RuntimeError
+- name: Stop Iteration
+  value: StopIteration
+- name: Stop Async Iteration
+  value: StopAsyncIteration
+- name: Syntax Error
+  value: SyntaxError
+- name: Indentation Error
+  value: IndentationError
+- name: Tab Error
+  value: TabError
+- name: System Error
+  value: SystemError
+- name: System Exit
+  value: SystemExit
+- name: Type Error
+  value: TypeError
+- name: Unbound Local Error
+  value: UnboundLocalError
+- name: Unicode Error
+  value: UnicodeError
+- name: Unicode Encode Error
+  value: UnicodeEncodeError
+- name: Unicode Decode Error
+  value: UnicodeDecodeError
+- name: Unicode Translate Error
+  value: UnicodeTranslateError
+- name: Value Error
+  value: ValueError
+- name: Zero Division Error
+  value: ZeroDivisionError
+- name: Environment Error
+  value: EnvironmentError
+- name: IOError
+  value: IOError
+- name: Windows Error
+  value: WindowsError
+- name: Blocking IOError
+  value: BlockingIOError
+- name: Child Process Error
+  value: ChildProcessError
+- name: Connection Error
+  value: ConnectionError
+- name: Broken Pipe Error
+  value: BrokenPipeError
+- name: Connection Aborted Error
+  value: ConnectionAbortedError
+- name: Connection Refused Error
+  value: ConnectionRefusedError
+- name: Connection Reset Error
+  value: ConnectionResetError
+- name: File Exists Error
+  value: FileExistsError
+- name: File Not Found Error
+  value: FileNotFoundError
+- name: Interrupted Error
+  value: InterruptedError
+- name: Is ADirectory Error
+  value: IsADirectoryError
+- name: Not ADirectory Error
+  value: NotADirectoryError
+- name: Permission Error
+  value: PermissionError
+- name: Process Lookup Error
+  value: ProcessLookupError
+- name: Timeout Error
+  value: TimeoutError
+- name: Warning
+  value: Warning
+- name: User Warning
+  value: UserWarning
+- name: Deprecation Warning
+  value: DeprecationWarning
+- name: Pending Deprecation Warning
+  value: PendingDeprecationWarning
+- name: Syntax Warning
+  value: SyntaxWarning
+- name: Runtime Warning
+  value: RuntimeWarning
+- name: Future Warning
+  value: FutureWarning
+- name: Import Warning
+  value: ImportWarning
+- name: Unicode Warning
+  value: UnicodeWarning
+- name: Bytes Warning
+  value: BytesWarning
+- name: Resource Warning
+  value: ResourceWarning
+info:
+- name: Python
+- category: python

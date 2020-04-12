@@ -1,0 +1,620 @@
+buttons:
+- name: $(selector, element)
+  value: $(selector, element)
+- name: $$(selector, element)
+  value: $$(selector, element)
+- name: '0'
+  value: '0'
+- name: $0
+  value: $0
+- name: $_
+  value: $_
+- name: $x(xpath, element, resultType)
+  value: $x(xpath, element, resultType)
+- name: keys()
+  value: keys()
+- name: values()
+  value: values()
+- name: clear()
+  value: clear()
+- name: inspect()
+  value: inspect()
+- name: pprint()
+  value: pprint()
+- name: help()
+  value: help()
+- name: cd()
+  value: cd()
+- name: copy()
+  value: copy()
+- name: clearHistory()
+  value: clearHistory()
+- name: :screenshot
+  value: :screenshot
+- name: inspect($("#title"))
+  value: inspect($("#title"))
+- name: pprint($("#title"))
+  value: pprint($("#title"))
+- name: "function calcRectArea(width, height) {\n  return width * height;\n}"
+  value: "function calcRectArea(width, height) {\n  return width * height;\n}"
+- name: let fruits = ['Apple', 'Banana']
+  value: let fruits = ['Apple', 'Banana']
+- name: fruits[0]
+  value: fruits[0]
+- name: "fruits.forEach(function(item, index, array) {\n  console.log(item, index)\n\
+    })"
+  value: "fruits.forEach(function(item, index, array) {\n  console.log(item, index)\n\
+    })"
+- name: fruits.push('Orange')
+  value: fruits.push('Orange')
+- name: 'fruits.pop() '
+  value: 'fruits.pop() '
+- name: 'fruits.shift() '
+  value: 'fruits.shift() '
+- name: fruits.unshift('Strawberry')
+  value: fruits.unshift('Strawberry')
+- name: fruits.push('Mango')
+  value: fruits.push('Mango')
+- name: fruits.splice(pos, 1)
+  value: fruits.splice(pos, 1)
+- name: Array.isArray(value)
+  value: Array.isArray(value)
+- name: Array.prototype.fill(value[, start[, end]])
+  value: Array.prototype.fill(value[, start[, end]])
+- name: Array.prototype.concat([value1[, value2[, ...[, valueN]]]])
+  value: Array.prototype.concat([value1[, value2[, ...[, valueN]]]])
+- name: Array.prototype.filter(callbackFn(element[, index[, array]])[, thisArg])
+  value: Array.prototype.filter(callbackFn(element[, index[, array]])[, thisArg])
+- name: Array.prototype.includes(valueToFind[, fromIndex])
+  value: Array.prototype.includes(valueToFind[, fromIndex])
+- name: Array.prototype.indexOf(searchElement[, fromIndex])
+  value: Array.prototype.indexOf(searchElement[, fromIndex])
+- name: Array.prototype.join([separator])
+  value: Array.prototype.join([separator])
+- name: Array.prototype.lastIndexOf(searchElement[, fromIndex])
+  value: Array.prototype.lastIndexOf(searchElement[, fromIndex])
+- name: Array.prototype.find(callbackFn(element[, index[, array]])[, thisArg])
+  value: Array.prototype.find(callbackFn(element[, index[, array]])[, thisArg])
+- name: Array.prototype.every(callbackFn(element[, index[, array]])[, thisArg])
+  value: Array.prototype.every(callbackFn(element[, index[, array]])[, thisArg])
+- name: Array.prototype.entries()
+  value: Array.prototype.entries()
+- name: Array.prototype.forEach(callbackFn(currentValue[, index[, array]])[, thisArg])
+  value: Array.prototype.forEach(callbackFn(currentValue[, index[, array]])[, thisArg])
+- name: Array.prototype.reduce(callbackFn(accumulator, currentValue[, index[, array]])[,
+    initialValue])
+  value: Array.prototype.reduce(callbackFn(accumulator, currentValue[, index[, array]])[,
+    initialValue])
+- name: Array.prototype.map(callbackFn(currentValue[, index[, array]])[, thisArg])
+  value: Array.prototype.map(callbackFn(currentValue[, index[, array]])[, thisArg])
+- name: 'asd[5] != undefined ? asd[5] : false; '
+  value: 'asd[5] != undefined ? asd[5] : false; '
+- name: "for (variable in object)\n  statement"
+  value: "for (variable in object)\n  statement"
+- name: "for (const value of iterable) {\n  console.log(value);\n}"
+  value: "for (const value of iterable) {\n  console.log(value);\n}"
+- name: 'n = names[i] != undefined ? names[i] : '''';'
+  value: 'n = names[i] != undefined ? names[i] : '''';'
+- name: '''string text'''
+  value: '''string text'''
+- name: '"string text"'
+  value: '"string text"'
+- name: \'
+  value: \'
+- name: \"
+  value: \"
+- name: \\
+  value: \\
+- name: \n
+  value: \n
+- name: \r
+  value: \r
+- name: \v
+  value: \v
+- name: \t
+  value: \t
+- name: \b
+  value: \b
+- name: \f
+  value: \f
+- name: \uXXXX
+  value: \uXXXX
+- name: \u{X}
+  value: \u{X}
+- name: "let longString = \"This is a very long string which needs \" +\n        \
+    \         \"to wrap across multiple lines because \" +\n                 \"otherwise\
+    \ my code is unreadable.\""
+  value: "let longString = \"This is a very long string which needs \" +\n       \
+    \          \"to wrap across multiple lines because \" +\n                 \"otherwise\
+    \ my code is unreadable.\""
+- name: return 'cat'.charAt(1)
+  value: return 'cat'.charAt(1)
+- name: return 'cat'[1]
+  value: return 'cat'[1]
+- name: new String(s_prim)
+  value: new String(s_prim)
+- name: String.fromCharCode
+  value: String.fromCharCode
+- name: String.fromCodePoint
+  value: String.fromCodePoint
+- name: String.raw()
+  value: String.raw()
+- name: String.prototype.length
+  value: String.prototype.length
+- name: String.prototype.concat(str [, ...strN ])
+  value: String.prototype.concat(str [, ...strN ])
+- name: String.prototype.includes(searchString [, position])
+  value: String.prototype.includes(searchString [, position])
+- name: String.prototype.indexOf(searchValue [, fromIndex])
+  value: String.prototype.indexOf(searchValue [, fromIndex])
+- name: String.prototype.lastIndexOf(searchValue [, fromIndex])
+  value: String.prototype.lastIndexOf(searchValue [, fromIndex])
+- name: String.prototype.match(regexp)
+  value: String.prototype.match(regexp)
+- name: String.prototype.normalize([form])
+  value: String.prototype.normalize([form])
+- name: String.prototype.matchAll(regexp)
+  value: String.prototype.matchAll(regexp)
+- name: String.prototype.quote()
+  value: String.prototype.quote()
+- name: String.prototype.repeat(count)
+  value: String.prototype.repeat(count)
+- name: String.prototype.replace(searchFor, replaceWith)
+  value: String.prototype.replace(searchFor, replaceWith)
+- name: String.prototype.search(regexp)
+  value: String.prototype.search(regexp)
+- name: String.prototype.slice(beginIndex[, endIndex])
+  value: String.prototype.slice(beginIndex[, endIndex])
+- name: String.prototype.split([sep [, limit] ])
+  value: String.prototype.split([sep [, limit] ])
+- name: String.prototype.substr()
+  value: String.prototype.substr()
+- name: String.prototype.substring(indexStart [, indexEnd])
+  value: String.prototype.substring(indexStart [, indexEnd])
+- name: String.prototype.toLowerCase()
+  value: String.prototype.toLowerCase()
+- name: String.prototype.toSource()
+  value: String.prototype.toSource()
+- name: String.prototype.toString()
+  value: String.prototype.toString()
+- name: String.prototype.toUpperCase()
+  value: String.prototype.toUpperCase()
+- name: String.prototype.trim()
+  value: String.prototype.trim()
+- name: 'const regex = /[A-Z]/g;
+
+    const found = paragraph.match(regex);'
+  value: 'const regex = /[A-Z]/g;
+
+    const found = paragraph.match(regex);'
+- name: let re = /see (chapter \d+(\.\d)*)/i;
+  value: let re = /see (chapter \d+(\.\d)*)/i;
+- name: let found = str.match(re);
+  value: let found = str.match(re);
+- name: let regexp = /[A-E]/gi;
+  value: let regexp = /[A-E]/gi;
+- name: let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  value: let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+- name: let matches_array = str.match(regexp);
+  value: let matches_array = str.match(regexp);
+- name: let array = [...str.matchAll(regexp)];
+  value: let array = [...str.matchAll(regexp)];
+- name: '
+
+    while ((match = regexp.exec(str)) !== null) {'
+  value: '
+
+    while ((match = regexp.exec(str)) !== null) {'
+- name: "for (const match of matches) {\n  console.log(`Found ${match[0]} start=${match.index}\
+    \ end=${match.index + match[0].length}.`);\n}"
+  value: "for (const match of matches) {\n  console.log(`Found ${match[0]} start=${match.index}\
+    \ end=${match.index + match[0].length}.`);\n}"
+- name: Array.from(str.matchAll(regexp), m => m[0]);
+  value: Array.from(str.matchAll(regexp), m => m[0]);
+- name: p.replace('dog', 'monkey')
+  value: p.replace('dog', 'monkey')
+- name: paragraph.search(regex)
+  value: paragraph.search(regex)
+- name: str.slice(0, -1)   // returns 'The morning is upon us'
+  value: str.slice(0, -1)   // returns 'The morning is upon us'
+- name: str.slice(-3, -1)  // returns 'us'
+  value: str.slice(-3, -1)  // returns 'us'
+- name: str.slice(-3)      // returns 'us.'
+  value: str.slice(-3)      // returns 'us.'
+- name: str.split(' ');
+  value: str.split(' ');
+- name: str.split('');
+  value: str.split('');
+- name: str.split([separator[, limit]])
+  value: str.split([separator[, limit]])
+- name: "const str = 'asdfghjkl'\nconst strReverse = str.split('').reverse().join('')\
+    \ \n// 'lkjhgfdsa'"
+  value: "const str = 'asdfghjkl'\nconst strReverse = str.split('').reverse().join('')\
+    \ \n// 'lkjhgfdsa'"
+- name: str.substr(1, 2)
+  value: str.substr(1, 2)
+- name: str.substr(start[, length])
+  value: str.substr(start[, length])
+- name: 'var aString = ''Mozilla'';
+
+
+    console.log(aString.substr(0, 1));   // ''M''
+
+    console.log(aString.substr(1, 0));   // ''''
+
+    console.log(aString.substr(-1, 1));  // ''a''
+
+    console.log(aString.substr(1, -1));  // ''''
+
+    console.log(aString.substr(-3));     // ''lla''
+
+    console.log(aString.substr(1));      // ''ozilla''
+
+    console.log(aString.substr(-20, 2)); // ''Mo''
+
+    console.log(aString.substr(20, 2));  // '''''
+  value: 'var aString = ''Mozilla'';
+
+
+    console.log(aString.substr(0, 1));   // ''M''
+
+    console.log(aString.substr(1, 0));   // ''''
+
+    console.log(aString.substr(-1, 1));  // ''a''
+
+    console.log(aString.substr(1, -1));  // ''''
+
+    console.log(aString.substr(-3));     // ''lla''
+
+    console.log(aString.substr(1));      // ''ozilla''
+
+    console.log(aString.substr(-20, 2)); // ''Mo''
+
+    console.log(aString.substr(20, 2));  // '''''
+- name: str.substring(1, 3)
+  value: str.substring(1, 3)
+- name: orig.trim()
+  value: orig.trim()
+- name: promise.then(successCallback, failureCallback);
+  value: promise.then(successCallback, failureCallback);
+- name: "let myFirstPromise = new Promise((resolve, reject) => {\n  // We call resolve(...)\
+    \ when what we were doing asynchronously was successful, and reject(...) when\
+    \ it failed.\n  // In this example, we use setTimeout(...) to simulate async code.\
+    \ \n  // In reality, you will probably be using something like XHR or an HTML5\
+    \ API.\n  setTimeout( function() {\n    resolve(\"Success!\")  // Yay! Everything\
+    \ went well!\n  }, 250) \n}) \n\nmyFirstPromise.then((successMessage) => {\n \
+    \ // successMessage is whatever we passed in the resolve(...) function above.\n\
+    \  // It doesn't have to be a string, but if it is only a succeed message, it\
+    \ probably will be.\n  console.log(\"Yay! \" + successMessage) \n});"
+  value: "let myFirstPromise = new Promise((resolve, reject) => {\n  // We call resolve(...)\
+    \ when what we were doing asynchronously was successful, and reject(...) when\
+    \ it failed.\n  // In this example, we use setTimeout(...) to simulate async code.\
+    \ \n  // In reality, you will probably be using something like XHR or an HTML5\
+    \ API.\n  setTimeout( function() {\n    resolve(\"Success!\")  // Yay! Everything\
+    \ went well!\n  }, 250) \n}) \n\nmyFirstPromise.then((successMessage) => {\n \
+    \ // successMessage is whatever we passed in the resolve(...) function above.\n\
+    \  // It doesn't have to be a string, but if it is only a succeed message, it\
+    \ probably will be.\n  console.log(\"Yay! \" + successMessage) \n});"
+- name: Number()
+  value: Number()
+- name: Number.EPSILON
+  value: Number.EPSILON
+- name: Number.MAX_SAFE_INTEGER
+  value: Number.MAX_SAFE_INTEGER
+- name: Number.MAX_VALUE
+  value: Number.MAX_VALUE
+- name: Number.MIN_SAFE_INTEGER
+  value: Number.MIN_SAFE_INTEGER
+- name: Number.MIN_VALUE
+  value: Number.MIN_VALUE
+- name: Number.NaN
+  value: Number.NaN
+- name: Number.NEGATIVE_INFINITY
+  value: Number.NEGATIVE_INFINITY
+- name: Number.POSITIVE_INFINITY
+  value: Number.POSITIVE_INFINITY
+- name: Number.isNaN()
+  value: Number.isNaN()
+- name: Number.isFinite()
+  value: Number.isFinite()
+- name: Number.isInteger()
+  value: Number.isInteger()
+- name: Number.isSafeInteger()
+  value: Number.isSafeInteger()
+- name: Number.parseFloat(string)
+  value: Number.parseFloat(string)
+- name: Number.parseInt(string, [radix])
+  value: Number.parseInt(string, [radix])
+- name: '
+
+    console.log(roughScale('' 0xF'', 16));'
+  value: '
+
+    console.log(roughScale('' 0xF'', 16));'
+- name: Math.E
+  value: Math.E
+- name: Math.LN2
+  value: Math.LN2
+- name: Math.LN10
+  value: Math.LN10
+- name: Math.LOG2E
+  value: Math.LOG2E
+- name: Math.LOG10E
+  value: Math.LOG10E
+- name: Math.PI
+  value: Math.PI
+- name: Math.SQRT1_2
+  value: Math.SQRT1_2
+- name: Math.SQRT2
+  value: Math.SQRT2
+- name: Math.abs(x)
+  value: Math.abs(x)
+- name: Math.acos(x)
+  value: Math.acos(x)
+- name: Math.acosh(x)
+  value: Math.acosh(x)
+- name: Math.asin(x)
+  value: Math.asin(x)
+- name: Math.asinh(x)
+  value: Math.asinh(x)
+- name: Math.atan(x)
+  value: Math.atan(x)
+- name: Math.atanh(x)
+  value: Math.atanh(x)
+- name: Math.atan2(y, x)
+  value: Math.atan2(y, x)
+- name: Math.cbrt(x)
+  value: Math.cbrt(x)
+- name: Math.ceil(x)
+  value: Math.ceil(x)
+- name: Math.clz32(x)
+  value: Math.clz32(x)
+- name: Math.cos(x)
+  value: Math.cos(x)
+- name: Math.cosh(x)
+  value: Math.cosh(x)
+- name: Math.exp(x)
+  value: Math.exp(x)
+- name: Math.expm1(x)
+  value: Math.expm1(x)
+- name: Math.floor(x)
+  value: Math.floor(x)
+- name: Math.fround(x)
+  value: Math.fround(x)
+- name: "Math.hypot([x[, y[, \u2026]]])"
+  value: "Math.hypot([x[, y[, \u2026]]])"
+- name: Math.imul(x, y)
+  value: Math.imul(x, y)
+- name: Math.log(x)
+  value: Math.log(x)
+- name: Math.log1p(x)
+  value: Math.log1p(x)
+- name: Math.log10(x)
+  value: Math.log10(x)
+- name: Math.log2(x)
+  value: Math.log2(x)
+- name: "Math.max([x[, y[, \u2026]]])"
+  value: "Math.max([x[, y[, \u2026]]])"
+- name: "Math.min([x[, y[, \u2026]]])"
+  value: "Math.min([x[, y[, \u2026]]])"
+- name: Math.pow(x, y)
+  value: Math.pow(x, y)
+- name: Math.random()
+  value: Math.random()
+- name: Math.round(x)
+  value: Math.round(x)
+- name: Math.sign(x)
+  value: Math.sign(x)
+- name: Math.sin(x)
+  value: Math.sin(x)
+- name: Math.sinh(x)
+  value: Math.sinh(x)
+- name: Math.sqrt(x)
+  value: Math.sqrt(x)
+- name: Math.tan(x)
+  value: Math.tan(x)
+- name: Math.tanh(x)
+  value: Math.tanh(x)
+- name: Math.toSource()
+  value: Math.toSource()
+- name: Math.trunc(x)
+  value: Math.trunc(x)
+- name: Date.UTC()
+  value: Date.UTC()
+- name: Date.now()
+  value: Date.now()
+- name: Date.parse()
+  value: Date.parse()
+- name: Date.prototype.getDate()
+  value: Date.prototype.getDate()
+- name: Date.prototype.getDay()
+  value: Date.prototype.getDay()
+- name: Date.prototype.getFullYear()
+  value: Date.prototype.getFullYear()
+- name: Date.prototype.getHours()
+  value: Date.prototype.getHours()
+- name: Date.prototype.getMilliseconds()
+  value: Date.prototype.getMilliseconds()
+- name: Date.prototype.getMinutes()
+  value: Date.prototype.getMinutes()
+- name: Date.prototype.getMonth()
+  value: Date.prototype.getMonth()
+- name: Date.prototype.getSeconds()
+  value: Date.prototype.getSeconds()
+- name: Date.prototype.getTime()
+  value: Date.prototype.getTime()
+- name: Date.prototype.getTimezoneOffset()
+  value: Date.prototype.getTimezoneOffset()
+- name: Date.prototype.getUTCDate()
+  value: Date.prototype.getUTCDate()
+- name: Date.prototype.getUTCDay()
+  value: Date.prototype.getUTCDay()
+- name: Date.prototype.getUTCFullYear()
+  value: Date.prototype.getUTCFullYear()
+- name: Date.prototype.getUTCHours()
+  value: Date.prototype.getUTCHours()
+- name: Date.prototype.getUTCMinutes()
+  value: Date.prototype.getUTCMinutes()
+- name: Date.prototype.getUTCMonth()
+  value: Date.prototype.getUTCMonth()
+- name: Date.prototype.getUTCSeconds()
+  value: Date.prototype.getUTCSeconds()
+- name: ' Date.prototype.getYear()'
+  value: ' Date.prototype.getYear()'
+- name: Date.prototype.setDate()
+  value: Date.prototype.setDate()
+- name: Date.prototype.setFullYear()
+  value: Date.prototype.setFullYear()
+- name: Date.prototype.setHours()
+  value: Date.prototype.setHours()
+- name: Date.prototype.setMilliseconds()
+  value: Date.prototype.setMilliseconds()
+- name: Date.prototype.setMinutes()
+  value: Date.prototype.setMinutes()
+- name: Date.prototype.setMonth()
+  value: Date.prototype.setMonth()
+- name: Date.prototype.setSeconds()
+  value: Date.prototype.setSeconds()
+- name: Date.prototype.setTime()
+  value: Date.prototype.setTime()
+- name: Date.prototype.setUTCDate()
+  value: Date.prototype.setUTCDate()
+- name: Date.prototype.setUTCFullYear()
+  value: Date.prototype.setUTCFullYear()
+- name: Date.prototype.setUTCHours()
+  value: Date.prototype.setUTCHours()
+- name: Date.prototype.valueOf()
+  value: Date.prototype.valueOf()
+- name: Date.prototype.toUTCString()
+  value: Date.prototype.toUTCString()
+- name: Date.prototype.toTimeString()
+  value: Date.prototype.toTimeString()
+- name: Date.prototype.toJSON()
+  value: Date.prototype.toJSON()
+- name: Date.prototype.toISOString()
+  value: Date.prototype.toISOString()
+- name: ' Date.prototype.toGMTString()'
+  value: ' Date.prototype.toGMTString()'
+- name: Date.prototype.toDateString()
+  value: Date.prototype.toDateString()
+- name: ' Date.prototype.setYear()'
+  value: ' Date.prototype.setYear()'
+- name: Date.prototype.setUTCSeconds()
+  value: Date.prototype.setUTCSeconds()
+- name: Date.now(),
+  value: Date.now(),
+- name: 'end.getTime() '
+  value: 'end.getTime() '
+- name: new Date('December 17, 1995 03:24:00')
+  value: new Date('December 17, 1995 03:24:00')
+- name: new Date('1995-12-17T03:24:00')
+  value: new Date('1995-12-17T03:24:00')
+- name: 'new Date(1995, 11, 17) '
+  value: 'new Date(1995, 11, 17) '
+- name: new Date(1995, 11, 17, 3, 24, 0)
+  value: new Date(1995, 11, 17, 3, 24, 0)
+- name: BigInt("0x1fffffffffffff")
+  value: BigInt("0x1fffffffffffff")
+- name: 'typeof 1n === ''bigint''      '
+  value: 'typeof 1n === ''bigint''      '
+- name: "  if (a > 0) {\n    return \"positive\";\n  } else {\n    return \"NOT positive\"\
+    ;\n  }"
+  value: "  if (a > 0) {\n    return \"positive\";\n  } else {\n    return \"NOT positive\"\
+    ;\n  }"
+- name: "{\n  StatementList\n}"
+  value: "{\n  StatementList\n}"
+- name: "switch (expr) {\n  case 'Oranges':\n    console.log('Oranges are $0.59 a\
+    \ pound.');\n    break;\n  case 'Mangoes':\n  case 'Papayas':\n    console.log('Mangoes\
+    \ and papayas are $2.79 a pound.');\n    // expected output: \"Mangoes and papayas\
+    \ are $2.79 a pound.\"\n    break;\n  default:\n    console.log('Sorry, we are\
+    \ out of ' + expr + '.');\n}"
+  value: "switch (expr) {\n  case 'Oranges':\n    console.log('Oranges are $0.59 a\
+    \ pound.');\n    break;\n  case 'Mangoes':\n  case 'Papayas':\n    console.log('Mangoes\
+    \ and papayas are $2.79 a pound.');\n    // expected output: \"Mangoes and papayas\
+    \ are $2.79 a pound.\"\n    break;\n  default:\n    console.log('Sorry, we are\
+    \ out of ' + expr + '.');\n}"
+- name: hrow new Error('Required');
+  value: hrow new Error('Required');
+- name: 'throw true; '
+  value: 'throw true; '
+- name: throw 42;
+  value: throw 42;
+- name: throw 'Error2';
+  value: throw 'Error2';
+- name: "try {\n  getRectArea(3, 'A');\n}\ncatch(e) {\n  console.error(e);\n  // expected\
+    \ output: \"Parameter is not a number!\"\n}"
+  value: "try {\n  getRectArea(3, 'A');\n}\ncatch(e) {\n  console.error(e);\n  //\
+    \ expected output: \"Parameter is not a number!\"\n}"
+- name: "try {\n  try_statements\n}\n[catch (exception_var_1 if condition_1) { //\
+    \ non-standard\n  catch_statements_1\n}]\n...\n[catch (exception_var_2) {\n  catch_statements_2\n\
+    }]\n[finally {\n  finally_statements\n}]"
+  value: "try {\n  try_statements\n}\n[catch (exception_var_1 if condition_1) { //\
+    \ non-standard\n  catch_statements_1\n}]\n...\n[catch (exception_var_2) {\n  catch_statements_2\n\
+    }]\n[finally {\n  finally_statements\n}]"
+- name: var x = 1;
+  value: var x = 1;
+- name: let x = 1;
+  value: let x = 1;
+- name: const number = 42;
+  value: const number = 42;
+- name: import defaultExport from "module-name";
+  value: import defaultExport from "module-name";
+- name: import * as name from "module-name";
+  value: import * as name from "module-name";
+- name: import { export1 } from "module-name";
+  value: import { export1 } from "module-name";
+- name: import { export1 as alias1 } from "module-name";
+  value: import { export1 as alias1 } from "module-name";
+- name: import { export1 , export2 } from "module-name";
+  value: import { export1 , export2 } from "module-name";
+- name: import { foo , bar } from "module-name/path/to/specific/un-exported/file";
+  value: import { foo , bar } from "module-name/path/to/specific/un-exported/file";
+- name: var promise = import("module-name");
+  value: var promise = import("module-name");
+- name: import "module-name";
+  value: import "module-name";
+- name: import defaultExport, * as name from "module-name";
+  value: import defaultExport, * as name from "module-name";
+- name: import defaultExport, { export1 [ , [...] ] } from "module-name";
+  value: import defaultExport, { export1 [ , [...] ] } from "module-name";
+- name: "loop1:\nfor (let i = 0; i < 5; i++) {\n  if (i === 1) {\n    continue loop1;\n\
+    \  }\n  str = str + i;\n}"
+  value: "loop1:\nfor (let i = 0; i < 5; i++) {\n  if (i === 1) {\n    continue loop1;\n\
+    \  }\n  str = str + i;\n}"
+- name: "label :\n   statement"
+  value: "label :\n   statement"
+- name: "with (expression)\n  statement"
+  value: "with (expression)\n  statement"
+- name: "var a, x, y;\nvar r = 10;\n\nwith (Math) {\n  a = PI * r * r;\n  x = r *\
+    \ cos(PI);\n  y = r * sin(PI / 2);\n}"
+  value: "var a, x, y;\nvar r = 10;\n\nwith (Math) {\n  a = PI * r * r;\n  x = r *\
+    \ cos(PI);\n  y = r * sin(PI / 2);\n}"
+- name: "function potentiallyBuggyCode() {\n    debugger;\n    // do potentially buggy\
+    \ stuff to examine, step through, etc.\n}"
+  value: "function potentiallyBuggyCode() {\n    debugger;\n    // do potentially\
+    \ buggy stuff to examine, step through, etc.\n}"
+- name: debugger;
+  value: debugger;
+- name: "class Polygon {\n  constructor(height, width) {\n    this.area = height *\
+    \ width;\n  }\n}"
+  value: "class Polygon {\n  constructor(height, width) {\n    this.area = height\
+    \ * width;\n  }\n}"
+- name: "\ndo {\n  i = i + 1;\n  result = result + i;\n} while (i < 5);"
+  value: "\ndo {\n  i = i + 1;\n  result = result + i;\n} while (i < 5);"
+- name: "for (let i = 0; i < 9; i++) {\n  str = str + i;\n}"
+  value: "for (let i = 0; i < 9; i++) {\n  str = str + i;\n}"
+- name: "for each (variable in object) {\n  statement\n}"
+  value: "for each (variable in object) {\n  statement\n}"
+- name: "for each (var item in obj) {\n  sum += item;\n}"
+  value: "for each (var item in obj) {\n  sum += item;\n}"
+- name: "for (const property in object) {\n  console.log(`${property}: ${object[property]}`);\n\
+    }"
+  value: "for (const property in object) {\n  console.log(`${property}: ${object[property]}`);\n\
+    }"
+- name: console.log(element);
+  value: console.log(element);
+- name: "while (n < 3) {\n  n++;\n}"
+  value: "while (n < 3) {\n  n++;\n}"
+info:
+- name: Simple buttons
+- category: tests

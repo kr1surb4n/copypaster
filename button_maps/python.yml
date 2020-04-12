@@ -1,5 +1,5 @@
 info:
-  - name: "Simple buttons"
+  - name: "Python"
   - category: python
 buttons:
   - value: "#!/usr/bin/env python3"
