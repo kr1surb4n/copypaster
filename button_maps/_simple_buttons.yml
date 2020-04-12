@@ -1,0 +1,26 @@
+info:
+  - name: "Simple buttons"
+  - category: tests
+buttons:
+  - value: 1
+  - value: 2
+  - value: 3
+  - value: 4
+  - value: 5
+  - value: 6
+  - value: 7
+  - value: 8
+  - value: 9
+  - value: "if VALUE is not None:"
+  - value: "elif"
+  - value: "VALUE or VALUE"
+  - value: "VALUE and VALUE"
+  - value: "dupa jasio pierdzi stasio"
+    name: pierdzioszek
+  - value: ["path/", 10, 20]
+    name:
+
+  - value: |
+      - value:
+        name:
+    name: button definition

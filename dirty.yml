@@ -1,0 +1,63 @@
+buttons:
+- name: "const person = {\n  name: ['Bob', 'Smith'],\n  age: 32,\n  gender: 'male',\n\
+    \  interests: ['music', 'skiing'],\n  bio: function() {\n    alert(this.name[0]\
+    \ + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0]\
+    \ + ' and ' + this.interests[1] + '.');\n  },\n  greeting: function() {\n    alert('Hi!\
+    \ I\\'m ' + this.name[0] + '.');\n  }\n};"
+  value: "const person = {\n  name: ['Bob', 'Smith'],\n  age: 32,\n  gender: 'male',\n\
+    \  interests: ['music', 'skiing'],\n  bio: function() {\n    alert(this.name[0]\
+    \ + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0]\
+    \ + ' and ' + this.interests[1] + '.');\n  },\n  greeting: function() {\n    alert('Hi!\
+    \ I\\'m ' + this.name[0] + '.');\n  }\n};"
+- name: const person = {};
+  value: const person = {};
+- name: person.age
+  value: person.age
+- name: "function Person(name) {\n  this.name = name;\n  this.greeting = function()\
+    \ {\n    alert('Hi! I\\'m ' + this.name + '.');\n  };\n}"
+  value: "function Person(name) {\n  this.name = name;\n  this.greeting = function()\
+    \ {\n    alert('Hi! I\\'m ' + this.name + '.');\n  };\n}"
+- name: let person1 = new Person('Bob');
+  value: let person1 = new Person('Bob');
+- name: Object.create(person1);
+  value: Object.create(person1);
+- name: "Person.prototype.farewell = function() {\n  alert(this.name.first + ' has\
+    \ left the building. Bye for now!');\n};"
+  value: "Person.prototype.farewell = function() {\n  alert(this.name.first + ' has\
+    \ left the building. Bye for now!');\n};"
+- name: person1
+  value: person1
+- name: "function Teacher(first, last, age, gender, interests, subject) {\n  Person.call(this,\
+    \ first, last, age, gender, interests);\n\n  this.subject = subject;\n}"
+  value: "function Teacher(first, last, age, gender, interests, subject) {\n  Person.call(this,\
+    \ first, last, age, gender, interests);\n\n  this.subject = subject;\n}"
+- name: "function Brick() {\n  this.width = 10;\n  this.height = 20;\n}"
+  value: "function Brick() {\n  this.width = 10;\n  this.height = 20;\n}"
+- name: "function BlueGlassBrick() {\n  Brick.call(this);\n\n  this.opacity = 0.5;\n\
+    \  this.color = 'blue';\n}"
+  value: "function BlueGlassBrick() {\n  Brick.call(this);\n\n  this.opacity = 0.5;\n\
+    \  this.color = 'blue';\n}"
+- name: "class Person {\n  constructor(first, last, age, gender, interests) {\n  \
+    \  this.name = {\n      first,\n      last\n    };\n    this.age = age;\n    this.gender\
+    \ = gender;\n    this.interests = interests;\n  }\n\n  greeting() {\n    console.log(`Hi!\
+    \ I'm ${this.name.first}`);\n  };\n\n  farewell() {\n    console.log(`${this.name.first}\
+    \ has left the building. Bye for now!`);\n  };\n}"
+  value: "class Person {\n  constructor(first, last, age, gender, interests) {\n \
+    \   this.name = {\n      first,\n      last\n    };\n    this.age = age;\n   \
+    \ this.gender = gender;\n    this.interests = interests;\n  }\n\n  greeting()\
+    \ {\n    console.log(`Hi! I'm ${this.name.first}`);\n  };\n\n  farewell() {\n\
+    \    console.log(`${this.name.first} has left the building. Bye for now!`);\n\
+    \  };\n}"
+- name: "class Teacher extends Person {\n  constructor(subject, grade) { \n    super();\
+    \ // Now 'this' is initialized by calling the parent constructor.\n    this.subject\
+    \ = subject;   \n    this.grade = grade; \n  }\n}"
+  value: "class Teacher extends Person {\n  constructor(subject, grade) { \n    super();\
+    \ // Now 'this' is initialized by calling the parent constructor.\n    this.subject\
+    \ = subject;   \n    this.grade = grade; \n  }\n}"
+- name: "  get subject() {\n    return this._subject;\n  }"
+  value: "  get subject() {\n    return this._subject;\n  }"
+- name: "  set subject(newSubject) {\n    this._subject = newSubject;\n  }"
+  value: "  set subject(newSubject) {\n    this._subject = newSubject;\n  }"
+info:
+- name: Simple buttons
+- category: tests

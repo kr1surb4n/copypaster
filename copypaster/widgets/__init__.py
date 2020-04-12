@@ -1,4 +1,5 @@
 from copypaster.widgets.buttons import CopyButton
+from copypaster.file_loader import Deck
 from copypaster.register import Register, register_instance
 
 from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMOVE
@@ -24,8 +25,8 @@ CONTEXT = 'Button'
 def wrap(widget):
     sw = Gtk.ScrolledWindow()
     sw.add(widget)
-    sw.set_policy(Gtk.PolicyType.AUTOMATIC,
-                  Gtk.PolicyType.AUTOMATIC)
+    # sw.set_policy(Gtk.PolicyType.AUTOMATIC,
+    #              Gtk.PolicyType.AUTOMATIC)
     sw.set_border_width(1)
     return sw
 
@@ -44,6 +45,58 @@ class DialogError(Gtk.Dialog):
         box = self.get_content_area()
         box.add(label)
         self.show_all()
+
+
+class DialogEdit(Gtk.Dialog):
+
+    def __init__(self, parent, button_to_edit):  # lol
+        Gtk.Dialog.__init__(self)
+
+        self.edited = button_to_edit
+
+        self.set_modal(True)
+        self.add_button(button_text="OK", response_id=Gtk.ResponseType.OK)
+        self.add_button(button_text="CANCEL",
+                        response_id=Gtk.ResponseType.CANCEL)
+        self.set_transient_for(parent)
+        self.set_default_size(450, 350)
+
+        box = self.get_content_area()
+        grid = Gtk.Grid(orientation=Gtk.Orientation.VERTICAL,
+                        hexpand=True, column_spacing=10, row_spacing=10)
+
+        self.entry = Gtk.Entry()
+        self.entry.set_text(self.edited.name)
+
+        self.textview = Gtk.TextView()
+        self.textview.set_cursor_visible(True)
+        self.textview.set_hexpand(True)
+        self.textview.set_vexpand(True)
+        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)
+
+        self.textbuffer = self.textview.get_buffer()
+        self.textbuffer.set_text(self.edited.value)
+
+        self.wrapped_textview = wrap(self.textview)
+
+        self.save_button = Gtk.Button(label="Save")
+        self.save_button.connect('clicked', self.save)
+
+        grid.add(self.entry)
+        grid.add(self.wrapped_textview)
+        grid.add(self.save_button)
+
+        box.add(grid)
+
+        self.show_all()
+
+    def save(self, button):
+        text_view_content = self.textbuffer.get_text(self.textbuffer.get_start_iter(
+        ), self.textbuffer.get_end_iter(), False)
+
+        self.edited.name, self.edited.value = self.entry.get_text(), text_view_content
+        self.edited.set_label(self.edited.name)
+        self.destroy()
 
 
 class AnAction (Gio.SimpleAction):
@@ -93,30 +146,7 @@ class ToolBar(Gtk.Toolbar):
         self.init_toolbutton(
             Gtk.STOCK_SAVE, Register['Application'].save_current_notebook, 2)
         self.init_toolbutton(
-            Gtk.STOCK_SAVE_AS, Register['Application'].save_dirty_notebook, 3)
-
-        """
-        # button for the "open" action
-        open_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_OPEN)
-        open_button.set_is_important(True)
-        self.insert(open_button, 1)
-        open_button.show()
-        open_button.set_action_name("app.open")
-
-        # button for the "undo" action
-        undo_button = Gtk.ToolButton.new_from_stock(Gtk.STOCK_UNDO)
-        undo_button.set_is_important(True)
-        self.insert(undo_button, 2)
-        undo_button.show()
-        undo_button.set_action_name("win.undo")
-
-        # button for the "fullscreen/leave fullscreen" action
-        self.fullscreen_button = Gtk.ToolButton.new_fro _stock(
-            Gtk.STOCK_FULLSCREEN)
-        self.fullscreen_button.set_is_important(True)
-        self.insert(self.fullscreen_button, 3)
-        self.fullscreen_button.set_action_name("win.fullscreen")
-        """
+            Gtk.STOCK_SAVE_AS, Register['Application'].saveas_current_notebook, 3)
 
 
 @register_instance
@@ -145,7 +175,7 @@ class NewNote(Gtk.Grid):
 
         self.textbuffer = self.textview.get_buffer()
         self.textbuffer.set_text("")
-        #textview.connect('focus', lambda x: x.grab_focus())
+        # textview.connect('focus', lambda x: x.grab_focus())
         self.wrapped_textview = wrap(self.textview)
         self.add(self.save_button)
         self.attach_next_to(self.entry, self.save_button,
@@ -153,16 +183,9 @@ class NewNote(Gtk.Grid):
 
         self.attach_next_to(self.wrapped_textview, self.save_button,
                             Gtk.PositionType.BOTTOM, 2, 3)
-        # self.add(wig)
+
         self.attach_next_to(self.save_form, self.wrapped_textview,
                             Gtk.PositionType.RIGHT, 2, 3)
-        # self.resize_children()
-        # self.add(textview)
-        # self.add(entry)
-        #box.pack_start(save_form, False, True, 0)
-
-        # self.add(box)
-        # textview.grab_focus()
 
     def clean_after(self):
         self.textbuffer.set_text("")
@@ -170,10 +193,12 @@ class NewNote(Gtk.Grid):
 
     def add_button(self, name, value):
         try:
-            b = self.notes.add_button(name=name,
-                                      value=value)
+            cabinet = Register['FileCabinet']
+            current_deck = cabinet.pages[cabinet.get_current_page()]
+            b = current_deck.button_deck.add_button(name=name,
+                                                    value=value)
 
-            self.dirty_notes.add(b)
+            current_deck.add(b)
             b.show()
         except IndexError:
             pass  # yes, cause this value exists
@@ -192,9 +217,11 @@ class NewNote(Gtk.Grid):
         self.add_button(name, value)
         self.clean_after()
 
-    def edit(self, name, value):
-        self.entry.set_text(name)
-        self.textbuffer.set_text(value)
+    def edit(self, copy_button):
+        dialog = DialogEdit(
+            Register['Application'].win,  copy_button)
+        dialog.run()
+        dialog.destroy()
 
     def save(self, button):
         value = self.textbuffer.get_text(
@@ -209,12 +236,7 @@ class NewNote(Gtk.Grid):
         if not name:
             dialog = DialogError(
                 Register['Application'].win, "Soo, the name is missing, it's required.")
-            response = dialog.run()
-
-            # if response == Gtk.ResponseType.OK:
-            #     print("The OK button was clicked")
-            # elif response == Gtk.ResponseType.CANCEL:
-            #     print("The Cancel button was clicked")
+            dialog.run()
             dialog.destroy()
         else:
             self.add_button(name, value)
@@ -222,40 +244,40 @@ class NewNote(Gtk.Grid):
         self.clean_after()
 
 
-@register_instance
-class StateButtons(Gtk.Box):
-
-    def __init__(self):
-        Gtk.Box.__init__(self, spacing=6)
-        hbox = Gtk.Box(spacing=6)
-        self.add(hbox)
-        self.clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
-        self.handle = None
-
-        self.autosave = Gtk.ToggleButton("Autosave")
-        self.autosave.connect("toggled", self.on_autosave, "1")
-        hbox.pack_start(self.autosave, True, True, 0)
-
-        self.edit = Gtk.ToggleButton("Edit button")
-        self.edit.connect("toggled", self.on_edit, "2")
-        hbox.pack_start(self.edit, True, True, 0)
-
-        self.remove = Gtk.ToggleButton("Remove button")
-        self.remove.connect("toggled", self.on_remove, "2")
-        hbox.pack_start(self.remove, True, True, 0)
-
+class StateButtonsCallbacks:
     def on_autosave(self, button, name):
-        self.edit.get_active() and self.edit.set_active(False)
-        self.remove.get_active() and self.remove.set_active(False)
+        self._deactive_rest_buttons('autosave')
 
         if button.get_active():
             State['app'] = AUTOSAVE
             self.handle = self.clip.connect(
                 'owner-change', self.auto_clipboard)
+            logger.debug('Autosave on')
         else:
             State['app'] = NORMAL
             self.clip.disconnect(self.handle)
-        logger.debug('Autosave on')
+            logger.debug('Autosave off')
+
+    def on_edit(self, button, name):
+        self._deactive_rest_buttons('edit')
+
+        if button.get_active():
+            State['app'] = EDIT
+            logger.debug('Edit on')
+        else:
+            State['app'] = NORMAL
+            logger.debug('Edit off')
+
+    def on_remove(self, button, name):
+        self._deactive_rest_buttons('remove')
+
+        if button.get_active():
+            State['app'] = REMOVE
+            logger.debug('Remove on')
+
+        else:
+            State['app'] = NORMAL
+            logger.debug('Remove off')
 
     def auto_clipboard(self, clipboard, parameter):
         if State['app'] != AUTOSAVE:
@@ -269,25 +291,34 @@ class StateButtons(Gtk.Box):
 
         Register['NewNote'].add_button(name, value)
 
-    def on_edit(self, button, name):
-        self.autosave.get_active() and self.autosave.set_active(False)
-        self.remove.get_active() and self.remove.set_active(False)
+    def _deactive_rest_buttons(self, leave_alone):
+        [button.set_active(False) for name, button in self.buttons.items(
+        ) if name != leave_alone and button.get_active()]
 
-        if button.get_active():
-            State['app'] = EDIT
-        else:
-            State['app'] = NORMAL
-        logger.debug('Edit on')
 
-    def on_remove(self, button, name):
-        self.edit.get_active() and self.edit.set_active(False)
-        self.autosave.get_active() and self.autosave.set_active(False)
+@register_instance
+class StateButtons(StateButtonsCallbacks, Gtk.Box):
+    """Autosave, Edit, Remove"""
 
-        if button.get_active():
-            State['app'] = REMOVE
-        else:
-            State['app'] = NORMAL
-        logger.debug('Remove on')
+    def __init__(self):
+        Gtk.Box.__init__(self, spacing=6)
+
+        self.buttons = {}
+
+        self.clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+        self.handle = None
+
+        self._create_button("Autosave", self.on_autosave, "1")
+        self._create_button("Edit", self.on_edit, "2")
+        self._create_button("Remove", self.on_remove, "3")
+
+    def _create_button(self, name, callback, ind):
+        _button = Gtk.ToggleButton(name)
+        _button.connect("toggled", callback, ind)
+
+        self.pack_start(_button, True, True, 0)
+
+        self.buttons[name.lower()] = _button
 
 
 @register_instance
@@ -313,10 +344,10 @@ class DirtyNotes(Gtk.FlowBox):
 class ButtonGrid(Gtk.FlowBox):
     "Main area of user interface content."
 
-    def __init__(self, buttons):
+    def __init__(self, deck_file):
         Gtk.FlowBox.__init__(self)
 
-        self.button_deck = Register[buttons]
+        self.button_deck = Deck(deck_file)
 
         self.set_valign(Gtk.Align.START)
         self.set_max_children_per_line(4)
@@ -338,12 +369,13 @@ class FileCabinet(Gtk.Notebook):
         self.pages = []
 
         self.add_page("Dirty notes", DirtyNotes())
-        self.add_page("Simple", ButtonGrid('Simple'))
-        self.add_page("Python", ButtonGrid('Python'))
-        self.add_page("Bash", ButtonGrid('Bash'))
+        decks = Register['Config'].get_decks()
+
+        for name, deck_file in decks.items():
+            self.add_page(name, ButtonGrid(deck_file))
 
     def add_page(self, title, _object):
-        #page = Gtk.Box()
+        # page = Gtk.Box()
         # page.set_border_width(10)
         # page.add(_object)
         self.pages += [_object]
@@ -373,7 +405,6 @@ class AppCallbacks:
 
     # callback function for "about"
     def about_callback(self, action, parameter):
-        print("No AboutDialog for you. This is only a demonstration.")
         dialog = Gtk.Dialog()
         dialog.set_title("A Gtk+ Dialog")
         dialog.set_transient_for(self)
@@ -410,6 +441,27 @@ class AppCallbacks:
     def save_current_notebook(self, action):
         cabinet = Register['FileCabinet']
         cabinet.pages[cabinet.get_current_page()].save_deck()
+
+    def saveas_current_notebook(self, action):
+        dialog = Gtk.FileChooserDialog(
+            'Save button deck', self.win,
+            Gtk.FileChooserAction.SAVE,
+            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+             Gtk.STOCK_SAVE, Gtk.ResponseType.OK))
+
+        dialog.set_do_overwrite_confirmation(True)
+        if dialog.run() == Gtk.ResponseType.OK:
+            filename = dialog.get_filename()
+
+            cabinet = Register['FileCabinet']
+            current_deck = cabinet.pages[cabinet.get_current_page()]
+
+            try:
+                current_deck.button_deck.path = filename
+                current_deck.button_deck.save_buttons()
+            except Exception as e:
+                logger.error("There was an exception {}".format(e))
+        dialog.destroy()
 
     def save_dirty_notebook(self, action):
         pass
@@ -481,10 +533,10 @@ class Application(AppCallbacks, Gtk.Application):
                    ("about", self.about_callback,),
                    ("quit", self.quit_callback,),
 
-                   #("app.add", self.add_new_notebook,),
-                   #("app.open", self.open_notebook,),
-                   #("app.save_current", self.save_current_notebook,),
-                   #("app.save_dirty_as", self.save_dirty_notebook,),
+                   # ("app.add", self.add_new_notebook,),
+                   # ("app.open", self.open_notebook,),
+                   # ("app.save_current", self.save_current_notebook,),
+                   # ("app.save_dirty_as", self.save_dirty_notebook,),
                    ]
 
         for action_name, callback in actions:
