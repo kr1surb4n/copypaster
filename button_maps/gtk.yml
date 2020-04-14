@@ -1,0 +1,229 @@
+buttons:
+- click_count: 0
+  info: ''
+  name: 'import gi
+
+    gi.require_version(''Gtk'', ''3.0'')
+
+    from gi.repository import Gtk, Gdk, Gio  # noqa'
+  value: 'import gi
+
+    gi.require_version(''Gtk'', ''3.0'')
+
+    from gi.repository import Gtk, Gdk, Gio  # noqa'
+- click_count: 0
+  info: ''
+  name: "def wrap(widget):\n    sw = Gtk.ScrolledWindow()\n    sw.add(widget)\n  \
+    \  # sw.set_policy(Gtk.PolicyType.AUTOMATIC,\n    #              Gtk.PolicyType.AUTOMATIC)\n\
+    \    sw.set_border_width(1)\n    return sw"
+  value: "def wrap(widget):\n    sw = Gtk.ScrolledWindow()\n    sw.add(widget)\n \
+    \   # sw.set_policy(Gtk.PolicyType.AUTOMATIC,\n    #              Gtk.PolicyType.AUTOMATIC)\n\
+    \    sw.set_border_width(1)\n    return sw"
+- click_count: 0
+  info: ''
+  name: "class AnAction (Gio.SimpleAction):\n    @classmethod\n    def new(cls, name,\
+    \ parameter_type=None, callback=None):\n        action = Gio.SimpleAction.new(name,\
+    \ parameter_type)\n        action.enabled = True\n        action.connect(\"activate\"\
+    , callback)    # TODO check this code\n        return action"
+  value: "class AnAction (Gio.SimpleAction):\n    @classmethod\n    def new(cls, name,\
+    \ parameter_type=None, callback=None):\n        action = Gio.SimpleAction.new(name,\
+    \ parameter_type)\n        action.enabled = True\n        action.connect(\"activate\"\
+    , callback)    # TODO check this code\n        return action"
+- click_count: 0
+  info: ''
+  name: "        button = Gtk.ToolButton(stock)\n        button.set_is_important(True)\n\
+    \        # insert the button at position in the toolbar\n        self.insert(button,\
+    \ pos)\n        button.show()\n        button.connect(\"clicked\", callback)"
+  value: "        button = Gtk.ToolButton(stock)\n        button.set_is_important(True)\n\
+    \        # insert the button at position in the toolbar\n        self.insert(button,\
+    \ pos)\n        button.show()\n        button.connect(\"clicked\", callback)"
+- click_count: 0
+  info: ''
+  name: "class ToolBar(Gtk.Toolbar):\n    \"Sample toolbar provided by cookiecutter\
+    \ switch.\"\n\n    def __init__(self, reg):\n        # a toolbar\n        Gtk.Toolbar.__init__(self)"
+  value: "class ToolBar(Gtk.Toolbar):\n    \"Sample toolbar provided by cookiecutter\
+    \ switch.\"\n\n    def __init__(self, reg):\n        # a toolbar\n        Gtk.Toolbar.__init__(self)"
+- click_count: 0
+  info: ''
+  name: "        self.init_toolbutton(\n            Gtk.STOCK_ADD, reg['Application'].add_new_notebook,\
+    \ 0)"
+  value: "        self.init_toolbutton(\n            Gtk.STOCK_ADD, reg['Application'].add_new_notebook,\
+    \ 0)"
+- click_count: 0
+  info: ''
+  name: "class StateButtons(StateButtonsCallbacks, Gtk.Box):\n    \"\"\"Autosave,\
+    \ Edit, Remove\"\"\"\n\n    def __init__(self, app_state):\n        Gtk.Box.__init__(self,\
+    \ spacing=6)"
+  value: "class StateButtons(StateButtonsCallbacks, Gtk.Box):\n    \"\"\"Autosave,\
+    \ Edit, Remove\"\"\"\n\n    def __init__(self, app_state):\n        Gtk.Box.__init__(self,\
+    \ spacing=6)"
+- click_count: 0
+  info: ''
+  name: "        _button = Gtk.ToggleButton(name)\n        _button.connect(\"toggled\"\
+    , callback, ind)"
+  value: "        _button = Gtk.ToggleButton(name)\n        _button.connect(\"toggled\"\
+    , callback, ind)"
+- click_count: 0
+  info: ''
+  name: "class ButtonGrid(Gtk.FlowBox):\n    \"Main area of user interface content.\"\
+    \n\n    def __init__(self, deck_file):\n        Gtk.FlowBox.__init__(self)"
+  value: "class ButtonGrid(Gtk.FlowBox):\n    \"Main area of user interface content.\"\
+    \n\n    def __init__(self, deck_file):\n        Gtk.FlowBox.__init__(self)"
+- click_count: 0
+  info: ''
+  name: Gtk.Notebook
+  value: Gtk.Notebook
+- click_count: 0
+  info: ''
+  name: "class NewNote(Gtk.Grid):\n    def __init__(self):\n        Gtk.Grid.__init__("
+  value: "class NewNote(Gtk.Grid):\n    def __init__(self):\n        Gtk.Grid.__init__("
+- click_count: 0
+  info: ''
+  name: "self.textview = Gtk.TextView()\n        self.textview.set_cursor_visible(True)\n\
+    \        self.textview.set_hexpand(True)\n        self.textview.set_vexpand(False)\n\
+    \        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)"
+  value: "self.textview = Gtk.TextView()\n        self.textview.set_cursor_visible(True)\n\
+    \        self.textview.set_hexpand(True)\n        self.textview.set_vexpand(False)\n\
+    \        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)"
+- click_count: 0
+  info: ''
+  name: "        self.entry = Gtk.Entry()\n        self.entry.set_placeholder_text(\"\
+    Put name here or value will be used\")"
+  value: "        self.entry = Gtk.Entry()\n        self.entry.set_placeholder_text(\"\
+    Put name here or value will be used\")"
+- click_count: 0
+  info: ''
+  name: "        self.save_button = Gtk.Button(label=\"QuickSave\")\n        self.save_button.connect('clicked',\
+    \ self.quick_save)"
+  value: "        self.save_button = Gtk.Button(label=\"QuickSave\")\n        self.save_button.connect('clicked',\
+    \ self.quick_save)"
+- click_count: 0
+  info: ''
+  name: "        dialog = DialogEdit(\n            Register['Application'].win,  copy_button)\n\
+    \        dialog.run()\n        dialog.destroy()"
+  value: "        dialog = DialogEdit(\n            Register['Application'].win, \
+    \ copy_button)\n        dialog.run()\n        dialog.destroy()"
+- click_count: 0
+  info: ''
+  name: "class DialogError(Gtk.Dialog):\n\n    def __init__(self, parent, massage):\
+    \  # lol\n        Gtk.Dialog.__init__(self)\n        self.set_modal(True)\n  \
+    \      self.add_button(button_text=\"OK\", response_id=Gtk.ResponseType.OK)\n\
+    \        self.set_transient_for(parent)\n        self.set_default_size(150, 100)\n\
+    \n        label = Gtk.Label(massage)\n\n        box = self.get_content_area()\n\
+    \        box.add(label)\n        self.show_all()"
+  value: "class DialogError(Gtk.Dialog):\n\n    def __init__(self, parent, massage):\
+    \  # lol\n        Gtk.Dialog.__init__(self)\n        self.set_modal(True)\n  \
+    \      self.add_button(button_text=\"OK\", response_id=Gtk.ResponseType.OK)\n\
+    \        self.set_transient_for(parent)\n        self.set_default_size(150, 100)\n\
+    \n        label = Gtk.Label(massage)\n\n        box = self.get_content_area()\n\
+    \        box.add(label)\n        self.show_all()"
+- click_count: 0
+  info: ''
+  name: "class DialogEdit(Gtk.Dialog):\n\n    def __init__(self, parent, button_to_edit):\
+    \  # lol\n        Gtk.Dialog.__init__(self)\n\n        self.edited = button_to_edit\n\
+    \n        self.set_modal(True)\n        self.add_button(button_text=\"OK\", response_id=Gtk.ResponseType.OK)\n\
+    \        self.add_button(button_text=\"CANCEL\",\n                        response_id=Gtk.ResponseType.CANCEL)\n\
+    \        self.set_transient_for(parent)\n        self.set_default_size(450, 350)\n\
+    \n        box = self.get_content_area()\n        grid = Gtk.Grid(orientation=Gtk.Orientation.VERTICAL,\n\
+    \                        hexpand=True, column_spacing=10, row_spacing=10)\n\n\
+    \        self.entry = Gtk.Entry()\n        self.entry.set_text(self.edited.name)\n\
+    \        self.entry.connect(\"key_press_event\", self.on_key_press_event)\n\n\
+    \        self.textview = Gtk.TextView()\n        self.textview.set_cursor_visible(True)\n\
+    \        self.textview.set_hexpand(True)\n        self.textview.set_vexpand(True)\n\
+    \        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)\n\n        self.textbuffer\
+    \ = self.textview.get_buffer()\n        self.textbuffer.set_text(self.edited.value)\n\
+    \n        self.wrapped_textview = wrap(self.textview)\n\n        self.save_button\
+    \ = Gtk.Button(label=\"Save\")\n        self.save_button.connect('clicked', self.save)\n\
+    \n        grid.add(self.entry)\n        grid.add(self.wrapped_textview)\n    \
+    \    grid.add(self.save_button)\n\n        box.add(grid)\n\n        self.show_all()"
+  value: "class DialogEdit(Gtk.Dialog):\n\n    def __init__(self, parent, button_to_edit):\
+    \  # lol\n        Gtk.Dialog.__init__(self)\n\n        self.edited = button_to_edit\n\
+    \n        self.set_modal(True)\n        self.add_button(button_text=\"OK\", response_id=Gtk.ResponseType.OK)\n\
+    \        self.add_button(button_text=\"CANCEL\",\n                        response_id=Gtk.ResponseType.CANCEL)\n\
+    \        self.set_transient_for(parent)\n        self.set_default_size(450, 350)\n\
+    \n        box = self.get_content_area()\n        grid = Gtk.Grid(orientation=Gtk.Orientation.VERTICAL,\n\
+    \                        hexpand=True, column_spacing=10, row_spacing=10)\n\n\
+    \        self.entry = Gtk.Entry()\n        self.entry.set_text(self.edited.name)\n\
+    \        self.entry.connect(\"key_press_event\", self.on_key_press_event)\n\n\
+    \        self.textview = Gtk.TextView()\n        self.textview.set_cursor_visible(True)\n\
+    \        self.textview.set_hexpand(True)\n        self.textview.set_vexpand(True)\n\
+    \        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)\n\n        self.textbuffer\
+    \ = self.textview.get_buffer()\n        self.textbuffer.set_text(self.edited.value)\n\
+    \n        self.wrapped_textview = wrap(self.textview)\n\n        self.save_button\
+    \ = Gtk.Button(label=\"Save\")\n        self.save_button.connect('clicked', self.save)\n\
+    \n        grid.add(self.entry)\n        grid.add(self.wrapped_textview)\n    \
+    \    grid.add(self.save_button)\n\n        box.add(grid)\n\n        self.show_all()"
+- click_count: 0
+  info: ''
+  name: "            action = AnAction.new(action_name, None, callback)\n        \
+    \    self.add_action(action)\n"
+  value: "            action = AnAction.new(action_name, None, callback)\n       \
+    \     self.add_action(action)\n"
+- click_count: 0
+  info: ''
+  name: "    # Note that the function in C startup() becomes do_startup() in Python\n\
+    \    def do_startup(self):\n        Gtk.Application.do_startup(self)"
+  value: "    # Note that the function in C startup() becomes do_startup() in Python\n\
+    \    def do_startup(self):\n        Gtk.Application.do_startup(self)"
+- click_count: 0
+  info: ''
+  name: "    def do_activate(self):\n        self.win = MainWindow(self)\n       \
+    \ # show the window and all its content\n        # this line could go in the constructor\
+    \ of MyWindow as well\n        self.win.show_all()\n        State['app'] = NORMAL"
+  value: "    def do_activate(self):\n        self.win = MainWindow(self)\n      \
+    \  # show the window and all its content\n        # this line could go in the\
+    \ constructor of MyWindow as well\n        self.win.show_all()\n        State['app']\
+    \ = NORMAL"
+- click_count: 0
+  info: ''
+  name: "        style_provider = Gtk.CssProvider()\n\n        style_provider.load_from_path(os.path.join(CURRENT_DIR,\
+    \ \"app.css\"))\n\n        Gtk.StyleContext.add_provider_for_screen(\n       \
+    \     Gdk.Screen.get_default(),\n            style_provider,\n            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION\n\
+    \        )"
+  value: "        style_provider = Gtk.CssProvider()\n\n        style_provider.load_from_path(os.path.join(CURRENT_DIR,\
+    \ \"app.css\"))\n\n        Gtk.StyleContext.add_provider_for_screen(\n       \
+    \     Gdk.Screen.get_default(),\n            style_provider,\n            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION\n\
+    \        )"
+- click_count: 0
+  info: ''
+  name: "class Application(AppCallbacks, Gtk.Application):\n    # constructor of the\
+    \ Gtk Application\n    win = None"
+  value: "class Application(AppCallbacks, Gtk.Application):\n    # constructor of\
+    \ the Gtk Application\n    win = None"
+- click_count: 0
+  info: ''
+  name: "        self.grid = Gtk.Grid()\n        self.grid.set_orientation(Gtk.Orientation.VERTICAL)"
+  value: "        self.grid = Gtk.Grid()\n        self.grid.set_orientation(Gtk.Orientation.VERTICAL)"
+- click_count: 0
+  info: ''
+  name: "        self.screen = self.get_screen()\n\n        self.calculated_width\
+    \ = int((self.screen.get_width() / 100) * 20)\n        self.calculated_height\
+    \ = self.screen.get_height()"
+  value: "        self.screen = self.get_screen()\n\n        self.calculated_width\
+    \ = int((self.screen.get_width() / 100) * 20)\n        self.calculated_height\
+    \ = self.screen.get_height()"
+- click_count: 0
+  info: ''
+  name: "        dialog = Gtk.FileChooserDialog(\n            'Save button deck',\
+    \ self.win,\n            Gtk.FileChooserAction.SAVE,\n            (Gtk.STOCK_CANCEL,\
+    \ Gtk.ResponseType.CANCEL,\n             Gtk.STOCK_SAVE, Gtk.ResponseType.OK))\n\
+    \n        dialog.set_do_overwrite_confirmation(True)\n        if dialog.run()\
+    \ == Gtk.ResponseType.OK:\n            filename = dialog.get_filename()\n\n  \
+    \          cabinet = Register['FileCabinet']\n            current_deck = cabinet.pages[cabinet.get_current_page()]\n\
+    \n            try:\n                current_deck.button_deck.path = filename\n\
+    \                current_deck.button_deck.save_buttons()\n            except Exception\
+    \ as e:\n                logger.error(\"There was an exception {}\".format(e))\n\
+    \        dialog.destroy()"
+  value: "        dialog = Gtk.FileChooserDialog(\n            'Save button deck',\
+    \ self.win,\n            Gtk.FileChooserAction.SAVE,\n            (Gtk.STOCK_CANCEL,\
+    \ Gtk.ResponseType.CANCEL,\n             Gtk.STOCK_SAVE, Gtk.ResponseType.OK))\n\
+    \n        dialog.set_do_overwrite_confirmation(True)\n        if dialog.run()\
+    \ == Gtk.ResponseType.OK:\n            filename = dialog.get_filename()\n\n  \
+    \          cabinet = Register['FileCabinet']\n            current_deck = cabinet.pages[cabinet.get_current_page()]\n\
+    \n            try:\n                current_deck.button_deck.path = filename\n\
+    \                current_deck.button_deck.save_buttons()\n            except Exception\
+    \ as e:\n                logger.error(\"There was an exception {}\".format(e))\n\
+    \        dialog.destroy()"
+info:
+- name: Gtk
+- category: tests

@@ -1,40 +1,356 @@
-info:
-  - name: "Python"
-  - category: python
 buttons:
-  - value: "#!/usr/bin/env python3"
-    name: shebang
+- click_count: 0
+  info: ''
+  name: shebang
+  value: '#!/usr/bin/env python3'
+- click_count: 0
+  info: ''
+  name: shebang with encoding
+  value: '#!/usr/bin/env python3
 
-  - value: |
-      #!/usr/bin/env python3
-      # -*- coding: utf-8 -*-
-    name: shebang with encoding
+    # -*- coding: utf-8 -*-
 
-  - value: "# -*- coding: utf-8 -*-"
-    name: encoding
-
-  - value: print(s)
-
-  - value: "spam = 1"
-
-  - value: "3 * 'un' + 'ium'"
-
-  - value: "'Py' 'thon'"
-    name: concat two strings
-
-  - value: |
-      text = ('Put several strings within parentheses '
-              'to have them joined together.')
-    name: break long text
-
-  - value: squares = [1, 4, 9, 16, 25]
-    name: list init
-
-  - value: squares[:]
-    name: list slicing
-
-  - value: |
-      def __init__(self, *args, **kwargs):
-          super(CLASS_NAME, self).__init__(*args, **kwargs)
-
-    name: constructor
+    '
+- click_count: 0
+  info: ''
+  name: encoding
+  value: '# -*- coding: utf-8 -*-'
+- click_count: 0
+  info: ''
+  name: print(s)
+  value: print(s)
+- click_count: 0
+  info: ''
+  name: spam = 1
+  value: spam = 1
+- click_count: 0
+  info: ''
+  name: 3 * 'un' + 'ium'
+  value: 3 * 'un' + 'ium'
+- click_count: 0
+  info: ''
+  name: concat two strings
+  value: '''Py'' ''thon'''
+- click_count: 0
+  info: ''
+  name: break long text
+  value: "text = ('Put several strings within parentheses '\n        'to have them\
+    \ joined together.')\n"
+- click_count: 0
+  info: ''
+  name: list init
+  value: squares = [1, 4, 9, 16, 25]
+- click_count: 0
+  info: ''
+  name: list slicing
+  value: squares[:]
+- click_count: 0
+  info: ''
+  name: constructor
+  value: "def __init__(self, *args, **kwargs):\n    super(CLASS_NAME, self).__init__(*args,\
+    \ **kwargs)\n"
+- click_count: 0
+  info: ''
+  name: not True
+  value: not True
+- click_count: 0
+  info: ''
+  name: not False
+  value: not False
+- click_count: 0
+  info: ''
+  name: bool(0)
+  value: bool(0)
+- click_count: 0
+  info: ''
+  name: 1 < 2 and 2 < 3
+  value: 1 < 2 and 2 < 3
+- click_count: 0
+  info: ''
+  name: a = [1, 2, 3, 4]
+  value: a = [1, 2, 3, 4]
+- click_count: 0
+  info: ''
+  name: b is a
+  value: b is a
+- click_count: 0
+  info: ''
+  name: '"Hello " + "world!"'
+  value: '"Hello " + "world!"'
+- click_count: 0
+  info: ''
+  name: len("This is a string")
+  value: len("This is a string")
+- click_count: 0
+  info: ''
+  name: name = "Reiko"
+  value: name = "Reiko"
+- click_count: 0
+  info: ''
+  name: f"She said her name is {name}."
+  value: f"She said her name is {name}."
+- click_count: 0
+  info: ''
+  name: print("Hello, World", end="!")
+  value: print("Hello, World", end="!")
+- click_count: 0
+  info: ''
+  name: 'input_string_var = input("Enter some data: ")'
+  value: 'input_string_var = input("Enter some data: ")'
+- click_count: 0
+  info: ''
+  name: '"yahoo!" if 3 > 2 else 2'
+  value: '"yahoo!" if 3 > 2 else 2'
+- click_count: 0
+  info: ''
+  name: li = []
+  value: li = []
+- click_count: 0
+  info: ''
+  name: li.append(1)
+  value: li.append(1)
+- click_count: 0
+  info: ''
+  name: li.pop()
+  value: li.pop()
+- click_count: 0
+  info: ''
+  name: li.append(3)
+  value: li.append(3)
+- click_count: 0
+  info: ''
+  name: li[::-1]
+  value: li[::-1]
+- click_count: 0
+  info: ''
+  name: li[::2]
+  value: li[::2]
+- click_count: 0
+  info: ''
+  name: li[2:]
+  value: li[2:]
+- click_count: 0
+  info: ''
+  name: del li[2]
+  value: del li[2]
+- click_count: 0
+  info: ''
+  name: li.index(2)
+  value: li.index(2)
+- click_count: 0
+  info: ''
+  name: tup = (1, 2, 3)
+  value: tup = (1, 2, 3)
+- click_count: 0
+  info: ''
+  name: empty_dict = {}
+  value: empty_dict = {}
+- click_count: 0
+  info: ''
+  name: 'filled_dict = {"one": 1, "two": 2, "three": 3}'
+  value: 'filled_dict = {"one": 1, "two": 2, "three": 3}'
+- click_count: 0
+  info: ''
+  name: dict.keys()
+  value: dict.keys()
+- click_count: 0
+  info: ''
+  name: dict.values()
+  value: dict.values()
+- click_count: 0
+  info: ''
+  name: dict.get("one", 4)
+  value: dict.get("one", 4)
+- click_count: 0
+  info: ''
+  name: set = set()
+  value: set = set()
+- click_count: 0
+  info: ''
+  name: '{''a'': 1, **{''b'': 2}}  # => {''a'': 1, ''b'': 2}'
+  value: '{''a'': 1, **{''b'': 2}}  # => {''a'': 1, ''b'': 2}'
+- click_count: 0
+  info: ''
+  name: set.add(5)
+  value: set.add(5)
+- click_count: 0
+  info: ''
+  name: set & other_set
+  value: set & other_set
+- click_count: 0
+  info: ''
+  name: set | other_set
+  value: set | other_set
+- click_count: 1
+  info: ''
+  name: if-elif-else
+  value: "if some_var > 10:\n    print(\"some_var is totally bigger than 10.\")\n\
+    elif some_var < 10:    # This elif clause is optional.\n    print(\"some_var is\
+    \ smaller than 10.\")\nelse:                  # This is optional too.\n    print(\"\
+    some_var is indeed 10.\")"
+- click_count: 0
+  info: ''
+  name: "for i in range(4):\n    print(i)"
+  value: "for i in range(4):\n    print(i)"
+- click_count: 0
+  info: ''
+  name: "for i, value in enumerate(animals):\n    print(i, value)"
+  value: "for i, value in enumerate(animals):\n    print(i, value)"
+- click_count: 0
+  info: ''
+  name: "while x < 4:\n    print(x)\n    x += 1  "
+  value: "while x < 4:\n    print(x)\n    x += 1  "
+- click_count: 0
+  info: ''
+  name: try exec else finaly
+  value: "try:\n    # Use \"raise\" to raise an error\n    raise IndexError(\"This\
+    \ is an index error\")\nexcept IndexError as e:\n    pass                 # Pass\
+    \ is just a no-op. Usually you would do recovery here.\nexcept (TypeError, NameError):\n\
+    \    pass                 # Multiple exceptions can be handled together, if required.\n\
+    else:                    # Optional clause to the try/except block. Must follow\
+    \ all except blocks\n    print(\"All good!\")   # Runs only if the code in try\
+    \ raises no exceptions\nfinally:                 #  Execute under all circumstances\n\
+    \    print(\"We can clean up resources here\")\n"
+- click_count: 0
+  info: ''
+  name: with file
+  value: "with open(\"myfile.txt\") as f:\n    for line in f:\n        print(line)\n"
+- click_count: 0
+  info: ''
+  name: next(our_iterator)
+  value: next(our_iterator)
+- click_count: 0
+  info: ''
+  name: list(our_iterable)
+  value: list(our_iterable)
+- click_count: 0
+  info: ''
+  name: function
+  value: "def add(x, y):\n    print(\"x is {} and y is {}\".format(x, y))\n    return\
+    \ x + y "
+- click_count: 0
+  info: ''
+  name: function args
+  value: "def varargs(*args):\n    return args"
+- click_count: 0
+  info: ''
+  name: function kwargs
+  value: "def keyword_args(**kwargs):\n    return kwargs"
+- click_count: 0
+  info: ''
+  name: x, y = swap(x, y)
+  value: x, y = swap(x, y)
+- click_count: 0
+  info: ''
+  name: global x
+  value: global x
+- click_count: 0
+  info: ''
+  name: lambda and exec
+  value: '(lambda x: x > 2)(3)'
+- click_count: 0
+  info: ''
+  name: lambda
+  value: 'lambda x: x > 2'
+- click_count: 0
+  info: ''
+  name: map list
+  value: list(map(add_10, [1, 2, 3]))
+- click_count: 0
+  info: ''
+  name: filter list
+  value: 'list(filter(lambda x: x > 5, [3, 4, 5, 6, 7]))'
+- click_count: 0
+  info: ''
+  name: comprehense list
+  value: '[add_10(i) for i in [1, 2, 3]]'
+- click_count: 0
+  info: ''
+  name: comprehense dict
+  value: '{x: x**2 for x in range(5)}'
+- click_count: 0
+  info: ''
+  name: comprehense set
+  value: '{x for x in _list_ if x not in something}'
+- click_count: 0
+  info: ''
+  name: from _ import *
+  value: from _ import *
+- click_count: 0
+  info: ''
+  name: from _ import _
+  value: from _ import _
+- click_count: 0
+  info: ''
+  name: import _
+  value: import math
+- click_count: 0
+  info: ''
+  name: dir(obj)
+  value: dir(obj)
+- click_count: 0
+  info: ''
+  name: class
+  value: "class Human:\n\n    # A class attribute. It is shared by all instances of\
+    \ this class\n    species = \"H. sapiens\"\n"
+- click_count: 0
+  info: ''
+  name: __init__
+  value: "    def __init__(self, name):\n        # Assign the argument to the instance's\
+    \ name attribute\n        self.name = name"
+- click_count: 0
+  info: ''
+  name: '@classmethod'
+  value: "    @classmethod\n    def method(cls):\n        return cls.__name__\n"
+- click_count: 0
+  info: ''
+  name: static meth
+  value: "    @staticmethod\n    def method():\n        return \"*grunt*\""
+- click_count: 0
+  info: ''
+  name: property
+  value: "    @property\n    def age(self):\n        return self._age"
+- click_count: 0
+  info: ''
+  name: deleter
+  value: "    @age.deleter\n    def age(self):\n        del self._age"
+- click_count: 0
+  info: ''
+  name: setter
+  value: "    @age.setter\n    def age(self, age):\n        self._age = age"
+- click_count: 0
+  info: ''
+  name: __main__ sec
+  value: "if __name__ == '__main__':\n    # Instantiate a class\n    i = Human(name=\"\
+    Ian\")"
+- click_count: 0
+  info: ''
+  name: 'class Name(Parent):'
+  value: "class Name(Parent):\n\tpass"
+- click_count: 0
+  info: ''
+  name: isinstance(obj, type)
+  value: isinstance(obj, type)
+- click_count: 0
+  info: ''
+  name: gen exmpl
+  value: "def double_numbers(iterable):\n    for i in iterable:\n        yield i +\
+    \ i"
+- click_count: 0
+  info: ''
+  name: loop gen
+  value: "values = (-x for x in [1,2,3,4,5])\nfor x in values:\n    print(x)"
+- click_count: 0
+  info: ''
+  name: decorator exmpl
+  value: "from functools import wraps\n\n\ndef beg(target_function):\n    @wraps(target_function)\n\
+    \    def wrapper(*args, **kwargs):\n        msg, say_please = target_function(*args,\
+    \ **kwargs)\n        if say_please:\n            return \"{} {}\".format(msg,\
+    \ \"Please! I am poor :(\")\n        return msg\n\n    return wrapper"
+- click_count: 0
+  info: ''
+  name: NBL
+  value: NBL
+info:
+- name: Python
+- category: python

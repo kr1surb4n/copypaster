@@ -147,3 +147,10 @@ Application
     - open_notebookopen_notebook
     - save_current_notebook
     - save_dirty_notebook
+
+
+
+
+* how to make button maps
+
+ctags -R *; cat tags | awk '{ print $1 }' | uniq | awk '{ printf "  - values: \"%s\"\n", $1}' > button_maps/copypaster.yml

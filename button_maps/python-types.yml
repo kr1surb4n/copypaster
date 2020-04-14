@@ -1,5 +1,5 @@
 info:
-  - name: "Python"
+  - name: Python type
   - category: python
 buttons:
   - value: "int.bit_length()"

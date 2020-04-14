@@ -173,5 +173,5 @@ buttons:
     name: find a <li> with an <span> inside it
 
 info:
-  - name: Simple buttons
+  - name: Xpath
   - category: tests

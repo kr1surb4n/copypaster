@@ -1,276 +1,276 @@
 buttons:
-- click_count: 0
-  info: ''
-  name: Base Exception
-  value: BaseException
-- click_count: 0
-  info: ''
-  name: Exception
-  value: Exception
-- click_count: 0
-  info: ''
-  name: Arithmetic Error
-  value: ArithmeticError
-- click_count: 0
-  info: ''
-  name: Buffer Error
-  value: BufferError
-- click_count: 0
-  info: ''
-  name: Lookup Error
-  value: LookupError
-- click_count: 0
-  info: ''
-  name: Assertion Error
-  value: AssertionError
-- click_count: 0
-  info: ''
-  name: Attribute Error
-  value: AttributeError
-- click_count: 0
-  info: ''
-  name: EOFError
-  value: EOFError
-- click_count: 0
-  info: ''
-  name: Floating Point Error
-  value: FloatingPointError
-- click_count: 0
-  info: ''
-  name: Generator Exit
-  value: GeneratorExit
-- click_count: 0
-  info: ''
-  name: Import Error
-  value: ImportError
-- click_count: 0
-  info: ''
-  name: Module Not Found Error
-  value: ModuleNotFoundError
-- click_count: 0
-  info: ''
-  name: Index Error
-  value: IndexError
-- click_count: 0
-  info: ''
-  name: Key Error
-  value: KeyError
-- click_count: 0
-  info: ''
-  name: Keyboard Interrupt
-  value: KeyboardInterrupt
-- click_count: 0
-  info: ''
-  name: Memory Error
-  value: MemoryError
-- click_count: 0
-  info: ''
-  name: Name Error
-  value: NameError
-- click_count: 0
-  info: ''
-  name: Not Implemented Error
-  value: NotImplementedError
-- click_count: 0
-  info: ''
-  name: OSError([arg])
-  value: OSError([arg])
-- click_count: 1
-  info: ''
-  name: OSError
-  value: OSError(errno, strerror[, filename[, winerror[, filename2]]])
-- click_count: 0
-  info: ''
-  name: Overflow Error
-  value: OverflowError
-- click_count: 0
-  info: ''
-  name: Recursion Error
-  value: RecursionError
-- click_count: 0
-  info: ''
-  name: Reference Error
-  value: ReferenceError
-- click_count: 0
-  info: ''
-  name: Runtime Error
-  value: RuntimeError
-- click_count: 0
-  info: ''
-  name: Stop Iteration
-  value: StopIteration
-- click_count: 0
-  info: ''
-  name: Stop Async Iteration
-  value: StopAsyncIteration
-- click_count: 0
-  info: ''
-  name: Syntax Error
-  value: SyntaxError
-- click_count: 0
-  info: ''
-  name: Indentation Error
-  value: IndentationError
-- click_count: 0
-  info: ''
-  name: Tab Error
-  value: TabError
-- click_count: 0
-  info: ''
-  name: System Error
-  value: SystemError
-- click_count: 0
-  info: ''
-  name: System Exit
-  value: SystemExit
-- click_count: 0
-  info: ''
-  name: Type Error
-  value: TypeError
-- click_count: 0
-  info: ''
-  name: Unbound Local Error
-  value: UnboundLocalError
-- click_count: 0
-  info: ''
-  name: Unicode Error
-  value: UnicodeError
-- click_count: 0
-  info: ''
-  name: Unicode Encode Error
-  value: UnicodeEncodeError
-- click_count: 0
-  info: ''
-  name: Unicode Decode Error
-  value: UnicodeDecodeError
-- click_count: 0
-  info: ''
-  name: Unicode Translate Error
-  value: UnicodeTranslateError
-- click_count: 0
-  info: ''
-  name: Value Error
-  value: ValueError
-- click_count: 0
-  info: ''
-  name: Zero Division Error
-  value: ZeroDivisionError
-- click_count: 0
-  info: ''
-  name: Environment Error
-  value: EnvironmentError
-- click_count: 0
-  info: ''
-  name: IOError
-  value: IOError
-- click_count: 0
-  info: ''
-  name: Windows Error
-  value: WindowsError
-- click_count: 0
-  info: ''
-  name: Blocking IOError
-  value: BlockingIOError
-- click_count: 0
-  info: ''
-  name: Child Process Error
-  value: ChildProcessError
-- click_count: 0
-  info: ''
-  name: Connection Error
-  value: ConnectionError
-- click_count: 0
-  info: ''
-  name: Broken Pipe Error
-  value: BrokenPipeError
-- click_count: 0
-  info: ''
-  name: Connection Aborted Error
-  value: ConnectionAbortedError
-- click_count: 0
-  info: ''
-  name: Connection Refused Error
-  value: ConnectionRefusedError
-- click_count: 0
-  info: ''
-  name: Connection Reset Error
-  value: ConnectionResetError
-- click_count: 0
-  info: ''
-  name: File Exists Error
-  value: FileExistsError
-- click_count: 0
-  info: ''
-  name: File Not Found Error
-  value: FileNotFoundError
-- click_count: 0
-  info: ''
-  name: Interrupted Error
-  value: InterruptedError
-- click_count: 0
-  info: ''
-  name: Is ADirectory Error
-  value: IsADirectoryError
-- click_count: 0
-  info: ''
-  name: Not ADirectory Error
-  value: NotADirectoryError
-- click_count: 0
-  info: ''
-  name: Permission Error
-  value: PermissionError
-- click_count: 0
-  info: ''
-  name: Process Lookup Error
-  value: ProcessLookupError
-- click_count: 0
-  info: ''
-  name: Timeout Error
-  value: TimeoutError
-- click_count: 0
-  info: ''
-  name: Warning
-  value: Warning
-- click_count: 0
-  info: ''
-  name: User Warning
-  value: UserWarning
-- click_count: 0
-  info: ''
-  name: Deprecation Warning
-  value: DeprecationWarning
-- click_count: 0
-  info: ''
-  name: Pending Deprecation Warning
-  value: PendingDeprecationWarning
-- click_count: 0
-  info: ''
-  name: Syntax Warning
-  value: SyntaxWarning
-- click_count: 0
-  info: ''
-  name: Runtime Warning
-  value: RuntimeWarning
-- click_count: 0
-  info: ''
-  name: Future Warning
-  value: FutureWarning
-- click_count: 0
-  info: ''
-  name: Import Warning
-  value: ImportWarning
-- click_count: 0
-  info: ''
-  name: Unicode Warning
-  value: UnicodeWarning
-- click_count: 0
-  info: ''
-  name: Bytes Warning
-  value: BytesWarning
-- click_count: 0
-  info: ''
-  name: Resource Warning
-  value: ResourceWarning
+  - click_count: 0
+    info: ""
+    name: Base Exception
+    value: BaseException
+  - click_count: 0
+    info: ""
+    name: Exception
+    value: Exception
+  - click_count: 0
+    info: ""
+    name: Arithmetic Error
+    value: ArithmeticError
+  - click_count: 0
+    info: ""
+    name: Buffer Error
+    value: BufferError
+  - click_count: 0
+    info: ""
+    name: Lookup Error
+    value: LookupError
+  - click_count: 0
+    info: ""
+    name: Assertion Error
+    value: AssertionError
+  - click_count: 0
+    info: ""
+    name: Attribute Error
+    value: AttributeError
+  - click_count: 0
+    info: ""
+    name: EOFError
+    value: EOFError
+  - click_count: 0
+    info: ""
+    name: Floating Point Error
+    value: FloatingPointError
+  - click_count: 0
+    info: ""
+    name: Generator Exit
+    value: GeneratorExit
+  - click_count: 0
+    info: ""
+    name: Import Error
+    value: ImportError
+  - click_count: 0
+    info: ""
+    name: Module Not Found Error
+    value: ModuleNotFoundError
+  - click_count: 0
+    info: ""
+    name: Index Error
+    value: IndexError
+  - click_count: 0
+    info: ""
+    name: Key Error
+    value: KeyError
+  - click_count: 0
+    info: ""
+    name: Keyboard Interrupt
+    value: KeyboardInterrupt
+  - click_count: 0
+    info: ""
+    name: Memory Error
+    value: MemoryError
+  - click_count: 0
+    info: ""
+    name: Name Error
+    value: NameError
+  - click_count: 0
+    info: ""
+    name: Not Implemented Error
+    value: NotImplementedError
+  - click_count: 0
+    info: ""
+    name: OSError([arg])
+    value: OSError([arg])
+  - click_count: 1
+    info: ""
+    name: OSError
+    value: OSError(errno, strerror[, filename[, winerror[, filename2]]])
+  - click_count: 0
+    info: ""
+    name: Overflow Error
+    value: OverflowError
+  - click_count: 0
+    info: ""
+    name: Recursion Error
+    value: RecursionError
+  - click_count: 0
+    info: ""
+    name: Reference Error
+    value: ReferenceError
+  - click_count: 0
+    info: ""
+    name: Runtime Error
+    value: RuntimeError
+  - click_count: 0
+    info: ""
+    name: Stop Iteration
+    value: StopIteration
+  - click_count: 0
+    info: ""
+    name: Stop Async Iteration
+    value: StopAsyncIteration
+  - click_count: 0
+    info: ""
+    name: Syntax Error
+    value: SyntaxError
+  - click_count: 0
+    info: ""
+    name: Indentation Error
+    value: IndentationError
+  - click_count: 0
+    info: ""
+    name: Tab Error
+    value: TabError
+  - click_count: 0
+    info: ""
+    name: System Error
+    value: SystemError
+  - click_count: 0
+    info: ""
+    name: System Exit
+    value: SystemExit
+  - click_count: 0
+    info: ""
+    name: Type Error
+    value: TypeError
+  - click_count: 0
+    info: ""
+    name: Unbound Local Error
+    value: UnboundLocalError
+  - click_count: 0
+    info: ""
+    name: Unicode Error
+    value: UnicodeError
+  - click_count: 0
+    info: ""
+    name: Unicode Encode Error
+    value: UnicodeEncodeError
+  - click_count: 0
+    info: ""
+    name: Unicode Decode Error
+    value: UnicodeDecodeError
+  - click_count: 0
+    info: ""
+    name: Unicode Translate Error
+    value: UnicodeTranslateError
+  - click_count: 0
+    info: ""
+    name: Value Error
+    value: ValueError
+  - click_count: 0
+    info: ""
+    name: Zero Division Error
+    value: ZeroDivisionError
+  - click_count: 0
+    info: ""
+    name: Environment Error
+    value: EnvironmentError
+  - click_count: 0
+    info: ""
+    name: IOError
+    value: IOError
+  - click_count: 0
+    info: ""
+    name: Windows Error
+    value: WindowsError
+  - click_count: 0
+    info: ""
+    name: Blocking IOError
+    value: BlockingIOError
+  - click_count: 0
+    info: ""
+    name: Child Process Error
+    value: ChildProcessError
+  - click_count: 0
+    info: ""
+    name: Connection Error
+    value: ConnectionError
+  - click_count: 0
+    info: ""
+    name: Broken Pipe Error
+    value: BrokenPipeError
+  - click_count: 0
+    info: ""
+    name: Connection Aborted Error
+    value: ConnectionAbortedError
+  - click_count: 0
+    info: ""
+    name: Connection Refused Error
+    value: ConnectionRefusedError
+  - click_count: 0
+    info: ""
+    name: Connection Reset Error
+    value: ConnectionResetError
+  - click_count: 0
+    info: ""
+    name: File Exists Error
+    value: FileExistsError
+  - click_count: 0
+    info: ""
+    name: File Not Found Error
+    value: FileNotFoundError
+  - click_count: 0
+    info: ""
+    name: Interrupted Error
+    value: InterruptedError
+  - click_count: 0
+    info: ""
+    name: Is ADirectory Error
+    value: IsADirectoryError
+  - click_count: 0
+    info: ""
+    name: Not ADirectory Error
+    value: NotADirectoryError
+  - click_count: 0
+    info: ""
+    name: Permission Error
+    value: PermissionError
+  - click_count: 0
+    info: ""
+    name: Process Lookup Error
+    value: ProcessLookupError
+  - click_count: 0
+    info: ""
+    name: Timeout Error
+    value: TimeoutError
+  - click_count: 0
+    info: ""
+    name: Warning
+    value: Warning
+  - click_count: 0
+    info: ""
+    name: User Warning
+    value: UserWarning
+  - click_count: 0
+    info: ""
+    name: Deprecation Warning
+    value: DeprecationWarning
+  - click_count: 0
+    info: ""
+    name: Pending Deprecation Warning
+    value: PendingDeprecationWarning
+  - click_count: 0
+    info: ""
+    name: Syntax Warning
+    value: SyntaxWarning
+  - click_count: 0
+    info: ""
+    name: Runtime Warning
+    value: RuntimeWarning
+  - click_count: 0
+    info: ""
+    name: Future Warning
+    value: FutureWarning
+  - click_count: 0
+    info: ""
+    name: Import Warning
+    value: ImportWarning
+  - click_count: 0
+    info: ""
+    name: Unicode Warning
+    value: UnicodeWarning
+  - click_count: 0
+    info: ""
+    name: Bytes Warning
+    value: BytesWarning
+  - click_count: 0
+    info: ""
+    name: Resource Warning
+    value: ResourceWarning
 info:
-- name: Python
-- category: python
+  - name: Python exceptions
+  - category: python
