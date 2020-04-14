@@ -1,186 +1,308 @@
-buttons: 
-- value: '//h1'
-  name: 'h1'
-- value: '//div//p'
-  name: 'div p'
-- value: '//ul/li'
-  name: 'ul > li'
-- value: '//ul/li/a'
-  name: 'ul > li > a'
-- value: '//div/*'
-  name: 'div > *'
-- value: '/'
-  name: ':root'
-- value: '/body'
-  name: ':root > body'
-- value: '//*[@id="id"]'
+buttons:
+- click_count: 0
+  info: ''
+  name: h1
+  value: //h1
+- click_count: 0
+  info: ''
+  name: div p
+  value: //div//p
+- click_count: 0
+  info: ''
+  name: ul > li
+  value: //ul/li
+- click_count: 0
+  info: ''
+  name: ul > li > a
+  value: //ul/li/a
+- click_count: 0
+  info: ''
+  name: div > *
+  value: //div/*
+- click_count: 0
+  info: ''
+  name: :root
+  value: /
+- click_count: 0
+  info: ''
+  name: :root > body
+  value: /body
+- click_count: 0
+  info: ''
   name: '#id'
-- value: '//*[@class="class"]'
-  name: '.class'
-  
-- value: '//input[@type="submit"]'
-  name: 'input[type="submit"]'
-  
-- value: '//a[@id="abc"][@for="xyz"]'
-  name: 'a#abc[for="xyz"]'
-  
-- value: '//a[@rel]'
-  name: 'a[rel]'
-  
-- value: '//a[starts-with(@href, "/")]'
-  name: 'a[href^="/"]'
-  
-- value: '//a[ends-with(@href, ".pdf")]'
-  name: 'a[href$="pdf"]'
-  
-- value: '//a[contains(@href, "://")]'
-  name: 'a[href*="://"]'
-  
-- value: '//a[contains(@rel, "help")]'
-  name: 'a[rel~="help"]'
-  
-- value: '//ul/li[1]'
-  name: 'ul > li:first-child'
-  
-- value: '//ul/li[2]'
-  name: 'ul > li:nth-child(2)'
-  
-- value: '//ul/li[last()]'
-  name: 'ul > li:last-child'
-  
-- value: '//li[@id="id"][1]'
-  name: 'li#id:first-child'
-  
-- value: '//a[1]'
-  name: 'a:first-child'
-  
-- value: '//a[last()]'
-  name: 'a:last-child'
-  
-- value: '//h1/following-sibling::ul'
-  name: 'h1 ~ ul'
-  
-- value: '//h1/following-sibling::ul[1]'
-  name: 'h1 + ul'
-  
-- value: '//h1/following-sibling::[@id="id"]'
+  value: //*[@id="id"]
+- click_count: 0
+  info: ''
+  name: .class
+  value: //*[@class="class"]
+- click_count: 0
+  info: ''
+  name: input[type="submit"]
+  value: //input[@type="submit"]
+- click_count: 0
+  info: ''
+  name: a#abc[for="xyz"]
+  value: //a[@id="abc"][@for="xyz"]
+- click_count: 0
+  info: ''
+  name: a[rel]
+  value: //a[@rel]
+- click_count: 0
+  info: ''
+  name: a[href^="/"]
+  value: //a[starts-with(@href, "/")]
+- click_count: 0
+  info: ''
+  name: a[href$="pdf"]
+  value: //a[ends-with(@href, ".pdf")]
+- click_count: 0
+  info: ''
+  name: a[href*="://"]
+  value: //a[contains(@href, "://")]
+- click_count: 0
+  info: ''
+  name: a[rel~="help"]
+  value: //a[contains(@rel, "help")]
+- click_count: 0
+  info: ''
+  name: ul > li:first-child
+  value: //ul/li[1]
+- click_count: 0
+  info: ''
+  name: ul > li:nth-child(2)
+  value: //ul/li[2]
+- click_count: 0
+  info: ''
+  name: ul > li:last-child
+  value: //ul/li[last()]
+- click_count: 0
+  info: ''
+  name: li#id:first-child
+  value: //li[@id="id"][1]
+- click_count: 0
+  info: ''
+  name: a:first-child
+  value: //a[1]
+- click_count: 0
+  info: ''
+  name: a:last-child
+  value: //a[last()]
+- click_count: 0
+  info: ''
+  name: h1 ~ ul
+  value: //h1/following-sibling::ul
+- click_count: 0
+  info: ''
+  name: h1 + ul
+  value: //h1/following-sibling::ul[1]
+- click_count: 0
+  info: ''
   name: 'h1 ~ #id'
-  
-- value: '//ul/li/..'
-  name: '$("ul > li").parent()'
-  
-- value: '//li/ancestor-or-self::section'
-  name: '$("li").closest("section")'
-  
-- value: '//a/@href'
-  name: '$("a").attr("href")'
-  
-- value: '//span/text()'
-  name: '$("span").text()'
-  
-- value: '//h1[not(@id)]'
-  name: 'h1:not([id])'
-  
-- value: '//button[text()="Submit"]'
-  name: 'Text match'
-  
-- value: '//button[contains(text(),"Go")]'
-  name: 'Text match (substring)'
-  
-- value: '//product[@price > 2.50]'
-  name: 'Arithmetic'
-  
-- value: '//ul[*]'
-  name: 'Has children'
-  
-- value: '//ul[li]'
+  value: //h1/following-sibling::[@id="id"]
+- click_count: 0
+  info: ''
+  name: $("ul > li").parent()
+  value: //ul/li/..
+- click_count: 0
+  info: ''
+  name: $("li").closest("section")
+  value: //li/ancestor-or-self::section
+- click_count: 0
+  info: ''
+  name: $("a").attr("href")
+  value: //a/@href
+- click_count: 0
+  info: ''
+  name: $("span").text()
+  value: //span/text()
+- click_count: 0
+  info: ''
+  name: h1:not([id])
+  value: //h1[not(@id)]
+- click_count: 0
+  info: ''
+  name: Text match
+  value: //button[text()="Submit"]
+- click_count: 0
+  info: ''
+  name: Text match (substring)
+  value: //button[contains(text(),"Go")]
+- click_count: 0
+  info: ''
+  name: Arithmetic
+  value: //product[@price > 2.50]
+- click_count: 0
+  info: ''
+  name: Has children
+  value: //ul[*]
+- click_count: 0
+  info: ''
   name: Has children (specific)
-
- 
-- value: 'ul'
-  name: 'single element'
-  
-- value: '//hr[@class="edge"]'
-  name: 'class'
-  
-- value: './a'
-  name: 'attribute'
-
-
-
-- value: //a[@id = "xyz"]
-- value: //a[@id != "xyz"]
-- value: //a[@price > 25]
-
-
-
-
-- value: '//ul/li/a'
-- value: '//[@id="list"]//a'
+  value: //ul[li]
+- click_count: 0
+  info: ''
+  name: single element
+  value: ul
+- click_count: 0
+  info: ''
+  name: class
+  value: //hr[@class="edge"]
+- click_count: 0
+  info: ''
+  name: attribute
+  value: ./a
+- click_count: 0
+  info: ''
+  name: //a[@id = "xyz"]
+  value: //a[@id = "xyz"]
+- click_count: 0
+  info: ''
+  name: //a[@id != "xyz"]
+  value: //a[@id != "xyz"]
+- click_count: 0
+  info: ''
+  name: //a[@price > 25]
+  value: //a[@price > 25]
+- click_count: 0
+  info: ''
   name: id
-
-- value: //div[@id="head" and position()=2]
+  value: //[@id="list"]//a
+- click_count: 0
+  info: ''
   name: logic and
-- value: //div[(x and y) or not(z)]
+  value: //div[@id="head" and position()=2]
+- click_count: 0
+  info: ''
   name: logic or
-
-
-- value: //a[1]                  
-- value: //a[last()]             
-- value: //ol/li[2]              
-- value: //ol/li[position()=2]   
-- value: //ol/li[position()>1]
+  value: //div[(x and y) or not(z)]
+- click_count: 0
+  info: ''
+  name: //ol/li[2]
+  value: //ol/li[2]
+- click_count: 0
+  info: ''
+  name: //ol/li[position()=2]
+  value: //ol/li[position()=2]
+- click_count: 0
+  info: ''
   name: :not(:first-child)
-
-- value: 'font[contains(@class,"head")]'
+  value: //ol/li[position()>1]
+- click_count: 0
+  info: ''
   name: contains()
-  
-- value: 'font[starts-with(@class,"head")]'
+  value: font[contains(@class,"head")]
+- click_count: 0
+  info: ''
   name: starts-with()
-
-- value: 'font[ends-with(@class,"head")]'
+  value: font[starts-with(@class,"head")]
+- click_count: 0
+  info: ''
   name: ends-with()
-- value: '[@id = "xyz"]'
-- value: concat(x,y)
-- value: substring(str, start, len)
-- value: substring-before("01/02", "/")
-
-- value: substring-after("01/02", "/")
-- value: translate()
-- value: normalize-space()
-- value: string-length()
-
-- value: "name()"
-- value: "text()"
-- value: "lang(str)"
-- value: "namespace-uri()"
-
-- value: not(expr)
-- value: count()
-- value: position()
-
-- value: string()
-- value: number()
-- value: boolean()
-
-- value: "//a | //span"
+  value: font[ends-with(@class,"head")]
+- click_count: 0
+  info: ''
+  name: '[@id = "xyz"]'
+  value: '[@id = "xyz"]'
+- click_count: 0
+  info: ''
+  name: concat(x,y)
+  value: concat(x,y)
+- click_count: 0
+  info: ''
+  name: substring(str, start, len)
+  value: substring(str, start, len)
+- click_count: 0
+  info: ''
+  name: substring-before("01/02", "/")
+  value: substring-before("01/02", "/")
+- click_count: 0
+  info: ''
+  name: substring-after("01/02", "/")
+  value: substring-after("01/02", "/")
+- click_count: 0
+  info: ''
+  name: translate()
+  value: translate()
+- click_count: 0
+  info: ''
+  name: normalize-space()
+  value: normalize-space()
+- click_count: 0
+  info: ''
+  name: string-length()
+  value: string-length()
+- click_count: 0
+  info: ''
+  name: name()
+  value: name()
+- click_count: 0
+  info: ''
+  name: text()
+  value: text()
+- click_count: 0
+  info: ''
+  name: lang(str)
+  value: lang(str)
+- click_count: 0
+  info: ''
+  name: namespace-uri()
+  value: namespace-uri()
+- click_count: 0
+  info: ''
+  name: not(expr)
+  value: not(expr)
+- click_count: 0
+  info: ''
+  name: count()
+  value: count()
+- click_count: 0
+  info: ''
+  name: position()
+  value: position()
+- click_count: 0
+  info: ''
+  name: string()
+  value: string()
+- click_count: 0
+  info: ''
+  name: number()
+  value: number()
+- click_count: 0
+  info: ''
+  name: boolean()
+  value: boolean()
+- click_count: 0
+  info: ''
   name: union
-- value: "./ancestor-or-self::[@class='box']"
+  value: //a | //span
+- click_count: 0
+  info: ''
   name: closest
-- value: '//item[@price > 2*@discount]'
-  name: Attributes    
-
-  
-- value: '//*'
-  name: 'all'
-- value: 'count(//*)'
+  value: ./ancestor-or-self::[@class='box']
+- click_count: 0
+  info: ''
+  name: Attributes
+  value: //item[@price > 2*@discount]
+- click_count: 0
+  info: ''
+  name: all
+  value: //*
+- click_count: 0
+  info: ''
   name: count all
-- value: '(//h1)[1]/text()'
+  value: count(//*)
+- click_count: 0
+  info: ''
   name: text of the first h1 heading
-- value: '//li[span]'
-  name: find a <li> with an <span> inside it    
-
- 
+  value: (//h1)[1]/text()
+- click_count: 0
+  info: ''
+  name: find a <li> with an <span> inside it
+  value: //li[span]
+- click_count: 0
+  info: ''
+  name: "buttons: []\ninfo:\n  - name: Dirty\n  - category: tests\n"
+  value: "buttons: []\ninfo:\n  - name: Dirty\n  - category: tests\n"
 info:
 - name: Simple buttons
 - category: tests

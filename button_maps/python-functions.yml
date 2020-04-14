@@ -302,5 +302,5 @@ buttons:
   - name: __import__
     value: __import__(name, globals=None, locals=None, fromlist=(), level=0)
 info:
-  - name: Python
+  - name: Python function
   - category: python

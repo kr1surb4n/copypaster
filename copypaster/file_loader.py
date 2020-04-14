@@ -32,6 +32,9 @@ class Deck:
                 self.add_button(**_button)
             except IndexError:
                 pass  # yes, cause this value exists
+            except AssertionError:
+                logger.error("No-value entry in deck {}".format(self.path))
+                exit(1)
 
     def add_button(self, **kwargs):
         """Create button, add it to table and return it"""

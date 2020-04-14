@@ -1,203 +1,207 @@
 buttons:
-- click_count: 0
-  info: ''
-  name: shebang
-  value: '#!/usr/bin/env bash'
-- click_count: 0
-  info: ''
-  name: echo Hello
-  value: echo Hello
-- click_count: 0
-  info: ''
-  name: Variable="Some string"
-  value: Variable="Some string"
-- click_count: 0
-  info: ''
-  name: echo $Variable
-  value: echo $Variable
-- click_count: 0
-  info: ''
-  name: '"$Variable"'
-  value: '"$Variable"'
-- click_count: 0
-  info: ''
-  name: ${Variable}
-  value: ${Variable}
-- click_count: 0
-  info: ''
-  name: substitute string
-  value: ${Variable/Some/A}
-- click_count: 0
-  info: ''
-  name: substing
-  value: ${Variable:0:Length}
-- click_count: 0
-  info: ''
-  name: string length
-  value: ${#Variable}
-- click_count: 0
-  info: ''
-  name: default value
-  value: ${Foo:-"DefaultValueIfFooIsMissingOrEmpty"}
-- click_count: 0
-  info: ''
-  name: Declare an array
-  value: array0=(one two three four five six)
-- click_count: 0
-  info: ''
-  name: print first element
-  value: $array0
-- click_count: 0
-  info: ''
-  name: print first element
-  value: ${array0[0]}
-- click_count: 0
-  info: ''
-  name: Print all elements
-  value: ${array0[@]}
-- click_count: 0
-  info: ''
-  name: Print third element
-  value: ${array0[2]}
-- click_count: 0
-  info: ''
-  name: Print 2 elements starting from forth
-  value: ${array0[@]:3:2}
-- click_count: 0
-  info: ''
-  name: Print all elements. in a loop
-  value: "for i in \"${array0[@]}\"; do\n  echo \"$i\"\ndone\n"
-- click_count: 0
-  info: ''
-  name: generate arbitrary strings - numbers
-  value: echo {1..10}
-- click_count: 0
-  info: ''
-  name: generate arbitrary strings - letters
-  value: '{a..z}'
-- click_count: 0
-  info: ''
-  name: Last program's return value
-  value: 'echo "Last programs return value: $?"'
-- click_count: 0
-  info: ''
-  name: Script's PID
-  value: 'echo "Scripts PID: $$"'
-- click_count: 0
-  info: ''
-  name: Number of arguments
-  value: 'echo "Number of arguments passed to script: $#"'
-- click_count: 0
-  info: ''
-  name: All arguments
-  value: 'echo "All arguments passed to script: $@"'
-- click_count: 0
-  info: ''
-  name: Script's arguments, one by one
-  value: 'echo "Scripts arguments separated into different variables: $1 $2..."'
-- click_count: 0
-  info: ''
-  name: Read to variable
-  value: read Name
-- click_count: 0
-  info: ''
-  name: Clear screen
-  value: clear
-- click_count: 0
-  info: ''
-  name: full if
-  value: "if [ \"$Name\" != $USER ]\nthen\n    echo \"Your name isn't your username\"\
-    \nelse\n    echo \"Your name is your username\"\nfi\n"
-- click_count: 0
-  info: ''
-  name: OR used in expression
-  value: echo "Always executed" || echo "Only executed if first command fails"
-- click_count: 0
-  info: ''
-  name: AND used in expression
-  value: echo "Always executed" && echo "Only executed if first command does NOT fail"
-- click_count: 0
-  info: ''
-  name: OR used in IF
-  value: if [ "$Name" == "Daniya" ] || [ "$Name" == "Zach" ]
-- click_count: 0
-  info: ''
-  name: AND used in IF
-  value: if [ "$Name" == "Steve" ] && [ "$Age" -eq 15 ]
-- click_count: 0
-  info: ''
-  name: contents of command
-  value: Contents=$(cat file.txt)
-- click_count: 0
-  info: ''
-  name: subshells and dirs
-  value: '(echo "First, Im here: $PWD") && (cd someDir; echo "Then, Im here: $PWD")'
-- click_count: 0
-  info: ''
-  name: Contents to CAT a file
-  value: "cat > hello.py << EOF\n#!/usr/bin/env python\nfrom __future__ import print_function\n\
-    import sys\nprint(\"#stdout\", file=sys.stdout)\nprint(\"#stderr\", file=sys.stderr)\n\
-    for line in sys.stdin:\n    print(line, file=sys.stdout)\nEOF\n"
-- click_count: 0
-  info: ''
-  name: input in
-  value: 'python hello.py < "input.in" '
-- click_count: 0
-  info: ''
-  name: error output
-  value: python hello.py 2> "error.err"
-- click_count: 1
-  info: ''
-  name: '> 2>&1'
-  value: python hello.py > "output-and-error.log" 2>&1
-- click_count: 0
-  info: ''
-  name: ways to change value
-  value: 'cat > output.out <(echo "#helloworld")
+  - click_count: 0
+    info: ""
+    name: shebang
+    value: "#!/usr/bin/env bash"
+  - click_count: 0
+    info: ""
+    name: echo Hello
+    value: echo Hello
+  - click_count: 0
+    info: ""
+    name: Variable="Some string"
+    value: Variable="Some string"
+  - click_count: 0
+    info: ""
+    name: echo $Variable
+    value: echo $Variable
+  - click_count: 0
+    info: ""
+    name: '"$Variable"'
+    value: '"$Variable"'
+  - click_count: 0
+    info: ""
+    name: ${Variable}
+    value: ${Variable}
+  - click_count: 0
+    info: ""
+    name: substitute string
+    value: ${Variable/Some/A}
+  - click_count: 0
+    info: ""
+    name: substing
+    value: ${Variable:0:Length}
+  - click_count: 0
+    info: ""
+    name: string length
+    value: ${#Variable}
+  - click_count: 0
+    info: ""
+    name: default value
+    value: ${Foo:-"DefaultValueIfFooIsMissingOrEmpty"}
+  - click_count: 0
+    info: ""
+    name: Declare an array
+    value: array0=(one two three four five six)
+  - click_count: 0
+    info: ""
+    name: print first element
+    value: $array0
+  - click_count: 0
+    info: ""
+    name: print first element
+    value: ${array0[0]}
+  - click_count: 0
+    info: ""
+    name: Print all elements
+    value: ${array0[@]}
+  - click_count: 0
+    info: ""
+    name: Print third element
+    value: ${array0[2]}
+  - click_count: 0
+    info: ""
+    name: Print 2 elements starting from forth
+    value: ${array0[@]:3:2}
+  - click_count: 0
+    info: ""
+    name: Print all elements. in a loop
+    value: "for i in \"${array0[@]}\"; do\n  echo \"$i\"\ndone\n"
+  - click_count: 0
+    info: ""
+    name: generate arbitrary strings - numbers
+    value: echo {1..10}
+  - click_count: 0
+    info: ""
+    name: generate arbitrary strings - letters
+    value: "{a..z}"
+  - click_count: 0
+    info: ""
+    name: Last program's return value
+    value: 'echo "Last programs return value: $?"'
+  - click_count: 0
+    info: ""
+    name: Script's PID
+    value: 'echo "Scripts PID: $$"'
+  - click_count: 0
+    info: ""
+    name: Number of arguments
+    value: 'echo "Number of arguments passed to script: $#"'
+  - click_count: 0
+    info: ""
+    name: All arguments
+    value: 'echo "All arguments passed to script: $@"'
+  - click_count: 0
+    info: ""
+    name: Script's arguments, one by one
+    value: 'echo "Scripts arguments separated into different variables: $1 $2..."'
+  - click_count: 0
+    info: ""
+    name: Read to variable
+    value: read Name
+  - click_count: 0
+    info: ""
+    name: Clear screen
+    value: clear
+  - click_count: 0
+    info: ""
+    name: full if
+    value:
+      "if [ \"$Name\" != $USER ]\nthen\n    echo \"Your name isn't your username\"\
+      \nelse\n    echo \"Your name is your username\"\nfi\n"
+  - click_count: 0
+    info: ""
+    name: OR used in expression
+    value: echo "Always executed" || echo "Only executed if first command fails"
+  - click_count: 0
+    info: ""
+    name: AND used in expression
+    value: echo "Always executed" && echo "Only executed if first command does NOT fail"
+  - click_count: 0
+    info: ""
+    name: OR used in IF
+    value: if [ "$Name" == "Daniya" ] || [ "$Name" == "Zach" ]
+  - click_count: 0
+    info: ""
+    name: AND used in IF
+    value: if [ "$Name" == "Steve" ] && [ "$Age" -eq 15 ]
+  - click_count: 0
+    info: ""
+    name: contents of command
+    value: Contents=$(cat file.txt)
+  - click_count: 0
+    info: ""
+    name: subshells and dirs
+    value: '(echo "First, Im here: $PWD") && (cd someDir; echo "Then, Im here: $PWD")'
+  - click_count: 0
+    info: ""
+    name: Contents to CAT a file
+    value:
+      "cat > hello.py << EOF\n#!/usr/bin/env python\nfrom __future__ import print_function\n\
+      import sys\nprint(\"#stdout\", file=sys.stdout)\nprint(\"#stderr\", file=sys.stderr)\n\
+      for line in sys.stdin:\n    print(line, file=sys.stdout)\nEOF\n"
+  - click_count: 0
+    info: ""
+    name: input in
+    value: 'python hello.py < "input.in" '
+  - click_count: 0
+    info: ""
+    name: error output
+    value: python hello.py 2> "error.err"
+  - click_count: 1
+    info: ""
+    name: "> 2>&1"
+    value: python hello.py > "output-and-error.log" 2>&1
+  - click_count: 0
+    info: ""
+    name: ways to change value
+    value: 'cat > output.out <(echo "#helloworld")
 
-    echo "#helloworld" > output.out
+      echo "#helloworld" > output.out
 
-    echo "#helloworld" | cat > output.out
+      echo "#helloworld" | cat > output.out
 
-    echo "#helloworld" | tee output.out >/dev/null
+      echo "#helloworld" | tee output.out >/dev/null
 
-    '
-- click_count: 0
-  info: ''
-  name: '`case` statement'
-  value: "case \"$Variable\" in\n    #List patterns for the conditions you want to\
-    \ meet\n    0) echo \"There is a zero.\";;\n    1) echo \"There is a one.\";;\n\
-    \    *) echo \"It is not null.\";;\nesac\n"
-- click_count: 0
-  info: ''
-  name: '`foreach` loops'
-  value: "for Variable in {1..3}\ndo\n    echo \"$Variable\"\ndone\n"
-- click_count: 0
-  info: ''
-  name: '`for` loops'
-  value: "for ((a=1; a <= 3; a++))\ndo\n    echo $a\ndone\n"
-- click_count: 0
-  info: ''
-  name: '`while` loops'
-  value: "while [ true ]\ndo\n    echo \"loop body here...\"\n    break\ndone\n"
-- click_count: 0
-  info: ''
-  name: '`for` loops act on files'
-  value: for Variable in file1 file2
-- click_count: 0
-  info: ''
-  name: '`for` loops act on output'
-  value: for Output in $(ls)
-- click_count: 0
-  info: ''
-  name: full function definition
-  value: "function foo ()\n{\n    echo \"Arguments work just like script arguments:\
-    \ $@\"\n    echo \"And: $1 $2...\"\n    echo \"This is a function\"\n    return\
-    \ 0\n}\n"
-- click_count: 0
-  info: ''
-  name: light function definition
-  value: "foo ()\n{\n    return 0\n}\n"
+      '
+  - click_count: 0
+    info: ""
+    name: "`case` statement"
+    value:
+      "case \"$Variable\" in\n    #List patterns for the conditions you want to\
+      \ meet\n    0) echo \"There is a zero.\";;\n    1) echo \"There is a one.\";;\n\
+      \    *) echo \"It is not null.\";;\nesac\n"
+  - click_count: 0
+    info: ""
+    name: "`foreach` loops"
+    value: "for Variable in {1..3}\ndo\n    echo \"$Variable\"\ndone\n"
+  - click_count: 0
+    info: ""
+    name: "`for` loops"
+    value: "for ((a=1; a <= 3; a++))\ndo\n    echo $a\ndone\n"
+  - click_count: 0
+    info: ""
+    name: "`while` loops"
+    value: "while [ true ]\ndo\n    echo \"loop body here...\"\n    break\ndone\n"
+  - click_count: 0
+    info: ""
+    name: "`for` loops act on files"
+    value: for Variable in file1 file2
+  - click_count: 0
+    info: ""
+    name: "`for` loops act on output"
+    value: for Output in $(ls)
+  - click_count: 0
+    info: ""
+    name: full function definition
+    value:
+      "function foo ()\n{\n    echo \"Arguments work just like script arguments:\
+      \ $@\"\n    echo \"And: $1 $2...\"\n    echo \"This is a function\"\n    return\
+      \ 0\n}\n"
+  - click_count: 0
+    info: ""
+    name: light function definition
+    value: "foo ()\n{\n    return 0\n}\n"
 info:
-- name: Simple buttons
-- category: tests
+  - name: Bash
+  - category: tests
