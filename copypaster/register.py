@@ -2,6 +2,7 @@ import functools
 
 Register = dict()
 
+
 def register_instance(cls):
     @functools.wraps(cls)
     def wrapper_decorator(*args, **kwargs):

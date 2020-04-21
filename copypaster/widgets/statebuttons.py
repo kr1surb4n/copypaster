@@ -1,4 +1,5 @@
 from copypaster.register import Register, register_instance
+from copypaster.signal_bus import signal_bus
 from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMOVE
 
 import gi
@@ -17,10 +18,13 @@ class StateButtonsCallbacks:
 
         if button.get_active():
             self.state['app'] = AUTOSAVE
+            signal_bus.emit('autosave_on')
+
             self.handle = self.clip.connect(
                 'owner-change', self.auto_clipboard)
             logger.debug('Autosave on')
         else:
+            signal_bus.emit('autosave_off')
             self.state['app'] = NORMAL
             self.clip.disconnect(self.handle)
             logger.debug('Autosave off')
@@ -34,6 +38,12 @@ class StateButtonsCallbacks:
         else:
             self.state['app'] = NORMAL
             logger.debug('Edit off')
+
+    def on_add(self, button, name):
+        logger.debug('Begin adding button')
+        self._deactive_rest_buttons('edit')
+        signal_bus.emit('add_button')
+        # Register['NewNote'].add_new_button()
 
     def on_remove(self, button, name):
         self._deactive_rest_buttons('remove')
@@ -66,15 +76,10 @@ class StateButtonsCallbacks:
 @register_instance
 class StateButtons(StateButtonsCallbacks, Gtk.Box):
     """Autosave, Edit, Remove"""
-    __gsignals__ = {
-        'my_signal': (GObject.SIGNAL_RUN_FIRST, None,
-                      (int,))
-    }
 
     def __init__(self, app_state):
         Gtk.Box.__init__(self, spacing=6)
         self.state = app_state
-        self.emit("my_signal", 44)
 
         self.buttons = {}
 
@@ -84,6 +89,7 @@ class StateButtons(StateButtonsCallbacks, Gtk.Box):
         self._create_button("Autosave", self.on_autosave, "1")
         self._create_button("Edit", self.on_edit, "2")
         self._create_button("Remove", self.on_remove, "3")
+        self._create_button("Add", self.on_add, "4")
 
     def _create_button(self, name, callback, ind):
         _button = Gtk.ToggleButton(name)
@@ -92,6 +98,3 @@ class StateButtons(StateButtonsCallbacks, Gtk.Box):
         self.pack_start(_button, True, True, 0)
 
         self.buttons[name.lower()] = _button
-
-    def do_my_signal(self, arg):
-        print("method handler for `my_signal' called with argument", arg)

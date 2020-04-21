@@ -1,4 +1,5 @@
 from copypaster import logger, State, NORMAL, AUTOSAVE, REMOVE, EDIT
+from copypaster.signal_bus import signal_bus
 import time
 import sys
 import gettext
@@ -73,16 +74,17 @@ class CopyButton(Gtk.Button):
         state = State['app']
 
         if state == REMOVE:
+            signal_bus.emit('remove_button', self)
             del self.get_parent().get_parent().button_deck.buttons[self.value]
             self.get_parent().remove(self)
 
         if state in [NORMAL, AUTOSAVE]:
             self.click_count += 1
+            signal_bus.emit('copy', button.value)
             Register['Jimmy'].send(button.value)
-            Register['StatusBar'].send(
-                'Clicked button number %s' % button.value)
 
         if state == EDIT:
+            signal_bus.emit('edit_button', self)
             Register['NewNote'].edit(self)
 
 

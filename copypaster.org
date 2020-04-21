@@ -44,21 +44,66 @@ ctags -R *; cat tags | awk '{ print $1 }' | uniq | awk '{ printf "  - values: \"
 TODOS:
 
 * add menu and put there functions from Toolbar
-** rmv toolbar
-* remove statusbar
+** DONE rmv toolbar
+* DONE remove statusbar
 * add "Add" button to StatusButtons and open dialog with newnote
 * move NewNote widgets into dialog
 * move callbacks about notebook from Application to FileCabinet
 
-* write down all events-actions before doing more stuff
-I need to override __gsignals__ of every widget that has to do something
-check this link for example:
-https://python-gtk-3-tutorial.readthedocs.io/en/latest/objects.html
+* DONE write down all events-actions before doing more stuff
+use the signal bus to have everything
 
-Then if I want an object to do something, I have to emit on him
-that defined by me signal.
 
-But that if fucked up, cause if I have the object, why can't I run
-a function on it, and use some wicked mechanism?
+Application:
+- New notebook      EMIT    new_notebook        
+- Open notebook     EMIT    open_notebook       
+- Save notebook     EMIT    save_notebook       -> MOVE TO FileCabinet
+- Save notebook as  EMIT    save_notebook_as    -> MOVE TO FileCabinet
+- Quit              EMIT    quit                -> NO HANDLE
 
+
+StateButtons:
+- Autosave           STATE autosave EMIT   autosave_on, autosave_off -> MOVE TO Jimmy
+- Edit               STATE edit
+- Remove             STATE remove
+- Add                EMIT   new_button
+
+NewNote:
+SUBSCRIBE   new_button
+SUBSCRIBE   add_button
+SUBSCRIBE   edit_button     # Edit
+SUBSCRIBE   remove_button
+SUBSCRIBE   quick_save
+SUBSCRIBE   save                 
+
+Jimmy:
+SUBSCRIBE   autosave_on
+SUBSCRIBE   autosave_off
+SUBSCRIBE   copy
+
+CopyButton:
+EMIT    remove_button   self
+EMIT    copy    button.value
+EMIT    edit_button self
+on_button_click
+
+
+BackButton:
+EMIT    one_up
+
+DialogEdit:
+on_key_press_event 
+on_save
+
+FileCabinet:
+SUBSCRIBE   new_notebook       
+SUBSCRIBE   open_notebook
+SUBSCRIBE   save_notebook       
+SUBSCRIBE   save_notebook_as
+SUBSCRIBE   quit
+
+
+
+* add on CopyButton function to update values and label
+* DirtNotes and ButtonGrid should be one class
 * change every callback into 
