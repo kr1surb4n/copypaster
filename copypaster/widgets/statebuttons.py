@@ -3,12 +3,13 @@ from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMO
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio  # noqa
+from gi.repository import Gtk, Gdk, Gio, GObject  # noqa
 
-translate = {
-    "Autosave": AUTOSAVE,
-    "Edit":     `EDIT, NORMAL, REMOVE
-}
+# translate = {
+#     "Autosave": AUTOSAVE,
+#     "Edit":     `EDIT, NORMAL, REMOVE
+# }
+
 
 class StateButtonsCallbacks:
     def on_autosave(self, button, name):
@@ -65,10 +66,15 @@ class StateButtonsCallbacks:
 @register_instance
 class StateButtons(StateButtonsCallbacks, Gtk.Box):
     """Autosave, Edit, Remove"""
+    __gsignals__ = {
+        'my_signal': (GObject.SIGNAL_RUN_FIRST, None,
+                      (int,))
+    }
 
     def __init__(self, app_state):
         Gtk.Box.__init__(self, spacing=6)
         self.state = app_state
+        self.emit("my_signal", 44)
 
         self.buttons = {}
 
@@ -86,3 +92,6 @@ class StateButtons(StateButtonsCallbacks, Gtk.Box):
         self.pack_start(_button, True, True, 0)
 
         self.buttons[name.lower()] = _button
+
+    def do_my_signal(self, arg):
+        print("method handler for `my_signal' called with argument", arg)
