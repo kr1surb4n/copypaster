@@ -55,7 +55,7 @@ class DialogEdit(Gtk.Dialog):
         self.wrapped_textview = wrap(self.textview)
 
         self.save_button = Gtk.Button(label="Save")
-        self.save_button.connect('clicked', self.save)
+        self.save_button.connect('clicked', self.on_save)
 
         grid.add(self.entry)
         grid.add(self.wrapped_textview)
@@ -66,9 +66,9 @@ class DialogEdit(Gtk.Dialog):
         self.show_all()
 
     def on_key_press_event(self, button):
-        pass
+        self.save(button)
 
-    def save(self, button):
+    def on_save(self, button):
         text_view_content = self.textbuffer.get_text(self.textbuffer.get_start_iter(
         ), self.textbuffer.get_end_iter(), False)
 

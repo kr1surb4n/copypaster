@@ -4,7 +4,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
-@register_instance
+# DEPRECATED
 class ToolBar(Gtk.Toolbar):
     "Sample toolbar provided by cookiecutter switch."
 
