@@ -7,7 +7,7 @@ from copypaster.widgets.dialogs import DialogError, DialogEdit
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio  # noqa
+from gi.repository import Gtk, Gdk, Gio, GObject  # noqa
 
 
 @register_instance
@@ -73,9 +73,16 @@ class FileCabinet(Gtk.Notebook):
 
 @register_instance
 class NewNote(Gtk.Grid):
+    __gsignals__ = {
+        'my_signal': (GObject.SIGNAL_RUN_FIRST, None,
+                      (int,))
+    }
+
     def __init__(self):
         Gtk.Grid.__init__(
             self, orientation=Gtk.Orientation.VERTICAL, hexpand=True, column_spacing=10, row_spacing=10)
+
+        self.emit("my_signal", 44)
 
         self.notes = Register['Dirty']
         self.dirty_notes = Register['DirtyNotes']
@@ -164,3 +171,6 @@ class NewNote(Gtk.Grid):
             self.add_button(name, value)
 
         self.clean_after()
+
+    def do_my_signal(self, arg):
+        print("method handler for `my_signal' called with argument", arg)

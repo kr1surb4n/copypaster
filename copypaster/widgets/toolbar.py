@@ -33,25 +33,3 @@ class ToolBar(Gtk.Toolbar):
             Gtk.STOCK_SAVE, reg['Application'].save_current_notebook, 2)
         self.init_toolbutton(
             Gtk.STOCK_SAVE_AS, reg['Application'].saveas_current_notebook, 3)
-
-
-class ToolBar(Gtk.Toolbar):
-    "Sample toolbar provided by cookiecutter switch."
-
-    def __init__(self, reg):
-        # a toolbar
-        Gtk.Toolbar.__init__(self)
-        self.reg = reg
-
-        # which is the primary toolbar of the application
-        self.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)
-        self.set_hexpand(True)
-
-        self.init_toolbutton(
-            Gtk.STOCK_ADD, reg['Application'].add_new_notebook, 0)
-        self.init_toolbutton(
-            Gtk.STOCK_OPEN, reg['Application'].open_notebook, 1)
-        self.init_toolbutton(
-            Gtk.STOCK_SAVE, reg['Application'].save_current_notebook, 2)
-        self.init_toolbutton(
-            Gtk.STOCK_SAVE_AS, reg['Application'].saveas_current_notebook, 3)

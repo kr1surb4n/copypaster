@@ -1,5 +1,400 @@
-buttons: []
+buttons:
+- click_count: 1
+  info: ''
+  name: MAIN
+  value: "fun main() {\n    println(\"Hello, Kotlin!\")\n}"
+- click_count: 0
+  info: ''
+  name: SHEBANG
+  value: 'package my.demo
 
+
+    import kotlin.text.*'
+- click_count: 0
+  info: ''
+  name: FUN with types
+  value: "fun sum(a: Int, b: Int): Int {\n    return a + b\n}"
+- click_count: 0
+  info: ''
+  name: inline FUN
+  value: 'fun sum(a: Int, b: Int) = a + b'
+- click_count: 0
+  info: ''
+  name: Unit
+  value: Unit
+- click_count: 0
+  info: ''
+  name: VAL
+  value: 'val a: Int = 1  // immediate assignment
+
+    val b = 2   // `Int` type is inferred
+
+    val c: Int  // Type required when no initializer is provided
+
+    c = 3       // deferred assignment'
+- click_count: 0
+  info: ''
+  name: VAR
+  value: var x = 5 // `Int` type is inferred
+- click_count: 0
+  info: ''
+  name: //
+  value: // This is an end-of-line comment
+- click_count: 0
+  info: ''
+  name: /* */
+  value: "/* This is a block comment\n   on multiple lines. */"
+- click_count: 0
+  info: ''
+  name: string inter
+  value: 'var a = 1
+
+    // simple name in template:
+
+    val s1 = "a is $a" '
+- click_count: 1
+  info: ''
+  name: 'string inter #2'
+  value: val s2 = "${s1.replace("is", "was")}, but now is $a"
+- click_count: 0
+  info: ''
+  name: IF
+  value: "    if (a > b) {\n        return a\n    } else {\n        return b\n   \
+    \ }"
+- click_count: 0
+  info: ''
+  name: inline IF
+  value: 'fun maxOf(a: Int, b: Int) = if (a > b) a else b'
+- click_count: 0
+  info: ''
+  name: IF expr
+  value: if (a > b) a else b
+- click_count: 0
+  info: ''
+  name: fun Int?
+  value: "fun parseInt(str: String): Int? {\n    // ...\n}"
+- click_count: 0
+  info: ''
+  name: 'obj: Any'
+  value: 'obj: Any'
+- click_count: 0
+  info: ''
+  name: Int?
+  value: Int?
+- click_count: 0
+  info: ''
+  name: obj is String
+  value: obj is String
+- click_count: 0
+  info: ''
+  name: return null
+  value: return null
+- click_count: 0
+  info: ''
+  name: return obj
+  value: return obj
+- click_count: 0
+  info: ''
+  name: FOR
+  value: "for (item in items) {\n    println(item)\n}"
+- click_count: 0
+  info: ''
+  name: list init
+  value: = listOf("apple", "banana", "kiwifruit")
+- click_count: 0
+  info: ''
+  name: index in items.indices
+  value: index in items.indices
+- click_count: 0
+  info: ''
+  name: WHILE
+  value: "while (index < items.size) {\n    println(\"item at $index is ${items[index]}\"\
+    )\n    index++\n}"
+- click_count: 0
+  info: ''
+  name: WHEN
+  value: "    when (obj) {\n        1          -> \"One\"\n        \"Hello\"    ->\
+    \ \"Greeting\"\n        is Long    -> \"Long\"\n        !is String -> \"Not a\
+    \ string\"\n        else       -> \"Unknown\"\n    }"
+- click_count: 0
+  info: ''
+  name: String
+  value: String
+- click_count: 0
+  info: ''
+  name: x in 1..y+1
+  value: x in 1..y+1
+- click_count: 0
+  info: ''
+  name: -1 !in 0..list.lastIndex
+  value: -1 !in 0..list.lastIndex
+- click_count: 0
+  info: ''
+  name: list.size !in list.indices
+  value: list.size !in list.indices
+- click_count: 0
+  info: ''
+  name: x in 1..5
+  value: x in 1..5
+- click_count: 0
+  info: ''
+  name: x in 1..10 step 2
+  value: x in 1..10 step 2
+- click_count: 0
+  info: ''
+  name: x in 9 downTo 0 step 3
+  value: x in 9 downTo 0 step 3
+- click_count: 0
+  info: ''
+  name: print(x)
+  value: print(x)
+- click_count: 0
+  info: ''
+  name: println(item)
+  value: println(item)
+- click_count: 0
+  info: ''
+  name: '"orange" in items'
+  value: '"orange" in items'
+- click_count: 0
+  info: ''
+  name: ->
+  value: ->
+- click_count: 0
+  info: ''
+  name: '!='
+  value: '!='
+- click_count: 0
+  info: ''
+  name: LIST FUNS
+  value: "fruits\n  .filter { it.startsWith(\"a\") }\n  .sortedBy { it }\n  .map {\
+    \ it.toUpperCase() }\n  .forEach { println(it) }"
+- click_count: 0
+  info: ''
+  name: 'CLASS #3'
+  value: class Invoice { /*...*/ }
+- click_count: 0
+  info: ''
+  name: CLASS INIT
+  value: "class InitOrderDemo(name: String) {\n    val firstProperty = \"First property:\
+    \ $name\".also(::println)\n    \n    init {\n        println(\"First initializer\
+    \ block that prints ${name}\")\n    }\n    \n    val secondProperty = \"Second\
+    \ property: ${name.length}\".also(::println)\n    \n    init {\n        println(\"\
+    Second initializer block that prints ${name.length}\")\n    }\n}"
+- click_count: 0
+  info: ''
+  name: 'CLASS #4'
+  value: "class Customer(name: String) {\n    val customerKey = name.toUpperCase()\n\
+    }"
+- click_count: 0
+  info: ''
+  name: 'CLASS #5'
+  value: 'class Person(val firstName: String, val lastName: String, var age: Int)
+    { /*...*/ }'
+- click_count: 0
+  info: ''
+  name: '@INJECT'
+  value: 'class Customer public @Inject constructor(name: String)'
+- click_count: 0
+  info: ''
+  name: 'true'
+  value: 'true'
+- click_count: 0
+  info: ''
+  name: 'false'
+  value: 'false'
+- click_count: 1
+  info: ''
+  name: readLine()!!
+  value: readLine()!!
+- click_count: 0
+  info: ''
+  name: import java.util.Scanner
+  value: import java.util.Scanner
+- click_count: 0
+  info: ''
+  name: val scanner = Scanner(System.`in`)
+  value: val scanner = Scanner(System.`in`)
+- click_count: 0
+  info: ''
+  name: scanner.nextLine()
+  value: scanner.nextLine()
+- click_count: 0
+  info: ''
+  name: scanner.nextInt()
+  value: scanner.nextInt()
+- click_count: 0
+  info: ''
+  name: scanner.next()
+  value: scanner.next()
+- click_count: 0
+  info: ''
+  name: scanner.nextLong()
+  value: scanner.nextLong()
+- click_count: 0
+  info: ''
+  name: a <= b <= c
+  value: a <= b <= c
+- click_count: 0
+  info: ''
+  name: Char
+  value: Char
+- click_count: 0
+  info: ''
+  name: val ch = '\u0040' // it represents '@'
+  value: val ch = '\u0040' // it represents '@'
+- click_count: 0
+  info: ''
+  name: '''\"'''
+  value: '''\"'''
+- click_count: 0
+  info: ''
+  name: '''\'''''
+  value: '''\'''''
+- click_count: 0
+  info: ''
+  name: '''\\'''
+  value: '''\\'''
+- click_count: 0
+  info: ''
+  name: '''\r'''
+  value: '''\r'''
+- click_count: 0
+  info: ''
+  name: '''\t'''
+  value: '''\t'''
+- click_count: 0
+  info: ''
+  name: '''\n'''
+  value: '''\n'''
+- click_count: 0
+  info: ''
+  name: isDigit()
+  value: isDigit()
+- click_count: 0
+  info: ''
+  name: isLetter()
+  value: isLetter()
+- click_count: 0
+  info: ''
+  name: isLetterOrDigit()
+  value: isLetterOrDigit()
+- click_count: 0
+  info: ''
+  name: isWhitespace()
+  value: isWhitespace()
+- click_count: 0
+  info: ''
+  name: isUpperCase()
+  value: isUpperCase()
+- click_count: 0
+  info: ''
+  name: isLowerCase()
+  value: isLowerCase()
+- click_count: 0
+  info: ''
+  name: toUpperCase()
+  value: toUpperCase()
+- click_count: 0
+  info: ''
+  name: toLowerCase()
+  value: toLowerCase()
+- click_count: 0
+  info: ''
+  name: language.length
+  value: language.length
+- click_count: 0
+  info: ''
+  name: Strings are immutable
+  value: Strings are immutable
+- click_count: 0
+  info: ''
+  name: '"abc" + 10 + true'
+  value: '"abc" + 10 + true'
+- click_count: 0
+  info: ''
+  name: in a..b, in c..d -> println("n belongs to a range")
+  value: in a..b, in c..d -> println("n belongs to a range")
+- click_count: 0
+  info: ''
+  name: "val scanner = Scanner(System.`in`)\n    val n = scanner.nextInt()\n    \n\
+    \    when {\n        n == 0 -> println(\"n is zero\")\n        n in 100..200 ->\
+    \ println(\"n is between 100 and 200\")\n        n > 300 -> println(\"n is greater\
+    \ than 300\")\n        n < 0 -> println(\"n is negative\")\n        // else-branch\
+    \ is optional here\n    }"
+  value: "val scanner = Scanner(System.`in`)\n    val n = scanner.nextInt()\n    \n\
+    \    when {\n        n == 0 -> println(\"n is zero\")\n        n in 100..200 ->\
+    \ println(\"n is between 100 and 200\")\n        n > 300 -> println(\"n is greater\
+    \ than 300\")\n        n < 0 -> println(\"n is negative\")\n        // else-branch\
+    \ is optional here\n    }"
+- click_count: 0
+  info: ''
+  name: espresso, latte, and cappuccino
+  value: espresso, latte, and cappuccino
+- click_count: 0
+  info: ''
+  name: disposable cup
+  value: disposable cup
+- click_count: 0
+  info: ''
+  name: money
+  value: money
+- click_count: 0
+  info: ''
+  name: 'Write action (buy, fill, take): > take
+
+    I gave you $550'
+  value: 'Write action (buy, fill, take): > take
+
+    I gave you $550'
+- click_count: 0
+  info: ''
+  name: 'Write how many ml of water do you want to add: > 2000
+
+    Write how many ml of milk do you want to add: > 500
+
+    Write how many grams of coffee beans do you want to add: > 100
+
+    Write how many disposable cups of coffee do you want to add: > 10'
+  value: 'Write how many ml of water do you want to add: > 2000
+
+    Write how many ml of milk do you want to add: > 500
+
+    Write how many grams of coffee beans do you want to add: > 100
+
+    Write how many disposable cups of coffee do you want to add: > 10'
+- click_count: 0
+  info: ''
+  name: 'The coffee machine has:'
+  value: 'The coffee machine has:'
+- click_count: 2
+  info: ''
+  name: 'The coffee machine has:
+
+    1200 of water
+
+    540 of milk
+
+    120 of coffee beans
+
+    9 of disposable cups
+
+    550 of money'
+  value: 'The coffee machine has:
+
+    1200 of water
+
+    540 of milk
+
+    120 of coffee beans
+
+    9 of disposable cups
+
+    550 of money'
+- click_count: 0
+  info: ''
+  name: val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
+  value: val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
 info:
-  - name: Dirty
-  - category: tests
+- name: Dirty
+- category: tests

@@ -1,13 +1,7 @@
-# import gi
-# gi.require_version("Gtk", "3.0")
-# from gi.repository import Gtk
-
-# window = Gtk.Window(title="Hello World")
-# window.show()
-# window.connect("destroy", Gtk.main_quit)
-# Gtk.main()
+from copypaster.register import register_instance
 
 
+@register_instance
 class SignalBus:
     def __init__(self):
         # super().__init__()
@@ -34,25 +28,4 @@ class SignalBus:
         [callback(*args, **kwargs) for callback in receivers]
 
 
-ebus = EventBus()
-
-# objectA  has   on_event_name
-
-
-class ObjectA:
-    def on_event_name(self, arg1):
-        print("event was run " + arg1)
-
-
-objectA = ObjectA()
-objectA2 = ObjectA()
-# objectA  subscribes to EventBus for event_name
-
-ebus.subscribe('event_name', objectA)
-ebus.subscribe('event_name', objectA2)
-
-# objectB  emits  an    event_name   using   EventBus
-
-
-ebus.emit('event_name', "and some data was send")
-ebus.emit('event_name', "- another")
+signal_bus = SignalBus()
