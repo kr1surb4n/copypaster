@@ -11,8 +11,6 @@ from copypaster.widgets import Application
 import copypaster.clipboard
 #import copypaster.file_loader
 
-"""Main module."""
-
 
 @register_instance
 class Config:

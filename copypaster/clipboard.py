@@ -1,4 +1,3 @@
-from copypaste import copy
 import xerox
 from copypaster.register import Register, register_instance
 from copypaster import logger

@@ -26,6 +26,8 @@ def _(s): return s
 CONTEXT = 'Button'
 
 
+
+# DEPRECATED
 @register_instance
 class StatusBar(Gtk.Statusbar):
     def __init__(self):
@@ -67,7 +69,7 @@ class MainWindow(Gtk.ApplicationWindow):
         self.add(self.grid)
 
         self.main.show()
-        
+
 
 @register_instance
 class MainFrame(Gtk.Grid):
@@ -86,6 +88,19 @@ class MainFrame(Gtk.Grid):
 
 
 class AppCallbacks:
+
+    def _init_actions(self):
+        # this all is a lot of work, I would do something with it
+        actions = [("new_notebook", self.new_notebook,),
+                   ("open_notebook", self.open_notebook,),
+                   ("save_notebook", self.save_notebook,),
+                   ("save_notebook_as", self.save_notebook_as,),
+                   ("quit", self.handle_quit,), ]
+
+        for action_name, callback in actions:
+            action = AnAction.new(action_name, None, callback)
+            self.add_action(action)
+
     def new_notebook(self, action):
         signal_bus.emit('new_notebook')
         pass
@@ -97,13 +112,14 @@ class AppCallbacks:
     def save_notebook(self, action):
         signal_bus.emit('save_notebook')
 
+        # TODO: move this to FileCabinet
         cabinet = Register['FileCabinet']
         cabinet.pages[cabinet.get_current_page()].save_deck()
 
     def save_notebook_as(self, action):
         signal_bus.emit('save_notebook_as')
 
-        dialog = Gtk.FileChooserDialog(
+        dialog = Gtk.FileChooserDialog(         # TODO: move this to FileCabinet
             'Save button deck', self.win,
             Gtk.FileChooserAction.SAVE,
             (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
@@ -135,6 +151,7 @@ class Application(AppCallbacks, Gtk.Application):
 
     def __init__(self):
         Gtk.Application.__init__(self)
+        self._init_actions()
 
         style_provider = Gtk.CssProvider()
         style_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
@@ -144,17 +161,6 @@ class Application(AppCallbacks, Gtk.Application):
             style_provider,
             Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
         )
-
-        # this all is a lot of work, I would do something with it
-        actions = [("new_notebook", self.new_notebook,),
-                   ("open_notebook", self.open_notebook,),
-                   ("save_notebook", self.save_notebook,),
-                   ("save_notebook_as", self.save_notebook_as,),
-                   ("quit", self.handle_quit,), ]
-
-        for action_name, callback in actions:
-            action = AnAction.new(action_name, None, callback)
-            self.add_action(action)
 
     def do_activate(self):
         self.win = MainWindow(self)
