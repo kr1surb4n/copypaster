@@ -27,8 +27,19 @@ class Config:
         self.cfg = configparser.ConfigParser()
         self.cfg.read(config)
 
+    def get_dirty_deck(self):
+        try:
+            return 'Dirty', self.cfg['main']['dirty_deck']
+        except IndexError as e:
+            print(e)
+            raise e
+
     def get_decks(self):
-        return {sec: self.cfg['decks'][sec] for sec in self.cfg['decks']}
+        try:
+            return {sec: self.cfg['decks'][sec] for sec in self.cfg['decks']}
+        except IndexError as e:
+            print(e)
+            raise e
 
 
 def main_function():
