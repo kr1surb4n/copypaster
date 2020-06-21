@@ -48,6 +48,9 @@ TODOS:
 * DONE add menu and put there functions from Toolbar
 ** DONE rmv toolbar
 * DONE remove statusbar
+* DONE DirtNotes and ButtonGrid should be one class
+* DONE add += for Register to add objects to register
+
 * DRAW WHOLE PROJECT
 
 * add "Add" button to StatusButtons and open dialog with newnote
@@ -56,7 +59,6 @@ TODOS:
 
 * change every callback into events
 * add on CopyButton function to update values and label
-* DirtNotes and ButtonGrid should be one class
 * can i catch copy-paste that is happening when done inside application?
 
 * DONE write down all events-actions before doing more stuff

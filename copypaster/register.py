@@ -1,6 +1,14 @@
 import functools
 
-Register = dict()
+
+class ObjectRegister(dict):
+    def __lt__(self, other):
+        name, value = other
+
+        self[name] = value
+
+
+Register = ObjectRegister()
 
 
 def register_instance(cls):
@@ -9,6 +17,7 @@ def register_instance(cls):
 
         instance = cls(*args, **kwargs)
 
-        Register[cls.__name__] = instance
+        Register < (cls.__name__, instance,)
+
         return instance
     return wrapper_decorator

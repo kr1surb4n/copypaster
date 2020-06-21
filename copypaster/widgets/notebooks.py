@@ -1,4 +1,4 @@
-from copypaster.register import Register, register_instance
+from copypaster.register import Register as __, register_instance
 from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMOVE
 from copypaster.file_loader import Deck
 from copypaster.widgets.utility import wrap
@@ -8,26 +8,6 @@ from copypaster.widgets.dialogs import DialogError, DialogEdit
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio, GObject  # noqa
-
-
-@register_instance
-class DirtyNotes(Gtk.FlowBox):
-    "Main area of user interface content."
-
-    def __init__(self):
-        Gtk.FlowBox.__init__(self)
-
-        self.button_deck = Register['Dirty']
-
-        self.set_valign(Gtk.Align.START)
-        # self.set_max_children_per_line(4)
-        self.set_selection_mode(Gtk.SelectionMode.NONE)
-
-        for button in self.button_deck.get_buttons():
-            self.add(button)
-
-    def save_deck(self):
-        self.button_deck.save_buttons()
 
 
 class ButtonGrid(Gtk.FlowBox):
@@ -57,8 +37,23 @@ class FileCabinet(Gtk.Notebook):
         Gtk.Notebook.__init__(self, vexpand=True)
         self.pages = []
 
-        self.add_page("Dirty notes", DirtyNotes())
-        decks = Register['Config'].get_decks()
+        self.load_dirty_notes()
+        self.load_notes()
+
+    def load_dirty_notes(self):
+        name, deck_file = __['Config'].get_dirty_deck()
+
+        dirty_notes = ButtonGrid(deck_file)
+
+        __['DirtyNotes'] = dirty_notes
+        __['Dirty'] = dirty_notes.button_deck
+
+        self.add_page(name, dirty_notes)
+
+    def load_notes(self):
+        """Load all notes that arent the DirtyNotes"""
+
+        decks = __['Config'].get_decks()
 
         for name, deck_file in decks.items():
             self.add_page(name, ButtonGrid(deck_file))
@@ -78,8 +73,8 @@ class NewNote(Gtk.Grid):
         Gtk.Grid.__init__(
             self, orientation=Gtk.Orientation.VERTICAL, hexpand=True, column_spacing=10, row_spacing=10)
 
-        self.notes = Register['Dirty']
-        self.dirty_notes = Register['DirtyNotes']
+        self.notes = __['Dirty']
+        self.dirty_notes = __['DirtyNotes']
 
         self.entry = Gtk.Entry()
         self.entry.set_placeholder_text("Put name here or value will be used")
@@ -116,7 +111,7 @@ class NewNote(Gtk.Grid):
 
     def add_button(self, name, value):
         try:
-            cabinet = Register['FileCabinet']
+            cabinet = __['FileCabinet']
             current_deck = cabinet.pages[cabinet.get_current_page()]
             b = current_deck.button_deck.add_button(name=name,
                                                     value=value)
@@ -127,7 +122,7 @@ class NewNote(Gtk.Grid):
             pass  # yes, cause this value exists
 
     def quick_save(self, button):
-        name = value = Register['Jimmy'].recieve()
+        name = value = __['Jimmy'].recieve()
 
         if not value:
             logger.error("No value to save - aborting")
@@ -142,7 +137,7 @@ class NewNote(Gtk.Grid):
 
     def edit(self, copy_button):
         dialog = DialogEdit(
-            Register['Application'].win,  copy_button)
+            __['Application'].win,  copy_button)
         dialog.run()
         dialog.destroy()
 
@@ -158,7 +153,7 @@ class NewNote(Gtk.Grid):
 
         if not name:
             dialog = DialogError(
-                Register['Application'].win, "Soo, the name is missing, it's required.")
+                __['Application'].win, "Soo, the name is missing, it's required.")
             dialog.run()
             dialog.destroy()
         else:

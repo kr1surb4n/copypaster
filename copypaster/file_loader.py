@@ -66,14 +66,3 @@ class Deck:
 
     def get_buttons(self):
         return self.buttons.values()
-
-
-@register_instance
-class Dirty(Deck):
-    """Deck of values for buttons"""
-
-    def __init__(self):
-        Deck.__init__(self, p.join(PROJECT_DIR, "button_maps/dirty.yml"))
-
-
-Dirty()
