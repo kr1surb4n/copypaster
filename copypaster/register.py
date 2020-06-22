@@ -17,7 +17,7 @@ def register_instance(cls):
 
         instance = cls(*args, **kwargs)
 
-        Register < (cls.__name__, instance,)
+        Register < (cls.__name__, instance)
 
         return instance
     return wrapper_decorator
