@@ -1,12 +1,11 @@
 from copypaster.widgets.notebooks import FileCabinet, NewNote
-from copypaster.widgets.toolbar import ToolBar
 from copypaster.widgets.statebuttons import StateButtons
 from copypaster.widgets.utility import AnAction
 from copypaster.signal_bus import signal_bus
 
-from copypaster.register import Register, register_instance
+from copypaster.register import Register as __, register_instance
 
-from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMOVE
+from copypaster import logger, CURRENT_DIR, State, AppState
 import time
 import time
 import sys
@@ -24,7 +23,6 @@ def _(s): return s
 
 
 CONTEXT = 'Button'
-
 
 
 # DEPRECATED
@@ -55,8 +53,8 @@ class MainWindow(Gtk.ApplicationWindow):
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
         self.calculated_height = self.screen.get_height()
 
-        Register['calculated_width'] = self.calculated_width
-        Register['calculated_height'] = self.calculated_height
+        __['calculated_width'] = self.calculated_width
+        __['calculated_height'] = self.calculated_height
 
         self.set_default_size(self.calculated_width, self.calculated_height)
 
@@ -81,7 +79,7 @@ class MainFrame(Gtk.Grid):
         # self.set_valign(Gtk.Align.START)
         self.file_cabinet = FileCabinet()
         self.adding = NewNote()
-        self.state_buttons = StateButtons(State)
+        self.state_buttons = StateButtons()
         self.add(self.state_buttons)
         self.add(self.adding)
         self.add(self.file_cabinet)
@@ -113,7 +111,7 @@ class AppCallbacks:
         signal_bus.emit('save_notebook')
 
         # TODO: move this to FileCabinet
-        cabinet = Register['FileCabinet']
+        cabinet = __['FileCabinet']
         cabinet.pages[cabinet.get_current_page()].save_deck()
 
     def save_notebook_as(self, action):
@@ -129,7 +127,7 @@ class AppCallbacks:
         if dialog.run() == Gtk.ResponseType.OK:
             filename = dialog.get_filename()
 
-            cabinet = Register['FileCabinet']
+            cabinet = __['FileCabinet']
             current_deck = cabinet.pages[cabinet.get_current_page()]
 
             try:
@@ -165,7 +163,7 @@ class Application(AppCallbacks, Gtk.Application):
     def do_activate(self):
         self.win = MainWindow(self)
         self.win.show_all()
-        State['app'] = NORMAL
+        AppState['app'] = State.NORMAL
 
     def do_startup(self):
         Gtk.Application.do_startup(self)

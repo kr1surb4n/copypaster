@@ -3,7 +3,7 @@ import sys
 import os
 import configparser
 
-from copypaster import PROJECT_DIR
+from copypaster import PROJECT_DIR, State
 from copypaster.register import Register, register_instance
 from copypaster.widgets import Application
 

@@ -1,4 +1,4 @@
-from copypaster.register import Register, register_instance
+from copypaster.register import Register as __, register_instance
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
@@ -16,10 +16,10 @@ class ToolBar(Gtk.Toolbar):
         button.show()
         button.connect("clicked", callback)
 
-    def __init__(self, reg):
+    def __init__(self):
         # a toolbar
         Gtk.Toolbar.__init__(self)
-        self.reg = reg
+        self.reg = __
 
         # which is the primary toolbar of the application
         self.get_style_context().add_class(Gtk.STYLE_CLASS_PRIMARY_TOOLBAR)

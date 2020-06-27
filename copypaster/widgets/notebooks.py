@@ -1,5 +1,5 @@
 from copypaster.register import Register as __, register_instance
-from copypaster import logger, CURRENT_DIR, State, NORMAL, AUTOSAVE, EDIT,  REMOVE
+from copypaster import logger, CURRENT_DIR
 from copypaster.file_loader import Deck
 from copypaster.widgets.utility import wrap
 from copypaster.widgets.dialogs import DialogError, DialogEdit

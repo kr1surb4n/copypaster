@@ -20,9 +20,13 @@ ch.setLevel(logging.DEBUG)
 
 logger.addHandler(ch)
 
-NORMAL = 'NORMAL'
-AUTOSAVE = 'AUTOSAVE'
-REMOVE = 'REMOVE'
-EDIT = 'EDIT'
 
-State = {}  # global application state
+class State(dict):
+    NORMAL = 'NORMAL'
+    AUTOSAVE = 'AUTOSAVE'
+    REMOVE = 'REMOVE'
+    EDIT = 'EDIT'
+
+
+# SET INITIAL STATE
+AppState = {'app': State.NORMAL}  # global application state
