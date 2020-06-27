@@ -1,11 +1,11 @@
-from copypaster import logger, State, NORMAL, AUTOSAVE, REMOVE, EDIT
+from copypaster import logger, State, AppState
 from copypaster.signal_bus import signal_bus
 import time
 import sys
 import gettext
 import datetime
 import hashlib
-from copypaster.register import Register, register_instance
+from copypaster.register import Register as __, register_instance
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gio  # noqa
@@ -71,21 +71,21 @@ class CopyButton(Gtk.Button):
         logger.debug(
             "Clicked button: {} and copied value".format(button.value))
 
-        state = State['app']
+        state = AppState['app']
 
-        if state == REMOVE:
+        if state == State.REMOVE:
             signal_bus.emit('remove_button', self)
             del self.get_parent().get_parent().button_deck.buttons[self.value]
             self.get_parent().remove(self)
 
-        if state in [NORMAL, AUTOSAVE]:
+        if state in [State.NORMAL, State.AUTOSAVE]:
             self.click_count += 1
             signal_bus.emit('copy', button.value)
-            Register['Jimmy'].send(button.value)
+            __['Jimmy'].send(button.value)
 
-        if state == EDIT:
+        if state == State.EDIT:
             signal_bus.emit('edit_button', self)
-            Register['NewNote'].edit(self)
+            __['NewNote'].edit(self)
 
 
 class BackButton(Gtk.Button):
@@ -104,8 +104,8 @@ class PasteButton(Gtk.Button):
         logger.debug(
             "Clicked button: {} and copied value".format(button.value))
 
-        contents = Register['Jimmy'].recieve()
+        contents = __['Jimmy'].recieve()
         if contents:
-            Register['Jimmy'].send(button.value)
-            Register['StatusBar'].send(
+            __['Jimmy'].send(button.value)
+            __['StatusBar'].send(
                 'Clicked button number %s' % button.value)

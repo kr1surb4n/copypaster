@@ -53,6 +53,8 @@ TODOS:
 
 * DRAW WHOLE PROJECT
 
+* clean the app state
+
 * add "Add" button to StatusButtons and open dialog with newnote
 * move NewNote widgets into dialog
 * move callbacks about notebook from Application to FileCabinet
