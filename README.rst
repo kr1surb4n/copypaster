@@ -19,9 +19,7 @@ Copypaster
      :alt: Updates
 
 Copypaster - a copy/paste tool that aims to change your
-work into simple copy-pasting by making visual snippets list. I want to code like I play Starcraft - by choosing
-what to build from a list and not check in documentation
-all the time, before I remember.
+work into simple copy-pasting actions by displaying snippets as a list. I want to code like I play Starcraft - by choosing what to build from a list and not check in documentation all the time, before I remember.
 
 
 It creates rows of buttons, which when pressed, write
