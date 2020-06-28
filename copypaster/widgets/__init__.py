@@ -1,4 +1,4 @@
-from copypaster.widgets.notebooks import FileCabinet, NewNote
+from copypaster.widgets.notebooks import FileCabinet
 from copypaster.widgets.statebuttons import StateButtons
 from copypaster.widgets.utility import AnAction
 from copypaster.signal_bus import signal_bus
@@ -22,25 +22,16 @@ from gi.repository import Gtk, Gdk, Gio  # noqa
 def _(s): return s
 
 
-CONTEXT = 'Button'
-
-
-# DEPRECATED
-@register_instance
-class StatusBar(Gtk.Statusbar):
-    def __init__(self):
-        Gtk.Statusbar.__init__(self)
-        # TODO check whats with the context
-        self.context_id = self.get_context_id(CONTEXT)
-
-    def send(self, message):
-        self.push(self.context_id, message)
-
-
 @register_instance
 class MainWindow(Gtk.ApplicationWindow):
     # constructor: the title is "Welcome to GNOME" and the window belongs
     # to the application app
+
+
+    # constructor of the Gtk Application
+    file_cabinet = adding = state_buttons = None
+
+
     screen = None
     calculated_width = 0
     calculated_height = 0
@@ -48,6 +39,7 @@ class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, app):
         Gtk.ApplicationWindow.__init__(
             self, title="CopyPaster", application=app)
+        logger.debug("Calculating screen size...")
         self.screen = self.get_screen()
 
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
@@ -58,31 +50,19 @@ class MainWindow(Gtk.ApplicationWindow):
 
         self.set_default_size(self.calculated_width, self.calculated_height)
 
-        self.main = MainFrame()
-
+        logger.debug("Loading main objects...")
         # grid
         self.grid = Gtk.Grid()
         self.grid.set_orientation(Gtk.Orientation.VERTICAL)
-        self.grid.add(self.main)
+
+        self.file_cabinet = FileCabinet()
+        self.state_buttons = StateButtons()
+
+        self.grid.add(self.state_buttons)
+        self.grid.add(self.file_cabinet)
+
         self.add(self.grid)
 
-        self.main.show()
-
-
-@register_instance
-class MainFrame(Gtk.Grid):
-    "Main area of user interface content."
-
-    def __init__(self):
-        Gtk.Grid.__init__(
-            self, orientation=Gtk.Orientation.VERTICAL)
-        # self.set_valign(Gtk.Align.START)
-        self.file_cabinet = FileCabinet()
-        self.adding = NewNote()
-        self.state_buttons = StateButtons()
-        self.add(self.state_buttons)
-        self.add(self.adding)
-        self.add(self.file_cabinet)
 
 
 class AppCallbacks:
@@ -100,51 +80,32 @@ class AppCallbacks:
             self.add_action(action)
 
     def new_notebook(self, action):
+        logger.debug("Emitting new_notebook...")
         signal_bus.emit('new_notebook')
-        pass
 
     def open_notebook(self, action):
+        logger.debug("Emitting open_notebook...")
         signal_bus.emit('open_notebook')
-        pass
 
     def save_notebook(self, action):
+        logger.debug("Emitting save_notebook...")
         signal_bus.emit('save_notebook')
 
-        # TODO: move this to FileCabinet
-        cabinet = __['FileCabinet']
-        cabinet.pages[cabinet.get_current_page()].save_deck()
-
     def save_notebook_as(self, action):
-        signal_bus.emit('save_notebook_as')
-
-        dialog = Gtk.FileChooserDialog(         # TODO: move this to FileCabinet
-            'Save button deck', self.win,
-            Gtk.FileChooserAction.SAVE,
-            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
-             Gtk.STOCK_SAVE, Gtk.ResponseType.OK))
-
-        dialog.set_do_overwrite_confirmation(True)
-        if dialog.run() == Gtk.ResponseType.OK:
-            filename = dialog.get_filename()
-
-            cabinet = __['FileCabinet']
-            current_deck = cabinet.pages[cabinet.get_current_page()]
-
-            try:
-                current_deck.button_deck.path = filename
-                current_deck.button_deck.save_buttons()
-            except Exception as e:
-                logger.error("There was an exception {}".format(e))
-        dialog.destroy()
+        logger.debug("Emitting save_notebook_as...")
 
     def handle_quit(self, action, parameter):
+        logger.debug("Emitting quit...")
+
         signal_bus.emit('quit')
         self.quit()
+        logger.debug("Goodbye! Application terminated.")
+
 
 
 @register_instance
 class Application(AppCallbacks, Gtk.Application):
-    # constructor of the Gtk Application
+
     win = None
 
     def __init__(self):
@@ -161,11 +122,20 @@ class Application(AppCallbacks, Gtk.Application):
         )
 
     def do_activate(self):
+        logger.debug("Lift off!")
         self.win = MainWindow(self)
         self.win.show_all()
+
+        logger.debug("App state NORMAL")
         AppState['app'] = State.NORMAL
 
+        logger.debug("Emitting start_app...")
+        signal_bus.emit('start_app')
+
+        logger.debug("All green. Welcome to application.")
+
     def do_startup(self):
+        logger.debug("Startup...")
         Gtk.Application.do_startup(self)
 
         # create a menu
@@ -178,3 +148,4 @@ class Application(AppCallbacks, Gtk.Application):
         menu.append("Quit", "app.quit")
         # set the menu as menu of the application
         self.set_app_menu(menu)
+        logger.debug('Menu loaded...')

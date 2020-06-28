@@ -19,7 +19,7 @@ class Jimmy:
     def recieve(self):
         contents = xerox.paste()
         logger.debug("Pasting: {}".format(contents))
-        return contents
+        return contents if contents.strip() else ""
 
 
 jimmy = Jimmy()
