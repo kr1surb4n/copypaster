@@ -27,12 +27,12 @@ class DialogAdd(Gtk.Dialog):
         box = self.get_content_area()
         grid = Gtk.Grid(orientation=Gtk.Orientation.VERTICAL,
                         hexpand=True, column_spacing=10, row_spacing=10)
-        clipboard_contents = __['Jimmy'].recive()
+        clipboard_contents = __['Jimmy'].recieve()
 
         self.entry = Gtk.Entry()
         self.entry.set_placeholder_text("Put name here or value will be used")
         self.entry.set_text(clipboard_contents)
-        self.entry.connect("key_press_event", self.on_key_press_event)
+        #self.entry.connect("key_press_event", self.on_key_press_event)
 
 
         self.textview = Gtk.TextView()
@@ -57,7 +57,6 @@ class DialogAdd(Gtk.Dialog):
         box.add(grid)
 
         self.show_all()
-
 
     def on_key_press_event(self, button):  #TODO check if that works
         self.save(button)

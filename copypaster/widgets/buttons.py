@@ -1,14 +1,10 @@
 from copypaster import logger, State, AppState
 from copypaster.signal_bus import signal_bus
-import time
-import sys
-import gettext
-import datetime
 import hashlib
-from copypaster.register import Register as __, register_instance
+from copypaster.register import Register as __
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gio  # noqa
+from gi.repository import Gtk  # noqa
 
 
 def camel_case_split(str):
@@ -78,24 +74,21 @@ class CopyButton(Gtk.Button):
         return name
 
     def on_button_click(self, button):
-        logger.debug(
-            "Clicked button: {} and copied value".format(button.value))
-
+        logger.debug("Handling the button press...")
         state = AppState['app']
 
         if state == State.REMOVE:
+            logger.debug("Removing button...")
             signal_bus.emit('remove_button', self)
-            del self.get_parent().get_parent().button_deck.buttons[self.value]
-            self.get_parent().remove(self)
 
         if state in [State.NORMAL, State.AUTOSAVE]:
+            logger.debug("Coping value...")
             self.click_count += 1
             signal_bus.emit('copy', button.value)
-            __['Jimmy'].send(button.value)
 
         if state == State.EDIT:
+            logger.debug("Editing button...")
             signal_bus.emit('edit_button', self)
-            __['NewNote'].edit(self)
 
 
 class BackButton(Gtk.Button):

@@ -1,5 +1,4 @@
-from copypaster.register import Register as __, register_instance
-from copypaster import logger, State, AppState
+from copypaster.register import Register as __
 from copypaster.signal_bus import signal_bus
 from copypaster.widgets.dialogs import DialogError
 
