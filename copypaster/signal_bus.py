@@ -16,6 +16,11 @@ an event name and arguments. Ths will call every subscribed function.
 I run `emit` function and this runs some functions. I don't know what happens.
 """
 
+class Signal:
+    edit_button = 'edit_button'
+    copy = 'copy'
+    remove_button = 'remove_button'
+
 
 @register_instance
 class SignalBus:

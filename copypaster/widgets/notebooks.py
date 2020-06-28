@@ -1,14 +1,12 @@
-from copypaster.register import Register as __, register_instance
-from copypaster import logger, CURRENT_DIR
+from copypaster.register import Register as __,  register_instance
 from copypaster.signal_bus import signal_bus
 from copypaster.file_loader import Deck
 from copypaster.widgets.utility import wrap
-from copypaster.widgets.dialogs import DialogError, DialogEdit
 
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio, GObject  # noqa
+from gi.repository import Gtk  # noqa
 
 
 class ButtonGrid(Gtk.FlowBox):
@@ -41,4 +39,3 @@ class FileCabinet(Gtk.Notebook):
     def add_page(self, title, _object):
         self.pages += [_object]
         self.append_page(wrap(_object), Gtk.Label(title))
-

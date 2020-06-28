@@ -1,5 +1,5 @@
-from copypaster.register import Register as __, register_instance
-from copypaster import logger, State, AppState
+from copypaster.register import Register as __
+from copypaster import logger
 from copypaster.signal_bus import signal_bus
 
 
@@ -14,7 +14,6 @@ class NotebookStories:
         # TODO: move this to FileCabinet
         cabinet = __['FileCabinet']
         cabinet.pages[cabinet.get_current_page()].save_deck()
-
 
     def on_save_notebook_as(self):
         dialog = Gtk.FileChooserDialog(         # TODO: move this to FileCabinet
@@ -62,7 +61,6 @@ class NotebookStories:
         __['Dirty'] = dirty_notes.button_deck
 
         cabinet.add_page(name, dirty_notes)
-
 
 
 signal_bus.subscribe('new_notebook', LoadButtonDecks())

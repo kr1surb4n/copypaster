@@ -1,10 +1,10 @@
-from copypaster.register import Register as __, register_instance
+from copypaster.register import Register as __,  register_instance
 from copypaster.signal_bus import signal_bus
-from copypaster import logger, CURRENT_DIR, State, AppState
+from copypaster import logger, State, AppState
 
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio, GObject  # noqa
+from gi.repository import Gtk, Gdk  # noqa
 
 # translate = {
 #     "Autosave": AUTOSAVE,
@@ -39,11 +39,9 @@ class StateButtonsCallbacks:
             AppState['app'] = State.NORMAL
             logger.debug('Edit off')
 
-    def on_add(self, button, name):
+    def on_add(self, button):
         logger.debug('Begin adding button')
-        self._deactive_rest_buttons('edit')
-        signal_bus.emit('add_button')
-        # __['NewNote'].add_new_button()
+        signal_bus.emit("open_add_button_dialog")
 
     def on_remove(self, button, name):
         self._deactive_rest_buttons('remove')
@@ -65,8 +63,7 @@ class StateButtonsCallbacks:
         if not value:
             logger.error("No value to save - aborting")
             return False
-
-        __['NewNote'].add_button(name, value)
+        signal_bus.emit("add_button", name, value)
 
     def _deactive_rest_buttons(self, leave_alone):
         [button.set_active(False) for name, button in self.buttons.items(
@@ -88,7 +85,10 @@ class StateButtons(StateButtonsCallbacks, Gtk.Box):
         self._create_button("Autosave", self.on_autosave, "1")
         self._create_button("Edit", self.on_edit, "2")
         self._create_button("Remove", self.on_remove, "3")
-        self._create_button("Add", self.on_add, "4")
+
+        button = Gtk.Button("Add")
+        button.connect('clicked', self.on_add)
+        self.pack_start(button, True, True, 0)
 
     def _create_button(self, name, callback, ind):
         _button = Gtk.ToggleButton(name)
