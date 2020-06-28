@@ -1,5 +1,5 @@
 from copypaster.register import register_instance
-
+from copypaster import logger
 """
 SignalBus
 
@@ -36,6 +36,7 @@ class SignalBus:
         self.recievers[event_name] += [getattr(_object, callback_name)]
 
     def emit(self, event_name, *args, **kwargs):
+        logger.debug("Run for: " + event_name)
         receivers = self.recievers.get(event_name, None)
 
         if receivers is None:

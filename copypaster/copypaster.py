@@ -3,7 +3,7 @@ import sys
 import os
 import configparser
 
-from copypaster import PROJECT_DIR, State
+from copypaster import PROJECT_DIR, State, logger
 from copypaster.register import Register, register_instance
 from copypaster.widgets import Application
 
@@ -17,6 +17,7 @@ class Config:
     cfg = None
 
     def __init__(self, config_file=None):
+        logger.debug("Initializing config...")
         config_env = os.environ.get('COPYPASTER_CONFIG', None)
 
         if config_env is not None:
@@ -42,9 +43,17 @@ class Config:
             raise e
 
 
-def main_function():
+def main_function(config):
     # create and run the application, exit with the value returned by
     # running the program
+
+    Config(config)
+
     app = Application()
+
+    logger.debug("Importing stories...")
+    import copypaster.stories
+
     exit_status = app.run(sys.argv)
+    logger.debug("Returning exit status value...")
     return exit_status

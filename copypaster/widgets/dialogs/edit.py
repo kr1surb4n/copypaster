@@ -1,29 +1,16 @@
 from copypaster.widgets.utility import wrap
+from copypaster import logger, CURRENT_DIR
 
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
-class DialogError(Gtk.Dialog):
-
-    def __init__(self, parent, massage):  # lol
-        Gtk.Dialog.__init__(self)
-        self.set_modal(True)
-        self.add_button(button_text="OK", response_id=Gtk.ResponseType.OK)
-        self.set_transient_for(parent)
-        self.set_default_size(150, 100)
-
-        label = Gtk.Label(massage)
-
-        box = self.get_content_area()
-        box.add(label)
-        self.show_all()
-
 
 class DialogEdit(Gtk.Dialog):
 
-    def __init__(self, parent, button_to_edit):  # lol
+    def __init__(self, parent, button_to_edit):
+        logger.debug('Editing a button...')
         Gtk.Dialog.__init__(self)
 
         self.edited = button_to_edit
@@ -65,10 +52,11 @@ class DialogEdit(Gtk.Dialog):
 
         self.show_all()
 
-    def on_key_press_event(self, button):
+    def on_key_press_event(self, button):  #TODO check if that works
         self.save(button)
 
     def on_save(self, button):
+        logger.debug("Saving edited button...")
         text_view_content = self.textbuffer.get_text(self.textbuffer.get_start_iter(
         ), self.textbuffer.get_end_iter(), False)
 

@@ -16,9 +16,7 @@ def main(config):
     """Console script for copypaster."""
     logger.info("Started program")
 
-    Config(config)
-
-    return main_function()
+    return main_function(config)
 
 
 if __name__ == "__main__":

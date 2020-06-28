@@ -44,7 +44,7 @@ class CopyButton(Gtk.Button):
         self.value = str(self.value)
         del kwargs['value']
 
-        if 'click_count' in kwargs:
+        if 'click_count' in kwargs:  # TODO WHats that ?
             del kwargs['click_count']
 
         if 'info' in kwargs:
@@ -59,13 +59,23 @@ class CopyButton(Gtk.Button):
 
         self.id = self.hash()
 
-        kwargs['label'] = self.name
+        kwargs['label'] = self.style_label()
         super(CopyButton, self).__init__(*args, **kwargs)
 
         # set the name of the thing
         self.set_tooltip_text(self.name)
 
         self.connect('clicked', self.on_button_click)
+
+    def style_label(self):
+        name = self.name
+
+        MAX_LENGTH_OF_BUTTON = 20
+
+        if len(name) > MAX_LENGTH_OF_BUTTON:
+            name = name[:MAX_LENGTH_OF_BUTTON] + '...'
+
+        return name
 
     def on_button_click(self, button):
         logger.debug(

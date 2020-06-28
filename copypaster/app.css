@@ -1,3 +1,10 @@
 * {
     outline: none;
 }
+
+button,
+.text-button,
+button label {
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
+}

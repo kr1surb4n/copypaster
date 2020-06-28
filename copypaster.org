@@ -51,15 +51,16 @@ TODOS:
 * DONE DirtNotes and ButtonGrid should be one class
 * DONE add += for Register to add objects to register
 
-* DRAW WHOLE PROJECT
+* DONE DRAW WHOLE PROJECT
 
-* clean the app state
+* DONE clean the app state
 
+- State "DONE"       from "WAITING"    [2020-06-27 sob 19:00]
 * add "Add" button to StatusButtons and open dialog with newnote
 * move NewNote widgets into dialog
-* move callbacks about notebook from Application to FileCabinet
+* DONE move callbacks about notebook from Application to FileCabinet
 
-* change every callback into events
+* NEXT change every callback into events
 * add on CopyButton function to update values and label
 * can i catch copy-paste that is happening when done inside application?
 
