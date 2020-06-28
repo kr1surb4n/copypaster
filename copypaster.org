@@ -56,11 +56,12 @@ TODOS:
 * DONE clean the app state
 
 - State "DONE"       from "WAITING"    [2020-06-27 sob 19:00]
-* add "Add" button to StatusButtons and open dialog with newnote
-* move NewNote widgets into dialog
+* DONE add "Add" button to StatusButtons and open dialog with newnote
+* DONE move NewNote widgets into dialog
 * DONE move callbacks about notebook from Application to FileCabinet
 
-* NEXT change every callback into events
+* DONE change every callback into events
+- State "DONE"       from "WAITING"    [2020-06-28 nie 15:18]
 * add on CopyButton function to update values and label
 * can i catch copy-paste that is happening when done inside application?
 

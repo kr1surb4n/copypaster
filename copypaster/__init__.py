@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-"""Top-level package for Python Boilerplate."""
+"""Top-level package for Copypaster."""
 
-__author__ = """Kris Urbanski"""
+__author__ = """Przemek Kot"""
 __email__ = 'kris@whereibend.space'
 __version__ = '0.1.0'
 
