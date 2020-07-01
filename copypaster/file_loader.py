@@ -40,7 +40,7 @@ class Deck:
         """Create button, add it to table and return it"""
         c = self.buttons.get(str(kwargs.get('value', None)), None)
         if c:
-            raise IndexError('There is such value')
+            raise IndexError('There is such a value')
 
         c = CopyButton(**kwargs)
 
