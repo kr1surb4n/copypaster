@@ -91,8 +91,39 @@ class CopyButton(Gtk.Button):
             signal_bus.emit('edit_button', self)
 
 
-class BackButton(Gtk.Button):
-    pass
+class NavigateButton(Gtk.Button):
+    def __init__(self, *args, **kwargs):
+
+        "Current will be hidden. \
+         Target will be shown"
+
+        "Invoke: NavigateButton(current=<widget>, target=<widget>, label='Back')"
+        self.report_to = kwargs.get('report_to')
+        self.current = kwargs.get('current')
+        self.target = kwargs.get('target')
+        del kwargs['report_to']
+        del kwargs['current']
+        del kwargs['target']
+
+        super(NavigateButton, self).__init__(*args, **kwargs)
+        self.set_name = 'nested-navigation'
+        button_context = self.get_style_context()
+        button_context.add_class("nested-navigation")
+
+        self.connect('clicked', self.on_button_click)
+
+    def on_button_click(self, button):
+        logger.debug("Navigating...")
+
+        "The whole secret to navigation is that nothing moves. \
+        All is static, but we show and hide stuff"
+
+        signal_bus.emit('change_button_grid', self.report_to, self.current, self.target)
+
+        # DO THAT IN THE EVENT CONTROL
+        # self.current.hide()
+        #self.target.show()
+
 
 
 class PasteButton(Gtk.Button):
@@ -107,8 +138,6 @@ class PasteButton(Gtk.Button):
         logger.debug(
             "Clicked button: {} and copied value".format(button.value))
 
-        contents = __['Jimmy'].recieve()
+        contents = __.Jimmy.recieve()
         if contents:
-            __['Jimmy'].send(button.value)
-            __['StatusBar'].send(
-                'Clicked button number %s' % button.value)
+            __.Jimmy.send(button.value)

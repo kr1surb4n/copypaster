@@ -47,6 +47,7 @@ class NotebookStories:
         cabinet = __['FileCabinet']
         self.load_dirty_notes(cabinet)
         self.load_notes(cabinet)
+        self.load_collections(cabinet)
 
         cabinet.show_all()  # redraw everything
 

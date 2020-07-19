@@ -5,6 +5,15 @@
 button,
 .text-button,
 button label {
+    font-size: 14px;
     padding: 0px 0px 0px 0px;
     margin: 0px;
+}
+
+
+#nested-navigation, .nested-navigation, button#nested-navigation, GtkButton#nested-navigation {
+    font-weight: bold;
+    font-size: 16px;
+    background: #999999;
+    color: #333333;
 }
