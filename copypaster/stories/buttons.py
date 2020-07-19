@@ -8,7 +8,7 @@ class ButtonStories:
 
     def on_edit_button(self, button_to_edit):
         dialog = DialogEdit(
-            __['Application'].win, button_to_edit)
+            __.Application.win, button_to_edit)
         dialog.run()
         dialog.destroy()
 
@@ -23,7 +23,7 @@ class ButtonStories:
         assert value
 
         try:
-            cabinet = __['FileCabinet']
+            cabinet = __.FileCabinet
             current_deck = cabinet.pages[cabinet.get_current_page()]
             b = current_deck.button_deck.add_button(name=name,
                                                     value=value)
@@ -31,19 +31,24 @@ class ButtonStories:
             b.show()
             logger.debug("A button has been added")
 
-            __['Jimmy'].send('')
+            __.Jimmy.send('')
         except IndexError:
             pass  # yes, cause this value exists
 
     def on_open_add_button_dialog(self):
         dialog = DialogAdd(
-            __['Application'].win)
+            __.Application.win)
         dialog.run()
         dialog.destroy()
 
+
 button_stories = ButtonStories()
 
-signal_bus.subscribe('add_button', button_stories)
-signal_bus.subscribe('edit_button', button_stories)
-signal_bus.subscribe('remove_button', button_stories)
-signal_bus.subscribe('open_add_button_dialog', button_stories)
+[signal_bus.subscribe(event, button_stories)
+         for event in
+ [
+     'add_button',
+     'edit_button',
+     'remove_button',
+     'open_add_button_dialog'
+ ]]

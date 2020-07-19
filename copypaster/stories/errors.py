@@ -6,7 +6,7 @@ from copypaster.widgets.dialogs import DialogError
 class DisplayErrorDialog:
     def on_error_show_dialog(self, message):
         dialog = DialogError(
-            __['Application'].win, message)
+            __.Application.win, message)
         dialog.run()
         dialog.destroy()
 

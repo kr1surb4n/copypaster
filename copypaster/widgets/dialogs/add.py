@@ -27,7 +27,7 @@ class DialogAdd(Gtk.Dialog):
         box = self.get_content_area()
         grid = Gtk.Grid(orientation=Gtk.Orientation.VERTICAL,
                         hexpand=True, column_spacing=10, row_spacing=10)
-        clipboard_contents = __['Jimmy'].recieve()
+        clipboard_contents = __.Jimmy.recieve()
 
         self.entry = Gtk.Entry()
         self.entry.set_placeholder_text("Put name here or value will be used")

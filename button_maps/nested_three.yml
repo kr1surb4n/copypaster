@@ -1,0 +1,11 @@
+referenced:
+    - "python-types.yml"
+buttons:
+- click_count: 1
+  info: 'Third value'
+  name: Third
+  value: "Third"
+
+info:
+- name: Nested3
+- category: tests

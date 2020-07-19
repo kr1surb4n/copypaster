@@ -27,13 +27,13 @@ Application
 |        |--StatusBar
 |
 #-AppCallbacks
-    - new_callback
-    - about_callback
-    - quit_callback
-    - add_new_notebook
-    - open_notebookopen_notebook
-    - save_current_notebook
-    - save_dirty_notebook
+ - new_callback
+ - about_callback
+ - quit_callback
+ - add_new_notebook
+ - open_notebookopen_notebook
+ - save_current_notebook
+ - save_dirty_notebook
 
 
 
@@ -44,6 +44,137 @@ ctags -R *; cat tags | awk '{ print $1 }' | uniq | awk '{ printf "  - values: \"
 
 
 TODOS:
+
+
+* FILE LIST:
+
+** signal_bus
+** register
+** app.css
+** __init__
+** file_loader
+** copypaster
+** clipboard
+** cli
+** widgets/util
+** ------/statebuttons
+** ------/notebooks
+** ------/buttons
+** ------/__init__
+** widget/dialogs/__init__
+** --------------/add
+** --------------/edit
+** --------------/error
+** stories/__init__
+** -------/buttons
+** -------/errors
+** -------/load_button_decks
+** -------/notebook_stories
+** -------/of_jimmy_mcgill
+
+* write comments in files:
+** __init__
+** file_loader
+** copypaster
+** clipboard
+** cli
+** widgets/util
+** ------/statebuttons
+** ------/notebooks
+** ------/buttons
+** ------/__init__
+** widget/dialogs/__init__
+** --------------/add
+** --------------/edit
+** --------------/error
+** stories/__init__
+** -------/buttons
+** -------/errors
+** -------/load_button_decks
+** -------/notebook_stories
+** -------/of_jimmy_mcgill
+* extract all strings and put them in a single file
+
+save them under and object `t`, in file all_strings.py
+** create object `t` and a function __getattrib__ that returns object (for now)
+** __init__
+** file_loader
+** copypaster
+** clipboard
+** cli
+** widgets/util
+** ------/statebuttons
+** ------/notebooks
+** ------/buttons
+** ------/__init__
+** widget/dialogs/__init__
+** --------------/add
+** --------------/edit
+** --------------/error
+** stories/__init__
+** -------/buttons
+** -------/errors
+** -------/load_button_decks
+** -------/notebook_stories
+** -------/of_jimmy_mcgill
+
+* switch strings for object t
+** signal_bus
+** register
+** app.css
+** __init__
+** file_loader
+** copypaster
+** clipboard
+** cli
+** widgets/util
+** ------/statebuttons
+** ------/notebooks
+** ------/buttons
+** ------/__init__
+** widget/dialogs/__init__
+** --------------/add
+** --------------/edit
+** --------------/error
+** stories/__init__
+** -------/buttons
+** -------/errors
+** -------/load_button_decks
+** -------/notebook_stories
+** -------/of_jimmy_mcgill
+
+* write tests for every file
+** DONE signal_bus
+** register
+** app.css
+** __init__
+** file_loader
+** copypaster
+** clipboard
+** cli
+** widgets/util
+** ------/statebuttons
+** ------/notebooks
+** ------/buttons
+** ------/__init__
+** widget/dialogs/__init__
+** --------------/add
+** --------------/edit
+** --------------/error
+** stories/__init__
+** -------/buttons
+** -------/errors
+** -------/load_button_decks
+** -------/notebook_stories
+** -------/of_jimmy_mcgill
+
+* nested: create root branch and generate proper stuff for her
+* nested: #adding links and buttons
+* create nested section for:
+** python
+** androind / kotlin
+** nim
+** and everything other i will get idea what to do.
 
 * DONE add menu and put there functions from Toolbar
 ** DONE rmv toolbar
@@ -62,7 +193,8 @@ TODOS:
 
 * DONE change every callback into events
 - State "DONE"       from "WAITING"    [2020-06-28 nie 15:18]
-* add on CopyButton function to update values and label
+* CANCELLED add on CopyButton function to update values and label
+- State "CANCELLED"  from "PHONE"      [2020-07-19 nie 16:40]
 * can i catch copy-paste that is happening when done inside application?
 
 * DONE write down all events-actions before doing more stuff

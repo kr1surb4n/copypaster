@@ -9,7 +9,6 @@ from copypaster.widgets import Application
 
 """ Initialize services """
 import copypaster.clipboard
-#import copypaster.file_loader
 
 
 @register_instance
@@ -30,14 +29,24 @@ class Config:
 
     def get_dirty_deck(self):
         try:
-            return 'Dirty', self.cfg['main']['dirty_deck']
+            main = self.cfg['main']
+            return 'Dirty', main['dirty_deck']
         except IndexError as e:
             print(e)
             raise e
 
     def get_decks(self):
         try:
-            return {sec: self.cfg['decks'][sec] for sec in self.cfg['decks']}
+            decks = self.cfg['decks']
+            return {sec: decks[sec] for sec in decks}
+        except IndexError as e:
+            print(e)
+            raise e
+
+    def get_collections(self):
+        try:
+            collections = self.cfg['collections']
+            return {sec: collections[sec] for sec in collections}
         except IndexError as e:
             print(e)
             raise e
