@@ -68,12 +68,13 @@ class LoadButtonDecks:
             collection.hide_all_grids()
             collection.show_root()
 
-class OperateBranchGrids:
 
+
+class OperateBranchGrids:
     def on_change_button_grid(self, report_to, current, target):
         logger.debug("Switch to the other branch from {} to  {} in {}".format(current, target, report_to))
         collection = getattr(__, report_to) # get the collection from register
-
+        collection.current = target
         collection.grids[current].hide()
         collection.grids[target].show()
 

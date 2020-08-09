@@ -29,6 +29,13 @@ class SignalBus:
         # super().__init__()
         self.recievers = {}
 
+    def register(self, _object, *events):
+        """Helper function to register whole object with all
+        the events"""
+        for event in events:
+            self.subscribe(event, _object)
+
+
     def subscribe(self, event_name, _object):
         callback_name = "on_" + event_name
 

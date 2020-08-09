@@ -1,0 +1,361 @@
+buttons:
+- click_count: 0
+  info: ''
+  name: -- Two dashes start a one-line comment.
+  value: -- Two dashes start a one-line comment.
+- click_count: 0
+  info: ''
+  name: "--[[\n     Adding two ['s and ]'s makes it a\n     multi-line comment.\n\
+    --]]"
+  value: "--[[\n     Adding two ['s and ]'s makes it a\n     multi-line comment.\n\
+    --]]"
+- click_count: 0
+  info: ''
+  name: num = 42
+  value: num = 42
+- click_count: 0
+  info: ''
+  name: num = 42  -- All numbers are doubles.
+  value: num = 42  -- All numbers are doubles.
+- click_count: 0
+  info: ''
+  name: s = 'walternate'
+  value: s = 'walternate'
+- click_count: 0
+  info: ''
+  name: t = "double-quotes are also fine"
+  value: t = "double-quotes are also fine"
+- click_count: 0
+  info: ''
+  name: "u = [[ Double brackets\n       start and end\n       multi-line strings.]]"
+  value: "u = [[ Double brackets\n       start and end\n       multi-line strings.]]"
+- click_count: 0
+  info: ''
+  name: nil
+  value: nil
+- click_count: 0
+  info: ''
+  name: t = nil  -- Undefines t; Lua has garbage collection.
+  value: t = nil  -- Undefines t; Lua has garbage collection.
+- click_count: 0
+  info: ''
+  name: "-- Blocks are denoted with keywords like do/end:\nwhile num < 50 do\n  num\
+    \ = num + 1  -- No ++ or += type operators.\nend"
+  value: "-- Blocks are denoted with keywords like do/end:\nwhile num < 50 do\n  num\
+    \ = num + 1  -- No ++ or += type operators.\nend"
+- click_count: 0
+  info: ''
+  name: "-- If clauses:\nif num > 40 then\n  print('over 40')\nelseif s ~= 'walternate'\
+    \ then  -- ~= is not equals.\n  -- Equality check is == like Python; ok for strs.\n\
+    \  io.write('not over 40\\n')  -- Defaults to stdout.\nelse\n  -- Variables are\
+    \ global by default.\n  thisIsGlobal = 5  -- Camel case is common.\n\n  -- How\
+    \ to make a variable local:\n  local line = io.read()  -- Reads next stdin line.\n\
+    \n  -- String concatenation uses the .. operator:\n  print('Winter is coming,\
+    \ ' .. line)\nend"
+  value: "-- If clauses:\nif num > 40 then\n  print('over 40')\nelseif s ~= 'walternate'\
+    \ then  -- ~= is not equals.\n  -- Equality check is == like Python; ok for strs.\n\
+    \  io.write('not over 40\\n')  -- Defaults to stdout.\nelse\n  -- Variables are\
+    \ global by default.\n  thisIsGlobal = 5  -- Camel case is common.\n\n  -- How\
+    \ to make a variable local:\n  local line = io.read()  -- Reads next stdin line.\n\
+    \n  -- String concatenation uses the .. operator:\n  print('Winter is coming,\
+    \ ' .. line)\nend"
+- click_count: 0
+  info: ''
+  name: "-- Variables are global by default.\n  thisIsGlobal = 5  -- Camel case is\
+    \ common."
+  value: "-- Variables are global by default.\n  thisIsGlobal = 5  -- Camel case is\
+    \ common."
+- click_count: 0
+  info: ''
+  name: print('over 40')
+  value: print('over 40')
+- click_count: 0
+  info: ''
+  name: local line = io.read()
+  value: local line = io.read()
+- click_count: 0
+  info: ''
+  name: io.read()
+  value: io.read()
+- click_count: 0
+  info: ''
+  name: io.write('not over 40\n')
+  value: io.write('not over 40\n')
+- click_count: 0
+  info: ''
+  name: 'false'
+  value: 'false'
+- click_count: 0
+  info: ''
+  name: if not aBoolValue then print('twas false') end
+  value: if not aBoolValue then print('twas false') end
+- click_count: 0
+  info: ''
+  name: 'ans = aBoolValue and ''yes'' or ''no''  --> ''no''
+
+    '
+  value: 'ans = aBoolValue and ''yes'' or ''no''  --> ''no''
+
+    '
+- click_count: 0
+  info: ''
+  name: "karlSum = 0\nfor i = 1, 100 do  -- The range includes both ends.\n  karlSum\
+    \ = karlSum + i\nend"
+  value: "karlSum = 0\nfor i = 1, 100 do  -- The range includes both ends.\n  karlSum\
+    \ = karlSum + i\nend"
+- click_count: 0
+  info: ''
+  name: for j = 100, 1, -1 do fredSum = fredSum + j end
+  value: for j = 100, 1, -1 do fredSum = fredSum + j end
+- click_count: 0
+  info: ''
+  name: "repeat\n  print('the way of the future')\n  num = num - 1\nuntil num == 0"
+  value: "repeat\n  print('the way of the future')\n  num = num - 1\nuntil num ==\
+    \ 0"
+- click_count: 0
+  info: ''
+  name: "function fib(n)\n  if n < 2 then return 1 end\n  return fib(n - 2) + fib(n\
+    \ - 1)\nend"
+  value: "function fib(n)\n  if n < 2 then return 1 end\n  return fib(n - 2) + fib(n\
+    \ - 1)\nend"
+- click_count: 0
+  info: ''
+  name: x, y, z = 1, 2, 3, 4
+  value: x, y, z = 1, 2, 3, 4
+- click_count: 0
+  info: ''
+  name: "function bar(a, b, c)\n  print(a, b, c)\n  return 4, 8, 15, 16, 23, 42\n\
+    end"
+  value: "function bar(a, b, c)\n  print(a, b, c)\n  return 4, 8, 15, 16, 23, 42\n\
+    end"
+- click_count: 0
+  info: ''
+  name: x, y = bar('zaphod')
+  value: x, y = bar('zaphod')
+- click_count: 0
+  info: ''
+  name: f = function (x) return x * x end
+  value: f = function (x) return x * x end
+- click_count: 0
+  info: ''
+  name: local function g(x) return math.sin(x) end
+  value: local function g(x) return math.sin(x) end
+- click_count: 0
+  info: ''
+  name: print 'hello'  -- Works fine.
+  value: print 'hello'  -- Works fine.
+- click_count: 0
+  info: ''
+  name: '-- Dict literals have string keys by default:
+
+    t = {key1 = ''value1'', key2 = false}'
+  value: '-- Dict literals have string keys by default:
+
+    t = {key1 = ''value1'', key2 = false}'
+- click_count: 0
+  info: ''
+  name: t.newKey = {}  -- Adds a new key/value pair.
+  value: t.newKey = {}  -- Adds a new key/value pair.
+- click_count: 0
+  info: ''
+  name: t.key2 = nil   -- Removes key2 from the table.
+  value: t.key2 = nil   -- Removes key2 from the table.
+- click_count: 0
+  info: ''
+  name: '-- Literal notation for any (non-nil) value as key:
+
+    u = {[''@!#''] = ''qbert'', [{}] = 1729, [6.28] = ''tau''}
+
+    print(u[6.28])  -- prints "tau"'
+  value: '-- Literal notation for any (non-nil) value as key:
+
+    u = {[''@!#''] = ''qbert'', [{}] = 1729, [6.28] = ''tau''}
+
+    print(u[6.28])  -- prints "tau"'
+- click_count: 0
+  info: ''
+  name: "for key, val in pairs(u) do  -- Table iteration.\n  print(key, val)\nend"
+  value: "for key, val in pairs(u) do  -- Table iteration.\n  print(key, val)\nend"
+- click_count: 0
+  info: ''
+  name: '-- _G is a special table of all globals.
+
+    print(_G[''_G''] == _G)  -- Prints ''true''.'
+  value: '-- _G is a special table of all globals.
+
+    print(_G[''_G''] == _G)  -- Prints ''true''.'
+- click_count: 0
+  info: ''
+  name: '-- List literals implicitly set up int keys:
+
+    v = {''value1'', ''value2'', 1.21, ''gigawatts''}'
+  value: '-- List literals implicitly set up int keys:
+
+    v = {''value1'', ''value2'', 1.21, ''gigawatts''}'
+- click_count: 0
+  info: ''
+  name: "for i = 1, #v do  -- #v is the size of v for lists.\n  print(v[i])  -- Indices\
+    \ start at 1 !! SO CRAZY!\nend"
+  value: "for i = 1, #v do  -- #v is the size of v for lists.\n  print(v[i])  -- Indices\
+    \ start at 1 !! SO CRAZY!\nend"
+- click_count: 0
+  info: ''
+  name: "f1 = {a = 1, b = 2}  -- Represents the fraction a/b.\nf2 = {a = 2, b = 3}\n\
+    \n-- This would fail:\n-- s = f1 + f2\n\nmetafraction = {}\nfunction metafraction.__add(f1,\
+    \ f2)\n  sum = {}\n  sum.b = f1.b * f2.b\n  sum.a = f1.a * f2.b + f2.a * f1.b\n\
+    \  return sum\nend\n\nsetmetatable(f1, metafraction)\nsetmetatable(f2, metafraction)"
+  value: "f1 = {a = 1, b = 2}  -- Represents the fraction a/b.\nf2 = {a = 2, b = 3}\n\
+    \n-- This would fail:\n-- s = f1 + f2\n\nmetafraction = {}\nfunction metafraction.__add(f1,\
+    \ f2)\n  sum = {}\n  sum.b = f1.b * f2.b\n  sum.a = f1.a * f2.b + f2.a * f1.b\n\
+    \  return sum\nend\n\nsetmetatable(f1, metafraction)\nsetmetatable(f2, metafraction)"
+- click_count: 0
+  info: ''
+  name: '-- An __index on a metatable overloads dot lookups:
+
+    defaultFavs = {animal = ''gru'', food = ''donuts''}
+
+    myFavs = {food = ''pizza''}
+
+    setmetatable(myFavs, {__index = defaultFavs})'
+  value: '-- An __index on a metatable overloads dot lookups:
+
+    defaultFavs = {animal = ''gru'', food = ''donuts''}
+
+    myFavs = {food = ''pizza''}
+
+    setmetatable(myFavs, {__index = defaultFavs})'
+- click_count: 0
+  info: ''
+  name: '-- __add(a, b)                     for a + b
+
+    -- __sub(a, b)                     for a - b
+
+    -- __mul(a, b)                     for a * b
+
+    -- __div(a, b)                     for a / b
+
+    -- __mod(a, b)                     for a % b
+
+    -- __pow(a, b)                     for a ^ b
+
+    -- __unm(a)                        for -a
+
+    -- __concat(a, b)                  for a .. b
+
+    -- __len(a)                        for #a
+
+    -- __eq(a, b)                      for a == b
+
+    -- __lt(a, b)                      for a < b
+
+    -- __le(a, b)                      for a <= b
+
+    -- __index(a, b)  <fn or a table>  for a.b
+
+    -- __newindex(a, b, c)             for a.b = c
+
+    -- __call(a, ...)                  for a(...)'
+  value: '-- __add(a, b)                     for a + b
+
+    -- __sub(a, b)                     for a - b
+
+    -- __mul(a, b)                     for a * b
+
+    -- __div(a, b)                     for a / b
+
+    -- __mod(a, b)                     for a % b
+
+    -- __pow(a, b)                     for a ^ b
+
+    -- __unm(a)                        for -a
+
+    -- __concat(a, b)                  for a .. b
+
+    -- __len(a)                        for #a
+
+    -- __eq(a, b)                      for a == b
+
+    -- __lt(a, b)                      for a < b
+
+    -- __le(a, b)                      for a <= b
+
+    -- __index(a, b)  <fn or a table>  for a.b
+
+    -- __newindex(a, b, c)             for a.b = c
+
+    -- __call(a, ...)                  for a(...)'
+- click_count: 0
+  info: ''
+  name: "Dog = {}                                   -- 1.\n\nfunction Dog:new()  \
+    \                       -- 2.\n  newObj = {sound = 'woof'}                -- 3.\n\
+    \  self.__index = self                      -- 4.\n  return setmetatable(newObj,\
+    \ self)        -- 5.\nend\n\nfunction Dog:makeSound()                   -- 6.\n\
+    \  print('I say ' .. self.sound)\nend\n\nmrDog = Dog:new()                   \
+    \       -- 7.\nmrDog:makeSound()  -- 'I say woof'         -- 8."
+  value: "Dog = {}                                   -- 1.\n\nfunction Dog:new() \
+    \                        -- 2.\n  newObj = {sound = 'woof'}                --\
+    \ 3.\n  self.__index = self                      -- 4.\n  return setmetatable(newObj,\
+    \ self)        -- 5.\nend\n\nfunction Dog:makeSound()                   -- 6.\n\
+    \  print('I say ' .. self.sound)\nend\n\nmrDog = Dog:new()                   \
+    \       -- 7.\nmrDog:makeSound()  -- 'I say woof'         -- 8."
+- click_count: 0
+  info: ''
+  name: "LoudDog = Dog:new()                           -- 1.\n\nfunction LoudDog:makeSound()\n\
+    \  s = self.sound .. ' '                       -- 2.\n  print(s .. s .. s)\nend\n\
+    \nseymour = LoudDog:new()                       -- 3.\nseymour:makeSound()  --\
+    \ 'woof woof woof'      -- 4."
+  value: "LoudDog = Dog:new()                           -- 1.\n\nfunction LoudDog:makeSound()\n\
+    \  s = self.sound .. ' '                       -- 2.\n  print(s .. s .. s)\nend\n\
+    \nseymour = LoudDog:new()                       -- 3.\nseymour:makeSound()  --\
+    \ 'woof woof woof'      -- 4."
+- click_count: 0
+  info: ''
+  name: "-- If needed, a subclass's new() is like the base's:\nfunction LoudDog:new()\n\
+    \  newObj = {}\n  -- set up newObj\n  self.__index = self\n  return setmetatable(newObj,\
+    \ self)\nend\n"
+  value: "-- If needed, a subclass's new() is like the base's:\nfunction LoudDog:new()\n\
+    \  newObj = {}\n  -- set up newObj\n  self.__index = self\n  return setmetatable(newObj,\
+    \ self)\nend\n"
+- click_count: 0
+  info: ''
+  name: "-- Suppose the file mod.lua looks like this:\nlocal M = {}\n\nlocal function\
+    \ sayMyName()\n  print('Hrunkner')\nend\n\nfunction M.sayHello()\n  print('Why\
+    \ hello there')\n  sayMyName()\nend\n\nreturn M"
+  value: "-- Suppose the file mod.lua looks like this:\nlocal M = {}\n\nlocal function\
+    \ sayMyName()\n  print('Hrunkner')\nend\n\nfunction M.sayHello()\n  print('Why\
+    \ hello there')\n  sayMyName()\nend\n\nreturn M"
+- click_count: 0
+  info: ''
+  name: '-- Another file can use mod.lua''s functionality:
+
+    local mod = require(''mod'')  -- Run the file mod.lua.
+
+    '
+  value: '-- Another file can use mod.lua''s functionality:
+
+    local mod = require(''mod'')  -- Run the file mod.lua.
+
+    '
+- click_count: 0
+  info: ''
+  name: local a = require('mod2')  -- Prints Hi!
+  value: local a = require('mod2')  -- Prints Hi!
+- click_count: 0
+  info: ''
+  name: dofile('mod2.lua')  --> Hi!
+  value: dofile('mod2.lua')  --> Hi!
+- click_count: 0
+  info: ''
+  name: f = loadfile('mod2.lua')  -- Call f() to run it.
+  value: f = loadfile('mod2.lua')  -- Call f() to run it.
+- click_count: 0
+  info: ''
+  name: CS50's Introduction to Game Development
+  value: CS50's Introduction to Game Development
+- click_count: 0
+  info: ''
+  name: "CS50\u2019s\nIntroduction to Game Development"
+  value: "CS50\u2019s\nIntroduction to Game Development"
+info:
+- name: Lua
+- category: languages

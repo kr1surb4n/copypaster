@@ -3,6 +3,7 @@ buttons:
   info: ''
   name: shebang
   value: '#!/usr/bin/env python3'
+  tag: env
 - click_count: 0
   info: ''
   name: shebang with encoding
@@ -11,6 +12,7 @@ buttons:
     # -*- coding: utf-8 -*-
 
     '
+  tag: env
 - click_count: 0
   info: ''
   name: encoding

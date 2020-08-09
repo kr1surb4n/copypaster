@@ -17,6 +17,7 @@ class YamlFile:
 
     def save(self, data, path):
         """Save file"""
+        logger.debug("Saving file {}".format(path))
         with open(path, 'w') as f:
             f.write(yaml.dump(data))
 

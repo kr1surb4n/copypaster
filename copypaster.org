@@ -145,7 +145,7 @@ save them under and object `t`, in file all_strings.py
 
 * write tests for every file
 ** DONE signal_bus
-** register
+** DONE register
 ** app.css
 ** __init__
 ** file_loader

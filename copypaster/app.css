@@ -17,3 +17,17 @@ button label {
     background: #999999;
     color: #333333;
 }
+
+
+/* button collors */
+.env {
+    background: #c603fc;
+}
+
+.buildins {
+    background: #03c2fc;
+}
+
+.gelb {
+    background: #fce303;
+}

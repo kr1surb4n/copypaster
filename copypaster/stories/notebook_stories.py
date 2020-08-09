@@ -12,10 +12,12 @@ class NotebookStories:
 
     def on_save_notebook(self):
         # TODO: move this to FileCabinet
-        cabinet = __['FileCabinet']
+        cabinet = __.FileCabinet
         cabinet.pages[cabinet.get_current_page()].save_deck()
 
     def on_save_notebook_as(self):
+        pass
+        """
         dialog = Gtk.FileChooserDialog(         # TODO: move this to FileCabinet
             'Save button deck', self.win,
             Gtk.FileChooserAction.SAVE,
@@ -35,36 +37,17 @@ class NotebookStories:
             except Exception as e:
                 logger.error("There was an exception {}".format(e))
         dialog.destroy()
-
-    def on_start_app(self):
-        """Here we load dirty notes (first) and then the rest of the
-        notes.
-
-        On event: start_app
         """
-        logger.debug("LoadButtonDecks is run")
-
-        cabinet = __['FileCabinet']
-        self.load_dirty_notes(cabinet)
-        self.load_notes(cabinet)
-        self.load_collections(cabinet)
-
-        cabinet.show_all()  # redraw everything
-
-    def load_dirty_notes(self, cabinet):
-        logger.debug('Loading Dirty Notes')
-        name, deck_file = __['Config'].get_dirty_deck()
-
-        dirty_notes = ButtonGrid(deck_file)
-
-        # we need to add those objects to Register
-        __['DirtyNotes'] = dirty_notes
-        __['Dirty'] = dirty_notes.button_deck
-
-        cabinet.add_page(name, dirty_notes)
 
 
-signal_bus.subscribe('new_notebook', LoadButtonDecks())
-signal_bus.subscribe('open_notebook', LoadButtonDecks())
-signal_bus.subscribe('save_notebook', LoadButtonDecks())
-signal_bus.subscribe('save_notebook_AS', LoadButtonDecks())
+notebook_stories = NotebookStories()
+
+# stories:
+new_notebook = "new_notebook"
+open_notebook = "open_notebook"
+save_notebook = "save_notebook"
+save_notebook_as = "save_notebook_as"
+
+signal_bus.register(
+    notebook_stories, new_notebook, open_notebook, save_notebook, save_notebook_as
+)

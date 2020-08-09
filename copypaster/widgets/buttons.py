@@ -33,7 +33,11 @@ class CopyButton(Gtk.Button):
         self.value = kwargs.get('value', None)
         self.click_count = kwargs.get('click_count', 0)
         self.tooltip_text = kwargs.get('info', "")
+        self.tag = kwargs.get('tag', 'normal')
 
+        if 'tag' in kwargs:
+            del kwargs['tag']
+       
         assert self.value is not None, "There is no value for {}".format(
             self.name)
 
@@ -57,6 +61,9 @@ class CopyButton(Gtk.Button):
 
         kwargs['label'] = self.style_label()
         super(CopyButton, self).__init__(*args, **kwargs)
+
+        button_context = self.get_style_context()
+        button_context.add_class(self.tag)
 
         # set the name of the thing
         self.set_tooltip_text(self.name)
@@ -106,7 +113,7 @@ class NavigateButton(Gtk.Button):
         del kwargs['target']
 
         super(NavigateButton, self).__init__(*args, **kwargs)
-        self.set_name = 'nested-navigation'
+        self.set_name = 'nested-navigation'   # TODO: styles should be moved to another class
         button_context = self.get_style_context()
         button_context.add_class("nested-navigation")
 

@@ -1,4 +1,4 @@
-from copypaster.register import Register as __,  register_instance
+from copypaster.register import Register as __, register_instance
 from copypaster.signal_bus import signal_bus
 from copypaster.file_loader import Deck, DeckCollection, NavigationDeck
 from copypaster.widgets.utility import wrap
@@ -6,14 +6,15 @@ from copypaster.widgets.buttons import NavigateButton
 
 
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
 
 class ButtonGrid(Gtk.FlowBox):
     "Main area of user interface content."
 
-    def __init__(self, deck = None):
+    def __init__(self, deck=None):
         Gtk.FlowBox.__init__(self)
 
         self.button_deck = deck
@@ -29,15 +30,17 @@ class ButtonGrid(Gtk.FlowBox):
         for button in self.button_deck.get_buttons():
             self.add(button)
 
-
     def save_deck(self):
         self.button_deck.save_buttons()
-
 
 
 class ButtonCollection(Gtk.Stack):
     "Object representing whole tree walking device"
 
+    @property
+    def button_deck(self):
+        """I'm the 'button_deck' property."""
+        return self.grids[self.current].button_deck
 
     def __init__(self, collection_name, collection_file):
         Gtk.Stack.__init__(self)
@@ -48,6 +51,8 @@ class ButtonCollection(Gtk.Stack):
         # zbuduj gridsy
         self.grids = {name: ButtonGrid() for name, _ in self.collection.branches()}
 
+        # we agree that the "root" is the current selected grid of buttons
+        self.current = "root"
 
         # can this I do in DeckCollection or here, where I
         # can operate on instance of a DeckCollection?
@@ -65,11 +70,9 @@ class ButtonCollection(Gtk.Stack):
             I should send a fucking message. Not do everything alone.
             """
 
-            if name == "root": # we will build navigation deck
+            if name == "root":  # we will build navigation deck
 
-                current.button_deck = NavigationDeck(name,
-                                    collection_name,
-                                    link_names)
+                current.button_deck = NavigationDeck(name, collection_name, link_names)
                 current.init_buttons()
                 current.hide()
                 continue
@@ -80,20 +83,19 @@ class ButtonCollection(Gtk.Stack):
 
             # like a back button...
             branch_deck.one_up_button = NavigateButton(
-                label="..",
-                report_to=collection_name,
-                current=name,
-                target=parent_name
+                label="..", report_to=collection_name, current=name, target=parent_name
             )
 
             # or buttons to other stuff..
-            branch_deck.links_buttons = [NavigateButton(# is what we will display
-                        label=target_name,
-                        report_to=collection_name,
-                        current=name,
-                        target=target_name) # we take button grid
-                     for target_name in link_names]
-
+            branch_deck.links_buttons = [
+                NavigateButton(  # is what we will display
+                    label=target_name,
+                    report_to=collection_name,
+                    current=name,
+                    target=target_name,
+                )  # we take button grid
+                for target_name in link_names
+            ]
 
             # then add the branch_deck to current grid object
             # and initialize buttons
@@ -104,12 +106,8 @@ class ButtonCollection(Gtk.Stack):
         # we must add all grids
         [self.add_named(grid, name) for name, grid in self.grids.items()]
         [grid.hide() for _, grid in self.grids.items()]
-       
-        self.grids["root"].show()
-        print(self.grids.keys())
 
-    def save_deck(self):  #TODO make stuff for this to work
-        self.button_deck.save_buttons()
+        self.grids["root"].show()
 
     def hide_all_grids(self):
         [grid.hide() for _, grid in self.grids.items()]
