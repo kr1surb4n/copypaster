@@ -43,10 +43,13 @@ buttons:
     value: +x
   - name: abs(x)
     value: abs(x)
+    tag: env    
   - name: abs()
     value: abs()
+    tag: env 
   - name: int(x)
     value: int(x)
+    tag: env 
   - name: int()
     value: int()
   - name: float(x)

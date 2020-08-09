@@ -87,11 +87,11 @@ class AppCallbacks:
         logger.debug("Emitting open_notebook...")
         signal_bus.emit('open_notebook')
 
-    def save_notebook(self, action):
+    def save_notebook(self, action, asd):
         logger.debug("Emitting save_notebook...")
         signal_bus.emit('save_notebook')
 
-    def save_notebook_as(self, action):
+    def save_notebook_as(self, action, asd):
         logger.debug("Emitting save_notebook_as...")
 
     def handle_quit(self, action, parameter):

@@ -54,7 +54,7 @@ lint: ## check style with flake8
 	flake8 copypaster tests
 
 run:
-	copypaster
+	copypaster > last_run.log 2>&1 &
 
 test: ## run tests quickly with the default Python
 	pytest
