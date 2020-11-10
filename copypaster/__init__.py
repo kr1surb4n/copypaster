@@ -2,6 +2,7 @@
 
 """Top-level package for Copypaster."""
 
+# Hello!
 __author__ = """Przemek Kot"""
 __email__ = 'kris@whereibend.space'
 __version__ = '0.1.0'
@@ -9,16 +10,19 @@ __version__ = '0.1.0'
 import logging
 import os
 
+# usefull paths
 CURRENT_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
-logger = logging.getLogger('CopyPaster')
-logger.setLevel(logging.DEBUG)
+# initialize logger
+# TODO change name to 'log'
+log = logging.getLogger('CopyPaster')
+log.setLevel(logging.DEBUG)
 
 ch = logging.StreamHandler()
 ch.setLevel(logging.DEBUG)
 
-logger.addHandler(ch)
+log.addHandler(ch)
 
 
 class State(dict):

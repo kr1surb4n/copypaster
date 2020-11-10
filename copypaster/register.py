@@ -1,7 +1,5 @@
 import functools
 
-# Sachen - to rzeczy, ale
-# ale jebac obce języki
 class Rzeczy:
     """Here I keep the names of the things I use in the app.
     Names will be used later to make stuff nicer.

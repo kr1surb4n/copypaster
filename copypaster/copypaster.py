@@ -3,7 +3,7 @@ import sys
 import os
 import configparser
 
-from copypaster import PROJECT_DIR, State, logger
+from copypaster import PROJECT_DIR, State, log
 from copypaster.register import Register, register_instance
 from copypaster.widgets import Application
 
@@ -16,7 +16,7 @@ class Config:
     cfg = None
 
     def __init__(self, config_file=None):
-        logger.debug("Initializing config...")
+        log.debug("Initializing config...")
         config_env = os.environ.get('COPYPASTER_CONFIG', None)
 
         if config_env is not None:
@@ -31,25 +31,25 @@ class Config:
         try:
             main = self.cfg['main']
             return 'Dirty', main['dirty_deck']
-        except IndexError as e:
-            print(e)
-            raise e
+        except IndexError as _e:
+            print(_e)
+            raise _e
 
     def get_decks(self):
         try:
-            decks = self.cfg['decks']
-            return {sec: decks[sec] for sec in decks}
-        except IndexError as e:
-            print(e)
-            raise e
+            filepaths = self.cfg['decks']
+            return {deck_name: filepaths[deck_name] for deck_name in filepaths}
+        except IndexError as _e:  # watch out! snakes
+            print(_e)
+            raise _e
 
     def get_collections(self):
         try:
-            collections = self.cfg['collections']
-            return {sec: collections[sec] for sec in collections}
-        except IndexError as e:
-            print(e)
-            raise e
+            filepaths = self.cfg['collections']
+            return {collection_name: filepaths[collection_name] for collection_name in filepaths}
+        except IndexError as _e:  # well, it's python. what did you exepect?
+            print(_e)
+            raise _e
 
 
 def main_function(config):
@@ -60,9 +60,9 @@ def main_function(config):
 
     app = Application()
 
-    logger.debug("Importing stories...")
+    log.debug("Importing stories...")
     import copypaster.stories
 
     exit_status = app.run(sys.argv)
-    logger.debug("Returning exit status value...")
+    log.debug("Returning exit status value...")
     return exit_status

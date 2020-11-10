@@ -1,4 +1,4 @@
-from copypaster import logger, State, AppState
+from copypaster import log, State, AppState
 from copypaster.signal_bus import signal_bus
 import hashlib
 from copypaster.register import Register as __
@@ -81,21 +81,23 @@ class CopyButton(Gtk.Button):
         return name
 
     def on_button_click(self, button):
-        logger.debug("Handling the button press...")
+        log.debug("Handling the button press...")
         state = AppState['app']
 
         if state == State.REMOVE:
-            logger.debug("Removing button...")
+            log.debug("Removing button...")
             signal_bus.emit('remove_button', self)
 
         if state in [State.NORMAL, State.AUTOSAVE]:
-            logger.debug("Coping value...")
+            log.debug("Coping value...")
             self.click_count += 1
             signal_bus.emit('copy', button.value)
 
         if state == State.EDIT:
-            logger.debug("Editing button...")
+            log.debug("Editing button...")
             signal_bus.emit('edit_button', self)
+
+
 
 
 class NavigateButton(Gtk.Button):
@@ -120,7 +122,7 @@ class NavigateButton(Gtk.Button):
         self.connect('clicked', self.on_button_click)
 
     def on_button_click(self, button):
-        logger.debug("Navigating...")
+        log.debug("Navigating...")
 
         "The whole secret to navigation is that nothing moves. \
         All is static, but we show and hide stuff"
@@ -142,9 +144,9 @@ class PasteButton(Gtk.Button):
         self.connect('clicked', self.on_button_click)
 
     def on_button_click(self, button):
-        logger.debug(
+        log.debug(
             "Clicked button: {} and copied value".format(button.value))
 
-        contents = __.Jimmy.recieve()
+        contents = __.Jimmy.receive()
         if contents:
             __.Jimmy.send(button.value)

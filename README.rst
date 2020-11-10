@@ -44,7 +44,7 @@ Features
 * Add, Edit, Remove - options for adding new fonts
 * YAML format sets of code snippets.
 * TODO Images on buttons
-* TODO Nested structure of buttons
+* Nested structure of buttons
 
 Credits
 -------

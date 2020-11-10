@@ -1,21 +1,21 @@
 from copypaster.register import Register as __
-from copypaster import logger
+from copypaster import log
 from copypaster.signal_bus import signal_bus
 
 
 class NotebookStories:
-    def on_new_notebook(self):
+    def new_notebook(self):
         pass
 
-    def on_open_notebook(self):
+    def open_notebook(self):
         pass
 
-    def on_save_notebook(self):
+    def save_notebook(self):
         # TODO: move this to FileCabinet
         cabinet = __.FileCabinet
-        cabinet.pages[cabinet.get_current_page()].save_deck()
+        cabinet.pages[cabinet.get_current_page()].save_grid()
 
-    def on_save_notebook_as(self):
+    def save_notebook_as(self):
         pass
         """
         dialog = Gtk.FileChooserDialog(         # TODO: move this to FileCabinet
@@ -35,7 +35,7 @@ class NotebookStories:
                 current_deck.button_deck.path = filename
                 current_deck.button_deck.save_buttons()
             except Exception as e:
-                logger.error("There was an exception {}".format(e))
+                log.error("There was an exception {}".format(e))
         dialog.destroy()
         """
 

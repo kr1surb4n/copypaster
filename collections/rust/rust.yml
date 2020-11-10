@@ -1,0 +1,28 @@
+meta:
+   root_url: /home/red/workshops/tools/copypaster/copypaster/collections/rust
+decks:
+   types:
+       name: "Types"
+       url: /types/types.yml
+   structs:
+       name: "Structs"
+       url: /types/structs.yml
+   cargo:
+       name: "Cargo"
+       url: /cargo.yml
+   functions:
+       name: "Functions"
+       url: /functions.yml
+   controll:
+       name: "Python Types"
+       url: /controll.yml
+   syntax:
+       name: "Syntax"
+       url: /syntax.yml
+tree:
+    cargo:
+    types:
+        structs:
+    functions:
+    controll:
+    syntax:

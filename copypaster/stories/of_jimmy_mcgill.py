@@ -3,7 +3,7 @@ from copypaster.signal_bus import signal_bus
 
 
 class HowToCopyAMessage:
-    def on_copy(self, message):
+    def copy(self, message):
         __.Jimmy.send(message)
 
 

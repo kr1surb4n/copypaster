@@ -1,214 +1,206 @@
-!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
-!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-.DEFAULT_GOAL	Makefile	/^.DEFAULT_GOAL := help$/;"	m
-AUTOSAVE	copypaster/__init__.py	/^AUTOSAVE = 'AUTOSAVE'$/;"	v
-AnAction	copypaster/widgets/utility.py	/^class AnAction (Gio.SimpleAction):$/;"	c
-AppCallbacks	copypaster/widgets/__init__.py	/^class AppCallbacks:$/;"	c
-Application	copypaster/widgets/__init__.py	/^class Application(AppCallbacks, Gtk.Application):$/;"	c
-BROWSER	Makefile	/^BROWSER := python -c "$$BROWSER_PYSCRIPT"$/;"	m
-BROWSER_PYSCRIPT	Makefile	/^define BROWSER_PYSCRIPT$/;"	m
-BUILDDIR	docs/Makefile	/^BUILDDIR      = _build$/;"	m
-BUILDDIR	docs/make.bat	/^set BUILDDIR=_build$/;"	v
-BackButton	copypaster/widgets/buttons.py	/^class BackButton(Gtk.Button):$/;"	c
-ButtonGrid	copypaster/widgets/notebooks.py	/^class ButtonGrid(Gtk.FlowBox):$/;"	c
-CONTEXT	copypaster/widgets/__init__.py	/^CONTEXT = 'Button'$/;"	v
-CURRENT_DIR	copypaster/__init__.py	/^CURRENT_DIR = os.path.dirname(__file__)$/;"	v
-Config	copypaster/copypaster.py	/^class Config:$/;"	c
-CopyButton	copypaster/widgets/buttons.py	/^class CopyButton(Gtk.Button):$/;"	c
-Deck	copypaster/file_loader.py	/^class Deck:$/;"	c
-DialogEdit	copypaster/widgets/dialogs.py	/^class DialogEdit(Gtk.Dialog):$/;"	c
-DialogError	copypaster/widgets/dialogs.py	/^class DialogError(Gtk.Dialog):$/;"	c
-Dirty	copypaster/file_loader.py	/^class Dirty(Deck):$/;"	c
-DirtyNotes	copypaster/widgets/notebooks.py	/^class DirtyNotes(Gtk.FlowBox):$/;"	c
-Dupa	tests/script.sh	/^Dupa=$1$/;"	v
-EDIT	copypaster/__init__.py	/^EDIT = 'EDIT'$/;"	v
-EntryWindow	tests/entry.py	/^class EntryWindow(Gtk.Window):$/;"	c
-FileCabinet	copypaster/widgets/notebooks.py	/^class FileCabinet(Gtk.Notebook):$/;"	c
-Jimmy	copypaster/clipboard.py	/^class Jimmy:$/;"	c
-MainFrame	copypaster/widgets/__init__.py	/^class MainFrame(Gtk.Grid):$/;"	c
-MainWindow	copypaster/widgets/__init__.py	/^class MainWindow(Gtk.ApplicationWindow):$/;"	c
-NORMAL	copypaster/__init__.py	/^NORMAL = 'NORMAL'$/;"	v
-NewNote	copypaster/widgets/notebooks.py	/^class NewNote(Gtk.Grid):$/;"	c
-PRINT_HELP_PYSCRIPT	Makefile	/^define PRINT_HELP_PYSCRIPT$/;"	m
-PROJECT_DIR	copypaster/__init__.py	/^PROJECT_DIR = os.path.dirname(CURRENT_DIR)$/;"	v
-PasteButton	copypaster/widgets/buttons.py	/^class PasteButton(Gtk.Button):$/;"	c
-REMOVE	copypaster/__init__.py	/^REMOVE = 'REMOVE'$/;"	v
-Register	copypaster/register.py	/^Register = dict()$/;"	v
-SOURCEDIR	docs/Makefile	/^SOURCEDIR     = .$/;"	m
-SOURCEDIR	docs/make.bat	/^set SOURCEDIR=.$/;"	v
-SPHINXBUILD	docs/Makefile	/^SPHINXBUILD   = python -msphinx$/;"	m
-SPHINXBUILD	docs/make.bat	/^	set SPHINXBUILD=python -msphinx$/;"	v
-SPHINXOPTS	docs/Makefile	/^SPHINXOPTS    =$/;"	m
-SPHINXPROJ	docs/Makefile	/^SPHINXPROJ    = copypaster$/;"	m
-SPHINXPROJ	docs/make.bat	/^set SPHINXPROJ=copypaster$/;"	v
-SearchDialog	tests/textview.py	/^class SearchDialog(Gtk.Dialog):$/;"	c
-State	copypaster/__init__.py	/^State = {}  # global application state$/;"	v
-StateButtons	copypaster/widgets/statebuttons.py	/^class StateButtons(StateButtonsCallbacks, Gtk.Box):$/;"	c
-StateButtonsCallbacks	copypaster/widgets/statebuttons.py	/^class StateButtonsCallbacks:$/;"	c
-StatusBar	copypaster/widgets/__init__.py	/^class StatusBar(Gtk.Statusbar):$/;"	c
-TextViewWindow	tests/textview.py	/^class TextViewWindow(Gtk.Window):$/;"	c
-ToolBar	copypaster/widgets/toolbar.py	/^class ToolBar(Gtk.Toolbar):$/;"	c
-_	copypaster/widgets/__init__.py	/^def _(s): return s$/;"	f
-__email__	copypaster/__init__.py	/^__email__ = 'kris@whereibend.space'$/;"	v
-__init__	copypaster/copypaster.py	/^    def __init__(self, config_file=None):$/;"	m	class:Config
-__init__	copypaster/file_loader.py	/^    def __init__(self):$/;"	m	class:Dirty
-__init__	copypaster/file_loader.py	/^    def __init__(self, deck_file):$/;"	m	class:Deck
-__init__	copypaster/widgets/__init__.py	/^    def __init__(self):$/;"	m	class:Application
-__init__	copypaster/widgets/__init__.py	/^    def __init__(self):$/;"	m	class:MainFrame
-__init__	copypaster/widgets/__init__.py	/^    def __init__(self):$/;"	m	class:StatusBar
-__init__	copypaster/widgets/__init__.py	/^    def __init__(self, app):$/;"	m	class:MainWindow
-__init__	copypaster/widgets/buttons.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:CopyButton
-__init__	copypaster/widgets/buttons.py	/^    def __init__(self, *args, **kwargs):$/;"	m	class:PasteButton
-__init__	copypaster/widgets/dialogs.py	/^    def __init__(self, parent, button_to_edit):  # lol$/;"	m	class:DialogEdit
-__init__	copypaster/widgets/dialogs.py	/^    def __init__(self, parent, massage):  # lol$/;"	m	class:DialogError
-__init__	copypaster/widgets/notebooks.py	/^    def __init__(self):$/;"	m	class:DirtyNotes
-__init__	copypaster/widgets/notebooks.py	/^    def __init__(self):$/;"	m	class:FileCabinet
-__init__	copypaster/widgets/notebooks.py	/^    def __init__(self):$/;"	m	class:NewNote
-__init__	copypaster/widgets/notebooks.py	/^    def __init__(self, deck_file):$/;"	m	class:ButtonGrid
-__init__	copypaster/widgets/statebuttons.py	/^    def __init__(self, app_state):$/;"	m	class:StateButtons
-__init__	copypaster/widgets/toolbar.py	/^    def __init__(self, reg):$/;"	m	class:ToolBar
-__init__	tests/asd.py	/^    def __init__(self):$/;"	f
-__init__	tests/entry.py	/^    def __init__(self):$/;"	m	class:EntryWindow
-__init__	tests/textview.py	/^    def __init__(self):$/;"	m	class:TextViewWindow
-__init__	tests/textview.py	/^    def __init__(self, parent):$/;"	m	class:SearchDialog
-__version__	copypaster/__init__.py	/^__version__ = '0.1.0'$/;"	v
-_create_button	copypaster/widgets/statebuttons.py	/^    def _create_button(self, name, callback, ind):$/;"	m	class:StateButtons
-_deactive_rest_buttons	copypaster/widgets/statebuttons.py	/^    def _deactive_rest_buttons(self, leave_alone):$/;"	m	class:StateButtonsCallbacks
-about_callback	copypaster/widgets/__init__.py	/^    def about_callback(self, action, parameter):$/;"	m	class:AppCallbacks
-add_button	copypaster/file_loader.py	/^    def add_button(self, **kwargs):$/;"	m	class:Deck
-add_button	copypaster/widgets/notebooks.py	/^    def add_button(self, name, value):$/;"	m	class:NewNote
-add_new_notebook	copypaster/widgets/__init__.py	/^    def add_new_notebook(self, action):$/;"	m	class:AppCallbacks
-add_page	copypaster/widgets/notebooks.py	/^    def add_page(self, title, _object):$/;"	m	class:FileCabinet
-author	docs/conf.py	/^author = u"Audrey Roy Greenfeld"$/;"	v
-author	setup.py	/^    author="Audrey Roy Greenfeld",$/;"	v
-author_email	setup.py	/^    author_email='audreyr@example.com',$/;"	v
-auto_clipboard	copypaster/widgets/statebuttons.py	/^    def auto_clipboard(self, clipboard, parameter):$/;"	m	class:StateButtonsCallbacks
-calculated_height	copypaster/widgets/__init__.py	/^    calculated_height = 0$/;"	v	class:MainWindow
-calculated_width	copypaster/widgets/__init__.py	/^    calculated_width = 0$/;"	v	class:MainWindow
-camel_case_split	copypaster/widgets/buttons.py	/^def camel_case_split(str):$/;"	f
-category	copypaster/file_loader.py	/^    def category(self):$/;"	m	class:Deck
-cfg	copypaster/copypaster.py	/^    cfg = None$/;"	v	class:Config
-ch	copypaster/__init__.py	/^ch = logging.StreamHandler()$/;"	v
-classifiers	setup.py	/^    classifiers=[$/;"	v
-clean_after	copypaster/widgets/notebooks.py	/^    def clean_after(self):$/;"	m	class:NewNote
-clean_clipboard	copypaster/clipboard.py	/^    def clean_clipboard(self):$/;"	m	class:Jimmy
-copyright	docs/conf.py	/^copyright = u"2019, Audrey Roy Greenfeld"$/;"	v
-countSubstrings	tests/code_notebook.py	/^def countSubstrings(s):$/;"	f
-countSubstringsUtil	tests/code_notebook.py	/^def countSubstringsUtil(s):$/;"	f
-count_substring_help	tests/code_notebook.py	/^def count_substring_help(s):$/;"	f
-create_buttons	tests/textview.py	/^    def create_buttons(self):$/;"	m	class:TextViewWindow
-create_textview	tests/textview.py	/^    def create_textview(self):$/;"	m	class:TextViewWindow
-create_toolbar	tests/textview.py	/^    def create_toolbar(self):$/;"	m	class:TextViewWindow
-default_config	copypaster/cli.py	/^default_config = os.path.join(PROJECT_DIR, "config\/example.conf")$/;"	v
-description	setup.py	/^    description="Python Boilerplate contains all the boilerplate you need to create a Python package.",$/;"	v
-do_activate	copypaster/widgets/__init__.py	/^    def do_activate(self):$/;"	m	class:Application
-do_pulse	tests/entry.py	/^    def do_pulse(self, user_data):$/;"	m	class:EntryWindow
-do_startup	copypaster/widgets/__init__.py	/^    def do_startup(self):$/;"	m	class:Application
-edit	copypaster/widgets/notebooks.py	/^    def edit(self, copy_button):$/;"	m	class:NewNote
-end	docs/make.bat	/^:end$/;"	l
-entry_points	setup.py	/^    entry_points={$/;"	v
-exclude_patterns	docs/conf.py	/^exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']$/;"	v
-extensions	docs/conf.py	/^extensions = ['sphinx.ext.autodoc', 'sphinx.ext.viewcode']$/;"	v
-getSequenceSum	tests/code_notebook.py	/^def getSequenceSum(i, j, k):$/;"	f
-get_buttons	copypaster/file_loader.py	/^    def get_buttons(self):$/;"	m	class:Deck
-get_decks	copypaster/copypaster.py	/^    def get_decks(self):$/;"	m	class:Config
-hash	copypaster/widgets/buttons.py	/^    def hash(self):$/;"	m	class:CopyButton
-help	docs/make.bat	/^:help$/;"	l
-history	setup.py	/^    history = history_file.read()$/;"	v
-html_static_path	docs/conf.py	/^html_static_path = ['_static']$/;"	v
-html_theme	docs/conf.py	/^html_theme = 'alabaster'$/;"	v
-htmlhelp_basename	docs/conf.py	/^htmlhelp_basename = 'copypasterdoc'$/;"	v
-include_package_data	setup.py	/^    include_package_data=True,$/;"	v
-init_buttons	copypaster/file_loader.py	/^    def init_buttons(self):$/;"	m	class:Deck
-init_toolbutton	copypaster/widgets/toolbar.py	/^    def init_toolbutton(self, stock, callback, pos):$/;"	m	class:ToolBar
-init_toolbutton	tests/asd.py	/^    def init_toolbutton(self, stock, action_name, pos):$/;"	f
-install_requires	setup.py	/^    install_requires=requirements,$/;"	v
-isVowel	tests/code_notebook.py	/^def isVowel(c):$/;"	f
-is_vowel	tests/code_notebook.py	/^def is_vowel(c):$/;"	f
-jimmy	copypaster/clipboard.py	/^jimmy = Jimmy()$/;"	v
-keywords	setup.py	/^    keywords='copypaster',$/;"	v
-language	docs/conf.py	/^language = None$/;"	v
-latex_documents	docs/conf.py	/^latex_documents = [$/;"	v
-latex_elements	docs/conf.py	/^latex_elements = {$/;"	v
-license	setup.py	/^    license="MIT license",$/;"	v
-load	copypaster/file_loader.py	/^    def load(self, path):$/;"	m	class:Deck
-logger	copypaster/__init__.py	/^logger = logging.getLogger('CopyPaster')$/;"	v
-long_description	setup.py	/^    long_description=readme + '\\n\\n' + history,$/;"	v
-main	copypaster/cli.py	/^def main(config):$/;"	f
-main_function	copypaster/copypaster.py	/^def main_function():$/;"	f
-man_pages	docs/conf.py	/^man_pages = [$/;"	v
-master_doc	docs/conf.py	/^master_doc = 'index'$/;"	v
-name	copypaster/file_loader.py	/^    def name(self):$/;"	m	class:Deck
-name	setup.py	/^    name='copypaster',$/;"	v
-new	copypaster/widgets/utility.py	/^    def new(cls, name, parameter_type=None, callback=None):$/;"	m	class:AnAction
-new_callback	copypaster/widgets/__init__.py	/^    def new_callback(self, action, parameter):$/;"	m	class:AppCallbacks
-on_autosave	copypaster/widgets/statebuttons.py	/^    def on_autosave(self, button, name):$/;"	m	class:StateButtonsCallbacks
-on_button_click	copypaster/widgets/buttons.py	/^    def on_button_click(self, button):$/;"	m	class:CopyButton
-on_button_click	copypaster/widgets/buttons.py	/^    def on_button_click(self, button):$/;"	m	class:PasteButton
-on_button_clicked	tests/textview.py	/^    def on_button_clicked(self, widget, tag):$/;"	m	class:TextViewWindow
-on_clear_clicked	tests/textview.py	/^    def on_clear_clicked(self, widget):$/;"	m	class:TextViewWindow
-on_cursor_toggled	tests/textview.py	/^    def on_cursor_toggled(self, widget):$/;"	m	class:TextViewWindow
-on_edit	copypaster/widgets/statebuttons.py	/^    def on_edit(self, button, name):$/;"	m	class:StateButtonsCallbacks
-on_editable_toggled	tests/entry.py	/^    def on_editable_toggled(self, button):$/;"	m	class:EntryWindow
-on_editable_toggled	tests/textview.py	/^    def on_editable_toggled(self, widget):$/;"	m	class:TextViewWindow
-on_icon_toggled	tests/entry.py	/^    def on_icon_toggled(self, button):$/;"	m	class:EntryWindow
-on_justify_toggled	tests/textview.py	/^    def on_justify_toggled(self, widget, justification):$/;"	m	class:TextViewWindow
-on_pulse_toggled	tests/entry.py	/^    def on_pulse_toggled(self, button):$/;"	m	class:EntryWindow
-on_remove	copypaster/widgets/statebuttons.py	/^    def on_remove(self, button, name):$/;"	m	class:StateButtonsCallbacks
-on_response	copypaster/widgets/__init__.py	/^    def on_response(self, widget, response_id):$/;"	m	class:AppCallbacks
-on_search_clicked	tests/textview.py	/^    def on_search_clicked(self, widget):$/;"	m	class:TextViewWindow
-on_visible_toggled	tests/entry.py	/^    def on_visible_toggled(self, button):$/;"	m	class:EntryWindow
-on_wrap_toggled	tests/textview.py	/^    def on_wrap_toggled(self, widget, mode):$/;"	m	class:TextViewWindow
-open_notebook	copypaster/widgets/__init__.py	/^    def open_notebook(self, action):$/;"	m	class:AppCallbacks
-packages	setup.py	/^    packages=find_packages(include=['copypaster']),$/;"	v
-project	docs/conf.py	/^project = u'Python Boilerplate'$/;"	v
-pygments_style	docs/conf.py	/^pygments_style = 'sphinx'$/;"	v
-quick_save	copypaster/widgets/notebooks.py	/^    def quick_save(self, button):$/;"	m	class:NewNote
-quit_callback	copypaster/widgets/__init__.py	/^    def quit_callback(self, action, parameter):$/;"	m	class:AppCallbacks
-readme	setup.py	/^    readme = readme_file.read()$/;"	v
-recieve	copypaster/clipboard.py	/^    def recieve(self):$/;"	m	class:Jimmy
-register_instance	copypaster/register.py	/^def register_instance(cls):$/;"	f
-release	docs/conf.py	/^release = copypaster.__version__$/;"	v
-response	tests/test_copypaster.py	/^def response():$/;"	f
-s	tests/code_notebook.py	/^    s = "aeouisddaaeeiouua"$/;"	v
-save	copypaster/file_loader.py	/^    def save(self, data, path):$/;"	m	class:Deck
-save	copypaster/widgets/dialogs.py	/^    def save(self, button):$/;"	m	class:DialogEdit
-save	copypaster/widgets/notebooks.py	/^    def save(self, button):$/;"	m	class:NewNote
-save_buttons	copypaster/file_loader.py	/^    def save_buttons(self):$/;"	m	class:Deck
-save_current_notebook	copypaster/widgets/__init__.py	/^    def save_current_notebook(self, action):$/;"	m	class:AppCallbacks
-save_deck	copypaster/widgets/notebooks.py	/^    def save_deck(self):$/;"	m	class:ButtonGrid
-save_deck	copypaster/widgets/notebooks.py	/^    def save_deck(self):$/;"	m	class:DirtyNotes
-save_dirty_notebook	copypaster/widgets/__init__.py	/^    def save_dirty_notebook(self, action):$/;"	m	class:AppCallbacks
-saveas_current_notebook	copypaster/widgets/__init__.py	/^    def saveas_current_notebook(self, action):$/;"	m	class:AppCallbacks
-screen	copypaster/widgets/__init__.py	/^    screen = None$/;"	v	class:MainWindow
-search_and_mark	tests/textview.py	/^    def search_and_mark(self, text, start):$/;"	m	class:TextViewWindow
-send	copypaster/clipboard.py	/^    def send(self, text):$/;"	m	class:Jimmy
-send	copypaster/widgets/__init__.py	/^    def send(self, message):$/;"	m	class:StatusBar
-sequence_sum	tests/code_notebook.py	/^def sequence_sum(a, n, d):$/;"	f
-serialize	copypaster/widgets/buttons.py	/^    def serialize(self):$/;"	m	class:CopyButton
-setup_requirements	setup.py	/^setup_requirements = ['pytest-runner', ]$/;"	v
-setup_requires	setup.py	/^    setup_requires=setup_requirements,$/;"	v
-source_suffix	docs/conf.py	/^source_suffix = '.rst'$/;"	v
-templates_path	docs/conf.py	/^templates_path = ['_templates']$/;"	v
-test_applications	tests/test_application.py	/^def test_applications():$/;"	f
-test_command_line_interface	tests/test_copypaster.py	/^def test_command_line_interface():$/;"	f
-test_content	tests/test_copypaster.py	/^def test_content(response):$/;"	f
-test_suite	setup.py	/^    test_suite='tests',$/;"	v
-tests_require	setup.py	/^    tests_require=test_requirements,$/;"	v
-texinfo_documents	docs/conf.py	/^texinfo_documents = [$/;"	v
-todo_include_todos	docs/conf.py	/^todo_include_todos = False$/;"	v
-update_contents	copypaster/file_loader.py	/^    def update_contents(self):$/;"	m	class:Deck
-url	setup.py	/^    url='https:\/\/github.com\/audreyr\/copypaster',$/;"	v
-version	docs/conf.py	/^version = copypaster.__version__$/;"	v
-version	setup.py	/^    version='0.1.0',$/;"	v
-win	copypaster/widgets/__init__.py	/^    win = None$/;"	v	class:Application
-win	tests/entry.py	/^win = EntryWindow()$/;"	v
-win	tests/textview.py	/^win = TextViewWindow()$/;"	v
-window	tests/gtk_test.py	/^window = Gtk.Window(title="Hello World")$/;"	v
-wrap	copypaster/widgets/utility.py	/^def wrap(widget):$/;"	f
-wrapper_decorator	copypaster/register.py	/^    def wrapper_decorator(*args, **kwargs):$/;"	f	function:register_instance
-zip_safe	setup.py	/^    zip_safe=False,$/;"	v
+AnAction	copypaster/widgets/utility.py	/^class AnAction (Gio.SimpleAction):$/
+AppCallbacks	copypaster/widgets/__init__.py	/^class AppCallbacks:$/
+Application	copypaster/widgets/__init__.py	/^class Application(AppCallbacks, Gtk.Application):$/
+BranchDeck	copypaster/file_loader.py	/^class BranchDeck(Deck):$/
+ButtonCollection	copypaster/widgets/notebooks.py	/^class ButtonCollection(Gtk.Stack):$/
+ButtonGrid	copypaster/widgets/notebooks.py	/^class ButtonGrid(Gtk.FlowBox):$/
+ButtonGrid	tests/nested_buttons.py	/^class ButtonGrid(Gtk.FlowBox):$/
+ButtonStories	copypaster/stories/buttons.py	/^class ButtonStories:$/
+Config	copypaster/copypaster.py	/^class Config:$/
+CopyButton	copypaster/widgets/buttons.py	/^class CopyButton(Gtk.Button):$/
+Deck	copypaster/file_loader.py	/^class Deck(YamlFile):$/
+DeckCollection	copypaster/file_loader.py	/^class DeckCollection(YamlFile):$/
+DialogAdd	copypaster/widgets/dialogs/add.py	/^class DialogAdd(Gtk.Dialog):$/
+DialogEdit	copypaster/widgets/dialogs/edit.py	/^class DialogEdit(Gtk.Dialog):$/
+DialogError	copypaster/widgets/dialogs/error.py	/^class DialogError(Gtk.Dialog):$/
+DisplayErrorDialog	copypaster/stories/errors.py	/^class DisplayErrorDialog:$/
+EntryWindow	tests/entry.py	/^class EntryWindow(Gtk.Window):$/
+FileCabinet	copypaster/widgets/notebooks.py	/^class FileCabinet(Gtk.Notebook):$/
+HowToCopyAMessage	copypaster/stories/of_jimmy_mcgill.py	/^class HowToCopyAMessage:$/
+IconViewWindow	tests/icons.py	/^class IconViewWindow(Gtk.Window):$/
+IconViewWindow	tests/nested_buttons.py	/^class IconViewWindow(Gtk.Window):$/
+Jimmy	copypaster/clipboard.py	/^class Jimmy:$/
+LabelWindow	tests/label.py	/^class LabelWindow(Gtk.Window):$/
+LoadButtonDecks	copypaster/stories/load_button_decks.py	/^class LoadButtonDecks:$/
+MainWindow	copypaster/widgets/__init__.py	/^class MainWindow(Gtk.ApplicationWindow):$/
+Manequin	copypaster/register.py	/^    class Manequin:$/
+Mcli.py	copypaster/cli.py	/^def main(config):$/
+NavigateButton	copypaster/widgets/buttons.py	/^class NavigateButton(Gtk.Button):$/
+NavigationDeck	copypaster/file_loader.py	/^class NavigationDeck:$/
+NestedButtons	tests/nested_buttons.py	/^class NestedButtons:$/
+NotebookStories	copypaster/stories/notebook_stories.py	/^class NotebookStories:$/
+ObjectA	tests/gtk_test.py	/^class ObjectA:$/
+ObjectRegister	copypaster/register.py	/^class ObjectRegister(dict, Rzeczy):$/
+OperateBranchGrids	copypaster/stories/load_button_decks.py	/^class OperateBranchGrids:$/
+ParentLink	tests/nested_buttons.py	/^class ParentLink(_Button):$/
+PasteButton	copypaster/widgets/buttons.py	/^class PasteButton(Gtk.Button):$/
+Rzeczy	copypaster/register.py	/^class Rzeczy:$/
+SearchDialog	tests/textview.py	/^class SearchDialog(Gtk.Dialog):$/
+Signal	copypaster/signal_bus.py	/^class Signal:$/
+SignalBus	copypaster/signal_bus.py	/^class SignalBus:$/
+SignalBus	tests/gtk_test.py	/^class SignalBus:$/
+Simplex	copypaster/signal_bus.py	/^    class Simplex:$/
+State	copypaster/__init__.py	/^class State(dict):$/
+StateButtons	copypaster/widgets/statebuttons.py	/^class StateButtons(StateButtonsCallbacks, Gtk.HBox/
+StateButtonsCallbacks	copypaster/widgets/statebuttons.py	/^class StateButtonsCallbacks:$/
+TextViewWindow	tests/textview.py	/^class TextViewWindow(Gtk.Window):$/
+YamlFile	copypaster/file_loader.py	/^class YamlFile:$/
+_	copypaster/widgets/__init__.py	/^def _(s): return s$/
+_Button	tests/nested_buttons.py	/^class _Button(Gtk.Button):$/
+__getattr__	copypaster/register.py	/^    def __getattr__(self, name):$/
+__init__	copypaster/signal_bus.py	/^    def __init__(self):$/
+__init__	copypaster/signal_bus.py	/^        def __init__(self):$/
+__init__	copypaster/file_loader.py	/^    def __init__(self):$/
+__init__	copypaster/file_loader.py	/^    def __init__(self, deck_file):$/
+__init__	copypaster/file_loader.py	/^    def __init__(self, name, deck_file):$/
+__init__	copypaster/file_loader.py	/^    def __init__(self, name, collection_name, link/
+__init__	copypaster/file_loader.py	/^    def __init__(self, name, collection_file):$/
+__init__	copypaster/copypaster.py	/^    def __init__(self, config_file=None):$/
+__init__	copypaster/stories/buttons.py	/^    def __init__(self,):$/
+__init__	copypaster/register.py	/^        def __init__(self):$/
+__init__	copypaster/widgets/statebuttons.py	/^    def __init__(self):$/
+__init__	copypaster/widgets/dialogs/error.py	/^    def __init__(self, parent, massage):  # lol$/
+__init__	copypaster/widgets/dialogs/edit.py	/^    def __init__(self, parent, button_to_edit):$/
+__init__	copypaster/widgets/dialogs/add.py	/^    def __init__(self, parent):$/
+__init__	copypaster/widgets/notebooks.py	/^    def __init__(self, deck=None):$/
+__init__	copypaster/widgets/notebooks.py	/^    def __init__(self, collection_name, collection/
+__init__	copypaster/widgets/notebooks.py	/^    def __init__(self):$/
+__init__	copypaster/widgets/buttons.py	/^    def __init__(self, *args, **kwargs):$/
+__init__	copypaster/widgets/buttons.py	/^    def __init__(self, *args, **kwargs):$/
+__init__	copypaster/widgets/buttons.py	/^    def __init__(self, *args, **kwargs):$/
+__init__	copypaster/widgets/__init__.py	/^    def __init__(self, app):$/
+__init__	copypaster/widgets/__init__.py	/^    def __init__(self):$/
+__init__	tests/textview.py	/^    def __init__(self, parent):$/
+__init__	tests/textview.py	/^    def __init__(self):$/
+__init__	tests/asd.py	/^    def __init__(self):$/
+__init__	tests/label.py	/^    def __init__(self):$/
+__init__	tests/gtk_test.py	/^    def __init__(self):$/
+__init__	tests/icons.py	/^    def __init__(self):$/
+__init__	tests/nested_buttons.py	/^    def __init__(self, *args, **kwargs):$/
+__init__	tests/nested_buttons.py	/^    def __init__(self, parent, container):$/
+__init__	tests/nested_buttons.py	/^    def __init__(self, deck_file):$/
+__init__	tests/nested_buttons.py	/^    def __init__(self):$/
+__init__	tests/entry.py	/^    def __init__(self):$/
+__lt__	copypaster/register.py	/^    def __lt__(self, other):$/
+__setattr__	copypaster/register.py	/^    def __setattr__(self, name, value):$/
+_create_button	copypaster/widgets/statebuttons.py	/^    def _create_button(self, name, callback, ind):/
+_deactive_rest_buttons	copypaster/widgets/statebuttons.py	/^    def _deactive_rest_buttons(self, leave_alone):/
+_init_actions	copypaster/widgets/__init__.py	/^    def _init_actions(self):$/
+add_button	copypaster/file_loader.py	/^    def add_button(self, **kwargs):$/
+add_button	copypaster/stories/buttons.py	/^    def add_button(self, name, value):$/
+add_page	copypaster/widgets/notebooks.py	/^    def add_page(self, title, _object):$/
+auto_clipboard	copypaster/widgets/statebuttons.py	/^    def auto_clipboard(self, clipboard, parameter)/
+branches	copypaster/file_loader.py	/^    def branches(self):$/
+build_tree	copypaster/file_loader.py	/^    def build_tree(self):$/
+button_deck	copypaster/widgets/notebooks.py	/^    def button_deck(self):$/
+calculate_size	copypaster/widgets/__init__.py	/^    def calculate_size(self):$/
+camel_case_split	copypaster/widgets/buttons.py	/^def camel_case_split(str):$/
+category	copypaster/file_loader.py	/^    def category(self):$/
+change_button_grid	copypaster/stories/load_button_decks.py	/^    def change_button_grid(self, report_to, curren/
+clean_clipboard	copypaster/clipboard.py	/^    def clean_clipboard(self):$/
+copy	copypaster/stories/of_jimmy_mcgill.py	/^    def copy(self, message):$/
+countSubstrings	tests/code_notebook.py	/^def countSubstrings(s):$/
+countSubstrings	tests/code_notebook.py	/^def countSubstrings(s):$/
+countSubstringsUtil	tests/code_notebook.py	/^def countSubstringsUtil(s):$/
+count_substring_help	tests/code_notebook.py	/^def count_substring_help(s):$/
+create_buttons	tests/textview.py	/^    def create_buttons(self):$/
+create_textview	tests/textview.py	/^    def create_textview(self):$/
+create_toolbar	tests/textview.py	/^    def create_toolbar(self):$/
+do_activate	copypaster/widgets/__init__.py	/^    def do_activate(self):$/
+do_pulse	tests/entry.py	/^    def do_pulse(self, user_data):$/
+do_startup	copypaster/widgets/__init__.py	/^    def do_startup(self):$/
+edit_button	copypaster/stories/buttons.py	/^    def edit_button(self, button_to_edit):$/
+emit	copypaster/signal_bus.py	/^    def emit(self, event_name, *args, **kwargs):$/
+emit	tests/gtk_test.py	/^    def emit(self, event_name, *args, **kwargs):$/
+error_show_dialog	copypaster/stories/errors.py	/^    def error_show_dialog(self, message):$/
+getSequenceSum	tests/code_notebook.py	/^def getSequenceSum(i, j, k):$/
+get_buttons	copypaster/file_loader.py	/^    def get_buttons(self):$/
+get_buttons	copypaster/file_loader.py	/^    def get_buttons(self):$/
+get_buttons	copypaster/file_loader.py	/^    def get_buttons(self):$/
+get_collections	copypaster/copypaster.py	/^    def get_collections(self):$/
+get_decks	copypaster/copypaster.py	/^    def get_decks(self):$/
+get_dirty_deck	copypaster/copypaster.py	/^    def get_dirty_deck(self):$/
+handle_quit	copypaster/widgets/__init__.py	/^    def handle_quit(self, action, parameter):$/
+hash	copypaster/widgets/buttons.py	/^    def hash(self):$/
+hide_all_grids	copypaster/widgets/notebooks.py	/^    def hide_all_grids(self):$/
+icon_shooter	tests/icons.py	/^def icon_shooter():$/
+init_buttons	copypaster/file_loader.py	/^    def init_buttons(self):$/
+init_buttons	copypaster/widgets/notebooks.py	/^    def init_buttons(self):$/
+init_toolbutton	tests/asd.py	/^    def init_toolbutton(self, stock, action_name, /
+isVowel	tests/code_notebook.py	/^def isVowel(c):$/
+is_vowel	tests/code_notebook.py	/^def is_vowel(c):$/
+load	copypaster/file_loader.py	/^    def load(self, path):$/
+load_collections	copypaster/stories/load_button_decks.py	/^    def load_collections(self, cabinet):$/
+load_dirty_notes	copypaster/stories/load_button_decks.py	/^    def load_dirty_notes(self, cabinet):$/
+load_notes	copypaster/stories/load_button_decks.py	/^    def load_notes(self, cabinet):$/
+main_function	copypaster/copypaster.py	/^def main_function(config):$/
+name	copypaster/file_loader.py	/^    def name(self):$/
+new	copypaster/widgets/utility.py	/^    def new(cls, name, parameter_type=None, callba/
+new_notebook	copypaster/stories/notebook_stories.py	/^    def new_notebook(self):$/
+new_notebook	copypaster/widgets/__init__.py	/^    def new_notebook(self, action):$/
+not_implemented	copypaster/signal_bus.py	/^def not_implemented(event_name):$/
+on_add	copypaster/widgets/statebuttons.py	/^    def on_add(self, button):$/
+on_autosave	copypaster/widgets/statebuttons.py	/^    def on_autosave(self, button, name):$/
+on_bu	tests/nested_buttons.py	/^    def on_bu$/
+on_button_click	copypaster/widgets/buttons.py	/^    def on_button_click(self, button):$/
+on_button_click	copypaster/widgets/buttons.py	/^    def on_button_click(self, button):$/
+on_button_click	copypaster/widgets/buttons.py	/^    def on_button_click(self, button):$/
+on_button_click	tests/nested_buttons.py	/^    def on_button_click(self, button):$/
+on_button_clicked	tests/textview.py	/^    def on_button_clicked(self, widget, tag):$/
+on_clear_clicked	tests/textview.py	/^    def on_clear_clicked(self, widget):$/
+on_cursor_toggled	tests/textview.py	/^    def on_cursor_toggled(self, widget):$/
+on_edit	copypaster/widgets/statebuttons.py	/^    def on_edit(self, button, name):$/
+on_editable_toggled	tests/textview.py	/^    def on_editable_toggled(self, widget):$/
+on_editable_toggled	tests/entry.py	/^    def on_editable_toggled(self, button):$/
+on_event_name	tests/gtk_test.py	/^    def on_event_name(self, arg1):$/
+on_icon_toggled	tests/entry.py	/^    def on_icon_toggled(self, button):$/
+on_justify_toggled	tests/textview.py	/^    def on_justify_toggled(self, widget, justifica/
+on_key_press_event	copypaster/widgets/dialogs/edit.py	/^    def on_key_press_event(self, button):  #TODO c/
+on_key_press_event	copypaster/widgets/dialogs/add.py	/^    def on_key_press_event(self, button):  # TODO /
+on_key_press_event	tests/label.py	/^    def on_key_press_event(self, widget, event):$/
+on_pulse_toggled	tests/entry.py	/^    def on_pulse_toggled(self, button):$/
+on_remove	copypaster/widgets/statebuttons.py	/^    def on_remove(self, button, name):$/
+on_save	copypaster/widgets/dialogs/edit.py	/^    def on_save(self, button):$/
+on_save	copypaster/widgets/dialogs/add.py	/^    def on_save(self, button):$/
+on_search_clicked	tests/textview.py	/^    def on_search_clicked(self, widget):$/
+on_visible_toggled	tests/entry.py	/^    def on_visible_toggled(self, button):$/
+on_wrap_toggled	tests/textview.py	/^    def on_wrap_toggled(self, widget, mode):$/
+open_add_button_dialog	copypaster/stories/buttons.py	/^    def open_add_button_dialog(self):$/
+open_notebook	copypaster/stories/notebook_stories.py	/^    def open_notebook(self):$/
+open_notebook	copypaster/widgets/__init__.py	/^    def open_notebook(self, action):$/
+receive	copypaster/clipboard.py	/^    def receive(self):$/
+register	copypaster/signal_bus.py	/^    def register(self, _object, *events):$/
+register_instance	copypaster/register.py	/^def register_instance(cls):$/
+remove_button	copypaster/stories/buttons.py	/^    def remove_button(self, button):$/
+response	tests/test_copypaster.py	/^def response():$/
+save	copypaster/file_loader.py	/^    def save(self, data, path):$/
+save_buttons	copypaster/file_loader.py	/^    def save_buttons(self):$/
+save_grid	copypaster/widgets/notebooks.py	/^    def save_grid(self):$/
+save_grid	copypaster/widgets/notebooks.py	/^    def save_grid(self):$/
+save_notebook	copypaster/stories/notebook_stories.py	/^    def save_notebook(self):$/
+save_notebook	copypaster/widgets/__init__.py	/^    def save_notebook(self, action, asd):$/
+save_notebook_as	copypaster/stories/notebook_stories.py	/^    def save_notebook_as(self):$/
+save_notebook_as	copypaster/widgets/__init__.py	/^    def save_notebook_as(self, action, asd):$/
+search_and_mark	tests/textview.py	/^    def search_and_mark(self, text, start):$/
+send	copypaster/clipboard.py	/^    def send(self, text):$/
+sequence_sum	tests/code_notebook.py	/^def sequence_sum(a, n, d):$/
+serialize	copypaster/widgets/buttons.py	/^    def serialize(self):$/
+set_visibility_on_collections	copypaster/stories/load_button_decks.py	/^    def set_visibility_on_collections(self, collec/
+show_root	copypaster/widgets/notebooks.py	/^    def show_root(self):$/
+start_app	copypaster/stories/load_button_decks.py	/^    def start_app(self):$/
+style_label	copypaster/widgets/buttons.py	/^    def style_label(self):$/
+subscribe	copypaster/signal_bus.py	/^    def subscribe(self, event_name, _object):$/
+subscribe	tests/gtk_test.py	/^    def subscribe(self, event_name, _object):$/
+test_applications	tests/test_application.py	/^def test_applications():$/
+test_command_line_interface	tests/test_copypaster.py	/^def test_command_line_interface():$/
+test_content	tests/test_copypaster.py	/^def test_content(response):$/
+test_decorator	copypaster/register.py	/^def test_decorator():$/
+test_event	copypaster/signal_bus.py	/^        def test_event(self):$/
+test_jimmy	copypaster/clipboard.py	/^def test_jimmy():$/
+test_object_register	copypaster/register.py	/^def test_object_register():$/
+test_signal_bus	copypaster/signal_bus.py	/^def test_signal_bus():$/
+update_contents	copypaster/file_loader.py	/^    def update_contents(self):$/
+walk_branches	copypaster/file_loader.py	/^        def walk_branches(  # and build tree repre/
+wrap	copypaster/widgets/utility.py	/^def wrap(widget):$/
+wrapper_decorator	copypaster/register.py	/^    def wrapper_decorator(*args, **kwargs):$/
+wrapps	copypaster/signal_bus.py	/^    def wrapps(*args, **kwargs):$/
