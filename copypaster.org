@@ -72,28 +72,9 @@ TODOS:
 ** -------/notebook_stories
 ** -------/of_jimmy_mcgill
 
-* write comments in files:
-** __init__
-** file_loader
-** copypaster
-** clipboard
-** cli
-** widgets/util
-** ------/statebuttons
-** ------/notebooks
-** ------/buttons
-** ------/__init__
-** widget/dialogs/__init__
-** --------------/add
-** --------------/edit
-** --------------/error
-** stories/__init__
-** -------/buttons
-** -------/errors
-** -------/load_button_decks
-** -------/notebook_stories
-** -------/of_jimmy_mcgill
 * extract all strings and put them in a single file
+kurwa etags kurwa!
+
 
 save them under and object `t`, in file all_strings.py
 ** create object `t` and a function __getattrib__ that returns object (for now)
@@ -147,7 +128,7 @@ save them under and object `t`, in file all_strings.py
 ** DONE signal_bus
 ** DONE register
 ** app.css
-** __init__
+** DONE __init__
 ** file_loader
 ** copypaster
 ** clipboard

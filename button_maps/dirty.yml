@@ -395,6 +395,294 @@ buttons:
   info: ''
   name: val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
   value: val numbersMap = mapOf("key1" to 1, "key2" to 2, "key3" to 3, "key4" to 1)
+- click_count: 0
+  info: ''
+  name: git reflog
+  value: git reflog
+- click_count: 0
+  info: ''
+  name: git reset HEAD@{index}
+  value: git reset HEAD@{index}
+- click_count: 0
+  info: ''
+  name: 'git add . # or add individual files'
+  value: 'git add . # or add individual files'
+- click_count: 0
+  info: ''
+  name: git commit --amend --no-edit
+  value: git commit --amend --no-edit
+- click_count: 0
+  info: ''
+  name: git commit --amend
+  value: git commit --amend
+- click_count: 0
+  info: ''
+  name: git branch some-new-branch-name
+  value: git branch some-new-branch-name
+- click_count: 0
+  info: ''
+  name: git reset HEAD~ --hard
+  value: git reset HEAD~ --hard
+- click_count: 0
+  info: ''
+  name: git checkout some-new-branch-name
+  value: git checkout some-new-branch-name
+- click_count: 0
+  info: ''
+  name: git reset HEAD~ --soft
+  value: git reset HEAD~ --soft
+- click_count: 0
+  info: ''
+  name: git stash
+  value: git stash
+- click_count: 0
+  info: ''
+  name: 'git reflog
+
+    # you will see a list of every thing you''ve
+
+    # done in git, across all branches!
+
+    # each one has an index HEAD@{index}
+
+    # find the one before you broke everything
+
+    git reset HEAD@{index}
+
+    # magic time machine'
+  value: 'git reflog
+
+    # you will see a list of every thing you''ve
+
+    # done in git, across all branches!
+
+    # each one has an index HEAD@{index}
+
+    # find the one before you broke everything
+
+    git reset HEAD@{index}
+
+    # magic time machine'
+- click_count: 0
+  info: ''
+  name: '# make your change
+
+    git add . # or add individual files
+
+    git commit --amend --no-edit
+
+    # now your last commit contains that change!
+
+    # WARNING: never amend public commits'
+  value: '# make your change
+
+    git add . # or add individual files
+
+    git commit --amend --no-edit
+
+    # now your last commit contains that change!
+
+    # WARNING: never amend public commits'
+- click_count: 0
+  info: ''
+  name: 'git commit --amend
+
+    # follow prompts to change the commit message'
+  value: 'git commit --amend
+
+    # follow prompts to change the commit message'
+- click_count: 0
+  info: ''
+  name: '# create a new branch from the current state of master
+
+    git branch some-new-branch-name
+
+    # remove the last commit from the master branch
+
+    git reset HEAD~ --hard
+
+    git checkout some-new-branch-name
+
+    # your commit lives in this branch now :)'
+  value: '# create a new branch from the current state of master
+
+    git branch some-new-branch-name
+
+    # remove the last commit from the master branch
+
+    git reset HEAD~ --hard
+
+    git checkout some-new-branch-name
+
+    # your commit lives in this branch now :)'
+- click_count: 0
+  info: ''
+  name: '# undo the last commit, but leave the changes available
+
+    git reset HEAD~ --soft
+
+    git stash
+
+    # move to the correct branch
+
+    git checkout name-of-the-correct-branch
+
+    git stash pop
+
+    git add . # or add individual files
+
+    git commit -m "your message here";
+
+    # now your changes are on the correct branch'
+  value: '# undo the last commit, but leave the changes available
+
+    git reset HEAD~ --soft
+
+    git stash
+
+    # move to the correct branch
+
+    git checkout name-of-the-correct-branch
+
+    git stash pop
+
+    git add . # or add individual files
+
+    git commit -m "your message here";
+
+    # now your changes are on the correct branch'
+- click_count: 0
+  info: ''
+  name: 'git checkout name-of-the-correct-branch
+
+    # grab the last commit to master
+
+    git cherry-pick master
+
+    # delete it from master
+
+    git checkout master
+
+    git reset HEAD~ --hard'
+  value: 'git checkout name-of-the-correct-branch
+
+    # grab the last commit to master
+
+    git cherry-pick master
+
+    # delete it from master
+
+    git checkout master
+
+    git reset HEAD~ --hard'
+- click_count: 0
+  info: ''
+  name: git diff --staged
+  value: git diff --staged
+- click_count: 0
+  info: ''
+  name: '# find the commit you need to undo
+
+    git log
+
+    # use the arrow keys to scroll up and down in history
+
+    # once you''ve found your commit, save the hash
+
+    git revert [saved hash]
+
+    # git will create a new commit that undoes that commit
+
+    # follow prompts to edit the commit message
+
+    # or just save and commit'
+  value: '# find the commit you need to undo
+
+    git log
+
+    # use the arrow keys to scroll up and down in history
+
+    # once you''ve found your commit, save the hash
+
+    git revert [saved hash]
+
+    # git will create a new commit that undoes that commit
+
+    # follow prompts to edit the commit message
+
+    # or just save and commit'
+- click_count: 0
+  info: ''
+  name: '# find a hash for a commit before the file was changed
+
+    git log
+
+    # use the arrow keys to scroll up and down in history
+
+    # once you''ve found your commit, save the hash
+
+    git checkout [saved hash] -- path/to/file
+
+    # the old version of the file will be in your index
+
+    git commit -m "Wow, you don''t have to copy-paste to undo"'
+  value: '# find a hash for a commit before the file was changed
+
+    git log
+
+    # use the arrow keys to scroll up and down in history
+
+    # once you''ve found your commit, save the hash
+
+    git checkout [saved hash] -- path/to/file
+
+    # the old version of the file will be in your index
+
+    git commit -m "Wow, you don''t have to copy-paste to undo"'
+- click_count: 0
+  info: ''
+  name: 'cd ..
+
+    sudo rm -r fucking-git-repo-dir
+
+    git clone https://some.github.url/fucking-git-repo-dir.git
+
+    cd fucking-git-repo-dir'
+  value: 'cd ..
+
+    sudo rm -r fucking-git-repo-dir
+
+    git clone https://some.github.url/fucking-git-repo-dir.git
+
+    cd fucking-git-repo-dir'
+- click_count: 0
+  info: ''
+  name: '# get the lastest state of origin
+
+    git fetch origin
+
+    git checkout master
+
+    git reset --hard origin/master
+
+    # delete untracked files and directories
+
+    git clean -d --force
+
+    # repeat checkout/reset/clean for each borked branch'
+  value: '# get the lastest state of origin
+
+    git fetch origin
+
+    git checkout master
+
+    git reset --hard origin/master
+
+    # delete untracked files and directories
+
+    git clean -d --force
+
+    # repeat checkout/reset/clean for each borked branch'
 info:
 - name: Dirty
 - category: tests

@@ -356,6 +356,14 @@ buttons:
   info: ''
   name: "CS50\u2019s\nIntroduction to Game Development"
   value: "CS50\u2019s\nIntroduction to Game Development"
+- click_count: 0
+  info: ''
+  name: love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
+  value: love.graphics.rectangle('fill', self.x, self.y, self.width, self.height)
+- click_count: 0
+  info: ''
+  name: height
+  value: height
 info:
 - name: Lua
 - category: languages

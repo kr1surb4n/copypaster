@@ -4,17 +4,17 @@
 import os
 import sys
 import click
-from copypaster import logger, PROJECT_DIR
+from copypaster import log, PROJECT_DIR
 from copypaster.copypaster import main_function, Config
 
-default_config = os.path.join(PROJECT_DIR, "config/example.conf")
+default_config_path = os.path.join(PROJECT_DIR, "config/example.conf")
 
 
 @click.command()
-@click.option('--config', default=default_config)
+@click.option('--config', default=default_config_path)
 def main(config):
     """Console script for copypaster."""
-    logger.info("Started program")
+    log.info("Started CopyPaster")
 
     return main_function(config)
 

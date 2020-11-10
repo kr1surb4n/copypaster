@@ -5,7 +5,7 @@ from copypaster.signal_bus import signal_bus
 
 from copypaster.register import Register as __, register_instance
 
-from copypaster import logger, CURRENT_DIR, State, AppState
+from copypaster import log, CURRENT_DIR, State, AppState
 import time
 import time
 import sys
@@ -24,11 +24,6 @@ def _(s): return s
 
 @register_instance
 class MainWindow(Gtk.ApplicationWindow):
-    # constructor: the title is "Welcome to GNOME" and the window belongs
-    # to the application app
-
-
-    # constructor of the Gtk Application
     file_cabinet = adding = state_buttons = None
 
 
@@ -39,29 +34,35 @@ class MainWindow(Gtk.ApplicationWindow):
     def __init__(self, app):
         Gtk.ApplicationWindow.__init__(
             self, title="CopyPaster", application=app)
-        logger.debug("Calculating screen size...")
+        log.debug("Calculating screen size...")
         self.screen = self.get_screen()
 
+        self.calculate_size()
+
+        self.set_default_size(self.calculated_width, self.calculated_height)
+
+        log.debug("Loading main objects...")
+        # grid
+        self.set_resize_mode(Gtk.ResizeMode.PARENT)
+        self.file_cabinet = FileCabinet()
+        self.state_buttons = StateButtons()
+
+        flowbox = Gtk.Grid(expand=True, orientation=Gtk.Orientation.VERTICAL)
+        flowbox.set_column_homogeneous(True)
+        flowbox.set_resize_mode(Gtk.ResizeMode.PARENT)
+        flowbox.attach(self.state_buttons, 0, 0, 1,1)
+        flowbox.attach(self.file_cabinet, 0 , 1, 1, 1)
+        self.add(flowbox)
+        self.show_all()
+
+
+    def calculate_size(self):
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
         self.calculated_height = self.screen.get_height()
 
         __['calculated_width'] = self.calculated_width
         __['calculated_height'] = self.calculated_height
 
-        self.set_default_size(self.calculated_width, self.calculated_height)
-
-        logger.debug("Loading main objects...")
-        # grid
-        self.grid = Gtk.Grid()
-        self.grid.set_orientation(Gtk.Orientation.VERTICAL)
-
-        self.file_cabinet = FileCabinet()
-        self.state_buttons = StateButtons()
-
-        self.grid.add(self.state_buttons)
-        self.grid.add(self.file_cabinet)
-
-        self.add(self.grid)
 
 
 
@@ -80,26 +81,26 @@ class AppCallbacks:
             self.add_action(action)
 
     def new_notebook(self, action):
-        logger.debug("Emitting new_notebook...")
+        log.debug("Emitting new_notebook...")
         signal_bus.emit('new_notebook')
 
     def open_notebook(self, action):
-        logger.debug("Emitting open_notebook...")
+        log.debug("Emitting open_notebook...")
         signal_bus.emit('open_notebook')
 
     def save_notebook(self, action, asd):
-        logger.debug("Emitting save_notebook...")
+        log.debug("Emitting save_notebook...")
         signal_bus.emit('save_notebook')
 
     def save_notebook_as(self, action, asd):
-        logger.debug("Emitting save_notebook_as...")
+        log.debug("Emitting save_notebook_as...")
 
     def handle_quit(self, action, parameter):
-        logger.debug("Emitting quit...")
+        log.debug("Emitting quit...")
 
         signal_bus.emit('quit')
         self.quit()
-        logger.debug("Goodbye! Application terminated.")
+        log.debug("Goodbye! Application terminated.")
 
 
 
@@ -122,20 +123,20 @@ class Application(AppCallbacks, Gtk.Application):
         )
 
     def do_activate(self):
-        logger.debug("Lift off!")
+        log.debug("Lift off!")
         self.win = MainWindow(self)
         self.win.show_all()
 
-        logger.debug("App state NORMAL")
+        log.debug("App state NORMAL")
         AppState['app'] = State.NORMAL
 
-        logger.debug("Emitting start_app...")
+        log.debug("Emitting start_app...")
         signal_bus.emit('start_app')
 
-        logger.debug("All green. Welcome to application.")
+        log.debug("All green. Welcome to application.")
 
     def do_startup(self):
-        logger.debug("Startup...")
+        log.debug("Startup...")
         Gtk.Application.do_startup(self)
 
         # create a menu
@@ -148,4 +149,4 @@ class Application(AppCallbacks, Gtk.Application):
         menu.append("Quit", "app.quit")
         # set the menu as menu of the application
         self.set_app_menu(menu)
-        logger.debug('Menu loaded...')
+        log.debug('Menu loaded...')

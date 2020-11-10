@@ -1,3 +1,4 @@
+from copypaster import log
 from copypaster.register import Register as __, register_instance
 from copypaster.signal_bus import signal_bus
 from copypaster.file_loader import Deck, DeckCollection, NavigationDeck
@@ -30,7 +31,7 @@ class ButtonGrid(Gtk.FlowBox):
         for button in self.button_deck.get_buttons():
             self.add(button)
 
-    def save_deck(self):
+    def save_grid(self):
         self.button_deck.save_buttons()
 
 
@@ -40,6 +41,7 @@ class ButtonCollection(Gtk.Stack):
     @property
     def button_deck(self):
         """I'm the 'button_deck' property."""
+        log.debug("Someone grabs a grid %s in a collection" % self.current)
         return self.grids[self.current].button_deck
 
     def __init__(self, collection_name, collection_file):
@@ -109,6 +111,9 @@ class ButtonCollection(Gtk.Stack):
 
         self.grids["root"].show()
 
+    def save_grid(self):
+        [grid.save_grid() for name, grid in self.grids.items() if name is not "root"]
+
     def hide_all_grids(self):
         [grid.hide() for _, grid in self.grids.items()]
 
@@ -123,6 +128,8 @@ class FileCabinet(Gtk.Notebook):
 
     def __init__(self):
         Gtk.Notebook.__init__(self, vexpand=True)
+        self.set_vexpand(True)
+        self.set_resize_mode(Gtk.ResizeMode.PARENT)
         self.pages = []
 
     def add_page(self, title, _object):

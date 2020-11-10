@@ -1,16 +1,16 @@
 from copypaster.register import Register as __, register_instance
-from copypaster import logger, State, AppState
+from copypaster import log, State, AppState
 from copypaster.signal_bus import signal_bus
 from copypaster.widgets.notebooks import ButtonGrid, Deck, ButtonCollection
 
 
 class LoadButtonDecks:
-    def on_start_app(self):
+    def start_app(self):
         """Here we load dirty notes (first) and then the rest of the
         notes.
 
         On event: start_app  """
-        logger.debug("LoadButtonDecks is run")
+        log.debug("LoadButtonDecks is run")
 
         cabinet = __.FileCabinet
         self.load_dirty_notes(cabinet)
@@ -23,7 +23,7 @@ class LoadButtonDecks:
         self.set_visibility_on_collections(collections)
 
     def load_dirty_notes(self, cabinet):
-        logger.debug('Loading Dirty Notes')
+        log.debug("Loading Dirty Notes")
         name, deck_file = __.Config.get_dirty_deck()
 
         dirty_notes = ButtonGrid(Deck(deck_file))
@@ -36,7 +36,7 @@ class LoadButtonDecks:
 
     def load_notes(self, cabinet):
         """Load all notes that arent the DirtyNotes"""
-        logger.debug('Loading notes')
+        log.debug("Loading notes")
 
         decks = __.Config.get_decks()
 
@@ -44,7 +44,7 @@ class LoadButtonDecks:
             cabinet.add_page(name, ButtonGrid(Deck(deck_file)))
 
     def load_collections(self, cabinet):
-        logger.debug("Loading collections")
+        log.debug("Loading collections")
 
         results = []
 
@@ -69,16 +69,18 @@ class LoadButtonDecks:
             collection.show_root()
 
 
-
 class OperateBranchGrids:
-    def on_change_button_grid(self, report_to, current, target):
-        logger.debug("Switch to the other branch from {} to  {} in {}".format(current, target, report_to))
-        collection = getattr(__, report_to) # get the collection from register
+    def change_button_grid(self, report_to, current, target):
+        log.debug(
+            "Switch to the other branch from {} to  {} in {}".format(
+                current, target, report_to
+            )
+        )
+        collection = getattr(__, report_to)  # get the collection from register
         collection.current = target
         collection.grids[current].hide()
         collection.grids[target].show()
 
 
-
-signal_bus.subscribe('start_app', LoadButtonDecks())
-signal_bus.subscribe('change_button_grid', OperateBranchGrids())
+signal_bus.subscribe("start_app", LoadButtonDecks())
+signal_bus.subscribe("change_button_grid", OperateBranchGrids())

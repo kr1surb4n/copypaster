@@ -1,5 +1,5 @@
 from copypaster.widgets.utility import wrap
-from copypaster import logger, CURRENT_DIR
+from copypaster import log, CURRENT_DIR
 
 import gi
 gi.require_version('Gtk', '3.0')
@@ -10,7 +10,7 @@ from gi.repository import Gtk, Gdk, Gio  # noqa
 class DialogEdit(Gtk.Dialog):
 
     def __init__(self, parent, button_to_edit):
-        logger.debug('Editing a button...')
+        log.debug('Editing a button...')
         Gtk.Dialog.__init__(self)
 
         self.edited = button_to_edit
@@ -56,7 +56,7 @@ class DialogEdit(Gtk.Dialog):
         self.save(button)
 
     def on_save(self, button):
-        logger.debug("Saving edited button...")
+        log.debug("Saving edited button...")
         text_view_content = self.textbuffer.get_text(self.textbuffer.get_start_iter(
         ), self.textbuffer.get_end_iter(), False)
 
