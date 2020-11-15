@@ -2,4 +2,9 @@ Click
 PyGObject
 copypaste
 xerox
-pyyaml` 
+pyyaml
+
+gaphas
+pycairo
+future
+singledispatch
