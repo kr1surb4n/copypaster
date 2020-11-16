@@ -1,16 +1,16 @@
 decks:
    python:
        name: "Python"
-       url: /home/red/workshops/tools/copypaster/button_maps/python.yml
+       url: /home/kris/workshops/tools/copypaster/button_maps/python.yml
    exceptions:
        name: "Python Exceptions"
-       url: /home/red/workshops/tools/copypaster/button_maps/python-exceptions.yml
+       url: /home/kris/workshops/tools/copypaster/button_maps/python-exceptions.yml
    functions:
        name: "Python Functions"
-       url: /home/red/workshops/tools/copypaster/button_maps/python-functions.yml
+       url: /home/kris/workshops/tools/copypaster/button_maps/python-functions.yml
    types:
        name: "Python Types"
-       url: /home/red/workshops/tools/copypaster/button_maps/python-types.yml
+       url: /home/kris/workshops/tools/copypaster/button_maps/python-types.yml
 tree:
     python:
         exceptions:
