@@ -6,7 +6,7 @@
 from setuptools import setup, find_packages
 
 with open('README.rst') as readme_file:
-    Readme = readme_file.read()
+    readme = readme_file.read()
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
