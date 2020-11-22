@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Decimal capsule API &#8212; Python 3.10.0a2 documentation</title>
+    <link rel="stylesheet" href="../_static/pydoctheme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/sidebar.js"></script>
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Python 3.10.0a2 documentation"
+          href="../_static/opensearch.xml"/>
+    <link rel="author" title="About these documents" href="../about.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Initialization, Finalization, and Threads" href="init.html" />
+    <link rel="prev" title="DateTime Objects" href="datetime.html" />
+    <link rel="canonical" href="https://docs.python.org/3/c-api/decimal.html" />
+    
+      
+    
+
+    
+    <style>
+      @media only screen {
+        table.full-width-table {
+            width: 100%;
+        }
+      }
+    </style>
+
+    <link rel="shortcut icon" type="image/png" href="../_static/py.png" />
+    
+    <script type="text/javascript" src="../_static/copybutton.js"></script>
+    
+     
+
+
+  </head><body>
+  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="init.html" title="Initialization, Finalization, and Threads"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="datetime.html" title="DateTime Objects"
+             accesskey="P">previous</a> |</li>
+
+    <li><img src="../_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li id="cpython-language-and-version">
+      <a href="../index.html">3.10.0a2 Documentation</a> &#187;
+    </li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >Python/C API Reference Manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" accesskey="U">Concrete Objects Layer</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="../search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>    
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="decimal-capsule-api">
+<h1>Decimal capsule API<a class="headerlink" href="#decimal-capsule-api" title="Permalink to this headline">¶</a></h1>
+<p>Capsule API functions can be used in the same manner as regular library
+functions, provided that the API has been initialized.</p>
+<div class="section" id="initialize">
+<h2>Initialize<a class="headerlink" href="#initialize" title="Permalink to this headline">¶</a></h2>
+<p>Typically, a C extension module that uses the decimal API will do these
+steps in its init function:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&quot;pydecimal.h&quot;</span><span class="cp"></span>
+
+<span class="k">static</span> <span class="kt">int</span> <span class="n">decimal_initialized</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">decimal_initialized</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">import_decimal</span><span class="p">()</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">decimal_initialized</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="type-checking-predicates-accessors">
+<h2>Type checking, predicates, accessors<a class="headerlink" href="#type-checking-predicates-accessors" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="c.PyDec_TypeCheck">
+int <code class="sig-name descname">PyDec_TypeCheck</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *dec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_TypeCheck" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is a Decimal, 0 otherwise.  This function does not set
+any exceptions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyDec_IsSpecial">
+int <code class="sig-name descname">PyDec_IsSpecial</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *dec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_IsSpecial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is <code class="docutils literal notranslate"><span class="pre">NaN</span></code>, <code class="docutils literal notranslate"><span class="pre">sNaN</span></code> or <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, 0 otherwise.</p>
+<p>Set TypeError and return -1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is not a Decimal.  It is guaranteed that
+this is the only failure mode, so if <code class="docutils literal notranslate"><span class="pre">dec</span></code> has already been type-checked, no
+errors can occur and the function can be treated as a simple predicate.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyDec_IsNaN">
+int <code class="sig-name descname">PyDec_IsNaN</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *dec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_IsNaN" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is <code class="docutils literal notranslate"><span class="pre">NaN</span></code> or <code class="docutils literal notranslate"><span class="pre">sNaN</span></code>, 0 otherwise.</p>
+<p>Set TypeError and return -1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is not a Decimal.  It is guaranteed that
+this is the only failure mode, so if <code class="docutils literal notranslate"><span class="pre">dec</span></code> has already been type-checked, no
+errors can occur and the function can be treated as a simple predicate.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyDec_IsInfinite">
+int <code class="sig-name descname">PyDec_IsInfinite</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *dec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_IsInfinite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return 1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, 0 otherwise.</p>
+<p>Set TypeError and return -1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is not a Decimal.  It is guaranteed that
+this is the only failure mode, so if <code class="docutils literal notranslate"><span class="pre">dec</span></code> has already been type-checked, no
+errors can occur and the function can be treated as a simple predicate.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyDec_GetDigits">
+int64_t <code class="sig-name descname">PyDec_GetDigits</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *dec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_GetDigits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the number of digits in the coefficient.  For <code class="docutils literal notranslate"><span class="pre">Infinity</span></code>, the
+number of digits is always zero.  Typically, the same applies to <code class="docutils literal notranslate"><span class="pre">NaN</span></code>
+and <code class="docutils literal notranslate"><span class="pre">sNaN</span></code>, but both of these can have a payload that is equivalent to
+a coefficient.  Therefore, <code class="docutils literal notranslate"><span class="pre">NaNs</span></code> can have a nonzero return value.</p>
+<p>Set TypeError and return -1 if <code class="docutils literal notranslate"><span class="pre">dec</span></code> is not a Decimal.  It is guaranteed that
+this is the only failure mode, so if <code class="docutils literal notranslate"><span class="pre">dec</span></code> has already been type-checked, no
+errors can occur and the function can be treated as a simple accessor.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="exact-conversions-between-decimals-and-primitive-c-types">
+<h2>Exact conversions between decimals and primitive C types<a class="headerlink" href="#exact-conversions-between-decimals-and-primitive-c-types" title="Permalink to this headline">¶</a></h2>
+<p>This API supports conversions for decimals with a coefficient up to 38 digits.</p>
+<div class="section" id="data-structures">
+<h3>Data structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h3>
+<p>The conversion functions use the following status codes and data structures:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/* status cases for getting a triple */</span>
+<span class="k">enum</span> <span class="n">mpd_triple_class</span> <span class="p">{</span>
+  <span class="n">MPD_TRIPLE_NORMAL</span><span class="p">,</span>
+  <span class="n">MPD_TRIPLE_INF</span><span class="p">,</span>
+  <span class="n">MPD_TRIPLE_QNAN</span><span class="p">,</span>
+  <span class="n">MPD_TRIPLE_SNAN</span><span class="p">,</span>
+  <span class="n">MPD_TRIPLE_ERROR</span><span class="p">,</span>
+<span class="p">};</span>
+
+<span class="k">typedef</span> <span class="k">struct</span> <span class="p">{</span>
+  <span class="k">enum</span> <span class="n">mpd_triple_class</span> <span class="n">tag</span><span class="p">;</span>
+  <span class="kt">uint8_t</span> <span class="n">sign</span><span class="p">;</span>
+  <span class="kt">uint64_t</span> <span class="n">hi</span><span class="p">;</span>
+  <span class="kt">uint64_t</span> <span class="n">lo</span><span class="p">;</span>
+  <span class="kt">int64_t</span> <span class="n">exp</span><span class="p">;</span>
+<span class="p">}</span> <span class="n">mpd_uint128_triple_t</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The status cases are explained below.  <code class="docutils literal notranslate"><span class="pre">sign</span></code> is 0 for positive and 1 for negative.
+<code class="docutils literal notranslate"><span class="pre">((uint128_t)hi</span> <span class="pre">&lt;&lt;</span> <span class="pre">64)</span> <span class="pre">+</span> <span class="pre">lo</span></code> is the coefficient, <code class="docutils literal notranslate"><span class="pre">exp</span></code> is the exponent.</p>
+<p>The data structure is called “triple” because the decimal triple (sign, coeff, exp)
+is an established term and (<code class="docutils literal notranslate"><span class="pre">hi</span></code>, <code class="docutils literal notranslate"><span class="pre">lo</span></code>) represents a single <code class="docutils literal notranslate"><span class="pre">uint128_t</span></code> coefficient.</p>
+</div>
+<div class="section" id="functions">
+<h3>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="c.PyDec_AsUint128Triple">
+mpd_uint128_triple_t <code class="sig-name descname">PyDec_AsUint128Triple</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *dec</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_AsUint128Triple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a decimal to a triple.  As above, it is guaranteed that the only
+Python failure mode is a TypeError, checks can be omitted if the type is
+known.</p>
+<p>For simplicity, the usage of the function and all special cases are
+explained in code form and comments:</p>
+</dd></dl>
+
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">triple</span> <span class="o">=</span> <span class="n">PyDec_AsUint128Triple</span><span class="p">(</span><span class="n">dec</span><span class="p">);</span>
+<span class="k">switch</span> <span class="p">(</span><span class="n">triple</span><span class="p">.</span><span class="n">tag</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">case</span> <span class="nl">MPD_TRIPLE_QNAN</span><span class="p">:</span>
+    <span class="cm">/*</span>
+<span class="cm">     * Success: handle a quiet NaN.</span>
+<span class="cm">     *   1) triple.sign is 0 or 1.</span>
+<span class="cm">     *   2) triple.exp is always 0.</span>
+<span class="cm">     *   3) If triple.hi or triple.lo are nonzero, the NaN has a payload.</span>
+<span class="cm">     */</span>
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="k">case</span> <span class="nl">MPD_TRIPLE_SNAN</span><span class="p">:</span>
+    <span class="cm">/*</span>
+<span class="cm">     * Success: handle a signaling NaN.</span>
+<span class="cm">     *   1) triple.sign is 0 or 1.</span>
+<span class="cm">     *   2) triple.exp is always 0.</span>
+<span class="cm">     *   3) If triple.hi or triple.lo are nonzero, the sNaN has a payload.</span>
+<span class="cm">     */</span>
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="k">case</span> <span class="nl">MPD_TRIPLE_INF</span><span class="p">:</span>
+    <span class="cm">/*</span>
+<span class="cm">     * Success: handle Infinity.</span>
+<span class="cm">     *   1) triple.sign is 0 or 1.</span>
+<span class="cm">     *   2) triple.exp is always 0.</span>
+<span class="cm">     *   3) triple.hi and triple.lo are always zero.</span>
+<span class="cm">     */</span>
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="k">case</span> <span class="nl">MPD_TRIPLE_NORMAL</span><span class="p">:</span>
+    <span class="cm">/* Success: handle a finite value. */</span>
+    <span class="k">break</span><span class="p">;</span>
+
+<span class="k">case</span> <span class="nl">MPD_TRIPLE_ERROR</span><span class="p">:</span>
+    <span class="cm">/* TypeError check: can be omitted if the type of dec is known. */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">PyErr_Occurred</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Too large for conversion.  PyDec_AsUint128Triple() does not set an</span>
+<span class="cm">       exception so applications can choose themselves.  Typically this</span>
+<span class="cm">       would be a ValueError. */</span>
+    <span class="n">PyErr_SetString</span><span class="p">(</span><span class="n">PyExc_ValueError</span><span class="p">,</span>
+        <span class="s">&quot;value out of bounds for a uint128 triple&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<dl class="function">
+<dt id="c.PyDec_FromUint128Triple">
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a> *<code class="sig-name descname">PyDec_FromUint128Triple</code><span class="sig-paren">(</span>const mpd_uint128_triple_t<em> *triple</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_FromUint128Triple" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a decimal from a triple.  The following rules must be observed for
+initializing the triple:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">triple.sign</span></code> must always be 0 (for positive) or 1 (for negative).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MPD_TRIPLE_QNAN</span></code>: <code class="docutils literal notranslate"><span class="pre">triple.exp</span></code> must be 0.  If <code class="docutils literal notranslate"><span class="pre">triple.hi</span></code> or <code class="docutils literal notranslate"><span class="pre">triple.lo</span></code>
+are nonzero,  create a <code class="docutils literal notranslate"><span class="pre">NaN</span></code> with a payload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MPD_TRIPLE_SNAN</span></code>: <code class="docutils literal notranslate"><span class="pre">triple.exp</span></code> must be 0. If <code class="docutils literal notranslate"><span class="pre">triple.hi</span></code> or <code class="docutils literal notranslate"><span class="pre">triple.lo</span></code>
+are nonzero,  create an <code class="docutils literal notranslate"><span class="pre">sNaN</span></code> with a payload.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MPD_TRIPLE_INF</span></code>: <code class="docutils literal notranslate"><span class="pre">triple.exp</span></code>, <code class="docutils literal notranslate"><span class="pre">triple.hi</span></code> and <code class="docutils literal notranslate"><span class="pre">triple.lo</span></code> must be zero.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MPD_TRIPLE_NORMAL</span></code>: <code class="docutils literal notranslate"><span class="pre">MPD_MIN_ETINY</span> <span class="pre">+</span> <span class="pre">38</span> <span class="pre">&lt;</span> <span class="pre">triple.exp</span> <span class="pre">&lt;</span> <span class="pre">MPD_MAX_EMAX</span> <span class="pre">-</span> <span class="pre">38</span></code>.
+<code class="docutils literal notranslate"><span class="pre">triple.hi</span></code> and <code class="docutils literal notranslate"><span class="pre">triple.lo</span></code> can be chosen freely.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">MPD_TRIPLE_ERROR</span></code>: It is always an error to set this tag.</p></li>
+</ol>
+<p>If one of the above conditions is not met, the function returns <code class="docutils literal notranslate"><span class="pre">NaN</span></code> if
+the <code class="docutils literal notranslate"><span class="pre">InvalidOperation</span></code> trap is not set in the thread local context.  Otherwise,
+it sets the <code class="docutils literal notranslate"><span class="pre">InvalidOperation</span></code> exception and returns NULL.</p>
+<p>Additionally, though extremely unlikely give the small allocation sizes,
+the function can set <code class="docutils literal notranslate"><span class="pre">MemoryError</span></code> and return <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="advanced-api">
+<h2>Advanced API<a class="headerlink" href="#advanced-api" title="Permalink to this headline">¶</a></h2>
+<p>This API enables the use of <code class="docutils literal notranslate"><span class="pre">libmpdec</span></code> functions.  Since Python is compiled with
+hidden symbols, the API requires an external libmpdec and the <code class="docutils literal notranslate"><span class="pre">mpdecimal.h</span></code>
+header.</p>
+<div class="section" id="id1">
+<h3>Functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<dl class="function">
+<dt id="c.PyDec_Alloc">
+<a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a> *<code class="sig-name descname">PyDec_Alloc</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_Alloc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a new decimal that can be used in the <code class="docutils literal notranslate"><span class="pre">result</span></code> position of <code class="docutils literal notranslate"><span class="pre">libmpdec</span></code>
+functions.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyDec_Get">
+mpd_t *<code class="sig-name descname">PyDec_Get</code><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *v</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_Get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a pointer to the internal <code class="docutils literal notranslate"><span class="pre">mpd_t</span></code> of the decimal.  Decimals are immutable,
+so this function must only be used on a new Decimal that has been created by
+PyDec_Alloc().</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.PyDec_GetConst">
+const mpd_t *<code class="sig-name descname">PyDec_GetConst</code><span class="sig-paren">(</span>const <a class="reference internal" href="structures.html#c.PyObject" title="PyObject">PyObject</a><em> *v</em><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDec_GetConst" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a pointer to the constant internal <code class="docutils literal notranslate"><span class="pre">mpd_t</span></code> of the decimal.</p>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../contents.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Decimal capsule API</a><ul>
+<li><a class="reference internal" href="#initialize">Initialize</a></li>
+<li><a class="reference internal" href="#type-checking-predicates-accessors">Type checking, predicates, accessors</a></li>
+<li><a class="reference internal" href="#exact-conversions-between-decimals-and-primitive-c-types">Exact conversions between decimals and primitive C types</a><ul>
+<li><a class="reference internal" href="#data-structures">Data structures</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#advanced-api">Advanced API</a><ul>
+<li><a class="reference internal" href="#id1">Functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="datetime.html"
+                        title="previous chapter">DateTime Objects</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="init.html"
+                        title="next chapter">Initialization, Finalization, and Threads</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../bugs.html">Report a Bug</a></li>
+      <li>
+        <a href="https://github.com/python/cpython/blob/master/Doc/c-api/decimal.rst"
+            rel="nofollow">Show Source
+        </a>
+      </li>
+    </ul>
+  </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="init.html" title="Initialization, Finalization, and Threads"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="datetime.html" title="DateTime Objects"
+             >previous</a> |</li>
+
+    <li><img src="../_static/py.png" alt=""
+             style="vertical-align: middle; margin-top: -1px"/></li>
+    <li><a href="https://www.python.org/">Python</a> &#187;</li>
+    
+
+    <li id="cpython-language-and-version">
+      <a href="../index.html">3.10.0a2 Documentation</a> &#187;
+    </li>
+
+          <li class="nav-item nav-item-1"><a href="index.html" >Python/C API Reference Manual</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="concrete.html" >Concrete Objects Layer</a> &#187;</li>
+    <li class="right">
+        
+
+    <div class="inline-search" style="display: none" role="search">
+        <form class="inline-search" action="../search.html" method="get">
+          <input placeholder="Quick search" type="text" name="q" />
+          <input type="submit" value="Go" />
+          <input type="hidden" name="check_keywords" value="yes" />
+          <input type="hidden" name="area" value="default" />
+        </form>
+    </div>
+    <script type="text/javascript">$('.inline-search').show(0);</script>
+         |
+    </li>
+
+      </ul>
+    </div>  
+    <div class="footer">
+    &copy; <a href="../copyright.html">Copyright</a> 2001-2020, Python Software Foundation.
+    <br />
+
+    The Python Software Foundation is a non-profit corporation.
+<a href="https://www.python.org/psf/donations/">Please donate.</a>
+<br />
+    <br />
+
+    Last updated on Nov 22, 2020.
+    <a href="https://docs.python.org/3/bugs.html">Found a bug</a>?
+    <br />
+
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+
+  </body>
+</html>
