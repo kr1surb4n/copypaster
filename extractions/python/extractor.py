@@ -52,12 +52,12 @@ def extract_content(file):
            
             catgory = [name, filename]
 
-            extract all dt
+            
             for each dt
                 extract text
                 use text as (value, name) for button
 
-            extract all code
+            
             for each code
                 extract text
                 use code as (value, name) for button
@@ -83,21 +83,15 @@ def extract_content(file):
             title = h.text
             break
 
+        # extract all dt
         definitions = [convert_to_text(dt) for dt in deck.xpath('//dt')]
 
+        # extract all code
         codes = [convert_to_text(code) for code in deck.xpath("//div[@class='highlight']/pre")]
 
-        l.info(title)
-        l.info(definitions)
-        l.info(codes)
 
-        print(codes)
+    return [Button(filename, filename)._asdict()]
 
-        return
-
-    buttons = [Button(filename, filename)._asdict()]
-
-    return buttons
 
 def add_to_register(file):
     l.info("Begining content extraction")
