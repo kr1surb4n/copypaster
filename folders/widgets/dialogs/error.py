@@ -1,15 +1,14 @@
-from folders.widgets.utility import wrap
-from folders import log, CURRENT_DIR
+from folders import log
 
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
 class DialogError(Gtk.Dialog):
-
     def __init__(self, parent, massage):  # lol
-        log.debug('Ups, an error...')
+        log.debug("Ups, an error...")
         Gtk.Dialog.__init__(self)
         self.set_modal(True)
         self.add_button(button_text="OK", response_id=Gtk.ResponseType.OK)

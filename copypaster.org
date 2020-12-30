@@ -232,3 +232,55 @@ SUBSCRIBE   quit
 
 
 
+* 30.12.2020
+
+I have added the black, flake8, import remover,
+the make commands:
+- make fmt - format
+- make update - install req....txt 
+- make update-dev - install 
+
+now i remove stuff,
+
+the remove unused imports fucks up the
+tricks with imports - needs to use #noqa
+
+formating:
+- remove reformating to one line - not possible
+- dont change ' into "  - possible -S 
+
+installed also bandit - who knows
+
+
+i run also a git hook 
+
+
+https://radon.readthedocs.io/en/latest/
+
+
+!! IMPORTANT !!
+TAKE the keywords from the stackoverflow, and from answers
+USE them in your post where you give answer a bit different
+
+or more comprehensive
+and publish this fucker and watch how people go to you
+
+and do the fucking thing with everything
+!! END of imortant !!
+
+list of flake8 errors
+https://lintlyci.github.io/Flake8Rules/
+
+** formating code with black
+
+
+https://pypi.org/project/blacker/
+
+https://stackoverflow.com/questions/58584413/black-formatter-ignore-specific-multi-line-code
+https://github.com/psf/black/blob/master/docs/the_black_code_style.md#the-magic-trailing-comma
+https://stackoverflow.com/questions/58584413/black-formatter-ignore-specific-multi-line-code
+https://realpython.com/python-code-quality/
+
+removing imports
+https://stackoverflow.com/questions/58584413/black-formatter-ignore-specific-multi-line-code
+https://stackoverflow.com/questions/53352135/is-there-a-way-to-remove-unused-imports-for-python-in-vs-code

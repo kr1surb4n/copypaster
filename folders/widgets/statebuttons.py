@@ -1,9 +1,10 @@
-from folders.register import Register as __,  register_instance
+from folders.register import register_instance
 from folders.signal_bus import signal_bus
 from folders import log, State, AppState
 
 import gi
-gi.require_version('Gtk', '3.0')
+
+gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk  # noqa
 
 # translate = {
@@ -14,48 +15,47 @@ from gi.repository import Gtk, Gdk  # noqa
 
 class StateButtonsCallbacks:
     def on_autosave(self, button, name):
-        self._deactive_rest_buttons('autosave')
+        self._deactive_rest_buttons("autosave")
 
         if button.get_active():
-            AppState['app'] = State.AUTOSAVE
-            signal_bus.emit('autosave_on')
+            AppState["app"] = State.AUTOSAVE
+            signal_bus.emit("autosave_on")
 
-            self.handle = self.clip.connect(
-                'owner-change', self.auto_clipboard)
-            log.debug('Autosave on')
+            self.handle = self.clip.connect("owner-change", self.auto_clipboard)
+            log.debug("Autosave on")
         else:
-            signal_bus.emit('autosave_off')
-            AppState['app'] = State.NORMAL
+            signal_bus.emit("autosave_off")
+            AppState["app"] = State.NORMAL
             self.clip.disconnect(self.handle)
-            log.debug('Autosave off')
+            log.debug("Autosave off")
 
     def on_edit(self, button, name):
-        self._deactive_rest_buttons('edit')
+        self._deactive_rest_buttons("edit")
 
         if button.get_active():
-            AppState['app'] = State.EDIT
-            log.debug('Edit on')
+            AppState["app"] = State.EDIT
+            log.debug("Edit on")
         else:
-            AppState['app'] = State.NORMAL
-            log.debug('Edit off')
+            AppState["app"] = State.NORMAL
+            log.debug("Edit off")
 
     def on_add(self, button):
-        log.debug('Begin adding button')
+        log.debug("Begin adding button")
         signal_bus.emit("open_add_button_dialog")
 
     def on_remove(self, button, name):
-        self._deactive_rest_buttons('remove')
+        self._deactive_rest_buttons("remove")
 
         if button.get_active():
-            AppState['app'] = State.REMOVE
-            log.debug('Remove on')
+            AppState["app"] = State.REMOVE
+            log.debug("Remove on")
 
         else:
-            AppState['app'] = State.NORMAL
-            log.debug('Remove off')
+            AppState["app"] = State.NORMAL
+            log.debug("Remove off")
 
     def auto_clipboard(self, clipboard, parameter):
-        if AppState['app'] != State.AUTOSAVE:
+        if AppState["app"] != State.AUTOSAVE:
             return False
 
         name = value = clipboard.wait_for_text()
@@ -66,8 +66,11 @@ class StateButtonsCallbacks:
         signal_bus.emit("add_button", name, value)
 
     def _deactive_rest_buttons(self, leave_alone):
-        [button.set_active(False) for name, button in self.buttons.items(
-        ) if name != leave_alone and button.get_active()]
+        [
+            button.set_active(False)
+            for name, button in self.buttons.items()
+            if name != leave_alone and button.get_active()
+        ]
 
 
 @register_instance
@@ -87,7 +90,7 @@ class StateButtons(StateButtonsCallbacks, Gtk.Box):
         self._create_button("Remove", self.on_remove, "3")
 
         button = Gtk.Button("Add")
-        button.connect('clicked', self.on_add)
+        button.connect("clicked", self.on_add)
         self.pack_start(button, True, True, 0)
 
     def _create_button(self, name, callback, ind):

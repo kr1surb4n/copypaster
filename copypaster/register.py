@@ -1,21 +1,23 @@
 import functools
 
+
 class Rzeczy:
     """Here I keep the names of the things I use in the app.
     Names will be used later to make stuff nicer.
 
     Update 1.08.20: from tooday this is just a list of names
     """
+
     names = [
-        'SignalBus',
-        'Config',
-        'Jimmy',
-        'StateButtons',
-        'FileCabinet',
-        'Application',
-        'MainWindow',
-        'DirtyNotes',
-        'Dirty',
+        "SignalBus",
+        "Config",
+        "Jimmy",
+        "StateButtons",
+        "FileCabinet",
+        "Application",
+        "MainWindow",
+        "DirtyNotes",
+        "Dirty",
     ]
 
 
@@ -36,7 +38,6 @@ class ObjectRegister(dict, Rzeczy):
     def __getattr__(self, name):
         return self[name]
 
-
     def __lt__(self, other):
         """This function allows for fancy object assigment.
         Where `other` is a tuple: class name, instance.
@@ -50,9 +51,11 @@ class ObjectRegister(dict, Rzeczy):
 
 Register = ObjectRegister()
 
+
 def register_instance(cls):
     """This decorator adds an object instance when the object
     is initiated."""
+
     @functools.wraps(cls)
     def wrapper_decorator(*args, **kwargs):
 
@@ -61,12 +64,13 @@ def register_instance(cls):
         Register < (cls.__name__, instance)
 
         return instance
+
     return wrapper_decorator
 
 
 def test_object_register():
     """First test to see if the ObjectRegister works"""
-    dummy = 'Stub'
+    dummy = "Stub"
     value = " "
 
     o_reg = ObjectRegister()
@@ -77,14 +81,15 @@ def test_object_register():
 
     assert o_reg.Stub == value  # is value correct?
 
-    o_reg.Stub = 1              # can I change the value?
+    o_reg.Stub = 1  # can I change the value?
     assert o_reg.Stub == 1
-
 
     # does the setter and getter send exceptions on bad key?
     import pytest
+
     with pytest.raises(KeyError):
         o_reg.Exception
+
 
 def test_decorator():
     """Next lets see if the register_instance works"""
@@ -92,13 +97,15 @@ def test_decorator():
     @register_instance
     class Manequin:
         """Our test object"""
+
         def __init__(self):
             self.value = 1
-
 
     global Register
 
     korper = Manequin()
 
-    assert Register.Manequin             # is object in Register?
+    assert Register.Manequin  # is object in Register?
     assert Register.Manequin.value == 1  # is it's value correct?
+
+    del korper

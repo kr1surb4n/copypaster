@@ -1,0 +1,29 @@
+    <glade-catalog name="copypaster" domain="glade-3" 
+                depends="gtk+" version="1.0">
+
+    <glade-widget-classes>
+        <glade-widget-class title="File Cabinet" name="FileCabinet" 
+                            generic-name="FileCabinet" parent="GtkNotebook"
+                            icon-name="widget-gtk-notebook"/>
+
+        <glade-widget-class title="Button Collection" name="ButtonCollection" 
+                    generic-name="ButtonCollection" parent="GtkStack"
+                    icon-name="widget-gtk-stack"/>
+
+        <glade-widget-class title="Button Grid" name="ButtonGrid" 
+                    generic-name="ButtonGrid" parent="GtkGrid"
+                    icon-name="widget-gtk-grid"/>
+
+        <glade-widget-class title="Copy Button" name="CopyButton" 
+                    generic-name="CopyButton" parent="GtkButton"
+                    icon-name="widget-gtk-button"/>
+    </glade-widget-classes>
+
+    <glade-widget-group name="foo" title="Foo">
+        <glade-widget-class-ref name="FileCabinet"/>
+        <glade-widget-class-ref name="ButtonCollection"/>
+        <glade-widget-class-ref name="ButtonGrid"/>
+        <glade-widget-class-ref name="CopyButton"/>
+    </glade-widget-group>
+
+    </glade-catalog>

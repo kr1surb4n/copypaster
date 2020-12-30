@@ -1,7 +1,8 @@
 from gi.repository.GdkPixbuf import Pixbuf
-from gi.repository import Gtk, GdkPixbuf
+from gi.repository import Gtk
 import gi
-from os.path import basename, dirname, abspath, join as path_join
+from os.path import abspath, dirname
+
 gi.require_version("Gtk", "3.0")
 
 
@@ -9,8 +10,8 @@ THIS_FOLDER = dirname(abspath(__file__))
 
 buttons = list(range(10))
 
-class _Button(Gtk.Button):
 
+class _Button(Gtk.Button):
     def __init__(self, *args, **kwargs):
         self.name = kwargs.get('name', None)
         kwargs['label'] = self.name
@@ -32,9 +33,6 @@ class ParentLink(_Button):
 
         super(ParentLink, self).__init__(name="Back One")
 
-    def on_bu
-
-
 
 class ButtonGrid(Gtk.FlowBox):
     "Main area of user interface content."
@@ -48,7 +46,6 @@ class ButtonGrid(Gtk.FlowBox):
 
         for button in self.button_deck.get_buttons():
             self.add(button)
-
 
 
 class NestedButtons:
@@ -71,8 +68,6 @@ class NestedButtons:
 
 
     """
-
-
 
 
 class IconViewWindow(Gtk.Window):

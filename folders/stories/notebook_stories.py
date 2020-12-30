@@ -1,5 +1,4 @@
 from folders.register import Register as __
-from folders import log
 from folders.signal_bus import signal_bus
 
 
@@ -16,7 +15,6 @@ class NotebookStories:
         cabinet.pages[cabinet.get_current_page()].save_grid()
 
     def save_notebook_as(self):
-        pass
         """
         dialog = Gtk.FileChooserDialog(         # TODO: move this to FileCabinet
             'Save button deck', self.win,

@@ -1,11 +1,7 @@
 #!/usr/bin/env python3
 
 from folders import log
-from folders.register import Register as __, register_instance
-from folders.signal_bus import signal_bus
-from folders.file_loader import Deck, DeckCollection, NavigationDeck
-from folders.widgets.utility import wrap
-from folders.widgets.buttons import NavigateButton
+from folders.register import register_instance
 
 
 import gi
@@ -17,8 +13,7 @@ from gaphas import Canvas, GtkView
 from gaphas.examples import Box, Text
 from gaphas.painter import DefaultPainter
 from gaphas.item import Line
-from gaphas.segment import Segment
-from gaphas.util import text_extents, text_underline
+from gaphas.util import text_extents
 
 
 class MyText(Text):
@@ -32,6 +27,7 @@ class MyText(Text):
         w, h = text_extents(cr, self.text, multiline=self.multiline)
         cr.rectangle(-25, -15, w + 50, h + 30)
         cr.stroke()
+
 
 @register_instance
 class Workbench(Gtk.Box):
@@ -56,7 +52,6 @@ class Workbench(Gtk.Box):
         tx.matrix.translate(20, 20)
         canvas.add(tx)
 
-
         # Draw second gaphas box
         b2 = Box(60, 60)
         b2.min_width = 40
@@ -75,31 +70,28 @@ class Workbench(Gtk.Box):
         self.show_all()
         log.info("Workbench loaded")
 
-        view.add_events(
-            Gdk.EventMask.BUTTON_PRESS_MASK
-        )
-        #self.connect('clicked', self.on_field_click)
+        view.add_events(Gdk.EventMask.BUTTON_PRESS_MASK)
+        # self.connect('clicked', self.on_field_click)
         # "set-focus-child" container, widget
-        self.connect('focus', self.on_field_click)
-        self.view.connect('clicked', self.on_field_click_2)
+        self.connect("focus", self.on_field_click)
+        self.view.connect("clicked", self.on_field_click_2)
 
+        # musze zrobic swojego toola
 
-        musze zrobic swojego toola
+        # jest ustawiony DefaultTool teraz,
+        # muszę zrobić Toola,
+        # działają one tak:
+        #    - do view jest ustawiony DefaultTool - ToolChain z Tool'ami
+        #    - każdy tool, to taka klasa, przez ktorą przechodzi przez każdą event,
+        #      i jak jest obsługiwany to można sobie coś tam zrobić.
 
-        jest ustawiony DefaultTool teraz,
-        muszę zrobić Toola,
-        działają one tak:
-           - do view jest ustawiony DefaultTool - ToolChain z Tool'ami
-           - każdy tool, to taka klasa, przez ktorą przechodzi przez każdą event,
-             i jak jest obsługiwany to można sobie coś tam zrobić.
+        #      no i można złapać sobie event key press, on ustawi flagę co jest naciskane
+        #      , w tym samym toolu, zrobić łapanie mouse btton press, oraz główna operacja.
+        #      i jak jest w button click i key press (np. CTRL) to wykonaj główną operację.
 
-             no i można złapać sobie event key press, on ustawi flagę co jest naciskane
-             , w tym samym toolu, zrobić łapanie mouse btton press, oraz główna operacja.
-             i jak jest w button click i key press (np. CTRL) to wykonaj główną operację.
+        #    Tak mogę dodać domyślne dodanie rzeczy, które są w klip boardzie
 
-           Tak mogę dodać domyślne dodanie rzeczy, które są w klip boardzie
-
-           wydaje mi się że może się
+        #    wydaje mi się że może się
 
     def on_field_click(self, widget, direction):
         mt = MyText(text="I'm in a box")

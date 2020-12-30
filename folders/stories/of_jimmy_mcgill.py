@@ -7,4 +7,4 @@ class HowToCopyAMessage:
         __.Jimmy.send(message)
 
 
-signal_bus.subscribe('copy', HowToCopyAMessage())
+signal_bus.subscribe("copy", HowToCopyAMessage())

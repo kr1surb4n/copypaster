@@ -1,5 +1,5 @@
 import xerox
-from folders.register import Register, register_instance
+from folders.register import register_instance
 from folders import log
 
 # This is an abstraction for the actions

@@ -1,0 +1,18 @@
+[
+    {
+        "type": "File",
+        "name": "/home/kris/workshops/tools/copypaster/copypaster/copypaster.py",
+        "parent_id": null,
+        "workspaceRoot": "/home/kris/workshops/tools/copypaster",
+        "workspacePath": "copypaster/copypaster.py",
+        "id": "hPXs8BZfemurxYFg"
+    },
+    {
+        "type": "Group",
+        "name": "entry points",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "aY3Vy2gHGLOCjPcf"
+    }
+]

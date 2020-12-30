@@ -10,25 +10,24 @@ SECOND = timedelta(seconds=1)
 #  changed in the past.)
 import time as _time
 
-STDOFFSET = timedelta(seconds = -_time.timezone)
+STDOFFSET = timedelta(seconds=-_time.timezone)
 if _time.daylight:
-    DSTOFFSET = timedelta(seconds = -_time.altzone)
+    DSTOFFSET = timedelta(seconds=-_time.altzone)
 else:
     DSTOFFSET = STDOFFSET
 
 DSTDIFF = DSTOFFSET - STDOFFSET
 
-class LocalTimezone(tzinfo):
 
+class LocalTimezone(tzinfo):
     def fromutc(self, dt):
         assert dt.tzinfo is self
         stamp = (dt - datetime(1970, 1, 1, tzinfo=self)) // SECOND
         args = _time.localtime(stamp)[:6]
         dst_diff = DSTDIFF // SECOND
         # Detect fold
-        fold = (args == _time.localtime(stamp - dst_diff))
-        return datetime(*args, microsecond=dt.microsecond,
-                        tzinfo=self, fold=fold)
+        fold = args == _time.localtime(stamp - dst_diff)
+        return datetime(*args, microsecond=dt.microsecond, tzinfo=self, fold=fold)
 
     def utcoffset(self, dt):
         if self._isdst(dt):
@@ -46,17 +45,27 @@ class LocalTimezone(tzinfo):
         return _time.tzname[self._isdst(dt)]
 
     def _isdst(self, dt):
-        tt = (dt.year, dt.month, dt.day,
-              dt.hour, dt.minute, dt.second,
-              dt.weekday(), 0, 0)
+        tt = (
+            dt.year,
+            dt.month,
+            dt.day,
+            dt.hour,
+            dt.minute,
+            dt.second,
+            dt.weekday(),
+            0,
+            0,
+        )
         stamp = _time.mktime(tt)
         tt = _time.localtime(stamp)
         return tt.tm_isdst > 0
+
 
 Local = LocalTimezone()
 
 
 # A complete implementation of current DST rules for major US time zones.
+
 
 def first_sunday_on_or_after(dt):
     days_to_go = 6 - dt.weekday()
@@ -90,6 +99,7 @@ DSTEND_1987_2006 = datetime(1, 10, 25, 2)
 DSTSTART_1967_1986 = datetime(1, 4, 24, 2)
 DSTEND_1967_1986 = DSTEND_1987_2006
 
+
 def us_dst_range(year):
     # Find start and end times for US DST. For years before 1967, return
     # start = end for no DST.
@@ -100,7 +110,7 @@ def us_dst_range(year):
     elif 1966 < year < 1987:
         dststart, dstend = DSTSTART_1967_1986, DSTEND_1967_1986
     else:
-        return (datetime(year, 1, 1), ) * 2
+        return (datetime(year, 1, 1),) * 2
 
     start = first_sunday_on_or_after(dststart.replace(year=year))
     end = first_sunday_on_or_after(dstend.replace(year=year))
@@ -108,7 +118,6 @@ def us_dst_range(year):
 
 
 class USTimeZone(tzinfo):
-
     def __init__(self, hours, reprname, stdname, dstname):
         self.stdoffset = timedelta(hours=hours)
         self.reprname = reprname
@@ -169,7 +178,7 @@ class USTimeZone(tzinfo):
             return dst_time
 
 
-Eastern  = USTimeZone(-5, "Eastern",  "EST", "EDT")
-Central  = USTimeZone(-6, "Central",  "CST", "CDT")
+Eastern = USTimeZone(-5, "Eastern", "EST", "EDT")
+Central = USTimeZone(-6, "Central", "CST", "CDT")
 Mountain = USTimeZone(-7, "Mountain", "MST", "MDT")
-Pacific  = USTimeZone(-8, "Pacific",  "PST", "PDT")
+Pacific = USTimeZone(-8, "Pacific", "PST", "PDT")

@@ -1,5 +1,5 @@
-from folders.register import Register as __, register_instance
-from folders import log, State, AppState
+from folders.register import Register as __
+from folders import log
 from folders.signal_bus import signal_bus
 from folders.widgets.notebooks import ButtonGrid, Deck, ButtonCollection
 from folders.widgets.workbench import Workbench
@@ -10,7 +10,7 @@ class LoadButtonDecks:
         """Here we load dirty notes (first) and then the rest of the
         notes.
 
-        On event: start_app  """
+        On event: start_app"""
         log.debug("LoadButtonDecks is run")
 
         cabinet = __.FileCabinet
@@ -64,7 +64,7 @@ class LoadButtonDecks:
         return results
 
     def load_workbench(self, cabinet):
-        cabinet.add_page('plateau', Workbench())
+        cabinet.add_page("plateau", Workbench())
         cabinet.show_all()
 
     def set_visibility_on_collections(self, collections):

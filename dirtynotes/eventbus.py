@@ -18,7 +18,10 @@ class SignalBus:
 
         if not hasattr(_object, callback_name):
             raise NotImplementedError(
-                "Object {} has no callback function called {}".format(_object, callback_name))
+                "Object {} has no callback function called {}".format(
+                    _object, callback_name
+                )
+            )
 
         if event_name not in self.recievers:
             self.recievers[event_name] = []
@@ -48,11 +51,11 @@ objectA = ObjectA()
 objectA2 = ObjectA()
 # objectA  subscribes to EventBus for event_name
 
-ebus.subscribe('event_name', objectA)
-ebus.subscribe('event_name', objectA2)
+ebus.subscribe("event_name", objectA)
+ebus.subscribe("event_name", objectA2)
 
 # objectB  emits  an    event_name   using   EventBus
 
 
-ebus.emit('event_name', "and some data was send")
-ebus.emit('event_name', "- another")
+ebus.emit("event_name", "and some data was send")
+ebus.emit("event_name", "- another")
