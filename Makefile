@@ -53,11 +53,25 @@ clean-test: ## remove test and coverage artifacts
 lint: ## check style with flake8
 	flake8 copypaster tests
 
+sec:
+	bandit -r .
+
+fmt:
+	black -qS --config black.toml  .
+
+remove-imports:
+	autoflake -r --in-place \
+		--remove-all-unused-imports \
+		--exclude .venv,.git,.pytest_cache,__pycache__ \
+		.
+
+pre-commit: clean fmt remove-imports lint test
+
 run:
 	copypaster > last_run.log 2>&1 &
 
 test: ## run tests quickly with the default Python
-	pytest
+	pytest -q --no-summary --log-level=ERROR copypaster extractions dirtynotes tests
 
 test-all: ## run tests on every Python version with tox
 	tox
@@ -89,3 +103,9 @@ dist: clean ## builds source and wheel package
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
+
+update:
+	pip install -r requirements.txt
+
+update-dev:
+	pip install -r requirements_dev.txt 

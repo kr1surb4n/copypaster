@@ -1,15 +1,13 @@
 import yaml
 from copypaster.widgets.buttons import CopyButton
 from copypaster.widgets.buttons import NavigateButton
-from copypaster.register import Register, register_instance
-from copypaster import log, PROJECT_DIR
-from os import path as p
+from copypaster import log
+
 
 # This handles loading an dumping yaml files
 class YamlFile:
     def __init__(self):
         self.contents = None
-
 
     def load(self, path):
         """Load file"""
@@ -19,13 +17,14 @@ class YamlFile:
     def save(self, data, path):
         """Save file"""
         log.debug("Saving file {}".format(path))
-        with open(path, 'w') as f:
+        with open(path, "w") as f:
             f.write(yaml.dump(data))
 
 
 """Deck of values for buttons"""
-class Deck(YamlFile):
 
+
+class Deck(YamlFile):
 
     _buttons = "buttons"
     _info = "info"
@@ -52,10 +51,12 @@ class Deck(YamlFile):
 
     def add_button(self, **kwargs):
         """Create button, add it to table and return it"""
-        log.debug("Adding button {}  {}".format(kwargs.get('name', ''), kwargs.get('value', '')))
-        c = self.buttons.get(str(kwargs.get('value', None)), None)
+        log.debug(
+            "Adding button {}  {}".format(kwargs.get("name", ""), kwargs.get("value", ""))
+        )
+        c = self.buttons.get(str(kwargs.get("value", None)), None)
         if c:
-            raise IndexError('There is such a value')
+            raise IndexError("There is such a value")
 
         c = CopyButton(**kwargs)
 
@@ -64,21 +65,20 @@ class Deck(YamlFile):
 
     def update_contents(self):
         """Update button IR"""
-        self.contents['buttons'] = []
+        self.contents["buttons"] = []
         for button in self.buttons.values():
-            self.contents['buttons'] += [button.serialize()]
+            self.contents["buttons"] += [button.serialize()]
 
     def save_buttons(self):
         """Save buttons to file"""
         self.update_contents()
         self.save(self.contents, self.path)
 
-
     def category(self):
-        return self.contents['info']['category']
+        return self.contents["info"]["category"]
 
     def name(self):
-        return self.contents['info']['name']
+        return self.contents["info"]["name"]
 
     def get_buttons(self):
         return self.buttons.values()
@@ -89,7 +89,6 @@ class BranchDeck(Deck):
     def __init__(self, name, deck_file):
         super(BranchDeck, self).__init__(deck_file)
         self.name = name
-
 
         # add NavigationButton(current=self, target=parent)
         # where target and current are BranchDeck
@@ -106,15 +105,40 @@ class NavigationDeck:
         self.name = name
         self.collection_name = collection_name
 
-        self.buttons = {target_name: NavigateButton(  # is what we will display
-                        label=target_name,
-                        report_to=collection_name,
-                        current=name,
-                        target=target_name) # we take button grid
-                     for target_name in link_names}
+        self.buttons = {
+            target_name: NavigateButton(  # is what we will display
+                label=target_name,
+                report_to=collection_name,
+                current=name,
+                target=target_name,
+            )  # we take button grid
+            for target_name in link_names
+        }
 
     def get_buttons(self):
         return self.buttons.values()
+
+
+def walk_branches(parent, parents, levels, tree_branch):  # and build tree representation
+
+    if parent not in levels.keys():
+        levels[parent] = []
+
+    if tree_branch is None:
+        log.debug("End of branch. Parent: %s" % parent)
+        return None
+
+    log.debug(parent, tree_branch)
+
+    for branch_name, lower_branches in tree_branch.items():
+        print(branch_name, lower_branches)
+        levels[parent] += [branch_name]
+        parents[branch_name] = parent
+
+        # here we go deeper
+        walk_branches(branch_name, parents, levels, lower_branches)
+
+    return None
 
 
 # Collection
@@ -131,12 +155,11 @@ class DeckCollection(YamlFile):
 
         self.build_tree()
 
-
     def branches(self):
         return self.branch_decks.items()
 
     def build_tree(self):
-        deck_list = self.contents.get('decks')
+        deck_list = self.contents.get("decks")
 
         tree = self.contents.get("tree")
 
@@ -144,38 +167,13 @@ class DeckCollection(YamlFile):
         parents = {}
         levels = {}
 
-        def walk_branches(  # and build tree representation
-                parent, parents, levels,
-                tree_branch):
+        walk_branches("root", parents, levels, tree)  # and build branches list
 
-            if parent not in levels.keys():
-                levels[parent] = []
-
-            if tree_branch is None:
-                log.debug("End of branch. Parent: %s" % parent)
-                return None
-
-            log.debug(parent, tree_branch)
-
-            for branch_name, lower_branches in tree_branch.items():
-                print(branch_name, lower_branches)
-                levels[parent] += [branch_name]
-                parents[branch_name] = parent
-
-                # here we go deeper
-                walk_branches(branch_name, parents,
-                              levels,
-                              lower_branches)
-           
-            return None
-
-        walk_branches("root", parents, levels, tree) # and build branches list
-
-        branch_decks['root'] = None
-        parents['root'] = None
+        branch_decks["root"] = None
+        parents["root"] = None
 
         for name, info in deck_list.items():
-            deck_file = info['url']
+            deck_file = info["url"]
             deck = BranchDeck(name, deck_file)
             branch_decks[name] = deck
 

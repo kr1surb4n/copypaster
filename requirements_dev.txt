@@ -5,15 +5,34 @@ pip
 bump2version
 wheel
 watchdog
-flake8
-tox
-coverage
-Sphinx
 twine
 setuptools
 
-pytest
-pytest-runner
+#docs
+Sphinx
+
+#lint
+flake8
 pyflakes
 pylint
+
+# analitics
+# in Makefile: flake8 --max-complexity copypaster tests
+
+mccabe
+
+# security
+bandit
+
+# format
+autoflake
+isort
+black
+
+# tests
+tox
+coverage
+pytest
+pytest-runner
+
 # sudo python3 -m easy_install clonedigger

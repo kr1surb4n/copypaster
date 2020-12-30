@@ -1,7 +1,6 @@
 from folders import log
-from folders.register import Register as __, register_instance
-from folders.signal_bus import signal_bus
-from folders.file_loader import Deck, DeckCollection, NavigationDeck
+from folders.register import register_instance
+from folders.file_loader import DeckCollection, NavigationDeck
 from folders.widgets.utility import wrap
 from folders.widgets.buttons import NavigateButton
 

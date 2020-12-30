@@ -23,13 +23,12 @@ class LabelWindow(Gtk.Window):
 
         print("Key press on widget: ", widget)
         print("          Modifiers: ", event.state)
-        print("      Key val, name: ", event.keyval,
-              Gdk.keyval_name(event.keyval))
+        print("      Key val, name: ", event.keyval, Gdk.keyval_name(event.keyval))
 
         self.label.set_text(Gdk.keyval_name(event.keyval))
 
         # check the event modifiers (can also use SHIFTMASK, etc)
-        ctrl = (event.state & Gdk.ModifierType.CONTROL_MASK)
+        ctrl = event.state & Gdk.ModifierType.CONTROL_MASK
 
         # see if we recognise a keypress
         if ctrl and event.keyval == Gdk.KEY_h:
@@ -40,9 +39,7 @@ class LabelWindow(Gtk.Window):
 style_provider = Gtk.CssProvider()
 style_provider.load_from_path("app.css")
 Gtk.StyleContext.add_provider_for_screen(
-    Gdk.Screen.get_default(),
-    style_provider,
-    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+    Gdk.Screen.get_default(), style_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
 )
 
 window = LabelWindow()

@@ -7,7 +7,6 @@ import pytest
 
 from click.testing import CliRunner
 
-from copypaster import copypaster
 from copypaster import cli
 
 
@@ -28,11 +27,15 @@ def test_content(response):
 
 
 def test_command_line_interface():
+    import os
+
+    default_config_path = os.path.join("example.conf")
+
     """Test the CLI."""
     runner = CliRunner()
-    result = runner.invoke(cli.main)
+    result = runner.invoke(cli.main, ['--config', default_config_path])
     assert result.exit_code == 0
-    assert 'copypaster.cli.main' in result.output
-    help_result = runner.invoke(cli.main, ['--help'])
+    # assert "copypaster.cli.main" in result.output
+    help_result = runner.invoke(cli.main, ["--help"])
     assert help_result.exit_code == 0
-    assert '--help  Show this message and exit.' in help_result.output
+    assert "Show this message and exit." in help_result.output

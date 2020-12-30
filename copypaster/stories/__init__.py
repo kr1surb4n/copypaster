@@ -3,8 +3,8 @@
 We do that by importing whole file.
 The order is probably important.
 """
-from .errors import *
-from .load_button_decks import LoadButtonDecks
-from .notebook_stories import *
-from .buttons import *
-from .of_jimmy_mcgill import *
+from .errors import *  # noqa
+from .load_button_decks import LoadButtonDecks  # noqa
+from .notebook_stories import *  # noqa
+from .buttons import *  # noqa
+from .of_jimmy_mcgill import *  # noqa

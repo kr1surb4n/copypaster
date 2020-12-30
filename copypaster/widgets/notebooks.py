@@ -1,7 +1,6 @@
 from copypaster import log
-from copypaster.register import Register as __, register_instance
-from copypaster.signal_bus import signal_bus
-from copypaster.file_loader import Deck, DeckCollection, NavigationDeck
+from copypaster.register import register_instance
+from copypaster.file_loader import DeckCollection, NavigationDeck
 from copypaster.widgets.utility import wrap
 from copypaster.widgets.buttons import NavigateButton
 
@@ -112,7 +111,7 @@ class ButtonCollection(Gtk.Stack):
         self.grids["root"].show()
 
     def save_grid(self):
-        [grid.save_grid() for name, grid in self.grids.items() if name is not "root"]
+        [grid.save_grid() for name, grid in self.grids.items() if name == "root"]
 
     def hide_all_grids(self):
         [grid.hide() for _, grid in self.grids.items()]

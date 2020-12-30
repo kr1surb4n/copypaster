@@ -1,7 +1,8 @@
-from copypaster.register import Register as __, register_instance
-from copypaster import log, State, AppState
+from copypaster.register import Register as __
+from copypaster import log
 from copypaster.signal_bus import signal_bus
-from copypaster.widgets.notebooks import ButtonGrid, Deck, ButtonCollection
+from copypaster.file_loader import Deck
+from copypaster.widgets.notebooks import ButtonGrid, ButtonCollection
 
 
 class LoadButtonDecks:
@@ -9,7 +10,7 @@ class LoadButtonDecks:
         """Here we load dirty notes (first) and then the rest of the
         notes.
 
-        On event: start_app  """
+        On event: start_app"""
         log.debug("LoadButtonDecks is run")
 
         cabinet = __.FileCabinet

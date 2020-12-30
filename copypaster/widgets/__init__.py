@@ -17,8 +17,26 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
+def populate_register():
+    builder = Gtk.Builder()
+    builder.add_from_file("example.glade")
+
+    window = builder.get_object("window1")
+    window.show_all()
+
+
+def connect_storie(builder):
+    handlers = {
+        "onDestroy": Gtk.main_quit,
+        "onButtonPressed": hello
+    }
+    builder.connect_signals(handlers)
+
 # All translations provided for illustrative purposes only.
 # english
+#
+# 30.12.2020
+# what is this ? :D
 def _(s): return s
 
 

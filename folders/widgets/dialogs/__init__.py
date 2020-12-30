@@ -4,7 +4,7 @@ from .error import DialogError
 
 
 __all__ = [
-    'DialogAdd',
-    'DialogEdit',
-    'DialogError',
+    "DialogAdd",
+    "DialogEdit",
+    "DialogError",
 ]
