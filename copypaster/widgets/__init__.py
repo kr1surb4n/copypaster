@@ -6,13 +6,9 @@ from copypaster.signal_bus import signal_bus
 from copypaster.register import Register as __, register_instance
 
 from copypaster import log, CURRENT_DIR, State, AppState
-import time
-import time
-import sys
 import os
-import gettext
-import datetime
 import gi
+
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
 
@@ -25,33 +21,34 @@ def populate_register():
     window.show_all()
 
 
+def hello():
+    return "hello"
+
+
 def connect_storie(builder):
-    handlers = {
-        "onDestroy": Gtk.main_quit,
-        "onButtonPressed": hello
-    }
+    handlers = {"onDestroy": Gtk.main_quit, "onButtonPressed": hello}
     builder.connect_signals(handlers)
+
 
 # All translations provided for illustrative purposes only.
 # english
 #
 # 30.12.2020
 # what is this ? :D
-def _(s): return s
+def _(s):
+    return s
 
 
 @register_instance
 class MainWindow(Gtk.ApplicationWindow):
     file_cabinet = adding = state_buttons = None
 
-
     screen = None
     calculated_width = 0
     calculated_height = 0
 
     def __init__(self, app):
-        Gtk.ApplicationWindow.__init__(
-            self, title="CopyPaster", application=app)
+        Gtk.ApplicationWindow.__init__(self, title="CopyPaster", application=app)
         log.debug("Calculating screen size...")
         self.screen = self.get_screen()
 
@@ -68,11 +65,10 @@ class MainWindow(Gtk.ApplicationWindow):
         flowbox = Gtk.Grid(expand=True, orientation=Gtk.Orientation.VERTICAL)
         flowbox.set_column_homogeneous(True)
         flowbox.set_resize_mode(Gtk.ResizeMode.PARENT)
-        flowbox.attach(self.state_buttons, 0, 0, 1,1)
-        flowbox.attach(self.file_cabinet, 0 , 1, 1, 1)
+        flowbox.attach(self.state_buttons, 0, 0, 1, 1)
+        flowbox.attach(self.file_cabinet, 0, 1, 1, 1)
         self.add(flowbox)
         self.show_all()
-
 
     def calculate_size(self):
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
@@ -82,17 +78,31 @@ class MainWindow(Gtk.ApplicationWindow):
         __['calculated_height'] = self.calculated_height
 
 
-
-
 class AppCallbacks:
-
     def _init_actions(self):
         # this all is a lot of work, I would do something with it
-        actions = [("new_notebook", self.new_notebook,),
-                   ("open_notebook", self.open_notebook,),
-                   ("save_notebook", self.save_notebook,),
-                   ("save_notebook_as", self.save_notebook_as,),
-                   ("quit", self.handle_quit,), ]
+        actions = [
+            (
+                "new_notebook",
+                self.new_notebook,
+            ),
+            (
+                "open_notebook",
+                self.open_notebook,
+            ),
+            (
+                "save_notebook",
+                self.save_notebook,
+            ),
+            (
+                "save_notebook_as",
+                self.save_notebook_as,
+            ),
+            (
+                "quit",
+                self.handle_quit,
+            ),
+        ]
 
         for action_name, callback in actions:
             action = AnAction.new(action_name, None, callback)
@@ -121,7 +131,6 @@ class AppCallbacks:
         log.debug("Goodbye! Application terminated.")
 
 
-
 @register_instance
 class Application(AppCallbacks, Gtk.Application):
 
@@ -137,7 +146,7 @@ class Application(AppCallbacks, Gtk.Application):
         Gtk.StyleContext.add_provider_for_screen(
             Gdk.Screen.get_default(),
             style_provider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
         )
 
     def do_activate(self):
