@@ -7,18 +7,11 @@ from copypaster.register import Register as __, register_instance
 
 from copypaster import log, CURRENT_DIR, State, AppState
 import os
+
 import gi
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
-
-
-def populate_register():
-    builder = Gtk.Builder()
-    builder.add_from_file("example.glade")
-
-    window = builder.get_object("window1")
-    window.show_all()
 
 
 def hello():
@@ -30,25 +23,15 @@ def connect_storie(builder):
     builder.connect_signals(handlers)
 
 
-# All translations provided for illustrative purposes only.
-# english
-#
-# 30.12.2020
-# what is this ? :D
-def _(s):
-    return s
-
-
 @register_instance
 class MainWindow(Gtk.ApplicationWindow):
-    file_cabinet = adding = state_buttons = None
 
     screen = None
     calculated_width = 0
     calculated_height = 0
 
-    def __init__(self, app):
-        Gtk.ApplicationWindow.__init__(self, title="CopyPaster", application=app)
+    def __init__(self, application):
+        Gtk.ApplicationWindow.__init__(self, title="CopyPaster", application=application)
         log.debug("Calculating screen size...")
         self.screen = self.get_screen()
 
@@ -56,19 +39,7 @@ class MainWindow(Gtk.ApplicationWindow):
 
         self.set_default_size(self.calculated_width, self.calculated_height)
 
-        log.debug("Loading main objects...")
-        # grid
         self.set_resize_mode(Gtk.ResizeMode.PARENT)
-        self.file_cabinet = FileCabinet()
-        self.state_buttons = StateButtons()
-
-        flowbox = Gtk.Grid(expand=True, orientation=Gtk.Orientation.VERTICAL)
-        flowbox.set_column_homogeneous(True)
-        flowbox.set_resize_mode(Gtk.ResizeMode.PARENT)
-        flowbox.attach(self.state_buttons, 0, 0, 1, 1)
-        flowbox.attach(self.file_cabinet, 0, 1, 1, 1)
-        self.add(flowbox)
-        self.show_all()
 
     def calculate_size(self):
         self.calculated_width = int((self.screen.get_width() / 100) * 20)
@@ -151,8 +122,6 @@ class Application(AppCallbacks, Gtk.Application):
 
     def do_activate(self):
         log.debug("Lift off!")
-        self.win = MainWindow(self)
-        self.win.show_all()
 
         log.debug("App state NORMAL")
         AppState['app'] = State.NORMAL
@@ -164,16 +133,21 @@ class Application(AppCallbacks, Gtk.Application):
 
     def do_startup(self):
         log.debug("Startup...")
+
         Gtk.Application.do_startup(self)
 
+        # important part when using GtkWindow with GtkBuilder
+        self.add_window(__['MainWindow'])
+        __['MainWindow'].show_all()
+
         # create a menu
-        menu = Gio.Menu()
-        # append to the menu three options
-        menu.append("New notebook", "app.new_notebook")
-        menu.append("Open notebook", "app.open_notebook")
-        menu.append("Save notebook", "app.save_notebook")
-        menu.append("Save notebook as", "app.save_notebook_as")
-        menu.append("Quit", "app.quit")
+        # menu = Gio.Menu()
+        # # append to the menu three options
+        # menu.append("New notebook", "app.new_notebook")
+        # menu.append("Open notebook", "app.open_notebook")
+        # menu.append("Save notebook", "app.save_notebook")
+        # menu.append("Save notebook as", "app.save_notebook_as")
+        # menu.append("Quit", "app.quit")
         # set the menu as menu of the application
-        self.set_app_menu(menu)
+        # self.set_app_menu(menu)
         log.debug('Menu loaded...')

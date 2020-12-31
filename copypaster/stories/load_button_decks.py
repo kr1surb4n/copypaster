@@ -7,6 +7,9 @@ from copypaster.widgets.notebooks import ButtonGrid, ButtonCollection
 
 class LoadButtonDecks:
     def start_app(self):
+        self.load_config()
+
+    def load_config(self):
         """Here we load dirty notes (first) and then the rest of the
         notes.
 
@@ -19,7 +22,7 @@ class LoadButtonDecks:
 
         collections = self.load_collections(cabinet)
 
-        cabinet.show_all()  # redraw everything
+        __.MainWindow.show_all()  # redraw everything
 
         self.set_visibility_on_collections(collections)
 
@@ -72,6 +75,7 @@ class LoadButtonDecks:
 
 class OperateBranchGrids:
     def change_button_grid(self, report_to, current, target):
+
         log.debug(
             "Switch to the other branch from {} to  {} in {}".format(
                 current, target, report_to
@@ -79,6 +83,9 @@ class OperateBranchGrids:
         )
         collection = getattr(__, report_to)  # get the collection from register
         collection.current = target
+
+        # The whole secret to navigation is that nothing moves.
+        # All is static, we only show and hide stuff"
         collection.grids[current].hide()
         collection.grids[target].show()
 

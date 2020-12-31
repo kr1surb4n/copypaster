@@ -106,9 +106,12 @@ class ButtonCollection(Gtk.Stack):
 
         # we must add all grids
         [self.add_named(grid, name) for name, grid in self.grids.items()]
-        [grid.hide() for _, grid in self.grids.items()]
 
-        self.grids["root"].show()
+        # then
+        self.hide_all_grids()
+
+        # and
+        self.show_root()
 
     def save_grid(self):
         [grid.save_grid() for name, grid in self.grids.items() if name == "root"]
@@ -116,8 +119,7 @@ class ButtonCollection(Gtk.Stack):
     def hide_all_grids(self):
         [grid.hide() for _, grid in self.grids.items()]
 
-    def show_root(self):
-        # lets show the first button_grid
+    def show_root(self):  # or first button grid
         self.grids["root"].show()
 
 

@@ -88,12 +88,12 @@ class StateButtons(StateButtonsCallbacks, Gtk.HBox):
         self._create_button("Edit", self.on_edit, "2")
         self._create_button("Remove", self.on_remove, "3")
 
-        button = Gtk.Button("Add")
+        button = Gtk.Button(label="Add")
         button.connect("clicked", self.on_add)
         self.pack_start(button, False, False, 0)
 
     def _create_button(self, name, callback, ind):
-        _button = Gtk.ToggleButton(name)
+        _button = Gtk.ToggleButton(label=name)
         _button.connect("toggled", callback, ind)
 
         self.pack_start(_button, False, False, 0)

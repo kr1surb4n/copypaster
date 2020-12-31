@@ -29,7 +29,9 @@ REGISTER = {}
 
 
 # placeholder for button data
-Button = namedtuple('Button', ['name', 'value', 'info', 'click_count'], defaults=["", 0])
+Button = namedtuple(
+    'Button', ['name', 'value', 'info', 'click_count', 'tag'], defaults=["", 0, ""]
+)
 
 # placeholder for deck data
 class ButtonCard:
