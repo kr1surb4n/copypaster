@@ -128,14 +128,7 @@ class NavigateButton(Gtk.Button):
     def on_button_click(self, button):
         log.debug("Navigating...")
 
-        "The whole secret to navigation is that nothing moves. \
-        All is static, but we show and hide stuff"
-
         signal_bus.emit("change_button_grid", self.report_to, self.current, self.target)
-
-        # DO THAT IN THE EVENT CONTROL
-        # self.current.hide()
-        # self.target.show()
 
 
 class PasteButton(Gtk.Button):

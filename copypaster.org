@@ -273,7 +273,7 @@ https://lintlyci.github.io/Flake8Rules/
 
 ** formating code with black
 
-
+https://realpython.com/python-pep8/#when-to-ignore-pep-8
 https://pypi.org/project/blacker/
 
 https://stackoverflow.com/questions/58584413/black-formatter-ignore-specific-multi-line-code
@@ -284,3 +284,20 @@ https://realpython.com/python-code-quality/
 removing imports
 https://stackoverflow.com/questions/58584413/black-formatter-ignore-specific-multi-line-code
 https://stackoverflow.com/questions/53352135/is-there-a-way-to-remove-unused-imports-for-python-in-vs-code
+
+
+
+* 31.12.2020
+custom types in glade.
+
+you need to override the Gtk.Builder and one of
+it functions that will import and return the type
+representing custom type
+
+https://stackoverflow.com/questions/60126579/gtk-builder-error-quark-invalid-object-type-webkitwebview
+https://stackoverflow.com/questions/60126579/gtk-builder-error-quark-invalid-object-type-webkitwebview
+https://stackoverflow.com/questions/42516445/creating-gtk-applicationwindow-from-glade
+
+the way the copypaster is done, is good.
+
+somewhere I lost the extractor parts :/

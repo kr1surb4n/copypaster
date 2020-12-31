@@ -11,6 +11,11 @@ class NotebookStories:
 
     def save_notebook(self):
         # TODO: move this to FileCabinet
+        # this is bollocks
+        #
+        # notebook is the whole config
+        #
+        # current page is the deck.
         cabinet = __.FileCabinet
         cabinet.pages[cabinet.get_current_page()].save_grid()
 

@@ -31,3 +31,16 @@ button label {
 .gelb {
     background: #fce303;
 }
+
+
+
+.red {background: #f94144;}  /* control  */
+.orange {background: #f3722c;} 
+.yellow {background: #f8961e;} 
+.mango {background: #f9844a;} 
+.maize {background: #f9c74f;} /* exressions */
+.pistachio {background: #90be6d;} /* data structures  */ 
+.zomp {background: #43aa8b;} /* libraries */
+.blue {background: #4d908e;} 
+.queen {background: #577590;} 
+.cg {background: #277da1;}  /* code snippets */

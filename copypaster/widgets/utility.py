@@ -18,5 +18,5 @@ class AnAction(Gio.SimpleAction):
     def new(cls, name, parameter_type=None, callback=None):
         action = Gio.SimpleAction.new(name, parameter_type)
         action.enabled = True
-        action.connect("activate", callback)  # TODO check this code
+        action.connect("activate", callback)  # activate means mouse press
         return action

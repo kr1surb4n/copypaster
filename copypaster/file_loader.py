@@ -51,9 +51,9 @@ class Deck(YamlFile):
 
     def add_button(self, **kwargs):
         """Create button, add it to table and return it"""
-        log.debug(
-            "Adding button {}  {}".format(kwargs.get("name", ""), kwargs.get("value", ""))
-        )
+        # log.debug(
+        #     "Adding button {}  {}".format(kwargs.get("name", ""), kwargs.get("value", ""))
+        # )
         c = self.buttons.get(str(kwargs.get("value", None)), None)
         if c:
             raise IndexError("There is such a value")
@@ -128,10 +128,7 @@ def walk_branches(parent, parents, levels, tree_branch):  # and build tree repre
         log.debug("End of branch. Parent: %s" % parent)
         return None
 
-    log.debug(parent, tree_branch)
-
     for branch_name, lower_branches in tree_branch.items():
-        print(branch_name, lower_branches)
         levels[parent] += [branch_name]
         parents[branch_name] = parent
 

@@ -2,6 +2,10 @@
                 depends="gtk+" version="1.0">
 
     <glade-widget-classes>
+        <glade-widget-class title="MainWindow" name="MainWindow" 
+                            generic-name="MainWindow" parent="GtkApplicationWindow"
+                            icon-name="widget-gtk-applicationwindow"/>
+
         <glade-widget-class title="File Cabinet" name="FileCabinet" 
                             generic-name="FileCabinet" parent="GtkNotebook"
                             icon-name="widget-gtk-notebook"/>
@@ -20,6 +24,7 @@
     </glade-widget-classes>
 
     <glade-widget-group name="foo" title="Foo">
+        <glade-widget-class-ref name="MainWindow"/>
         <glade-widget-class-ref name="FileCabinet"/>
         <glade-widget-class-ref name="ButtonCollection"/>
         <glade-widget-class-ref name="ButtonGrid"/>
