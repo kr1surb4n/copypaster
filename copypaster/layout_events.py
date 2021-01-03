@@ -3,16 +3,19 @@ from copypaster.signal_bus import signal_bus
 from copypaster import log, State, AppState
 
 import gi
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk  # noqa
+
 
 class ToggleButtons:
     autosave = 'autosave'
     edit = 'edit'
     remove = 'remove'
-    
+
     def names(self):
         return [ToggleButtons.autosave, ToggleButtons.edit, ToggleButtons.remove]
+
 
 class LayoutEvents:
     def __init__(self):
@@ -30,8 +33,7 @@ class LayoutEvents:
             log.error("No value to save - aborting")
             return False
         signal_bus.emit("add_button", name, value)
-    
-    
+
     # menu
     def want_new_notebook(self, button):
         log.debug("Emitting new_notebook...")
@@ -50,11 +52,11 @@ class LayoutEvents:
         signal_bus.emit('save_notebook_as')
 
     def on_quit_app(self, *args):
-        __.Application.handle_quit('action','param')
-    
+        __.Application.handle_quit('action', 'param')
+
     def quit(self, *args):
         self.on_quit_app(*args)
-    
+
     # toolbar
     def _deactive_rest_buttons(self, leave_alone):
         builder = __.Builder
@@ -78,7 +80,7 @@ class LayoutEvents:
             AppState["app"] = State.NORMAL
             self.clip.disconnect(self.handle)
             log.debug("Autosave off")
-    
+
     def edit_on(self, button):
         self._deactive_rest_buttons(ToggleButtons.edit)
 
@@ -88,7 +90,7 @@ class LayoutEvents:
         else:
             AppState["app"] = State.NORMAL
             log.debug("Edit off")
-    
+
     def remove_on(self, button):
         self._deactive_rest_buttons(ToggleButtons.remove)
 
@@ -99,12 +101,13 @@ class LayoutEvents:
         else:
             AppState["app"] = State.NORMAL
             log.debug("Remove off")
-    
+
     def add(self, button):
         log.debug("Begin adding button")
         signal_bus.emit("open_add_button_dialog")
-    
+
     def remove_notebook(self, button, name):
         pass
+
 
 Layout_events = LayoutEvents()
