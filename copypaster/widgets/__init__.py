@@ -1,4 +1,3 @@
-from copypaster.widgets.notebooks import FileCabinet
 from copypaster.signal_bus import signal_bus
 
 from copypaster.register import Register as __, register_instance
@@ -76,7 +75,6 @@ class Application(Gtk.Application):
         __['MainWindow'].show_all()
 
         log.debug('Menu loaded...')
-
 
     def handle_quit(self, action, parameter):
         log.debug("Emitting quit...")
