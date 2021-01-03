@@ -1,6 +1,4 @@
 from copypaster.widgets.notebooks import FileCabinet
-from copypaster.widgets.statebuttons import StateButtons
-from copypaster.widgets.utility import AnAction
 from copypaster.signal_bus import signal_bus
 
 from copypaster.register import Register as __, register_instance
@@ -12,15 +10,6 @@ import gi
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
-
-
-def hello():
-    return "hello"
-
-
-def connect_storie(builder):
-    handlers = {"onDestroy": Gtk.main_quit, "onButtonPressed": hello}
-    builder.connect_signals(handlers)
 
 
 @register_instance
@@ -49,67 +38,13 @@ class MainWindow(Gtk.ApplicationWindow):
         __['calculated_height'] = self.calculated_height
 
 
-class AppCallbacks:
-    def _init_actions(self):
-        # this all is a lot of work, I would do something with it
-        actions = [
-            (
-                "new_notebook",
-                self.new_notebook,
-            ),
-            (
-                "open_notebook",
-                self.open_notebook,
-            ),
-            (
-                "save_notebook",
-                self.save_notebook,
-            ),
-            (
-                "save_notebook_as",
-                self.save_notebook_as,
-            ),
-            (
-                "quit",
-                self.handle_quit,
-            ),
-        ]
-
-        for action_name, callback in actions:
-            action = AnAction.new(action_name, None, callback)
-            self.add_action(action)
-
-    def new_notebook(self, action):
-        log.debug("Emitting new_notebook...")
-        signal_bus.emit('new_notebook')
-
-    def open_notebook(self, action):
-        log.debug("Emitting open_notebook...")
-        signal_bus.emit('open_notebook')
-
-    def save_notebook(self, action, asd):
-        log.debug("Emitting save_notebook...")
-        signal_bus.emit('save_notebook')
-
-    def save_notebook_as(self, action, asd):
-        log.debug("Emitting save_notebook_as...")
-
-    def handle_quit(self, action, parameter):
-        log.debug("Emitting quit...")
-
-        signal_bus.emit('quit')
-        self.quit()
-        log.debug("Goodbye! Application terminated.")
-
-
 @register_instance
-class Application(AppCallbacks, Gtk.Application):
+class Application(Gtk.Application):
 
     win = None
 
     def __init__(self):
         Gtk.Application.__init__(self)
-        self._init_actions()
 
         style_provider = Gtk.CssProvider()
         style_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
@@ -140,14 +75,13 @@ class Application(AppCallbacks, Gtk.Application):
         self.add_window(__['MainWindow'])
         __['MainWindow'].show_all()
 
-        # create a menu
-        # menu = Gio.Menu()
-        # # append to the menu three options
-        # menu.append("New notebook", "app.new_notebook")
-        # menu.append("Open notebook", "app.open_notebook")
-        # menu.append("Save notebook", "app.save_notebook")
-        # menu.append("Save notebook as", "app.save_notebook_as")
-        # menu.append("Quit", "app.quit")
-        # set the menu as menu of the application
-        # self.set_app_menu(menu)
         log.debug('Menu loaded...')
+
+
+    def handle_quit(self, action, parameter):
+        log.debug("Emitting quit...")
+
+        signal_bus.emit('quit')
+        self.quit()
+
+        log.debug("Goodbye! Application terminated.")

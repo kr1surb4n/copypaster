@@ -9,6 +9,9 @@ class LoadButtonDecks:
     def start_app(self):
         self.load_config()
 
+    def quit(self):
+        log.debug("Quitting...")
+
     def load_config(self):
         """Here we load dirty notes (first) and then the rest of the
         notes.

@@ -35,7 +35,7 @@
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <property name="label" translatable="yes">Quit</property>
-                        <signal name="activate" handler="on_quit_app" swapped="no"/>
+                        <signal name="activate" handler="handle_quit" swapped="no"/>
                       </object>
                     </child>
                   </object>
