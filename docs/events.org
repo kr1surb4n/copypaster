@@ -1,0 +1,49 @@
+* ButtonStories
+# contains the event handles => event name == event callback
+** add_button
+# event/handle
+*** DialogAdd: on_save
+# what emits
+*** StateButtonsCallbacks: auto_clipboard
+
+** edit_button
+*** CopyButton: on_button_click
+
+** remove_button
+*** CopyButton: on_button_click
+
+** open_add_button_dialog
+*** StateButtonsCallbacks: on_add
+
+* DisplayErrorDialog 
+** error_show_dialog
+*** DialogAdd: on_save
+
+* LoadButtonDecks 
+** start_app
+*** Application: do_activate
+** quit
+*** Application: handle_quit
+
+* OperateBranchGrids 
+** change_button_grid
+*** NavigateButton: on_button_click
+
+* NotebookStories
+** new_notebook
+*** AppCallbacks: new_notebook
+** open_notebook
+*** AppCallbacks: open_notebook
+** save_notebook
+*** AppCallbacks: save_notebook
+** save_notebook_as
+*** AppCallbacks: save_notebook_as
+
+* HowToCopyAMessage
+** copy
+*** CopyButton: on_button_click
+
+
+* NotConnected
+** autosave_on
+** autosave_off

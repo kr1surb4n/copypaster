@@ -118,6 +118,9 @@ class NavigationDeck:
     def get_buttons(self):
         return self.buttons.values()
 
+    def save_buttons(self):
+        pass
+
 
 def walk_branches(parent, parents, levels, tree_branch):  # and build tree representation
 
@@ -149,6 +152,8 @@ class DeckCollection(YamlFile):
 
         self.path = collection_file
         self.load(self.path)
+
+        self.save_path = self.contents.get("save_path")
 
         self.build_tree()
 

@@ -131,6 +131,10 @@ def main_function(config):
     Register['FileCabinet'] = builder.get_object("file_cabinet")
     Register['StateButtons'] = builder.get_object("toolbar")
 
+    from copypaster.layout_events import Layout_events
+    builder.connect_signals(Layout_events)
+
+    
     log.debug("Initializing services...")
     import copypaster.clipboard  # noqa
 
