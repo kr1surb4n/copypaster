@@ -5,10 +5,12 @@ import yaml
 import logging as l
 from lxml import etree
 from functools import partial
+import parser
 
 p = print
 
 slices = lambda sausage: sausage.split("/")
+file_xpath = lambda file: splitext(file)[0]
 
 convert_to_text = partial(etree.tostring, method="text", encoding="UTF-8")
 
@@ -28,10 +30,6 @@ PATTERN = HTMLS + "/**/*.html"
 REGISTER = {}
 
 
-# placeholder for button data
-Button = namedtuple(
-    'Button', ['name', 'value', 'info', 'click_count', 'tag'], defaults=["", 0, ""]
-)
 
 # placeholder for deck data
 class ButtonCard:
@@ -52,80 +50,7 @@ class ButtonCard:
         }
         # fmt: on
 
-
-def extract_content(file):
-    """
-
-    catgory = [name, filename]
-
-
-    for each dt
-        extract text
-        use text as (value, name) for button
-
-
-    for each code
-        extract text
-        use code as (value, name) for button
-
-    yield section_name, ButtonCard(buttons = dt + code)
-    """
-
-    _, _, filename = slices(file)
-
-    l.info("Reading file to tree")
-    try:
-        content_tree = etree.HTML(read(file))
-    except Exception as e:
-        l.debug(e)
-        raise e
-
-    # for each section
-    for deck in content_tree.xpath("//*[@class='section']"):
-
-        #  section_name = find_first_header in section
-        title = ""
-        for h in deck.iter('h1', 'h2', 'h3', 'h4'):
-            title = h.text
-            break
-
-        # extract all dt
-        definitions = [convert_to_text(dt) for dt in deck.xpath('//dt')]
-
-        # extract all code
-        codes = [
-            convert_to_text(code) for code in deck.xpath("//div[@class='highlight']/pre")
-        ]
-
-    return [Button(filename, filename)._asdict()]
-
-
-def add_to_register(file):
-    l.info("Begining content extraction")
-
-    _, folder, filename = slices(file)
-
-    name = splitext(filename)[0]
-
-    if folder not in REGISTER:
-        REGISTER[folder] = {}
-
-    if name not in REGISTER[folder]:
-        REGISTER[folder][name] = {}
-
-    content = extract_content(file)
-
-    # TODO this will go somewhere else soon
-    card = ButtonCard(name, [name])
-    card.buttons = content
-
-    # TODO this also will go away
-    REGISTER[folder][name] = card._to_dict_()
-
-
-if __name__ == "__main__":
-    l.info("Running main")
-
+def collections_from_files():
     for file in glob.glob(PATTERN, recursive=True):
         if isdir(file):  # we dont do stuff to folders
             continue
@@ -136,7 +61,25 @@ if __name__ == "__main__":
             l.info("Oh no! I don't like this file! It's in root!")
             continue
 
-        add_to_register(file)
+        content_tree = parser.load_tree(file)
+        del content_tree
+        yield file_xpath(file), parser.collection(content_tree)
+
+
+if __name__ == "__main__":
+    l.info("Running main")
+
+    for xpath, collection in collections_from_files():
+        collection_folder = xpath.replace("/", "_")
+        collection_save_path = SAVE_PATH + "/" + collection_folder
+        
+        if path_not_exists(collection_save_path):
+            mkdir(collection_save_path)
+        
+        id, name, decks, decks_tree = collection
+        decks = [(deck.id, deck.name, deck.save_as_yaml(collection_save_path)) for deck in decks]
+
+        REGISTER[xpath] = (id, name, decks_tree, decks)
 
     """
         Output parsed stuff
@@ -146,4 +89,18 @@ if __name__ == "__main__":
 
     dumps = yaml.dump(REGISTER)
 
-    # p(dumps)
+    p(dumps)
+
+
+
+
+def test_helpers():
+    import pytest
+
+    assert read(".test_target") == "test\n"
+
+    assert 2 == len(slices("0/1"))
+    assert 0 == int(slices("0/1")[0])
+    assert 1 == int(slices("0/1")[1])
+
+
