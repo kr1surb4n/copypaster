@@ -1,7 +1,6 @@
 from app.register import Register as __
-from app.signal_bus import signal_bus, subscribe
+from app.signal_bus import subscribe
 from copypaster.widgets.dialogs import DialogError
-
 
 
 @subscribe

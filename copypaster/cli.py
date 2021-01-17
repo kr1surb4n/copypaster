@@ -1,10 +1,9 @@
 # -*- coding: utf-8 -*-
 
 """Console script for copypaster."""
-import os
 import sys
 import click
-from copypaster import log, PROJECT_DIR
+from copypaster import log
 
 
 from copypaster.copypaster import main_function
@@ -20,7 +19,7 @@ def main(config):
     """Console script for copypaster."""
     log.info("Started CopyPaster")
     log.info("copypaster.cli.main")
-    
+
     try:
         pass
         main_function(config)

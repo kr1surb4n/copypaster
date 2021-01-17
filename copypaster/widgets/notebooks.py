@@ -1,7 +1,7 @@
 from copypaster import log
 from app.register import register_instance
 from copypaster.file_loader import DeckCollection, NavigationDeck
-from copypaster.widgets.utility import wrap
+from app.widgets.utility import wrap
 from copypaster.widgets.buttons import NavigateButton
 
 

@@ -1,5 +1,5 @@
 from app.register import Register as __
-from app.signal_bus import emit, subscribe
+from app.signal_bus import subscribe
 
 
 @subscribe
