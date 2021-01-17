@@ -22,6 +22,7 @@ def not_implemented(event_name):
 
     return wrapps
 
+
 class Signals(dict):
     def __getattr__(self, name):
         return self[name]
@@ -32,6 +33,10 @@ class SignalBus:
     def __init__(self):
         # super().__init__()
         self.receivers = {}
+
+    def unsubscribe(self, event_name):
+        if event_name in self.receivers:
+            del self.receivers[event_name]
 
     def subscribe(self, event_name, callback):
         if event_name not in self.receivers:
@@ -53,12 +58,14 @@ class SignalBus:
         except Exception as e:
             log.critical(str(e))
             raise e
-        
+
         return True
+
 
 signal_bus = SignalBus()
 
 signals = Signals()
+
 
 def make_subscribe(signals, signal_bus):
     def subscriber(func):
@@ -66,16 +73,22 @@ def make_subscribe(signals, signal_bus):
         signals[func.__name__] = func.__name__
 
         return func
+
     return subscriber
 
+
 subscribe = make_subscribe(signals, signal_bus)
+
 
 def make_emit(signal_bus):
     def emiter(event, *args, **kwargs):
         return signal_bus.emit(event, *args, **kwargs)
+
     return emiter
 
+
 emit = make_emit(signal_bus)
+
 
 def test_signals():
 
@@ -97,7 +110,7 @@ def test_signals():
     assert signals.name != signals.second_name
 
     counter = 1
-    
+
     @subscribe
     def count():
         nonlocal counter
@@ -105,7 +118,7 @@ def test_signals():
         return counter
 
     assert counter == 1
-    
+
     # subscribe works
     assert signals.count == 'count'
 

@@ -9,9 +9,6 @@ from gi.repository import Gtk, Gdk  # noqa
 
 
 class LayoutEvents:
-    def __init__(self):
-        self.handle = None
-
     def about_button(self):
         pass
 

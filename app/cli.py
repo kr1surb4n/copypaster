@@ -8,6 +8,7 @@ from app import log, PROJECT_DIR
 from app.main import main_function
 
 from os.path import expanduser
+
 default_config_path = expanduser("~/.config/app.conf")
 
 

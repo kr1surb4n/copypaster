@@ -11,15 +11,15 @@ def main_function(config_file):
     # running the program
     log.debug("Initializing services...")
 
-    from app.config import config   # noqa
-    config.load_config_file(config_file)
-    
-    from app.widgets import application  # noqa
-    import app.style # noqa
+    from app.config import config  # noqa
 
+    config.load_config_file(config_file)
+
+    from app.widgets import application  # noqa
+    import app.style  # noqa
 
     log.debug("Loading Widgets usig GtkBuilder...")
-    from app.builder import builder     # noqa
+    from app.builder import builder  # noqa
 
     builder.set_application(application)  # works without it
     builder.add_from_file(os.path.join(CURRENT_DIR, "layout.glade"))
@@ -28,9 +28,9 @@ def main_function(config_file):
     __.welcome_sign = builder.get_object("welcome_sign")
 
     from app.layout_events import Layout_events
+
     builder.connect_signals(Layout_events)
 
-    
     log.debug("Importing stories...")
     import app.stories  # noqa
 
@@ -39,7 +39,6 @@ def main_function(config_file):
 
     log.debug("Returning exit status value...")
     return exit_status
-
 
 
 def test_main_function():
@@ -53,7 +52,7 @@ def test_main_function():
     sleep(2)
     print(dir(tested_thread))
     global __
-    
+
     assert tested_thread.is_alive()
     assert __.Config
     assert __.SignalBus
