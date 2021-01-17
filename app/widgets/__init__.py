@@ -20,8 +20,12 @@ class Application(Gtk.Application):
         log.debug("Lift off!")
 
         log.debug("App state NORMAL")
-        AppState['app'] = State.NORMAL  # TODO: take out common from Register, signal_bus and make AppState out of it
-        
+        AppState[
+            'app'
+        ] = (
+            State.NORMAL
+        )  # TODO: take out common from Register, signal_bus and make AppState out of it
+
         log.debug("Emitting start_app...")
         emit('start_app')
 
