@@ -6,6 +6,7 @@ import configparser
 from copypaster import log
 from app.config import Config
 from app.register import register_instance, Register as __
+
 """ Initialize services """
 
 import gi
@@ -31,10 +32,10 @@ class GtkBuilder(Gtk.Builder):
             pass
             # return MainWindow  - in normal use, Type should be returned
 
-
         r = Gtk.Builder.do_get_type_from_name(self, type_name)
         print('GtkBuilder: => {}\t{}'.format(type_name, r))
         return r
+
 
 builder = GtkBuilder()
 __.builder = builder

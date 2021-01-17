@@ -16,12 +16,13 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
 # TODO change name to 'log'
-log = logging.getLogger("CopyPaster")
+log = logging.getLogger("Kr15 App")
 log.setLevel(logging.DEBUG)
 
 
 class State(dict):
     NORMAL = "NORMAL"
+
 
 # SET INITIAL STATE
 AppState = {"app": State.NORMAL}  # global application state

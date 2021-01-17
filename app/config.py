@@ -3,9 +3,9 @@ import os
 import configparser
 
 from app import log
-from app.register import register_instance
+from app.register import Register as __
 
-@register_instance
+
 class Config:
     cfg = None
 
@@ -19,7 +19,7 @@ class Config:
         3. From provided config file path
         4. It will load without conifg
         """
-        
+
         log.debug("Initializing config...")
         config_env = os.environ.get("COPYPASTER_CONFIG", None)
 
@@ -29,11 +29,13 @@ class Config:
             config = config_file
         else:
             config = "i_am_non_existent"
-            
+
         self.cfg = configparser.ConfigParser()
         self.cfg.read(config)
 
     def load_config_file(self, filename):
         self.cfg.read(filename)
 
+
 config = Config()
+__.Config = config

@@ -31,13 +31,17 @@ class ObjectRegister(dict):
 
 Register = ObjectRegister()
 
+
 def make_register(Register):
     def registrar(object):
         Register[object.__name__] = object
         return object
+
     return registrar
 
+
 register = make_register(Register)
+
 
 def register_instance(cls):
     """This decorator adds an object instance when the object
@@ -84,6 +88,7 @@ def test_object_register():
         return i
 
     assert o_reg.number(2) == 2
+
 
 def test_decorator():
     """Next lets see if the register_instance works"""
