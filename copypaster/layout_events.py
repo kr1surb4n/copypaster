@@ -1,6 +1,7 @@
-from copypaster.register import Register as __
-from copypaster.signal_bus import signal_bus
+from app.register import Register as __
+from app.signal_bus import emit
 from copypaster import log, State, AppState
+from app.layout_events import LayoutEvents  # noqa
 
 import gi
 
@@ -17,7 +18,7 @@ class ToggleButtons:
         return [ToggleButtons.autosave, ToggleButtons.edit, ToggleButtons.remove]
 
 
-class LayoutEvents:
+class CopyPasterLayoutEvents(LayoutEvents):
     def __init__(self):
         self.clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         self.handle = None
@@ -32,30 +33,24 @@ class LayoutEvents:
         if not value:
             log.error("No value to save - aborting")
             return False
-        signal_bus.emit("add_button", name, value)
+        emit("add_button", name, value)
 
     # menu
     def want_new_notebook(self, button):
         log.debug("Emitting new_notebook...")
-        signal_bus.emit('new_notebook')
+        emit('new_notebook')
 
     def want_open_notebook(self, button):
         log.debug("Emitting open_notebook...")
-        signal_bus.emit('open_notebook')
+        emit('open_notebook')
 
     def want_save_notebook(self, button):
         log.debug("Emitting save_notebook...")
-        signal_bus.emit('save_notebook')
+        emit('save_notebook')
 
     def want_saveas_notebook(self, button):
         log.debug("Emitting save_notebook_as...")
-        signal_bus.emit('save_notebook_as')
-
-    def on_quit_app(self, *args):
-        __.Application.handle_quit('action', 'param')
-
-    def quit(self, *args):
-        self.on_quit_app(*args)
+        emit('save_notebook_as')
 
     # toolbar
     def _deactive_rest_buttons(self, leave_alone):
@@ -71,12 +66,12 @@ class LayoutEvents:
 
         if button.get_active():
             AppState["app"] = State.AUTOSAVE
-            signal_bus.emit("autosave_on")
+            emit("autosave_on")
 
             self.handle = self.clip.connect("owner-change", self.auto_clipboard)
             log.debug("Autosave on")
         else:
-            signal_bus.emit("autosave_off")
+            emit("autosave_off")
             AppState["app"] = State.NORMAL
             self.clip.disconnect(self.handle)
             log.debug("Autosave off")
@@ -104,10 +99,10 @@ class LayoutEvents:
 
     def add(self, button):
         log.debug("Begin adding button")
-        signal_bus.emit("open_add_button_dialog")
+        emit("open_add_button_dialog")
 
     def remove_notebook(self, button, name):
         pass
 
 
-Layout_events = LayoutEvents()
+Layout_events = CopyPasterLayoutEvents()

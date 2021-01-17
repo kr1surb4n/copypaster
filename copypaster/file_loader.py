@@ -140,6 +140,7 @@ def walk_branches(parent, parents, levels, tree_branch):  # and build tree repre
 
     return None
 
+
 def describe_tree(tree):
     branch_decks = {}
     parents = {}
@@ -151,6 +152,7 @@ def describe_tree(tree):
     parents["root"] = None
 
     return branch_decks, parents, levels
+
 
 # Collection
 class DeckCollection(YamlFile):
