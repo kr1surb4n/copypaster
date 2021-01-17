@@ -11,6 +11,7 @@ from gi.repository import Gtk, Gdk, Gio  # noqa
 
 default_provider = Gtk.CssProvider()
 
+
 @subscribe
 def load_default_styles():
     global default_provider
@@ -22,10 +23,13 @@ def load_default_styles():
         Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
     )
 
+
 @subscribe
 def reload_default_styles():
     global default_provider
-    Gtk.StyleContext.remove_provider_for_screen(Gdk.Screen.get_default(), default_provider)
+    Gtk.StyleContext.remove_provider_for_screen(
+        Gdk.Screen.get_default(), default_provider
+    )
 
     default_provider = Gtk.CssProvider()
     default_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
