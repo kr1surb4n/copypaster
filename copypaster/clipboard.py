@@ -1,5 +1,5 @@
 import xerox
-from copypaster.register import register_instance
+from app.register import register_instance
 from copypaster import log
 
 # This is an abstraction for the actions

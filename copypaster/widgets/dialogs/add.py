@@ -1,7 +1,7 @@
 from copypaster.widgets.utility import wrap
 from copypaster import log
-from copypaster.register import Register as __
-from copypaster.signal_bus import signal_bus
+from app.register import Register as __
+from app.signal_bus import emit
 
 
 import gi
@@ -79,6 +79,6 @@ class DialogAdd(Gtk.Dialog):
             name = value
 
         log.debug("Adding new button to a file cabinet...")
-        signal_bus.emit("add_button", name, value)
+        emit("add_button", name, value)
 
         self.destroy()

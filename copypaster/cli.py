@@ -5,9 +5,13 @@ import os
 import sys
 import click
 from copypaster import log, PROJECT_DIR
+
+
 from copypaster.copypaster import main_function
 
-default_config_path = os.path.join(PROJECT_DIR, "config/example.conf")
+from os.path import expanduser
+
+default_config_path = expanduser("~/.config/app.conf")
 
 
 @click.command()
@@ -16,8 +20,15 @@ def main(config):
     """Console script for copypaster."""
     log.info("Started CopyPaster")
     log.info("copypaster.cli.main")
+    
+    try:
+        pass
+        main_function(config)
+    except Exception as e:
+        log.critical(str(e))
+        return 1
 
-    return main_function(config)
+    return 0
 
 
 if __name__ == "__main__":

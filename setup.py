@@ -37,10 +37,7 @@ setup(
     ],
     description="Copypaster - a tool for copy and paste build using Python and GTK3",
     entry_points={
-        "console_scripts": [
-            "copypaster=copypaster.cli:main",
-            "app=app.cli:main"
-        ],
+        "console_scripts": ["copypaster=copypaster.cli:main", "app=app.cli:main"],
     },
     install_requires=requirements,
     license="MIT license",

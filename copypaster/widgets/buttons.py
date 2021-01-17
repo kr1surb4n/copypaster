@@ -1,7 +1,7 @@
 from copypaster import log, State, AppState
-from copypaster.signal_bus import signal_bus
+from app.signal_bus import emit
 import hashlib
-from copypaster.register import Register as __
+from app.register import Register as __
 import gi
 
 gi.require_version("Gtk", "3.0")
@@ -90,16 +90,16 @@ class CopyButton(Gtk.Button):
 
         if state == State.REMOVE:
             log.debug("Removing button...")
-            signal_bus.emit("remove_button", self)
+            emit("remove_button", self)
 
         if state in [State.NORMAL, State.AUTOSAVE]:
             log.debug("Coping value...")
             self.click_count += 1
-            signal_bus.emit("copy", button.value)
+            emit("copy", button.value)
 
         if state == State.EDIT:
             log.debug("Editing button...")
-            signal_bus.emit("edit_button", self)
+            emit("edit_button", self)
 
 
 class NavigateButton(Gtk.Button):
@@ -128,7 +128,7 @@ class NavigateButton(Gtk.Button):
     def on_button_click(self, button):
         log.debug("Navigating...")
 
-        signal_bus.emit("change_button_grid", self.report_to, self.current, self.target)
+        emit("change_button_grid", self.report_to, self.current, self.target)
 
 
 class PasteButton(Gtk.Button):

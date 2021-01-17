@@ -1,10 +1,8 @@
-from copypaster.register import Register as __
-from copypaster.signal_bus import signal_bus
+from app.register import Register as __
+from app.signal_bus import subscribe
 
 
-class HowToCopyAMessage:
-    def copy(self, message):
-        __.Jimmy.send(message)
 
-
-signal_bus.subscribe("copy", HowToCopyAMessage())
+@subscribe
+def copy(message):
+    __.Jimmy.send(message)
