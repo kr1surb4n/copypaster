@@ -5,19 +5,6 @@ from copypaster.widgets.dialogs import DialogAdd, DialogEdit
 
 
 class ButtonStories:
-    def __init__(
-        self,
-    ):
-        [
-            signal_bus.subscribe(event, self)
-            for event in [
-                "add_button",
-                "edit_button",
-                "remove_button",
-                "open_add_button_dialog",
-            ]
-        ]
-
     def edit_button(self, button_to_edit):
         dialog = DialogEdit(__.Application.win, button_to_edit)
         dialog.run()
@@ -52,3 +39,7 @@ class ButtonStories:
 
 
 button_stories = ButtonStories()
+signal_bus.subscribe("add_button", button_stories)
+signal_bus.subscribe("edit_button", button_stories)
+signal_bus.subscribe("remove_button", button_stories)
+signal_bus.subscribe("open_add_button_dialog", button_stories)

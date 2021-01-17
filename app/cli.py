@@ -1,22 +1,31 @@
 # -*- coding: utf-8 -*-
 
-"""Console script for copypaster."""
+"""Console script for app."""
 import os
 import sys
 import click
-from copypaster import log, PROJECT_DIR
-from copypaster.copypaster import main_function
+from app import log, PROJECT_DIR
+from app.main import main_function
 
-default_config_path = os.path.join(PROJECT_DIR, "config/example.conf")
+from os.path import expanduser
+default_config_path = expanduser("~/.config/app.conf")
 
 
 @click.command()
 @click.option("--config", default=default_config_path)
 def main(config):
-    """Console script for copypaster."""
-    log.info("Started CopyPaster")
+    """Console script for app."""
+    log.info("Started Kr15 Gtk App")
+    log.info("app.cli.main")
 
-    return main_function(config)
+    try:
+        pass
+        main_function(config)
+    except Exception as e:
+        log.critical(str(e))
+        return 1
+
+    return 0
 
 
 if __name__ == "__main__":

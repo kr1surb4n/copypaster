@@ -1,0 +1,30 @@
+# -*- coding: utf-8 -*-
+import os
+import configparser
+
+from copypaster import log
+from copypaster.register import register_instance
+
+@register_instance
+class Config:
+    cfg = None
+
+    def __init__(self, config_file=None):
+        """Load the config file.
+
+        Order of resoliving the path of config file:
+
+        1. Path in env variable COPYPASTER_CONFIG
+        2. Provided config file path
+        """
+        
+        log.debug("Initializing config...")
+        config_env = os.environ.get("COPYPASTER_CONFIG", None)
+
+        if config_env is not None:
+            config = config_env
+        elif config_file is not None:
+            config = config_file
+
+        self.cfg = configparser.ConfigParser()
+        self.cfg.read(config)
