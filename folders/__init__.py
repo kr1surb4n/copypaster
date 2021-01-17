@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-"""Top-level package for Folders."""
+"""Top-level package for Copypaster."""
 
 # Hello!
 __author__ = """Przemek Kot"""
-__email__ = "kris@whereibend.space"
+__email__ = "kris@plumplum.space"
 __version__ = "0.1.0"
 
+from functools import wraps
 import logging
 import os
 
@@ -14,15 +15,9 @@ import os
 CURRENT_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
-# initialize log
-# TODO change name to 'log'
-log = logging.getLogger("Foolders")
+# initialize logger
+log = logging.getLogger("Folders")
 log.setLevel(logging.DEBUG)
-
-ch = logging.StreamHandler()
-ch.setLevel(logging.DEBUG)
-
-log.addHandler(ch)
 
 
 class State(dict):
@@ -34,3 +29,21 @@ class State(dict):
 
 # SET INITIAL STATE
 AppState = {"app": State.NORMAL}  # global application state
+
+
+dupa_counter = 1
+
+
+def dupa():
+    global dupa_counter
+    print(f"DUPA {dupa_counter}")
+    dupa_counter += 1
+
+
+def decorate_with_dupa(func):
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        dupa()
+        return func(*args, **kwargs)
+
+    return wrapper
