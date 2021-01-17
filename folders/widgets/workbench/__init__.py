@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from folders import log
-from folders.register import register_instance
+from app.register import register_instance, Register as __
 
 
 import gi
@@ -39,9 +39,11 @@ class Workbench(Gtk.Box):
         log.info("Loading Workbench")
         canvas = Canvas()
         view = GtkView()
+        __.canvas = canvas
+        __.view = view
         view.painter = DefaultPainter()
         view.canvas = canvas
-        self.pack_start(view, True, True, 0)
+        self.pack_start(view, True, True, 20)
 
         # Draw first gaphas box
         b1 = Box(60, 60)
@@ -74,7 +76,7 @@ class Workbench(Gtk.Box):
         # self.connect('clicked', self.on_field_click)
         # "set-focus-child" container, widget
         self.connect("focus", self.on_field_click)
-        self.view.connect("clicked", self.on_field_click_2)
+        # view.connect("clicked", self.on_field_click_2)
 
         # musze zrobic swojego toola
 
