@@ -39,6 +39,7 @@ setup(
     entry_points={
         "console_scripts": [
             "copypaster=copypaster.cli:main",
+            "app=app.cli:main"
         ],
     },
     install_requires=requirements,

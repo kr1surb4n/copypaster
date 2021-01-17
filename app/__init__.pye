@@ -19,6 +19,11 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 log = logging.getLogger("CopyPaster")
 log.setLevel(logging.DEBUG)
 
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+
+log.addHandler(ch)
+
 
 class State(dict):
     NORMAL = "NORMAL"

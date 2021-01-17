@@ -1,5 +1,6 @@
-from copypaster.register import register_instance
-from copypaster import log
+from app.register import register_instance
+from app import log
+import functools
 
 """
 SignalBus
@@ -21,11 +22,9 @@ def not_implemented(event_name):
 
     return wrapps
 
-
-class Signal:
-    edit_button = "edit_button"
-    copy = "copy"
-    remove_button = "remove_button"
+class Signals(dict):
+    def __getattr__(self, name):
+        return self[name]
 
 
 @register_instance
@@ -34,19 +33,11 @@ class SignalBus:
         # super().__init__()
         self.receivers = {}
 
-    def register(self, _object, *events):
-        """Helper function to register whole object with all
-        the events"""
-        for event in events:
-            self.subscribe(event, _object)
-
-    def subscribe(self, event_name, _object):
+    def subscribe(self, event_name, callback):
         if event_name not in self.receivers:
             self.receivers[event_name] = []
 
-        self.receivers[event_name] += [
-            getattr(_object, event_name, not_implemented(event_name))
-        ]
+        self.receivers[event_name] += [callback]
 
     def emit(self, event_name, *args, **kwargs):
 
@@ -56,10 +47,82 @@ class SignalBus:
         if receivers is None:
             return False
 
-        [callback(*args, **kwargs) for callback in receivers]
-
+        try:
+            # TODO: add async
+            [callback(*args, **kwargs) for callback in receivers]
+        except Exception as e:
+            log.critical(str(e))
+            raise e
+        
+        return True
 
 signal_bus = SignalBus()
+
+signals = Signals()
+
+def make_subscribe(signals, signal_bus):
+    def subscriber(func):
+        signal_bus.subscribe(func.__name__, func)
+        signals[func.__name__] = func.__name__
+
+        return func
+    return subscriber
+
+subscribe = make_subscribe(signals, signal_bus)
+
+def make_emit(signal_bus):
+    def emiter(event, *args, **kwargs):
+        return signal_bus.emit(event, *args, **kwargs)
+    return emiter
+
+emit = make_emit(signal_bus)
+
+def test_signals():
+
+    signals = Signals()
+    signal_bus = SignalBus()
+
+    subscribe = make_subscribe(signals, signal_bus)
+
+    name = 'name'
+    second_name = 'second_name'
+    value = 1
+    second_value = 2
+
+    signals[name] = value
+    signals[second_name] = second_value
+
+    assert signals.name == value
+    assert signals.second_name == second_value
+    assert signals.name != signals.second_name
+
+    counter = 1
+    
+    @subscribe
+    def count():
+        nonlocal counter
+        counter += 1
+        return counter
+
+    assert counter == 1
+    
+    # subscribe works
+    assert signals.count == 'count'
+
+    # subscribe didn't run the function
+    assert counter == 1  # a sanity check
+
+    # count work
+    assert count() == 2
+    assert counter == 2
+
+    assert signal_bus.emit(signals.count)
+    assert counter == 3
+
+    emit = make_emit(signal_bus)
+
+    assert emit(signals.count)
+    assert counter == 4
 
 
 def test_signal_bus():
@@ -87,17 +150,14 @@ def test_signal_bus():
 
     sbus = SignalBus()
 
-    sbus.subscribe(test_event, success)
-    sbus.emit(test_event)
+    sbus.subscribe(test_event, success.test_event)
+    assert sbus.emit(test_event)
 
     assert success.x == 1
 
     import pytest
 
-    with pytest.raises(NotImplementedError):
-        sbus.subscribe(test_error, success)
-
-    sbus.subscribe(test_event, second)
+    sbus.subscribe(test_event, second.test_event)
     sbus.emit(test_event)
 
     assert second.y == 1
