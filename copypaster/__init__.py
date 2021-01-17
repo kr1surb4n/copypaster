@@ -6,7 +6,7 @@
 __author__ = """Przemek Kot"""
 __email__ = "kris@plumplum.space"
 __version__ = "0.1.0"
-
+from functools import wraps
 import logging
 import os
 
@@ -32,14 +32,17 @@ AppState = {"app": State.NORMAL}  # global application state
 
 dupa_counter = 1
 
+
 def dupa():
-   global dupa_counter
-   print(f"DUPA {dupa_counter}")
-   dupa_counter += 1
+    global dupa_counter
+    print(f"DUPA {dupa_counter}")
+    dupa_counter += 1
+
 
 def decorate_with_dupa(func):
-   @wraps(func)
-   def wrapper(*args, **kwargs):
-   	dupa()
-   	return func(*args, **kwargs)
-   return wrapps
+    @wraps(func)
+    def wrapper(*args, **kwargs):
+        dupa()
+        return func(*args, **kwargs)
+
+    return wrapper

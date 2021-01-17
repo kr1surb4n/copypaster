@@ -1,4 +1,4 @@
-from copypaster.widgets.utility import wrap
+from app.widgets.utility import wrap
 from copypaster import log
 from app.register import Register as __
 from app.signal_bus import emit
@@ -70,9 +70,7 @@ class DialogAdd(Gtk.Dialog):
 
         if not value:
             log.error("No value to save - aborting")
-            signal_bus.emit(
-                "error_show_dialog", "Soo, the value is missing, it's required."
-            )
+            emit("error_show_dialog", "Soo, the value is missing, it's required.")
             return False
 
         if not name:

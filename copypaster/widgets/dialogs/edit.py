@@ -1,4 +1,4 @@
-from copypaster.widgets.utility import wrap
+from app.widgets.utility import wrap
 from copypaster import log
 
 import gi

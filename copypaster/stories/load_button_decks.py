@@ -1,5 +1,6 @@
 from app.register import Register as __
-from copypaster import log
+from copypaster import log, PROJECT_DIR
+import os
 from app.signal_bus import emit, subscribe
 from copypaster.file_loader import Deck
 from copypaster.widgets.notebooks import ButtonGrid, ButtonCollection
@@ -8,10 +9,13 @@ from copypaster.widgets.notebooks import ButtonGrid, ButtonCollection
 @subscribe
 def start_app():
     load_config()
+    emit('load_style', os.path.join(PROJECT_DIR, "copypaster", "app.css"))
+
 
 @subscribe
 def quit():
     log.debug("Quitting...")
+
 
 def load_config():
     """Here we load dirty notes (first) and then the rest of the
@@ -79,6 +83,7 @@ def set_visibility_on_collections(collections):
     for collection in collections:
         collection.hide_all_grids()
         collection.show_root()
+
 
 @subscribe
 def change_button_grid(report_to, current, target):

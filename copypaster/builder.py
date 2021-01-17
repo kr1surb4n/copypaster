@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
-import sys
-import os
-
 from copypaster import log
-from app.register import register_instance, Register as __
+from app.register import Register as __
 
 """ Initialize services """
 
@@ -34,11 +31,11 @@ class GtkBuilder(Gtk.Builder):
         if type_name == 'FileCabinet':
             return FileCabinet
 
-
         r = Gtk.Builder.do_get_type_from_name(self, type_name)
         print('GtkBuilder: => {}\t{}'.format(type_name, r))
         return r
 
 
+log.info("Starting builder")
 builder = GtkBuilder()
 __.builder = builder

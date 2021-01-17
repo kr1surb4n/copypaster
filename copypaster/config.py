@@ -3,7 +3,6 @@ from app.register import Register as __
 
 
 class CopyConfig(Config):
-    
     def get_dirty_deck(self):
         try:
             main = self.cfg["main"]
@@ -30,5 +29,6 @@ class CopyConfig(Config):
         except IndexError as _e:  # well, it's python. what did you exepect?
             print(_e)
             raise _e
+
 
 __.Config = CopyConfig()
