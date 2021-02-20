@@ -30,7 +30,6 @@ PATTERN = HTMLS + "/**/*.html"
 REGISTER = {}
 
 
-
 # placeholder for deck data
 class ButtonCard:
     def __init__(self, name, category):
@@ -49,6 +48,7 @@ class ButtonCard:
             'info': self.info
         }
         # fmt: on
+
 
 def collections_from_files():
     for file in glob.glob(PATTERN, recursive=True):
@@ -72,12 +72,15 @@ if __name__ == "__main__":
     for xpath, collection in collections_from_files():
         collection_folder = xpath.replace("/", "_")
         collection_save_path = SAVE_PATH + "/" + collection_folder
-        
+
         if path_not_exists(collection_save_path):
             mkdir(collection_save_path)
-        
+
         id, name, decks, decks_tree = collection
-        decks = [(deck.id, deck.name, deck.save_as_yaml(collection_save_path)) for deck in decks]
+        decks = [
+            (deck.id, deck.name, deck.save_as_yaml(collection_save_path))
+            for deck in decks
+        ]
 
         REGISTER[xpath] = (id, name, decks_tree, decks)
 
@@ -92,8 +95,6 @@ if __name__ == "__main__":
     p(dumps)
 
 
-
-
 def test_helpers():
     import pytest
 
@@ -102,5 +103,3 @@ def test_helpers():
     assert 2 == len(slices("0/1"))
     assert 0 == int(slices("0/1")[0])
     assert 1 == int(slices("0/1")[1])
-
-

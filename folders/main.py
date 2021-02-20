@@ -39,7 +39,7 @@ def main_function(config_file):
     __.main_box = builder.get_object("main_box")
 
     welcome_sing = builder.get_object("welcome_sign")
-    __.main_box.remove(welcome_sing)
+    __.main_box.remove(welcome_sing)  # TODO: why?
 
     # load the events
     from folders.layout_events import Layout_events  # noqa
