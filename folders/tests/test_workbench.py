@@ -19,22 +19,18 @@ def test_build_elements():
 
 
 def test_object_register():
-    container_one = Container(key="one", 
-                              value="puma",
-                              box=Rectangle(0, 0, 20, 20),
-                              element=Box)
-    container_two = Container(key="two", 
-                            value="bunny",
-                            box=Rectangle(0, 5, 10, 10),
-                            element=Box)
-    container_three = Container(key="three", 
-                            value="bear",
-                            box=Rectangle(5, 5, 10, 2),
-                            element=Box)
-    container_far = Container(key="far", 
-                        value="bat",
-                        box=Rectangle(100, 100, 20, 20),
-                        element=Box)                                                
+    container_one = Container(
+        key="one", value="puma", box=Rectangle(0, 0, 20, 20), element=Box
+    )
+    container_two = Container(
+        key="two", value="bunny", box=Rectangle(0, 5, 10, 10), element=Box
+    )
+    container_three = Container(
+        key="three", value="bear", box=Rectangle(5, 5, 10, 2), element=Box
+    )
+    container_far = Container(
+        key="far", value="bat", box=Rectangle(100, 100, 20, 20), element=Box
+    )
 
     viewport = Rectangle(-5, -5, 40, 40)
 
@@ -53,7 +49,7 @@ def test_object_register():
     assert index[id(container_one)] != container_two
     assert index[id(container_one)] != container_three
     assert index[id(container_one)] != container_far
-    
+
     visible_object = index.get_visible_objects(viewport)
 
     assert container_one in visible_object

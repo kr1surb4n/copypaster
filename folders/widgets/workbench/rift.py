@@ -15,5 +15,6 @@ INITIAL_FOLDER = "/home/kris/workshops/tools/copypaster"
 def get_files_in_folder(path):
     return os.scandir(path)
 
+
 def obtain_values():
     return list(get_files_in_folder(INITIAL_FOLDER))

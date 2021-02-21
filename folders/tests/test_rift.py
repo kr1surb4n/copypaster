@@ -11,6 +11,7 @@ from folders.widgets.workbench.rift import (
     INITIAL_FOLDER,
 )
 
+
 def test_get_files_in_folder():
     files = get_files_in_folder(INITIAL_FOLDER)
 
@@ -18,6 +19,3 @@ def test_get_files_in_folder():
         f.write(repr(list(files)))
 
     assert files is not []
-
-
-

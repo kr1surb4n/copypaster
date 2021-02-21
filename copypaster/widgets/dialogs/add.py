@@ -3,7 +3,6 @@ from copypaster import log
 from app.register import Register as __
 from app.signal_bus import emit
 
-
 import gi
 
 gi.require_version("Gtk", "3.0")
