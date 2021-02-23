@@ -8,3 +8,5 @@ gaphas
 pycairo
 future
 singledispatch
+
+astor
