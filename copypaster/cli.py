@@ -10,7 +10,7 @@ from copypaster.copypaster import main_function
 
 from os.path import expanduser
 
-default_config_path = expanduser("~/.config/app.conf")
+default_config_path = expanduser("~/.config/copypaster.conf")
 
 
 @click.command()
