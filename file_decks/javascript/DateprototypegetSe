@@ -1,0 +1,2 @@
+# name: DateprototypegetSe 
+Date.prototype.getSeconds()

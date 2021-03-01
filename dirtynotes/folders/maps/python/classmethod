@@ -1,0 +1,4 @@
+# name: classmethod 
+    @classmethod
+    def method(cls):
+        return cls.__name__

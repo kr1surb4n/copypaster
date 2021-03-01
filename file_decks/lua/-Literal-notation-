@@ -1,0 +1,4 @@
+# name:  Literal notation  
+-- Literal notation for any (non-nil) value as key:
+u = {['@!#'] = 'qbert', [{}] = 1729, [6.28] = 'tau'}
+print(u[6.28])  -- prints "tau"

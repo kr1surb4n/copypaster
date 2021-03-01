@@ -1,0 +1,2 @@
+# name: let regexp  AEgi 
+let regexp = /[A-E]/gi;

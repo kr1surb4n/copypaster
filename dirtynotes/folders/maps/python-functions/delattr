@@ -1,0 +1,2 @@
+# name: delattr 
+delattr(object, name)

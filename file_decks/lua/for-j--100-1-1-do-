@@ -1,0 +1,2 @@
+# name: for j  100 1 1 do  
+for j = 100, 1, -1 do fredSum = fredSum + j end

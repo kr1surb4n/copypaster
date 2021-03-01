@@ -1,0 +1,2 @@
+# name: bytesstartswithpre 
+bytes.startswith(prefix[, start[, end]])

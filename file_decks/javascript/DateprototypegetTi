@@ -1,0 +1,2 @@
+# name: DateprototypegetTi 
+Date.prototype.getTimezoneOffset()

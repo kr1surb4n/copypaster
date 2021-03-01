@@ -1,0 +1,2 @@
+# name: cat tags  awk  pri 
+cat tags | awk '{ print $1 }' | uniq | awk '{ printf "  - values: \"%s\"\n", $1}' > button_maps/copypaster.yml

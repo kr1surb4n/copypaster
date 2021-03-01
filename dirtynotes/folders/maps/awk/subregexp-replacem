@@ -1,0 +1,2 @@
+# name: subregexp replacem 
+sub(regexp, replacement [, target])

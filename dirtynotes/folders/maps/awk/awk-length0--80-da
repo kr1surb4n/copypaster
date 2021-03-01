@@ -1,0 +1,2 @@
+# name: awk length0  80 da 
+awk 'length($0) > 80' data

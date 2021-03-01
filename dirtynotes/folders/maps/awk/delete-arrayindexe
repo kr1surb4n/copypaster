@@ -1,0 +1,2 @@
+# name: delete arrayindexe 
+delete array[index-expression]

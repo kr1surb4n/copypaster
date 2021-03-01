@@ -1,0 +1,6 @@
+# name: class ButtonGridGt 
+class ButtonGrid(Gtk.FlowBox):
+    "Main area of user interface content."
+
+    def __init__(self, deck_file):
+        Gtk.FlowBox.__init__(self)

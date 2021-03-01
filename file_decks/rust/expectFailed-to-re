@@ -1,0 +1,2 @@
+# name: expectFailed to re 
+.expect("Failed to read line");

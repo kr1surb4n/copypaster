@@ -1,0 +1,2 @@
+# name: Text match substri 
+//button[contains(text(),"Go")]

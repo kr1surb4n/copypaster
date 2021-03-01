@@ -1,0 +1,4 @@
+# name: for const property 
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}

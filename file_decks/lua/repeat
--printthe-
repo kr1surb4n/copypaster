@@ -1,0 +1,6 @@
+# name: repeat
+  printthe  
+repeat
+  print('the way of the future')
+  num = num - 1
+until num == 0

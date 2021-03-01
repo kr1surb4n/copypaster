@@ -1,0 +1,2 @@
+# name: AND used in expres 
+echo "Always executed" && echo "Only executed if first command does NOT fail"

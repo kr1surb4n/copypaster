@@ -1,0 +1,2 @@
+# name: use stdcmpOrdering 
+use std::cmp::Ordering;

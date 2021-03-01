@@ -1,0 +1,8 @@
+# name: JS class 
+class Teacher extends Person {
+  constructor(subject, grade) { 
+    super(); // Now 'this' is initialized by calling the parent constructor.
+    this.subject = subject;   
+    this.grade = grade; 
+  }
+}

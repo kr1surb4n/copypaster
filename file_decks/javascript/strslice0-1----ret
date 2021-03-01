@@ -1,0 +1,2 @@
+# name: strslice0 1    ret 
+str.slice(0, -1)   // returns 'The morning is upon us'

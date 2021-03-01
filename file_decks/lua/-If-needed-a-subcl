@@ -1,0 +1,8 @@
+# name:  If needed a subcl 
+-- If needed, a subclass's new() is like the base's:
+function LoudDog:new()
+  newObj = {}
+  -- set up newObj
+  self.__index = self
+  return setmetatable(newObj, self)
+end

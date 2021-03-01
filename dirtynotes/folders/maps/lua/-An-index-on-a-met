@@ -1,0 +1,5 @@
+# name:  An index on a met 
+-- An __index on a metatable overloads dot lookups:
+defaultFavs = {animal = 'gru', food = 'donuts'}
+myFavs = {food = 'pizza'}
+setmetatable(myFavs, {__index = defaultFavs})

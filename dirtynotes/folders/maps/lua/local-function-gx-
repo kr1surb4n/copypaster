@@ -1,0 +1,2 @@
+# name: local function gx  
+local function g(x) return math.sin(x) end

@@ -1,0 +1,4 @@
+# name: for each variable  
+for each (variable in object) {
+  statement
+}

@@ -1,0 +1,2 @@
+# name: contains 
+font[contains(@class,"head")]

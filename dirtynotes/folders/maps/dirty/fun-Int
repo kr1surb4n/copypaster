@@ -1,0 +1,4 @@
+# name: fun Int 
+fun parseInt(str: String): Int? {
+    // ...
+}

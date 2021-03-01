@@ -1,0 +1,3 @@
+# name: function kwargs 
+def keyword_args(**kwargs):
+    return kwargs

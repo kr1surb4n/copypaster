@@ -1,0 +1,20 @@
+# name:         dialog  Gt 
+        dialog = Gtk.FileChooserDialog(
+            'Save button deck', self.win,
+            Gtk.FileChooserAction.SAVE,
+            (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+             Gtk.STOCK_SAVE, Gtk.ResponseType.OK))
+
+        dialog.set_do_overwrite_confirmation(True)
+        if dialog.run() == Gtk.ResponseType.OK:
+            filename = dialog.get_filename()
+
+            cabinet = Register['FileCabinet']
+            current_deck = cabinet.pages[cabinet.get_current_page()]
+
+            try:
+                current_deck.button_deck.path = filename
+                current_deck.button_deck.save_buttons()
+            except Exception as e:
+                logger.error("There was an exception {}".format(e))
+        dialog.destroy()

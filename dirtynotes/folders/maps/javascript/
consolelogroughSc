@@ -1,0 +1,4 @@
+# name: 
+consolelogroughSc 
+
+console.log(roughScale(' 0xF', 16));

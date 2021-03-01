@@ -1,0 +1,9 @@
+# name:  find the commit y 
+# find the commit you need to undo
+git log
+# use the arrow keys to scroll up and down in history
+# once you've found your commit, save the hash
+git revert [saved hash]
+# git will create a new commit that undoes that commit
+# follow prompts to edit the commit message
+# or just save and commit

@@ -1,0 +1,6 @@
+# name:     if foo  fo
+    
+    if ("foo" ~ "^fo+$")
+        print "Fooey!";
+    if ("boo" !~ "^fo+$")
+        print "Boo!";

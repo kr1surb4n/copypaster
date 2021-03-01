@@ -1,0 +1,2 @@
+# name: typeof 1n  bigint  
+typeof 1n === 'bigint'      

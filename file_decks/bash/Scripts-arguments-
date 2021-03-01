@@ -1,0 +1,2 @@
+# name: Scripts arguments  
+echo "Scripts arguments separated into different variables: $1 $2..."

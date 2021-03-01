@@ -1,0 +1,2 @@
+# name: startswith 
+font[starts-with(@class,"head")]

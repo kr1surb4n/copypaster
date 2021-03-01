@@ -1,0 +1,2 @@
+# name: dofilemod2lua   Hi 
+dofile('mod2.lua')  --> Hi!

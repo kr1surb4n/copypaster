@@ -1,0 +1,7 @@
+# name:  create a new bran 
+# create a new branch from the current state of master
+git branch some-new-branch-name
+# remove the last commit from the master branch
+git reset HEAD~ --hard
+git checkout some-new-branch-name
+# your commit lives in this branch now :)

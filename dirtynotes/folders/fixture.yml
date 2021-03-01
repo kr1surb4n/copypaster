@@ -1,0 +1,30 @@
+buttons:
+- click_count: 1
+  info: 'First value'
+  name: First
+  value: "First"
+
+- click_count: 0
+  info: ''
+  name: "Two"
+  reference: 'nested_two'
+
+- click_count: 0
+  info: ''
+  name: "Three"
+  reference: 'nested_three'
+
+- click_count: 0
+  info: ''
+  name: "<"
+  value: "<"
+
+- value: "pitu"
+
+- click_count: 1
+  info: 'First value'
+  name: "ogor ryba - liscie + warzywa"
+  value: "First"
+info:
+- name: test
+- category: test fixture

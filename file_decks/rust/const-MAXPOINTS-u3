@@ -1,0 +1,2 @@
+# name: const MAXPOINTS u3 
+const MAX_POINTS: u32 = 100_000;

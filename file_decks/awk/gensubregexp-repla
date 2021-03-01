@@ -1,0 +1,2 @@
+# name: gensubregexp repla 
+gensub(regexp, replacement, how [, target]) #

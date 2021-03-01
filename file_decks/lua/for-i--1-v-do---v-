@@ -1,0 +1,4 @@
+# name: for i  1 v do   v  
+for i = 1, #v do  -- #v is the size of v for lists.
+  print(v[i])  -- Indices start at 1 !! SO CRAZY!
+end

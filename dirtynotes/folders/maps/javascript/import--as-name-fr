@@ -1,0 +1,2 @@
+# name: import  as name fr 
+import * as name from "module-name";

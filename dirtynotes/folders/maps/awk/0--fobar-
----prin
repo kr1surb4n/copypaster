@@ -1,0 +1,5 @@
+# name: 0  fobar 
+    prin 
+$0 ~ /^fo+bar$/ {
+    print "Equivalent to the last pattern";
+}

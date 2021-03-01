@@ -1,0 +1,4 @@
+# name:      You can also  
+    # You can also use the 'in' operator to traverse the keys of an array
+    for (key in assoc)
+        print assoc[key];

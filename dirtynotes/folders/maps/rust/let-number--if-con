@@ -1,0 +1,2 @@
+# name: let number  if con 
+let number = if condition { 5 } else { 6 };

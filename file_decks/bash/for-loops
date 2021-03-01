@@ -1,0 +1,5 @@
+# name: for loops 
+for ((a=1; a <= 3; a++))
+do
+    echo $a
+done

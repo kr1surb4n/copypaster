@@ -1,0 +1,3 @@
+# name:  List literals imp 
+-- List literals implicitly set up int keys:
+v = {'value1', 'value2', 1.21, 'gigawatts'}

@@ -1,0 +1,2 @@
+# name: iteratoriter 
+iterator.__iter__()

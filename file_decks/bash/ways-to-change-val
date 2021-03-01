@@ -1,0 +1,5 @@
+# name: ways to change val 
+cat > output.out <(echo "#helloworld")
+echo "#helloworld" > output.out
+echo "#helloworld" | cat > output.out
+echo "#helloworld" | tee output.out >/dev/null

@@ -1,0 +1,5 @@
+# name:      Reads a line  
+    # Reads a line from a file and stores in localvar
+    infile = "/tmp/foobar.txt";
+    getline localvar < infile; 
+    close(infile);

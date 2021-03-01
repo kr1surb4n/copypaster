@@ -1,0 +1,4 @@
+# name: class NewNoteGtkGr 
+class NewNote(Gtk.Grid):
+    def __init__(self):
+        Gtk.Grid.__init__(

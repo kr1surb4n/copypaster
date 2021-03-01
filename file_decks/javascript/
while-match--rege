@@ -1,0 +1,4 @@
+# name: 
+while match  rege 
+
+while ((match = regexp.exec(str)) !== null) {

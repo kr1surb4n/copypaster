@@ -1,0 +1,2 @@
+# name: Arrayprototypeinde 
+Array.prototype.indexOf(searchElement[, fromIndex])

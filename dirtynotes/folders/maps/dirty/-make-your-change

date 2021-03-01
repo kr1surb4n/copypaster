@@ -1,0 +1,7 @@
+# name:  make your change
+ 
+# make your change
+git add . # or add individual files
+git commit --amend --no-edit
+# now your last commit contains that change!
+# WARNING: never amend public commits

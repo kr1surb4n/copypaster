@@ -1,0 +1,2 @@
+# name: subshells and dirs 
+(echo "First, Im here: $PWD") && (cd someDir; echo "Then, Im here: $PWD")

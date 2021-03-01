@@ -1,0 +1,9 @@
+# name:     while a  10 
+  
+    while (a < 10) {
+        print "String concatenation is done" " with a series" " of"
+            " space-separated strings";
+        print a;
+
+        a++;
+    }

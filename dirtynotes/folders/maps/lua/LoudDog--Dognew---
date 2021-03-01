@@ -1,0 +1,10 @@
+# name: LoudDog  Dognew    
+LoudDog = Dog:new()                           -- 1.
+
+function LoudDog:makeSound()
+  s = self.sound .. ' '                       -- 2.
+  print(s .. s .. s)
+end
+
+seymour = LoudDog:new()                       -- 3.
+seymour:makeSound()  -- 'woof woof woof'      -- 4.

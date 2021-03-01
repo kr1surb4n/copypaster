@@ -1,0 +1,9 @@
+# name: try 
+  getRectArea 
+try {
+  getRectArea(3, 'A');
+}
+catch(e) {
+  console.error(e);
+  // expected output: "Parameter is not a number!"
+}

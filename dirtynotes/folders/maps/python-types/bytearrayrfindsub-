@@ -1,0 +1,2 @@
+# name: bytearrayrfindsub  
+bytearray.rfind(sub[, start[, end]])

@@ -1,0 +1,2 @@
+# name: Arrayprototypeconc 
+Array.prototype.concat([value1[, value2[, ...[, valueN]]]])

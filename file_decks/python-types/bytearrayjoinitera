@@ -1,0 +1,2 @@
+# name: bytearrayjoinitera 
+bytearray.join(iterable)

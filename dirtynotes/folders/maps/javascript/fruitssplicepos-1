@@ -1,0 +1,2 @@
+# name: fruitssplicepos 1 
+fruits.splice(pos, 1)
