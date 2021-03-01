@@ -1,0 +1,8 @@
+# name: full function defi 
+function foo ()
+{
+    echo "Arguments work just like script arguments: $@"
+    echo "And: $1 $2..."
+    echo "This is a function"
+    return 0
+}

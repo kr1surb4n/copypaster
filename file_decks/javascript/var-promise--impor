@@ -1,0 +1,2 @@
+# name: var promise  impor 
+var promise = import("module-name");

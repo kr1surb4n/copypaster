@@ -1,0 +1,2 @@
+# name: Dateprototypevalue 
+Date.prototype.valueOf()

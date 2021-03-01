@@ -1,0 +1,2 @@
+# name: strslice3       re 
+str.slice(-3)      // returns 'us.'

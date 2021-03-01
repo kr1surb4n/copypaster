@@ -1,0 +1,2 @@
+# name: in ab in cd  print 
+in a..b, in c..d -> println("n belongs to a range")

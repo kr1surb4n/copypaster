@@ -1,0 +1,4 @@
+# name: for each var item  
+for each (var item in obj) {
+  sum += item;
+}

@@ -1,0 +1,11 @@
+# name: BEGIN 
+
+     First 
+BEGIN {
+
+    # First, ask the user for the name
+    print "What name would you like the average age for?";
+
+    # Get a line from standard input, not from files on the command line
+    getline name < "/dev/stdin";
+}

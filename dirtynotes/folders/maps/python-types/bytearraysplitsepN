@@ -1,0 +1,2 @@
+# name: bytearraysplitsepN 
+bytearray.split(sep=None, maxsplit=-1)

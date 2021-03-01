@@ -1,0 +1,4 @@
+# name: for key val in pai 
+for key, val in pairs(u) do  -- Table iteration.
+  print(key, val)
+end

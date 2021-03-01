@@ -1,0 +1,7 @@
+# name:     def doactivate 
+    def do_activate(self):
+        self.win = MainWindow(self)
+        # show the window and all its content
+        # this line could go in the constructor of MyWindow as well
+        self.win.show_all()
+        State['app'] = NORMAL

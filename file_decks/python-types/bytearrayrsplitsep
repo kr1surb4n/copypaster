@@ -1,0 +1,2 @@
+# name: bytearrayrsplitsep 
+bytearray.rsplit(sep=None, maxsplit=-1)

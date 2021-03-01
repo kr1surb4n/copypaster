@@ -1,0 +1,6 @@
+# name:  binawk f
+
+BEGIN   
+#! /bin/awk -f
+
+BEGIN { print "Don't Panic!" }

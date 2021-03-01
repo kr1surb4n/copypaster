@@ -1,0 +1,3 @@
+# name: function args 
+def varargs(*args):
+    return args

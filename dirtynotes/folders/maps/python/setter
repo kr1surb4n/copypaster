@@ -1,0 +1,4 @@
+# name: setter 
+    @age.setter
+    def age(self, age):
+        self._age = age

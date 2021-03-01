@@ -1,0 +1,2 @@
+# name: return cat1 
+return 'cat'[1]

@@ -1,0 +1,3 @@
+# name:  Reads a line from 
+# Reads a line from standard input and stores in localvar
+    getline localvar;

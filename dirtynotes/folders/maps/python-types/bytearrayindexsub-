@@ -1,0 +1,2 @@
+# name: bytearrayindexsub  
+bytearray.index(sub[, start[, end]])

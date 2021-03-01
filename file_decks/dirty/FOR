@@ -1,0 +1,4 @@
+# name: FOR 
+for (item in items) {
+    println(item)
+}

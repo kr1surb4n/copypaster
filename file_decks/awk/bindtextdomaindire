@@ -1,0 +1,2 @@
+# name: bindtextdomaindire 
+bindtextdomain(directory [, domain])

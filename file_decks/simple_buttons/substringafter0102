@@ -1,0 +1,2 @@
+# name: substringafter0102 
+substring-after("01/02", "/")

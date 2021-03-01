@@ -1,0 +1,2 @@
+# name: h1notid 
+//h1[not(@id)]

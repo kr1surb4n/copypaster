@@ -1,0 +1,2 @@
+# name: strzfillwidth 
+str.zfill(width)

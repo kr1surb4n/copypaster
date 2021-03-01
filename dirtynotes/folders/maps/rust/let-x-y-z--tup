@@ -1,0 +1,2 @@
+# name: let x y z  tup 
+let (x, y, z) = tup;

@@ -1,0 +1,2 @@
+# name: tkey2  nil    Remo 
+t.key2 = nil   -- Removes key2 from the table.

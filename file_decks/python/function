@@ -1,0 +1,4 @@
+# name: function 
+def add(x, y):
+    print("x is {} and y is {}".format(x, y))
+    return x + y 

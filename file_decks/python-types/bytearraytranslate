@@ -1,0 +1,2 @@
+# name: bytearraytranslate 
+bytearray.translate(table, /, delete=b')

@@ -1,0 +1,2 @@
+# name: DateprototypetoTim 
+Date.prototype.toTimeString()

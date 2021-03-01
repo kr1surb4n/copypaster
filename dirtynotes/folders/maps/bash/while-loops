@@ -1,0 +1,6 @@
+# name: while loops 
+while [ true ]
+do
+    echo "loop body here..."
+    break
+done

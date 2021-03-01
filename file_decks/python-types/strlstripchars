@@ -1,0 +1,2 @@
+# name: strlstripchars 
+str.lstrip([chars])

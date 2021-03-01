@@ -1,0 +1,4 @@
+# name: getter example 
+  get subject() {
+    return this._subject;
+  }

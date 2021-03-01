@@ -1,0 +1,5 @@
+# name: WHILE 
+while (index < items.size) {
+    println("item at $index is ${items[index]}")
+    index++
+}

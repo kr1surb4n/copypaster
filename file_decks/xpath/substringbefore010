@@ -1,0 +1,2 @@
+# name: substringbefore010 
+substring-before("01/02", "/")

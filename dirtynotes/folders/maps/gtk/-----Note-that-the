@@ -1,0 +1,4 @@
+# name:      Note that the 
+    # Note that the function in C startup() becomes do_startup() in Python
+    def do_startup(self):
+        Gtk.Application.do_startup(self)

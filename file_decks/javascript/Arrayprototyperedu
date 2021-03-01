@@ -1,0 +1,2 @@
+# name: Arrayprototyperedu 
+Array.prototype.reduce(callbackFn(accumulator, currentValue[, index[, array]])[, initialValue])

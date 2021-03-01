@@ -1,0 +1,5 @@
+# name:         selfscreen 
+        self.screen = self.get_screen()
+
+        self.calculated_width = int((self.screen.get_width() / 100) * 20)
+        self.calculated_height = self.screen.get_height()

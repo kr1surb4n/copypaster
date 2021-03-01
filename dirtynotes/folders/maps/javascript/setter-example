@@ -1,0 +1,4 @@
+# name: setter example 
+  set subject(newSubject) {
+    this._subject = newSubject;
+  }

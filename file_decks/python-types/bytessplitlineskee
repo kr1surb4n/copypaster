@@ -1,0 +1,2 @@
+# name: bytessplitlineskee 
+bytes.splitlines(keepends=False)

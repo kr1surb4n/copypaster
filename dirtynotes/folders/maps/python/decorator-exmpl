@@ -1,0 +1,13 @@
+# name: decorator exmpl 
+from functools import wraps
+
+
+def beg(target_function):
+    @wraps(target_function)
+    def wrapper(*args, **kwargs):
+        msg, say_please = target_function(*args, **kwargs)
+        if say_please:
+            return "{} {}".format(msg, "Please! I am poor :(")
+        return msg
+
+    return wrapper

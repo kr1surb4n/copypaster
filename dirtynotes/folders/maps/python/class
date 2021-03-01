@@ -1,0 +1,5 @@
+# name: class 
+class Human:
+
+    # A class attribute. It is shared by all instances of this class
+    species = "H. sapiens"

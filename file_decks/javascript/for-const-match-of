@@ -1,0 +1,4 @@
+# name: for const match of 
+for (const match of matches) {
+  console.log(`Found ${match[0]} start=${match.index} end=${match.index + match[0].length}.`);
+}

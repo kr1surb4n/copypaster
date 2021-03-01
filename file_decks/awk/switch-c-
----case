@@ -1,0 +1,23 @@
+# name: switch c 
+    case 
+switch (c) {
+    case "a":
+        # report size of all files
+        all_files = TRUE;
+        break
+    case "k":
+        BLOCK_SIZE = 1024       # 1K block size
+        break
+    case "s":
+        # do sums only
+        sum_only = TRUE
+        break
+    case "x":
+        # don't cross filesystems
+        fts_flags = or(fts_flags, FTS_XDEV)
+        break
+    case "?":
+    default:
+        usage()
+        break
+    }

@@ -1,0 +1,2 @@
+# name: iowritenot over 40 
+io.write('not over 40\n')

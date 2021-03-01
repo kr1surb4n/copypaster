@@ -1,0 +1,3 @@
+# name:  Dict literals hav 
+-- Dict literals have string keys by default:
+t = {key1 = 'value1', key2 = false}

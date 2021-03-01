@@ -1,0 +1,2 @@
+# name: bytesendswithsuffi 
+bytes.endswith(suffix[, start[, end]])

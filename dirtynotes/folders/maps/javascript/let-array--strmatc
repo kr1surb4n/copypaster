@@ -1,0 +1,2 @@
+# name: let array  strmatc 
+let array = [...str.matchAll(regexp)];

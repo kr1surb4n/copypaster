@@ -1,0 +1,5 @@
+# name:         dialog  Di 
+        dialog = DialogEdit(
+            Register['Application'].win,  copy_button)
+        dialog.run()
+        dialog.destroy()

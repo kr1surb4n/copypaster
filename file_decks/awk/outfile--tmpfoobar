@@ -1,0 +1,7 @@
+# name: outfile  tmpfoobar 
+outfile = "/tmp/foobar.txt";
+
+    print "foobar" > outfile;
+
+    # Now the string outfile is a file handle. You can close it:
+    close(outfile);

@@ -1,0 +1,2 @@
+# name: StringprototypetoL 
+String.prototype.toLowerCase()

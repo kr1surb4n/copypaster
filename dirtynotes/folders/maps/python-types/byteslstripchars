@@ -1,0 +1,2 @@
+# name: byteslstripchars 
+bytes.lstrip([chars])

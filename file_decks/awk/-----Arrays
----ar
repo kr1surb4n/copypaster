@@ -1,0 +1,5 @@
+# name:      Arrays
+    ar 
+    # Arrays
+    arr[0] = "foo";
+    arr[1] = "bar";

@@ -1,0 +1,15 @@
+referenced:
+    - "python-types.yml"
+buttons:
+- click_count: 1
+  info: 'First value'
+  name: First
+  value: "First"
+- click_count: 0
+  info: ''
+  name: "Types"
+  reference: 'python-types'
+
+info:
+- name: Nested2
+- category: tests

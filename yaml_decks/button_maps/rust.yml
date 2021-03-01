@@ -1,0 +1,290 @@
+buttons:
+- click_count: 0
+  info: ''
+  name: "fn main() {\n    println!(\"Hello, world!\");\n}"
+  value: "fn main() {\n    println!(\"Hello, world!\");\n}"
+- click_count: 0
+  info: ''
+  name: 'println!("Hello, world!");
+
+    '
+  value: 'println!("Hello, world!");
+
+    '
+- click_count: 0
+  info: ''
+  name: 'cargo --version
+
+    '
+  value: 'cargo --version
+
+    '
+- click_count: 0
+  info: ''
+  name: cargo new hello_cargo
+  value: cargo new hello_cargo
+- click_count: 0
+  info: ''
+  name: cargo run
+  value: cargo run
+- click_count: 0
+  info: ''
+  name: cargo check
+  value: cargo check
+- click_count: 0
+  info: ''
+  name: cargo build
+  value: cargo build
+- click_count: 0
+  info: ''
+  name: 'cargo build --release '
+  value: 'cargo build --release '
+- click_count: 0
+  info: ''
+  name: 'rustup component add rls rust-analysis rust-src
+
+    '
+  value: 'rustup component add rls rust-analysis rust-src
+
+    '
+- click_count: 0
+  info: ''
+  name: 'rustup update
+
+    '
+  value: 'rustup update
+
+    '
+- click_count: 0
+  info: ''
+  name: use std::io;
+  value: use std::io;
+- click_count: 0
+  info: ''
+  name: let mut guess
+  value: let mut guess
+- click_count: 0
+  info: ''
+  name: "io::stdin()\n        .read_line(&mut guess)\n        .expect(\"Failed to\
+    \ read line\");"
+  value: "io::stdin()\n        .read_line(&mut guess)\n        .expect(\"Failed to\
+    \ read line\");"
+- click_count: 0
+  info: ''
+  name: let foo = bar;
+  value: let foo = bar;
+- click_count: 0
+  info: ''
+  name: let mut bar = 5; // mutable
+  value: let mut bar = 5; // mutable
+- click_count: 0
+  info: ''
+  name: String::new
+  value: String::new
+- click_count: 0
+  info: ''
+  name: let mut guess = String::new();
+  value: let mut guess = String::new();
+- click_count: 0
+  info: ''
+  name: .expect("Failed to read line");
+  value: .expect("Failed to read line");
+- click_count: 0
+  info: ''
+  name: Ok
+  value: Ok
+- click_count: 0
+  info: ''
+  name: Err
+  value: Err
+- click_count: 1
+  info: ''
+  name: Ok(())
+  value: Ok(())
+- click_count: 0
+  info: ''
+  name: use std::io::prelude::*;
+  value: use std::io::prelude::*;
+- click_count: 0
+  info: ''
+  name: use std::fs::File;
+  value: use std::fs::File;
+- click_count: 0
+  info: ''
+  name: let mut f = File::open("foo.txt")?;
+  value: let mut f = File::open("foo.txt")?;
+- click_count: 0
+  info: ''
+  name: use std::cmp::Ordering;
+  value: use std::cmp::Ordering;
+- click_count: 0
+  info: ''
+  name: "match guess.cmp(&secret_number) {\n        Ordering::Less => println!(\"\
+    Too small!\"),\n        Ordering::Greater => println!(\"Too big!\"),\n       \
+    \ Ordering::Equal => println!(\"You win!\"),\n    }"
+  value: "match guess.cmp(&secret_number) {\n        Ordering::Less => println!(\"\
+    Too small!\"),\n        Ordering::Greater => println!(\"Too big!\"),\n       \
+    \ Ordering::Equal => println!(\"You win!\"),\n    }"
+- click_count: 0
+  info: ''
+  name: 'let guess: u32 = guess.trim().parse().expect("Please type a number!");'
+  value: 'let guess: u32 = guess.trim().parse().expect("Please type a number!");'
+- click_count: 0
+  info: ''
+  name: '
+
+    '
+  value: '
+
+    '
+- click_count: 0
+  info: ''
+  name: rustup component add rustfmt --toolchain nightly
+  value: rustup component add rustfmt --toolchain nightly
+- click_count: 0
+  info: ''
+  name: 'const MAX_POINTS: u32 = 100_000;'
+  value: 'const MAX_POINTS: u32 = 100_000;'
+- click_count: 0
+  info: ''
+  name: "    if number {\n        println!(\"number was three\");\n    }"
+  value: "    if number {\n        println!(\"number was three\");\n    }"
+- click_count: 0
+  info: ''
+  name: "    if number % 4 == 0 {\n        println!(\"number is divisible by 4\");\n\
+    \    } else if number % 3 == 0 {\n        println!(\"number is divisible by 3\"\
+    );\n    } else if number % 2 == 0 {\n        println!(\"number is divisible by\
+    \ 2\");\n    } else {\n        println!(\"number is not divisible by 4, 3, or\
+    \ 2\");\n    }"
+  value: "    if number % 4 == 0 {\n        println!(\"number is divisible by 4\"\
+    );\n    } else if number % 3 == 0 {\n        println!(\"number is divisible by\
+    \ 3\");\n    } else if number % 2 == 0 {\n        println!(\"number is divisible\
+    \ by 2\");\n    } else {\n        println!(\"number is not divisible by 4, 3,\
+    \ or 2\");\n    }"
+- click_count: 0
+  info: ''
+  name: let number = if condition { 5 } else { 6 };
+  value: let number = if condition { 5 } else { 6 };
+- click_count: 0
+  info: ''
+  name: let condition = true;
+  value: let condition = true;
+- click_count: 0
+  info: ''
+  name: "    loop {\n        println!(\"again!\");\n    }"
+  value: "    loop {\n        println!(\"again!\");\n    }"
+- click_count: 0
+  info: ''
+  name: "    let result = loop {\n        counter += 1;\n\n        if counter == 10\
+    \ {\n            break counter * 2;\n        }\n    };"
+  value: "    let result = loop {\n        counter += 1;\n\n        if counter ==\
+    \ 10 {\n            break counter * 2;\n        }\n    };"
+- click_count: 0
+  info: ''
+  name: "    while number != 0 {\n        println!(\"{}!\", number);\n\n        number\
+    \ -= 1;\n    }"
+  value: "    while number != 0 {\n        println!(\"{}!\", number);\n\n        number\
+    \ -= 1;\n    }"
+- click_count: 0
+  info: ''
+  name: "    for element in a.iter() {\n        println!(\"the value is: {}\", element);\n\
+    \    }"
+  value: "    for element in a.iter() {\n        println!(\"the value is: {}\", element);\n\
+    \    }"
+- click_count: 0
+  info: ''
+  name: '    let a = [10, 20, 30, 40, 50];'
+  value: '    let a = [10, 20, 30, 40, 50];'
+- click_count: 0
+  info: ''
+  name: "    for number in (1..4).rev() {\n        println!(\"{}!\", number);\n  \
+    \  }"
+  value: "    for number in (1..4).rev() {\n        println!(\"{}!\", number);\n \
+    \   }"
+- click_count: 0
+  info: ''
+  name: i8
+  value: i8
+- click_count: 0
+  info: ''
+  name: i16
+  value: i16
+- click_count: 0
+  info: ''
+  name: i32
+  value: i32
+- click_count: 0
+  info: ''
+  name: i64
+  value: i64
+- click_count: 0
+  info: ''
+  name: i128
+  value: i128
+- click_count: 0
+  info: ''
+  name: isize
+  value: isize
+- click_count: 0
+  info: ''
+  name: usize
+  value: usize
+- click_count: 0
+  info: ''
+  name: u128
+  value: u128
+- click_count: 0
+  info: ''
+  name: u64
+  value: u64
+- click_count: 0
+  info: ''
+  name: u32
+  value: u32
+- click_count: 0
+  info: ''
+  name: u16
+  value: u16
+- click_count: 0
+  info: ''
+  name: u8
+  value: u8
+- click_count: 0
+  info: ''
+  name: "let z = '\u2124';"
+  value: "let z = '\u2124';"
+- click_count: 0
+  info: ''
+  name: "let heart_eyed_cat = '\U0001F63B';"
+  value: "let heart_eyed_cat = '\U0001F63B';"
+- click_count: 0
+  info: ''
+  name: 'let tup: (i32, f64, u8) = (500, 6.4, 1);'
+  value: 'let tup: (i32, f64, u8) = (500, 6.4, 1);'
+- click_count: 0
+  info: ''
+  name: let (x, y, z) = tup;
+  value: let (x, y, z) = tup;
+- click_count: 0
+  info: ''
+  name: "let months = [\"January\", \"February\", \"March\", \"April\", \"May\", \"\
+    June\", \"July\",\n              \"August\", \"September\", \"October\", \"November\"\
+    , \"December\"];"
+  value: "let months = [\"January\", \"February\", \"March\", \"April\", \"May\",\
+    \ \"June\", \"July\",\n              \"August\", \"September\", \"October\", \"\
+    November\", \"December\"];"
+- click_count: 0
+  info: ''
+  name: 'let a: [i32; 5] = [1, 2, 3, 4, 5];'
+  value: 'let a: [i32; 5] = [1, 2, 3, 4, 5];'
+- click_count: 0
+  info: ''
+  name: let a = [3; 5];
+  value: let a = [3; 5];
+- click_count: 1
+  info: ''
+  name: 'error: expected one of `.`, `;`, `?`, or an operator, found '
+  value: 'error: expected one of `.`, `;`, `?`, or an operator, found '
+info:
+- name: Rust dirty
+- category: rust

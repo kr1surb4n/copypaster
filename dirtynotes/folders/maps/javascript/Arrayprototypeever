@@ -1,0 +1,2 @@
+# name: Arrayprototypeever 
+Array.prototype.every(callbackFn(element[, index[, array]])[, thisArg])

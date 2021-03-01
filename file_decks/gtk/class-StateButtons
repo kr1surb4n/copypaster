@@ -1,0 +1,6 @@
+# name: class StateButtons 
+class StateButtons(StateButtonsCallbacks, Gtk.Box):
+    """Autosave, Edit, Remove"""
+
+    def __init__(self, app_state):
+        Gtk.Box.__init__(self, spacing=6)

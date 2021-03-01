@@ -1,0 +1,4 @@
+# name:      And multidime 
+    # And multi-dimensional arrays, with some limitations I won't mention here
+    multidim[0,0] = "foo";
+    multidim[0,1] = "bar";

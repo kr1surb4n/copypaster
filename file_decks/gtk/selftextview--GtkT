@@ -1,0 +1,6 @@
+# name: selftextview  GtkT 
+self.textview = Gtk.TextView()
+        self.textview.set_cursor_visible(True)
+        self.textview.set_hexpand(True)
+        self.textview.set_vexpand(False)
+        self.textview.set_wrap_mode(Gtk.WrapMode.WORD)

@@ -1,0 +1,3 @@
+# name:         selfinitto 
+        self.init_toolbutton(
+            Gtk.STOCK_ADD, reg['Application'].add_new_notebook, 0)

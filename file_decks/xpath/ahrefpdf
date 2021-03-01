@@ -1,0 +1,2 @@
+# name: ahrefpdf 
+//a[ends-with(@href, '.pdf')]

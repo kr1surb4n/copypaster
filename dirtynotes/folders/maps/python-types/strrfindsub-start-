@@ -1,0 +1,2 @@
+# name: strrfindsub start  
+str.rfind(sub[, start[, end]])

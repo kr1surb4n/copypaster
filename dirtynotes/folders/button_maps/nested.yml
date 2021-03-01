@@ -1,0 +1,27 @@
+referenced:
+    - "nested_two.yml"
+    - "nested_three.yml"
+    - "python-exceptions.yml"
+buttons:
+- click_count: 1
+  info: 'First value'
+  name: First
+  value: "First"
+- click_count: 0
+  info: ''
+  name: "Two"
+  reference: 'nested_two'
+
+- click_count: 0
+  info: ''
+  name: "Three"
+  reference: 'nested_three'
+
+- click_count: 0
+  info: ''
+  name: "Exceptions"
+  reference: 'python_exceptions'
+
+info:
+- name: Nested
+- category: tests

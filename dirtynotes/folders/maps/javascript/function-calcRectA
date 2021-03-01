@@ -1,0 +1,4 @@
+# name: function calcRectA 
+function calcRectArea(width, height) {
+  return width * height;
+}

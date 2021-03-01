@@ -1,0 +1,2 @@
+# name: comprehense set 
+{x for x in _list_ if x not in something}

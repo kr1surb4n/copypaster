@@ -1,0 +1,7 @@
+# name: inheritance exampl 
+function BlueGlassBrick() {
+  Brick.call(this);
+
+  this.opacity = 0.5;
+  this.color = 'blue';
+}

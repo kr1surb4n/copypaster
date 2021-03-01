@@ -1,0 +1,4 @@
+# name: const str  asdfghj 
+const str = 'asdfghjkl'
+const strReverse = str.split('').reverse().join('') 
+// 'lkjhgfdsa'

@@ -1,0 +1,630 @@
+buttons:
+  - click_count: 0
+    info: ""
+    name: awk 'program' input-file1
+    value: awk 'program' input-file1
+  - click_count: 0
+    info: ""
+    name: awk -f program-file input-file1
+    value: awk -f program-file input-file1
+  - click_count: 0
+    info: ""
+    name: awk 'BEGIN { print "Don\47t Panic!" }'
+    value: awk 'BEGIN { print "Don\47t Panic!" }'
+  - click_count: 0
+    info: ""
+    name: '#! /bin/awk -f
+
+
+      BEGIN { print "Don''t Panic!" }'
+    value: '#! /bin/awk -f
+
+
+      BEGIN { print "Don''t Panic!" }'
+  - click_count: 0
+    info: ""
+    name: "# This program prints a nice,"
+    value: "# This program prints a nice,"
+  - click_count: 0
+    info: ""
+    name: $0
+    value: $0
+  - click_count: 0
+    info: ""
+    name: awk 'length($0) > 80' data
+    value: awk 'length($0) > 80' data
+  - click_count: 0
+    info: ""
+    name: "awk 'NF > 0' data
+
+      "
+    value: "awk 'NF > 0' data
+
+      "
+  - click_count: 0
+    info: ""
+    name: "[pattern]  { action }\n pattern  [{ action }]"
+    value: "[pattern]  { action }\n pattern  [{ action }]"
+  - click_count: 0
+    info: ""
+    name: An action consists of one or more awk statements
+    value: An action consists of one or more awk statements
+  - click_count: 0
+    info: ""
+    name: series of rules and function definitions interspersed
+    value: series of rules and function definitions interspersed
+  - click_count: 0
+    info: ""
+    name: A rule contains a pattern and an action
+    value: A rule contains a pattern and an action
+  - click_count: 0
+    info: ""
+    name: Expressions
+    value: Expressions
+  - click_count: 0
+    info: ""
+    name: Control statements
+    value: Control statements
+  - click_count: 0
+    info: ""
+    name: Compound statements
+    value: Compound statements
+  - click_count: 0
+    info: ""
+    name:
+      "# Variables are global. Just set them or use them, no need to declare..\n\
+      \    count = 0;"
+    value:
+      "# Variables are global. Just set them or use them, no need to declare..\n\
+      \    count = 0;"
+  - click_count: 0
+    info: ""
+    name: a += 1;
+    value: a += 1;
+  - click_count: 0
+    info: ""
+    name: b -= 1;
+    value: b -= 1;
+  - click_count: 0
+    info: ""
+    name: c *= 1;
+    value: c *= 1;
+  - click_count: 0
+    info: ""
+    name: d /= 1
+    value: d /= 1
+  - click_count: 0
+    info: ""
+    name: e %= 1;
+    value: e %= 1;
+  - click_count: 0
+    info: ""
+    name: f ^= 1;
+    value: f ^= 1;
+  - click_count: 0
+    info: ""
+    name: a++;
+    value: a++;
+  - click_count: 0
+    info: ""
+    name: b--;
+    value: b--;
+  - click_count: 0
+    info: ""
+    name:
+      "    # Control statements\n    if (count == 0)\n        print \"Starting with\
+      \ count of 0\";\n    else\n        print \"Huh?\";"
+    value:
+      "    # Control statements\n    if (count == 0)\n        print \"Starting\
+      \ with count of 0\";\n    else\n        print \"Huh?\";"
+  - click_count: 0
+    info: ""
+    name: 'print (count == 0) ? "Starting with count of 0" : "Huh?";'
+    value: 'print (count == 0) ? "Starting with count of 0" : "Huh?";'
+  - click_count: 0
+    info: ""
+    name:
+      "    while (a < 10) {\n        print \"String concatenation is done\" \" with\
+      \ a series\" \" of\"\n            \" space-separated strings\";\n        print\
+      \ a;\n\n        a++;\n    }"
+    value:
+      "    while (a < 10) {\n        print \"String concatenation is done\" \"\
+      \ with a series\" \" of\"\n            \" space-separated strings\";\n       \
+      \ print a;\n\n        a++;\n    }"
+  - click_count: 0
+    info: ""
+    name: "    for (i = 0; i < 10; i++)\n        print \"Good ol' for loop\";"
+    value: "    for (i = 0; i < 10; i++)\n        print \"Good ol' for loop\";"
+  - click_count: 0
+    info: ""
+    name:
+      "    if (\"foo\" ~ \"^fo+$\")\n        print \"Fooey!\";\n    if (\"boo\"\
+      \ !~ \"^fo+$\")\n        print \"Boo!\";"
+    value:
+      "    if (\"foo\" ~ \"^fo+$\")\n        print \"Fooey!\";\n    if (\"boo\"\
+      \ !~ \"^fo+$\")\n        print \"Boo!\";"
+  - click_count: 0
+    info: ""
+    name: '  n = split("foo:bar:baz", arr, ":");'
+    value: '  n = split("foo:bar:baz", arr, ":");'
+  - click_count: 0
+    info: ""
+    name: "    # Arrays\n    arr[0] = \"foo\";\n    arr[1] = \"bar\";"
+    value: "    # Arrays\n    arr[0] = \"foo\";\n    arr[1] = \"bar\";"
+  - click_count: 0
+    info: ""
+    name:
+      "    # You also have associative arrays (actually, they're all associative\
+      \ arrays)\n    assoc[\"foo\"] = \"bar\";"
+    value:
+      "    # You also have associative arrays (actually, they're all associative\
+      \ arrays)\n    assoc[\"foo\"] = \"bar\";"
+  - click_count: 0
+    info: ""
+    name:
+      "    # And multi-dimensional arrays, with some limitations I won't mention\
+      \ here\n    multidim[0,0] = \"foo\";\n    multidim[0,1] = \"bar\";"
+    value:
+      "    # And multi-dimensional arrays, with some limitations I won't mention\
+      \ here\n    multidim[0,0] = \"foo\";\n    multidim[0,1] = \"bar\";"
+  - click_count: 0
+    info: ""
+    name: "    if (\"foo\" in assoc)\n        print \"Fooey!\";"
+    value: "    if (\"foo\" in assoc)\n        print \"Fooey!\";"
+  - click_count: 0
+    info: ""
+    name:
+      "    # You can also use the 'in' operator to traverse the keys of an array\n\
+      \    for (key in assoc)\n        print assoc[key];"
+    value:
+      "    # You can also use the 'in' operator to traverse the keys of an array\n\
+      \    for (key in assoc)\n        print assoc[key];"
+  - click_count: 0
+    info: ""
+    name:
+      "    # The command line is in a special array called ARGV\n    for (argnum\
+      \ in ARGV)\n        print ARGV[argnum];"
+    value:
+      "    # The command line is in a special array called ARGV\n    for (argnum\
+      \ in ARGV)\n        print ARGV[argnum];"
+  - click_count: 0
+    info: ""
+    name: "    delete ARGV[1];"
+    value: "    delete ARGV[1];"
+  - click_count: 0
+    info: ""
+    name: "    print ARGC;"
+    value: "    print ARGC;"
+  - click_count: 0
+    info: ""
+    name: string_functions();
+    value: string_functions();
+  - click_count: 0
+    info: ""
+    name: "# Here's how you define a function
+
+      function arithmetic_functions(a, b, c,     d) {"
+    value: "# Here's how you define a function
+
+      function arithmetic_functions(a, b, c,     d) {"
+  - click_count: 0
+    info: ""
+    name: "# Here's how to return a value\n    return localvar;\n}"
+    value: "# Here's how to return a value\n    return localvar;\n}"
+  - click_count: 0
+    info: ""
+    name: function string_functions(    localvar, arr) {
+    value: function string_functions(    localvar, arr) {
+  - click_count: 0
+    info: ""
+    name:
+      "# There's also printf\n    printf(\"%s %d %d %d\\n\", \"Testing\", 1, 2,\
+      \ 3);"
+    value:
+      "# There's also printf\n    printf(\"%s %d %d %d\\n\", \"Testing\", 1, 2,\
+      \ 3);"
+  - click_count: 0
+    info: ""
+    name: outfile = "/tmp/foobar.txt";
+    value: outfile = "/tmp/foobar.txt";
+  - click_count: 0
+    info: ""
+    name:
+      "outfile = \"/tmp/foobar.txt\";\n\n    print \"foobar\" > outfile;\n\n   \
+      \ # Now the string outfile is a file handle. You can close it:\n    close(outfile);"
+    value:
+      "outfile = \"/tmp/foobar.txt\";\n\n    print \"foobar\" > outfile;\n\n  \
+      \  # Now the string outfile is a file handle. You can close it:\n    close(outfile);"
+  - click_count: 0
+    info: ""
+    name: system("echo foobar");
+    value: system("echo foobar");
+  - click_count: 0
+    info: ""
+    name: getline localvar;
+    value: getline localvar;
+  - click_count: 0
+    info: ""
+    name: "# Reads a line from standard input and stores in localvar\n    getline localvar;"
+    value: "# Reads a line from standard input and stores in localvar\n    getline localvar;"
+  - click_count: 0
+    info: ""
+    name:
+      "    # Reads a line from a pipe (again, use a string so you close it properly)\n\
+      \    cmd = \"echo foobar\";\n    cmd | getline localvar; # localvar => \"foobar\"\
+      \n    close(cmd);"
+    value:
+      "    # Reads a line from a pipe (again, use a string so you close it properly)\n\
+      \    cmd = \"echo foobar\";\n    cmd | getline localvar; # localvar => \"foobar\"\
+      \n    close(cmd);"
+  - click_count: 0
+    info: ""
+    name:
+      "    # Reads a line from a file and stores in localvar\n    infile = \"/tmp/foobar.txt\"\
+      ;\n    getline localvar < infile; \n    close(infile);"
+    value:
+      "    # Reads a line from a file and stores in localvar\n    infile = \"/tmp/foobar.txt\"\
+      ;\n    getline localvar < infile; \n    close(infile);"
+  - click_count: 0
+    info: ""
+    name: "# Prints the number of fields on this line\n    print NF;"
+    value: "# Prints the number of fields on this line\n    print NF;"
+  - click_count: 0
+    info: ""
+    name: "    # Print the last field on this line\n    print $NF;"
+    value: "    # Print the last field on this line\n    print $NF;"
+  - click_count: 0
+    info: ""
+    name:
+      "    # This will print the second and fourth fields in the line\n    print\
+      \ $2, $4;"
+    value:
+      "    # This will print the second and fourth fields in the line\n    print\
+      \ $2, $4;"
+  - click_count: 0
+    info: ""
+    name: "$0 ~ /^fo+bar$/ {\n    print \"Equivalent to the last pattern\";\n}"
+    value: "$0 ~ /^fo+bar$/ {\n    print \"Equivalent to the last pattern\";\n}"
+  - click_count: 0
+    info: ""
+    name:
+      "BEGIN {\n\n    # First, ask the user for the name\n    print \"What name\
+      \ would you like the average age for?\";\n\n    # Get a line from standard input,\
+      \ not from files on the command line\n    getline name < \"/dev/stdin\";\n}"
+    value:
+      "BEGIN {\n\n    # First, ask the user for the name\n    print \"What name\
+      \ would you like the average age for?\";\n\n    # Get a line from standard input,\
+      \ not from files on the command line\n    getline name < \"/dev/stdin\";\n}"
+  - click_count: 0
+    info: ""
+    name: "@include \"test1\"\nBEGIN {\n    print \"This is script test2.\"\n}"
+    value: "@include \"test1\"\nBEGIN {\n    print \"This is script test2.\"\n}"
+  - click_count: 0
+    info: ""
+    name: ARGC, ARGV
+    value: ARGC, ARGV
+  - click_count: 0
+    info: ""
+    name: "$ awk 'BEGIN {
+
+      >         for (i = 0; i < ARGC; i++)
+
+      >             print ARGV[i]
+
+      >      }' inventory-shipped mail-list"
+    value: "$ awk 'BEGIN {
+
+      >         for (i = 0; i < ARGC; i++)
+
+      >             print ARGV[i]
+
+      >      }' inventory-shipped mail-list"
+  - click_count: 0
+    info: ""
+    name: ENVIRON["HOME"]
+    value: ENVIRON["HOME"]
+  - click_count: 0
+    info: ""
+    name: "FILENAME\n\n    The name of the current input file."
+    value: "FILENAME\n\n    The name of the current input file."
+  - click_count: 0
+    info: ""
+    name: "NF\n\n    The number of fields in the current input record"
+    value: "NF\n\n    The number of fields in the current input record"
+  - click_count: 0
+    info: ""
+    name: "NR\n\n    The number of input records awk has processed since the beginning"
+    value: "NR\n\n    The number of input records awk has processed since the beginning"
+  - click_count: 0
+    info: ""
+    name: delete array[index-expression]
+    value: delete array[index-expression]
+  - click_count: 0
+    info: ""
+    name: split("", array)
+    value: split("", array)
+  - click_count: 0
+    info: ""
+    name: "if ((subscript1, subscript2, \u2026) in array)"
+    value: "if ((subscript1, subscript2, \u2026) in array)"
+  - click_count: 0
+    info: ""
+    name: print item1
+    value: print item1
+  - click_count: 0
+    info: ""
+    name: print $1, $2
+    value: print $1, $2
+  - click_count: 0
+    info: ""
+    name: print $1, "     ", $2
+    value: print $1, "     ", $2
+  - click_count: 0
+    info: ""
+    name: "info:\n  - name: Python exceptions\n  - category: python"
+    value: "info:\n  - name: Python exceptions\n  - category: python"
+  - click_count: 0
+    info: ""
+    name: "buttons:"
+    value: "buttons:"
+  - click_count: 0
+    info: ""
+    name: buttons
+    value: buttons
+  - click_count: 0
+    info: ""
+    name: "info:\n  - name: Xpath\n  - category: tests"
+    value: "info:\n  - name: Xpath\n  - category: tests"
+  - click_count: 0
+    info: ""
+    name: "info:\n  - name: Xpath\n  - category: tests\nbuttons:"
+    value: "info:\n  - name: Xpath\n  - category: tests\nbuttons:"
+  - click_count: 0
+    info: ""
+    name:
+      'cat tags | awk ''{ print $1 }'' | uniq | awk ''{ printf "  - values: \"%s\"\n",
+      $1}'' > button_maps/copypaster.yml'
+    value:
+      'cat tags | awk ''{ print $1 }'' | uniq | awk ''{ printf "  - values: \"%s\"\n",
+      $1}'' > button_maps/copypaster.yml'
+  - click_count: 0
+    info: ""
+    name: "printf format, item1, item2, \u2026"
+    value: "printf format, item1, item2, \u2026"
+  - click_count: 0
+    info: ""
+    name: close(filename)
+    value: close(filename)
+  - click_count: 0
+    info: ""
+    name:
+      "The next statement forces awk to immediately stop processing the current
+      record and go on to the next "
+    value:
+      "The next statement forces awk to immediately stop processing the current
+      record and go on to the next "
+  - click_count: 0
+    info: ""
+    name: nextfile
+    value: nextfile
+  - click_count: 0
+    info: ""
+    name: exit
+    value: exit
+  - click_count: 0
+    info: ""
+    name: getline < file
+    value: getline < file
+  - click_count: 0
+    info: ""
+    name: atan2(y, x)
+    value: atan2(y, x)
+  - click_count: 0
+    info: ""
+    name: cos(x)
+    value: cos(x)
+  - click_count: 0
+    info: ""
+    name: exp(x)
+    value: exp(x)
+  - click_count: 0
+    info: ""
+    name: int(x)
+    value: int(x)
+  - click_count: 0
+    info: ""
+    name: "log(x)
+
+
+      "
+    value: "log(x)
+
+
+      "
+  - click_count: 0
+    info: ""
+    name: rand()
+    value: rand()
+  - click_count: 0
+    info: ""
+    name: sin(x)
+    value: sin(x)
+  - click_count: 0
+    info: ""
+    name: sqrt(x)
+    value: sqrt(x)
+  - click_count: 0
+    info: ""
+    name: srand([x])
+    value: srand([x])
+  - click_count: 0
+    info: ""
+    name: "asort(source [, dest [, how ] ]) #"
+    value: "asort(source [, dest [, how ] ]) #"
+  - click_count: 0
+    info: ""
+    name: "asorti(source [, dest [, how ] ]) #"
+    value: "asorti(source [, dest [, how ] ]) #"
+  - click_count: 0
+    info: ""
+    name: "gensub(regexp, replacement, how [, target]) #"
+    value: "gensub(regexp, replacement, how [, target]) #"
+  - click_count: 0
+    info: ""
+    name: gsub(regexp, replacement [, target])
+    value: gsub(regexp, replacement [, target])
+  - click_count: 0
+    info: ""
+    name: index(in, find)
+    value: index(in, find)
+  - click_count: 0
+    info: ""
+    name: length([string])
+    value: length([string])
+  - click_count: 0
+    info: ""
+    name: match(string, regexp [, array])
+    value: match(string, regexp [, array])
+  - click_count: 0
+    info: ""
+    name: "patsplit(string, array [, fieldpat [, seps ] ]) #"
+    value: "patsplit(string, array [, fieldpat [, seps ] ]) #"
+  - click_count: 0
+    info: ""
+    name: split(string, array [, fieldsep [, seps ] ])
+    value: split(string, array [, fieldsep [, seps ] ])
+  - click_count: 0
+    info: ""
+    name: "sprintf(format, expression1, \u2026)"
+    value: "sprintf(format, expression1, \u2026)"
+  - click_count: 0
+    info: ""
+    name: "strtonum(str) #"
+    value: "strtonum(str) #"
+  - click_count: 0
+    info: ""
+    name: sub(regexp, replacement [, target])
+    value: sub(regexp, replacement [, target])
+  - click_count: 0
+    info: ""
+    name: substr(string, start [, length ])
+    value: substr(string, start [, length ])
+  - click_count: 0
+    info: ""
+    name: tolower(string)
+    value: tolower(string)
+  - click_count: 0
+    info: ""
+    name: toupper(string)
+    value: toupper(string)
+  - click_count: 0
+    info: ""
+    name: close(filename [, how])
+    value: close(filename [, how])
+  - click_count: 0
+    info: ""
+    name: fflush([filename])
+    value: fflush([filename])
+  - click_count: 0
+    info: ""
+    name: system(command)
+    value: system(command)
+  - click_count: 0
+    info: ""
+    name: mktime(datespec [, utc-flag ])
+    value: mktime(datespec [, utc-flag ])
+  - click_count: 0
+    info: ""
+    name: strftime([format [, timestamp [, utc-flag] ] ])
+    value: strftime([format [, timestamp [, utc-flag] ] ])
+  - click_count: 0
+    info: ""
+    name: systime()
+    value: systime()
+  - click_count: 0
+    info: ""
+    name: "and(v1, v2 [, \u2026])"
+    value: "and(v1, v2 [, \u2026])"
+  - click_count: 0
+    info: ""
+    name: compl(val)
+    value: compl(val)
+  - click_count: 0
+    info: ""
+    name: lshift(val, count)
+    value: lshift(val, count)
+  - click_count: 0
+    info: ""
+    name: "or(v1, v2 [, \u2026])"
+    value: "or(v1, v2 [, \u2026])"
+  - click_count: 0
+    info: ""
+    name: rshift(val, count)
+    value: rshift(val, count)
+  - click_count: 0
+    info: ""
+    name: "xor(v1, v2 [, \u2026])"
+    value: "xor(v1, v2 [, \u2026])"
+  - click_count: 0
+    info: ""
+    name: isarray(x)
+    value: isarray(x)
+  - click_count: 0
+    info: ""
+    name: typeof(x)
+    value: typeof(x)
+  - click_count: 0
+    info: ""
+    name: bindtextdomain(directory [, domain])
+    value: bindtextdomain(directory [, domain])
+  - click_count: 0
+    info: ""
+    name: "function name([parameter-list])\n{\n     body-of-function\n}"
+    value: "function name([parameter-list])\n{\n     body-of-function\n}"
+  - click_count: 0
+    info: ""
+    name: "selector ? if-true-exp : if-false-exp"
+    value: "selector ? if-true-exp : if-false-exp"
+  - click_count: 0
+    info: ""
+    name: "if (x % 2 == 0)\n    print \"x is even\"\nelse\n    print \"x is odd\""
+    value: "if (x % 2 == 0)\n    print \"x is even\"\nelse\n    print \"x is odd\""
+  - click_count: 0
+    info: ""
+    name: "while (condition)\n  body"
+    value: "while (condition)\n  body"
+  - click_count: 0
+    info: ""
+    name: "while (i <= 3) {\n        print $i\n        i++\n    }"
+    value: "while (i <= 3) {\n        print $i\n        i++\n    }"
+  - click_count: 0
+    info: ""
+    name: "do\n  body\nwhile (condition)"
+    value: "do\n  body\nwhile (condition)"
+  - click_count: 0
+    info: ""
+    name:
+      "switch (c) {\n    case \"a\":\n        # report size of all files\n     \
+      \   all_files = TRUE;\n        break\n    case \"k\":\n        BLOCK_SIZE = 1024\
+      \       # 1K block size\n        break\n    case \"s\":\n        # do sums only\n\
+      \        sum_only = TRUE\n        break\n    case \"x\":\n        # don't cross\
+      \ filesystems\n        fts_flags = or(fts_flags, FTS_XDEV)\n        break\n  \
+      \  case \"?\":\n    default:\n        usage()\n        break\n    }"
+    value:
+      "switch (c) {\n    case \"a\":\n        # report size of all files\n    \
+      \    all_files = TRUE;\n        break\n    case \"k\":\n        BLOCK_SIZE = 1024\
+      \       # 1K block size\n        break\n    case \"s\":\n        # do sums only\n\
+      \        sum_only = TRUE\n        break\n    case \"x\":\n        # don't cross\
+      \ filesystems\n        fts_flags = or(fts_flags, FTS_XDEV)\n        break\n  \
+      \  case \"?\":\n    default:\n        usage()\n        break\n    }"
+  - click_count: 0
+    info: ""
+    name: break
+    value: break
+  - click_count: 0
+    info: ""
+    name: continue
+    value: continue
+info:
+  - name: Awk
+  - category: tests
