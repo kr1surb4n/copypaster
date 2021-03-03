@@ -118,22 +118,6 @@ class YamlFile:
 
 
 def extract_values(entry):
-    """
-    open file with yaml,
-
-    walk over every element of `buttons`, translate it to configparser object
-
-    every element has this:
-      - click_count: 1
-        info: 'First value'
-        name: First
-        value: "First"
-
-    next, create folder with the name of the file,
-
-    and under that folimport configparserder, write down all config parser objects
-    """
-
     path = Path(entry.path)
 
     yaml_snippets = YamlFile(entry.path)
