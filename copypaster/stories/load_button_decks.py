@@ -1,9 +1,15 @@
+import os
+import threading, queue
 from app.register import Register as __
 from copypaster import log, PROJECT_DIR
 import os
 from app.signal_bus import emit, subscribe
-from copypaster.file_loader import Deck
+from copypaster.file_loader import Deck, Snippet
 from copypaster.widgets.notebooks import ButtonGrid, ButtonCollection
+
+BACKUP_FOLDER = "/home/kris/workshops/tools/copypaster/file_decks"
+
+PATH_TO_SNIPPETS_FOLDER = os.environ.get('SNIPPETS_FOLDER', BACKUP_FOLDER)
 
 
 @subscribe
@@ -25,57 +31,108 @@ def load_config():
     log.debug("LoadButtonDecks is run")
 
     cabinet = __.FileCabinet
-    load_dirty_notes(cabinet)
-    load_notes(cabinet)
 
-    collections = load_collections(cabinet)
+    load_snippets(cabinet)
 
     __.main_window.show_all()  # redraw everything
 
-    set_visibility_on_collections(collections)
+    set_visibility_on_collections()
 
 
-def load_dirty_notes(cabinet):
-    log.debug("Loading Dirty Notes")
-    name, deck_file = __.Config.get_dirty_deck()
+def load_snippets(cabinet):
+    log.debug("Loading snippets")
 
-    dirty_notes = ButtonGrid(Deck(deck_file))
+    line = queue.Queue()
 
-    # we need to add those objects to Register
-    __.DirtyNotes = dirty_notes
-    __.Dirty = dirty_notes.button_deck
+    Decks = {}
+    Decks_Data = {}
 
-    cabinet.add_page(name, dirty_notes)
+    join = os.path.join
 
+    def read(entry):
 
-def load_notes(cabinet):
-    """Load all notes that arent the DirtyNotes"""
-    log.debug("Loading notes")
+        if entry.is_file():
+            snippet = Snippet().load(entry.path)
+            
+                        try:
+                self.add_button(**_button)
+            except IndexError:
+                pass  # yes, cause this value exists
+            except AssertionError:
+                log.error("No-value entry in deck {}".format(self.path))
+                exit(1)
+            return ('file', f"name: {entry.name}", f"path: {entry.path}")
 
-    decks = __.Config.get_decks()
+        if entry.is_dir():
+            return NavigateButton(  # is what we will display
+                    label=destination,
+                    report_to=collection_name,
+                    current=name,
+                    target=target_name,
+                )
+            return ('dir', f"name: {entry.name}", f"path: {entry.path}")
 
-    for name, deck_file in decks.items():
-        cabinet.add_page(name, ButtonGrid(Deck(deck_file)))
+    def walk(folder):
+        global line
+        global Decks
+        global Decks_Data
+        deck = ButtonGrid()
 
+        # navigate to parent
+        deck.append(NavigateButton(
+            label="..", report_to=collection_name, current=name, target=folder
+        ))
 
-def load_collections(cabinet):
-    log.debug("Loading collections")
+        # TODO: here i can read a file with metadata
 
-    results = []
+        with os.scandir(folder) as it:
+            for entry in it:
+                if entry.name.startswith('.'):
+                    continue
 
-    collections = __.Config.get_collections()
-    for name, collection_file in collections.items():
-        # I build buttons collection
-        collection = ButtonCollection(name, collection_file)
-        results += [collection]
+                if entry.is_dir():
+                    line.put(entry.path)
 
-        # add this to the register under it's name
-        setattr(__, name, collection)
+                deck.append(read(entry))
 
-        # then add this as a page
-        cabinet.add_page(name, collection)
+        deck.hide()
 
-    return results
+        Decks[folder] = deck
+        Decks_Data[folder] = {'name': os.path.basename(folder)}
+
+    def worker():
+        while True:
+            folder = line.get()
+            print(f'Working on folder: {folder}')
+
+            walk(folder)
+            print(f'Finished {folder}')
+            line.task_done()
+
+    threading.Thread(target=worker, daemon=True).start()
+
+    line.put(PATH_TO_SNIPPETS_FOLDER)
+
+    # block until all tasks are done
+    line.join()
+
+    """TODO : I need the decks as widgets that will
+    contain the buttons.
+
+    then add all to some other widget. 
+     and hide them all.
+    then show the first.
+
+    navigate buttons will on click show deck 
+    that has their path."""
+
+    root_deck = Decks[PATH_TO_SNIPPETS_FOLDER]
+
+    cabinet.add_page("Snippets", root_deck)
+
+    setattr(__, 'Decks', Decks)
+    setattr(__, 'Decks_Data', Decks_Data)
+    setattr(__, 'Snippets', root_deck)
 
 
 def set_visibility_on_collections(collections):
