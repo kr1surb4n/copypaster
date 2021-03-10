@@ -174,7 +174,7 @@ save them under and object `t`, in file all_strings.py
 
 * DONE change every callback into events
 - State "DONE"       from "WAITING"    [2020-06-28 nie 15:18]
-* CANCELLED add on CopyButton function to update values and label
+* CANCELLED add on Copy function to update values and label
 - State "CANCELLED"  from "PHONE"      [2020-07-19 nie 16:40]
 * can i catch copy-paste that is happening when done inside application?
 
@@ -209,7 +209,7 @@ SUBSCRIBE   autosave_on
 SUBSCRIBE   autosave_off
 SUBSCRIBE   copy
 
-CopyButton:
+Copy:
 EMIT    remove_button   self
 EMIT    copy    button.value
 EMIT    edit_button self

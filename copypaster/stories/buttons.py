@@ -13,28 +13,18 @@ def edit_button(button_to_edit):
 
 @subscribe
 def remove_button(button):
-    parent = button.get_parent()
-    del parent.get_parent().button_deck.buttons[button.value]
-    parent.remove(button)
-
+    __.Snippets.remove_button_from_current_grid(button)
 
 @subscribe
-def add_button(name, value):
-    log.debug("Adding button to currently selected deck")
-    assert name
-    assert value
+def add_button(copy_button):
+    log.debug(f"Adding copy {copy_button} button to current button grid")
+    
+    __.Snippets.add_to_current_grid(copy_button)
+    
+    copy_button.show()
+    log.debug("A button has been added")
 
-    try:
-        cabinet = __.FileCabinet
-        current_grid = cabinet.pages[cabinet.get_current_page()]
-        b = current_grid.button_deck.add_button(name=name, value=value)
-        current_grid.add(b)
-        b.show()
-        log.debug("A button has been added")
-
-        __.Jimmy.send("")
-    except IndexError:
-        pass  # yes, cause this value exists
+    __.Jimmy.clean_clipboard()
 
 
 @subscribe

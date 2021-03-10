@@ -38,7 +38,7 @@ buttons:
 - click_count: 0
   info: ''
   name: Copy Button
-  value: CopyButton
+  value: Copy
 - click_count: 0
   info: ''
   name: Deck

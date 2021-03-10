@@ -3,12 +3,11 @@
 """Console script for copypaster."""
 import sys
 import click
+from os.path import expanduser
+
 from copypaster import log
-
-
 from copypaster.copypaster import main_function
 
-from os.path import expanduser
 
 default_config_path = expanduser("~/.config/copypaster.conf")
 
@@ -21,7 +20,6 @@ def main(config):
     log.info("copypaster.cli.main")
 
     try:
-        pass
         main_function(config)
     except Exception as e:
         log.critical(str(e))

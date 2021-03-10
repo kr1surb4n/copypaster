@@ -1,6 +1,6 @@
 import yaml
-from copypaster.widgets.buttons import CopyButton
-from copypaster.widgets.buttons import NavigateButton
+from copypaster.widgets.buttons import Copy
+from copypaster.widgets.buttons import GoTo
 from copypaster import log
 
 
@@ -58,7 +58,7 @@ class Deck(YamlFile):
         if c:
             raise IndexError("There is such a value")
 
-        c = CopyButton(**kwargs)
+        c = Copy(**kwargs)
 
         self.buttons[c.value] = c
         return c
@@ -106,7 +106,7 @@ class NavigationDeck:
         self.collection_name = collection_name
 
         self.buttons = {
-            target_name: NavigateButton(  # is what we will display
+            target_name: GoTo(  # is what we will display
                 label=target_name,
                 report_to=collection_name,
                 current=name,
