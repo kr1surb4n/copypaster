@@ -22,20 +22,20 @@ class GtkBuilder(Gtk.Builder):
         Return type: GObject.GType
 
         """
-        from copypaster.widgets.notebooks import FileCabinet  # noqa
+        from copypaster.widgets.containers import ButtonTree  # noqa
 
         if type_name == 'MainWindow':
             pass
             # return MainWindow  - in normal use, Type should be returned
 
-        if type_name == 'FileCabinet':
-            return FileCabinet
+        if type_name == 'ButtonTree':
+            return ButtonTree
 
         r = Gtk.Builder.do_get_type_from_name(self, type_name)
-        print('GtkBuilder: => {}\t{}'.format(type_name, r))
+        log.debug('GtkBuilder: => {}\t{}'.format(type_name, r))
         return r
 
 
 log.info("Starting builder")
 builder = GtkBuilder()
-__.builder = builder
+__.Builder = builder

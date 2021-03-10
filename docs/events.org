@@ -7,10 +7,10 @@
 *** StateButtonsCallbacks: auto_clipboard
 
 ** edit_button
-*** CopyButton: on_button_click
+*** Copy: on_button_click
 
 ** remove_button
-*** CopyButton: on_button_click
+*** Copy: on_button_click
 
 ** open_add_button_dialog
 *** StateButtonsCallbacks: on_add
@@ -25,9 +25,9 @@
 ** quit
 *** Application: handle_quit
 
-* OperateBranchGrids 
-** change_button_grid
-*** NavigateButton: on_button_click
+* OperateBranchtree 
+** change_tree_level
+*** GoTo: on_button_click
 
 * NotebookStories
 ** new_notebook
@@ -41,7 +41,7 @@
 
 * HowToCopyAMessage
 ** copy
-*** CopyButton: on_button_click
+*** Copy: on_button_click
 
 
 * NotConnected

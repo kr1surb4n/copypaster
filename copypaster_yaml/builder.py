@@ -22,7 +22,7 @@ class GtkBuilder(Gtk.Builder):
         Return type: GObject.GType
 
         """
-        from copypaster.widgets.notebooks import FileCabinet  # noqa
+        from copypaster.widgets.containers import FileCabinet  # noqa
 
         if type_name == 'MainWindow':
             pass

@@ -20,7 +20,7 @@ def camel_case_split(str):
     return ["".join(word) for word in words]
 
 
-class CopyButton(Gtk.Button):
+class Copy(Gtk.Button):
     def hash(self):
         val = self.name + self.value
         return hashlib.md5(val.encode()).hexdigest()
@@ -64,7 +64,7 @@ class CopyButton(Gtk.Button):
         self.id = self.hash()
 
         kwargs["label"] = self.style_label()
-        super(CopyButton, self).__init__(*args, **kwargs)
+        super(Copy, self).__init__(*args, **kwargs)
 
         button_context = self.get_style_context()
         button_context.add_class(self.tag)
@@ -102,13 +102,13 @@ class CopyButton(Gtk.Button):
             emit("edit_button", self)
 
 
-class NavigateButton(Gtk.Button):
+class GoTo(Gtk.Button):
     def __init__(self, *args, **kwargs):
 
         "Current will be hidden. \
          Target will be shown"
 
-        "Invoke: NavigateButton(current=<widget>, target=<widget>, label='Back')"
+        "Invoke: GoTo(current=<widget>, target=<widget>, label='Back')"
         self.report_to = kwargs.get("report_to")
         self.current = kwargs.get("current")
         self.target = kwargs.get("target")
@@ -116,7 +116,7 @@ class NavigateButton(Gtk.Button):
         del kwargs["current"]
         del kwargs["target"]
 
-        super(NavigateButton, self).__init__(*args, **kwargs)
+        super(GoTo, self).__init__(*args, **kwargs)
         self.set_name = (
             "nested-navigation"  # TODO: styles should be moved to another class
         )
@@ -128,7 +128,7 @@ class NavigateButton(Gtk.Button):
     def on_button_click(self, button):
         log.debug("Navigating...")
 
-        emit("change_button_grid", self.report_to, self.current, self.target)
+        emit("change_tree_level", self.report_to, self.current, self.target)
 
 
 class PasteButton(Gtk.Button):

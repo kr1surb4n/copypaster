@@ -2,7 +2,7 @@ from copypaster import log
 from app.register import register_instance
 from copypaster.file_loader import DeckCollection, NavigationDeck
 from app.widgets.utility import wrap
-from copypaster.widgets.buttons import NavigateButton
+from copypaster.widgets.buttons import GoTo
 
 
 import gi
@@ -34,14 +34,14 @@ class ButtonGrid(Gtk.FlowBox):
         self.button_deck.save_buttons()
 
 
-class ButtonCollection(Gtk.Stack):
+class ButtonTree(Gtk.Stack):
     "Object representing whole tree walking device"
 
     @property
     def button_deck(self):
         """I'm the 'button_deck' property."""
         log.debug("Someone grabs a grid %s in a collection" % self.current)
-        return self.grids[self.current].button_deck
+        return self.tree[self.current].button_deck
 
     def __init__(self, collection_name, collection_file):
         Gtk.Stack.__init__(self)
@@ -49,8 +49,8 @@ class ButtonCollection(Gtk.Stack):
         self.name = collection_name
         self.collection = DeckCollection(collection_name, collection_file)
 
-        # zbuduj gridsy
-        self.grids = {name: ButtonGrid() for name, _ in self.collection.branches()}
+        # zbuduj treey
+        self.tree = {name: ButtonGrid() for name, _ in self.collection.branches()}
 
         # we agree that the "root" is the current selected grid of buttons
         self.current = "root"
@@ -61,7 +61,7 @@ class ButtonCollection(Gtk.Stack):
             parent_name = self.collection.parents[name]
             link_names = self.collection.levels[name]
 
-            current = self.grids[name]
+            current = self.tree[name]
 
             """Fuck me, why I make so damn hard this thing??
 
@@ -83,13 +83,13 @@ class ButtonCollection(Gtk.Stack):
             branch_deck = self.collection.branch_decks[name]
 
             # like a back button...
-            branch_deck.one_up_button = NavigateButton(
+            branch_deck.one_up_button = GoTo(
                 label="..", report_to=collection_name, current=name, target=parent_name
             )
 
             # or buttons to other stuff..
             branch_deck.links_buttons = [
-                NavigateButton(  # is what we will display
+                GoTo(  # is what we will display
                     label=target_name,
                     report_to=collection_name,
                     current=name,
@@ -104,28 +104,28 @@ class ButtonCollection(Gtk.Stack):
             current.init_buttons()
             current.hide()
 
-        # we must add all grids
-        [self.add_named(grid, name) for name, grid in self.grids.items()]
+        # we must add all tree
+        [self.add_named(grid, name) for name, grid in self.tree.items()]
 
         # then
-        self.hide_all_grids()
+        self.hide_all_tree()
 
         # and
         self.show_root()
 
     def save_grid(self):
-        [grid.save_grid() for name, grid in self.grids.items() if name == "root"]
+        [grid.save_grid() for name, grid in self.tree.items() if name == "root"]
 
-    def hide_all_grids(self):
-        [grid.hide() for _, grid in self.grids.items()]
+    def hide_all_tree(self):
+        [grid.hide() for _, grid in self.tree.items()]
 
     def show_root(self):  # or first button grid
-        self.grids["root"].show()
+        self.tree["root"].show()
 
 
 @register_instance
 class FileCabinet(Gtk.Notebook):
-    """Here we keep the buttons grids and stuff"""
+    """Here we keep the buttons tree and stuff"""
 
     def __init__(self):
         Gtk.Notebook.__init__(self, vexpand=True)

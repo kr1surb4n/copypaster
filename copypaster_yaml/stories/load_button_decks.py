@@ -3,7 +3,7 @@ from copypaster import log, PROJECT_DIR
 import os
 from app.signal_bus import emit, subscribe
 from copypaster.file_loader import Deck
-from copypaster.widgets.notebooks import ButtonGrid, ButtonCollection
+from copypaster.widgets.containers import ButtonGrid, ButtonTree
 
 
 @subscribe
@@ -66,7 +66,7 @@ def load_collections(cabinet):
     collections = __.Config.get_collections()
     for name, collection_file in collections.items():
         # I build buttons collection
-        collection = ButtonCollection(name, collection_file)
+        collection = ButtonTree(name, collection_file)
         results += [collection]
 
         # add this to the register under it's name
@@ -81,7 +81,7 @@ def load_collections(cabinet):
 def set_visibility_on_collections(collections):
     """We must hide all objects on collections and show all roots"""
     for collection in collections:
-        collection.hide_all_grids()
+        collection.hide_all_tree()
         collection.show_root()
 
 
@@ -98,5 +98,5 @@ def change_button_grid(report_to, current, target):
 
     # The whole secret to navigation is that nothing moves.
     # All is static, we only show and hide stuff"
-    collection.grids[current].hide()
-    collection.grids[target].show()
+    collection.tree[current].hide()
+    collection.tree[target].show()
