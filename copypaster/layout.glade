@@ -2,7 +2,6 @@
 <!-- Generated with glade 3.22.2 -->
 <interface>
   <requires lib="gtk+" version="3.20"/>
-  <requires lib="copypaster" version="1.0"/>
   <object class="GtkApplicationWindow" id="main_window">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -147,47 +146,6 @@
               </object>
             </child>
             <child>
-              <object class="GtkMenuItem" id="notebooks">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Notebooks</property>
-                <child type="submenu">
-                  <object class="GtkMenu">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child>
-                      <object class="GtkMenuItem" id="new_notebook_menuitem">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <signal name="activate" handler="want_new_notebook" swapped="no"/>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkMenuItem" id="open_notebook_menuitem">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <signal name="activate" handler="want_open_notebook" swapped="no"/>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkMenuItem" id="save_notebook_menuitem">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <signal name="activate" handler="want_save_notebook" swapped="no"/>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkMenuItem" id="saveas_notebook_menuitem">
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <signal name="activate" handler="want_saveas_notebook" swapped="no"/>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>
-            <child>
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
@@ -313,6 +271,19 @@
                 <property name="homogeneous">True</property>
               </packing>
             </child>
+            <child>
+              <object class="GtkToolButton" id="add_folder">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Add Folder</property>
+                <property name="use_underline">True</property>
+                <signal name="clicked" handler="add_folder" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="homogeneous">True</property>
+              </packing>
+            </child>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -321,6 +292,27 @@
           </packing>
         </child>
         <child>
+          <object class="GtkLabel" id="preview_label">
+            <property name="height_request">120</property>
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkScrolledWindow" id="dupa">
+            <property name="visible">True</property>
+            <property name="can_focus">True</property>
+            <property name="hexpand">True</property>
+            <property name="vexpand">True</property>
+            <property name="shadow_type">in</property>
+            <property name="propagate_natural_width">True</property>
+            <property name="propagate_natural_height">True</property>
+                        <child>
           <object class="ButtonTree" id="snippets">
             <property name="name">snippets</property>
             <property name="visible">True</property>
@@ -336,6 +328,13 @@
             <property name="expand">True</property>
             <property name="fill">True</property>
             <property name="position">2</property>
+          </packing>
+        </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
           </packing>
         </child>
         <child>

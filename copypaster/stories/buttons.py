@@ -1,7 +1,8 @@
 from app.register import Register as __
 from copypaster import log
 from app.signal_bus import subscribe
-from copypaster.widgets.dialogs import DialogAdd, DialogEdit
+from copypaster.file_loader import Folder, GoTo
+from copypaster.widgets.dialogs import DialogAdd, DialogEdit, DialogAddFolder
 
 
 @subscribe
@@ -10,6 +11,9 @@ def edit_button(button_to_edit):
     dialog.run()
     dialog.destroy()
 
+@subscribe
+def preview_content(message):
+    __.PreviewLabel.set_text(message)
 
 @subscribe
 def remove_button(button):
@@ -19,6 +23,9 @@ def remove_button(button):
 def add_button(copy_button):
     log.debug(f"Adding copy {copy_button} button to current button grid")
     
+    copy_button.set_path(__.Snippets.level)
+    copy_button.save()
+
     __.Snippets.add_to_current_grid(copy_button)
     
     copy_button.show()
@@ -26,9 +33,31 @@ def add_button(copy_button):
 
     __.Jimmy.clean_clipboard()
 
+@subscribe
+def add_folder(folder_name):
+    log.debug(f"Adding folder")
+    folder = Folder(folder_name)
+    folder.set_path(__.Snippets.level)
+    folder.save()
+
+    goto = GoTo(
+        name=folder.name, 
+        position=__.Snippets.level,
+        destination=folder.path)
+
+    __.Snippets.add_to_current_grid(goto)
+    
+    goto.show()
 
 @subscribe
 def open_add_button_dialog():
-    dialog = DialogAdd(__.Application.win)
+    dialog = DialogAdd(__.main_window)
+    dialog.run()
+    dialog.destroy()
+
+
+@subscribe
+def open_add_folder_dialog():
+    dialog = DialogAddFolder(__.main_window)
     dialog.run()
     dialog.destroy()
