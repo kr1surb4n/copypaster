@@ -1,6 +1,7 @@
 from app.register import Register as __
 from app.signal_bus import emit
 from copypaster import log, State, AppState
+from copypaster.file_loader import Copy, Snippet
 from app.layout_events import LayoutEvents  # noqa
 
 import gi
@@ -33,24 +34,7 @@ class CopyPasterLayoutEvents(LayoutEvents):
         if not value:
             log.error("No value to save - aborting")
             return False
-        emit("add_button", name, value)
-
-    # menu
-    def want_new_notebook(self, button):
-        log.debug("Emitting new_notebook...")
-        emit('new_notebook')
-
-    def want_open_notebook(self, button):
-        log.debug("Emitting open_notebook...")
-        emit('open_notebook')
-
-    def want_save_notebook(self, button):
-        log.debug("Emitting save_notebook...")
-        emit('save_notebook')
-
-    def want_saveas_notebook(self, button):
-        log.debug("Emitting save_notebook_as...")
-        emit('save_notebook_as')
+        emit("add_button", Copy(Snippet(name, value)))
 
     # toolbar
     def _deactive_rest_buttons(self, leave_alone):
@@ -101,8 +85,8 @@ class CopyPasterLayoutEvents(LayoutEvents):
         log.debug("Begin adding button")
         emit("open_add_button_dialog")
 
-    def remove_notebook(self, button, name):
-        pass
-
+    def add_folder(self, button):
+        log.debug("Begin adding folder")
+        emit("open_add_folder_dialog")
 
 Layout_events = CopyPasterLayoutEvents()

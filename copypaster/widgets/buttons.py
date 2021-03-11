@@ -46,6 +46,15 @@ class Copy(Gtk.Button, Id):
     def content(self, content):
         self.snippet.content = content
 
+    def set_path(self, path):
+        self.snippet.set_path(path)
+
+    def save(self):
+        self.snippet.save()
+
+    def delete(self):
+        self.snippet.delete()
+
     def __init__(self, snippet):
         self.snippet = snippet
 
@@ -78,6 +87,7 @@ class Copy(Gtk.Button, Id):
         if state in [State.NORMAL, State.AUTOSAVE]:
             log.debug("Coping value...")
             emit("copy", button.content)
+            emit("preview_content", button.content)
 
         if state == State.EDIT:
             log.debug("Editing button...")
@@ -115,5 +125,15 @@ class GoTo(Gtk.Button, Id):
 
     def on_goto(self, button: Gtk.Button):
         log.debug(f"Going to {self.destination}")
-        
-        emit("change_button_grid", self.current_position, self.destination)
+        state = AppState["app"]
+
+        if state == State.REMOVE:
+            log.debug("Removing button...")
+            emit("remove_button", self)
+
+        if state != State.REMOVE:
+            emit("change_button_grid", self.current_position, self.destination)
+
+    def delete(self):
+        import os
+        os.rmdir(os.path.join(self.current_position, self.name))

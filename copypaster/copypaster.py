@@ -37,7 +37,7 @@ def main_function(config_file):
     __.main_window = builder.get_object("main_window")
     __.Snippets = builder.get_object("snippets")
     __.StateButtons = builder.get_object("toolbar")
-
+    __.PreviewLabel = builder.get_object("preview_label")
 
     from copypaster.layout_events import Layout_events  # noqa
     __.Builder.connect_signals(Layout_events)

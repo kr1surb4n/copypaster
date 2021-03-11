@@ -49,21 +49,23 @@ class ButtonGrid(Gtk.FlowBox):
         self.add(button)
 
     def remove(self, button):
-        del self.buttons[button._id]
+        button.delete()
         super().remove(button)
+        del self.buttons[button._id]
+        
 
 class ButtonTree(Gtk.Stack):
     "Object representing whole tree of folders and files"
 
     @property
     def current_grid(self):
-        return self.tree[self.current_position]
+        return self.tree[self.level]
 
     def __init__(self):
         Gtk.Stack.__init__(self)
         self.level = ""
-        self.current = None
         self.tree = {}
+        self.root = ""
 
     def initialize(self, tree: dict, root: str):
         log.debug(f"Initializing snippets folder: {root}")
@@ -75,7 +77,7 @@ class ButtonTree(Gtk.Stack):
             self.add_named(grid, name)
 
     def goto(self, destination):
-        self.current_position = destination
+        self.level = destination
         self.set_visible_child_name(destination)
 
     def add_to_current_grid(self, button):

@@ -6,15 +6,19 @@ import configparser
 import yaml
 import string
 
+import gi
+
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk  # noqa
+
 from copypaster.widgets.buttons import Copy, GoTo
 from copypaster.widgets.containers import ButtonTree, ButtonGrid
-from copypaster import log
+from copypaster import log, PROJECT_DIR
 
 line = queue.Queue()
 Decks = {}
 
-BACKUP_FOLDER = "/home/kris/workshops/tools/copypaster/file_decks"
-
+BACKUP_FOLDER = os.path.join(PROJECT_DIR, "file_decks")
 PATH_TO_SNIPPETS_FOLDER = os.environ.get('SNIPPETS_FOLDER', BACKUP_FOLDER)
 
 CLICK_COUNT = "click_count"
@@ -44,7 +48,7 @@ def placeholder_name():
 
     return name
 
-def clean_name(name):
+def clean_name(name: str):
     name.strip()
     name = name.translate(rules)
 
@@ -56,24 +60,41 @@ def clean_name(name):
 
     return name
 
+class Folder:
+    def __init__(self, name="", path=""):
+        self.name = name
+        self.path = path
+
+    def set_path(self, path_to_containing_folder):
+        self.path = os.path.join(path_to_containing_folder, self.name)
+
+    def save(self):
+        os.mkdir(self.path)
+
+    def delete(self):
+        os.unlink(self.path)
+
 
 class Snippet:
-    def __init__(self):
-        self.name = ""
-        self.path = ""
-        self.content = ""
+    def __init__(self, name="", content="", path=""):
+        self.name = name
+        self.path = path
+        self.content = content
 
     @property
-    def file_name(self):
+    def file_name(self) -> str:
         return self.name.replace(" ", "-")
 
-    def populate(self, snippet_dictionary):
+    def set_path(self, path_to_containing_folder):
+        self.path = os.path.join(path_to_containing_folder, self.file_name)
+
+    def populate(self, snippet_dictionary: dict):
         self.content = str(snippet_dictionary.get(VALUE, ""))
         self.name = str(snippet_dictionary.get(NAME, clean_name(self.content)))
         
         return self
 
-    def load(self, path):
+    def load(self, path: str):
         self.path = path
 
         with open(path, 'r') as f:
@@ -92,8 +113,12 @@ class Snippet:
 
         return self
 
+    def delete(self):
+        os.unlink(self.path)
 
-def button_made_from(entry):
+
+def button_made_from(entry: os.DirEntry) -> Gtk.Button:
+
     if entry.is_file():
         return Copy(Snippet().load(entry.path))
 
@@ -104,7 +129,7 @@ def button_made_from(entry):
                 destination=entry.path,
             )
         
-def walk(folder):
+def walk(folder: str):
     global Decks
     global Decks_Data
     global line
@@ -148,7 +173,7 @@ def worker():
         line.task_done()
 
 
-def load_snippets():
+def load_snippets() -> (dict, str):
     log.info('Loading snippets')
     global line
     global Decks
