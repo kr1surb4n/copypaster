@@ -3,7 +3,7 @@ from copypaster import log
 from app.signal_bus import subscribe
 from copypaster.file_loader import Folder, GoTo
 from copypaster.widgets.dialogs import DialogAdd, DialogEdit, DialogAddFolder
-
+from copypaster.widgets.containers import ButtonGrid
 
 @subscribe
 def edit_button(button_to_edit):
@@ -44,9 +44,23 @@ def add_folder(folder_name):
         name=folder.name, 
         position=__.Snippets.level,
         destination=folder.path)
-
     __.Snippets.add_to_current_grid(goto)
+
+
+    grid = ButtonGrid()
+    up_to_parent = GoTo(
+                name="..",
+                position=folder.path,
+                destination=__.Snippets.level
+    )
+    up_to_parent.show()
     
+    grid.append(up_to_parent)
+    grid.show()
+
+    __.Snippets.tree[folder.path] = grid
+    __.Snippets.add_named(grid, folder.path)
+
     goto.show()
 
 @subscribe
