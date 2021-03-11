@@ -30,6 +30,17 @@ from gi.repository import Gtk  # noqa
 
 from copypaster import log
 
+def sort_function(child1: Gtk.FlowBoxChild, child2, *user_data):
+    button1 = child1.get_children()[0]
+    button2 = child2.get_children()[0]
+
+    if button1.name< button2.name:
+        return -1
+    
+    if button1.name > button2.name:
+        return 1
+
+    return 0
 
 class ButtonGrid(Gtk.FlowBox):
     """As the name says. Generally it's a wrapper on a list
@@ -42,6 +53,7 @@ class ButtonGrid(Gtk.FlowBox):
 
         self.set_valign(Gtk.Align.START)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
+        self.set_sort_func(sort_function)
 
     def append(self, button):
         log.debug(f"Adding button: {button}")
