@@ -39,4 +39,5 @@ def change_button_grid(current_position, destination):
     log.debug(f"Switch to the other branch from {current_position} to  {destination}")
     snippets = getattr(__, "Snippets")
 
+    __.LevelIndicator.set_text(os.path.basename(destination))
     snippets.goto(destination)

@@ -14,8 +14,8 @@ button label {
 #nested-navigation, .nested-navigation, button#nested-navigation, GtkButton#nested-navigation {
     font-weight: bold;
     font-size: 16px;
-    background: #999999;
-    color: #333333;
+    background: #333333;
+    color: #d8a4a4;
 }
 
 
