@@ -118,7 +118,7 @@ class GoTo(Gtk.Button, Id):
         self.connect("clicked", self.on_goto)
 
     def __str__(self):
-        return f"<buttons.GoTo [{self.name}] {self.current_position} -> {self.destination} >"
+        return f"<GoTo [{self.name}] {self.current_position} -> {self.destination} >"
 
     def hash(self):
         return hashlib.md5(str(self).encode()).hexdigest()

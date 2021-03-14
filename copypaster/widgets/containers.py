@@ -28,20 +28,62 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
+from copypaster.widgets.buttons import Copy, GoTo
 from copypaster import log
 
-def sort_function(child1: Gtk.FlowBoxChild, child2, *user_data):
-    button1 = child1.get_children()[0]
-    button2 = child2.get_children()[0]
+def copy_is_before_goto(first, second):
+    return isinstance(first, Copy) and isinstance(second, GoTo)
 
-    if button1.name< button2.name:
-        return -1
+def goto_is_before_copy(first, second):
+    return isinstance(first, GoTo) and isinstance(second, Copy)
+
+NOTHING_CHANGES=0
+
+FIRST_GOES_SECOND=1
+FIRST_STAYS_FIRST=-1
+
+COPY_GOES_SECOND=1
+GOTO_STAYS_FIRST=-1
+
+def sort_by_name(first, second):
+    if first.name < second.name:
+        return FIRST_STAYS_FIRST
+    if first.name > second.name:
+        return FIRST_GOES_SECOND
+    return NOTHING_CHANGES
+
+def sort_by_content(first, second):
+    if len(first.content) < len(second.content):
+        return FIRST_STAYS_FIRST
+    if len(first.content) > len(second.content):
+        return FIRST_GOES_SECOND
     
-    if button1.name > button2.name:
-        return 1
+    return sort_by_name(first, second)
 
-    return 0
+def sort_by_type(first, second):
+    if copy_is_before_goto(first, second):
+        return COPY_GOES_SECOND
+    if goto_is_before_copy(first, second):
+        return GOTO_STAYS_FIRST
+    return NOTHING_CHANGES
 
+how_to_sort = {
+    ("Copy", "Copy"): sort_by_content,
+    ("GoTo", "GoTo"): sort_by_name,
+    ("Copy", "GoTo"): sort_by_type,
+    ("GoTo", "Copy"): sort_by_type,
+}
+
+ex = lambda x: str(x)[1:5]
+
+def sort_function(child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, *user_data):
+    first = child1.get_children()[0]
+    second = child2.get_children()[0]
+
+    sort = how_to_sort[(ex(first), ex(second))]
+    return sort(first, second)
+
+    
 class ButtonGrid(Gtk.FlowBox):
     """As the name says. Generally it's a wrapper on a list
     that is displayed as a grid of buttons"""
@@ -71,11 +113,11 @@ class ButtonTree(Gtk.Stack):
 
     @property
     def current_grid(self):
-        return self.tree[self.level]
+        return self.tree[self.current_level]
 
     def __init__(self):
         Gtk.Stack.__init__(self)
-        self.level = ""
+        self.current_level = "" 
         self.tree = {}
         self.root = ""
 
@@ -83,13 +125,13 @@ class ButtonTree(Gtk.Stack):
         log.debug(f"Initializing snippets folder: {root}")
         self.tree = tree
         self.root = root
-        self.level = root
+        self.current_level = root
 
         for name, grid in self.tree.items():
             self.add_named(grid, name)
 
     def goto(self, destination):
-        self.level = destination
+        self.current_level = destination
         self.set_visible_child_name(destination)
 
     def add_to_current_grid(self, button):
