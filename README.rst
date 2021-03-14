@@ -41,10 +41,10 @@ Features
 --------
 
 * Autosave mode - what you copy is saved in Copypaster
-* Add, Edit, Remove - options for adding new fonts
-* YAML format sets of code snippets.
+* Quick add, remove and edit snippet. Add folders.
+* Snippets are kept in files, inside folders.
+* With folders you can have a tree structure, that allows to store many objects, and use them with ease. 
 * TODO Images on buttons
-* Nested structure of buttons
 
 Credits
 -------
