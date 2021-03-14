@@ -23,12 +23,13 @@ def remove_button(button):
 def add_button(copy_button):
     log.debug(f"Adding copy {copy_button} button to current button grid")
     
-    copy_button.set_path(__.Snippets.level)
+    copy_button.set_path(__.Snippets.current_level)
     copy_button.save()
 
     __.Snippets.add_to_current_grid(copy_button)
     
     copy_button.show()
+
     log.debug("A button has been added")
 
     __.Jimmy.clean_clipboard()
@@ -37,12 +38,12 @@ def add_button(copy_button):
 def add_folder(folder_name):
     log.debug(f"Adding folder")
     folder = Folder(folder_name)
-    folder.set_path(__.Snippets.level)
+    folder.set_path(__.Snippets.current_level)
     folder.save()
 
     goto = GoTo(
         name=folder.name, 
-        position=__.Snippets.level,
+        position=__.Snippets.current_level,
         destination=folder.path)
     __.Snippets.add_to_current_grid(goto)
 
@@ -51,7 +52,7 @@ def add_folder(folder_name):
     up_to_parent = GoTo(
                 name="..",
                 position=folder.path,
-                destination=__.Snippets.level
+                destination=__.Snippets.current_level
     )
     up_to_parent.show()
     
