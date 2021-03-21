@@ -3,9 +3,9 @@
 
     <glade-widget-classes>
 
-        <glade-widget-class title="File Cabinet" name="FileCabinet" 
-                            generic-name="FileCabinet" parent="GtkNotebook"
-                            icon-name="widget-gtk-notebook"/>
+        <glade-widget-class title="Workbench Background" name="Workbench" 
+                            generic-name="Workbench" parent="GtkBox"
+                            icon-name="widget-gtk-box"/>
 
         <glade-widget-class title="Button Tree" name="ButtonTree" 
                     generic-name="ButtonTree" parent="GtkStack"
@@ -21,7 +21,7 @@
     </glade-widget-classes>
 
     <glade-widget-group name="foo" title="Foo">
-        <glade-widget-class-ref name="FileCabinet"/>
+        <glade-widget-class-ref name="Workbench"/>
         <glade-widget-class-ref name="ButtonTree"/>
         <glade-widget-class-ref name="ButtonGrid"/>
         <glade-widget-class-ref name="Copy"/>

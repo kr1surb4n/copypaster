@@ -8,15 +8,18 @@ The order is probably important.
 # from .notebook_stories import *  # noqa
 # from .buttons import *  # noqa
 # from .of_jimmy_mcgill import *  # noqa
-
+from folders import log
 from app.register import Register as __
 from app.signal_bus import subscribe, emit, signals
 from folders.widgets.workbench import Workbench
 
+@subscribe
+def set_location(location):
+    __.workbench_location.set_text(location.value)
 
 @subscribe
 def start_app():
-
-    __.workbench = Workbench()
-    __.main_box.pack_start(__.workbench, True, True, 0)
+    print("Starting folders")
     __.main_box.show_all()
+
+    emit('set_location', __.workbench.location)

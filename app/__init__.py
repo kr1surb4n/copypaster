@@ -15,7 +15,6 @@ CURRENT_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
-# TODO change name to 'log'
 log = logging.getLogger("Kr15 App")
 log.setLevel(logging.DEBUG)
 

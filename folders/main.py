@@ -14,16 +14,22 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk  # noqa
 
+GLADE_FILE = os.path.join(PROJECT_DIR, "folders/layout.glade")
+
+WORKBENCH='Workbench'
+MAIN_WINDOW = "main_window"
+MAIN_BOX = "main_box"
+WORKBENCH_LOCATION = "workbench_location"
 
 def main_function(config_file):
     # create and run the application, exit with the value returned by
     # running the program
 
-    log.debug("Initializing services...")
+    log.info("Initializing services...")
     import app.style  # noqa
     from app.widgets import application  # noqa
 
-    from app.builder import builder  # noqa
+    from folders.builder import builder  # noqa
 
     import app.config  # noqa
 
@@ -33,13 +39,12 @@ def main_function(config_file):
 
     log.debug("Loading Widgets usig GtkBuilder...")
     builder.set_application(application)  # works without it
-    builder.add_from_file("app/layout.glade")
-
-    __.main_window = builder.get_object("main_window")
-    __.main_box = builder.get_object("main_box")
-
-    welcome_sing = builder.get_object("welcome_sign")
-    __.main_box.remove(welcome_sing)  # TODO: why?
+    builder.add_from_file(GLADE_FILE)
+    
+    __.main_window = builder.get_object(MAIN_WINDOW)
+    __.main_box = builder.get_object(MAIN_BOX)
+    __.workbench = builder.get_object(WORKBENCH.lower())
+    __.workbench_location = builder.get_object(WORKBENCH_LOCATION)
 
     # load the events
     from folders.layout_events import Layout_events  # noqa

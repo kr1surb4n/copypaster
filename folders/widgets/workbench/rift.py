@@ -8,13 +8,19 @@ and displays the contents of that folder.
 
 """
 import os
+from dataclasses import dataclass
 
 INITIAL_FOLDER = "/home/kris/workshops/tools/copypaster"
 
+@dataclass
+class Location:
+    type: str
+    value: str
+
+location = Location(type="folder", value=INITIAL_FOLDER)
 
 def get_files_in_folder(path):
     return os.scandir(path)
 
-
 def obtain_values():
-    return list(get_files_in_folder(INITIAL_FOLDER))
+    return list(get_files_in_folder(location.value))

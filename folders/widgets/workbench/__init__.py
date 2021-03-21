@@ -3,6 +3,7 @@
 from math import ceil, sqrt
 from folders import log
 from app.register import register_instance, Register as __
+from app.signal_bus import emit
 import collections
 
 import gi
@@ -17,7 +18,7 @@ from gaphas.painter import DefaultPainter
 from gaphas.item import Line, Item
 from gaphas.util import text_extents
 
-from folders.widgets.workbench.rift import obtain_values
+from folders.widgets.workbench.rift import obtain_values, location
 
 Point = collections.namedtuple('Point', ['x', 'y'])
 Size = collections.namedtuple('Size', ['width', 'height'])
@@ -25,7 +26,7 @@ Size = collections.namedtuple('Size', ['width', 'height'])
 
 class ElementManipulator:
     def set_position(self, box: Rectangle):
-        log.info("Setting position")
+        log.debug("Setting position")
         x, y = box.x, box.y
         self.box.x = x
         self.box.y = y
@@ -35,7 +36,7 @@ class ElementManipulator:
 
 class Container(ElementManipulator):
     def __init__(self, key: str, value: object, box: Rectangle, element: type):
-        log.info(f"Made element {key}")
+        log.debug(f"Made element {key}")
         self.key = key
         self.value = value
         self.box = box
@@ -117,7 +118,6 @@ def organize_elements(index: object_register):
 
     for position, container in enumerate(index.values()):
         log.debug(f"Moving element to {rows_cols[position]}")
-        print(rows_cols[position])
         row, col = rows_cols[position]
         box = Rectangle(
             offset_x + row * horizontal_space, offset_y + col * vertical_space, 40, 15
@@ -135,6 +135,8 @@ def interpreter():
         container = Container(
             key=value.path, value=value, box=Rectangle(0, 0, 40, 15), element=Text
         )
+        
+        log.debug(f"Loading object {value.name}")
         container.element.text = value.name
         index.register(container)
 
@@ -153,31 +155,15 @@ class Workbench(Gtk.Box):
         log.info("Loading Workbench")
         canvas = Canvas()
         view = GtkView()
-        __.canvas = canvas
-        __.view = view
+
+        self.location = location
+
         view.painter = DefaultPainter()
         view.canvas = canvas
         self.pack_start(view, True, True, 20)
+
         self.index = interpreter()
-
         self.index.add_to_canvas(canvas)
-        # # Draw first gaphas box
-        # b1 = Box(Rectangle(1, 0, 60, 60))
-        # canvas.add(b1)
-
-        # tx = Text(text="joo")
-        # tx.matrix.translate(20, 20)
-        # canvas.add(tx)
-
-        # # Draw second gaphas box
-        # b2 = Box(Rectangle(170, 170, 60, 60))
-        # canvas.add(b2)
-
-        # # Draw gaphas line
-        # line = Line()
-        # line.matrix.translate(100, 60)
-        # canvas.add(line)
-        # line.handles()[1].pos = (30, 30)
 
         self.view = view
         self.canvas = canvas
@@ -205,7 +191,7 @@ class Workbench(Gtk.Box):
 
         #    Tak mogę dodać domyślne dodanie rzeczy, które są w klip boardzie
 
-        #    wydaje mi się że może się
+        #    wydaje mi się że może się1
 
     def on_field_click(self, widget, direction):
         mt = Text(text="I'm in a box")
