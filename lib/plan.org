@@ -1,0 +1,23 @@
+* Tasks
+** TODO on_click on the field causes to show a popup 
+** TODO in popup on the diagram i show
+    *** what element to put
+    *** what to load
+** DONE right click on element opens menu
+        functions that are used to trigger showing the popup
+        and control how
+            gaphor/gaphor/diagram/diagramtools/textedit.py
+
+        add a new gesture to the text_edit_tools
+
+
+    click_tool = Gtk.GestureSingle(widget=view)
+    click_tool.set_button(Gdk.BUTTON_SECONDARY)
+    click_tool.connect("begin", on_right_mouse_click)
+
+
+** TODO add Folders Profile
+** TODO using gaphor create a set of diagrams that describe the app.
+** TODO add text to basic shapes
+    add transparent rectangle with formated text inside 
+    on a diagram, without the frames and border
