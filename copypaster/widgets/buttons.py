@@ -137,3 +137,48 @@ class GoTo(Gtk.Button, Id):
     def delete(self):
         import os
         os.rmdir(os.path.join(self.current_position, self.name))
+
+class FunctionalButton:
+    ...
+
+class AddSnippet(Gtk.Button, Id, FunctionalButton):
+    def __init__(self):
+        super(Gtk.Button, self).__init__(label="Add Snippet")
+        self.snippet = "add-snippet"
+        self.order = 1
+        self.set_name = (
+            "add-snippet" # TODO: styles should be moved to another class
+        )
+
+        button_context = self.get_style_context()
+        button_context.add_class("add-snippet")
+
+        self.connect("clicked", self.on_click)
+
+    def __str__(self):
+        return f"<AddSnippet>"
+
+    def on_click(self, button: Gtk.Button):
+        log.debug(f"Adding Snippet")
+        emit("open_add_button_dialog")
+
+class AddFolder(Gtk.Button, Id, FunctionalButton):
+    def __init__(self):
+        super(Gtk.Button, self).__init__(label="Add folder")
+        self.order = 2
+        self.snippet = "add-folder"
+        self.set_name = (
+            "add-folder" # TODO: styles should be moved to another class
+        )
+
+        button_context = self.get_style_context()
+        button_context.add_class("add-folder")
+
+        self.connect("clicked", self.on_click)
+
+    def __str__(self):
+        return f"<AddFolder>"
+
+    def on_click(self, button: Gtk.Button):
+        log.debug(f"Adding Folder")
+        emit("open_add_folder_dialog")

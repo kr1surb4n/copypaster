@@ -28,7 +28,7 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
-from copypaster.widgets.buttons import Copy, GoTo
+from copypaster.widgets.buttons import Copy, GoTo, AddFolder, AddSnippet, FunctionalButton
 from copypaster import log
 
 def copy_is_before_goto(first, second):
@@ -36,6 +36,12 @@ def copy_is_before_goto(first, second):
 
 def goto_is_before_copy(first, second):
     return isinstance(first, GoTo) and isinstance(second, Copy)
+
+def left_is_functional(left, right):
+    return isinstance(left, FunctionalButton)
+
+def right_is_function(left, right):
+    return isinstance(right, FunctionalButton)
 
 NOTHING_CHANGES=0
 
@@ -67,11 +73,39 @@ def sort_by_type(first, second):
         return GOTO_STAYS_FIRST
     return NOTHING_CHANGES
 
+def function_button_last(first, second):
+    if right_is_function(first, second):
+        return FIRST_STAYS_FIRST
+    if left_is_functional(first, second):
+        return FIRST_GOES_SECOND
+
+def sort_by_order(first, second):
+    if first.order < second.order:
+        return FIRST_STAYS_FIRST
+    if first.order > second.order:
+        return FIRST_GOES_SECOND
+    return NOTHING_CHANGES
+
 how_to_sort = {
     ("Copy", "Copy"): sort_by_content,
     ("GoTo", "GoTo"): sort_by_name,
     ("Copy", "GoTo"): sort_by_type,
     ("GoTo", "Copy"): sort_by_type,
+
+    ("GoTo", "AddS"): function_button_last,
+    ("AddS", "GoTo"): function_button_last,
+    ("GoTo", "AddF"): function_button_last,
+    ("AddF", "GoTo"): function_button_last,
+
+    ("Copy", "AddS"): function_button_last,
+    ("AddS", "Copy"): function_button_last,
+    ("Copy", "AddF"): function_button_last,
+    ("AddF", "Copy"): function_button_last,
+
+    ("AddF", "AddS"): sort_by_order,
+    ("AddS", "AddF"): sort_by_order,
+    ("AddS", "AddS"): sort_by_order,
+    #("AddS", "AddF"): sort_by_order,
 }
 
 ex = lambda x: str(x)[1:5]
@@ -96,6 +130,9 @@ class ButtonGrid(Gtk.FlowBox):
         self.set_valign(Gtk.Align.START)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
         self.set_sort_func(sort_function)
+
+        self.append(AddSnippet())
+        self.append(AddFolder())
 
     def append(self, button):
         log.debug(f"Adding button: {button}")

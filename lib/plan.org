@@ -1,5 +1,5 @@
 * Tasks
-** TODO on_click on the field causes to show a popup 
+** DONE on_click on the field causes to show a popup
 ** TODO in popup on the diagram i show
     *** what element to put
     *** what to load
@@ -11,13 +11,38 @@
         add a new gesture to the text_edit_tools
 
 
+    there are the inline editors:
+        gaphor/gaphor/diagram/inlineeditors.py
+
+        it is where i can create a new version
+
     click_tool = Gtk.GestureSingle(widget=view)
     click_tool.set_button(Gdk.BUTTON_SECONDARY)
     click_tool.connect("begin", on_right_mouse_click)
 
+    You need to define which button has to be pressed (cool)
 
+** TODO add context menu to element with functions and stuff
+** TODO edit name on enter
 ** TODO add Folders Profile
+    ** TODO list files and Folders
+    ** TODO open new diagram on double click on Folders
+    ** TODO add basic attributes to files and Folders
+    ** TODO look-into action on Folders
+        change shape of box the one with title above box, display as title path to folder,
+        display inside (bloks) files and folder under that path
+        ** activate or deactive certain functions on the object looked-into
+        ** drop stuff inside to move file
+        ** drop stuff outside to have only value.
+
 ** TODO using gaphor create a set of diagrams that describe the app.
 ** TODO add text to basic shapes
     add transparent rectangle with formated text inside 
     on a diagram, without the frames and border
+
+** TODO add position Z of objects
+** TODO group objects
+** TODO open diagram by doing stuff to box  (box connects the objects bellow)
+** TODO add relation of include, for objects
+    a box can include stuff.
+    it can 

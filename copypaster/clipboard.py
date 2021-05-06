@@ -35,6 +35,7 @@ _Jimmy = Jimmy()
 
 
 def test_jimmy():
+    empty = ""
 
     # can I send and receive?
     test_message = "One, Two, Three"
@@ -45,3 +46,4 @@ def test_jimmy():
     _Jimmy.send(test_message)
     _Jimmy.clean_clipboard()
     assert _Jimmy.receive() != test_message
+    assert _Jimmy.receive() == empty

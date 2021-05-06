@@ -49,6 +49,7 @@ def add_folder(folder_name):
 
 
     grid = ButtonGrid()
+    grid.show()
     up_to_parent = GoTo(
                 name="..",
                 position=folder.path,
