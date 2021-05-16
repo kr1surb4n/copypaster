@@ -3,8 +3,34 @@ from copypaster import log
 from app.signal_bus import subscribe, emit
 from copypaster.file_loader import Folder, GoTo
 from copypaster.file_loader import Copy, Snippet, Folder
-from copypaster.widgets.dialogs import DialogAdd, DialogEdit, DialogAddFolder
 from copypaster.widgets.containers import ButtonGrid
+
+"""
+ErrorDialog:
+error_dialog 
+    error_message
+    error_ok
+        signal:
+            click: error_ok_pressed
+
+folder_dialog:
+    folder_name
+            enter_save_folder
+    folder_submit
+        signal:
+            click: save_folder
+            emit   save_folder
+
+snippet_dialog
+        snippet_title
+            enter_save_snippet
+        snippet_content
+            enter_save_snippet    
+        snippet_submifft:
+            click:  save_snippet
+            emit    save_snippet
+"""
+
 
 @subscribe
 def preview_content(message):
