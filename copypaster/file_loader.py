@@ -65,7 +65,7 @@ class Folder:
         self.name = name
         self.path = path
 
-    def set_path(self, path_to_containing_folder):
+    def suffix_path(self, path_to_containing_folder):
         self.path = os.path.join(path_to_containing_folder, self.name)
 
     def save(self):
@@ -85,7 +85,7 @@ class Snippet:
     def file_name(self) -> str:
         return self.name.replace(" ", "-")
 
-    def set_path(self, path_to_containing_folder):
+    def prefix_filename_with(self, path_to_containing_folder):
         self.path = os.path.join(path_to_containing_folder, self.file_name)
 
     def populate(self, snippet_dictionary: dict):
@@ -139,12 +139,7 @@ def walk(folder: str):
     parent_folder = os.path.dirname(folder)
 
     if folder != PATH_TO_SNIPPETS_FOLDER:
-        up_to_parent = GoTo(
-                    name="..",
-                    position=folder,
-                    destination=parent_folder
-        )
-        deck.append(up_to_parent)
+        deck.add_go_to_parent_button(folder, parent_folder)
 
     # TODO: here i can read a file with metadata
 

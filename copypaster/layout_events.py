@@ -18,8 +18,40 @@ class ToggleButtons:
     def names(self):
         return [ToggleButtons.autosave, ToggleButtons.edit, ToggleButtons.remove]
 
+class Dialogs:
+    def error_ok_pressed(self, button):
+        log.debug("Close error dialog, on button click, emit close_error_dialog")
+        emit("close_error_dialog")
 
-class CopyPasterLayoutEvents(LayoutEvents):
+    def save_folder(self, button):
+        log.debug("Save folder, During click on Add button, emit save_folder")
+        emit('save_folder')
+
+    def save_snippet(self, *args, **kwargs):
+        log.debug("Save snippet, During click on Add button, emit save_snippet")
+        emit('save_snippet')
+
+    def enter_save_snippet(self, widget, event):
+        log.debug("Pressing enter when adding snippet")
+        """
+        Debuging functions:
+        print("          Modifiers: ", event.state)
+        print("      Key val, name: ", event.keyval, Gdk.keyval_name(event.keyval))
+        """
+
+        # see if we recognise a keypress
+        if event.keyval == Gdk.KEY_Return:
+            emit('save_snippet')
+
+    def enter_save_folder(self, widget, event):
+        log.debug("During creating new folder, on enter")
+
+        it_is_return = event.keyval == Gdk.KEY_Return
+        if it_is_return:
+            emit('save_folder')
+
+
+class CopyPasterLayoutEvents(LayoutEvents, Dialogs):
     def __init__(self):
         self.clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
         self.handle = None

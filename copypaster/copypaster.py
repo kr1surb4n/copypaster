@@ -33,8 +33,14 @@ def main_function(config_file):
 
     __.Builder.set_application(application)  # works without it
     __.Builder.add_from_file("copypaster/layout.glade")
+    __.Builder.add_from_file("copypaster/dialogs.glade")
 
     __.main_window = builder.get_object("main_window")
+
+    __.error_dialog = builder.get_object("error_dialog")
+    __.folder_dialog = builder.get_object("folder_dialog")
+    __.snippet_dialog = builder.get_object("snippet_dialog")
+
     __.Snippets = builder.get_object("snippets")
     __.StateButtons = builder.get_object("toolbar")
     __.PreviewLabel = builder.get_object("preview_label")

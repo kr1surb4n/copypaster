@@ -24,10 +24,13 @@ class Config:
         config_env = os.environ.get("COPYPASTER_CONFIG", None)
 
         if config_env is not None:
+            print("loading with config_env")
             config = config_env
         elif config_file is not None:
+            print("loading with config file")
             config = config_file
         else:
+            print("load without config")
             config = "i_am_non_existent"
 
         self.cfg = configparser.ConfigParser()

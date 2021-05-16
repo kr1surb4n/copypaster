@@ -138,10 +138,7 @@ save them under and object `t`, in file all_strings.py
 ** ------/notebooks
 ** ------/buttons
 ** ------/__init__
-** widget/dialogs/__init__
-** --------------/add
-** --------------/edit
-** --------------/error
+
 ** stories/__init__
 ** -------/buttons
 ** -------/errors
@@ -301,3 +298,72 @@ https://stackoverflow.com/questions/42516445/creating-gtk-applicationwindow-from
 the way the copypaster is done, is good.
 
 somewhere I lost the extractor parts :/
+
+* 16.05.2021
+
+so the dialogs cannot be destroyed when used with builder. DONE
+i have to remember to clean the inputs. or do i ? I DO. DONE
+for now the dialogs show up. and are working. YES THEY ARE
+
+now, i need to emit something on button click and enter.
+I HAVE TO IMPLEMENT FUNCTIONS EMITED in lAOUT EVENTS
+DONE
+
+the inside buttons still not work. WORK NOW
+
+i should also fix the issue with inside buttons - DONE
+when creating new folders, buttons are not inside. ARE DONE
+
+TODO removing buttons fails.
+first remove does something.
+second cause segmentation fault.
+
+** working with events and glade.
+     
+    1. GLADE FILES
+        - events => functions names
+    2. copypaster.py
+        - load Layout_events to Builder
+    3. layout_events.py
+        - class dialogs
+            - error_ok_pressed => emit stories/buttons::close_error_dialog
+            - save_folder => emit stories/buttons::save_folder
+            - save_snippet => stories/buttons::emit save_snippet
+            - enter_save_snippet => stories/buttons::emit save_snippet
+            - enter_save_foleder => stories/buttons::emit save_snippet
+
+        - class CopyPasterLayoutEvents: app::LayoutEvents, Dialogs
+
+    4. stories/buttons.py
+
+** add folder
+
+    1. craete Folder object 
+        from name
+        set_path for current level of snippets
+        save it.
+
+    2. create GoTo object
+        name - folder name
+        p    grid.show()osition - current level
+        destination - folder path
+
+    3. add_to_current_grid Snippets GoTo
+    
+    4. ButtonGrid is created
+        and displayed
+
+    5. GoTo button ".." is made 
+        shown
+        appended to ButtonGrid
+
+    6. grid is added to tree in __.Snippets 
+    7. grid is added to add_named in __.Snippets
+
+
+** grid is created
+    add buttons table
+    add go up button
+    append AddSnippets
+    append AddFolder
+    deck show

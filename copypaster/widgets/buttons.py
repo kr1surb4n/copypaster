@@ -4,6 +4,8 @@ import hashlib
 from app.register import Register as __
 import gi
 
+import logging
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
@@ -47,7 +49,7 @@ class Copy(Gtk.Button, Id):
         self.snippet.content = content
 
     def set_path(self, path):
-        self.snippet.set_path(path)
+        self.snippet.prefix_filename_with(path)
 
     def save(self):
         self.snippet.save()
@@ -97,6 +99,12 @@ class Copy(Gtk.Button, Id):
         return f"<Copy [{self.name}] >"
 
 class GoTo(Gtk.Button, Id):
+    def set_path(self, path):
+        ...
+    
+    def save(self):
+        ...
+
     def __init__(self, name, position, destination):
 
         "Current position will be hidden. \
@@ -124,6 +132,7 @@ class GoTo(Gtk.Button, Id):
         return hashlib.md5(str(self).encode()).hexdigest()
 
     def on_goto(self, button: Gtk.Button):
+        logging.info(f"Going to {self.destination}")
         log.debug(f"Going to {self.destination}")
         state = AppState["app"]
 
@@ -137,3 +146,52 @@ class GoTo(Gtk.Button, Id):
     def delete(self):
         import os
         os.rmdir(os.path.join(self.current_position, self.name))
+
+class FunctionalButton:
+    ...
+
+class AddSnippet(Gtk.Button, Id, FunctionalButton):
+    def __init__(self):
+        super(Gtk.Button, self).__init__(label="Add Snippet")
+        self.order = 1
+        self.set_name = (
+            "add-snippet" # TODO: styles should be moved to another class
+        )
+
+        button_context = self.get_style_context()
+        button_context.add_class("add-snippet")
+
+        self.connect("clicked", self.on_click)
+
+    def hash(self):
+        return hashlib.md5(str(self).encode()).hexdigest()
+
+    def __str__(self):
+        return f"<AddSnippet {repr(self)}>"
+
+    def on_click(self, button: Gtk.Button):
+        log.debug(f"Adding Snippet")
+        emit("open_add_button_dialog")
+
+class AddFolder(Gtk.Button, Id, FunctionalButton):
+    def __init__(self):
+        super(Gtk.Button, self).__init__(label="Add folder")
+        self.order = 2
+        self.set_name = (
+            "add-folder" # TODO: styles should be moved to another class
+        )
+
+        button_context = self.get_style_context()
+        button_context.add_class("add-folder")
+
+        self.connect("clicked", self.on_click)
+
+    def hash(self):
+        return hashlib.md5(str(self).encode()).hexdigest()
+
+    def __str__(self):
+        return f"<AddFolder {repr(self)}>"
+
+    def on_click(self, button: Gtk.Button):
+        log.debug(f"Adding Folder")
+        emit("open_add_folder_dialog")

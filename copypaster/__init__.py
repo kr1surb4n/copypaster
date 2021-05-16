@@ -17,6 +17,7 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 # initialize logger
 log = logging.getLogger("CopyPaster")
 log.setLevel(logging.DEBUG)
+logging.info("Start Copypaster")
 
 
 class State(dict):

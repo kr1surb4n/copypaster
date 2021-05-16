@@ -56,7 +56,7 @@ class DialogAdd(Gtk.Dialog):
 
         box.add(grid)
 
-        self.show_all()
+        self.show()
 
     def on_key_press_event(self, button):  # TODO check if that works
         self.save(button)

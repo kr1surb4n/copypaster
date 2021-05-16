@@ -2,6 +2,11 @@
     outline: none;
 }
 
+.snippet_text {
+    background-color: green;
+    border: 2px solid black;
+}
+
 button,
 .text-button,
 button label {
@@ -15,6 +20,20 @@ button label {
     font-weight: bold;
     font-size: 16px;
     background: #333333;
+    color: #d8a4a4;
+}
+#add-snippet, .add-snippet, button#add-snippet, GtkButton#add-snippet {
+    font-weight: bold;
+    font-size: 16px;
+    background: #682929;
+    color: #d8a4a4;
+}
+
+
+#add-folder, .add-folder, button#add-folder, GtkButton#add-folder {
+    font-weight: bold;
+    font-size: 16px;
+    background: #2a254f;
     color: #d8a4a4;
 }
 
