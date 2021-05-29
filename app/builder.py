@@ -16,6 +16,14 @@ from gi.repository import Gtk  # noqa
 
 
 class GtkBuilder(Gtk.Builder):
+
+    def __init__(self, *args, **kwargs):
+        self.custom_objects = {}
+        super(GtkBuilder, self).__init__(*args, **kwargs)
+
+    def add_custom_object(self, name, widget_type):
+        self.custom_objects[name] = widget_type
+
     def do_get_type_from_name(self, type_name):
         """
         Looks up a type by name, using the virtual function that Gtk.Builder
@@ -28,14 +36,13 @@ class GtkBuilder(Gtk.Builder):
 
         """
 
-        if type_name == 'MainWindow':
-            pass
-            # return MainWindow  - in normal use, Type should be returned
-
+        if type_name in self.custom_objects:
+            return self.custom_objects[type_name]
+     
         r = Gtk.Builder.do_get_type_from_name(self, type_name)
         print('GtkBuilder: => {}\t{}'.format(type_name, r))
         return r
 
 
 builder = GtkBuilder()
-__.builder = builder
+__.Builder = builder

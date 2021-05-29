@@ -24,13 +24,15 @@ def main_function(config_file):
     import copypaster.clipboard  # noqa
 
     from app.widgets import application  # noqa
-    from copypaster.builder import builder  # noqa
+    from app.builder import builder  # noqa
+    from copypaster.widgets.containers import ButtonTree 
     from app.config import config  # noqa
 
     config.load_config_file(config_file)
 
     log.debug("Loading Widgets usig GtkBuilder...")
 
+    __.Builder.add_custom_object('ButtonTree', ButtonTree)
     __.Builder.set_application(application)  # works without it
     __.Builder.add_from_file("copypaster/layout.glade")
     __.Builder.add_from_file("copypaster/dialogs.glade")
