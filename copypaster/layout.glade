@@ -264,7 +264,7 @@
                 <property name="tooltip_text" translatable="yes">Add</property>
                 <property name="label" translatable="yes">Add Snippet</property>
                 <property name="use_underline">True</property>
-                <signal name="clicked" handler="add" swapped="no"/>
+                <signal name="clicked" handler="open_add_button_dialog" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -277,7 +277,7 @@
                 <property name="can_focus">False</property>
                 <property name="label" translatable="yes">Add Folder</property>
                 <property name="use_underline">True</property>
-                <signal name="clicked" handler="add_folder" swapped="no"/>
+                <signal name="clicked" handler="open_add_folder_dialog" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>

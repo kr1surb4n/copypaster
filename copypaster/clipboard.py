@@ -1,6 +1,13 @@
 import xerox
 from app.register import register_instance
-from copypaster import log
+from app.register import Register as __
+from app.signal_bus import emit
+from copypaster import log, State, AppState
+
+import gi
+
+gi.require_version("Gtk", "3.0")
+from gi.repository import Gtk, Gdk  # noqa
 
 # This is an abstraction for the actions
 # done to clipboard.
@@ -17,6 +24,24 @@ from copypaster import log
 class Jimmy:
     """in tribute to Jimmy McGill, a copist"""
 
+    def __init__(self):
+        self.clip = Gtk.Clipboard.get(Gdk.SELECTION_CLIPBOARD)
+        self.handle = None
+
+    def wait_for_data(self) -> str:
+        return clipboard.wait_for_text()
+
+    def start_autosave(self):
+        self.handle = self.clip.connect("owner-change", self.auto_clipboard)
+        log.debug("Autosave on")
+        emit("autosave_on")
+
+    def stop_autosave(self):
+        log.debug("Autosave off")    
+        self.clip.disconnect(self.handle)
+        self.handle = None
+        emit("autosave_off")
+
     def send(self, text):
         log.debug("Coping: {}".format(text))
         xerox.copy(text)
@@ -30,6 +55,15 @@ class Jimmy:
         log.debug("Pasting: {}".format(contents))
         return contents if contents.strip() else ""
 
+    def auto_clipboard(self, clipboard, parameter):
+        if AppState["app"] != State.AUTOSAVE:
+            return False
+
+        name = value = self.wait_for_data()
+        if not value:
+            log.error("No value to save - aborting")
+            return False
+        emit("add_button", name, value)
 
 _Jimmy = Jimmy()
 

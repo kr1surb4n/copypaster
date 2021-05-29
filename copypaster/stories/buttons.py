@@ -85,14 +85,14 @@ def save_snippet(*args, **kwargs):
         title = value
 
     log.debug("Adding new button to grid ...")
-    emit("add_button", Copy(Snippet(title, content)))
+    emit("add_button", title, content)
     __.snippet_dialog.hide()
 
 
 @subscribe
-def add_button(copy_button):
+def add_button(title, content):
     log.debug(f"Adding copy {copy_button} button to current button grid")
-    
+    copy_button = Copy(Snippet(title, content))
     __.Snippets.add_to_current_grid(copy_button)
     
     copy_button.show()
@@ -156,7 +156,7 @@ def add_folder(folder_name):
     goto.show()
 
 @subscribe
-def open_add_button_dialog():
+def open_add_button_dialog(*args):
     snippet_title = __.Builder.get_object('snippet_title')
     snippet_content = __.Builder.get_object('snippet_content').get_buffer()
 
@@ -169,7 +169,7 @@ def open_add_button_dialog():
     __.snippet_dialog.hide()
 
 @subscribe
-def open_add_folder_dialog():
+def open_add_folder_dialog(*args):
     """
     Set folder name entry with clipboard contents,
     Start dialog,
@@ -194,5 +194,5 @@ def error_show_dialog(message):
     __.error_message.hide()
 
 @subscribe
-def close_error_dialog():
+def close_error_dialog(*args):
     __.error_message.hide()

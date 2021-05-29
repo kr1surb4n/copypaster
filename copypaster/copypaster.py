@@ -2,7 +2,7 @@
 import sys
 import os
 
-from copypaster import log, PROJECT_DIR  #, dupa
+from copypaster import log, PROJECT_DIR, dupa  #, dupa
 from app.register import Register as __
 
 """ Initialize services """
@@ -21,8 +21,9 @@ def main_function(config_file):
     log.debug("Initializing services...")
 
     import app.style  # noqa
+    dupa(1)
     import copypaster.clipboard  # noqa
-
+    dupa(2)
     from app.widgets import application  # noqa
     from app.builder import builder  # noqa
     from copypaster.widgets.containers import ButtonTree 
