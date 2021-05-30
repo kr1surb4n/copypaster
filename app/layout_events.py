@@ -9,17 +9,16 @@ from gi.repository import Gtk, Gdk  # noqa
 
 
 class LayoutEvents:
-    def about_button(self):
-        pass
+    def __getattr__(self, name):
+        try:
+            return super().__getattr__(self, name)
+        except AttributeError:
+            ...
 
-    def reload_css(self, *args):
-        emit(signals.reload_default_styles)
-
-    def on_quit_app(self, *args):
-        __.Application.handle_quit('action', 'param')
-
-    def quit_app(self, *args):
-        self.on_quit_app(*args)
-
+        def method(*args, **kwargs):    
+            emit(name, *args, **kwargs)
+            
+        return method
 
 Layout_events = LayoutEvents()
+__.Layout_events = Layout_events

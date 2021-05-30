@@ -2,7 +2,7 @@
 import sys
 import os
 
-from copypaster import log, PROJECT_DIR, dupa  #, dupa
+from copypaster import log, PROJECT_DIR, dupa, AppState, State  # noqa
 from app.register import Register as __
 
 """ Initialize services """
@@ -13,7 +13,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk  # noqa
 
 
-def main_function(config_file):
+def main_function(config_file = None):
     """ create and run the application, 
     exit with the value returned by
     running the program"""
@@ -21,20 +21,26 @@ def main_function(config_file):
     log.debug("Initializing services...")
 
     import app.style  # noqa
-    dupa(1)
-    import copypaster.clipboard  # noqa
-    dupa(2)
+    import app.stories  # noqa
     from app.widgets import application  # noqa
     from app.builder import builder  # noqa
-    from copypaster.widgets.containers import ButtonTree 
     from app.config import config  # noqa
 
+    import copypaster.clipboard  # noqa
+    
     config.load_config_file(config_file)
+
+    __.AppState = AppState
+    __.State = State
+    __.AppState = State.INIT
 
     log.debug("Loading Widgets usig GtkBuilder...")
 
+    from copypaster.widgets.containers import ButtonTree 
     __.Builder.add_custom_object('ButtonTree', ButtonTree)
+
     __.Builder.set_application(application)  # works without it
+
     __.Builder.add_from_file("copypaster/layout.glade")
     __.Builder.add_from_file("copypaster/dialogs.glade")
 
@@ -49,7 +55,7 @@ def main_function(config_file):
     __.PreviewLabel = builder.get_object("preview_label")
     __.LevelIndicator = builder.get_object("current_level")
 
-    from copypaster.layout_events import Layout_events  # noqa
+    from app.layout_events import Layout_events  # noqa
     __.Builder.connect_signals(Layout_events)
 
     log.debug("Importing stories...")

@@ -12,6 +12,16 @@ from gi.repository import Gtk, Gdk, Gio  # noqa
 
 default_provider = Gtk.CssProvider()
 
+# TODO redesign everything here.
+"""
+i need to have:
+- style_register, a list/hash, with paths to css files
+- a default style added to style_register
+- a function to add file to  style_register
+- a function to load the styles
+- a function to reload the styles
+
+"""
 
 @subscribe
 def load_default_styles():

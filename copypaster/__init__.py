@@ -20,7 +20,8 @@ log.setLevel(logging.DEBUG)
 logging.info("Start Copypaster")
 
 
-class State(dict):
+class State:
+    INIT = "INIT"
     NORMAL = "NORMAL"
     AUTOSAVE = "AUTOSAVE"
     REMOVE = "REMOVE"
@@ -28,7 +29,7 @@ class State(dict):
 
 
 # SET INITIAL STATE
-AppState = {"app": State.NORMAL}  # global application state
+AppState = State.NORMAL  # global application state
 
 
 dupa_counter = 1

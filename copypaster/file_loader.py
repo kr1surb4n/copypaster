@@ -15,7 +15,7 @@ from copypaster.widgets.buttons import Copy, GoTo
 from copypaster.widgets.containers import ButtonTree, ButtonGrid
 from copypaster import log, PROJECT_DIR
 
-line = queue.Queue()
+tasks = queue.Queue()
 Decks = {}
 
 BACKUP_FOLDER = os.path.join(PROJECT_DIR, "file_decks")
@@ -132,7 +132,7 @@ def button_made_from(entry: os.DirEntry) -> Gtk.Button:
 def walk(folder: str):
     global Decks
     global Decks_Data
-    global line
+    global tasks
 
     deck = ButtonGrid()
 
@@ -149,7 +149,7 @@ def walk(folder: str):
                 continue
 
             if entry.is_dir():
-                line.put(entry.path)
+                tasks.put(entry.path)
 
             deck.append(button_made_from(entry))
 
@@ -157,29 +157,29 @@ def walk(folder: str):
     Decks[folder] = deck
 
 def worker():
-    global line
+    global tasks
 
     while True:
-        folder = line.get()
+        folder = tasks.get()
         log.debug(f'Working on folder: {folder}')
 
         walk(folder)
         log.debug(f'Finished {folder}')
-        line.task_done()
+        tasks.task_done()
 
 
 def load_snippets() -> (dict, str):
     log.info('Loading snippets')
-    global line
+    global tasks
     global Decks
 
     # turn-on the worker thread
     threading.Thread(target=worker, daemon=True).start()
 
-    line.put(PATH_TO_SNIPPETS_FOLDER)
+    tasks.put(PATH_TO_SNIPPETS_FOLDER)
 
     # block until all tasks are done
-    line.join()
+    tasks.join()
 
     return Decks, PATH_TO_SNIPPETS_FOLDER
 

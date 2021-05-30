@@ -91,7 +91,7 @@ def save_snippet(*args, **kwargs):
 
 @subscribe
 def add_button(title, content):
-    log.debug(f"Adding copy {copy_button} button to current button grid")
+    log.debug(f"Adding copy {title}, {content} button to current button grid")
     copy_button = Copy(Snippet(title, content))
     __.Snippets.add_to_current_grid(copy_button)
     

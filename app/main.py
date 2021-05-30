@@ -2,7 +2,7 @@
 import sys
 import os
 
-from app import log, CURRENT_DIR
+from app import log, CURRENT_DIR, AppState, State
 from app.register import Register as __
 
 
@@ -14,6 +14,9 @@ def main_function(config_file):
     from app.config import config  # noqa
 
     config.load_config_file(config_file)
+    __.AppState = AppState
+    __.State = State
+    __.AppState = __.State.INIT
 
     from app.widgets import application  # noqa
     import app.style  # noqa
@@ -42,7 +45,6 @@ def main_function(config_file):
 
 
 def test_main_function():
-    # TODO: figure out how to test this function
     from time import sleep
     import threading
 

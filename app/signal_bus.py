@@ -22,16 +22,17 @@ def not_implemented(event_name):
 
     return wrapps
 
-
+# TODO remove this from here
+# generaly good idea, (the stuff on the bottom, commented is cool)
 class Signals(dict):
     def __getattr__(self, name):
         return self[name]
+        # return name.replace('_', ' ')
 
 
 @register_instance
 class SignalBus:
     def __init__(self):
-        # super().__init__()
         self.receivers = {}
 
     def unsubscribe(self, event_name):
@@ -53,7 +54,7 @@ class SignalBus:
             return False
 
         try:
-            # TODO: add async
+            # TODO: maybe add async
             [callback(*args, **kwargs) for callback in receivers]
         except Exception as e:
             log.critical(str(e))

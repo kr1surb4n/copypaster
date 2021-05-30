@@ -4,7 +4,7 @@
 import os
 import sys
 import click
-from app import , PROJECT_DIR
+from app import log, PROJECT_DIR
 from app.main import main_function
 
 from os.path import expanduser
@@ -16,14 +16,14 @@ default_config_path = expanduser("~/.config/app.conf")
 @click.option("--config", default=default_config_path)
 def main(config):
     """Console script for app."""
-    .info("Started Kr15 Gtk App")
-    .info("app.cli.main")
+    log.info("Started Kr15 Gtk App")
+    log.info("app.cli.main")
 
     try:
         pass
         main_function(config)
     except Exception as e:
-        .critical(str(e))
+        log.critical(str(e))
         return 1
 
     return 0

@@ -2,7 +2,7 @@ from app.signal_bus import signal_bus, emit
 
 from app.register import Register as __, register_instance
 
-from app import log, CURRENT_DIR, State, AppState
+from app import log, CURRENT_DIR
 import os
 
 import gi
@@ -20,11 +20,7 @@ class Application(Gtk.Application):
         log.debug("Lift off!")
 
         log.debug("App state NORMAL")
-        AppState[
-            'app'
-        ] = (
-            State.NORMAL
-        )  # TODO: take out common from Register, signal_bus and make AppState out of it
+        __.AppState = __.State.NORMAL
 
         log.debug("Emitting start_app...")
         emit('start_app')

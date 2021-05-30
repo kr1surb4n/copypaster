@@ -1,4 +1,4 @@
-from copypaster import log, State, AppState
+from copypaster import log
 from app.signal_bus import emit
 import hashlib
 from app.register import Register as __
@@ -80,18 +80,17 @@ class Copy(Gtk.Button, Id):
 
     def on_copy(self, button):
         log.debug("Handling the button press...")
-        state = AppState["app"]
 
-        if state == State.REMOVE:
+        if __.AppState == __.State.REMOVE:
             log.debug("Removing button...")
             emit("remove_button", self)
 
-        if state in [State.NORMAL, State.AUTOSAVE]:
+        if __.AppState in [__.State.NORMAL, __.State.AUTOSAVE]:
             log.debug("Coping value...")
             emit("copy", button.content)
             emit("preview_content", button.content)
 
-        if state == State.EDIT:
+        if __.AppState == __.State.EDIT:
             log.debug("Editing button...")
             emit("edit_button", self)
 
@@ -134,13 +133,12 @@ class GoTo(Gtk.Button, Id):
     def on_goto(self, button: Gtk.Button):
         logging.info(f"Going to {self.destination}")
         log.debug(f"Going to {self.destination}")
-        state = AppState["app"]
 
-        if state == State.REMOVE:
+        if __.AppState == __.State.REMOVE:
             log.debug("Removing button...")
             emit("remove_button", self)
 
-        if state != State.REMOVE:
+        if __.AppState != __.State.REMOVE:
             emit("change_button_grid", self.current_position, self.destination)
 
     def delete(self):

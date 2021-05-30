@@ -29,18 +29,18 @@ class Jimmy:
         self.handle = None
 
     def wait_for_data(self) -> str:
-        return clipboard.wait_for_text()
+        return self.clip.wait_for_text()
 
     def start_autosave(self):
         self.handle = self.clip.connect("owner-change", self.auto_clipboard)
         log.debug("Autosave on")
-        emit("autosave_on")
+        __.AppState = __.State.AUTOSAVE
 
     def stop_autosave(self):
         log.debug("Autosave off")    
         self.clip.disconnect(self.handle)
         self.handle = None
-        emit("autosave_off")
+        __.AppState = __.State.NORMAL
 
     def send(self, text):
         log.debug("Coping: {}".format(text))
@@ -56,7 +56,7 @@ class Jimmy:
         return contents if contents.strip() else ""
 
     def auto_clipboard(self, clipboard, parameter):
-        if AppState["app"] != State.AUTOSAVE:
+        if __.AppState != __.State.AUTOSAVE:
             return False
 
         name = value = self.wait_for_data()

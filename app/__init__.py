@@ -19,9 +19,10 @@ log = logging.getLogger("Kr15 App")
 log.setLevel(logging.DEBUG)
 
 
-class State(dict):
+class State:
+    INIT = "INIT"
     NORMAL = "NORMAL"
 
 
 # SET INITIAL STATE
-AppState = {"app": State.NORMAL}  # global application state
+AppState = State.NORMAL  # global application state

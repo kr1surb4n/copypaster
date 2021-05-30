@@ -5,7 +5,7 @@ from app.widgets.dialogs import DialogError
 
 @subscribe
 def start_app():
-    emit(signals.load_default_styles)
+    emit('load_default_styles')
 
 
 @subscribe
@@ -18,3 +18,20 @@ def error_show_dialog(message):
     dialog = DialogError(__.Application.win, message)
     dialog.run()
     dialog.destroy()
+
+
+@subscribe
+def about_button(*args):
+    pass
+
+@subscribe
+def reload_css(*args):
+    emit('reload_default_styles')
+
+@subscribe
+def on_quit_app(*args):
+    __.Application.handle_quit('action', 'param')
+    
+@subscribe
+def quit_app(*args):
+    __.Application.handle_quit('action', 'param')
