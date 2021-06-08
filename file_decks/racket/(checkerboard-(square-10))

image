@@ -1,0 +1,6 @@
+# name: (checkerboard (square 10))
+
+image 
+(checkerboard (square 10))
+
+image

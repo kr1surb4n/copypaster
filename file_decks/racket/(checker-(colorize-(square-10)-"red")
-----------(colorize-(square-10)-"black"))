@@ -1,0 +1,4 @@
+# name: (checker (colorize (square 10) "red")
+           (colorize (square 10) "black")) 
+(checker (colorize (square 10) "red")
+           (colorize (square 10) "black"))

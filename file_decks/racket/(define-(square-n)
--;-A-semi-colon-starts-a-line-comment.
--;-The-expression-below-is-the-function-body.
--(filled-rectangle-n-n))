@@ -1,0 +1,8 @@
+# name: (define (square n)
+  ; A semi-colon starts a line comment.
+  ; The expression below is the function body.
+  (filled-rectangle n n)) 
+(define (square n)
+  ; A semi-colon starts a line comment.
+  ; The expression below is the function body.
+  (filled-rectangle n n))

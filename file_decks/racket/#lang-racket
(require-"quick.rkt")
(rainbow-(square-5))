@@ -1,0 +1,6 @@
+# name: #lang racket
+(require "quick.rkt")
+(rainbow (square 5)) 
+#lang racket
+(require "quick.rkt")
+(rainbow (square 5))

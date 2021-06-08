@@ -1,0 +1,6 @@
+# name: (define (four p)
+  (define two-p (hc-append p p))
+  (vc-append two-p two-p)) 
+(define (four p)
+  (define two-p (hc-append p p))
+  (vc-append two-p two-p))

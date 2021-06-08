@@ -1,0 +1,2 @@
+# name: (add-drawing (colorize (filled-flash 50 30) "yellow")) 
+(add-drawing (colorize (filled-flash 50 30) "yellow"))

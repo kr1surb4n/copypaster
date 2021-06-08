@@ -1,0 +1,10 @@
+# name: (define (rgb-series mk)
+  (vc-append
+   (series (lambda (sz) (colorize (mk sz) "red")))
+   (series (lambda (sz) (colorize (mk sz) "green")))
+   (series (lambda (sz) (colorize (mk sz) "blue"))))) 
+(define (rgb-series mk)
+  (vc-append
+   (series (lambda (sz) (colorize (mk sz) "red")))
+   (series (lambda (sz) (colorize (mk sz) "green")))
+   (series (lambda (sz) (colorize (mk sz) "blue")))))
