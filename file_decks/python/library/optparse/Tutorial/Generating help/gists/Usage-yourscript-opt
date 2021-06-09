@@ -1,0 +1,11 @@
+# name: Usage: <yourscript>  
+Usage: <yourscript> [options] arg1 arg2
+
+Options:
+  -h, --help            show this help message and exit
+  -v, --verbose         make lots of noise [default]
+  -q, --quiet           be vewwy quiet (I'm hunting wabbits)
+  -f FILE, --filename=FILE
+                        write output to FILE
+  -m MODE, --mode=MODE  interaction mode: novice, intermediate, or
+                        expert [default: intermediate]

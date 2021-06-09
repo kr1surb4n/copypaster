@@ -1,0 +1,2 @@
+# name: signal.pidfd_send_si 
+signal.pidfd_send_signal(pidfd, sig, siginfo=None, flags=0)

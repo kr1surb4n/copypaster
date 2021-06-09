@@ -1,0 +1,10 @@
+# name: class label(Exceptio 
+class label(Exception): pass  # declare a label
+
+try:
+    ...
+    if condition: raise label()  # goto label
+    ...
+except label:  # where to goto
+    pass
+...

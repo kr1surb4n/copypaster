@@ -1,0 +1,2 @@
+# name: ssl.SSLSocket.get_ch 
+SSLSocket.get_channel_binding(cb_type="tls-unique")

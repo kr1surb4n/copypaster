@@ -1,0 +1,13 @@
+# name: >>> from contextlib  
+>>> from contextlib import ExitStack
+>>> with ExitStack() as outer_stack:
+...     outer_stack.callback(print, "Callback: from outer context")
+...     with ExitStack() as inner_stack:
+...         inner_stack.callback(print, "Callback: from inner context")
+...         print("Leaving inner context")
+...     print("Leaving outer context")
+...
+Leaving inner context
+Callback: from inner context
+Leaving outer context
+Callback: from outer context

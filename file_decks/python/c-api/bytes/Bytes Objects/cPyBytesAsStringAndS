@@ -1,0 +1,2 @@
+# name: c.PyBytes_AsStringAn 
+int PyBytes_AsStringAndSize(PyObject *obj, char **buffer, Py_ssize_t *length)

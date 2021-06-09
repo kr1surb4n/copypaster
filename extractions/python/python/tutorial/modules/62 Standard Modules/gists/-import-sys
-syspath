@@ -1,0 +1,4 @@
+# name: >>> import sys
+>>> s 
+>>> import sys
+>>> sys.path.append('/ufs/guido/lib/python')

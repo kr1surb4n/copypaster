@@ -1,0 +1,5 @@
+# name: >>> '{:_}'.format(10 
+>>> '{:_}'.format(1000000)
+'1_000_000'
+>>> '{:_x}'.format(0xFFFFFFFF)
+'ffff_ffff'

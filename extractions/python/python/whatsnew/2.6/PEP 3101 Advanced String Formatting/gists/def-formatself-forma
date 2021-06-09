@@ -1,0 +1,6 @@
+# name: def __format__(self, 
+def __format__(self, format_spec):
+    if isinstance(format_spec, unicode):
+        return unicode(str(self))
+    else:
+        return str(self)

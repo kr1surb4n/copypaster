@@ -1,0 +1,2 @@
+# name: c.PyObject_HasAttr 
+int PyObject_HasAttr(PyObject *o, PyObject *attr_name)

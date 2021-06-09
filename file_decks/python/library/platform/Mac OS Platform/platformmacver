@@ -1,0 +1,2 @@
+# name: platform.mac_ver 
+platform.mac_ver(release='', versioninfo=('', '', ''), machine='')

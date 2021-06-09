@@ -1,0 +1,2 @@
+# name: gettext.pgettext 
+gettext.pgettext(context, message)

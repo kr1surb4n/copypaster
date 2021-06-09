@@ -1,0 +1,2 @@
+# name: faulthandler.dump_tr 
+faulthandler.dump_traceback(file=sys.stderr, all_threads=True)

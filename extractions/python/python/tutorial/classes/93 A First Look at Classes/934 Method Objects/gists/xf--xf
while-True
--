@@ -1,0 +1,5 @@
+# name: xf = x.f
+while True: 
+xf = x.f
+while True:
+    print(xf())

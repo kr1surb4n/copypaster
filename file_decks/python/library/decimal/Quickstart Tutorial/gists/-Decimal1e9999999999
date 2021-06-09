@@ -1,0 +1,5 @@
+# name: >>> Decimal("1e99999 
+>>> Decimal("1e9999999999999999999")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+decimal.InvalidOperation: [<class 'decimal.InvalidOperation'>]

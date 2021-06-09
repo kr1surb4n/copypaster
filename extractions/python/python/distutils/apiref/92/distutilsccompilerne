@@ -1,0 +1,2 @@
+# name: distutils.ccompiler. 
+distutils.ccompiler.new_compiler(plat=None, compiler=None, verbose=0, dry_run=0, force=0)

@@ -1,0 +1,2 @@
+# name: PyObject *tp_alloc(P 
+PyObject *tp_alloc(PyTypeObject *self, Py_ssize_t nitems);

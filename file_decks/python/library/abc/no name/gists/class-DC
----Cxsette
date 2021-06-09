@@ -1,0 +1,6 @@
+# name: class D(C):
+    @C.x 
+class D(C):
+    @C.x.setter
+    def x(self, val):
+        ...

@@ -1,0 +1,2 @@
+# name: sqlite3.register_con 
+sqlite3.register_converter(typename, callable)

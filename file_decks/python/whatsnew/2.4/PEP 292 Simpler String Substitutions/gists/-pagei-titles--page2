@@ -1,0 +1,3 @@
+# name: >>> '%(page)i: %(tit 
+>>> '%(page)i: %(title)s' % {'page':2, 'title': 'The Best of Times'}
+'2: The Best of Times'

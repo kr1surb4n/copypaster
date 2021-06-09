@@ -1,0 +1,4 @@
+# name: def convert_point(s) 
+def convert_point(s):
+    x, y = map(float, s.split(b";"))
+    return Point(x, y)

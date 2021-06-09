@@ -1,0 +1,6 @@
+# name: class LockableFile(f 
+class LockableFile(file):
+    def lock (self, operation, length=0, start=0, whence=0):
+        import fcntl
+        return fcntl.lockf(self.fileno(), operation,
+                           length, start, whence)

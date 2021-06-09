@@ -1,0 +1,2 @@
+# name: os.lchflags 
+os.lchflags(path, flags)

@@ -1,0 +1,11 @@
+# name: >>> m = MagicMock(re 
+>>> m = MagicMock(return_value=6)
+>>> def side_effect(*args, **kwargs):
+...     return 3
+...
+>>> m.side_effect = side_effect
+>>> m()
+3
+>>> m.side_effect = None
+>>> m()
+6

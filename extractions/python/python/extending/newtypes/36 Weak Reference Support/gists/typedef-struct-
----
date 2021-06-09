@@ -1,0 +1,6 @@
+# name: typedef struct {
+    
+typedef struct {
+    PyObject_HEAD
+    PyObject *weakreflist;  /* List of weak references */
+} TrivialObject;

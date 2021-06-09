@@ -1,0 +1,2 @@
+# name: distutils.dir_util.r 
+distutils.dir_util.remove_tree(directory[, verbose=0, dry_run=0])

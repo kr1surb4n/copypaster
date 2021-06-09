@@ -1,0 +1,2 @@
+# name: resource.setrlimit 
+resource.setrlimit(resource, limits)

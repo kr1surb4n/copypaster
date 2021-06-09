@@ -1,0 +1,10 @@
+# name: >>> class Foo:
+...   
+>>> class Foo:
+...     def iter(self):
+...         for i in [1, 2, 3]:
+...             yield i
+...
+>>> foo = Foo()
+>>> list(foo.iter())
+[1, 2, 3]

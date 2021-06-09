@@ -1,0 +1,2 @@
+# name: os.rmdir 
+os.rmdir(path, *, dir_fd=None)

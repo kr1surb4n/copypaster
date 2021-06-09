@@ -1,0 +1,9 @@
+# name: >>> for country in r 
+>>> for country in root.findall('country'):
+...     rank = country.find('rank').text
+...     name = country.get('name')
+...     print(name, rank)
+...
+Liechtenstein 1
+Singapore 4
+Panama 68

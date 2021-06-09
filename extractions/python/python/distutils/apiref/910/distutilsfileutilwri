@@ -1,0 +1,2 @@
+# name: distutils.file_util. 
+distutils.file_util.write_file(filename, contents)

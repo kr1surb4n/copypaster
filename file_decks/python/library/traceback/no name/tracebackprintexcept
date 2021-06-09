@@ -1,0 +1,2 @@
+# name: traceback.print_exce 
+traceback.print_exception(exc, /, [value, tb, ]limit=None, file=None, chain=True)

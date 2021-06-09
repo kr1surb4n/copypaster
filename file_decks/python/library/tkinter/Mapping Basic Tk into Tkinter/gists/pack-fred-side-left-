@@ -1,0 +1,2 @@
+# name: pack .fred -side lef 
+pack .fred -side left       =====>  fred.pack(side="left")

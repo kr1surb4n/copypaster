@@ -1,0 +1,6 @@
+# name: >>> async def agen() 
+>>> async def agen():
+...     yield 1
+...
+>>> inspect.isasyncgenfunction(agen)
+True

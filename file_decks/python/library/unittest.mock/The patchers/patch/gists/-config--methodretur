@@ -1,0 +1,10 @@
+# name: >>> config = {'metho 
+>>> config = {'method.return_value': 3, 'other.side_effect': KeyError}
+>>> patcher = patch('__main__.thing', **config)
+>>> mock_thing = patcher.start()
+>>> mock_thing.method()
+3
+>>> mock_thing.other()
+Traceback (most recent call last):
+  ...
+KeyError

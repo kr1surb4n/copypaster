@@ -1,0 +1,2 @@
+# name: dbm.whichdb 
+dbm.whichdb(filename)

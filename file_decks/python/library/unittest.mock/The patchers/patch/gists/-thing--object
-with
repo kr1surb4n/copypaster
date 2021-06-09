@@ -1,0 +1,9 @@
+# name: >>> thing = object() 
+>>> thing = object()
+>>> with patch('__main__.thing', new_callable=NonCallableMock) as mock_thing:
+...     assert thing is mock_thing
+...     thing()
+...
+Traceback (most recent call last):
+  ...
+TypeError: 'NonCallableMock' object is not callable

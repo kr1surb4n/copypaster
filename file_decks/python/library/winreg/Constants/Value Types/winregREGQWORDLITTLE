@@ -1,0 +1,2 @@
+# name: winreg.REG_QWORD_LIT 
+winreg.REG_QWORD_LITTLE_ENDIAN

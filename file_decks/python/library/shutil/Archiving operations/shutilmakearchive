@@ -1,0 +1,2 @@
+# name: shutil.make_archive 
+shutil.make_archive(base_name, format[, root_dir[, base_dir[, verbose[, dry_run[, owner[, group[, logger]]]]]]])

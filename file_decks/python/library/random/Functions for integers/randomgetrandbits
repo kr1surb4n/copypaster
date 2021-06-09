@@ -1,0 +1,2 @@
+# name: random.getrandbits 
+random.getrandbits(k)

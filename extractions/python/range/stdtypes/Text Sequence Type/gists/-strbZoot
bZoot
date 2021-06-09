@@ -1,0 +1,4 @@
+# name: >>> str(b'Zoot!')
+"b 
+>>> str(b'Zoot!')
+"b'Zoot!'"

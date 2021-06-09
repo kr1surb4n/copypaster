@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsMBCSSt 
+PyObject* PyUnicode_AsMBCSString(PyObject *unicode)

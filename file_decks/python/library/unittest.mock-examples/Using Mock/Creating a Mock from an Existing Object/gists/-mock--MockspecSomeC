@@ -1,0 +1,6 @@
+# name: >>> mock = Mock(spec 
+>>> mock = Mock(spec=SomeClass)
+>>> mock.old_method()
+Traceback (most recent call last):
+   ...
+AttributeError: object has no attribute 'old_method'

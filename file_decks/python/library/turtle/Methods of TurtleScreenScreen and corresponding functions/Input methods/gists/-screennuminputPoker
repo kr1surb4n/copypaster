@@ -1,0 +1,2 @@
+# name: >>> screen.numinput( 
+>>> screen.numinput("Poker", "Your stakes:", 1000, minval=10, maxval=10000)

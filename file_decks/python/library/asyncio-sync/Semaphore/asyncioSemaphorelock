@@ -1,0 +1,2 @@
+# name: asyncio.Semaphore.lo 
+asyncio.Semaphore.locked

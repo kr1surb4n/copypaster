@@ -1,0 +1,7 @@
+# name: import gzip
+import s 
+import gzip
+import shutil
+with open('/home/joe/file.txt', 'rb') as f_in:
+    with gzip.open('/home/joe/file.txt.gz', 'wb') as f_out:
+        shutil.copyfileobj(f_in, f_out)

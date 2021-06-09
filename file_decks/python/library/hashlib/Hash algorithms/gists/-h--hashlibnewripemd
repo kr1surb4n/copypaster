@@ -1,0 +1,5 @@
+# name: >>> h = hashlib.new( 
+>>> h = hashlib.new('ripemd160')
+>>> h.update(b"Nobody inspects the spammish repetition")
+>>> h.hexdigest()
+'cc4a5ce1b3df48aec5d22d1f16b894a0b894eccc'

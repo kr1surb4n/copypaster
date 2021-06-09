@@ -1,0 +1,6 @@
+# name: >>> Animal = enum.En 
+>>> Animal = enum.Enum('Animal', 'cat dog', start=10)
+>>> Animal.cat
+<Animal.cat: 10>
+>>> Animal.dog
+<Animal.dog: 11>

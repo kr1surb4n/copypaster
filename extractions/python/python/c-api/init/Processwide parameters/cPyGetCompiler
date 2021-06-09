@@ -1,0 +1,2 @@
+# name: c.Py_GetCompiler 
+const char* Py_GetCompiler()

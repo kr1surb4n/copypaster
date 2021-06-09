@@ -1,0 +1,2 @@
+# name: c.PyCode_NewEmpty 
+PyCodeObject* PyCode_NewEmpty(const char *filename, const char *funcname, int firstlineno)

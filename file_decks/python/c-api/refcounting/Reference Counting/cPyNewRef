@@ -1,0 +1,2 @@
+# name: c.Py_NewRef 
+PyObject* Py_NewRef(PyObject *o)

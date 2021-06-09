@@ -1,0 +1,2 @@
+# name: c.PyMem_Free 
+void PyMem_Free(void *p)

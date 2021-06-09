@@ -1,0 +1,6 @@
+# name: >>> windll.kernel32. 
+>>> windll.kernel32.GetModuleHandleA(32)  
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OSError: exception: access violation reading 0x00000020
+>>>

@@ -1,0 +1,9 @@
+# name: >>> import urllib.pa 
+>>> import urllib.parse
+>>> urllib.parse.urlparse('http://[dead:beef:cafe:5417:affe:8FA3:deaf:feed]/foo/') 
+ParseResult(scheme='http',
+            netloc='[dead:beef:cafe:5417:affe:8FA3:deaf:feed]',
+            path='/foo/',
+            params='',
+            query='',
+            fragment='')

@@ -1,0 +1,12 @@
+# name: >>> m = MagicMock(si 
+>>> m = MagicMock(side_effect=[1, 2, 3])
+>>> m()
+1
+>>> m()
+2
+>>> m()
+3
+>>> m()
+Traceback (most recent call last):
+  ...
+StopIteration

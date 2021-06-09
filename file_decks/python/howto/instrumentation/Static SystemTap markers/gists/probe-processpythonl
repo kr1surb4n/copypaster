@@ -1,0 +1,2 @@
+# name: probe process("pytho 
+probe process("python").library("libpython3.6dm.so.1.0").mark("function__entry") {

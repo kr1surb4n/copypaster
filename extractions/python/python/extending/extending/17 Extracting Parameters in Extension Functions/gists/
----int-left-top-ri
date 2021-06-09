@@ -1,0 +1,10 @@
+# name: {
+    int left, top, 
+{
+    int left, top, right, bottom, h, v;
+    ok = PyArg_ParseTuple(args, "((ii)(ii))(ii)",
+             &left, &top, &right, &bottom, &h, &v);
+    /* A rectangle and a point */
+    /* Possible Python call:
+       f(((0, 0), (400, 300)), (10, 10)) */
+}

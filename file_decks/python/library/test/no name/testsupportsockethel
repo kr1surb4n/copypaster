@@ -1,0 +1,2 @@
+# name: test.support.socket_ 
+test.support.socket_helper.transient_internet(resource_name, *, timeout=30.0, errnos=())

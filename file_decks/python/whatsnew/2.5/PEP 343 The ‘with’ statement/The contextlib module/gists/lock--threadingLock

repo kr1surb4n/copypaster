@@ -1,0 +1,4 @@
+# name: lock = threading.Loc 
+lock = threading.Lock()
+with nested (db_transaction(db), lock) as (cursor, locked):
+    ...

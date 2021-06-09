@@ -1,0 +1,2 @@
+# name: doctest.run_docstrin 
+doctest.run_docstring_examples(f, globs, verbose=False, name="NoName", compileflags=None, optionflags=0)

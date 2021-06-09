@@ -1,0 +1,6 @@
+# name: >>> print(libc.time( 
+>>> print(libc.time(None))  
+1150640792
+>>> print(hex(windll.kernel32.GetModuleHandleA(None)))  
+0x1d000000
+>>>

@@ -1,0 +1,2 @@
+# name: c.PyDict_Next 
+int PyDict_Next(PyObject *p, Py_ssize_t *ppos, PyObject **pkey, PyObject **pvalue)

@@ -1,0 +1,8 @@
+# name: >>> dt_add = dt + ti 
+>>> dt_add = dt + timedelta(days=1)
+
+>>> print(dt_add)
+2020-11-01 12:00:00-08:00
+
+>>> dt_add.tzname()
+'PST'

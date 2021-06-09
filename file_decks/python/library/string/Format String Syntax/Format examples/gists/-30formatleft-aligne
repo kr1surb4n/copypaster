@@ -1,0 +1,9 @@
+# name: >>> '{:<30}'.format( 
+>>> '{:<30}'.format('left aligned')
+'left aligned                  '
+>>> '{:>30}'.format('right aligned')
+'                 right aligned'
+>>> '{:^30}'.format('centered')
+'           centered           '
+>>> '{:*^30}'.format('centered')  # use '*' as a fill char
+'***********centered***********'

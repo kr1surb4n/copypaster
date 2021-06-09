@@ -1,0 +1,2 @@
+# name: str.find 
+str.find(sub[, start[, end]])

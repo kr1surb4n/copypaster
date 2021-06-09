@@ -1,0 +1,15 @@
+# name: from functools impor 
+from functools import cached_property
+
+class CP:
+    __slots__ = ()                          # Eliminates the instance dict
+
+    @cached_property                        # Requires an instance dict
+    def pi(self):
+        return 4 * sum((-1.0)**n / (2.0*n + 1.0)
+                       for n in reversed(range(100_000)))
+
+>>> CP().pi
+Traceback (most recent call last):
+  ...
+TypeError: No '__dict__' attribute on 'CP' instance to cache 'pi' property.

@@ -1,0 +1,2 @@
+# name: zipfile.is_zipfile 
+zipfile.is_zipfile(filename)

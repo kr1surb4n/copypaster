@@ -1,0 +1,4 @@
+# name: $ python prog.py a b 
+$ python prog.py a b c
+usage: prog.py [-h] [--sum] N [N ...]
+prog.py: error: argument N: invalid int value: 'a'

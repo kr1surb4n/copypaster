@@ -1,0 +1,5 @@
+# name: >>> print(re.search( 
+>>> print(re.search('super', 'superstition').span())
+(0, 5)
+>>> print(re.search('super', 'insuperable').span())
+(2, 7)

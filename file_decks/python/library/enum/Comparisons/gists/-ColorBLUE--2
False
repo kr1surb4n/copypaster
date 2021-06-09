@@ -1,0 +1,4 @@
+# name: >>> Color.BLUE == 2
+ 
+>>> Color.BLUE == 2
+False

@@ -1,0 +1,2 @@
+# name: csv.Dialect 
+class csv.Dialect

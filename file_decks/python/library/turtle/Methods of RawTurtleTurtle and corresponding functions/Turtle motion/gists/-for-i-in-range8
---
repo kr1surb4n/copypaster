@@ -1,0 +1,14 @@
+# name: >>> for i in range(8 
+>>> for i in range(8):
+...     turtle.stamp(); turtle.fd(30)
+13
+14
+15
+16
+17
+18
+19
+20
+>>> turtle.clearstamps(2)
+>>> turtle.clearstamps(-2)
+>>> turtle.clearstamps()

@@ -1,0 +1,26 @@
+# name: void init_python(voi 
+void init_python(void)
+{
+    PyStatus status;
+
+    PyConfig config;
+    PyConfig_InitPythonConfig(&config);
+
+    /* Set the program name. Implicitly preinitialize Python. */
+    status = PyConfig_SetString(&config, &config.program_name,
+                                L"/path/to/my_program");
+    if (PyStatus_Exception(status)) {
+        goto exception;
+    }
+
+    status = Py_InitializeFromConfig(&config);
+    if (PyStatus_Exception(status)) {
+        goto exception;
+    }
+    PyConfig_Clear(&config);
+    return;
+
+exception:
+    PyConfig_Clear(&config);
+    Py_ExitStatusException(status);
+}

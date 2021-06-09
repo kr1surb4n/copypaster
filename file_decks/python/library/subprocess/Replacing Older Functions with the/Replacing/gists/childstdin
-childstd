@@ -1,0 +1,11 @@
+# name: (child_stdin,
+ child 
+(child_stdin,
+ child_stdout,
+ child_stderr) = os.popen3(cmd, mode, bufsize)
+==>
+p = Popen(cmd, shell=True, bufsize=bufsize,
+          stdin=PIPE, stdout=PIPE, stderr=PIPE, close_fds=True)
+(child_stdin,
+ child_stdout,
+ child_stderr) = (p.stdin, p.stdout, p.stderr)

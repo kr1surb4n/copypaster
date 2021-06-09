@@ -1,0 +1,3 @@
+# name: >>> x == float.fromh 
+>>> x == float.fromhex('0x1.921f9f01b866ep+1')
+True

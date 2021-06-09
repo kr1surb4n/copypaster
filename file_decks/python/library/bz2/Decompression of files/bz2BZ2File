@@ -1,0 +1,2 @@
+# name: bz2.BZ2File 
+class bz2.BZ2File(filename, mode='r', *, compresslevel=9)

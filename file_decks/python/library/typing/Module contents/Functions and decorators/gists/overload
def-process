@@ -1,0 +1,13 @@
+# name: @overload
+def proces 
+@overload
+def process(response: None) -> None:
+    ...
+@overload
+def process(response: int) -> tuple[int, str]:
+    ...
+@overload
+def process(response: bytes) -> str:
+    ...
+def process(response):
+    <actual implementation>

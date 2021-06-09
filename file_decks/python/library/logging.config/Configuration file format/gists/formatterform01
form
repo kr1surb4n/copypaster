@@ -1,0 +1,6 @@
+# name: [formatter_form01]
+f 
+[formatter_form01]
+format=F1 %(asctime)s %(levelname)s %(message)s
+datefmt=
+class=logging.Formatter

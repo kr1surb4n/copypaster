@@ -1,0 +1,7 @@
+# name: >>> # format also su 
+>>> # format also supports binary numbers
+>>> "int: {0:d};  hex: {0:x};  oct: {0:o};  bin: {0:b}".format(42)
+'int: 42;  hex: 2a;  oct: 52;  bin: 101010'
+>>> # with 0x, 0o, or 0b as prefix:
+>>> "int: {0:d};  hex: {0:#x};  oct: {0:#o};  bin: {0:#b}".format(42)
+'int: 42;  hex: 0x2a;  oct: 0o52;  bin: 0b101010'

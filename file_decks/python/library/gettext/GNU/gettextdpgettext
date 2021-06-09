@@ -1,0 +1,2 @@
+# name: gettext.dpgettext 
+gettext.dpgettext(domain, context, message)

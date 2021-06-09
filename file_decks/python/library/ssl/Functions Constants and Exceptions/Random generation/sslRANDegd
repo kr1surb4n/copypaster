@@ -1,0 +1,2 @@
+# name: ssl.RAND_egd 
+ssl.RAND_egd(path)

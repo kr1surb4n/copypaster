@@ -1,0 +1,2 @@
+# name: c.PySlice_Type 
+PyTypeObject PySlice_Type

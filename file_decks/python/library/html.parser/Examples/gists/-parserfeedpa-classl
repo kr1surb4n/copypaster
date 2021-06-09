@@ -1,0 +1,9 @@
+# name: >>> parser.feed('<p> 
+>>> parser.feed('<p><a class=link href=#main>tag soup</p ></a>')
+Start tag: p
+Start tag: a
+     attr: ('class', 'link')
+     attr: ('href', '#main')
+Data     : tag soup
+End tag  : p
+End tag  : a

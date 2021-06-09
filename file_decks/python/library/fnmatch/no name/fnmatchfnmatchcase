@@ -1,0 +1,2 @@
+# name: fnmatch.fnmatchcase 
+fnmatch.fnmatchcase(filename, pattern)

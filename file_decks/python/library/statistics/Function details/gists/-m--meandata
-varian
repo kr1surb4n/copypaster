@@ -1,0 +1,5 @@
+# name: >>> m = mean(data)
+> 
+>>> m = mean(data)
+>>> variance(data, m)
+1.3720238095238095

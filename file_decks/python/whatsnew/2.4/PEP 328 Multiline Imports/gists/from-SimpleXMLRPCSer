@@ -1,0 +1,5 @@
+# name: from SimpleXMLRPCSer 
+from SimpleXMLRPCServer import (SimpleXMLRPCServer,
+                                SimpleXMLRPCRequestHandler,
+                                CGIXMLRPCRequestHandler,
+                                resolve_dotted_attribute)

@@ -1,0 +1,2 @@
+# name: curses.tigetstr 
+curses.tigetstr(capname)

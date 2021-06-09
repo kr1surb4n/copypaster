@@ -1,0 +1,7 @@
+# name: >>> import custom3
+> 
+>>> import custom3
+>>> class Derived(custom3.Custom): pass
+...
+>>> n = Derived()
+>>> n.some_attribute = n

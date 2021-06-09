@@ -1,0 +1,2 @@
+# name: asyncio.loop.call_so 
+loop.call_soon_threadsafe(callback, *args, context=None)

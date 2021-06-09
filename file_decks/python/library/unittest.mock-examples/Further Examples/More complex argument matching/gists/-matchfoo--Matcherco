@@ -1,0 +1,3 @@
+# name: >>> match_foo = Matc 
+>>> match_foo = Matcher(compare, Foo(1, 2))
+>>> mock.assert_called_with(match_foo)

@@ -1,0 +1,5 @@
+# name: >>> PureWindowsPath( 
+>>> PureWindowsPath('//some/share/setup.py').name
+'setup.py'
+>>> PureWindowsPath('//some/share').name
+''

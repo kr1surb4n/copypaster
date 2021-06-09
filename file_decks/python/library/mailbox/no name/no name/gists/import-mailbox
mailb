@@ -1,0 +1,4 @@
+# name: import mailbox
+mailb 
+import mailbox
+mailbox.Maildir.colon = '!'

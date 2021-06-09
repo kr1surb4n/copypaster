@@ -1,0 +1,6 @@
+# name: >>> import mailcap
+> 
+>>> import mailcap
+>>> d = mailcap.getcaps()
+>>> mailcap.findmatch(d, 'video/mpeg', filename='tmp1223')
+('xmpeg tmp1223', {'view': 'xmpeg %s'})

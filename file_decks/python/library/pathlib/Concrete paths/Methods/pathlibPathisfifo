@@ -1,0 +1,2 @@
+# name: pathlib.Path.is_fifo 
+Path.is_fifo()

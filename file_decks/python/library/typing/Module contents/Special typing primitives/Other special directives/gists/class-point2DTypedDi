@@ -1,0 +1,4 @@
+# name: class point2D(TypedD 
+class point2D(TypedDict, total=False):
+    x: int
+    y: int

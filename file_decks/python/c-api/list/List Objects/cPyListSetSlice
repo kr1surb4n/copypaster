@@ -1,0 +1,2 @@
+# name: c.PyList_SetSlice 
+int PyList_SetSlice(PyObject *list, Py_ssize_t low, Py_ssize_t high, PyObject *itemlist)

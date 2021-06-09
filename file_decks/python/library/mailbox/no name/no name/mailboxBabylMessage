@@ -1,0 +1,2 @@
+# name: mailbox.BabylMessage 
+class mailbox.BabylMessage(message=None)

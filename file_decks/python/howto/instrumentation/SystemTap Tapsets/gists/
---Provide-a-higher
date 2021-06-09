@@ -1,0 +1,20 @@
+# name: /*
+   Provide a high 
+/*
+   Provide a higher-level wrapping around the function__entry and
+   function__return markers:
+ \*/
+probe python.function.entry = process("python").mark("function__entry")
+{
+    filename = user_string($arg1);
+    funcname = user_string($arg2);
+    lineno = $arg3;
+    frameptr = $arg4
+}
+probe python.function.return = process("python").mark("function__return")
+{
+    filename = user_string($arg1);
+    funcname = user_string($arg2);
+    lineno = $arg3;
+    frameptr = $arg4
+}

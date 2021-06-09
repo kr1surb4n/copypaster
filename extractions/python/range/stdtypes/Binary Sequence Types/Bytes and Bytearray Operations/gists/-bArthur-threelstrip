@@ -1,0 +1,5 @@
+# name: >>> b'Arthur: three! 
+>>> b'Arthur: three!'.lstrip(b'Arthur: ')
+b'ee!'
+>>> b'Arthur: three!'.removeprefix(b'Arthur: ')
+b'three!'

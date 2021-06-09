@@ -1,0 +1,2 @@
+# name: parser.add_option("- 
+parser.add_option("-c", action="callback", callback=my_callback)

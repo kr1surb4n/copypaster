@@ -1,0 +1,6 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser()
+>>> parser.add_argument('--foo', action='store_true')
+>>> parser.add_argument('bar')
+>>> parser.parse_known_args(['--foo', '--badger', 'BAR', 'spam'])
+(Namespace(bar='BAR', foo=True), ['--badger', 'spam'])

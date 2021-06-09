@@ -1,0 +1,7 @@
+# name: >>> Mood.favorite_mo 
+>>> Mood.favorite_mood()
+<Mood.HAPPY: 3>
+>>> Mood.HAPPY.describe()
+('HAPPY', 3)
+>>> str(Mood.FUNKY)
+'my custom str! 1'

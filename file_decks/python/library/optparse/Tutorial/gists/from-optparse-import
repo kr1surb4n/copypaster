@@ -1,0 +1,4 @@
+# name: from optparse import 
+from optparse import OptionParser
+...
+parser = OptionParser()

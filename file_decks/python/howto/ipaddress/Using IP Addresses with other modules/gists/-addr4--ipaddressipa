@@ -1,0 +1,6 @@
+# name: >>> addr4 = ipaddres 
+>>> addr4 = ipaddress.ip_address('192.0.2.1')
+>>> str(addr4)
+'192.0.2.1'
+>>> int(addr4)
+3221225985

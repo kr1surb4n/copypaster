@@ -1,0 +1,3 @@
+# name: >>> parser.parse_arg 
+>>> parser.parse_args(['--sum', '7', '-1', '42'])
+Namespace(accumulate=<built-in function sum>, integers=[7, -1, 42])

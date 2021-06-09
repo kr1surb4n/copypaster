@@ -1,0 +1,5 @@
+# name: def print_it():
+     
+def print_it():
+    print("hi there")
+fred["command"] = print_it

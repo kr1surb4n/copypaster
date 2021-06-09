@@ -1,0 +1,2 @@
+# name: c.PyBytes_Type 
+PyTypeObject PyBytes_Type

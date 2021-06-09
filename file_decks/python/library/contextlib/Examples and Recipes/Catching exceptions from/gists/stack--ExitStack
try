@@ -1,0 +1,10 @@
+# name: stack = ExitStack()
+ 
+stack = ExitStack()
+try:
+    x = stack.enter_context(cm)
+except Exception:
+    # handle __enter__ exception
+else:
+    with stack:
+        # Handle normal case

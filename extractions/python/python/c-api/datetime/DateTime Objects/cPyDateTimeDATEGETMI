@@ -1,0 +1,2 @@
+# name: c.PyDateTime_DATE_GE 
+int PyDateTime_DATE_GET_MICROSECOND(PyDateTime_DateTime *o)

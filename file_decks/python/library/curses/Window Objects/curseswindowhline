@@ -1,0 +1,2 @@
+# name: curses.window.hline 
+window.hline(ch, n)

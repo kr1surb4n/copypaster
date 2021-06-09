@@ -1,0 +1,3 @@
+# name: cd project_directory 
+cd project_directory
+python -m unittest discover

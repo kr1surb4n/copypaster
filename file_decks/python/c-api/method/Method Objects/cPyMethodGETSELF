@@ -1,0 +1,2 @@
+# name: c.PyMethod_GET_SELF 
+PyObject* PyMethod_GET_SELF(PyObject *meth)

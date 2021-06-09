@@ -1,0 +1,9 @@
+# name: >>> import os
+>>> im 
+>>> import os
+>>> import unittest
+>>> from unittest.mock import patch
+>>> @patch.dict('os.environ', {'newkey': 'newvalue'})
+... class TestSample(unittest.TestCase):
+...     def test_sample(self):
+...         self.assertEqual(os.environ['newkey'], 'newvalue')

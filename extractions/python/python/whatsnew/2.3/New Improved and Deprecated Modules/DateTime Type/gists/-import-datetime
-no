@@ -1,0 +1,10 @@
+# name: >>> import datetime
+ 
+>>> import datetime
+>>> now = datetime.datetime.now()
+>>> now.isoformat()
+'2002-12-30T21:27:03.994956'
+>>> now.ctime()  # Only available on date, datetime
+'Mon Dec 30 21:27:03 2002'
+>>> now.strftime('%Y %d %b')
+'2002 30 Dec'

@@ -1,0 +1,2 @@
+# name: test.support.refcoun 
+@test.support.refcount_test(test)

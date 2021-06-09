@@ -1,0 +1,2 @@
+# name: asyncio.SendfileNotA 
+exception asyncio.SendfileNotAvailableError

@@ -1,0 +1,10 @@
+# name: {
+   PyObject *type, 
+{
+   PyObject *type, *value, *traceback;
+   PyErr_Fetch(&type, &value, &traceback);
+
+   /* ... code that might produce other errors ... */
+
+   PyErr_Restore(type, value, traceback);
+}

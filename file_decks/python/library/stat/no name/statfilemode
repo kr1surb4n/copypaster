@@ -1,0 +1,2 @@
+# name: stat.filemode 
+stat.filemode(mode)

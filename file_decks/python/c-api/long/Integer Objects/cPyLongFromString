@@ -1,0 +1,2 @@
+# name: c.PyLong_FromString 
+PyObject* PyLong_FromString(const char *str, char **pend, int base)

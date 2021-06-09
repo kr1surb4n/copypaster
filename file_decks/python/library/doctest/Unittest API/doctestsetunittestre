@@ -1,0 +1,2 @@
+# name: doctest.set_unittest 
+doctest.set_unittest_reportflags(flags)

@@ -1,0 +1,2 @@
+# name: c.PyCodec_KnownEncod 
+int PyCodec_KnownEncoding(const char *encoding)

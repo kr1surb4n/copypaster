@@ -1,0 +1,4 @@
+# name: >>> getattr(p, 'x')
+ 
+>>> getattr(p, 'x')
+11

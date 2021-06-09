@@ -1,0 +1,3 @@
+# name: with redirect_stdout 
+with redirect_stdout(sys.stderr):
+    help(pow)

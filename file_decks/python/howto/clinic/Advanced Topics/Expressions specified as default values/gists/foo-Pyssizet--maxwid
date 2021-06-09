@@ -1,0 +1,2 @@
+# name: foo: Py_ssize_t = ma 
+foo: Py_ssize_t = max_widgets

@@ -1,0 +1,8 @@
+# name: >>> import re
+>>> pa 
+>>> import re
+>>> pat = re.compile(r'(a|b).(?<=\1)c')
+>>> pat.match('aac')
+<_sre.SRE_Match object; span=(0, 3), match='aac'>
+>>> pat.match('bbc')
+<_sre.SRE_Match object; span=(0, 3), match='bbc'>

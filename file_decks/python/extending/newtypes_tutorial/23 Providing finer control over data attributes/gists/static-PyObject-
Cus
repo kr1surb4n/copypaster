@@ -1,0 +1,28 @@
+# name: static PyObject *
+Cu 
+static PyObject *
+Custom_getfirst(CustomObject *self, void *closure)
+{
+    Py_INCREF(self->first);
+    return self->first;
+}
+
+static int
+Custom_setfirst(CustomObject *self, PyObject *value, void *closure)
+{
+    PyObject *tmp;
+    if (value == NULL) {
+        PyErr_SetString(PyExc_TypeError, "Cannot delete the first attribute");
+        return -1;
+    }
+    if (!PyUnicode_Check(value)) {
+        PyErr_SetString(PyExc_TypeError,
+                        "The first attribute value must be a string");
+        return -1;
+    }
+    tmp = self->first;
+    Py_INCREF(value);
+    self->first = value;
+    Py_DECREF(tmp);
+    return 0;
+}

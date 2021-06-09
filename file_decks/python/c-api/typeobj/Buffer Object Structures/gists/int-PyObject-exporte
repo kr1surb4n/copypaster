@@ -1,0 +1,2 @@
+# name: int (PyObject *expor 
+int (PyObject *exporter, Py_buffer *view, int flags);

@@ -1,0 +1,4 @@
+# name: >>> config.get('bitb 
+>>> config.get('bitbucket.org', 'monster',
+...            fallback='No such things as monsters')
+'No such things as monsters'

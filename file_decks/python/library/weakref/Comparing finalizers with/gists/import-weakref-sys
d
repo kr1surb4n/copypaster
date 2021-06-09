@@ -1,0 +1,6 @@
+# name: import weakref, sys
+ 
+import weakref, sys
+def unloading_module():
+    # implicit reference to the module globals from the function body
+weakref.finalize(sys.modules[__name__], unloading_module)

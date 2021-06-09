@@ -1,0 +1,13 @@
+# name: # simple test progra 
+# simple test program (from the XML-RPC specification)
+from xmlrpc.client import ServerProxy, Error
+
+# server = ServerProxy("http://localhost:8000") # local server
+with ServerProxy("http://betty.userland.com") as proxy:
+
+    print(proxy)
+
+    try:
+        print(proxy.examples.getStateName(41))
+    except Error as v:
+        print("ERROR", v)

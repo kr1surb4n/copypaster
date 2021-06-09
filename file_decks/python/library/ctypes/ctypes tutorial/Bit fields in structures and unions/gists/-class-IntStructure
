@@ -1,0 +1,10 @@
+# name: >>> class Int(Struct 
+>>> class Int(Structure):
+...     _fields_ = [("first_16", c_int, 16),
+...                 ("second_16", c_int, 16)]
+...
+>>> print(Int.first_16)
+<Field type=c_long, ofs=0:0, bits=16>
+>>> print(Int.second_16)
+<Field type=c_long, ofs=0:16, bits=16>
+>>>

@@ -1,0 +1,2 @@
+# name: strptime(date_string 
+strptime(date_string, format)

@@ -1,0 +1,4 @@
+# name: _temp = __import__(' 
+_temp = __import__('spam.ham', globals(), locals(), ['eggs', 'sausage'], 0)
+eggs = _temp.eggs
+saus = _temp.sausage

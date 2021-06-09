@@ -1,0 +1,10 @@
+# name: >>> # Components of  
+>>> # Components of another_year add up to exactly 365 days
+>>> from datetime import timedelta
+>>> year = timedelta(days=365)
+>>> another_year = timedelta(weeks=40, days=84, hours=23,
+...                          minutes=50, seconds=600)
+>>> year == another_year
+True
+>>> year.total_seconds()
+31536000.0

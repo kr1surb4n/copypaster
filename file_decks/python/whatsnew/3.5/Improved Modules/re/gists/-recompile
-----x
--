@@ -1,0 +1,9 @@
+# name: >>> re.compile("""
+. 
+>>> re.compile("""
+...     (?x)
+...     .++
+... """)
+Traceback (most recent call last):
+   ...
+sre_constants.error: multiple repeat at position 16 (line 3, column 7)

@@ -1,0 +1,16 @@
+# name: >>> class D:
+...     
+>>> class D:
+...     def __init__(self, extra):
+...         self._extra_attributes = extra
+...     def __getattr__(self, attr):
+...         try:
+...             return self._extra_attributes[attr]
+...         except KeyError:
+...             raise AttributeError(attr) from None
+...
+>>> D({}).x
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 8, in __getattr__
+AttributeError: x

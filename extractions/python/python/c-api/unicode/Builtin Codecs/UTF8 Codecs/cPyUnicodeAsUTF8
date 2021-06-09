@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsUTF8 
+const char* PyUnicode_AsUTF8(PyObject *unicode)

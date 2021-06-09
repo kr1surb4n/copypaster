@@ -1,0 +1,2 @@
+# name: asyncio.set_child_wa 
+asyncio.set_child_watcher(watcher)

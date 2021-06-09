@@ -1,0 +1,2 @@
+# name: c.PyOS_stricmp 
+int PyOS_stricmp(const char *s1, const char *s2)

@@ -1,0 +1,7 @@
+# name: >>> help(divmod)
+Hel 
+>>> help(divmod)
+Help on built-in function divmod in module builtins:
+
+divmod(x, y, /)
+    Return the tuple (x//y, x%y).  Invariant: div*y + mod == x.

@@ -1,0 +1,10 @@
+# name: while True:
+    news 
+while True:
+    newsocket, fromaddr = bindsocket.accept()
+    connstream = context.wrap_socket(newsocket, server_side=True)
+    try:
+        deal_with_client(connstream)
+    finally:
+        connstream.shutdown(socket.SHUT_RDWR)
+        connstream.close()

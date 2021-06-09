@@ -1,0 +1,8 @@
+# name: >>> memoryview(b'abc 
+>>> memoryview(b'abc').tolist()
+[97, 98, 99]
+>>> import array
+>>> a = array.array('d', [1.1, 2.2, 3.3])
+>>> m = memoryview(a)
+>>> m.tolist()
+[1.1, 2.2, 3.3]

@@ -1,0 +1,3 @@
+# name: node = ast.UnaryOp(a 
+node = ast.UnaryOp(ast.USub(), ast.Constant(5, lineno=0, col_offset=0),
+                   lineno=0, col_offset=0)

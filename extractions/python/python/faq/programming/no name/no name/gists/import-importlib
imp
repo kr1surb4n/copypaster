@@ -1,0 +1,5 @@
+# name: import importlib
+imp 
+import importlib
+import modname
+importlib.reload(modname)

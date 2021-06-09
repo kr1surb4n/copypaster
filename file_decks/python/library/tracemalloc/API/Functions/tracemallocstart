@@ -1,0 +1,2 @@
+# name: tracemalloc.start 
+tracemalloc.start(nframe: int=1)

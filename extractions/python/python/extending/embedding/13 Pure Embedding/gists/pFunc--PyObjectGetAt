@@ -1,0 +1,8 @@
+# name: pFunc = PyObject_Get 
+pFunc = PyObject_GetAttrString(pModule, argv[2]);
+/* pFunc is a new reference */
+
+if (pFunc && PyCallable_Check(pFunc)) {
+    ...
+}
+Py_XDECREF(pFunc);

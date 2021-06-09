@@ -1,0 +1,2 @@
+# name: xml.sax.saxutils.XML 
+class xml.sax.saxutils.XMLFilterBase(base)

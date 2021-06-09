@@ -1,0 +1,22 @@
+# name: >>> config = """
+... 
+>>> config = """
+... [Section1]
+... Key = Value
+...
+... [Section2]
+... AnotherKey = Value
+... """
+>>> typical = configparser.ConfigParser()
+>>> typical.read_string(config)
+>>> list(typical['Section1'].keys())
+['key']
+>>> list(typical['Section2'].keys())
+['anotherkey']
+>>> custom = configparser.RawConfigParser()
+>>> custom.optionxform = lambda option: option
+>>> custom.read_string(config)
+>>> list(custom['Section1'].keys())
+['Key']
+>>> list(custom['Section2'].keys())
+['AnotherKey']

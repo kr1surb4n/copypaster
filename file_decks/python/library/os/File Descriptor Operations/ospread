@@ -1,0 +1,2 @@
+# name: os.pread 
+os.pread(fd, n, offset)

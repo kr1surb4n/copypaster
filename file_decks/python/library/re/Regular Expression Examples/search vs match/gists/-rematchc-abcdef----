@@ -1,0 +1,5 @@
+# name: >>> re.match("c", "a 
+>>> re.match("c", "abcdef")    # No match
+>>> re.search("^c", "abcdef")  # No match
+>>> re.search("^a", "abcdef")  # Match
+<re.Match object; span=(0, 1), match='a'>

@@ -1,0 +1,5 @@
+# name: def foo(a):
+    with 
+def foo(a):
+    with a:
+        print(x)

@@ -1,4 +1,0 @@
-# name: CLASS 4 
-class Customer(name: String) {
-    val customerKey = name.toUpperCase()
-}

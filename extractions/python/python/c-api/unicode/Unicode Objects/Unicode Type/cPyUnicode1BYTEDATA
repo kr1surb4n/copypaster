@@ -1,0 +1,2 @@
+# name: c.PyUnicode_1BYTE_DA 
+Py_UCS1* PyUnicode_1BYTE_DATA(PyObject *o)

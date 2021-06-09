@@ -1,0 +1,7 @@
+# name: setup(...,
+      pac 
+setup(...,
+      packages=['mypkg'],
+      package_dir={'mypkg': 'src/mypkg'},
+      package_data={'mypkg': ['data/*.dat']},
+      )

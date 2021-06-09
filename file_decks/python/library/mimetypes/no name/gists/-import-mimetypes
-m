@@ -1,0 +1,11 @@
+# name: >>> import mimetypes 
+>>> import mimetypes
+>>> mimetypes.init()
+>>> mimetypes.knownfiles
+['/etc/mime.types', '/etc/httpd/mime.types', ... ]
+>>> mimetypes.suffix_map['.tgz']
+'.tar.gz'
+>>> mimetypes.encodings_map['.gz']
+'gzip'
+>>> mimetypes.types_map['.tgz']
+'application/x-tar-gz'

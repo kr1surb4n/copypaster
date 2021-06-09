@@ -1,0 +1,2 @@
+# name: c.PyException_SetCon 
+void PyException_SetContext(PyObject *ex, PyObject *ctx)

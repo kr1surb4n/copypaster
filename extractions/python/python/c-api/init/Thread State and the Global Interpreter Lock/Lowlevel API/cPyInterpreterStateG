@@ -1,0 +1,2 @@
+# name: c._PyInterpreterStat 
+_PyFrameEvalFunction _PyInterpreterState_GetEvalFrameFunc(PyInterpreterState *interp)

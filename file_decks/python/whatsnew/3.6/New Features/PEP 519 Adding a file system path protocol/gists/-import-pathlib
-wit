@@ -1,0 +1,14 @@
+# name: >>> import pathlib
+> 
+>>> import pathlib
+>>> with open(pathlib.Path("README")) as f:
+...     contents = f.read()
+...
+>>> import os.path
+>>> os.path.splitext(pathlib.Path("some_file.txt"))
+('some_file', '.txt')
+>>> os.path.join("/a/b", pathlib.Path("c"))
+'/a/b/c'
+>>> import os
+>>> os.fspath(pathlib.Path("some_file.txt"))
+'some_file.txt'

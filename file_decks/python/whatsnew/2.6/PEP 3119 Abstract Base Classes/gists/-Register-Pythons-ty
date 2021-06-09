@@ -1,0 +1,5 @@
+# name: # Register Python's  
+# Register Python's types
+PrintableType.register(int)
+PrintableType.register(float)
+PrintableType.register(str)

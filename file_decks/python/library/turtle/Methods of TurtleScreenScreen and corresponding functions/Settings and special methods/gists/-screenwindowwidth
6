@@ -1,0 +1,3 @@
+# name: >>> screen.window_wi 
+>>> screen.window_width()
+640

@@ -1,0 +1,2 @@
+# name: ast.Expr 
+class ast.Expr(value)

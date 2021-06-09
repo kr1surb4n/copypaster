@@ -1,0 +1,2 @@
+# name: c.PyEval_ReleaseThre 
+void PyEval_ReleaseThread(PyThreadState *tstate)

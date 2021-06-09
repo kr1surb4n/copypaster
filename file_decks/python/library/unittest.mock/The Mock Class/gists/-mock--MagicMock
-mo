@@ -1,0 +1,8 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock()
+>>> mock.top(a=3).bottom()
+<MagicMock name='mock.top().bottom()' id='...'>
+>>> mock.mock_calls
+[call.top(a=3), call.top().bottom()]
+>>> mock.mock_calls[-1] == call.top(a=-1).bottom()
+True

@@ -1,0 +1,2 @@
+# name: c.PyMem_Realloc 
+void* PyMem_Realloc(void *p, size_t n)

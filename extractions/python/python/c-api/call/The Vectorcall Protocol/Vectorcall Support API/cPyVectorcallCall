@@ -1,0 +1,2 @@
+# name: c.PyVectorcall_Call 
+PyObject* PyVectorcall_Call(PyObject *callable, PyObject *tuple, PyObject *dict)

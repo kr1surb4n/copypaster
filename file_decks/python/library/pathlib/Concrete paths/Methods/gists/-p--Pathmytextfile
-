@@ -1,0 +1,6 @@
+# name: >>> p = Path('my_tex 
+>>> p = Path('my_text_file')
+>>> p.write_text('Text file contents')
+18
+>>> p.read_text()
+'Text file contents'

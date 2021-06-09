@@ -1,0 +1,5 @@
+# name: WINUSERAPI BOOL WINA 
+WINUSERAPI BOOL WINAPI
+GetWindowRect(
+     HWND hWnd,
+     LPRECT lpRect);

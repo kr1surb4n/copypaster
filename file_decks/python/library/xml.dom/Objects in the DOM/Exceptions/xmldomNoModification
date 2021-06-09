@@ -1,0 +1,2 @@
+# name: xml.dom.NoModificati 
+exception xml.dom.NoModificationAllowedErr

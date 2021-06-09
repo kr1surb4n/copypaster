@@ -1,0 +1,2 @@
+# name: c.PyType_GenericNew 
+PyObject* PyType_GenericNew(PyTypeObject *type, PyObject *args, PyObject *kwds)

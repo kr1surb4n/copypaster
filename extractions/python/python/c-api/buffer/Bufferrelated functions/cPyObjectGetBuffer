@@ -1,0 +1,2 @@
+# name: c.PyObject_GetBuffer 
+int PyObject_GetBuffer(PyObject *exporter, Py_buffer *view, int flags)

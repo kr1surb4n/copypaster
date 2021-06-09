@@ -1,0 +1,4 @@
+# name: >>> p = re.compile(' 
+>>> p = re.compile('x*')
+>>> p.sub('-', 'abxd')
+'-a-b--d-'

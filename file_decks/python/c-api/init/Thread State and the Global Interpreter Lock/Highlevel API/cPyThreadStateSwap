@@ -1,0 +1,2 @@
+# name: c.PyThreadState_Swap 
+PyThreadState* PyThreadState_Swap(PyThreadState *tstate)

@@ -1,0 +1,12 @@
+# name: >>> class A:
+...     
+>>> class A:
+...     pass
+...
+>>> B = A
+>>> a = B()
+>>> b = a
+>>> print(b)
+<__main__.A object at 0x16D07CC>
+>>> print(a)
+<__main__.A object at 0x16D07CC>

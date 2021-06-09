@@ -1,0 +1,3 @@
+# name: with A() as a, B() a 
+with A() as a, B() as b:
+    SUITE

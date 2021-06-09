@@ -1,0 +1,2 @@
+# name: c.PyList_Size 
+Py_ssize_t PyList_Size(PyObject *list)

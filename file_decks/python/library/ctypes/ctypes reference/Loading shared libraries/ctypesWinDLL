@@ -1,0 +1,2 @@
+# name: ctypes.WinDLL 
+class ctypes.WinDLL(name, mode=DEFAULT_MODE, handle=None, use_errno=False, use_last_error=False, winmode=0)

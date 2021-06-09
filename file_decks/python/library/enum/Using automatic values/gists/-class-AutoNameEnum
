@@ -1,0 +1,13 @@
+# name: >>> class AutoName(E 
+>>> class AutoName(Enum):
+...     def _generate_next_value_(name, start, count, last_values):
+...         return name
+...
+>>> class Ordinal(AutoName):
+...     NORTH = auto()
+...     SOUTH = auto()
+...     EAST = auto()
+...     WEST = auto()
+...
+>>> list(Ordinal)
+[<Ordinal.NORTH: 'NORTH'>, <Ordinal.SOUTH: 'SOUTH'>, <Ordinal.EAST: 'EAST'>, <Ordinal.WEST: 'WEST'>]

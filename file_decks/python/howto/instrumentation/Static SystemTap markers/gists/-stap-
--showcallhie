@@ -1,0 +1,5 @@
+# name: $ stap \
+  show-call 
+$ stap \
+  show-call-hierarchy.stp \
+  -c "./python test.py"

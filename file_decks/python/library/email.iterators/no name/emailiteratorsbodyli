@@ -1,0 +1,2 @@
+# name: email.iterators.body 
+email.iterators.body_line_iterator(msg, decode=False)

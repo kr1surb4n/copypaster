@@ -1,0 +1,3 @@
+# name: >>> sorted(student_t 
+>>> sorted(student_tuples, key=itemgetter(1,2))
+[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]

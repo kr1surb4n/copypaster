@@ -1,0 +1,9 @@
+# name: >>> for neighbor in  
+>>> for neighbor in root.iter('neighbor'):
+...     print(neighbor.attrib)
+...
+{'name': 'Austria', 'direction': 'E'}
+{'name': 'Switzerland', 'direction': 'W'}
+{'name': 'Malaysia', 'direction': 'N'}
+{'name': 'Costa Rica', 'direction': 'W'}
+{'name': 'Colombia', 'direction': 'E'}

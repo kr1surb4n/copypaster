@@ -1,0 +1,10 @@
+# name: def itemgetter(*item 
+def itemgetter(*items):
+    if len(items) == 1:
+        item = items[0]
+        def g(obj):
+            return obj[item]
+    else:
+        def g(obj):
+            return tuple(obj[item] for item in items)
+    return g

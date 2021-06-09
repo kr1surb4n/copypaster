@@ -1,0 +1,4 @@
+# name: mylist[:] = filter(k 
+mylist[:] = filter(keep_function, mylist)
+mylist[:] = (x for x in mylist if keep_condition)
+mylist[:] = [x for x in mylist if keep_condition]

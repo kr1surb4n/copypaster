@@ -1,0 +1,2 @@
+# name: c.PyByteArray_GET_SI 
+Py_ssize_t PyByteArray_GET_SIZE(PyObject *bytearray)

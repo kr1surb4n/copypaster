@@ -1,0 +1,7 @@
+# name: >>> d1 = dict((i*10, 
+>>> d1 = dict((i*10, chr(65+i)) for i in range(26))
+>>> d2 = dict((i**.5, i) for i in range(1000))
+>>> d1.viewkeys() & d2.viewkeys()
+set([0.0, 10.0, 20.0, 30.0])
+>>> d1.viewkeys() | range(0, 30)
+set([0, 1, 130, 3, 4, 5, 6, ..., 120, 250])

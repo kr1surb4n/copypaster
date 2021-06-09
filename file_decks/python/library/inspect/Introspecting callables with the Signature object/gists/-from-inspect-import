@@ -1,0 +1,11 @@
+# name: >>> from inspect imp 
+>>> from inspect import Parameter
+>>> param = Parameter('foo', Parameter.KEYWORD_ONLY, default=42)
+>>> str(param)
+'foo=42'
+
+>>> str(param.replace()) # Will create a shallow copy of 'param'
+'foo=42'
+
+>>> str(param.replace(default=Parameter.empty, annotation='spam'))
+"foo:'spam'"

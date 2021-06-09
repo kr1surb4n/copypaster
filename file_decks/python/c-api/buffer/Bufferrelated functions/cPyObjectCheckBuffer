@@ -1,0 +1,2 @@
+# name: c.PyObject_CheckBuff 
+int PyObject_CheckBuffer(PyObject *obj)

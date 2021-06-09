@@ -1,0 +1,24 @@
+# name: # Old versions
+h = m 
+# Old versions
+h = md5.md5()
+h = md5.new()
+
+# New version
+h = hashlib.md5()
+
+# Old versions
+h = sha.sha()
+h = sha.new()
+
+# New version
+h = hashlib.sha1()
+
+# Hash that weren't previously available
+h = hashlib.sha224()
+h = hashlib.sha256()
+h = hashlib.sha384()
+h = hashlib.sha512()
+
+# Alternative form
+h = hashlib.new('md5')          # Provide algorithm as a string

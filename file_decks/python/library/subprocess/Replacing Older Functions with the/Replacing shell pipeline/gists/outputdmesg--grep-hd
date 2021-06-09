@@ -1,0 +1,2 @@
+# name: output=$(dmesg | gre 
+output=$(dmesg | grep hda)

@@ -1,0 +1,2 @@
+# name: email.message_from_b 
+email.message_from_bytes(s, _class=None, *, policy=policy.compat32)

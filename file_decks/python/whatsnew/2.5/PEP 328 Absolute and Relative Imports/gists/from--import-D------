@@ -1,0 +1,4 @@
+# name: from . import D      
+from . import D                 # Imports A.B.D
+from .. import E                # Imports A.E
+from ..F import G               # Imports A.F.G

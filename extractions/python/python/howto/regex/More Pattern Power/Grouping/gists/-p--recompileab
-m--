@@ -1,0 +1,7 @@
+# name: >>> p = re.compile(' 
+>>> p = re.compile('(a)b')
+>>> m = p.match('ab')
+>>> m.group()
+'ab'
+>>> m.group(0)
+'ab'

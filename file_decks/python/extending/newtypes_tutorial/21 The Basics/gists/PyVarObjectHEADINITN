@@ -1,0 +1,2 @@
+# name: PyVarObject_HEAD_INI 
+PyVarObject_HEAD_INIT(NULL, 0)

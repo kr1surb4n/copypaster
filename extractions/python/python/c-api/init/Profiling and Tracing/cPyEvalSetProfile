@@ -1,0 +1,2 @@
+# name: c.PyEval_SetProfile 
+void PyEval_SetProfile(Py_tracefunc func, PyObject *obj)

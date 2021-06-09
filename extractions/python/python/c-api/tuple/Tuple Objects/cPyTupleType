@@ -1,0 +1,2 @@
+# name: c.PyTuple_Type 
+PyTypeObject PyTuple_Type

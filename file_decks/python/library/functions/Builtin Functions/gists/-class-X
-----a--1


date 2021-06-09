@@ -1,0 +1,6 @@
+# name: >>> class X:
+...     
+>>> class X:
+...     a = 1
+...
+>>> X = type('X', (object,), dict(a=1))

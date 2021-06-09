@@ -1,0 +1,10 @@
+# name: >>> S1 = sets.Set([1 
+>>> S1 = sets.Set([1,2,3])
+>>> S2 = sets.Set([2,3])
+>>> S2.issubset(S1)
+True
+>>> S1.issubset(S2)
+False
+>>> S1.issuperset(S2)
+True
+>>>

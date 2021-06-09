@@ -1,0 +1,2 @@
+# name: locale.textdomain 
+locale.textdomain(domain)

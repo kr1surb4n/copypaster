@@ -1,0 +1,9 @@
+# name: import http.cookieja 
+import http.cookiejar
+class MyCookiePolicy(http.cookiejar.DefaultCookiePolicy):
+    def set_ok(self, cookie, request):
+        if not http.cookiejar.DefaultCookiePolicy.set_ok(self, cookie, request):
+            return False
+        if i_dont_want_to_store_this_cookie(cookie):
+            return False
+        return True

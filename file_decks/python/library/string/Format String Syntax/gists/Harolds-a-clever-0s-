@@ -1,0 +1,4 @@
+# name: "Harold's a clever { 
+"Harold's a clever {0!s}"        # Calls str() on the argument first
+"Bring out the holy {name!r}"    # Calls repr() on the argument first
+"More {!a}"                      # Calls ascii() on the argument first

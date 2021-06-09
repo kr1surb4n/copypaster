@@ -1,0 +1,9 @@
+# name: >>> import array, st 
+>>> import array, struct
+>>> m = memoryview(array.array('H', [32000, 32001, 32002]))
+>>> m.itemsize
+2
+>>> m[0]
+32000
+>>> struct.calcsize('H') == m.itemsize
+True

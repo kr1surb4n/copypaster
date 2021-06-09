@@ -1,0 +1,5 @@
+# name: with check_warnings( 
+with check_warnings(("assertion is always true", SyntaxWarning),
+                    ("", UserWarning)):
+    exec('assert(False, "Hey!")')
+    warnings.warn(UserWarning("Hide me!"))

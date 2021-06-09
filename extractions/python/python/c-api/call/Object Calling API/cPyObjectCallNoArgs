@@ -1,0 +1,2 @@
+# name: c.PyObject_CallNoArg 
+PyObject* PyObject_CallNoArgs(PyObject *callable)

@@ -1,0 +1,17 @@
+# name: >>> import sqlite3
+> 
+>>> import sqlite3
+>>> conn = sqlite3.connect('entertainment.db')
+
+>>> Movie('Star Wars').director
+'George Lucas'
+>>> jaws = Movie('Jaws')
+>>> f'Released in {jaws.year} by {jaws.director}'
+'Released in 1975 by Steven Spielberg'
+
+>>> Song('Country Roads').artist
+'John Denver'
+
+>>> Movie('Star Wars').director = 'J.J. Abrams'
+>>> Movie('Star Wars').director
+'J.J. Abrams'

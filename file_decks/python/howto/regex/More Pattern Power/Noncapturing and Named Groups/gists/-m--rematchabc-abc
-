@@ -1,0 +1,7 @@
+# name: >>> m = re.match("([ 
+>>> m = re.match("([abc])+", "abc")
+>>> m.groups()
+('c',)
+>>> m = re.match("(?:[abc])+", "abc")
+>>> m.groups()
+()

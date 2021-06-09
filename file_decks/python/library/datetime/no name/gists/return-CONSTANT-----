@@ -1,0 +1,3 @@
+# name: return CONSTANT      
+return CONSTANT                 # fixed-offset class
+return CONSTANT + self.dst(dt)  # daylight-aware class

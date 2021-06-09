@@ -1,0 +1,6 @@
+# name: proxy = weakref.prox 
+proxy = weakref.proxy(obj)
+proxy.attr   # Equivalent to obj.attr
+proxy.meth() # Equivalent to obj.meth()
+del obj
+proxy.attr   # raises weakref.ReferenceError

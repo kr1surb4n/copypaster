@@ -1,0 +1,2 @@
+# name: coroutine.throw 
+coroutine.throw(type[, value[, traceback]])

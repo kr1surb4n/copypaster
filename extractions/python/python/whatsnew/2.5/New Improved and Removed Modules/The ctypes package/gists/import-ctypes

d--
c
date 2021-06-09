@@ -1,0 +1,9 @@
+# name: import ctypes
+
+d = { 
+import ctypes
+
+d = {}
+ctypes.pythonapi.PyObject_SetItem(ctypes.py_object(d),
+          ctypes.py_object("abc"),  ctypes.py_object(1))
+# d is now {'abc', 1}.

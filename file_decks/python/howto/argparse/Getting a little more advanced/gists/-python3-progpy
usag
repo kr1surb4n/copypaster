@@ -1,0 +1,17 @@
+# name: $ python3 prog.py
+us 
+$ python3 prog.py
+usage: prog.py [-h] [-v] x y
+prog.py: error: the following arguments are required: x, y
+$ python3 prog.py -h
+usage: prog.py [-h] [-v] x y
+
+positional arguments:
+  x                the base
+  y                the exponent
+
+optional arguments:
+  -h, --help       show this help message and exit
+  -v, --verbosity
+$ python3 prog.py 4 2 -v
+4^2 == 16

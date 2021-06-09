@@ -1,0 +1,2 @@
+# name: tkinter.simpledialog 
+tkinter.simpledialog.askfloat(title, prompt, **kw)

@@ -1,0 +1,7 @@
+# name: >>> 1 .__hash__() == 
+>>> 1 .__hash__() == hash(1)
+True
+>>> int.__hash__() == hash(int)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: descriptor '__hash__' of 'int' object needs an argument

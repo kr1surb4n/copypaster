@@ -1,0 +1,6 @@
+# name: Traceback (most rece 
+Traceback (most recent call first):
+  File "test.py", line 9
+    obj = Object()
+  File "test.py", line 12
+    tb = tracemalloc.get_object_traceback(f())

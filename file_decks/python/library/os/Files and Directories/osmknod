@@ -1,0 +1,2 @@
+# name: os.mknod 
+os.mknod(path, mode=0o600, device=0, *, dir_fd=None)

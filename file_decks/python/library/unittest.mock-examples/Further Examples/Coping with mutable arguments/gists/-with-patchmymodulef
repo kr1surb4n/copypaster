@@ -1,0 +1,12 @@
+# name: >>> with patch('mymo 
+>>> with patch('mymodule.frob') as mock_frob:
+...     val = {6}
+...     mymodule.grob(val)
+...
+>>> val
+set()
+>>> mock_frob.assert_called_with({6})
+Traceback (most recent call last):
+    ...
+AssertionError: Expected: (({6},), {})
+Called with: ((set(),), {})

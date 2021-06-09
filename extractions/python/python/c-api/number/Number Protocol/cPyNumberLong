@@ -1,0 +1,2 @@
+# name: c.PyNumber_Long 
+PyObject* PyNumber_Long(PyObject *o)

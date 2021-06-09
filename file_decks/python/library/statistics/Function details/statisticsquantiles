@@ -1,0 +1,2 @@
+# name: statistics.quantiles 
+statistics.quantiles(data, *, n=4, method='exclusive')

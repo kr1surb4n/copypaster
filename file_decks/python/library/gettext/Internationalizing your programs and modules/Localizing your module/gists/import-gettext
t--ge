@@ -1,0 +1,5 @@
+# name: import gettext
+t = g 
+import gettext
+t = gettext.translation('spam', '/usr/share/locale')
+_ = t.gettext

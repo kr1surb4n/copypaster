@@ -1,0 +1,9 @@
+# name: docstring_prototype
+ 
+docstring_prototype
+docstring_definition
+methoddef_define
+impl_prototype
+parser_prototype
+parser_definition
+impl_definition

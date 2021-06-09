@@ -1,0 +1,2 @@
+# name: c.PyRun_InteractiveO 
+int PyRun_InteractiveOneFlags(FILE *fp, const char *filename, PyCompilerFlags *flags)

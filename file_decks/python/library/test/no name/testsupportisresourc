@@ -1,0 +1,2 @@
+# name: test.support.is_reso 
+test.support.is_resource_enabled(resource)

@@ -1,0 +1,8 @@
+# name: import re
+p = re.com 
+import re
+p = re.compile(r'\d+')
+
+s = "Over \u0e55\u0e57 57 flavours"
+m = p.search(s)
+print(repr(m.group()))

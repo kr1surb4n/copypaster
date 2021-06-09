@@ -1,0 +1,10 @@
+# name: >>> od = OrderedDict 
+>>> od = OrderedDict([(x,0) for x in range(20)])
+>>> od.popitem()
+(19, 0)
+>>> od.popitem()
+(18, 0)
+>>> od.popitem(last=False)
+(0, 0)
+>>> od.popitem(last=False)
+(1, 0)

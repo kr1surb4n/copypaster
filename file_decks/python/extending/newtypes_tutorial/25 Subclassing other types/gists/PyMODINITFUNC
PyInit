@@ -1,0 +1,23 @@
+# name: PyMODINIT_FUNC
+PyIni 
+PyMODINIT_FUNC
+PyInit_sublist(void)
+{
+    PyObject* m;
+    SubListType.tp_base = &PyList_Type;
+    if (PyType_Ready(&SubListType) < 0)
+        return NULL;
+
+    m = PyModule_Create(&sublistmodule);
+    if (m == NULL)
+        return NULL;
+
+    Py_INCREF(&SubListType);
+    if (PyModule_AddObject(m, "SubList", (PyObject *) &SubListType) < 0) {
+        Py_DECREF(&SubListType);
+        Py_DECREF(m);
+        return NULL;
+    }
+
+    return m;
+}

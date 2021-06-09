@@ -1,0 +1,2 @@
+# name: ctypes.pointer 
+ctypes.pointer(obj)

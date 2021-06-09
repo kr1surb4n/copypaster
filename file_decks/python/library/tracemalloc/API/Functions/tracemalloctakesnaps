@@ -1,0 +1,2 @@
+# name: tracemalloc.take_sna 
+tracemalloc.take_snapshot()

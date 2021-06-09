@@ -1,0 +1,6 @@
+# name: @f1(arg)
+@f2
+def fun 
+@f1(arg)
+@f2
+def func(): pass

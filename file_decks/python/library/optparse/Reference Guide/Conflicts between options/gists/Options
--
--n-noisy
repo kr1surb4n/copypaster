@@ -1,0 +1,7 @@
+# name: Options:
+  ...
+  -n, 
+Options:
+  ...
+  -n, --noisy   be noisy
+  --dry-run     new dry-run option

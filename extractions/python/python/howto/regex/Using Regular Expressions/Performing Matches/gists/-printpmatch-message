@@ -1,0 +1,9 @@
+# name: >>> print(p.match(': 
+>>> print(p.match('::: message'))
+None
+>>> m = p.search('::: message'); print(m)
+<re.Match object; span=(4, 11), match='message'>
+>>> m.group()
+'message'
+>>> m.span()
+(4, 11)

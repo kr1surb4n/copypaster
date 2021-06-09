@@ -1,0 +1,7 @@
+# name: class G:
+    @classm 
+class G:
+    @classmethod
+    @property
+    def __doc__(cls):
+        return f'A doc for {cls.__name__!r}'

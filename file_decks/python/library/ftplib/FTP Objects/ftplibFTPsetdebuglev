@@ -1,0 +1,2 @@
+# name: ftplib.FTP.set_debug 
+FTP.set_debuglevel(level)

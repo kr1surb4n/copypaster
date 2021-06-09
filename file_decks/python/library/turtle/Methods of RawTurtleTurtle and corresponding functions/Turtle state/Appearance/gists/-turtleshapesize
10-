@@ -1,0 +1,10 @@
+# name: >>> turtle.shapesize 
+>>> turtle.shapesize()
+(1.0, 1.0, 1)
+>>> turtle.resizemode("user")
+>>> turtle.shapesize(5, 5, 12)
+>>> turtle.shapesize()
+(5, 5, 12)
+>>> turtle.shapesize(outline=8)
+>>> turtle.shapesize()
+(5, 5, 8)

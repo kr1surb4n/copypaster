@@ -1,0 +1,6 @@
+# name: >>> import sysconfig 
+>>> import sysconfig
+>>> sysconfig.get_config_var('SOABI')       # find the version tag
+'cpython-32mu'
+>>> sysconfig.get_config_var('EXT_SUFFIX')  # find the full filename extension
+'.cpython-32mu.so'

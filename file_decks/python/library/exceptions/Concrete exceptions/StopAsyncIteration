@@ -1,0 +1,2 @@
+# name: StopAsyncIteration 
+exception StopAsyncIteration

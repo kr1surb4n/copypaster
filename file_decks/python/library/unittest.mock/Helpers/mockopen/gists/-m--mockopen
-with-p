@@ -1,0 +1,15 @@
+# name: >>> m = mock_open()
+ 
+>>> m = mock_open()
+>>> with patch('__main__.open', m):
+...     with open('foo', 'w') as h:
+...         h.write('some stuff')
+...
+>>> m.mock_calls
+[call('foo', 'w'),
+ call().__enter__(),
+ call().write('some stuff'),
+ call().__exit__(None, None, None)]
+>>> m.assert_called_once_with('foo', 'w')
+>>> handle = m()
+>>> handle.write.assert_called_once_with('some stuff')

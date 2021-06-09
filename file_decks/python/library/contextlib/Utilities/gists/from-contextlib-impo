@@ -1,0 +1,9 @@
+# name: from contextlib impo 
+from contextlib import ContextDecorator
+
+class mycontext(ContextBaseClass, ContextDecorator):
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *exc):
+        return False

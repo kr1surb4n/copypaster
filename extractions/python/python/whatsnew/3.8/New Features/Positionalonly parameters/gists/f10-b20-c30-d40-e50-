@@ -1,0 +1,3 @@
+# name: f(10, b=20, c=30, d= 
+f(10, b=20, c=30, d=40, e=50, f=60)   # b cannot be a keyword argument
+f(10, 20, 30, 40, 50, f=60)           # e must be a keyword argument

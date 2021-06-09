@@ -1,0 +1,6 @@
+# name: @cm()
+def f():
+    # 
+@cm()
+def f():
+    # Do stuff

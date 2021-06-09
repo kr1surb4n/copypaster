@@ -1,0 +1,2 @@
+# name: os.eventfd_read 
+os.eventfd_read(fd)

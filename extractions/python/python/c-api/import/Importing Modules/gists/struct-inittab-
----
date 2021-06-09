@@ -1,0 +1,6 @@
+# name: struct _inittab {
+   
+struct _inittab {
+    const char *name;           /* ASCII encoded string */
+    PyObject* (*initfunc)(void);
+};

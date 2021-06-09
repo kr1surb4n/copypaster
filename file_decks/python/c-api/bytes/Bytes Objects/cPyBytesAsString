@@ -1,0 +1,2 @@
+# name: c.PyBytes_AsString 
+char* PyBytes_AsString(PyObject *o)

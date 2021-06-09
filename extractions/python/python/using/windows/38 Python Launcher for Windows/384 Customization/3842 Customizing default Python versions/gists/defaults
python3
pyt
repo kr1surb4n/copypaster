@@ -1,0 +1,6 @@
+# name: [defaults]
+python=3
+ 
+[defaults]
+python=3
+python3=3.1

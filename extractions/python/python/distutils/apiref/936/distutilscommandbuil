@@ -1,0 +1,2 @@
+# name: distutils.command.bu 
+class distutils.command.build_py.build_py_2to3

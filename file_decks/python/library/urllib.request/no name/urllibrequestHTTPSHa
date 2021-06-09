@@ -1,0 +1,2 @@
+# name: urllib.request.HTTPS 
+class urllib.request.HTTPSHandler(debuglevel=0, context=None, check_hostname=None)

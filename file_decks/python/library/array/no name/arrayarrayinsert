@@ -1,0 +1,2 @@
+# name: array.array.insert 
+array.insert(i, x)

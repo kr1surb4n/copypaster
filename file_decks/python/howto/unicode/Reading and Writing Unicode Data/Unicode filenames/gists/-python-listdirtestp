@@ -1,0 +1,4 @@
+# name: $ python listdir-tes 
+$ python listdir-test.py
+[b'filename\xe4\x94\x80abc', ...]
+['filename\u4500abc', ...]

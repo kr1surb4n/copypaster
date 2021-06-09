@@ -1,0 +1,7 @@
+# name: from xml.etree impor 
+from xml.etree import ElementTree, ElementInclude
+
+tree = ElementTree.parse("document.xml")
+root = tree.getroot()
+
+ElementInclude.include(root)

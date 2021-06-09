@@ -1,0 +1,4 @@
+# name: >>> ht = 6.0         
+>>> ht = 6.0        # height
+>>> wt = 130        # weight
+>>> fs = 8          # foot size

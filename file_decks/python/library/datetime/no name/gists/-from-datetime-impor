@@ -1,0 +1,4 @@
+# name: >>> from datetime im 
+>>> from datetime import datetime
+>>> datetime(2002, 12, 4, 20, 30, 40).ctime()
+'Wed Dec  4 20:30:40 2002'

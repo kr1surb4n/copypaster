@@ -1,0 +1,2 @@
+# name: c.PyImport_AddModule 
+PyObject* PyImport_AddModule(const char *name)

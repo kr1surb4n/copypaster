@@ -1,0 +1,2 @@
+# name: c.Py_ReprLeave 
+void Py_ReprLeave(PyObject *object)

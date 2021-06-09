@@ -1,0 +1,10 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock()
+>>> int(mock)
+1
+>>> len(mock)
+0
+>>> list(mock)
+[]
+>>> object() in mock
+False

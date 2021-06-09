@@ -1,0 +1,2 @@
+# name: doctest.Example 
+class doctest.Example(source, want, exc_msg=None, lineno=0, indent=0, options=None)

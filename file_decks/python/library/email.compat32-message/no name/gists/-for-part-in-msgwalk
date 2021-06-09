@@ -1,0 +1,19 @@
+# name: >>> for part in msg. 
+>>> for part in msg.walk():
+...     print(part.get_content_maintype() == 'multipart',
+...           part.is_multipart())
+True True
+False False
+False True
+False False
+False False
+False True
+False False
+>>> _structure(msg)
+multipart/report
+    text/plain
+    message/delivery-status
+        text/plain
+        text/plain
+    message/rfc822
+        text/plain

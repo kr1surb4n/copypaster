@@ -1,0 +1,2 @@
+# name: c.PyUnicode_DecodeFS 
+PyObject* PyUnicode_DecodeFSDefault(const char *s)

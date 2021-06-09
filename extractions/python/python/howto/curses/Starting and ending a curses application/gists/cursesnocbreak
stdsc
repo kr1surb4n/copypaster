@@ -1,0 +1,5 @@
+# name: curses.nocbreak()
+st 
+curses.nocbreak()
+stdscr.keypad(False)
+curses.echo()

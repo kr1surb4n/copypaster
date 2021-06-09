@@ -1,0 +1,7 @@
+# name: >>> i = c_int(99)
+>> 
+>>> i = c_int(99)
+>>> pi.contents = i
+>>> pi.contents
+c_long(99)
+>>>

@@ -1,0 +1,2 @@
+# name: test.support.print_w 
+test.support.print_warning(msg)

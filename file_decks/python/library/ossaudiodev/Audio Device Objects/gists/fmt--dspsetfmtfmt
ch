@@ -1,0 +1,4 @@
+# name: fmt = dsp.setfmt(fmt 
+fmt = dsp.setfmt(fmt)
+channels = dsp.channels(channels)
+rate = dsp.rate(rate)

@@ -1,0 +1,2 @@
+# name: c.PyNumber_Xor 
+PyObject* PyNumber_Xor(PyObject *o1, PyObject *o2)

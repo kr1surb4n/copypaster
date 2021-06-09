@@ -1,0 +1,7 @@
+# name: if sys.hexversion >= 
+if sys.hexversion >= 0x010502F0:
+    # use some advanced feature
+    ...
+else:
+    # use an alternative implementation or warn the user
+    ...

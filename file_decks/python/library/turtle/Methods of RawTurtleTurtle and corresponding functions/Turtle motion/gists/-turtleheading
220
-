@@ -1,0 +1,6 @@
+# name: >>> turtle.heading() 
+>>> turtle.heading()
+22.0
+>>> turtle.left(45)
+>>> turtle.heading()
+67.0

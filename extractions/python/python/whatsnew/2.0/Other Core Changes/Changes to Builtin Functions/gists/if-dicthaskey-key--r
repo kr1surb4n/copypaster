@@ -1,0 +1,5 @@
+# name: if dict.has_key( key 
+if dict.has_key( key ): return dict[key]
+else:
+    dict[key] = []
+    return dict[key]

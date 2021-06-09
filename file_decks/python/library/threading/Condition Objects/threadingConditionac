@@ -1,0 +1,2 @@
+# name: threading.Condition. 
+threading.Condition.acquire

@@ -1,0 +1,2 @@
+# name: class.__subclasschec 
+class.__subclasscheck__(self, subclass)

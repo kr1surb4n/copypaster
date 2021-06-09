@@ -1,0 +1,5 @@
+# name: >>> a = ip_network(' 
+>>> a = ip_network('192.168.1.0/24')
+>>> b = ip_network('192.168.1.128/30')
+>>> a.supernet_of(b)
+True

@@ -1,0 +1,11 @@
+# name: void
+bug(PyObject *l 
+void
+bug(PyObject *list)
+{
+    PyObject *item = PyList_GetItem(list, 0);
+    Py_BEGIN_ALLOW_THREADS
+    ...some blocking I/O call...
+    Py_END_ALLOW_THREADS
+    PyObject_Print(item, stdout, 0); /* BUG! */
+}

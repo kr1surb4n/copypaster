@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Translat 
+PyObject* PyUnicode_TranslateCharmap(const Py_UNICODE *s, Py_ssize_t size, PyObject *mapping, const char *errors)

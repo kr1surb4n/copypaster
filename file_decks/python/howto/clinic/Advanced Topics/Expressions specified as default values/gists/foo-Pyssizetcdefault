@@ -1,0 +1,2 @@
+# name: foo: Py_ssize_t(c_de 
+foo: Py_ssize_t(c_default="PY_SSIZE_T_MAX - 1") = sys.maxsize - 1

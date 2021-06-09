@@ -1,0 +1,2 @@
+# name: p.sort_stats(SortKey 
+p.sort_stats(SortKey.FILENAME).print_stats('__init__')

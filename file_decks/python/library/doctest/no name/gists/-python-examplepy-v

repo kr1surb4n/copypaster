@@ -1,0 +1,12 @@
+# name: $ python example.py  
+$ python example.py -v
+Trying:
+    factorial(5)
+Expecting:
+    120
+ok
+Trying:
+    [factorial(n) for n in range(6)]
+Expecting:
+    [1, 1, 2, 6, 24, 120]
+ok

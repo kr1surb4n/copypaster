@@ -1,0 +1,2 @@
+# name: asyncio.Future.cance 
+asyncio.Future.cancel

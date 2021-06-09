@@ -1,0 +1,11 @@
+# name: static Py_hash_t
+new 
+static Py_hash_t
+newdatatype_hash(newdatatypeobject *obj)
+{
+    Py_hash_t result;
+    result = obj->some_size + 32767 * obj->some_number;
+    if (result == -1)
+       result = -2;
+    return result;
+}

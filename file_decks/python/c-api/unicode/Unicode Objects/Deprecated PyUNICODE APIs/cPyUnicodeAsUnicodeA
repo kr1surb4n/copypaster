@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsUnicod 
+Py_UNICODE* PyUnicode_AsUnicodeAndSize(PyObject *unicode, Py_ssize_t *size)

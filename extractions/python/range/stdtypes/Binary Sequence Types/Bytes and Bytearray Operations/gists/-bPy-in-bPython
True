@@ -1,0 +1,3 @@
+# name: >>> b'Py' in b'Pytho 
+>>> b'Py' in b'Python'
+True

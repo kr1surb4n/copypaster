@@ -1,0 +1,3 @@
+# name: >>> 'male' if poster 
+>>> 'male' if posterior_male > posterior_female else 'female'
+'female'

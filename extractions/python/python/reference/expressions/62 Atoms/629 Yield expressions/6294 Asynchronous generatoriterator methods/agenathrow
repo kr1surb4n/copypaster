@@ -1,0 +1,2 @@
+# name: agen.athrow 
+coroutine agen.athrow(type[, value[, traceback]])

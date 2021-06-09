@@ -1,0 +1,2 @@
+# name: test.support.with_py 
+test.support.with_pymalloc()

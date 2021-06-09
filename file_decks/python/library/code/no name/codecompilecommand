@@ -1,0 +1,2 @@
+# name: code.compile_command 
+code.compile_command(source, filename="<input>", symbol="single")

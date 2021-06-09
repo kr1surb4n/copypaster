@@ -1,0 +1,7 @@
+# name: setup(...,
+      ext 
+setup(...,
+      ext_package='pkg',
+      ext_modules=[Extension('foo', ['foo.c']),
+                   Extension('subpkg.bar', ['bar.c'])],
+     )

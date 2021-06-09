@@ -1,0 +1,60 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('[ord(c) for line in file for c in line]', mode='eval'),
+...                indent=4)) # Multiple comprehensions in one.
+Expression(
+    body=ListComp(
+        elt=Call(
+            func=Name(id='ord', ctx=Load()),
+            args=[
+                Name(id='c', ctx=Load())],
+            keywords=[]),
+        generators=[
+            comprehension(
+                target=Name(id='line', ctx=Store()),
+                iter=Name(id='file', ctx=Load()),
+                ifs=[],
+                is_async=0),
+            comprehension(
+                target=Name(id='c', ctx=Store()),
+                iter=Name(id='line', ctx=Load()),
+                ifs=[],
+                is_async=0)]))
+
+>>> print(ast.dump(ast.parse('(n**2 for n in it if n>5 if n<10)', mode='eval'),
+...                indent=4)) # generator comprehension
+Expression(
+    body=GeneratorExp(
+        elt=BinOp(
+            left=Name(id='n', ctx=Load()),
+            op=Pow(),
+            right=Constant(value=2)),
+        generators=[
+            comprehension(
+                target=Name(id='n', ctx=Store()),
+                iter=Name(id='it', ctx=Load()),
+                ifs=[
+                    Compare(
+                        left=Name(id='n', ctx=Load()),
+                        ops=[
+                            Gt()],
+                        comparators=[
+                            Constant(value=5)]),
+                    Compare(
+                        left=Name(id='n', ctx=Load()),
+                        ops=[
+                            Lt()],
+                        comparators=[
+                            Constant(value=10)])],
+                is_async=0)]))
+
+>>> print(ast.dump(ast.parse('[i async for i in soc]', mode='eval'),
+...                indent=4)) # Async comprehension
+Expression(
+    body=ListComp(
+        elt=Name(id='i', ctx=Load()),
+        generators=[
+            comprehension(
+                target=Name(id='i', ctx=Store()),
+                iter=Name(id='soc', ctx=Load()),
+                ifs=[],
+                is_async=1)]))

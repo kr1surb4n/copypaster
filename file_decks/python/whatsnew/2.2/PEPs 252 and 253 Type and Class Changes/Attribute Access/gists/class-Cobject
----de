@@ -1,0 +1,16 @@
+# name: class C(object):
+    
+class C(object):
+    def get_size (self):
+        result = ... computation ...
+        return result
+    def set_size (self, size):
+        ... compute something based on the size
+        and set internal state appropriately ...
+
+    # Define a property.  The 'delete this attribute'
+    # method is defined as None, so the attribute
+    # can't be deleted.
+    size = property(get_size, set_size,
+                    None,
+                    "Storage size of this instance")

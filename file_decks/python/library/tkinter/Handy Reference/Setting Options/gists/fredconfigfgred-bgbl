@@ -1,0 +1,2 @@
+# name: fred.config(fg="red" 
+fred.config(fg="red", bg="blue")

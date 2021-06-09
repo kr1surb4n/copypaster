@@ -1,0 +1,2 @@
+# name: proxy._callmethod(me 
+proxy._callmethod(methodname, args, kwds)

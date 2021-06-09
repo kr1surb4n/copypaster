@@ -1,0 +1,2 @@
+# name: email.mime.base.MIME 
+class email.mime.base.MIMEBase(_maintype, _subtype, *, policy=compat32, **_params)

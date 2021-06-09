@@ -1,0 +1,10 @@
+# name: >>> s = Directory('s 
+>>> s = Directory('songs')
+>>> g = Directory('games')
+>>> s.size                              # The songs directory has twenty files
+20
+>>> g.size                              # The games directory has three files
+3
+>>> open('games/newfile').close()       # Add a fourth file to the directory
+>>> g.size                              # File count is automatically updated
+4

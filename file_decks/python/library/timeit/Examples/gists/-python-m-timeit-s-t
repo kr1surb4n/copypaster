@@ -1,0 +1,5 @@
+# name: $ python -m timeit - 
+$ python -m timeit -s 'text = "sample string"; char = "g"'  'char in text'
+5000000 loops, best of 5: 0.0877 usec per loop
+$ python -m timeit -s 'text = "sample string"; char = "g"'  'text.find(char)'
+1000000 loops, best of 5: 0.342 usec per loop

@@ -1,0 +1,5 @@
+# name: >>> _, _, first, las 
+>>> _, _, first, last, _ = s.group('gmane.comp.python.devel')
+>>> resp, number, message_id = s.stat(first)
+>>> number, message_id
+(9099, '<20030112190404.GE29873@epoch.metaslash.com>')

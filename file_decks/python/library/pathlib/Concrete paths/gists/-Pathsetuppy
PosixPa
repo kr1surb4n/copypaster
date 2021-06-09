@@ -1,0 +1,3 @@
+# name: >>> Path('setup.py') 
+>>> Path('setup.py')
+PosixPath('setup.py')

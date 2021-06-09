@@ -1,0 +1,2 @@
+# name: curses.get_escdelay 
+curses.get_escdelay()

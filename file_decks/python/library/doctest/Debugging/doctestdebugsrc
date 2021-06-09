@@ -1,0 +1,2 @@
+# name: doctest.debug_src 
+doctest.debug_src(src, pm=False, globs=None)

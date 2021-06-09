@@ -1,0 +1,3 @@
+# name: cl /LD /I/python/inc 
+cl /LD /I/python/include spam.c ../libs/pythonXY.lib
+cl /LD /I/python/include ni.c spam.lib ../libs/pythonXY.lib

@@ -1,0 +1,6 @@
+# name: >>> def f(a, b, /, * 
+>>> def f(a, b, /, **kwargs):
+...     print(a, b, kwargs)
+...
+>>> f(10, 20, a=1, b=2, c=3)         # a and b are used in two ways
+10 20 {'a': 1, 'b': 2, 'c': 3}

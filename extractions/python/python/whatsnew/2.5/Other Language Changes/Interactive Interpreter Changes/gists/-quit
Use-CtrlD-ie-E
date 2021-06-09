@@ -1,0 +1,4 @@
+# name: >>> quit
+'Use Ctrl-D 
+>>> quit
+'Use Ctrl-D (i.e. EOF) to exit.'

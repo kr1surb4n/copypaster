@@ -1,0 +1,3 @@
+# name: >>> async def coro() 
+>>> async def coro():
+...     return 'spam'

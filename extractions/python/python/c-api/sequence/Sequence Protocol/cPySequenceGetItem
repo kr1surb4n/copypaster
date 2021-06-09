@@ -1,0 +1,2 @@
+# name: c.PySequence_GetItem 
+PyObject* PySequence_GetItem(PyObject *o, Py_ssize_t i)

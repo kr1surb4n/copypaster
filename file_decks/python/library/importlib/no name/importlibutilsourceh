@@ -1,0 +1,2 @@
+# name: importlib.util.sourc 
+importlib.util.source_hash(source_bytes)

@@ -1,0 +1,6 @@
+# name: # M is a connected I 
+# M is a connected IMAP4 instance...
+typ, msgnums = M.search(None, 'FROM', '"LDJ"')
+
+# or:
+typ, msgnums = M.search(None, '(FROM "LDJ")')

@@ -1,0 +1,10 @@
+# name: >>> def some_functio 
+>>> def some_function():
+...     instance = module.Foo()
+...     return instance.method()
+...
+>>> with patch('module.Foo') as mock:
+...     instance = mock.return_value
+...     instance.method.return_value = 'the result'
+...     result = some_function()
+...     assert result == 'the result'

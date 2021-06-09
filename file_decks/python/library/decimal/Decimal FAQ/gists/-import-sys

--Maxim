@@ -1,0 +1,22 @@
+# name: >>> import sys
+>>>
+> 
+>>> import sys
+>>>
+>>> # Maximum number of digits for a single operand using 500MB in 8-byte words
+>>> # with 19 digits per word (4-byte and 9 digits for the 32-bit build):
+>>> maxdigits = 19 * ((500 * 1024**2) // 8)
+>>>
+>>> # Check that this works:
+>>> c = Context(prec=maxdigits, Emax=MAX_EMAX, Emin=MIN_EMIN)
+>>> c.traps[Inexact] = True
+>>> setcontext(c)
+>>>
+>>> # Fill the available precision with nines:
+>>> x = Decimal(0).logical_invert() * 9
+>>> sys.getsizeof(x)
+524288112
+>>> x + 2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  decimal.Inexact: [<class 'decimal.Inexact'>]

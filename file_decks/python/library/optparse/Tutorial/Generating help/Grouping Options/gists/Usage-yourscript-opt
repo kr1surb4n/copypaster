@@ -1,0 +1,22 @@
+# name: Usage: <yourscript>  
+Usage: <yourscript> [options] arg1 arg2
+
+Options:
+  -h, --help            show this help message and exit
+  -v, --verbose         make lots of noise [default]
+  -q, --quiet           be vewwy quiet (I'm hunting wabbits)
+  -f FILE, --filename=FILE
+                        write output to FILE
+  -m MODE, --mode=MODE  interaction mode: novice, intermediate, or expert
+                        [default: intermediate]
+
+  Dangerous Options:
+    Caution: use these options at your own risk.  It is believed that some
+    of them bite.
+
+    -g                  Group option.
+
+  Debug Options:
+    -d, --debug         Print debug information
+    -s, --sql           Print all SQL statements executed
+    -e                  Print every action done

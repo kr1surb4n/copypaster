@@ -1,0 +1,4 @@
+# name: >>> pkg_info_path =  
+>>> pkg_info_path = 'distribute-0.6.8-py2.7.egg-info'
+>>> DistributionMetadata(pkg_info_path).name
+'distribute'

@@ -1,0 +1,2 @@
+# name: warnings.catch_warni 
+class warnings.catch_warnings(*, record=False, module=None)

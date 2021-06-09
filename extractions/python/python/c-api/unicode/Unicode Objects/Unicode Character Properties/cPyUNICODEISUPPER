@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_ISUPPER 
+int Py_UNICODE_ISUPPER(Py_UNICODE ch)

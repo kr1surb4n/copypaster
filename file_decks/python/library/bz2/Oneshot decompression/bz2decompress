@@ -1,0 +1,2 @@
+# name: bz2.decompress 
+bz2.decompress(data)

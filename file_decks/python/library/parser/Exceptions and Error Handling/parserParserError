@@ -1,0 +1,2 @@
+# name: parser.ParserError 
+exception parser.ParserError

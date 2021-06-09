@@ -1,0 +1,2 @@
+# name: curses.def_shell_mod 
+curses.def_shell_mode()

@@ -1,0 +1,2 @@
+# name: c.PyEval_GetFuncName 
+const char* PyEval_GetFuncName(PyObject *func)

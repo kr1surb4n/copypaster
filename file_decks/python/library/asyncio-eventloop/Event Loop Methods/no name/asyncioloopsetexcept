@@ -1,0 +1,2 @@
+# name: asyncio.loop.set_exc 
+loop.set_exception_handler(handler)

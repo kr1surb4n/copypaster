@@ -1,0 +1,2 @@
+# name: c.PyDate_FromDate 
+PyObject* PyDate_FromDate(int year, int month, int day)

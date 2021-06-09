@@ -1,0 +1,2 @@
+# name: email.parser.FeedPar 
+class email.parser.FeedParser(_factory=None, *, policy=policy.compat32)

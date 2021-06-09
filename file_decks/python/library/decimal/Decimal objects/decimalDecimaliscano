@@ -1,0 +1,2 @@
+# name: decimal.Decimal.is_c 
+decimal.Decimal.is_canonical

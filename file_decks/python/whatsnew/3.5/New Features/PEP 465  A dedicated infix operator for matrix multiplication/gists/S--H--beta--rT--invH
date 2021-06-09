@@ -1,0 +1,2 @@
+# name: S = (H @ beta - r).T 
+S = (H @ beta - r).T @ inv(H @ V @ H.T) @ (H @ beta - r)

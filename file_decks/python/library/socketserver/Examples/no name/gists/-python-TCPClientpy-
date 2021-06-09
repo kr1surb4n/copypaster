@@ -1,0 +1,7 @@
+# name: $ python TCPClient.p 
+$ python TCPClient.py hello world with TCP
+Sent:     hello world with TCP
+Received: HELLO WORLD WITH TCP
+$ python TCPClient.py python is nice
+Sent:     python is nice
+Received: PYTHON IS NICE

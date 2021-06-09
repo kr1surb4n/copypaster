@@ -1,0 +1,2 @@
+# name: c.PyObject_Del 
+void PyObject_Del(void *op)

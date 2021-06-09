@@ -1,0 +1,2 @@
+# name: operator.ilshift 
+operator.ilshift(a, b)

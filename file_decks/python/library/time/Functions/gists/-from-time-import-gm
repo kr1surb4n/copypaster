@@ -1,0 +1,4 @@
+# name: >>> from time import 
+>>> from time import gmtime, strftime
+>>> strftime("%a, %d %b %Y %H:%M:%S +0000", gmtime())
+'Thu, 28 Jun 2001 14:17:15 +0000'

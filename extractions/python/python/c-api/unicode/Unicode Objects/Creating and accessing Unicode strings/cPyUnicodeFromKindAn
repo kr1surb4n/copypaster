@@ -1,0 +1,2 @@
+# name: c.PyUnicode_FromKind 
+PyObject* PyUnicode_FromKindAndData(int kind, const void *buffer, Py_ssize_t size)

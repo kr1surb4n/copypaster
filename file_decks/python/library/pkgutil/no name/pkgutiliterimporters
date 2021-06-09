@@ -1,0 +1,2 @@
+# name: pkgutil.iter_importe 
+pkgutil.iter_importers(fullname='')

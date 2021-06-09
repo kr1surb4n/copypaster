@@ -1,0 +1,5 @@
+# name: >>> SequenceMatcher( 
+>>> SequenceMatcher(None, 'tide', 'diet').ratio()
+0.25
+>>> SequenceMatcher(None, 'diet', 'tide').ratio()
+0.5

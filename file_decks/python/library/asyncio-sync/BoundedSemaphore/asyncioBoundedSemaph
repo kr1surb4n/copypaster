@@ -1,0 +1,2 @@
+# name: asyncio.BoundedSemap 
+class asyncio.BoundedSemaphore(value=1, *, loop=None)

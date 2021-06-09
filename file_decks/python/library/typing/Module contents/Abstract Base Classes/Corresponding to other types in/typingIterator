@@ -1,0 +1,2 @@
+# name: typing.Iterator 
+class typing.Iterator(Iterable[T_co])

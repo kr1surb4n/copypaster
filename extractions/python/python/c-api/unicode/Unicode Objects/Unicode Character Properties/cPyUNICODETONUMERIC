@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_TONUMER 
+double Py_UNICODE_TONUMERIC(Py_UNICODE ch)

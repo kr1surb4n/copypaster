@@ -1,0 +1,6 @@
+# name: Options:
+  --dry-run 
+Options:
+  --dry-run     do no harm
+  ...
+  -n, --noisy   be noisy

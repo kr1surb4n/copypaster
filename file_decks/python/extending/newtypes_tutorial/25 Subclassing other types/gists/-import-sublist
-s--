@@ -1,0 +1,11 @@
+# name: >>> import sublist
+> 
+>>> import sublist
+>>> s = sublist.SubList(range(3))
+>>> s.extend(s)
+>>> print(len(s))
+6
+>>> print(s.increment())
+1
+>>> print(s.increment())
+2

@@ -1,0 +1,8 @@
+# name: >>> import functools 
+>>> import functools, operator
+>>> functools.reduce(operator.add, [1, 2, 3, 4], 0)
+10
+>>> sum([1, 2, 3, 4])
+10
+>>> sum([])
+0

@@ -1,0 +1,2 @@
+# name: binascii.b2a_uu 
+binascii.b2a_uu(data, *, backtick=False)

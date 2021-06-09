@@ -1,0 +1,4 @@
+# name: from typing import T 
+from typing import TypeAlias
+
+Factors: TypeAlias = list[int]

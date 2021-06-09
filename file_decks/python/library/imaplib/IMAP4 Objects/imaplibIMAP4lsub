@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.lsub 
+IMAP4.lsub(directory='""', pattern='*')

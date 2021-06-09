@@ -1,0 +1,2 @@
+# name: zoneinfo.ZoneInfo.fr 
+classmethod ZoneInfo.from_file(fobj, /, key=None)

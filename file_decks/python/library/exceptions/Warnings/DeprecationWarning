@@ -1,0 +1,2 @@
+# name: DeprecationWarning 
+exception DeprecationWarning

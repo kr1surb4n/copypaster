@@ -1,0 +1,9 @@
+# name: for expr1 in sequenc 
+for expr1 in sequence1:
+    for expr2 in sequence2:
+    ...
+        for exprN in sequenceN:
+             if (condition):
+                  # Append the value of
+                  # the expression to the
+                  # resulting list.

@@ -1,0 +1,2 @@
+# name: os.mkdir 
+os.mkdir(path, mode=0o777, *, dir_fd=None)

@@ -1,0 +1,2 @@
+# name: c.PyComplex_CheckExa 
+int PyComplex_CheckExact(PyObject *p)

@@ -1,0 +1,2 @@
+# name: csv.unix_dialect 
+class csv.unix_dialect

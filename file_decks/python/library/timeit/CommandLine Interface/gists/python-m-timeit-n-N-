@@ -1,0 +1,2 @@
+# name: python -m timeit [-n 
+python -m timeit [-n N] [-r N] [-u U] [-s S] [-h] [statement ...]

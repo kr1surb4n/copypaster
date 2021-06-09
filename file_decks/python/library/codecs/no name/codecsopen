@@ -1,0 +1,2 @@
+# name: codecs.open 
+codecs.open(filename, mode='r', encoding=None, errors='strict', buffering=-1)

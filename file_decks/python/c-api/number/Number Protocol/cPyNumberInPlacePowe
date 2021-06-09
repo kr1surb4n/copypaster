@@ -1,0 +1,2 @@
+# name: c.PyNumber_InPlacePo 
+PyObject* PyNumber_InPlacePower(PyObject *o1, PyObject *o2, PyObject *o3)

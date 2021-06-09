@@ -1,0 +1,20 @@
+# name: import xml.etree.Ele 
+import xml.etree.ElementTree as ET
+
+root = ET.fromstring(countrydata)
+
+# Top-level elements
+root.findall(".")
+
+# All 'neighbor' grand-children of 'country' children of the top-level
+# elements
+root.findall("./country/neighbor")
+
+# Nodes with name='Singapore' that have a 'year' child
+root.findall(".//year/..[@name='Singapore']")
+
+# 'year' nodes that are children of nodes with name='Singapore'
+root.findall(".//*[@name='Singapore']/year")
+
+# All 'neighbor' nodes that are the second child of their parent
+root.findall(".//neighbor[2]")

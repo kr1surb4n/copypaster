@@ -1,0 +1,6 @@
+# name: # Consume an item
+wi 
+# Consume an item
+with cv:
+    cv.wait_for(an_item_is_available)
+    get_an_available_item()

@@ -1,0 +1,5 @@
+# name: def foo(mydict={}):  
+def foo(mydict={}):  # Danger: shared reference to one dict for all calls
+    ... compute something ...
+    mydict[key] = value
+    return mydict

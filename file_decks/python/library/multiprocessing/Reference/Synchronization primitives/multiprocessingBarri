@@ -1,0 +1,2 @@
+# name: multiprocessing.Barr 
+class multiprocessing.Barrier(parties[, action[, timeout]])

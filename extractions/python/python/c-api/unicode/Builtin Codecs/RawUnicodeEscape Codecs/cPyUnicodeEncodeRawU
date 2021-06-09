@@ -1,0 +1,2 @@
+# name: c.PyUnicode_EncodeRa 
+PyObject* PyUnicode_EncodeRawUnicodeEscape(const Py_UNICODE *s, Py_ssize_t size)

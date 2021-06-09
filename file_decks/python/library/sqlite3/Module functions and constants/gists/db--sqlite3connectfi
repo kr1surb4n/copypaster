@@ -1,0 +1,2 @@
+# name: db = sqlite3.connect 
+db = sqlite3.connect('file:path/to/database?mode=ro', uri=True)

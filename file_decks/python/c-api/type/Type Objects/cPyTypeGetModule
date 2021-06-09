@@ -1,0 +1,2 @@
+# name: c.PyType_GetModule 
+PyObject* PyType_GetModule(PyTypeObject *type)

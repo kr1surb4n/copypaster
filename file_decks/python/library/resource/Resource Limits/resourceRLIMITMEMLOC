@@ -1,0 +1,2 @@
+# name: resource.RLIMIT_MEML 
+resource.RLIMIT_MEMLOCK

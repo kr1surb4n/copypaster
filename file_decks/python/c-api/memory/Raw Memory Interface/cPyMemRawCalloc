@@ -1,0 +1,2 @@
+# name: c.PyMem_RawCalloc 
+void* PyMem_RawCalloc(size_t nelem, size_t elsize)

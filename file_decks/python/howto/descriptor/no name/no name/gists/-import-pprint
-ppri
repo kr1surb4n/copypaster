@@ -1,0 +1,10 @@
+# name: >>> import pprint
+>> 
+>>> import pprint
+>>> pprint.pp(dict(vars(H)))
+{'__module__': '__main__',
+ 'slot_names': ['x', 'y'],
+ '__init__': <function H.__init__ at 0x7fb5d302f9d0>,
+ 'x': <Member 'x' of 'H'>,
+ 'y': <Member 'y' of 'H'>,
+ '__doc__': None}

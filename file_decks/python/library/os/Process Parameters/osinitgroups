@@ -1,0 +1,2 @@
+# name: os.initgroups 
+os.initgroups(username, gid)

@@ -1,0 +1,4 @@
+# name: >>> expected_calls = 
+>>> expected_calls = [call.foo.something(), call.bar.other.thing()]
+>>> manager.mock_calls == expected_calls
+True

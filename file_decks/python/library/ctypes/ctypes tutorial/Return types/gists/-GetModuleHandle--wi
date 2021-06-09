@@ -1,0 +1,17 @@
+# name: >>> GetModuleHandle  
+>>> GetModuleHandle = windll.kernel32.GetModuleHandleA  
+>>> def ValidHandle(value):
+...     if value == 0:
+...         raise WinError()
+...     return value
+...
+>>>
+>>> GetModuleHandle.restype = ValidHandle  
+>>> GetModuleHandle(None)  
+486539264
+>>> GetModuleHandle("something silly")  
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 3, in ValidHandle
+OSError: [Errno 126] The specified module could not be found.
+>>>

@@ -1,0 +1,6 @@
+# name: BaseException        
+BaseException       # New in Python 2.5
+|- KeyboardInterrupt
+|- SystemExit
+|- Exception
+   |- (all other current built-in exceptions)

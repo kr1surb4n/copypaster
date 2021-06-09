@@ -1,0 +1,6 @@
+# name: >>> n1 = ip_network( 
+>>> n1 = ip_network('192.0.2.0/28')
+>>> n2 = ip_network('192.0.2.1/32')
+>>> list(n1.address_exclude(n2))  
+[IPv4Network('192.0.2.8/29'), IPv4Network('192.0.2.4/30'),
+ IPv4Network('192.0.2.2/31'), IPv4Network('192.0.2.0/32')]

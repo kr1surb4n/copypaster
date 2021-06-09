@@ -1,0 +1,2 @@
+# name: os.memfd_create 
+os.memfd_create(name[, flags=os.MFD_CLOEXEC])

@@ -1,0 +1,14 @@
+# name: >>> pair = re.compil 
+>>> pair = re.compile(r".*(.).*\1")
+>>> pair.match("717ak").group(1)
+'7'
+
+# Error because re.match() returns None, which doesn't have a group() method:
+>>> pair.match("718ak").group(1)
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    re.match(r".*(.).*\1", "718ak").group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+
+>>> pair.match("354aa").group(1)
+'a'

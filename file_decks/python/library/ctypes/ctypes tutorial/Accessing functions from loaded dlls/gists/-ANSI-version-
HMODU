@@ -1,0 +1,6 @@
+# name: /* ANSI version */
+H 
+/* ANSI version */
+HMODULE GetModuleHandleA(LPCSTR lpModuleName);
+/* UNICODE version */
+HMODULE GetModuleHandleW(LPCWSTR lpModuleName);

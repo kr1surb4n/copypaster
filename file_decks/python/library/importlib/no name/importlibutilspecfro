@@ -1,0 +1,2 @@
+# name: importlib.util.spec_ 
+importlib.util.spec_from_file_location(name, location, *, loader=None, submodule_search_locations=None)

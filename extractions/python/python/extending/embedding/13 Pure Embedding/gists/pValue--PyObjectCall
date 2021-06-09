@@ -1,0 +1,2 @@
+# name: pValue = PyObject_Ca 
+pValue = PyObject_CallObject(pFunc, pArgs);

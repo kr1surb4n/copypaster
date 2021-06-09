@@ -1,0 +1,14 @@
+# name: def f (x, y):
+    "" 
+def f (x, y):
+    """>>> f(2,2)
+4
+>>> f(3,2)
+6
+    """
+    return x*y
+
+finder = doctest.DocTestFinder()
+
+# Get list of DocTest instances
+tests = finder.find(f)

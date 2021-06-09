@@ -1,0 +1,9 @@
+# name: $ python3 prog.py -v 
+$ python3 prog.py -v
+verbosity turned on
+$ python3 prog.py --help
+usage: prog.py [-h] [-v]
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -v, --verbose  increase output verbosity

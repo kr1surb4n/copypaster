@@ -1,0 +1,8 @@
+# name: @type_check_only
+cla 
+@type_check_only
+class Response:  # private or not available at runtime
+    code: int
+    def get_header(self, name: str) -> str: ...
+
+def fetch_response() -> Response: ...

@@ -1,0 +1,6 @@
+# name: >>> import sysconfig 
+>>> import sysconfig
+>>> sysconfig.get_config_var('LIBS')
+'-lpthread -ldl  -lutil'
+>>> sysconfig.get_config_var('LINKFORSHARED')
+'-Xlinker -export-dynamic'

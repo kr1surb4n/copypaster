@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsCharma 
+PyObject* PyUnicode_AsCharmapString(PyObject *unicode, PyObject *mapping)

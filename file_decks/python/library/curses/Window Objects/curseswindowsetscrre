@@ -1,0 +1,2 @@
+# name: curses.window.setscr 
+window.setscrreg(top, bottom)

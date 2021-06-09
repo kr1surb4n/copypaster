@@ -1,0 +1,4 @@
+# name: match = re.search(pa 
+match = re.search(pattern, string)
+if match:
+    process(match)

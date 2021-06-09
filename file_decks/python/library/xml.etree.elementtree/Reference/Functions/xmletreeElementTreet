@@ -1,0 +1,2 @@
+# name: xml.etree.ElementTre 
+xml.etree.ElementTree.tostringlist(element, encoding="us-ascii", method="xml", *, xml_declaration=None, default_namespace=None, short_empty_elements=True)

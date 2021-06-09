@@ -1,0 +1,5 @@
+# name: $ python3 compare-st 
+$ python3 compare-strs.py
+length of first string= 1
+length of second string= 2
+True

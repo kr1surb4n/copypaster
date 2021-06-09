@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_de 
+destructor PyTypeObject.tp_dealloc

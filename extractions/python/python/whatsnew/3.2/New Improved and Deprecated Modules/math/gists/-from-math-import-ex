@@ -1,0 +1,4 @@
+# name: >>> from math import 
+>>> from math import expm1
+>>> expm1(0.013671875)   # more accurate way to compute e**x-1 for a small x
+0.013765762467652909

@@ -1,0 +1,2 @@
+# name: c.PyCapsule_SetName 
+int PyCapsule_SetName(PyObject *capsule, const char *name)

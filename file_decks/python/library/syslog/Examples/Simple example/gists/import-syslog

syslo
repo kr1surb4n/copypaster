@@ -1,0 +1,8 @@
+# name: import syslog
+
+syslo 
+import syslog
+
+syslog.syslog('Processing started')
+if error:
+    syslog.syslog(syslog.LOG_ERR, 'Processing started')

@@ -1,0 +1,6 @@
+# name: assert get_origin(Di 
+assert get_origin(Dict[str, int]) is dict
+assert get_args(Dict[int, str]) == (int, str)
+
+assert get_origin(Union[int, str]) is Union
+assert get_args(Union[int, str]) == (int, str)

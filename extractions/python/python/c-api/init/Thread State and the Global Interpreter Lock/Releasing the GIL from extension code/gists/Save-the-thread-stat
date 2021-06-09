@@ -1,0 +1,6 @@
+# name: Save the thread stat 
+Save the thread state in a local variable.
+Release the global interpreter lock.
+... Do some blocking I/O operation ...
+Reacquire the global interpreter lock.
+Restore the thread state from the local variable.

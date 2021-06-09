@@ -1,0 +1,5 @@
+# name: if (tb != NULL) {
+   
+if (tb != NULL) {
+  PyException_SetTraceback(val, tb);
+}

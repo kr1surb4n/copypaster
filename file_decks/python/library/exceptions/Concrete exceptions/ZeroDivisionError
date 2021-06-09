@@ -1,0 +1,2 @@
+# name: ZeroDivisionError 
+exception ZeroDivisionError

@@ -1,0 +1,13 @@
+# name: >>> thing1 = object( 
+>>> thing1 = object()
+>>> thing2 = object()
+>>> parent = MagicMock()
+>>> with patch('__main__.thing1', return_value=None) as child1:
+...     with patch('__main__.thing2', return_value=None) as child2:
+...         parent.attach_mock(child1, 'child1')
+...         parent.attach_mock(child2, 'child2')
+...         child1('one')
+...         child2('two')
+...
+>>> parent.mock_calls
+[call.child1('one'), call.child2('two')]

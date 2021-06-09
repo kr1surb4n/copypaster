@@ -1,0 +1,4 @@
+# name: from tkinter import  
+from tkinter import tix
+root = tix.Tk()
+print(root.tix_configure())

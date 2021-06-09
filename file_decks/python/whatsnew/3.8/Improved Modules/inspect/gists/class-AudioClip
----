@@ -1,0 +1,8 @@
+# name: class AudioClip:
+    
+class AudioClip:
+    __slots__ = {'bit_rate': 'expressed in kilohertz to one decimal place',
+                 'duration': 'in seconds, rounded up to an integer'}
+    def __init__(self, bit_rate, duration):
+        self.bit_rate = round(bit_rate / 1000.0, 1)
+        self.duration = ceil(duration)

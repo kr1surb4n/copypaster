@@ -1,0 +1,2 @@
+# name: poplib.error_proto 
+exception poplib.error_proto

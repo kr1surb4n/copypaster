@@ -1,0 +1,5 @@
+# name: >>> mock_foo = Magic 
+>>> mock_foo = MagicMock()
+>>> mock_foo.iter.return_value = iter([1, 2, 3])
+>>> list(mock_foo.iter())
+[1, 2, 3]

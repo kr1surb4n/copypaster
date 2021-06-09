@@ -1,0 +1,2 @@
+# name: c.PyCodec_XMLCharRef 
+PyObject* PyCodec_XMLCharRefReplaceErrors(PyObject *exc)

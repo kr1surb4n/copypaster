@@ -1,0 +1,2 @@
+# name: multiprocessing.conn 
+multiprocessing.connection.Connection.recv_bytes_into

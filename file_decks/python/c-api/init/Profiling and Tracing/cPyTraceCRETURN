@@ -1,0 +1,2 @@
+# name: c.PyTrace_C_RETURN 
+int PyTrace_C_RETURN

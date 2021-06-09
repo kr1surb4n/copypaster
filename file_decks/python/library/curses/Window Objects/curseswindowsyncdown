@@ -1,0 +1,2 @@
+# name: curses.window.syncdo 
+window.syncdown()

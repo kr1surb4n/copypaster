@@ -1,0 +1,9 @@
+# name: >>> def errcheck(res 
+>>> def errcheck(result, func, args):
+...     if not result:
+...         raise WinError()
+...     rc = args[1]
+...     return rc.left, rc.top, rc.bottom, rc.right
+...
+>>> GetWindowRect.errcheck = errcheck
+>>>

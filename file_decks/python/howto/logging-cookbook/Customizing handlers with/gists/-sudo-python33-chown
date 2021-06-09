@@ -1,0 +1,6 @@
+# name: $ sudo python3.3 cho 
+$ sudo python3.3 chowntest.py
+$ cat chowntest.log
+2013-11-05 09:34:51,128 DEBUG mylogger A debug message
+$ ls -l chowntest.log
+-rw-r--r-- 1 pulse pulse 55 2013-11-05 09:34 chowntest.log

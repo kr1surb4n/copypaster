@@ -1,0 +1,3 @@
+# name: >>> print(f'{theta=} 
+>>> print(f'{theta=}  {cos(radians(theta))=:.3f}')
+theta=30  cos(radians(theta))=0.866

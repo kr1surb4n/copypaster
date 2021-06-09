@@ -1,0 +1,2 @@
+# name: c.PyCapsule_CheckExa 
+int PyCapsule_CheckExact(PyObject *p)

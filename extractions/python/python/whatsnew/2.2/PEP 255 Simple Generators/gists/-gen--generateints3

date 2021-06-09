@@ -1,0 +1,15 @@
+# name: >>> gen = generate_i 
+>>> gen = generate_ints(3)
+>>> gen
+<generator object at 0x8117f90>
+>>> gen.next()
+0
+>>> gen.next()
+1
+>>> gen.next()
+2
+>>> gen.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in ?
+  File "<stdin>", line 2, in generate_ints
+StopIteration

@@ -1,0 +1,13 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(
+...     description='A foo that bars',
+...     epilog="And that's how you'd foo a bar")
+>>> parser.print_help()
+usage: argparse.py [-h]
+
+A foo that bars
+
+optional arguments:
+ -h, --help  show this help message and exit
+
+And that's how you'd foo a bar

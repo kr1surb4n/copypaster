@@ -1,0 +1,10 @@
+# name: static PyMemberDef C 
+static PyMemberDef Custom_members[] = {
+    {"first", T_OBJECT_EX, offsetof(CustomObject, first), 0,
+     "first name"},
+    {"last", T_OBJECT_EX, offsetof(CustomObject, last), 0,
+     "last name"},
+    {"number", T_INT, offsetof(CustomObject, number), 0,
+     "custom number"},
+    {NULL}  /* Sentinel */
+};

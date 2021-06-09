@@ -1,0 +1,6 @@
+# name: class NumbersTest(un 
+class NumbersTest(unittest.TestCase):
+    def test_even(self):
+        for i in range(6):
+            with self.subTest(i=i):
+                self.assertEqual(i % 2, 0)

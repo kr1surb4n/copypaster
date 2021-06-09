@@ -1,0 +1,5 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>> i = c_int(42)
+>>> pi = pointer(i)
+>>>

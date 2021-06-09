@@ -1,0 +1,2 @@
+# name: winreg.DeleteValue 
+winreg.DeleteValue(key, value)

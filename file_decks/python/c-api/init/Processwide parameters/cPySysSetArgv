@@ -1,0 +1,2 @@
+# name: c.PySys_SetArgv 
+void PySys_SetArgv(int argc, wchar_t **argv)

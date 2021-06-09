@@ -1,0 +1,11 @@
+# name: /*[python input]
+
+cl 
+/*[python input]
+
+class ssize_t_converter(CConverter):
+    type = 'Py_ssize_t'
+    converter = 'ssize_t_converter'
+
+[python start generated code]*/
+/*[python end generated code: output=da39a3ee5e6b4b0d input=35521e4e733823c7]*/

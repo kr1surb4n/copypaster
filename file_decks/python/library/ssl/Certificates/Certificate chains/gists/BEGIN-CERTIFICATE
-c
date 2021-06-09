@@ -1,0 +1,10 @@
+# name: -----BEGIN CERTIFICA 
+-----BEGIN CERTIFICATE-----
+... (certificate for your server)...
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+... (the certificate for the CA)...
+-----END CERTIFICATE-----
+-----BEGIN CERTIFICATE-----
+... (the root certificate for the CA's issuer)...
+-----END CERTIFICATE-----

@@ -1,0 +1,8 @@
+# name: >>> from shlex impor 
+>>> from shlex import split
+>>> remote_command = split(remote_command)
+>>> remote_command
+['ssh', 'home', "ls -l 'somefile; rm -rf ~'"]
+>>> command = split(remote_command[-1])
+>>> command
+['ls', '-l', 'somefile; rm -rf ~']

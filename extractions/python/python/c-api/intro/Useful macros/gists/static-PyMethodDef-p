@@ -1,0 +1,6 @@
+# name: static PyMethodDef p 
+static PyMethodDef pysqlite_row_methods[] = {
+    {"keys", (PyCFunction)pysqlite_row_keys, METH_NOARGS,
+        PyDoc_STR("Returns the keys of the row.")},
+    {NULL, NULL}
+};

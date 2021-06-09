@@ -1,0 +1,8 @@
+# name: T = TypeVar('T', int 
+T = TypeVar('T', int, float)
+
+def vec2(x: T, y: T) -> List[T]:
+    return [x, y]
+
+def keep_positives(vector: Sequence[T]) -> List[T]:
+    return [item for item in vector if item > 0]

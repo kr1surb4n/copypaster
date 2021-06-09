@@ -1,0 +1,2 @@
+# name: pr = profile.Profile 
+pr = profile.Profile(your_time_func)

@@ -1,0 +1,2 @@
+# name: c.Py_SetPath 
+void Py_SetPath(const wchar_t *)

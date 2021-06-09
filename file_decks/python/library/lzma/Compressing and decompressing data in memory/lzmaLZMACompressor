@@ -1,0 +1,2 @@
+# name: lzma.LZMACompressor 
+class lzma.LZMACompressor(format=FORMAT_XZ, check=-1, preset=None, filters=None)

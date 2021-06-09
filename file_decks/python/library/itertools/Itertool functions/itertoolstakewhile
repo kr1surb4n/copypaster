@@ -1,0 +1,2 @@
+# name: itertools.takewhile 
+itertools.takewhile(predicate, iterable)

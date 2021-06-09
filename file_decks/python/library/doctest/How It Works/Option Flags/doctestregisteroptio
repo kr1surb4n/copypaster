@@ -1,0 +1,2 @@
+# name: doctest.register_opt 
+doctest.register_optionflag(name)

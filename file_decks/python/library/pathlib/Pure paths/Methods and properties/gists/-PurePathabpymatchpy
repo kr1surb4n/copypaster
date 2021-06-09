@@ -1,0 +1,7 @@
+# name: >>> PurePath('a/b.py 
+>>> PurePath('a/b.py').match('*.py')
+True
+>>> PurePath('/a/b/c.py').match('b/*.py')
+True
+>>> PurePath('/a/b/c.py').match('a/*.py')
+False

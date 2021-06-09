@@ -1,0 +1,4 @@
+# name: >>> mick = Turtle()
+ 
+>>> mick = Turtle()
+>>> joe = mick.clone()

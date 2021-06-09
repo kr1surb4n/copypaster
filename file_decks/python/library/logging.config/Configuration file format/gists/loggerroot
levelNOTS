@@ -1,0 +1,5 @@
+# name: [logger_root]
+level= 
+[logger_root]
+level=NOTSET
+handlers=hand01

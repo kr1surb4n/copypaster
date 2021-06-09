@@ -1,0 +1,7 @@
+# name: >>> p = re.compile(r 
+>>> p = re.compile(r'(?P<word>\b\w+\b)')
+>>> m = p.search( '(((( Lots of punctuation )))' )
+>>> m.group('word')
+'Lots'
+>>> m.group(1)
+'Lots'

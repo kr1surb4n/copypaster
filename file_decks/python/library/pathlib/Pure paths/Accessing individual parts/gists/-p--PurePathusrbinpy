@@ -1,0 +1,8 @@
+# name: >>> p = PurePath('/u 
+>>> p = PurePath('/usr/bin/python3')
+>>> p.parts
+('/', 'usr', 'bin', 'python3')
+
+>>> p = PureWindowsPath('c:/Program Files/PSF')
+>>> p.parts
+('c:\\', 'Program Files', 'PSF')

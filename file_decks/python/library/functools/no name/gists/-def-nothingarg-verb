@@ -1,0 +1,5 @@
+# name: >>> def nothing(arg, 
+>>> def nothing(arg, verbose=False):
+...     print("Nothing.")
+...
+>>> fun.register(type(None), nothing)

@@ -1,0 +1,5 @@
+# name: >>> b  = bytearray(b 
+>>> b  = bytearray(b'xyz')
+>>> m = memoryview(b)
+>>> m.obj is b
+True

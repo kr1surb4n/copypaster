@@ -1,0 +1,7 @@
+# name: start -> connection_ 
+start -> connection_made
+    [-> get_buffer
+        [-> buffer_updated]?
+    ]*
+    [-> eof_received]?
+-> connection_lost -> end

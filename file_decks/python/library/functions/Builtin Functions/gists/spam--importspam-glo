@@ -1,0 +1,2 @@
+# name: spam = __import__('s 
+spam = __import__('spam', globals(), locals(), [], 0)

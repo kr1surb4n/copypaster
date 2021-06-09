@@ -1,0 +1,2 @@
+# name: zlib.decompress 
+zlib.decompress(data, /, wbits=MAX_WBITS, bufsize=DEF_BUF_SIZE)

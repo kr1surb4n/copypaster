@@ -1,0 +1,2 @@
+# name: compileall.compile_p 
+compileall.compile_path(skip_curdir=True, maxlevels=0, force=False, quiet=0, legacy=False, optimize=-1, invalidation_mode=None)

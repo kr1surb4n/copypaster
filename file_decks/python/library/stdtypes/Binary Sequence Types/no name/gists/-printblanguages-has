@@ -1,0 +1,4 @@
+# name: >>> print(b'%(langua 
+>>> print(b'%(language)s has %(number)03d quote types.' %
+...       {b'language': b"Python", b"number": 2})
+b'Python has 002 quote types.'

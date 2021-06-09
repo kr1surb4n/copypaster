@@ -1,0 +1,2 @@
+# name: queue = multiprocess 
+queue = multiprocessing.Manager().Queue(-1)  # also works with the examples above

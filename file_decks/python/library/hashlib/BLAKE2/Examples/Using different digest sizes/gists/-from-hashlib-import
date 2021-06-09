@@ -1,0 +1,10 @@
+# name: >>> from hashlib imp 
+>>> from hashlib import blake2b, blake2s
+>>> blake2b(digest_size=10).hexdigest()
+'6fa1d8fcfd719046d762'
+>>> blake2b(digest_size=11).hexdigest()
+'eb6ec15daf9546254f0809'
+>>> blake2s(digest_size=10).hexdigest()
+'1bf21a98c78a1c376ae9'
+>>> blake2s(digest_size=11).hexdigest()
+'567004bf96e4a25773ebf4'

@@ -1,0 +1,3 @@
+# name: >>> print(repr(Color 
+>>> print(repr(Color.RED))
+<Color.RED: 1>

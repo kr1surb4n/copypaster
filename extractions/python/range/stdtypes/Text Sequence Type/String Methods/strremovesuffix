@@ -1,0 +1,2 @@
+# name: str.removesuffix 
+str.removesuffix(suffix, /)

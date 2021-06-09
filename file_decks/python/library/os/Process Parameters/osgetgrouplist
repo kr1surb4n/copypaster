@@ -1,0 +1,2 @@
+# name: os.getgrouplist 
+os.getgrouplist(user, group)

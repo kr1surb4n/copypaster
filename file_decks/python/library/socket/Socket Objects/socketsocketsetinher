@@ -1,0 +1,2 @@
+# name: socket.socket.set_in 
+socket.set_inheritable(inheritable)

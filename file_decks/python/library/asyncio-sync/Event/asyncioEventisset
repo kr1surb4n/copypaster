@@ -1,0 +1,2 @@
+# name: asyncio.Event.is_set 
+asyncio.Event.is_set

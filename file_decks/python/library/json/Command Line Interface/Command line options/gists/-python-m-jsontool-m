@@ -1,0 +1,12 @@
+# name: $ python -m json.too 
+$ python -m json.tool mp_films.json
+[
+    {
+        "title": "And Now for Something Completely Different",
+        "year": 1971
+    },
+    {
+        "title": "Monty Python and the Holy Grail",
+        "year": 1975
+    }
+]

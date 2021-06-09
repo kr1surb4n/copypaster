@@ -1,0 +1,7 @@
+# name: >>> import decimal
+> 
+>>> import decimal
+>>> decimal.Decimal(1972)
+Decimal("1972")
+>>> decimal.Decimal("1.1")
+Decimal("1.1")

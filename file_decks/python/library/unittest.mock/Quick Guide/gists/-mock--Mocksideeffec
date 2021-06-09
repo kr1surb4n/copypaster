@@ -1,0 +1,6 @@
+# name: >>> mock = Mock(side 
+>>> mock = Mock(side_effect=KeyError('foo'))
+>>> mock()
+Traceback (most recent call last):
+ ...
+KeyError: 'foo'

@@ -1,0 +1,2 @@
+# name: object.__iter__ 
+object.__iter__(self)

@@ -1,0 +1,6 @@
+# name: >>> turtle.shape("ci 
+>>> turtle.shape("circle")
+ >>> turtle.shapesize(5,2)
+ >>> turtle.shearfactor(0.5)
+ >>> turtle.shearfactor()
+ 0.5

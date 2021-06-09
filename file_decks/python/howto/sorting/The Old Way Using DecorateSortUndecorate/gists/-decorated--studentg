@@ -1,0 +1,5 @@
+# name: >>> decorated = [(st 
+>>> decorated = [(student.grade, i, student) for i, student in enumerate(student_objects)]
+>>> decorated.sort()
+>>> [student for grade, i, student in decorated]               # undecorate
+[('john', 'A', 15), ('jane', 'B', 12), ('dave', 'B', 10)]

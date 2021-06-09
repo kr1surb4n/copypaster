@@ -1,0 +1,5 @@
+# name: import cProfile
+impo 
+import cProfile
+import re
+cProfile.run('re.compile("foo|bar")', 'restats')

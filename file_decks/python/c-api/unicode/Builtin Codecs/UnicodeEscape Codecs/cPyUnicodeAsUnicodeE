@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsUnicod 
+PyObject* PyUnicode_AsUnicodeEscapeString(PyObject *unicode)

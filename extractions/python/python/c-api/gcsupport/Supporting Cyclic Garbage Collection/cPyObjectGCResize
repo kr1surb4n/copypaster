@@ -1,0 +1,2 @@
+# name: c.PyObject_GC_Resize 
+TYPE* PyObject_GC_Resize(TYPE, PyVarObject *op, Py_ssize_t newsize)

@@ -1,0 +1,2 @@
+# name: gettext.bind_textdom 
+gettext.bind_textdomain_codeset(domain, codeset=None)

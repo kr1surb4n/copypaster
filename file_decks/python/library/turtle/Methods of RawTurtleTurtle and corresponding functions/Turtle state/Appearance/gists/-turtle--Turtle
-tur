@@ -1,0 +1,7 @@
+# name: >>> turtle = Turtle( 
+>>> turtle = Turtle()
+>>> turtle.shape("square")
+>>> turtle.shapesize(4,2)
+>>> turtle.shearfactor(-0.5)
+>>> turtle.shapetransform()
+(4.0, -1.0, -0.0, 2.0)

@@ -1,0 +1,4 @@
+# name: >>> data = [('red',  
+>>> data = [('red', 1), ('blue', 1), ('red', 2), ('blue', 2)]
+>>> sorted(data, key=itemgetter(0))
+[('blue', 1), ('blue', 2), ('red', 1), ('red', 2)]

@@ -1,0 +1,5 @@
+# name: >>> pattern = re.com 
+>>> pattern = re.compile("d")
+>>> pattern.search("dog")     # Match at index 0
+<re.Match object; span=(0, 1), match='d'>
+>>> pattern.search("dog", 1)  # No match; search doesn't include the "d"

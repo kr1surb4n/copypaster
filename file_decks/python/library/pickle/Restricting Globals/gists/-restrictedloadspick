@@ -1,0 +1,13 @@
+# name: >>> restricted_loads 
+>>> restricted_loads(pickle.dumps([1, 2, range(15)]))
+[1, 2, range(0, 15)]
+>>> restricted_loads(b"cos\nsystem\n(S'echo hello world'\ntR.")
+Traceback (most recent call last):
+  ...
+pickle.UnpicklingError: global 'os.system' is forbidden
+>>> restricted_loads(b'cbuiltins\neval\n'
+...                  b'(S\'getattr(__import__("os"), "system")'
+...                  b'("echo hello world")\'\ntR.')
+Traceback (most recent call last):
+  ...
+pickle.UnpicklingError: global 'builtins.eval' is forbidden

@@ -1,0 +1,2 @@
+# name: c.PyComplex_AsCCompl 
+Py_complex PyComplex_AsCComplex(PyObject *op)

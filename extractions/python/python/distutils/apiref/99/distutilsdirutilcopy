@@ -1,0 +1,2 @@
+# name: distutils.dir_util.c 
+distutils.dir_util.copy_tree(src, dst[, preserve_mode=1, preserve_times=1, preserve_symlinks=0, update=0, verbose=0, dry_run=0])

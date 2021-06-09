@@ -1,0 +1,8 @@
+# name: >>> for k in vk:
+... 
+>>> for k in vk:
+...     d[k*2] = k
+...
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+RuntimeError: dictionary changed size during iteration

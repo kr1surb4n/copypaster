@@ -1,0 +1,6 @@
+# name: # Given the list L,  
+# Given the list L, make a list of all strings
+# containing the substring S.
+sublist = filter( lambda s, substring=S:
+                     string.find(s, substring) != -1,
+                  L)

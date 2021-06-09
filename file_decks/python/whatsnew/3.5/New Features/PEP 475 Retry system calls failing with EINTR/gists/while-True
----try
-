@@ -1,0 +1,8 @@
+# name: while True:
+    try: 
+while True:
+    try:
+        print("Hello World")
+        break
+    except InterruptedError:
+        continue

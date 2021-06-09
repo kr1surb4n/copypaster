@@ -1,0 +1,2 @@
+# name: curses.window.keypad 
+window.keypad(flag)

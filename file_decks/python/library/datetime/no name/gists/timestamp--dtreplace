@@ -1,0 +1,2 @@
+# name: timestamp = dt.repla 
+timestamp = dt.replace(tzinfo=timezone.utc).timestamp()

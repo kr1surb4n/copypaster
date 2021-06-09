@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Substrin 
+PyObject* PyUnicode_Substring(PyObject *str, Py_ssize_t start, Py_ssize_t end)

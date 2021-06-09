@@ -1,0 +1,5 @@
+# name: @track_entry_and_exi 
+@track_entry_and_exit('widget loader')
+def activity():
+    print('Some time consuming activity goes here')
+    load_widget()

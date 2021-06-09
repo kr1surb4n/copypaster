@@ -1,0 +1,2 @@
+# name: c.PyList_SET_ITEM 
+void PyList_SET_ITEM(PyObject *list, Py_ssize_t i, PyObject *o)

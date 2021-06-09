@@ -1,0 +1,2 @@
+# name: os.utime 
+os.utime(path, times=None, *, [ns, ]dir_fd=None, follow_symlinks=True)

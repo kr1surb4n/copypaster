@@ -1,0 +1,2 @@
+# name: email.generator.Deco 
+class email.generator.DecodedGenerator(outfp, mangle_from_=None, maxheaderlen=None, fmt=None, *, policy=None)

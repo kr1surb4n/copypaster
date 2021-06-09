@@ -1,0 +1,2 @@
+# name: os.sched_setparam 
+os.sched_setparam(pid, param)

@@ -1,0 +1,4 @@
+# name: >>> s = sorted(stude 
+>>> s = sorted(student_objects, key=attrgetter('age'))     # sort on secondary key
+>>> sorted(s, key=attrgetter('grade'), reverse=True)       # now sort on primary key, descending
+[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]

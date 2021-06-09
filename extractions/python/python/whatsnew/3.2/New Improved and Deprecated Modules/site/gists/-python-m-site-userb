@@ -1,0 +1,5 @@
+# name: $ python -m site --u 
+$ python -m site --user-base
+/Users/raymondhettinger/.local
+$ python -m site --user-site
+/Users/raymondhettinger/.local/lib/python3.2/site-packages

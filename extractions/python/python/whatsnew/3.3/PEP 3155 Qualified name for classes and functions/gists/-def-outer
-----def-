@@ -1,0 +1,11 @@
+# name: >>> def outer():
+... 
+>>> def outer():
+...     def inner():
+...         pass
+...     return inner
+...
+>>> outer().__name__
+'inner'
+>>> outer().__qualname__
+'outer.<locals>.inner'

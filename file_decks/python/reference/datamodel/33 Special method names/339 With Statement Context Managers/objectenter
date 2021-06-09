@@ -1,0 +1,2 @@
+# name: object.__enter__ 
+object.__enter__(self)

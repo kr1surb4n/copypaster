@@ -1,0 +1,3 @@
+# name: >>> b'Hello World'.s 
+>>> b'Hello World'.swapcase()
+b'hELLO wORLD'

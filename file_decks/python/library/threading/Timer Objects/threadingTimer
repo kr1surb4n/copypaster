@@ -1,0 +1,2 @@
+# name: threading.Timer 
+class threading.Timer(interval, function, args=None, kwargs=None)

@@ -1,0 +1,4 @@
+# name: >>> p = Point(x=11,  
+>>> p = Point(x=11, y=22)
+>>> p._asdict()
+{'x': 11, 'y': 22}

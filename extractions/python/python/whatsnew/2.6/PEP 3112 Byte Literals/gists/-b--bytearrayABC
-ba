@@ -1,0 +1,6 @@
+# name: >>> b = bytearray('A 
+>>> b = bytearray('ABC')
+>>> b.append('d')
+>>> b.append(ord('e'))
+>>> b
+bytearray(b'ABCde')

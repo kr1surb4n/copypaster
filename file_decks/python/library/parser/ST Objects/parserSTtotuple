@@ -1,0 +1,2 @@
+# name: parser.ST.totuple 
+ST.totuple(line_info=False, col_info=False)

@@ -1,0 +1,2 @@
+# name: email.charset.add_al 
+email.charset.add_alias(alias, canonical)

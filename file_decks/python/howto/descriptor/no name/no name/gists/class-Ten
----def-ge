@@ -1,0 +1,5 @@
+# name: class Ten:
+    def _ 
+class Ten:
+    def __get__(self, obj, objtype=None):
+        return 10

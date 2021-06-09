@@ -1,0 +1,5 @@
+# name: >>> p.match("")
+>>>  
+>>> p.match("")
+>>> print(p.match(""))
+None

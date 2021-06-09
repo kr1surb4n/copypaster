@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.partia 
+IMAP4.partial(message_num, message_part, start, length)

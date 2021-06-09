@@ -1,0 +1,2 @@
+# name: exec(command, global 
+exec(command, globals, locals)

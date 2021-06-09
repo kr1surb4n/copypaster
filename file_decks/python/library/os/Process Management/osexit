@@ -1,0 +1,2 @@
+# name: os._exit 
+os._exit(n)

@@ -1,0 +1,19 @@
+# name: >>> class C:
+...     
+>>> class C:
+...     def method(self):
+...         print("method called!")
+...
+>>> c = C()
+>>> r = weakref.ref(c.method)
+>>> r()
+>>> r = weakref.WeakMethod(c.method)
+>>> r()
+<bound method C.method of <__main__.C object at 0x7fc859830220>>
+>>> r()()
+method called!
+>>> del c
+>>> gc.collect()
+0
+>>> r()
+>>>

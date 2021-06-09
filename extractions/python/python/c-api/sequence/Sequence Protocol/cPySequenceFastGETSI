@@ -1,0 +1,2 @@
+# name: c.PySequence_Fast_GE 
+Py_ssize_t PySequence_Fast_GET_SIZE(PyObject *o)

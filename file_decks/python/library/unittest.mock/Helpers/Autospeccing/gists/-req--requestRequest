@@ -1,0 +1,4 @@
+# name: >>> req = request.Re 
+>>> req = request.Request('foo')
+>>> req
+<NonCallableMagicMock name='request.Request()' spec='Request' id='...'>

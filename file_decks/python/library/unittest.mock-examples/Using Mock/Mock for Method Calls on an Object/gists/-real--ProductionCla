@@ -1,0 +1,5 @@
+# name: >>> real = Productio 
+>>> real = ProductionClass()
+>>> mock = Mock()
+>>> real.closer(mock)
+>>> mock.close.assert_called_with()

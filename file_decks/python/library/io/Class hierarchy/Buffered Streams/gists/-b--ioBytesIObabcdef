@@ -1,0 +1,6 @@
+# name: >>> b = io.BytesIO(b 
+>>> b = io.BytesIO(b"abcdef")
+>>> view = b.getbuffer()
+>>> view[2:4] = b"56"
+>>> b.getvalue()
+b'ab56ef'

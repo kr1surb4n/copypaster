@@ -1,0 +1,2 @@
+# name: c.PyMemoryView_GET_B 
+Py_buffer *PyMemoryView_GET_BUFFER(PyObject *mview)

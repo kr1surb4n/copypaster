@@ -1,0 +1,2 @@
+# name: hashlib.new 
+hashlib.new(name, [data, ]*, usedforsecurity=True)

@@ -1,0 +1,10 @@
+# name: class DataSet:
+    d 
+class DataSet:
+    def __init__(self, sequence_of_numbers):
+        self._data = sequence_of_numbers
+
+    @property
+    @cache
+    def stdev(self):
+        return statistics.stdev(self._data)

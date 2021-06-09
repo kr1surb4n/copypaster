@@ -1,0 +1,2 @@
+# name: c.PyNumber_Check 
+int PyNumber_Check(PyObject *o)

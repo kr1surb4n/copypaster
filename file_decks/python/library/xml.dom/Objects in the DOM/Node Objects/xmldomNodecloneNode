@@ -1,0 +1,2 @@
+# name: xml.dom.Node.cloneNo 
+Node.cloneNode(deep)

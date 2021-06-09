@@ -1,0 +1,2 @@
+# name: zlib.crc32 
+zlib.crc32(data[, value])

@@ -1,0 +1,7 @@
+# name: >>> x = {"key1": "va 
+>>> x = {"key1": "value1 from x", "key2": "value2 from x"}
+>>> y = {"key2": "value2 from y", "key3": "value3 from y"}
+>>> x | y
+{'key1': 'value1 from x', 'key2': 'value2 from y', 'key3': 'value3 from y'}
+>>> y | x
+{'key2': 'value2 from x', 'key3': 'value3 from y', 'key1': 'value1 from x'}

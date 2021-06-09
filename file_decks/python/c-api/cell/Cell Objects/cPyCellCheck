@@ -1,0 +1,2 @@
+# name: c.PyCell_Check 
+int PyCell_Check(ob)

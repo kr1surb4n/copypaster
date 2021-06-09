@@ -1,0 +1,4 @@
+# name: with open('unicode.t 
+with open('unicode.txt', encoding='utf-8') as f:
+    for line in f:
+        print(repr(line))

@@ -1,0 +1,4 @@
+# name: >>> print(list(range 
+>>> print(list(range(5)) + list(range(10, 20)) + list(range(30, 40)))
+... 
+[0, ..., 4, 10, ..., 19, 30, ..., 39]

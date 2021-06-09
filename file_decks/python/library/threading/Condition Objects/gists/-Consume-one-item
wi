@@ -1,0 +1,12 @@
+# name: # Consume one item
+w 
+# Consume one item
+with cv:
+    while not an_item_is_available():
+        cv.wait()
+    get_an_available_item()
+
+# Produce one item
+with cv:
+    make_an_item_available()
+    cv.notify()

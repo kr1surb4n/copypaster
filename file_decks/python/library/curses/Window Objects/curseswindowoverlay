@@ -1,0 +1,2 @@
+# name: curses.window.overla 
+window.overlay(destwin[, sminrow, smincol, dminrow, dmincol, dmaxrow, dmaxcol])

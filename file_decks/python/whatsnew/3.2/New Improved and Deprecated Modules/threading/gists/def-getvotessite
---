@@ -1,0 +1,11 @@
+# name: def get_votes(site): 
+def get_votes(site):
+    ballots = conduct_election(site)
+    try:
+        all_polls_closed.wait(timeout=midnight - time.now())
+    except BrokenBarrierError:
+        lockbox = seal_ballots(ballots)
+        queue.put(lockbox)
+    else:
+        totals = summarize(ballots)
+        publish(site, totals)

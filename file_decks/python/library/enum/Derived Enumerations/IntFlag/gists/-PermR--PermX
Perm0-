@@ -1,0 +1,6 @@
+# name: >>> Perm.R & Perm.X
+ 
+>>> Perm.R & Perm.X
+<Perm.0: 0>
+>>> bool(Perm.R & Perm.X)
+False

@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_it 
+iternextfunc PyTypeObject.tp_iternext

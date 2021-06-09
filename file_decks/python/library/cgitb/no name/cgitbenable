@@ -1,0 +1,2 @@
+# name: cgitb.enable 
+cgitb.enable(display=1, logdir=None, context=5, format="html")

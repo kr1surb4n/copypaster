@@ -1,0 +1,2 @@
+# name: c.PyCodec_Decode 
+PyObject* PyCodec_Decode(PyObject *object, const char *encoding, const char *errors)

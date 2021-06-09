@@ -1,0 +1,9 @@
+# name: def less_than_10(x): 
+def less_than_10(x):
+    return x < 10
+
+itertools.takewhile(less_than_10, itertools.count()) =>
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9
+
+itertools.takewhile(is_even, itertools.count()) =>
+  0

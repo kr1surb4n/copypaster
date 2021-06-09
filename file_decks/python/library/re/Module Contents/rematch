@@ -1,0 +1,2 @@
+# name: re.match 
+re.match(pattern, string, flags=0)

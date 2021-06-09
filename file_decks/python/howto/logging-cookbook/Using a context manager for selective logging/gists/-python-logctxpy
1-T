@@ -1,0 +1,8 @@
+# name: $ python logctx.py
+1 
+$ python logctx.py
+1. This should appear just once on stderr.
+3. This should appear once on stderr.
+5. This should appear twice - once on stderr and once on stdout.
+5. This should appear twice - once on stderr and once on stdout.
+6. This should appear just once on stderr.

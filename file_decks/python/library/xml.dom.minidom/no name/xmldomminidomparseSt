@@ -1,0 +1,2 @@
+# name: xml.dom.minidom.pars 
+xml.dom.minidom.parseString(string, parser=None)

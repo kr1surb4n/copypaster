@@ -1,0 +1,6 @@
+# name: (child_stdout, child 
+(child_stdout, child_stdin) = popen2.popen2(["mycmd", "myarg"], bufsize, mode)
+==>
+p = Popen(["mycmd", "myarg"], bufsize=bufsize,
+          stdin=PIPE, stdout=PIPE, close_fds=True)
+(child_stdout, child_stdin) = (p.stdout, p.stdin)

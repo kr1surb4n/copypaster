@@ -1,0 +1,2 @@
+# name: c.PyMemoryView_Check 
+int PyMemoryView_Check(PyObject *obj)

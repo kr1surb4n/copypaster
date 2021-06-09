@@ -1,0 +1,14 @@
+# name: group = OptionGroup( 
+group = OptionGroup(parser, "Dangerous Options",
+                    "Caution: use these options at your own risk.  "
+                    "It is believed that some of them bite.")
+group.add_option("-g", action="store_true", help="Group option.")
+parser.add_option_group(group)
+
+group = OptionGroup(parser, "Debug Options")
+group.add_option("-d", "--debug", action="store_true",
+                 help="Print debug information")
+group.add_option("-s", "--sql", action="store_true",
+                 help="Print all SQL statements executed")
+group.add_option("-e", action="store_true", help="Print every action done")
+parser.add_option_group(group)

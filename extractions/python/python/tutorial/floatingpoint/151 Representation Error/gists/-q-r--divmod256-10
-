@@ -1,0 +1,4 @@
+# name: >>> q, r = divmod(2* 
+>>> q, r = divmod(2**56, 10)
+>>> r
+6

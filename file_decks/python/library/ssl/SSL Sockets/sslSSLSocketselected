@@ -1,0 +1,2 @@
+# name: ssl.SSLSocket.select 
+SSLSocket.selected_npn_protocol()

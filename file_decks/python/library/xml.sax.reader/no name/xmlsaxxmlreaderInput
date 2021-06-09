@@ -1,0 +1,2 @@
+# name: xml.sax.xmlreader.In 
+class xml.sax.xmlreader.InputSource(system_id=None)

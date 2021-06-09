@@ -1,0 +1,2 @@
+# name: c.PyObject_GC_NewVar 
+TYPE* PyObject_GC_NewVar(TYPE, PyTypeObject *type, Py_ssize_t size)

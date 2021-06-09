@@ -1,0 +1,6 @@
+# name: >>> os.path.commonpr 
+>>> os.path.commonprefix(['/usr/lib', '/usr/local/lib'])
+'/usr/l'
+
+>>> os.path.commonpath(['/usr/lib', '/usr/local/lib'])
+'/usr'

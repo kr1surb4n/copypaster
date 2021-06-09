@@ -1,0 +1,12 @@
+# name: PyObject *dict;
+...
+ 
+PyObject *dict;
+...
+dict = Py_BuildValue("{s:i}", "name", val);
+result = PyObject_Call(my_callback, NULL, dict);
+Py_DECREF(dict);
+if (result == NULL)
+    return NULL; /* Pass error back */
+/* Here maybe use the result */
+Py_DECREF(result);

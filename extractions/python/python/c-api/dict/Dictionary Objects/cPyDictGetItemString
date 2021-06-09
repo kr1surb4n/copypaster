@@ -1,0 +1,2 @@
+# name: c.PyDict_GetItemStri 
+PyObject* PyDict_GetItemString(PyObject *p, const char *key)

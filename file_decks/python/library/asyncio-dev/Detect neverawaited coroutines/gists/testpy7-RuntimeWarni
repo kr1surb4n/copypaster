@@ -1,0 +1,11 @@
+# name: test.py:7: RuntimeWa 
+test.py:7: RuntimeWarning: coroutine 'test' was never awaited
+Coroutine created at (most recent call last)
+  File "../t.py", line 9, in <module>
+    asyncio.run(main(), debug=True)
+
+  < .. >
+
+  File "../t.py", line 7, in main
+    test()
+  test()

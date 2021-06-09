@@ -1,0 +1,2 @@
+# name: bz2.open 
+bz2.open(filename, mode='rb', compresslevel=9, encoding=None, errors=None, newline=None)

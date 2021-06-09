@@ -1,0 +1,13 @@
+# name: /*[clinic input]
+
+_p 
+/*[clinic input]
+
+_pickle.Pickler.dump
+
+  self: self(type="PicklerObject *")
+  obj: object
+  /
+
+Write a pickled representation of the given object to the open file.
+[clinic start generated code]*/

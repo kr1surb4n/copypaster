@@ -1,0 +1,7 @@
+# name: T = TypeVar('T')
+Vec 
+T = TypeVar('T')
+Vec = Annotated[list[tuple[T, T]], MaxLen(10)]
+V = Vec[int]
+
+V == Annotated[list[tuple[int, int]], MaxLen(10)]

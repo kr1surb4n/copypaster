@@ -1,0 +1,2 @@
+# name: c.PyEval_InitThreads 
+void PyEval_InitThreads()

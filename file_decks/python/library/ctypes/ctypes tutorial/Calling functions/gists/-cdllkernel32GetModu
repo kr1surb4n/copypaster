@@ -1,0 +1,12 @@
+# name: >>> cdll.kernel32.Ge 
+>>> cdll.kernel32.GetModuleHandleA(None)  
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: Procedure probably called with not enough arguments (4 bytes missing)
+>>>
+
+>>> windll.msvcrt.printf(b"spam")  
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: Procedure probably called with too many arguments (4 bytes in excess)
+>>>

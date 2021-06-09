@@ -1,2 +1,0 @@
-# name: inline FUN 
-fun sum(a: Int, b: Int) = a + b

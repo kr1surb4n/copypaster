@@ -1,0 +1,5 @@
+# name: yep:  bool = True
+no 
+yep:  bool = True
+nope: bool = False
+nada: object = None

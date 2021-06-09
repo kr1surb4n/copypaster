@@ -1,0 +1,12 @@
+# name: class FakeSeq:
+    . 
+class FakeSeq:
+    ...
+    def calc_item(self, i):
+        ...
+    def __getitem__(self, item):
+        if isinstance(item, slice):
+            indices = item.indices(len(self))
+            return FakeSeq([self.calc_item(i) for i in range(*indices)])
+        else:
+            return self.calc_item(i)

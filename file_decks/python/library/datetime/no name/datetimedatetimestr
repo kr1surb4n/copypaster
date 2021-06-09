@@ -1,0 +1,2 @@
+# name: datetime.datetime.__ 
+datetime.__str__()

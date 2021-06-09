@@ -1,0 +1,7 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock()
+>>> mock.__iter__.return_value = ['a', 'b', 'c']
+>>> list(mock)
+['a', 'b', 'c']
+>>> list(mock)
+['a', 'b', 'c']

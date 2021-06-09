@@ -1,0 +1,6 @@
+# name: typedef struct {
+    
+typedef struct {
+   double real;
+   double imag;
+} Py_complex;

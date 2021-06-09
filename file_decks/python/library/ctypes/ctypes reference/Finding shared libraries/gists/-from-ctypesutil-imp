@@ -1,0 +1,11 @@
+# name: >>> from ctypes.util 
+>>> from ctypes.util import find_library
+>>> find_library("c")
+'/usr/lib/libc.dylib'
+>>> find_library("m")
+'/usr/lib/libm.dylib'
+>>> find_library("bz2")
+'/usr/lib/libbz2.dylib'
+>>> find_library("AGL")
+'/System/Library/Frameworks/AGL.framework/AGL'
+>>>

@@ -1,0 +1,7 @@
+# name: from decimal import  
+from decimal import localcontext
+
+with localcontext() as ctx:
+    ctx.prec = 42   # Perform a high precision calculation
+    s = calculate_something()
+s = +s  # Round the final result back to the default precision

@@ -1,0 +1,2 @@
+# name: curses.resizeterm 
+curses.resizeterm(nlines, ncols)

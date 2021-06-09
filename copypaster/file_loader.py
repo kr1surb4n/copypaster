@@ -115,6 +115,7 @@ class Snippet:
     def load(self, path: str):
         self.path = path
 
+        print(f"floading path {path}")
         with open(path, 'r') as f:
             content = f.readlines()
 
@@ -151,6 +152,8 @@ def walk(folder: str):
     global Decks
     global Decks_Data
     global tasks
+
+    print(f"Working on folder: {folder}")
 
     deck = ButtonGrid()
 

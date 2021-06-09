@@ -1,0 +1,2 @@
+# name: Py_buffer(accept={bu 
+Py_buffer(accept={buffer, str, NoneType})

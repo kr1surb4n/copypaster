@@ -1,0 +1,2 @@
+# name: python -m unittest t 
+python -m unittest tests/test_something.py

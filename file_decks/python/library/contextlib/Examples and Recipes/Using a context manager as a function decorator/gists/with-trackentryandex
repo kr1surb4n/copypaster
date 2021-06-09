@@ -1,0 +1,4 @@
+# name: with track_entry_and 
+with track_entry_and_exit('widget loader'):
+    print('Some time consuming activity goes here')
+    load_widget()

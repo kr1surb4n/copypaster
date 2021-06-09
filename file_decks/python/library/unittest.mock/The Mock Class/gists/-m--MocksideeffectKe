@@ -1,0 +1,9 @@
+# name: >>> m = Mock(side_ef 
+>>> m = Mock(side_effect=KeyError, return_value=3)
+>>> m()
+Traceback (most recent call last):
+ ...
+KeyError
+>>> m.side_effect = None
+>>> m()
+3

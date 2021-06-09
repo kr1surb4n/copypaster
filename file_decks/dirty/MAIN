@@ -1,4 +1,0 @@
-# name: MAIN 
-fun main() {
-    println("Hello, Kotlin!")
-}

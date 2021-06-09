@@ -1,0 +1,2 @@
+# name: c.PyUnicode_READY 
+int PyUnicode_READY(PyObject *o)

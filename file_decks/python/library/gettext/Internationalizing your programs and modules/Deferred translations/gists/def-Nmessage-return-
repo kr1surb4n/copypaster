@@ -1,0 +1,12 @@
+# name: def N_(message): ret 
+def N_(message): return message
+
+animals = [N_('mollusk'),
+           N_('albatross'),
+           N_('rat'),
+           N_('penguin'),
+           N_('python'), ]
+
+# ...
+for a in animals:
+    print(_(a))

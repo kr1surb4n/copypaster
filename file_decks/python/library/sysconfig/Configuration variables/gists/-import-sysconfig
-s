@@ -1,0 +1,8 @@
+# name: >>> import sysconfig 
+>>> import sysconfig
+>>> sysconfig.get_config_var('Py_ENABLE_SHARED')
+0
+>>> sysconfig.get_config_var('LIBDIR')
+'/usr/local/lib'
+>>> sysconfig.get_config_vars('AR', 'CXX')
+['ar', 'g++']

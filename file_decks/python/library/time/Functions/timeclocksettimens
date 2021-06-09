@@ -1,0 +1,2 @@
+# name: time.clock_settime_n 
+time.clock_settime_ns(clk_id, time: int)

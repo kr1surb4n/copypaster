@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4_SSL 
+class imaplib.IMAP4_SSL(host='', port=IMAP4_SSL_PORT, keyfile=None, certfile=None, ssl_context=None, timeout=None)

@@ -1,0 +1,2 @@
+# name: urllib.request.HTTPD 
+class urllib.request.HTTPDigestAuthHandler(password_mgr=None)

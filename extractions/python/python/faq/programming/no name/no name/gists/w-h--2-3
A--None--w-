@@ -1,0 +1,4 @@
+# name: w, h = 2, 3
+A = [[No 
+w, h = 2, 3
+A = [[None] * w for i in range(h)]

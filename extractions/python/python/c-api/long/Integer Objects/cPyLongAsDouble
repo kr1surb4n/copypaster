@@ -1,0 +1,2 @@
+# name: c.PyLong_AsDouble 
+double PyLong_AsDouble(PyObject *pylong)

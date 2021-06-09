@@ -1,0 +1,2 @@
+# name: c.PyUnicode_CopyChar 
+Py_ssize_t PyUnicode_CopyCharacters(PyObject *to, Py_ssize_t to_start, PyObject *from, Py_ssize_t from_start, Py_ssize_t how_many)

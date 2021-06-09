@@ -1,0 +1,4 @@
+# name: Annotated[Annotated[ 
+Annotated[Annotated[int, ValueRange(3, 10)], ctype("char")] == Annotated[
+    int, ValueRange(3, 10), ctype("char")
+]

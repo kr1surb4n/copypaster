@@ -1,0 +1,10 @@
+# name: class linear:
+
+    d 
+class linear:
+
+    def __init__(self, a, b):
+        self.a, self.b = a, b
+
+    def __call__(self, x):
+        return self.a * x + self.b

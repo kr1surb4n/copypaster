@@ -1,0 +1,2 @@
+# name: codecs.StreamReaderW 
+class codecs.StreamReaderWriter(stream, Reader, Writer, errors='strict')

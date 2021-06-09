@@ -1,0 +1,2 @@
+# name: http.client.HTTPSCon 
+class http.client.HTTPSConnection(host, port=None, key_file=None, cert_file=None, [timeout, ]source_address=None, *, context=None, check_hostname=None, blocksize=8192)

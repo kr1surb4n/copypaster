@@ -1,0 +1,8 @@
+# name: >>> turtle.reset()
+> 
+>>> turtle.reset()
+>>> turtle.shape("circle")
+>>> turtle.shapesize(5,2)
+>>> turtle.tilt(45)
+>>> turtle.tiltangle()
+45.0

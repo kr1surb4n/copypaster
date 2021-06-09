@@ -1,0 +1,2 @@
+# name: os.access 
+os.access(path, mode, *, dir_fd=None, effective_ids=False, follow_symlinks=True)

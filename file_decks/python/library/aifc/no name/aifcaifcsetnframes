@@ -1,0 +1,2 @@
+# name: aifc.aifc.setnframes 
+aifc.setnframes(nframes)

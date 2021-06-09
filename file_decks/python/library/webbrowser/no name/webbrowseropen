@@ -1,0 +1,2 @@
+# name: webbrowser.open 
+webbrowser.open(url, new=0, autoraise=True)

@@ -1,0 +1,2 @@
+# name: c.ssizeobjargproc 
+int (*ssizeobjargproc)(PyObject *, Py_ssize_t)

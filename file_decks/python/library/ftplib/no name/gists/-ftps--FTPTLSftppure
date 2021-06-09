@@ -1,0 +1,8 @@
+# name: >>> ftps = FTP_TLS(' 
+>>> ftps = FTP_TLS('ftp.pureftpd.org')
+>>> ftps.login()
+'230 Anonymous user logged in'
+>>> ftps.prot_p()
+'200 Data protection level set to "private"'
+>>> ftps.nlst()
+['6jack', 'OpenBSD', 'antilink', 'blogbench', 'bsdcam', 'clockspeed', 'djbdns-jedi', 'docs', 'eaccelerator-jedi', 'favicon.ico', 'francotone', 'fugu', 'ignore', 'libpuzzle', 'metalog', 'minidentd', 'misc', 'mysql-udf-global-user-variables', 'php-jenkins-hash', 'php-skein-hash', 'php-webdav', 'phpaudit', 'phpbench', 'pincaster', 'ping', 'posto', 'pub', 'public', 'public_keys', 'pure-ftpd', 'qscan', 'qtc', 'sharedance', 'skycache', 'sound', 'tmp', 'ucarp']

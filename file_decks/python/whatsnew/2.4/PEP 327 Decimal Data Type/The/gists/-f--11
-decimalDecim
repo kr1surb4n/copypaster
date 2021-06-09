@@ -1,0 +1,7 @@
+# name: >>> f = 1.1
+>>> deci 
+>>> f = 1.1
+>>> decimal.Decimal(str(f))
+Decimal("1.1")
+>>> decimal.Decimal('%.12f' % f)
+Decimal("1.100000000000")

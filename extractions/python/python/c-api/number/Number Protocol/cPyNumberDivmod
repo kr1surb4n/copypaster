@@ -1,0 +1,2 @@
+# name: c.PyNumber_Divmod 
+PyObject* PyNumber_Divmod(PyObject *o1, PyObject *o2)

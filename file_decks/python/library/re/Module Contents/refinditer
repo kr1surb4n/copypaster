@@ -1,0 +1,2 @@
+# name: re.finditer 
+re.finditer(pattern, string, flags=0)

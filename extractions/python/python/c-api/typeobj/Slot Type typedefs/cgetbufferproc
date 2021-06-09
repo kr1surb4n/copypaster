@@ -1,0 +1,2 @@
+# name: c.getbufferproc 
+int (*getbufferproc)(PyObject *, Py_buffer *, int)

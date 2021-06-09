@@ -1,0 +1,13 @@
+# name: class Dict:
+    ...
+ 
+class Dict:
+    ...
+
+    @classmethod
+    def fromkeys(cls, iterable, value=None):
+        "Emulate dict_fromkeys() in Objects/dictobject.c"
+        d = cls()
+        for key in iterable:
+            d[key] = value
+        return d

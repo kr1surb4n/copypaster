@@ -1,0 +1,6 @@
+# name: t = Timer(...)       
+t = Timer(...)       # outside the try/except
+try:
+    t.timeit(...)    # or t.repeat(...)
+except Exception:
+    t.print_exc()

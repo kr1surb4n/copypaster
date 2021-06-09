@@ -1,0 +1,2 @@
+# name: c.PySequence_GetSlic 
+PyObject* PySequence_GetSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)

@@ -1,0 +1,2 @@
+# name: sqlite3.Connection.c 
+sqlite3.Connection.create_collation

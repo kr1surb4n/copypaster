@@ -1,0 +1,2 @@
+# name: urllib.request.HTTPR 
+HTTPRedirectHandler.http_error_307(req, fp, code, msg, hdrs)

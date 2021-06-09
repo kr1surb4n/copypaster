@@ -1,0 +1,2 @@
+# name: c.PyErr_GivenExcepti 
+int PyErr_GivenExceptionMatches(PyObject *given, PyObject *exc)

@@ -1,0 +1,7 @@
+# name: >>> from types impor 
+>>> from types import GenericAlias
+
+>>> list[int] == GenericAlias(list, (int,))
+True
+>>> dict[str, int] == GenericAlias(dict, (str, int))
+True

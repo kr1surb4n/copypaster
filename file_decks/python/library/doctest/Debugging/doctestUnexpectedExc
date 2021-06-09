@@ -1,0 +1,2 @@
+# name: doctest.UnexpectedEx 
+UnexpectedException.exc_info

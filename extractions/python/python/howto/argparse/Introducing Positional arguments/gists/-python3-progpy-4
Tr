@@ -1,0 +1,7 @@
+# name: $ python3 prog.py 4
+ 
+$ python3 prog.py 4
+Traceback (most recent call last):
+  File "prog.py", line 5, in <module>
+    print(args.square**2)
+TypeError: unsupported operand type(s) for ** or pow(): 'str' and 'int'

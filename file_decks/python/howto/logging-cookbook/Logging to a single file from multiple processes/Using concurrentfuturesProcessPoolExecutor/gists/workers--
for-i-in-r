@@ -1,0 +1,10 @@
+# name: workers = []
+for i i 
+workers = []
+for i in range(10):
+    worker = multiprocessing.Process(target=worker_process,
+                                     args=(queue, worker_configurer))
+    workers.append(worker)
+    worker.start()
+for w in workers:
+    w.join()

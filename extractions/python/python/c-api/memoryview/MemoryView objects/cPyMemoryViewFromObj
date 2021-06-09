@@ -1,0 +1,2 @@
+# name: c.PyMemoryView_FromO 
+PyObject *PyMemoryView_FromObject(PyObject *obj)

@@ -1,0 +1,4 @@
+# name: s = "this is a strin 
+s = "this is a string"
+buf = ctypes.create_string_buffer(s)
+libc.strfry(buf)

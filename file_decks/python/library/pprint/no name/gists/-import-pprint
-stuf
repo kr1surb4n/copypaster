@@ -1,0 +1,12 @@
+# name: >>> import pprint
+>> 
+>>> import pprint
+>>> stuff = ['spam', 'eggs', 'lumberjack', 'knights', 'ni']
+>>> stuff.insert(0, stuff)
+>>> pprint.pprint(stuff)
+[<Recursion on list with id=...>,
+ 'spam',
+ 'eggs',
+ 'lumberjack',
+ 'knights',
+ 'ni']

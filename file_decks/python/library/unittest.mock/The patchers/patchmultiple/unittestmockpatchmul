@@ -1,0 +1,2 @@
+# name: unittest.mock.patch. 
+patch.multiple(target, spec=None, create=False, spec_set=None, autospec=None, new_callable=None, **kwargs)

@@ -1,0 +1,2 @@
+# name: conn = sqlite3.conne 
+conn = sqlite3.connect('/tmp/example')

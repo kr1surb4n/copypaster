@@ -1,0 +1,2 @@
+# name: concurrent.futures.w 
+concurrent.futures.wait(fs, timeout=None, return_when=ALL_COMPLETED)

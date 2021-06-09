@@ -1,0 +1,2 @@
+# name: c.PyErr_SyntaxLocati 
+void PyErr_SyntaxLocation(const char *filename, int lineno)

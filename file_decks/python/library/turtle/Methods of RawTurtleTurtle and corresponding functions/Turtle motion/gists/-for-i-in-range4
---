@@ -1,0 +1,6 @@
+# name: >>> for i in range(4 
+>>> for i in range(4):
+...     turtle.fd(50); turtle.lt(80)
+...
+>>> for i in range(8):
+...     turtle.undo()

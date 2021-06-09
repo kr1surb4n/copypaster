@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_ri 
+richcmpfunc PyTypeObject.tp_richcompare

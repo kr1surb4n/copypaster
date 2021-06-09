@@ -1,0 +1,10 @@
+# name: >>> def compare(self 
+>>> def compare(self, other):
+...     if not type(self) == type(other):
+...         return False
+...     if self.a != other.a:
+...         return False
+...     if self.b != other.b:
+...         return False
+...     return True
+...

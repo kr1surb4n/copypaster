@@ -1,0 +1,2 @@
+# name: zoneinfo.ZoneInfo.no 
+classmethod ZoneInfo.no_cache(key)

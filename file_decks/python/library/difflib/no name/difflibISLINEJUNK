@@ -1,0 +1,2 @@
+# name: difflib.IS_LINE_JUNK 
+difflib.IS_LINE_JUNK(line)

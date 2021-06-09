@@ -1,0 +1,10 @@
+# name: >>> class FieldTypes 
+>>> class FieldTypes(Enum):
+...     name = 0
+...     value = 1
+...     size = 2
+...
+>>> FieldTypes.value.size
+<FieldTypes.size: 2>
+>>> FieldTypes.size.value
+2

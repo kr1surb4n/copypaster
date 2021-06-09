@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_ba 
+PyTypeObject* PyTypeObject.tp_base

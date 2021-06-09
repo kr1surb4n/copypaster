@@ -1,0 +1,5 @@
+# name: mixer=ossaudiodev.op 
+mixer=ossaudiodev.openmixer()
+if mixer.controls() & (1 << ossaudiodev.SOUND_MIXER_PCM):
+    # PCM is supported
+    ... code ...

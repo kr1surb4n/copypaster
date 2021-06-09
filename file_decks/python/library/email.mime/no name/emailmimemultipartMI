@@ -1,0 +1,2 @@
+# name: email.mime.multipart 
+class email.mime.multipart.MIMEMultipart(_subtype='mixed', boundary=None, _subparts=None, *, policy=compat32, **_params)

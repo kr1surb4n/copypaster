@@ -1,0 +1,4 @@
+# name: copyreg.pickle(SomeC 
+copyreg.pickle(SomeClass, reduce_SomeClass)
+f = io.BytesIO()
+p = pickle.Pickler(f)

@@ -1,0 +1,2 @@
+# name: c.PyLong_FromLong 
+PyObject* PyLong_FromLong(long v)

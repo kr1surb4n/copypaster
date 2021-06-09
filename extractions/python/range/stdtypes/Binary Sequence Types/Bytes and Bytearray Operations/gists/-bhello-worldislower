@@ -1,0 +1,5 @@
+# name: >>> b'hello world'.i 
+>>> b'hello world'.islower()
+True
+>>> b'Hello world'.islower()
+False

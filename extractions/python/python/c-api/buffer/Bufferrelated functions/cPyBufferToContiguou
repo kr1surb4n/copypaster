@@ -1,0 +1,2 @@
+# name: c.PyBuffer_ToContigu 
+int PyBuffer_ToContiguous(void *buf, Py_buffer *src, Py_ssize_t len, char order)

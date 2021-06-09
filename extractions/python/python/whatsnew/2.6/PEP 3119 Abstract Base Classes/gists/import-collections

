@@ -1,0 +1,9 @@
+# name: import collections
+
+ 
+import collections
+
+class Storage:
+    ...
+
+collections.MutableMapping.register(Storage)

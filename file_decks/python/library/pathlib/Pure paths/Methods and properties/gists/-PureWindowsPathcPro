@@ -1,0 +1,9 @@
+# name: >>> PureWindowsPath( 
+>>> PureWindowsPath('c:/Program Files/').anchor
+'c:\\'
+>>> PureWindowsPath('c:Program Files/').anchor
+'c:'
+>>> PurePosixPath('/etc').anchor
+'/'
+>>> PureWindowsPath('//host/share').anchor
+'\\\\host\\share\\'

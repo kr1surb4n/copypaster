@@ -1,0 +1,7 @@
+# name: b = ZeroCopyByteArra 
+b = ZeroCopyByteArray(b"abc")
+buffers = []
+data = pickle.dumps(b, protocol=5, buffer_callback=buffers.append)
+new_b = pickle.loads(data, buffers=buffers)
+print(b == new_b)  # True
+print(b is new_b)  # True: no copy was made

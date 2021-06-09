@@ -1,0 +1,2 @@
+# name: shutil.get_terminal_ 
+shutil.get_terminal_size(fallback=(columns, lines))

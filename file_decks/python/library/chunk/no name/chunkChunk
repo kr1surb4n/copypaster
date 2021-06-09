@@ -1,0 +1,2 @@
+# name: chunk.Chunk 
+class chunk.Chunk(file, align=True, bigendian=True, inclheader=False)

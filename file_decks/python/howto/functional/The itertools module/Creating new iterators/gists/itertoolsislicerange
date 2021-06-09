@@ -1,0 +1,7 @@
+# name: itertools.islice(ran 
+itertools.islice(range(10), 8) =>
+  0, 1, 2, 3, 4, 5, 6, 7
+itertools.islice(range(10), 2, 8) =>
+  2, 3, 4, 5, 6, 7
+itertools.islice(range(10), 2, 8, 2) =>
+  2, 4, 6

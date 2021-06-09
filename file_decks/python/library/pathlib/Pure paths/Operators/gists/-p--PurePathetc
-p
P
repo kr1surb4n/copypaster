@@ -1,0 +1,9 @@
+# name: >>> p = PurePath('/e 
+>>> p = PurePath('/etc')
+>>> p
+PurePosixPath('/etc')
+>>> p / 'init.d' / 'apache2'
+PurePosixPath('/etc/init.d/apache2')
+>>> q = PurePath('bin')
+>>> '/usr' / q
+PurePosixPath('/usr/bin')

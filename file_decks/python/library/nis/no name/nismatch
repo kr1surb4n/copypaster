@@ -1,0 +1,2 @@
+# name: nis.match 
+nis.match(key, mapname, domain=default_domain)

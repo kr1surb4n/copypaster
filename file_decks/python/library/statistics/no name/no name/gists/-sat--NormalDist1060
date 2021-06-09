@@ -1,0 +1,5 @@
+# name: >>> sat = NormalDist 
+>>> sat = NormalDist(1060, 195)
+>>> fraction = sat.cdf(1200 + 0.5) - sat.cdf(1100 - 0.5)
+>>> round(fraction * 100.0, 1)
+18.4

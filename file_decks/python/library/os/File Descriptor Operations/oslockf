@@ -1,0 +1,2 @@
+# name: os.lockf 
+os.lockf(fd, cmd, len)

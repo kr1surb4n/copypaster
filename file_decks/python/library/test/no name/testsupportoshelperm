@@ -1,0 +1,2 @@
+# name: test.support.os_help 
+test.support.os_helper.make_bad_fd()

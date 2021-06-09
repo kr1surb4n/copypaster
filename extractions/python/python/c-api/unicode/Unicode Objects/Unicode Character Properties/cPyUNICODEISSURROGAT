@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_IS_SURR 
+Py_UNICODE_IS_SURROGATE(ch)

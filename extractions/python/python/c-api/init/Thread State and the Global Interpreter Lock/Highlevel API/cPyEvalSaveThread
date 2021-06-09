@@ -1,0 +1,2 @@
+# name: c.PyEval_SaveThread 
+PyThreadState* PyEval_SaveThread()

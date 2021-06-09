@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Contains 
+int PyUnicode_Contains(PyObject *container, PyObject *element)

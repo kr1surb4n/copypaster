@@ -1,0 +1,6 @@
+# name: Component('WIDGET',  
+Component('WIDGET', 'metal', 5)     # Allowed.
+Component('Widget', 'metal', 5)     # Blocked: 'Widget' is not all uppercase
+Component('WIDGET', 'metle', 5)     # Blocked: 'metle' is misspelled
+Component('WIDGET', 'metal', -5)    # Blocked: -5 is negative
+Component('WIDGET', 'metal', 'V')   # Blocked: 'V' isn't a number

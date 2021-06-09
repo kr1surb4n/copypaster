@@ -1,0 +1,2 @@
+# name: msilib.Directory 
+class msilib.Directory(database, cab, basedir, physical, logical, default[, componentflags])

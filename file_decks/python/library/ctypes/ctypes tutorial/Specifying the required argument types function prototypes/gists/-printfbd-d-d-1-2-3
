@@ -1,0 +1,9 @@
+# name: >>> printf(b"%d %d % 
+>>> printf(b"%d %d %d", 1, 2, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ArgumentError: argument 2: exceptions.TypeError: wrong type
+>>> printf(b"%s %d %f\n", b"X", 2, 3)
+X 2 3.000000
+13
+>>>

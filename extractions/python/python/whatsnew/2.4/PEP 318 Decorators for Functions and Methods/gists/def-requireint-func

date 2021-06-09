@@ -1,0 +1,15 @@
+# name: def require_int (fun 
+def require_int (func):
+    def wrapper (arg):
+        assert isinstance(arg, int)
+        return func(arg)
+
+    return wrapper
+
+@require_int
+def p1 (arg):
+    print arg
+
+@require_int
+def p2(arg):
+    print arg*2

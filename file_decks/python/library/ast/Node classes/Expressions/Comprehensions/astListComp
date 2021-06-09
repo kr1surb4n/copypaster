@@ -1,0 +1,2 @@
+# name: ast.ListComp 
+class ast.ListComp(elt, generators)

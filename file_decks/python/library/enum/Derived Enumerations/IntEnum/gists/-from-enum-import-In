@@ -1,0 +1,16 @@
+# name: >>> from enum import 
+>>> from enum import IntEnum
+>>> class Shape(IntEnum):
+...     CIRCLE = 1
+...     SQUARE = 2
+...
+>>> class Request(IntEnum):
+...     POST = 1
+...     GET = 2
+...
+>>> Shape == 1
+False
+>>> Shape.CIRCLE == 1
+True
+>>> Shape.CIRCLE == Request.POST
+True

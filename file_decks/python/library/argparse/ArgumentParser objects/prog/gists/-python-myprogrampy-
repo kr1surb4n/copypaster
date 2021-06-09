@@ -1,0 +1,14 @@
+# name: $ python myprogram.p 
+$ python myprogram.py --help
+usage: myprogram.py [-h] [--foo FOO]
+
+optional arguments:
+ -h, --help  show this help message and exit
+ --foo FOO   foo help
+$ cd ..
+$ python subdir/myprogram.py --help
+usage: myprogram.py [-h] [--foo FOO]
+
+optional arguments:
+ -h, --help  show this help message and exit
+ --foo FOO   foo help

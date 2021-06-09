@@ -1,0 +1,2 @@
+# name: curses.window.get_wc 
+window.get_wch([y, x])

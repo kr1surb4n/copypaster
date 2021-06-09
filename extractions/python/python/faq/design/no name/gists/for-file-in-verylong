@@ -1,0 +1,4 @@
+# name: for file in very_lon 
+for file in very_long_list_of_files:
+    with open(file) as f:
+        c = f.read(1)

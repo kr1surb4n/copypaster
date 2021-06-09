@@ -1,0 +1,2 @@
+# name: pathlib.Path.is_sock 
+Path.is_socket()

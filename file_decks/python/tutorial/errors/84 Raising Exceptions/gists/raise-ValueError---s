@@ -1,0 +1,2 @@
+# name: raise ValueError  #  
+raise ValueError  # shorthand for 'raise ValueError()'

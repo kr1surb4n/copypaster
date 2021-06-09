@@ -1,0 +1,11 @@
+# name: def dst(self, dt):
+  
+def dst(self, dt):
+    # Code to set dston and dstoff to the time zone's DST
+    # transition times based on the input dt.year, and expressed
+    # in standard local time.
+
+    if dston <= dt.replace(tzinfo=None) < dstoff:
+        return timedelta(hours=1)
+    else:
+        return timedelta(0)

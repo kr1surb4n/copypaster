@@ -1,0 +1,2 @@
+# name: os.path.normpath 
+os.path.normpath(path)

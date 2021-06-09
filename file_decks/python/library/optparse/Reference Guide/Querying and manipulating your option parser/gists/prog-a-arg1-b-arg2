@@ -1,0 +1,2 @@
+# name: prog -a arg1 -b arg2 
+prog -a arg1 -b arg2

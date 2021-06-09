@@ -1,0 +1,2 @@
+# name: base64.a85encode 
+base64.a85encode(b, *, foldspaces=False, wrapcol=0, pad=False, adobe=False)

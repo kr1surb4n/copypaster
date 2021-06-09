@@ -1,0 +1,2 @@
+# name: str.startswith 
+str.startswith(prefix[, start[, end]])

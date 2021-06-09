@@ -1,0 +1,4 @@
+# name: >>> getattr(cdll.msv 
+>>> getattr(cdll.msvcrt, "??2@YAPAXI@Z")  
+<_FuncPtr object at 0x...>
+>>>

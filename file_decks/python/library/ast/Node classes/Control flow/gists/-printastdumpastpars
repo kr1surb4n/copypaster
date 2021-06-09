@@ -1,0 +1,24 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse("""\
+... with a as b, c as d:
+...    something(b, d)
+... """), indent=4))
+Module(
+    body=[
+        With(
+            items=[
+                withitem(
+                    context_expr=Name(id='a', ctx=Load()),
+                    optional_vars=Name(id='b', ctx=Store())),
+                withitem(
+                    context_expr=Name(id='c', ctx=Load()),
+                    optional_vars=Name(id='d', ctx=Store()))],
+            body=[
+                Expr(
+                    value=Call(
+                        func=Name(id='something', ctx=Load()),
+                        args=[
+                            Name(id='b', ctx=Load()),
+                            Name(id='d', ctx=Load())],
+                        keywords=[]))])],
+    type_ignores=[])

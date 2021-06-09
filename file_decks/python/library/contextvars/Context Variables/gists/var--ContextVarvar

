@@ -1,0 +1,9 @@
+# name: var = ContextVar('va 
+var = ContextVar('var')
+
+token = var.set('new value')
+# code that uses 'var'; var.get() returns 'new value'.
+var.reset(token)
+
+# After the reset call the var has no value again, so
+# var.get() would raise a LookupError.

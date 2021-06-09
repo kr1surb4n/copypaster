@@ -1,0 +1,11 @@
+# name: >>> class Production 
+>>> class ProductionClass:
+...     def method(self):
+...         pass
+...
+>>> with patch.object(ProductionClass, 'method') as mock_method:
+...     mock_method.return_value = None
+...     real = ProductionClass()
+...     real.method(1, 2, 3)
+...
+>>> mock_method.assert_called_with(1, 2, 3)

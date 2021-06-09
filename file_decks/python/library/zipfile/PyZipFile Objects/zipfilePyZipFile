@@ -1,0 +1,2 @@
+# name: zipfile.PyZipFile 
+class zipfile.PyZipFile(file, mode='r', compression=ZIP_STORED, allowZip64=True, optimize=-1)

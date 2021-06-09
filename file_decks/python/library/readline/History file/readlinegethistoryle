@@ -1,0 +1,2 @@
+# name: readline.get_history 
+readline.get_history_length()

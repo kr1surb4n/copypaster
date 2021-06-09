@@ -1,0 +1,3 @@
+# name: with FileInput(files 
+with FileInput(files=('spam.txt', 'eggs.txt')) as input:
+    process(input)

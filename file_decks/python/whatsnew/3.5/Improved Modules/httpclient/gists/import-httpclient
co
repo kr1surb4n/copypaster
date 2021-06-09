@@ -1,0 +1,10 @@
+# name: import http.client
+c 
+import http.client
+conn = http.client.HTTPConnection('www.python.org')
+for retries in range(3):
+    try:
+        conn.request('GET', '/')
+        resp = conn.getresponse()
+    except http.client.RemoteDisconnected:
+        pass

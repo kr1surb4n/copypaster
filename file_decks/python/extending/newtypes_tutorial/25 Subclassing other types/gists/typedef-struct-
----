@@ -1,0 +1,6 @@
+# name: typedef struct {
+    
+typedef struct {
+    PyListObject list;
+    int state;
+} SubListObject;

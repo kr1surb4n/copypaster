@@ -1,0 +1,2 @@
+# name: ssl.SSLWantWriteErro 
+exception ssl.SSLWantWriteError

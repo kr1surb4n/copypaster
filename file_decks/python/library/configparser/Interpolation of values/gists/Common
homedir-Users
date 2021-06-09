@@ -1,0 +1,18 @@
+# name: [Common]
+home_dir: / 
+[Common]
+home_dir: /Users
+library_dir: /Library
+system_dir: /System
+macports_dir: /opt/local
+
+[Frameworks]
+Python: 3.2
+path: ${Common:system_dir}/Library/Frameworks/
+
+[Arthur]
+nickname: Two Sheds
+last_name: Jackson
+my_dir: ${Common:home_dir}/twosheds
+my_pictures: ${my_dir}/Pictures
+python_dir: ${Frameworks:path}/Python/Versions/${Frameworks:Python}

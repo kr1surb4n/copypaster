@@ -1,0 +1,4 @@
+# name: #define SPAM_MODULE
+ 
+#define SPAM_MODULE
+#include "spammodule.h"

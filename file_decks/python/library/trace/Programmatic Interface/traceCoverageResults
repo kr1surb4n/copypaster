@@ -1,0 +1,2 @@
+# name: trace.CoverageResult 
+trace.CoverageResults.write_results

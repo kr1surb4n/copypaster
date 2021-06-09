@@ -1,0 +1,6 @@
+# name: i = barrier.wait()
+i 
+i = barrier.wait()
+if i == 0:
+    # Only one thread needs to print this
+    print("passed the barrier")

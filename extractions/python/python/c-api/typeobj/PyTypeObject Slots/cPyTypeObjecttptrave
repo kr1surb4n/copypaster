@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_tr 
+traverseproc PyTypeObject.tp_traverse

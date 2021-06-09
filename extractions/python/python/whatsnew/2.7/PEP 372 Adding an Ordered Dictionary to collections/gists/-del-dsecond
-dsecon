@@ -1,0 +1,6 @@
+# name: >>> del d['second']
+ 
+>>> del d['second']
+>>> d['second'] = 5
+>>> d.items()
+[('first', 1), ('third', 3), ('second', 5)]

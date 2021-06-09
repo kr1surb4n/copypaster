@@ -1,0 +1,4 @@
+# name: >>> chained = call.g 
+>>> chained = call.get_endpoint('foobar').create_call('spam', 'eggs').start_call()
+>>> call_list = chained.call_list()
+>>> assert mock_backend.mock_calls == call_list

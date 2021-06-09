@@ -1,0 +1,4 @@
+# name: # Loop over fixed le 
+# Loop over fixed length blocks
+while (block := f.read(256)) != '':
+    process(block)

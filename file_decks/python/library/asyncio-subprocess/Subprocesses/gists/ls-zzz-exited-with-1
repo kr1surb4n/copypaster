@@ -1,0 +1,4 @@
+# name: ['ls /zzz' exited wi 
+['ls /zzz' exited with 1]
+[stderr]
+ls: /zzz: No such file or directory

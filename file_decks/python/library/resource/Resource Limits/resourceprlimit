@@ -1,0 +1,2 @@
+# name: resource.prlimit 
+resource.prlimit(pid, resource[, limits])

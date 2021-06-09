@@ -1,0 +1,9 @@
+# name: >>> turtle.home()
+>> 
+>>> turtle.home()
+>>> turtle.left(90)
+>>> turtle.heading()
+90.0
+>>> turtle.radians()
+>>> turtle.heading()
+1.5707963267948966

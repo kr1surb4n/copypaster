@@ -1,0 +1,4 @@
+# name: def divmod(a, b, /): 
+def divmod(a, b, /):
+    "Emulate the built in divmod() function"
+    return (a // b, a % b)

@@ -1,0 +1,2 @@
+# name: msilib.Feature 
+class msilib.Feature(db, id, title, desc, display, level=1, parent=None, directory=None, attributes=0)

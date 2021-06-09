@@ -1,0 +1,2 @@
+# name: c.PySlice_GetIndices 
+int PySlice_GetIndices(PyObject *slice, Py_ssize_t length, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)

@@ -1,0 +1,13 @@
+# name: >>> null_ptr[0]
+Trac 
+>>> null_ptr[0]
+Traceback (most recent call last):
+    ....
+ValueError: NULL pointer access
+>>>
+
+>>> null_ptr[0] = 1234
+Traceback (most recent call last):
+    ....
+ValueError: NULL pointer access
+>>>

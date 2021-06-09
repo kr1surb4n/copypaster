@@ -1,0 +1,6 @@
+# name: >>> turtle.resizemod 
+>>> turtle.resizemode()
+'noresize'
+>>> turtle.resizemode("auto")
+>>> turtle.resizemode()
+'auto'

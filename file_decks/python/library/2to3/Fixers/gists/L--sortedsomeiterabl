@@ -1,0 +1,2 @@
+# name: L = sorted(some_iter 
+L = sorted(some_iterable)

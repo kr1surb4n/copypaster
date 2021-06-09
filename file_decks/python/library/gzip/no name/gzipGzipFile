@@ -1,0 +1,2 @@
+# name: gzip.GzipFile 
+class gzip.GzipFile(filename=None, mode=None, compresslevel=9, fileobj=None, mtime=None)

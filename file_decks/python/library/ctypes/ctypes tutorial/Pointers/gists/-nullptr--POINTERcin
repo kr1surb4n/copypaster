@@ -1,0 +1,5 @@
+# name: >>> null_ptr = POINT 
+>>> null_ptr = POINTER(c_int)()
+>>> print(bool(null_ptr))
+False
+>>>

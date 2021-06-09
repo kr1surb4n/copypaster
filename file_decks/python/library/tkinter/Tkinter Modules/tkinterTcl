@@ -1,0 +1,2 @@
+# name: tkinter.Tcl 
+tkinter.Tcl(screenName=None, baseName=None, className='Tk', useTk=0)

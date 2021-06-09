@@ -1,0 +1,11 @@
+# name: >>> turtle.home()
+>> 
+>>> turtle.home()
+>>> turtle.distance(30,40)
+50.0
+>>> turtle.distance((30,40))
+50.0
+>>> joe = Turtle()
+>>> joe.forward(77)
+>>> turtle.distance(joe)
+77.0

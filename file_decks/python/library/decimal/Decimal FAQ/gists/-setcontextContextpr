@@ -1,0 +1,5 @@
+# name: >>> setcontext(Conte 
+>>> setcontext(Context(prec=MAX_PREC, Emax=MAX_EMAX, Emin=MIN_EMIN))
+>>> x = Decimal(2) ** 256
+>>> x / 128
+Decimal('904625697166532776746648320380374280103671755200316906558262375061821325312')

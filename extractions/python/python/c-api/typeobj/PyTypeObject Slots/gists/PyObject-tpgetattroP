@@ -1,0 +1,2 @@
+# name: PyObject *tp_getattr 
+PyObject *tp_getattro(PyObject *self, PyObject *attr);

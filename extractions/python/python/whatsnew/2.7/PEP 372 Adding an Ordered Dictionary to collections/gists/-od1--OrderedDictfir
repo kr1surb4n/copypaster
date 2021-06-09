@@ -1,0 +1,13 @@
+# name: >>> od1 = OrderedDic 
+>>> od1 = OrderedDict([('first', 1),
+...                    ('second', 2),
+...                    ('third', 3)])
+>>> od2 = OrderedDict([('third', 3),
+...                    ('first', 1),
+...                    ('second', 2)])
+>>> od1 == od2
+False
+>>> # Move 'third' key to the end
+>>> del od2['third']; od2['third'] = 3
+>>> od1 == od2
+True

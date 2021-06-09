@@ -1,0 +1,8 @@
+# name: typedef struct PyMem 
+typedef struct PyMemberDef {
+    const char *name;
+    int         type;
+    int         offset;
+    int         flags;
+    const char *doc;
+} PyMemberDef;

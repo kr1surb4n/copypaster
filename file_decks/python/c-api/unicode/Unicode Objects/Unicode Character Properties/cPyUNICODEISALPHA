@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_ISALPHA 
+int Py_UNICODE_ISALPHA(Py_UNICODE ch)

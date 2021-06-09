@@ -1,0 +1,2 @@
+# name: $ 2to3 --output-dir= 
+$ 2to3 --output-dir=python3-version/mycode -W -n python2-version/mycode

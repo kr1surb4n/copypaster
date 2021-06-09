@@ -1,0 +1,2 @@
+# name: curses.qiflush 
+curses.qiflush([flag])

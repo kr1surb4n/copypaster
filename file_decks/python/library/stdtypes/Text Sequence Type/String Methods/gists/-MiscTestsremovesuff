@@ -1,0 +1,5 @@
+# name: >>> 'MiscTests'.remo 
+>>> 'MiscTests'.removesuffix('Tests')
+'Misc'
+>>> 'TmpDirMixin'.removesuffix('Tests')
+'TmpDirMixin'

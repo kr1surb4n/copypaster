@@ -1,0 +1,2 @@
+# name: curses.setupterm 
+curses.setupterm(term=None, fd=-1)

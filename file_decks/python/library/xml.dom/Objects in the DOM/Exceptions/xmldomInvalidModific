@@ -1,0 +1,2 @@
+# name: xml.dom.InvalidModif 
+exception xml.dom.InvalidModificationErr

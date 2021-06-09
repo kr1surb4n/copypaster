@@ -1,0 +1,3 @@
+# name: ptr = (char *)buf +  
+ptr = (char *)buf + indices[0] * strides[0] + ... + indices[n-1] * strides[n-1];
+item = *((typeof(item) *)ptr);

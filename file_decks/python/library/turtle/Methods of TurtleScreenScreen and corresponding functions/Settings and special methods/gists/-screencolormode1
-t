@@ -1,0 +1,12 @@
+# name: >>> screen.colormode 
+>>> screen.colormode(1)
+>>> turtle.pencolor(240, 160, 80)
+Traceback (most recent call last):
+     ...
+TurtleGraphicsError: bad color sequence: (240, 160, 80)
+>>> screen.colormode()
+1.0
+>>> screen.colormode(255)
+>>> screen.colormode()
+255
+>>> turtle.pencolor(240,160,80)

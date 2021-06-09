@@ -1,0 +1,2 @@
+# name: os.chflags 
+os.chflags(path, flags, *, follow_symlinks=True)

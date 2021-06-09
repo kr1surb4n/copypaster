@@ -1,0 +1,7 @@
+# name: >>> a = 'hello'
+>>>  
+>>> a = 'hello'
+>>> iadd(a, ' world')
+'hello world'
+>>> a
+'hello'

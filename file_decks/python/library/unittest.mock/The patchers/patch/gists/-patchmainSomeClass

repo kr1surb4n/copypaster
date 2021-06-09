@@ -1,0 +1,7 @@
+# name: >>> @patch('__main__ 
+>>> @patch('__main__.SomeClass')
+... def function(normal_argument, mock_class):
+...     print(mock_class is SomeClass)
+...
+>>> function(None)
+True

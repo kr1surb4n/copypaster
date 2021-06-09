@@ -1,0 +1,2 @@
+# name: c.PyType_GetSlot 
+void* PyType_GetSlot(PyTypeObject *type, int slot)

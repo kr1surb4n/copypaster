@@ -1,0 +1,3 @@
+# name: with CleanImport('fo 
+with CleanImport('foo'):
+    importlib.import_module('foo')  # New reference.

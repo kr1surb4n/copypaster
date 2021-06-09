@@ -1,0 +1,4 @@
+# name: python setup.py bdis 
+python setup.py bdist_wininst
+python setup.py bdist_rpm
+python setup.py bdist_dumb

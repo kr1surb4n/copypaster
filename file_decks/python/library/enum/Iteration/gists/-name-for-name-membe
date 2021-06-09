@@ -1,0 +1,3 @@
+# name: >>> [name for name,  
+>>> [name for name, member in Shape.__members__.items() if member.name != name]
+['ALIAS_FOR_SQUARE']

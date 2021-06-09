@@ -1,0 +1,6 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.foo_bar.return_value = None
+>>> mock.foo_bar('baz', spam='eggs')
+>>> mock.foo_bar.assert_called_with('baz', spam='eggs')

@@ -1,0 +1,2 @@
+# name: opcode-STORE_FAST 
+STORE_FAST(var_num)

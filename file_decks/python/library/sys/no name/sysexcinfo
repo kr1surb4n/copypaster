@@ -1,0 +1,2 @@
+# name: sys.exc_info 
+sys.exc_info()

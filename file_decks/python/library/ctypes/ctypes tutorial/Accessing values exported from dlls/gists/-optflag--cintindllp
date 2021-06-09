@@ -1,0 +1,5 @@
+# name: >>> opt_flag = c_int 
+>>> opt_flag = c_int.in_dll(pythonapi, "Py_OptimizeFlag")
+>>> print(opt_flag)
+c_long(0)
+>>>

@@ -1,0 +1,2 @@
+# name: c.PyMapping_HasKey 
+int PyMapping_HasKey(PyObject *o, PyObject *key)

@@ -1,0 +1,9 @@
+# name: {
+    Py_complex c;
+ 
+{
+    Py_complex c;
+    ok = PyArg_ParseTuple(args, "D:myfunction", &c);
+    /* a complex, also providing a function name for errors */
+    /* Possible Python call: myfunction(1+2j) */
+}

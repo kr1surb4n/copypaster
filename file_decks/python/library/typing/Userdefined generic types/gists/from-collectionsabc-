@@ -1,0 +1,15 @@
+# name: from collections.abc 
+from collections.abc import Iterable
+from typing import TypeVar, Union
+S = TypeVar('S')
+Response = Union[Iterable[S], int]
+
+# Return type here is same as Union[Iterable[str], int]
+def response(query: str) -> Response[str]:
+    ...
+
+T = TypeVar('T', int, float, complex)
+Vec = Iterable[tuple[T, T]]
+
+def inproduct(v: Vec[T]) -> T: # Same as Iterable[tuple[T, T]]
+    return sum(x*y for x, y in v)

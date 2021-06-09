@@ -1,0 +1,3 @@
+# name: >>> ssl.create_defau 
+>>> ssl.create_default_context().verify_mode
+<VerifyMode.CERT_REQUIRED: 2>

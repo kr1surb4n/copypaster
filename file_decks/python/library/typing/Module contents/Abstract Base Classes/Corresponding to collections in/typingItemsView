@@ -1,0 +1,2 @@
+# name: typing.ItemsView 
+class typing.ItemsView(MappingView, Generic[KT_co, VT_co])

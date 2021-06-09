@@ -1,0 +1,2 @@
+# name: aifc.aifc.readframes 
+aifc.readframes(nframes)

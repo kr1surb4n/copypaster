@@ -1,0 +1,2 @@
+# name: bytes.rfind 
+bytes.rfind(sub[, start[, end]])

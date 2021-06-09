@@ -1,0 +1,2 @@
+# name: c.PyErr_SetExcFromWi 
+PyObject* PyErr_SetExcFromWindowsErrWithFilename(PyObject *type, int ierr, const char *filename)

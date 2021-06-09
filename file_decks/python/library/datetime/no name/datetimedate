@@ -1,0 +1,2 @@
+# name: datetime.date 
+class datetime.date(year, month, day)

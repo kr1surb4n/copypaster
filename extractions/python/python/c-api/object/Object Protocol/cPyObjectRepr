@@ -1,0 +1,2 @@
+# name: c.PyObject_Repr 
+PyObject* PyObject_Repr(PyObject *o)

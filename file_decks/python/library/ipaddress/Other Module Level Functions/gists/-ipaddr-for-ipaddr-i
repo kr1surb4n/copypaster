@@ -1,0 +1,5 @@
+# name: >>> [ipaddr for ipad 
+>>> [ipaddr for ipaddr in
+... ipaddress.collapse_addresses([ipaddress.IPv4Network('192.0.2.0/25'),
+... ipaddress.IPv4Network('192.0.2.128/25')])]
+[IPv4Network('192.0.2.0/24')]

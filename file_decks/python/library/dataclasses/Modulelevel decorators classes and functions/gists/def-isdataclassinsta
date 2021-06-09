@@ -1,0 +1,3 @@
+# name: def is_dataclass_ins 
+def is_dataclass_instance(obj):
+    return is_dataclass(obj) and not isinstance(obj, type)

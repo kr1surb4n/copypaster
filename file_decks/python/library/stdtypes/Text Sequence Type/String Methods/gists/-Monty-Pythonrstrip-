@@ -1,0 +1,5 @@
+# name: >>> 'Monty Python'.r 
+>>> 'Monty Python'.rstrip(' Python')
+'M'
+>>> 'Monty Python'.removesuffix(' Python')
+'Monty'

@@ -1,0 +1,9 @@
+# name: $ python3 prog.py -h 
+$ python3 prog.py -h
+usage: prog.py [-h] echo
+
+positional arguments:
+  echo        echo the string you use here
+
+optional arguments:
+  -h, --help  show this help message and exit

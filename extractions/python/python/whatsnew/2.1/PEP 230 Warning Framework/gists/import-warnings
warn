@@ -1,0 +1,7 @@
+# name: import warnings
+warn 
+import warnings
+warnings.filterwarnings(action = 'ignore',
+                        message='.*regex module is deprecated',
+                        category=DeprecationWarning,
+                        module = '__main__')

@@ -1,0 +1,2 @@
+# name: c.PyCapsule_New 
+PyObject* PyCapsule_New(void *pointer, const char *name, PyCapsule_Destructor destructor)

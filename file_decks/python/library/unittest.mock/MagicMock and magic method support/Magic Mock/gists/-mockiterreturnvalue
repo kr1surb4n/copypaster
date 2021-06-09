@@ -1,0 +1,6 @@
+# name: >>> mock.__iter__.re 
+>>> mock.__iter__.return_value = iter(['a', 'b', 'c'])
+>>> list(mock)
+['a', 'b', 'c']
+>>> list(mock)
+[]

@@ -1,0 +1,2 @@
+# name: socket.socket.setsoc 
+socket.setsockopt(level, optname, value: int)

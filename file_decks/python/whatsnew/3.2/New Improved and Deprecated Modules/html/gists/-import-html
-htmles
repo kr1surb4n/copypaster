@@ -1,0 +1,5 @@
+# name: >>> import html
+>>>  
+>>> import html
+>>> html.escape('x > 2 && x < 7')
+'x &gt; 2 &amp;&amp; x &lt; 7'

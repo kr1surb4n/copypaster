@@ -1,0 +1,9 @@
+# name: >>> screen.reset()
+> 
+>>> screen.reset()
+>>> screen.setworldcoordinates(-50,-7.5,50,7.5)
+>>> for _ in range(72):
+...     left(10)
+...
+>>> for _ in range(8):
+...     left(45); fd(2)   # a regular octagon

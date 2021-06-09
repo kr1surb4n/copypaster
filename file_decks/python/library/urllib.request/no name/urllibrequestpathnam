@@ -1,0 +1,2 @@
+# name: urllib.request.pathn 
+urllib.request.pathname2url(path)

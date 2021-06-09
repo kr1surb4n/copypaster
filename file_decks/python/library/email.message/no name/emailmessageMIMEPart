@@ -1,0 +1,2 @@
+# name: email.message.MIMEPa 
+class email.message.MIMEPart(policy=default)

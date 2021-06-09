@@ -1,0 +1,2 @@
+# name: email.iterators.type 
+email.iterators.typed_subpart_iterator(msg, maintype='text', subtype=None)

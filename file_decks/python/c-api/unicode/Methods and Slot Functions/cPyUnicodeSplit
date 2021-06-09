@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Split 
+PyObject* PyUnicode_Split(PyObject *s, PyObject *sep, Py_ssize_t maxsplit)

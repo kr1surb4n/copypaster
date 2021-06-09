@@ -1,0 +1,2 @@
+# name: c.PyBuffer_FillInfo 
+int PyBuffer_FillInfo(Py_buffer *view, PyObject *exporter, void *buf, Py_ssize_t len, int readonly, int flags)

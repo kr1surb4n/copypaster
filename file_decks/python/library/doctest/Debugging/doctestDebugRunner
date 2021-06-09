@@ -1,0 +1,2 @@
+# name: doctest.DebugRunner 
+class doctest.DebugRunner(checker=None, verbose=None, optionflags=0)

@@ -1,0 +1,3 @@
+# name: >>> b'Hello World'.u 
+>>> b'Hello World'.upper()
+b'HELLO WORLD'

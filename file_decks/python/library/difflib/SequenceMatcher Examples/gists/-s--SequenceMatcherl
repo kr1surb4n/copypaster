@@ -1,0 +1,4 @@
+# name: >>> s = SequenceMatc 
+>>> s = SequenceMatcher(lambda x: x == " ",
+...                     "private Thread currentThread;",
+...                     "private volatile Thread currentThread;")

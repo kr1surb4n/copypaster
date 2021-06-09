@@ -1,0 +1,12 @@
+# name: object
+ +-- Finder ( 
+object
+ +-- Finder (deprecated)
+ |    +-- MetaPathFinder
+ |    +-- PathEntryFinder
+ +-- Loader
+      +-- ResourceLoader --------+
+      +-- InspectLoader          |
+           +-- ExecutionLoader --+
+                                 +-- FileLoader
+                                 +-- SourceLoader

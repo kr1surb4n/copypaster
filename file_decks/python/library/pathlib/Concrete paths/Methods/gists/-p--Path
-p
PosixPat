@@ -1,0 +1,7 @@
+# name: >>> p = Path()
+>>> p 
+>>> p = Path()
+>>> p
+PosixPath('.')
+>>> p.resolve()
+PosixPath('/home/antoine/pathlib')

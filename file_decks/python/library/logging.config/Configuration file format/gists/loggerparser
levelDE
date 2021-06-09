@@ -1,0 +1,7 @@
+# name: [logger_parser]
+leve 
+[logger_parser]
+level=DEBUG
+handlers=hand01
+propagate=1
+qualname=compiler.parser

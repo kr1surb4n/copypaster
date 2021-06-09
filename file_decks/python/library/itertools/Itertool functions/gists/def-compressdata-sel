@@ -1,0 +1,4 @@
+# name: def compress(data, s 
+def compress(data, selectors):
+    # compress('ABCDEF', [1,0,1,0,1,1]) --> A C E F
+    return (d for d, s in zip(data, selectors) if s)

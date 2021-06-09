@@ -1,0 +1,5 @@
+# name: PyObject *
+PyObject_ 
+PyObject *
+PyObject_CallMethod(PyObject *object, const char *method_name,
+                    const char *arg_format, ...);

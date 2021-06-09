@@ -1,0 +1,2 @@
+# name: c.PyModule_Create2 
+PyObject* PyModule_Create2(PyModuleDef *def, int module_api_version)

@@ -1,0 +1,4 @@
+# name: def foo(mydict={}):
+ 
+def foo(mydict={}):
+    ...

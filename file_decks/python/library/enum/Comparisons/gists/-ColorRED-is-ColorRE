@@ -1,0 +1,7 @@
+# name: >>> Color.RED is Col 
+>>> Color.RED is Color.RED
+True
+>>> Color.RED is Color.BLUE
+False
+>>> Color.RED is not Color.BLUE
+True

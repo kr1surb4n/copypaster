@@ -1,0 +1,15 @@
+# name: from eiffel import e 
+from eiffel import eiffelmethod
+
+class C(object):
+    def f(self, arg1, arg2):
+        # The actual function
+        ...
+    def pre_f(self):
+        # Check preconditions
+        ...
+    def post_f(self):
+        # Check postconditions
+        ...
+
+    f = eiffelmethod(f, pre_f, post_f)

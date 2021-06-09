@@ -1,0 +1,2 @@
+# name: c.PyStructSequence_G 
+PyObject* PyStructSequence_GetItem(PyObject *p, Py_ssize_t pos)

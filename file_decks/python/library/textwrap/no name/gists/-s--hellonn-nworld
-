@@ -1,0 +1,4 @@
+# name: >>> s = 'hello\n\n \ 
+>>> s = 'hello\n\n \nworld'
+>>> indent(s, '  ')
+'  hello\n\n \n  world'

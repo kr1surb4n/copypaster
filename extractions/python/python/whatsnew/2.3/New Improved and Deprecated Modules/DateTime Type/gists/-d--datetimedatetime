@@ -1,0 +1,7 @@
+# name: >>> d = datetime.dat 
+>>> d = datetime.datetime.now()
+>>> d
+datetime.datetime(2002, 12, 30, 22, 15, 38, 827738)
+>>> d.replace(year=2001, hour = 12)
+datetime.datetime(2001, 12, 30, 12, 15, 38, 827738)
+>>>

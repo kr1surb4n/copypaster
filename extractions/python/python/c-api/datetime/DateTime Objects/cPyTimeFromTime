@@ -1,0 +1,2 @@
+# name: c.PyTime_FromTime 
+PyObject* PyTime_FromTime(int hour, int minute, int second, int usecond)

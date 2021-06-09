@@ -1,0 +1,4 @@
+# name: >>> Path.cwd()
+Posix 
+>>> Path.cwd()
+PosixPath('/home/antoine/pathlib')

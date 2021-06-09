@@ -1,0 +1,2 @@
+# name: base64.a85decode 
+base64.a85decode(b, *, foldspaces=False, adobe=False, ignorechars=b' \t\n\r\v')

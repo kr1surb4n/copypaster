@@ -1,0 +1,6 @@
+# name: default::Deprecation 
+default::DeprecationWarning:__main__
+ignore::DeprecationWarning
+ignore::PendingDeprecationWarning
+ignore::ImportWarning
+ignore::ResourceWarning

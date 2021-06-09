@@ -1,0 +1,2 @@
+# name: unittest.mock.create 
+unittest.mock.create_autospec(spec, spec_set=False, instance=False, **kwargs)

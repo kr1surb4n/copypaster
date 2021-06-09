@@ -1,0 +1,7 @@
+# name: primes: List[int] =  
+primes: List[int] = []
+
+captain: str  # Note: no initial value!
+
+class Starship:
+    stats: Dict[str, int] = {}

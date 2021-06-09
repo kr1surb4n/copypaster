@@ -1,0 +1,5 @@
+# name: [ expression for exp 
+[ expression for expr in sequence1
+             for expr2 in sequence2 ...
+             for exprN in sequenceN
+             if condition ]

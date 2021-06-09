@@ -1,0 +1,13 @@
+# name: >>> class MyMock(Mag 
+>>> class MyMock(MagicMock):
+...     def has_been_called(self):
+...         return self.called
+...
+>>> mymock = MyMock(return_value=None)
+>>> mymock
+<MyMock id='...'>
+>>> mymock.has_been_called()
+False
+>>> mymock()
+>>> mymock.has_been_called()
+True

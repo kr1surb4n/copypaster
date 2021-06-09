@@ -1,0 +1,2 @@
+# name: asyncio.create_subpr 
+coroutine asyncio.create_subprocess_shell(cmd, stdin=None, stdout=None, stderr=None, loop=None, limit=None, **kwds)

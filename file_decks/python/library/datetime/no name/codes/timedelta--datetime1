@@ -1,0 +1,2 @@
+# name: timedelta = datetime 
+timedelta = datetime1 - datetime2

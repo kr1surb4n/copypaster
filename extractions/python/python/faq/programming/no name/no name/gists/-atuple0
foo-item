@@ -1,0 +1,4 @@
+# name: >>> a_tuple[0]
+['foo 
+>>> a_tuple[0]
+['foo', 'item']

@@ -1,0 +1,9 @@
+# name: # r is a weak refere 
+# r is a weak reference object
+o = r()
+if o is None:
+    # referent has been garbage collected
+    print("Object has been deallocated; can't frobnicate.")
+else:
+    print("Object is still live!")
+    o.do_something_useful()

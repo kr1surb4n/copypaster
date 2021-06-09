@@ -1,0 +1,3 @@
+# name: def deprecation(mess 
+def deprecation(message):
+    warnings.warn(message, DeprecationWarning, stacklevel=2)

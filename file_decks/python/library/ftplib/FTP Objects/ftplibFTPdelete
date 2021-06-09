@@ -1,0 +1,2 @@
+# name: ftplib.FTP.delete 
+FTP.delete(filename)

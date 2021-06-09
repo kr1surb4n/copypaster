@@ -1,0 +1,9 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>>
+>>> class struct_frozen(Structure):
+...     _fields_ = [("name", c_char_p),
+...                 ("code", POINTER(c_ubyte)),
+...                 ("size", c_int)]
+...
+>>>

@@ -1,0 +1,8 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='doors.py')
+>>> parser.add_argument('door', type=int, choices=range(1, 4))
+>>> print(parser.parse_args(['3']))
+Namespace(door=3)
+>>> parser.parse_args(['4'])
+usage: doors.py [-h] {1,2,3}
+doors.py: error: argument door: invalid choice: 4 (choose from 1, 2, 3)

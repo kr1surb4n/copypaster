@@ -1,0 +1,2 @@
+# name: typing.Reversible 
+class typing.Reversible(Iterable[T_co])

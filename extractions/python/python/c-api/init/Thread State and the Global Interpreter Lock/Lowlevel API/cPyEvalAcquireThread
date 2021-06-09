@@ -1,0 +1,2 @@
+# name: c.PyEval_AcquireThre 
+void PyEval_AcquireThread(PyThreadState *tstate)

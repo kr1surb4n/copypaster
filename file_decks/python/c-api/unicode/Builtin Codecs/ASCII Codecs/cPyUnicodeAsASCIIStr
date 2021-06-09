@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsASCIIS 
+PyObject* PyUnicode_AsASCIIString(PyObject *unicode)

@@ -1,0 +1,2 @@
+# name: socket.socket.detach 
+socket.detach()

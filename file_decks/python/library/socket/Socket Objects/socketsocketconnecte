@@ -1,0 +1,2 @@
+# name: socket.socket.connec 
+socket.connect_ex(address)

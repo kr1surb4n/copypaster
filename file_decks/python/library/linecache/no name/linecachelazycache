@@ -1,0 +1,2 @@
+# name: linecache.lazycache 
+linecache.lazycache(filename, module_globals)

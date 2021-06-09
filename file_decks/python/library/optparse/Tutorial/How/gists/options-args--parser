@@ -1,0 +1,5 @@
+# name: (options, args) = pa 
+(options, args) = parser.parse_args()
+...
+if options.a and options.b:
+    parser.error("options -a and -b are mutually exclusive")

@@ -1,0 +1,2 @@
+# name: asyncio.set_event_lo 
+asyncio.set_event_loop_policy(policy)

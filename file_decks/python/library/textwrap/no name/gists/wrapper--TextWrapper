@@ -1,0 +1,3 @@
+# name: wrapper = TextWrappe 
+wrapper = TextWrapper()
+wrapper.initial_indent = "* "

@@ -1,0 +1,4 @@
+# name: >>> newline = ord('\ 
+>>> newline = ord('\n')
+>>> f"newline: {newline}"
+'newline: 10'

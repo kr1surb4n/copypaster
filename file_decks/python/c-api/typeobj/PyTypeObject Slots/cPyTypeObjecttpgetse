@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_ge 
+struct PyGetSetDef* PyTypeObject.tp_getset

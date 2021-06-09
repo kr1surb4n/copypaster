@@ -1,0 +1,6 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.__class__ = dict
+>>> isinstance(mock, dict)
+True

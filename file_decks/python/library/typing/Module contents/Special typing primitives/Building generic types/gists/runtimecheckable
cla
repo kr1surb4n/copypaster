@@ -1,0 +1,7 @@
+# name: @runtime_checkable
+c 
+@runtime_checkable
+class Closable(Protocol):
+    def close(self): ...
+
+assert isinstance(open('/some/file'), Closable)

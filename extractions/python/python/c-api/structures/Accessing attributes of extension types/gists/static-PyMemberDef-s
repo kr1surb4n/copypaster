@@ -1,0 +1,5 @@
+# name: static PyMemberDef s 
+static PyMemberDef spam_type_members[] = {
+    {"__dictoffset__", T_PYSSIZET, offsetof(Spam_object, dict), READONLY},
+    {NULL}  /* Sentinel */
+};

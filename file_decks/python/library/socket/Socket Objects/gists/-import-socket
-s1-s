@@ -1,0 +1,13 @@
+# name: >>> import socket
+>> 
+>>> import socket
+>>> s1, s2 = socket.socketpair()
+>>> b1 = bytearray(b'----')
+>>> b2 = bytearray(b'0123456789')
+>>> b3 = bytearray(b'--------------')
+>>> s1.send(b'Mary had a little lamb')
+22
+>>> s2.recvmsg_into([b1, memoryview(b2)[2:9], b3])
+(22, [], 0, None)
+>>> [b1, b2, b3]
+[bytearray(b'Mary'), bytearray(b'01 had a 9'), bytearray(b'little lamb---')]

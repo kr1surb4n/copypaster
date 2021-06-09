@@ -1,0 +1,8 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>> class cell(Structure):
+...     pass
+...
+>>> cell._fields_ = [("name", c_char_p),
+...                  ("next", POINTER(cell))]
+>>>

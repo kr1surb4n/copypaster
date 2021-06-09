@@ -1,0 +1,17 @@
+# name: >>> a = decimal.Deci 
+>>> a = decimal.Decimal('35.72')
+>>> b = decimal.Decimal('1.73')
+>>> a+b
+Decimal("37.45")
+>>> a-b
+Decimal("33.99")
+>>> a*b
+Decimal("61.7956")
+>>> a/b
+Decimal("20.64739884393063583815028902")
+>>> a ** 2
+Decimal("1275.9184")
+>>> a**b
+Traceback (most recent call last):
+  ...
+decimal.InvalidOperation: x ** (non-integer)

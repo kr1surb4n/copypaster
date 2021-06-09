@@ -1,0 +1,5 @@
+# name: >>> Color.RED < Colo 
+>>> Color.RED < Color.BLUE
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'Color' and 'Color'

@@ -1,0 +1,3 @@
+# name: class MyLogger(loggi 
+class MyLogger(logging.getLoggerClass()):
+    # ... override behaviour here

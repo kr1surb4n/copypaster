@@ -1,0 +1,2 @@
+# name: py_compile.PyCompile 
+exception py_compile.PyCompileError

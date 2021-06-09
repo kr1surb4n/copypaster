@@ -1,0 +1,2 @@
+# name: c.PyBool_FromLong 
+PyObject* PyBool_FromLong(long v)

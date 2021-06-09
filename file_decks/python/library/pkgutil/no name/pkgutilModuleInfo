@@ -1,0 +1,2 @@
+# name: pkgutil.ModuleInfo 
+class pkgutil.ModuleInfo(module_finder, name, ispkg)

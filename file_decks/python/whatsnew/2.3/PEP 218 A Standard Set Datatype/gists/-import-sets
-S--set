@@ -1,0 +1,15 @@
+# name: >>> import sets
+>>>  
+>>> import sets
+>>> S = sets.Set([1,2,3])
+>>> S
+Set([1, 2, 3])
+>>> 1 in S
+True
+>>> 0 in S
+False
+>>> S.add(5)
+>>> S.remove(3)
+>>> S
+Set([1, 2, 5])
+>>>

@@ -1,0 +1,10 @@
+# name: >>> class MyTurtle(T 
+>>> class MyTurtle(Turtle):
+...     def glow(self,x,y):
+...         self.fillcolor("red")
+...     def unglow(self,x,y):
+...         self.fillcolor("")
+...
+>>> turtle = MyTurtle()
+>>> turtle.onclick(turtle.glow)     # clicking on turtle turns fillcolor red,
+>>> turtle.onrelease(turtle.unglow) # releasing turns it to transparent.

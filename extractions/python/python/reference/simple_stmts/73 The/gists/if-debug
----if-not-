@@ -1,0 +1,4 @@
+# name: if __debug__:
+    if 
+if __debug__:
+    if not expression1: raise AssertionError(expression2)

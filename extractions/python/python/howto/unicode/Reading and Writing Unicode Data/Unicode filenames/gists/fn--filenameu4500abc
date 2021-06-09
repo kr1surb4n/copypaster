@@ -1,0 +1,8 @@
+# name: fn = 'filename\u4500 
+fn = 'filename\u4500abc'
+f = open(fn, 'w')
+f.close()
+
+import os
+print(os.listdir(b'.'))
+print(os.listdir('.'))

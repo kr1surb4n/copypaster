@@ -1,0 +1,2 @@
+# name: weakref.WeakSet 
+class weakref.WeakSet([elements])

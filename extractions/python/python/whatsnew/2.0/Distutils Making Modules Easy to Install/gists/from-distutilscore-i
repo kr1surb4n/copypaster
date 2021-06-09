@@ -1,0 +1,13 @@
+# name: from distutils.core  
+from distutils.core import setup, Extension
+
+expat_extension = Extension('xml.parsers.pyexpat',
+     define_macros = [('XML_NS', None)],
+     include_dirs = [ 'extensions/expat/xmltok',
+                      'extensions/expat/xmlparse' ],
+     sources = [ 'extensions/pyexpat.c',
+                 'extensions/expat/xmltok/xmltok.c',
+                 'extensions/expat/xmltok/xmlrole.c', ]
+       )
+setup (name = "PyXML", version = "0.5.4",
+       ext_modules =[ expat_extension ] )

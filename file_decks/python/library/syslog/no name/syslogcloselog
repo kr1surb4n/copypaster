@@ -1,0 +1,2 @@
+# name: syslog.closelog 
+syslog.closelog()

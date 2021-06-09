@@ -1,0 +1,5 @@
+# name: >>> b'ab c\n\nde fg\ 
+>>> b'ab c\n\nde fg\rkl\r\n'.splitlines()
+[b'ab c', b'', b'de fg', b'kl']
+>>> b'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True)
+[b'ab c\n', b'\n', b'de fg\r', b'kl\r\n']

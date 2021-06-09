@@ -1,0 +1,2 @@
+# name: c.PyObject.ob_type 
+PyTypeObject* PyObject.ob_type

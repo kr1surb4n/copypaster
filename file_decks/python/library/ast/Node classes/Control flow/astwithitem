@@ -1,0 +1,2 @@
+# name: ast.withitem 
+class ast.withitem(context_expr, optional_vars)

@@ -1,0 +1,4 @@
+# name: numargs = argc;
+PyIm 
+numargs = argc;
+PyImport_AppendInittab("emb", &PyInit_emb);

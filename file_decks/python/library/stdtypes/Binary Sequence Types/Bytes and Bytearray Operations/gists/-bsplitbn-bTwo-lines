@@ -1,0 +1,5 @@
+# name: >>> b"".split(b'\n') 
+>>> b"".split(b'\n'), b"Two lines\n".split(b'\n')
+([b''], [b'Two lines', b''])
+>>> b"".splitlines(), b"One line\n".splitlines()
+([], [b'One line'])

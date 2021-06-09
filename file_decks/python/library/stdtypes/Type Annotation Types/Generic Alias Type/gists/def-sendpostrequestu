@@ -1,0 +1,3 @@
+# name: def send_post_reques 
+def send_post_request(url: str, body: dict[str, int]) -> None:
+    ...

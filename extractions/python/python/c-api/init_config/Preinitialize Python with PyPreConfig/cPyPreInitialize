@@ -1,0 +1,2 @@
+# name: c.Py_PreInitialize 
+PyStatus Py_PreInitialize(const PyPreConfig *preconfig)

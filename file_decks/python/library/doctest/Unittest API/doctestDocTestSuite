@@ -1,0 +1,2 @@
+# name: doctest.DocTestSuite 
+doctest.DocTestSuite(module=None, globs=None, extraglobs=None, test_finder=None, setUp=None, tearDown=None, checker=None)

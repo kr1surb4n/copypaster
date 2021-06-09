@@ -1,0 +1,10 @@
+# name: $ python -m timeit ' 
+$ python -m timeit 'try:' '  str.__bool__' 'except AttributeError:' '  pass'
+20000 loops, best of 5: 15.7 usec per loop
+$ python -m timeit 'if hasattr(str, "__bool__"): pass'
+50000 loops, best of 5: 4.26 usec per loop
+
+$ python -m timeit 'try:' '  int.__bool__' 'except AttributeError:' '  pass'
+200000 loops, best of 5: 1.43 usec per loop
+$ python -m timeit 'if hasattr(int, "__bool__"): pass'
+100000 loops, best of 5: 2.23 usec per loop

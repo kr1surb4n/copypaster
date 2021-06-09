@@ -1,0 +1,6 @@
+# name: >>> import re
+>>> p  
+>>> import re
+>>> p = re.compile('[a-z]+')
+>>> p
+re.compile('[a-z]+')

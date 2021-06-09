@@ -1,0 +1,2 @@
+# name: gc.is_tracked 
+gc.is_tracked(obj)

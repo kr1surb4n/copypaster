@@ -1,0 +1,6 @@
+# name: >>> addr4 = ipaddres 
+>>> addr4 = ipaddress.ip_address('192.0.2.1')
+>>> addr4 in ipaddress.ip_network('192.0.2.0/24')
+True
+>>> addr4 in ipaddress.ip_network('192.0.3.0/24')
+False

@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_de 
+descrsetfunc PyTypeObject.tp_descr_set

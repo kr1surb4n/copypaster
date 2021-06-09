@@ -1,0 +1,2 @@
+# name: c.PyModule_GetDef 
+PyModuleDef* PyModule_GetDef(PyObject *module)

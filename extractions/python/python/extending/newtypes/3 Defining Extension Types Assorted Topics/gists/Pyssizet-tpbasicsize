@@ -1,0 +1,2 @@
+# name: Py_ssize_t tp_basics 
+Py_ssize_t tp_basicsize, tp_itemsize; /* For allocation */

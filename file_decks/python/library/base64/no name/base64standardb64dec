@@ -1,0 +1,2 @@
+# name: base64.standard_b64d 
+base64.standard_b64decode(s)

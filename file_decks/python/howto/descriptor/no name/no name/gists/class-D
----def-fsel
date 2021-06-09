@@ -1,0 +1,5 @@
+# name: class D:
+    def f(s 
+class D:
+    def f(self, x):
+         return x

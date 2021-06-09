@@ -1,0 +1,7 @@
+# name: >>> addr4 = ipaddres 
+>>> addr4 = ipaddress.ip_address('192.0.2.1')
+>>> addr6 = ipaddress.ip_address('2001:db8::1')
+>>> addr6.version
+6
+>>> addr4.version
+4

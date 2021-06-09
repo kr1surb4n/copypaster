@@ -1,0 +1,2 @@
+# name: sublist = [ s for s  
+sublist = [ s for s in L if string.find(s, S) != -1 ]

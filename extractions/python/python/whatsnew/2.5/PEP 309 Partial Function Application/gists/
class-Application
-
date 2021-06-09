@@ -1,0 +1,9 @@
+# name: ...
+class Applicatio 
+...
+class Application:
+    def open_item(self, path):
+       ...
+    def init (self):
+        open_func = functools.partial(self.open_item, item_path)
+        popup_menu.append( ("Open", open_func, 1) )

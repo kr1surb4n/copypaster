@@ -1,0 +1,27 @@
+# name: static void
+my_deall 
+static void
+my_dealloc(PyObject *obj)
+{
+    MyObject *self = (MyObject *) obj;
+    PyObject *cbresult;
+
+    if (self->my_callback != NULL) {
+        PyObject *err_type, *err_value, *err_traceback;
+
+        /* This saves the current exception state */
+        PyErr_Fetch(&err_type, &err_value, &err_traceback);
+
+        cbresult = PyObject_CallNoArgs(self->my_callback);
+        if (cbresult == NULL)
+            PyErr_WriteUnraisable(self->my_callback);
+        else
+            Py_DECREF(cbresult);
+
+        /* This restores the saved exception state */
+        PyErr_Restore(err_type, err_value, err_traceback);
+
+        Py_DECREF(self->my_callback);
+    }
+    Py_TYPE(obj)->tp_free((PyObject*)self);
+}

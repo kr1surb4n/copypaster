@@ -1,0 +1,10 @@
+# name: >>> def foo():
+...   
+>>> def foo():
+...     try:
+...         return 'try'
+...     finally:
+...         return 'finally'
+...
+>>> foo()
+'finally'

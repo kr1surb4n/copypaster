@@ -1,0 +1,2 @@
+# name: bdb.effective 
+bdb.effective(file, line, frame)

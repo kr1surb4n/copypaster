@@ -1,0 +1,9 @@
+# name: >>> import math
+>>>  
+>>> import math
+>>> a = 5.0
+>>> b = 4.99998
+>>> math.isclose(a, b, abs_tol=0.00003)
+True
+>>> math.isclose(a, b, abs_tol=0.00001)
+False

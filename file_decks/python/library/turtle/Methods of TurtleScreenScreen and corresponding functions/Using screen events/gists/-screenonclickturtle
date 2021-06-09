@@ -1,0 +1,4 @@
+# name: >>> screen.onclick(t 
+>>> screen.onclick(turtle.goto) # Subsequently clicking into the TurtleScreen will
+>>>                             # make the turtle move to the clicked point.
+>>> screen.onclick(None)        # remove event binding again

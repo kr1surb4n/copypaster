@@ -1,0 +1,2 @@
+# name: typing.ByteString 
+class typing.ByteString(Sequence[int])

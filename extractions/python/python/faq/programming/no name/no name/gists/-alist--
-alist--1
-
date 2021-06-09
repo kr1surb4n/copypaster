@@ -1,0 +1,6 @@
+# name: >>> a_list = []
+>>>  
+>>> a_list = []
+>>> a_list += [1]
+>>> a_list
+[1]

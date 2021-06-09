@@ -1,0 +1,2 @@
+# name: os.tcsetpgrp 
+os.tcsetpgrp(fd, pg)

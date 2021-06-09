@@ -1,0 +1,3 @@
+# name: for i in range(len(f 
+for i in range(len(food)):
+    print(food[i])

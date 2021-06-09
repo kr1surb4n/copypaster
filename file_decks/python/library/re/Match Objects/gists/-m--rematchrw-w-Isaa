@@ -1,0 +1,8 @@
+# name: >>> m = re.match(r"( 
+>>> m = re.match(r"(\w+) (\w+)", "Isaac Newton, physicist")
+>>> m[0]       # The entire match
+'Isaac Newton'
+>>> m[1]       # The first parenthesized subgroup.
+'Isaac'
+>>> m[2]       # The second parenthesized subgroup.
+'Newton'

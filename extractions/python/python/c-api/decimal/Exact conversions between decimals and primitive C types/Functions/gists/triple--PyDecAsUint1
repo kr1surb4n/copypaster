@@ -1,0 +1,47 @@
+# name: triple = PyDec_AsUin 
+triple = PyDec_AsUint128Triple(dec);
+switch (triple.tag) {
+case MPD_TRIPLE_QNAN:
+    /*
+     * Success: handle a quiet NaN.
+     *   1) triple.sign is 0 or 1.
+     *   2) triple.exp is always 0.
+     *   3) If triple.hi or triple.lo are nonzero, the NaN has a payload.
+     */
+    break;
+
+case MPD_TRIPLE_SNAN:
+    /*
+     * Success: handle a signaling NaN.
+     *   1) triple.sign is 0 or 1.
+     *   2) triple.exp is always 0.
+     *   3) If triple.hi or triple.lo are nonzero, the sNaN has a payload.
+     */
+    break;
+
+case MPD_TRIPLE_INF:
+    /*
+     * Success: handle Infinity.
+     *   1) triple.sign is 0 or 1.
+     *   2) triple.exp is always 0.
+     *   3) triple.hi and triple.lo are always zero.
+     */
+    break;
+
+case MPD_TRIPLE_NORMAL:
+    /* Success: handle a finite value. */
+    break;
+
+case MPD_TRIPLE_ERROR:
+    /* TypeError check: can be omitted if the type of dec is known. */
+    if (PyErr_Occurred()) {
+        return NULL;
+    }
+
+    /* Too large for conversion.  PyDec_AsUint128Triple() does not set an
+       exception so applications can choose themselves.  Typically this
+       would be a ValueError. */
+    PyErr_SetString(PyExc_ValueError,
+        "value out of bounds for a uint128 triple");
+    return NULL;
+}

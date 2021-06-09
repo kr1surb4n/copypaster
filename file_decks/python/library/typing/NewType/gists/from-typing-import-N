@@ -1,0 +1,6 @@
+# name: from typing import N 
+from typing import NewType
+
+UserId = NewType('UserId', int)
+
+ProUserId = NewType('ProUserId', UserId)

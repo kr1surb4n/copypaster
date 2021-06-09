@@ -1,0 +1,3 @@
+# name: python setup.py bdis 
+python setup.py bdist_rpm --packager="John Doe <jdoe@example.org>" \
+                bdist_wininst --target-version="2.0"

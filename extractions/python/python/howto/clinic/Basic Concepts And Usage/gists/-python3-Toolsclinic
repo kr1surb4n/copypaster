@@ -1,0 +1,2 @@
+# name: $ python3 Tools/clin 
+$ python3 Tools/clinic/clinic.py foo.c

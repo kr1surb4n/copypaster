@@ -1,0 +1,2 @@
+# name: bytes.find 
+bytes.find(sub[, start[, end]])

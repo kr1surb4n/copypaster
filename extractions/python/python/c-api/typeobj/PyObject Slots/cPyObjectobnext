@@ -1,0 +1,2 @@
+# name: c.PyObject._ob_next 
+PyObject* PyObject._ob_next

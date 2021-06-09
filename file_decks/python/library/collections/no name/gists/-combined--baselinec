@@ -1,0 +1,5 @@
+# name: >>> combined = basel 
+>>> combined = baseline.copy()
+>>> combined.update(adjustments)
+>>> list(combined)
+['music', 'art', 'opera']

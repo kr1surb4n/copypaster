@@ -1,0 +1,2 @@
+# name: multiprocessing.Proc 
+multiprocessing.Process.close

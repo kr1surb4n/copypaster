@@ -1,0 +1,7 @@
+# name: >>> side_effect = la 
+>>> side_effect = lambda value: value + 1
+>>> mock = Mock(side_effect=side_effect)
+>>> mock(3)
+4
+>>> mock(-8)
+-7

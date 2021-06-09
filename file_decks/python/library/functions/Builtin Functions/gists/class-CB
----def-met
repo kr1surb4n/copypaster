@@ -1,0 +1,6 @@
+# name: class C(B):
+    def  
+class C(B):
+    def method(self, arg):
+        super().method(arg)    # This does the same thing as:
+                               # super(C, self).method(arg)

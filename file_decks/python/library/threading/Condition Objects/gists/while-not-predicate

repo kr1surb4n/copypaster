@@ -1,0 +1,3 @@
+# name: while not predicate( 
+while not predicate():
+    cv.wait()

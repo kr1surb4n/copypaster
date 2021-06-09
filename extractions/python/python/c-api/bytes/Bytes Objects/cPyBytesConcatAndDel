@@ -1,0 +1,2 @@
+# name: c.PyBytes_ConcatAndD 
+void PyBytes_ConcatAndDel(PyObject **bytes, PyObject *newpart)

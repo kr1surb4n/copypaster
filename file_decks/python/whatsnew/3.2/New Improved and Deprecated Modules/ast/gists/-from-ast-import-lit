@@ -1,0 +1,12 @@
+# name: >>> from ast import  
+>>> from ast import literal_eval
+
+>>> request = "{'req': 3, 'func': 'pow', 'args': (2, 0.5)}"
+>>> literal_eval(request)
+{'args': (2, 0.5), 'req': 3, 'func': 'pow'}
+
+>>> request = "os.system('do something harmful')"
+>>> literal_eval(request)
+Traceback (most recent call last):
+  ...
+ValueError: malformed node or string: <_ast.Call object at 0x101739a10>

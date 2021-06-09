@@ -1,0 +1,2 @@
+# name: linecache.checkcache 
+linecache.checkcache(filename=None)

@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.over 
+NNTP.over(message_spec, *, file=None)

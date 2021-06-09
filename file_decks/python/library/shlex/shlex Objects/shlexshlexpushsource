@@ -1,0 +1,2 @@
+# name: shlex.shlex.push_sou 
+shlex.push_source(newstream, newfile=None)

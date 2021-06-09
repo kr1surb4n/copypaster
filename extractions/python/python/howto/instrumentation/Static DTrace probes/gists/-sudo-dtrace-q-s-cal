@@ -1,0 +1,2 @@
+# name: $ sudo dtrace -q -s  
+$ sudo dtrace -q -s call_stack.d -c "python3.6 script.py"

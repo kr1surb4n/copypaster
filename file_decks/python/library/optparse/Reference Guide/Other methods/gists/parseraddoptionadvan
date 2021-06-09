@@ -1,0 +1,7 @@
+# name: parser.add_option("- 
+parser.add_option("--advanced", action="store_const",
+                  dest="mode", const="advanced",
+                  default="novice")    # overridden below
+parser.add_option("--novice", action="store_const",
+                  dest="mode", const="novice",
+                  default="advanced")  # overrides above setting

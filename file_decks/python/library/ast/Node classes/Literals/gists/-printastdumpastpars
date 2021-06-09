@@ -1,0 +1,10 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('{"a":1, **d}', mode='eval'), indent=4))
+Expression(
+    body=Dict(
+        keys=[
+            Constant(value='a'),
+            None],
+        values=[
+            Constant(value=1),
+            Name(id='d', ctx=Load())]))

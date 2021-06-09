@@ -1,0 +1,2 @@
+# name: heapq.merge 
+heapq.merge(*iterables, key=None, reverse=False)

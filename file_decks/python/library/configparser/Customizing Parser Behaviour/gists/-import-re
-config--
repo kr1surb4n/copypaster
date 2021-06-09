@@ -1,0 +1,19 @@
+# name: >>> import re
+>>> co 
+>>> import re
+>>> config = """
+... [Section 1]
+... option = value
+...
+... [  Section 2  ]
+... another = val
+... """
+>>> typical = configparser.ConfigParser()
+>>> typical.read_string(config)
+>>> typical.sections()
+['Section 1', '  Section 2  ']
+>>> custom = configparser.ConfigParser()
+>>> custom.SECTCRE = re.compile(r"\[ *(?P<header>[^]]+?) *\]")
+>>> custom.read_string(config)
+>>> custom.sections()
+['Section 1', 'Section 2']

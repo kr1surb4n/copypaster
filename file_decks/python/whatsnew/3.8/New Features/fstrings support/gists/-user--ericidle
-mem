@@ -1,0 +1,5 @@
+# name: >>> user = 'eric_idl 
+>>> user = 'eric_idle'
+>>> member_since = date(1975, 7, 31)
+>>> f'{user=} {member_since=}'
+"user='eric_idle' member_since=datetime.date(1975, 7, 31)"

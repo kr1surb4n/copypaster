@@ -1,0 +1,20 @@
+# name: class Movie:
+    tab 
+class Movie:
+    table = 'Movies'                    # Table name
+    key = 'title'                       # Primary key
+    director = Field()
+    year = Field()
+
+    def __init__(self, key):
+        self.key = key
+
+class Song:
+    table = 'Music'
+    key = 'title'
+    artist = Field()
+    year = Field()
+    genre = Field()
+
+    def __init__(self, key):
+        self.key = key

@@ -1,0 +1,9 @@
+# name: sem = asyncio.Semaph 
+sem = asyncio.Semaphore(10)
+
+# ... later
+await sem.acquire()
+try:
+    # work with shared resource
+finally:
+    sem.release()

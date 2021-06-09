@@ -1,0 +1,2 @@
+# name: io.RawIOBase.readint 
+io.RawIOBase.readinto

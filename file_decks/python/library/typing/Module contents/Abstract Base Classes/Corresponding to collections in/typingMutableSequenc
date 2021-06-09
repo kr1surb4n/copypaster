@@ -1,0 +1,2 @@
+# name: typing.MutableSequen 
+class typing.MutableSequence(Sequence[T])

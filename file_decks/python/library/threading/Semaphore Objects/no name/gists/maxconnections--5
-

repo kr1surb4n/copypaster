@@ -1,0 +1,5 @@
+# name: maxconnections = 5
+# 
+maxconnections = 5
+# ...
+pool_sema = BoundedSemaphore(value=maxconnections)

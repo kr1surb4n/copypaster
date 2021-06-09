@@ -1,0 +1,6 @@
+# name: >>> import hmac, has 
+>>> import hmac, hashlib
+>>> m = hmac.new(b'secret key', digestmod=hashlib.blake2s)
+>>> m.update(b'message')
+>>> m.hexdigest()
+'e3c8102868d28b5ff85fc35dda07329970d1a01e273c37481326fe0c861c8142'

@@ -1,0 +1,2 @@
+# name: pkgutil.get_data 
+pkgutil.get_data(package, resource)

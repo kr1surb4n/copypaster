@@ -1,0 +1,2 @@
+# name: os.fpathconf 
+os.fpathconf(fd, name)

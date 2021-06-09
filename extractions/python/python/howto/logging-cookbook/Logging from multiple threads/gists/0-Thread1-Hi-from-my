@@ -1,0 +1,18 @@
+# name: 0 Thread-1 Hi from m 
+0 Thread-1 Hi from myfunc
+   3 MainThread Hello from main
+ 505 Thread-1 Hi from myfunc
+ 755 MainThread Hello from main
+1007 Thread-1 Hi from myfunc
+1507 MainThread Hello from main
+1508 Thread-1 Hi from myfunc
+2010 Thread-1 Hi from myfunc
+2258 MainThread Hello from main
+2512 Thread-1 Hi from myfunc
+3009 MainThread Hello from main
+3013 Thread-1 Hi from myfunc
+3515 Thread-1 Hi from myfunc
+3761 MainThread Hello from main
+4017 Thread-1 Hi from myfunc
+4513 MainThread Hello from main
+4518 Thread-1 Hi from myfunc

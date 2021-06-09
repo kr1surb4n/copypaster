@@ -1,0 +1,2 @@
+# name: smtplib.SMTP_SSL 
+class smtplib.SMTP_SSL(host='', port=0, local_hostname=None, keyfile=None, certfile=None, [timeout, ]context=None, source_address=None)

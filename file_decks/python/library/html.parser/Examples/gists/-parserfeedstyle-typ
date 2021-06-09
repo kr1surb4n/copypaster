@@ -1,0 +1,13 @@
+# name: >>> parser.feed('<st 
+>>> parser.feed('<style type="text/css">#python { color: green }</style>')
+Start tag: style
+     attr: ('type', 'text/css')
+Data     : #python { color: green }
+End tag  : style
+
+>>> parser.feed('<script type="text/javascript">'
+...             'alert("<strong>hello!</strong>");</script>')
+Start tag: script
+     attr: ('type', 'text/javascript')
+Data     : alert("<strong>hello!</strong>");
+End tag  : script

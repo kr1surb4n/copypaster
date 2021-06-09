@@ -1,0 +1,11 @@
+# name: from contextlib impo 
+from contextlib import contextmanager
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+@contextmanager
+def track_entry_and_exit(name):
+    logging.info('Entering: %s', name)
+    yield
+    logging.info('Exiting: %s', name)

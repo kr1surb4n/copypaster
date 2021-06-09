@@ -1,0 +1,5 @@
+# name: >>> math.perm(10, 3) 
+>>> math.perm(10, 3)    # Permutations of 10 things taken 3 at a time
+720
+>>> math.comb(10, 3)    # Combinations of 10 things taken 3 at a time
+120

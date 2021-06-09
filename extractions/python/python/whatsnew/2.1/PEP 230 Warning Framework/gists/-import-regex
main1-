@@ -1,0 +1,6 @@
+# name: >>> import regex
+__m 
+>>> import regex
+__main__:1: DeprecationWarning: the regex module
+         is deprecated; please use the re module
+>>>

@@ -1,0 +1,2 @@
+# name: del elem.attrib[name 
+del elem.attrib[name]

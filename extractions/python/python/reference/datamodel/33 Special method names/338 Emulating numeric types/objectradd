@@ -1,0 +1,2 @@
+# name: object.__radd__ 
+object.__radd__(self, other)

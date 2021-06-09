@@ -1,0 +1,2 @@
+# name: c.sendfunc 
+PySendResult (*sendfunc)(PyObject *, PyObject *, PyObject **)

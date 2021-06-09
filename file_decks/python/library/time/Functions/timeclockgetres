@@ -1,0 +1,2 @@
+# name: time.clock_getres 
+time.clock_getres(clk_id)

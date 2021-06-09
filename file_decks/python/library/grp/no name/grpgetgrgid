@@ -1,0 +1,2 @@
+# name: grp.getgrgid 
+grp.getgrgid(gid)

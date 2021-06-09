@@ -1,0 +1,2 @@
+# name: c.PyBool_Check 
+int PyBool_Check(PyObject *o)

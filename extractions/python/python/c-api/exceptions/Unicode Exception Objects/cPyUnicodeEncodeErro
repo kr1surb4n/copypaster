@@ -1,0 +1,2 @@
+# name: c.PyUnicodeEncodeErr 
+PyObject* PyUnicodeEncodeError_Create(const char *encoding, const Py_UNICODE *object, Py_ssize_t length, Py_ssize_t start, Py_ssize_t end, const char *reason)

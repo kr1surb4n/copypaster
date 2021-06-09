@@ -1,0 +1,4 @@
+# name: reprfunc tp_repr;
+re 
+reprfunc tp_repr;
+reprfunc tp_str;

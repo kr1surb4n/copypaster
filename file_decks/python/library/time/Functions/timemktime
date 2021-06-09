@@ -1,0 +1,2 @@
+# name: time.mktime 
+time.mktime(t)

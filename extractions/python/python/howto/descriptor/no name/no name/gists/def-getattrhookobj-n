@@ -1,0 +1,9 @@
+# name: def getattr_hook(obj 
+def getattr_hook(obj, name):
+    "Emulate slot_tp_getattr_hook() in Objects/typeobject.c"
+    try:
+        return obj.__getattribute__(name)
+    except AttributeError:
+        if not hasattr(type(obj), '__getattr__'):
+            raise
+    return type(obj).__getattr__(obj, name)             # __getattr__

@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_is 
+inquiry PyTypeObject.tp_is_gc

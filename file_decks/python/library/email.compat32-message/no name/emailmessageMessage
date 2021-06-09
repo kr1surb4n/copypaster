@@ -1,0 +1,2 @@
+# name: email.message.Messag 
+class email.message.Message(policy=compat32)

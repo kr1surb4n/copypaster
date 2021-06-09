@@ -1,0 +1,4 @@
+# name: def test_main():
+    
+def test_main():
+    support.run_unittest(__name__)

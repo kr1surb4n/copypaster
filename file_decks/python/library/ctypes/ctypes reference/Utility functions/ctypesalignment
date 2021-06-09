@@ -1,0 +1,2 @@
+# name: ctypes.alignment 
+ctypes.alignment(obj_or_type)

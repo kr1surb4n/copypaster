@@ -1,0 +1,5 @@
+# name: >>> con = sqlite3.co 
+>>> con = sqlite3.connect(":memory:")
+>>> cur = con.cursor()
+>>> cur.connection == con
+True

@@ -1,0 +1,2 @@
+# name: ftplib.FTP.sendcmd 
+FTP.sendcmd(cmd)

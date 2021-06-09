@@ -1,0 +1,2 @@
+# name: sqlite3.complete_sta 
+sqlite3.complete_statement(sql)

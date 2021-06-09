@@ -1,0 +1,16 @@
+# name: amk@nyman:~/src/pyth 
+amk@nyman:~/src/python$ unzip -l /tmp/example.zip
+Archive:  /tmp/example.zip
+  Length     Date   Time    Name
+ --------    ----   ----    ----
+     8467  11-26-02 22:30   jwzthreading.py
+ --------                   -------
+     8467                   1 file
+amk@nyman:~/src/python$ ./python
+Python 2.3 (#1, Aug 1 2003, 19:54:32)
+>>> import sys
+>>> sys.path.insert(0, '/tmp/example.zip')  # Add .zip file to front of path
+>>> import jwzthreading
+>>> jwzthreading.__file__
+'/tmp/example.zip/jwzthreading.py'
+>>>

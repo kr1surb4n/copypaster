@@ -1,0 +1,2 @@
+# name: ipaddress.IPv6Networ 
+ipaddress.IPv6Network.is_site_local

@@ -1,0 +1,4 @@
+# name: >>> import spam
+>>>  
+>>> import spam
+>>> status = spam.system("ls -l")

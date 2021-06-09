@@ -1,0 +1,4 @@
+# name: parser = OptionParse 
+parser = OptionParser(conflict_handler="resolve")
+parser.add_option("-n", "--dry-run", ..., help="do no harm")
+parser.add_option("-n", "--noisy", ..., help="be noisy")

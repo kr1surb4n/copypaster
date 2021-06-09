@@ -1,0 +1,4 @@
+# name: import a, doctest
+pr 
+import a, doctest
+print(doctest.testsource(a, "a.f"))

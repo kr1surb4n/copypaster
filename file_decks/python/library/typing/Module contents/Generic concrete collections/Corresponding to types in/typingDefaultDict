@@ -1,0 +1,2 @@
+# name: typing.DefaultDict 
+class typing.DefaultDict(collections.defaultdict, MutableMapping[KT, VT])

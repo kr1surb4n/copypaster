@@ -1,0 +1,8 @@
+# name: >>> turtle.penup()
+> 
+>>> turtle.penup()
+>>> turtle.isdown()
+False
+>>> turtle.pendown()
+>>> turtle.isdown()
+True

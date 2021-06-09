@@ -1,0 +1,4 @@
+# name: class C:
+    builtin 
+class C:
+    builtin_open = staticmethod(open)

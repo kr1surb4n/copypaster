@@ -1,0 +1,6 @@
+# name: >>> bar.values = (c_ 
+>>> bar.values = (c_byte * 4)()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: incompatible types, c_byte_Array_4 instance instead of LP_c_long instance
+>>>

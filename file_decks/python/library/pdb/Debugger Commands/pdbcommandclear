@@ -1,0 +1,2 @@
+# name: pdbcommand-clear 
+cl(ear) [filename:lineno | bpnumber ...]

@@ -1,0 +1,12 @@
+# name: import asyncio
+
+asyn 
+import asyncio
+
+async def test():
+    print("never scheduled")
+
+async def main():
+    test()
+
+asyncio.run(main())

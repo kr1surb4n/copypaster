@@ -1,0 +1,8 @@
+# name: >>> from math import 
+>>> from math import pi, cos
+>>> Fraction(cos(pi/3))
+Fraction(4503599627370497, 9007199254740992)
+>>> Fraction(cos(pi/3)).limit_denominator()
+Fraction(1, 2)
+>>> Fraction(1.1).limit_denominator()
+Fraction(11, 10)

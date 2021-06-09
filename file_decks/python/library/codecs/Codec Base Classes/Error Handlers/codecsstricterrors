@@ -1,0 +1,2 @@
+# name: codecs.strict_errors 
+codecs.strict_errors(exception)

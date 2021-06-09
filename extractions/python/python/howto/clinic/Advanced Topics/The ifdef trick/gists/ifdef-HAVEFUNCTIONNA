@@ -1,0 +1,11 @@
+# name: #ifdef HAVE_FUNCTION 
+#ifdef HAVE_FUNCTIONNAME
+/*[clinic input]
+module.functionname
+...
+[clinic start generated code]*/
+static module_functionname(...)
+{
+...
+}
+#endif /* HAVE_FUNCTIONNAME */

@@ -1,0 +1,7 @@
+# name: coro 2: waiting for  
+coro 2: waiting for lock
+coro 2: holding the lock
+coro 1: waiting for lock
+coro 2: releasing the lock
+coro 1: holding the lock
+coro 1: releasing the lock

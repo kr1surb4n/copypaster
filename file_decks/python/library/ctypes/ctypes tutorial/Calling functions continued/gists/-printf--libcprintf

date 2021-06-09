@@ -1,0 +1,16 @@
+# name: >>> printf = libc.pr 
+>>> printf = libc.printf
+>>> printf(b"Hello, %s\n", b"World!")
+Hello, World!
+14
+>>> printf(b"Hello, %S\n", "World!")
+Hello, World!
+14
+>>> printf(b"%d bottles of beer\n", 42)
+42 bottles of beer
+19
+>>> printf(b"%f bottles of beer\n", 42.5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ArgumentError: argument 2: exceptions.TypeError: Don't know how to convert parameter 2
+>>>

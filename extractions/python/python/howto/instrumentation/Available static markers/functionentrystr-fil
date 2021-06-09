@@ -1,0 +1,2 @@
+# name: function__entry(str  
+function__entry(str filename, str funcname, int lineno)

@@ -1,0 +1,2 @@
+# name: c.PyMapping_GetItemS 
+PyObject* PyMapping_GetItemString(PyObject *o, const char *key)

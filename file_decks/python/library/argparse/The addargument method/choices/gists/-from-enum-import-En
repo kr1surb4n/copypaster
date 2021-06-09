@@ -1,0 +1,11 @@
+# name: >>> from enum import 
+>>> from enum import Enum
+>>> class GameMove(Enum):
+...     ROCK = 'rock'
+...     PAPER = 'paper'
+...     SCISSORS = 'scissors'
+...
+>>> parser = argparse.ArgumentParser(prog='game.py')
+>>> parser.add_argument('move', type=GameMove, choices=GameMove)
+>>> parser.parse_args(['rock'])
+Namespace(move=<GameMove.ROCK: 'rock'>)

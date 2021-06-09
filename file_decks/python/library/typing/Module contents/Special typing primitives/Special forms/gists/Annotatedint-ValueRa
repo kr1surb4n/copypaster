@@ -1,0 +1,4 @@
+# name: Annotated[int, Value 
+Annotated[int, ValueRange(3, 10)] != Annotated[
+    int, ValueRange(3, 10), ValueRange(3, 10)
+]

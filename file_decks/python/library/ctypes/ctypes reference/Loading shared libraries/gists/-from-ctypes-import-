@@ -1,0 +1,7 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import CDLL
+>>> libc = CDLL("libc.so.6")  # On Linux
+>>> libc.time == libc.time
+True
+>>> libc['time'] == libc['time']
+False

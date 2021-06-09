@@ -1,0 +1,2 @@
+# name: python3 -m pdb myscr 
+python3 -m pdb myscript.py

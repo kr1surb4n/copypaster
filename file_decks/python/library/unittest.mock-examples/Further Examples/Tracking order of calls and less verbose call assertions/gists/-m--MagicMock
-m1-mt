@@ -1,0 +1,7 @@
+# name: >>> m = MagicMock()
+ 
+>>> m = MagicMock()
+>>> m(1), m.two(2, 3), m.seven(7), m.fifty('50')
+(...)
+>>> calls = [call.fifty('50'), call(1), call.seven(7)]
+>>> m.assert_has_calls(calls, any_order=True)

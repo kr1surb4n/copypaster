@@ -1,0 +1,4 @@
+# name: >>> mode("logo")   # 
+>>> mode("logo")   # resets turtle heading to north
+>>> mode()
+'logo'

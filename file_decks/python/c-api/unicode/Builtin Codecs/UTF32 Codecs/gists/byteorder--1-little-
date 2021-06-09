@@ -1,0 +1,4 @@
+# name: byteorder == -1: lit 
+byteorder == -1: little endian
+byteorder == 0:  native byte order (writes a BOM mark)
+byteorder == 1:  big endian

@@ -1,0 +1,8 @@
+# name: @foo
+@bar
+class A:
+  
+@foo
+@bar
+class A:
+  pass

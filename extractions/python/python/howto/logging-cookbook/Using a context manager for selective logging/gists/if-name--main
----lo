@@ -1,0 +1,15 @@
+# name: if __name__ == '__ma 
+if __name__ == '__main__':
+    logger = logging.getLogger('foo')
+    logger.addHandler(logging.StreamHandler())
+    logger.setLevel(logging.INFO)
+    logger.info('1. This should appear just once on stderr.')
+    logger.debug('2. This should not appear.')
+    with LoggingContext(logger, level=logging.DEBUG):
+        logger.debug('3. This should appear once on stderr.')
+    logger.debug('4. This should not appear.')
+    h = logging.StreamHandler(sys.stdout)
+    with LoggingContext(logger, level=logging.DEBUG, handler=h, close=True):
+        logger.debug('5. This should appear twice - once on stderr and once on stdout.')
+    logger.info('6. This should appear just once on stderr.')
+    logger.debug('7. This should not appear.')

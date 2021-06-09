@@ -1,0 +1,23 @@
+# name: >>> import traceback 
+>>> import traceback
+>>> def another_function():
+...     lumberstack()
+...
+>>> def lumberstack():
+...     traceback.print_stack()
+...     print(repr(traceback.extract_stack()))
+...     print(repr(traceback.format_stack()))
+...
+>>> another_function()
+  File "<doctest>", line 10, in <module>
+    another_function()
+  File "<doctest>", line 3, in another_function
+    lumberstack()
+  File "<doctest>", line 6, in lumberstack
+    traceback.print_stack()
+[('<doctest>', 10, '<module>', 'another_function()'),
+ ('<doctest>', 3, 'another_function', 'lumberstack()'),
+ ('<doctest>', 7, 'lumberstack', 'print(repr(traceback.extract_stack()))')]
+['  File "<doctest>", line 10, in <module>\n    another_function()\n',
+ '  File "<doctest>", line 3, in another_function\n    lumberstack()\n',
+ '  File "<doctest>", line 8, in lumberstack\n    print(repr(traceback.format_stack()))\n']

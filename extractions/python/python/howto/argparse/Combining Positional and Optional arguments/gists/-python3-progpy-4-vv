@@ -1,0 +1,10 @@
+# name: $ python3 prog.py 4  
+$ python3 prog.py 4 -vvv
+the square of 4 equals 16
+$ python3 prog.py 4 -vvvv
+the square of 4 equals 16
+$ python3 prog.py 4
+Traceback (most recent call last):
+  File "prog.py", line 11, in <module>
+    if args.verbosity >= 2:
+TypeError: '>=' not supported between instances of 'NoneType' and 'int'

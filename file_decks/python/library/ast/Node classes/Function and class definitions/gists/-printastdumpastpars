@@ -1,0 +1,24 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse("""\
+... @decorator1
+... @decorator2
+... class Foo(base1, base2, metaclass=meta):
+...     pass
+... """), indent=4))
+Module(
+    body=[
+        ClassDef(
+            name='Foo',
+            bases=[
+                Name(id='base1', ctx=Load()),
+                Name(id='base2', ctx=Load())],
+            keywords=[
+                keyword(
+                    arg='metaclass',
+                    value=Name(id='meta', ctx=Load()))],
+            body=[
+                Pass()],
+            decorator_list=[
+                Name(id='decorator1', ctx=Load()),
+                Name(id='decorator2', ctx=Load())])],
+    type_ignores=[])

@@ -1,0 +1,2 @@
+# name: winreg.QueryInfoKey 
+winreg.QueryInfoKey(key)

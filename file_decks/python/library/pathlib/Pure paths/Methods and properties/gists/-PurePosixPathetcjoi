@@ -1,0 +1,9 @@
+# name: >>> PurePosixPath('/ 
+>>> PurePosixPath('/etc').joinpath('passwd')
+PurePosixPath('/etc/passwd')
+>>> PurePosixPath('/etc').joinpath(PurePosixPath('passwd'))
+PurePosixPath('/etc/passwd')
+>>> PurePosixPath('/etc').joinpath('init.d', 'apache2')
+PurePosixPath('/etc/init.d/apache2')
+>>> PureWindowsPath('c:').joinpath('/Program Files')
+PureWindowsPath('c:/Program Files')

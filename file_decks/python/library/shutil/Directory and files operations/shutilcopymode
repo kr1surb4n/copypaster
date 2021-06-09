@@ -1,0 +1,2 @@
+# name: shutil.copymode 
+shutil.copymode(src, dst, *, follow_symlinks=True)

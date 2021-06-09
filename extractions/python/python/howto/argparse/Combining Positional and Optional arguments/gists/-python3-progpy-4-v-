@@ -1,0 +1,14 @@
+# name: $ python3 prog.py 4  
+$ python3 prog.py 4 -v 3
+usage: prog.py [-h] [-v {0,1,2}] square
+prog.py: error: argument -v/--verbosity: invalid choice: 3 (choose from 0, 1, 2)
+$ python3 prog.py 4 -h
+usage: prog.py [-h] [-v {0,1,2}] square
+
+positional arguments:
+  square                display a square of a given number
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -v {0,1,2}, --verbosity {0,1,2}
+                        increase output verbosity

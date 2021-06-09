@@ -1,0 +1,12 @@
+# name: $ python3 prog.py -- 
+$ python3 prog.py --verbose
+verbosity turned on
+$ python3 prog.py --verbose 1
+usage: prog.py [-h] [--verbose]
+prog.py: error: unrecognized arguments: 1
+$ python3 prog.py --help
+usage: prog.py [-h] [--verbose]
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --verbose   increase output verbosity

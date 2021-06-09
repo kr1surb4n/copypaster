@@ -1,0 +1,6 @@
+# name: import importlib
+
+it 
+import importlib
+
+itertools = importlib.import_module('itertools')

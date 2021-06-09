@@ -1,0 +1,2 @@
+# name: c.PyThread_tss_alloc 
+Py_tss_t* PyThread_tss_alloc()

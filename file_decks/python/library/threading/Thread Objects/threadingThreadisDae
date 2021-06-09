@@ -1,0 +1,2 @@
+# name: threading.Thread.isD 
+threading.Thread.isDaemon

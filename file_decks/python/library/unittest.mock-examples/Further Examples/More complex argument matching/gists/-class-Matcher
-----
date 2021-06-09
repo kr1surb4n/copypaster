@@ -1,0 +1,9 @@
+# name: >>> class Matcher:
+. 
+>>> class Matcher:
+...     def __init__(self, compare, some_obj):
+...         self.compare = compare
+...         self.some_obj = some_obj
+...     def __eq__(self, other):
+...         return self.compare(self.some_obj, other)
+...

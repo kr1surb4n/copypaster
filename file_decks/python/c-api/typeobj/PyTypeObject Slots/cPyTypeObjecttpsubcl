@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_su 
+PyObject* PyTypeObject.tp_subclasses

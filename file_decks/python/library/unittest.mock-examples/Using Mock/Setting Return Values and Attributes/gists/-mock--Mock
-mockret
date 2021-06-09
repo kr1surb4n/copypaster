@@ -1,0 +1,6 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.return_value = 3
+>>> mock()
+3

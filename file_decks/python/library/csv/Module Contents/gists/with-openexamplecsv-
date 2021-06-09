@@ -1,0 +1,6 @@
+# name: with open('example.c 
+with open('example.csv', newline='') as csvfile:
+    dialect = csv.Sniffer().sniff(csvfile.read(1024))
+    csvfile.seek(0)
+    reader = csv.reader(csvfile, dialect)
+    # ... process CSV file contents here ...

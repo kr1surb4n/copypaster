@@ -1,0 +1,11 @@
+# name: #include "pydecimal. 
+#include "pydecimal.h"
+
+static int decimal_initialized = 0;
+if (!decimal_initialized) {
+    if (import_decimal() < 0) {
+        return NULL;
+    }
+
+    decimal_initialized = 1;
+}

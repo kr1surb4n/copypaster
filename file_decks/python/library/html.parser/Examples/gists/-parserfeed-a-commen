@@ -1,0 +1,5 @@
+# name: >>> parser.feed('<!- 
+>>> parser.feed('<!-- a comment -->'
+...             '<!--[if IE 9]>IE-specific content<![endif]-->')
+Comment  :  a comment
+Comment  : [if IE 9]>IE-specific content<![endif]

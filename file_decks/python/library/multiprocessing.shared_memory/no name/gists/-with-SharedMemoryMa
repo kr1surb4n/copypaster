@@ -1,0 +1,11 @@
+# name: >>> with SharedMemor 
+>>> with SharedMemoryManager() as smm:
+...     sl = smm.ShareableList(range(2000))
+...     # Divide the work among two processes, storing partial results in sl
+...     p1 = Process(target=do_work, args=(sl, 0, 1000))
+...     p2 = Process(target=do_work, args=(sl, 1000, 2000))
+...     p1.start()
+...     p2.start()  # A multiprocessing.Pool might be more efficient
+...     p1.join()
+...     p2.join()   # Wait for all work to complete in both processes
+...     total_result = sum(sl)  # Consolidate the partial results now in sl

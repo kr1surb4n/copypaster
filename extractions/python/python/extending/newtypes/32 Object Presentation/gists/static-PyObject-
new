@@ -1,0 +1,8 @@
+# name: static PyObject *
+ne 
+static PyObject *
+newdatatype_str(newdatatypeobject * obj)
+{
+    return PyUnicode_FromFormat("Stringified_newdatatype{{size:%d}}",
+                                obj->obj_UnderlyingDatatypePtr->size);
+}

@@ -1,0 +1,2 @@
+# name: heapq.nsmallest 
+heapq.nsmallest(n, iterable, key=None)

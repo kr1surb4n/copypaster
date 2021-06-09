@@ -1,0 +1,2 @@
+# name: getpass.getpass 
+getpass.getpass(prompt='Password: ', stream=None)

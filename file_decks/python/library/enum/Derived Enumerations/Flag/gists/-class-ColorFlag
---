@@ -1,0 +1,11 @@
+# name: >>> class Color(Flag 
+>>> class Color(Flag):
+...     BLACK = 0
+...     RED = auto()
+...     BLUE = auto()
+...     GREEN = auto()
+...
+>>> Color.BLACK
+<Color.BLACK: 0>
+>>> bool(Color.BLACK)
+False

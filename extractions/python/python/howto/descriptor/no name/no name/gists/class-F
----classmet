@@ -1,0 +1,11 @@
+# name: class F:
+    @classm 
+class F:
+    @classmethod
+    def f(cls, x):
+        return cls.__name__, x
+
+>>> print(F.f(3))
+('F', 3)
+>>> print(F().f(3))
+('F', 3)

@@ -1,0 +1,2 @@
+# name: poplib.POP3_SSL 
+class poplib.POP3_SSL(host, port=POP3_SSL_PORT, keyfile=None, certfile=None, timeout=None, context=None)

@@ -1,0 +1,4 @@
+# name: >>> p = re.compile(r 
+>>> p = re.compile(r'\b(?P<word>\w+)\s+(?P=word)\b')
+>>> p.search('Paris in the the spring').group()
+'the the'

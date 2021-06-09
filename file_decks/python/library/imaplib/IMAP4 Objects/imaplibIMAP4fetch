@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.fetch 
+IMAP4.fetch(message_set, message_parts)

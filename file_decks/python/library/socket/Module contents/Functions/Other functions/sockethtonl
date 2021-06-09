@@ -1,0 +1,2 @@
+# name: socket.htonl 
+socket.htonl(x)

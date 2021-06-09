@@ -1,0 +1,2 @@
+# name: tty.setraw 
+tty.setraw(fd, when=termios.TCSAFLUSH)

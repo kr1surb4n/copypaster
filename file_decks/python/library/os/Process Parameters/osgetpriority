@@ -1,0 +1,2 @@
+# name: os.getpriority 
+os.getpriority(which, who)

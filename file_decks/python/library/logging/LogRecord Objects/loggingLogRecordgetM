@@ -1,0 +1,2 @@
+# name: logging.LogRecord.ge 
+logging.LogRecord.getMessage

@@ -1,0 +1,2 @@
+# name: c.PyList_GetItem 
+PyObject* PyList_GetItem(PyObject *list, Py_ssize_t index)

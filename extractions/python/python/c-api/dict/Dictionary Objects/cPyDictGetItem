@@ -1,0 +1,2 @@
+# name: c.PyDict_GetItem 
+PyObject* PyDict_GetItem(PyObject *p, PyObject *key)

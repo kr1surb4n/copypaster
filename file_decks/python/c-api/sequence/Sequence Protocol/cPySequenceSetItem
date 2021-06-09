@@ -1,0 +1,2 @@
+# name: c.PySequence_SetItem 
+int PySequence_SetItem(PyObject *o, Py_ssize_t i, PyObject *v)

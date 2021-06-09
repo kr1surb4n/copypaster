@@ -1,0 +1,2 @@
+# name: c.PySys_GetObject 
+PyObject *PySys_GetObject(const char *name)

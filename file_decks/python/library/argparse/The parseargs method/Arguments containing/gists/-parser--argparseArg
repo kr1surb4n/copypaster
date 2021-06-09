@@ -1,0 +1,30 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG')
+>>> parser.add_argument('-x')
+>>> parser.add_argument('foo', nargs='?')
+
+>>> # no negative number options, so -1 is a positional argument
+>>> parser.parse_args(['-x', '-1'])
+Namespace(foo=None, x='-1')
+
+>>> # no negative number options, so -1 and -5 are positional arguments
+>>> parser.parse_args(['-x', '-1', '-5'])
+Namespace(foo='-5', x='-1')
+
+>>> parser = argparse.ArgumentParser(prog='PROG')
+>>> parser.add_argument('-1', dest='one')
+>>> parser.add_argument('foo', nargs='?')
+
+>>> # negative number options present, so -1 is an option
+>>> parser.parse_args(['-1', 'X'])
+Namespace(foo=None, one='X')
+
+>>> # negative number options present, so -2 is an option
+>>> parser.parse_args(['-2'])
+usage: PROG [-h] [-1 ONE] [foo]
+PROG: error: no such option: -2
+
+>>> # negative number options present, so both -1s are options
+>>> parser.parse_args(['-1', '-1'])
+usage: PROG [-h] [-1 ONE] [foo]
+PROG: error: argument -1: expected one argument

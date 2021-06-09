@@ -1,0 +1,4 @@
+# name: fred.pack()          
+fred.pack()                     # defaults to side = "top"
+fred.pack(side="left")
+fred.pack(expand=1)

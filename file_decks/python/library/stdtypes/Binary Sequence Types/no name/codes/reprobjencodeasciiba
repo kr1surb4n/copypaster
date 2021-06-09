@@ -1,0 +1,2 @@
+# name: repr(obj).encode('as 
+repr(obj).encode('ascii','backslashreplace)).

@@ -1,0 +1,2 @@
+# name: decimal.Decimal.is_n 
+decimal.Decimal.is_nan

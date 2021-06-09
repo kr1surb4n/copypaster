@@ -1,0 +1,4 @@
+# name: data = pickle.dumps( 
+data = pickle.dumps(record_attr_dict, 1)
+datalen = struct.pack('>L', len(data))
+return datalen + data

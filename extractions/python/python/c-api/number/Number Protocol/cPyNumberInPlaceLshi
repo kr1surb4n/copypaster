@@ -1,0 +1,2 @@
+# name: c.PyNumber_InPlaceLs 
+PyObject* PyNumber_InPlaceLshift(PyObject *o1, PyObject *o2)

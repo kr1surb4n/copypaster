@@ -1,0 +1,5 @@
+# name: >>> isinstance([1, 2 
+>>> isinstance([1, 2], list[str])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: isinstance() argument 2 cannot be a parameterized generic

@@ -1,0 +1,2 @@
+# name: fileinput.input 
+fileinput.input(files=None, inplace=False, backup='', *, mode='r', openhook=None)

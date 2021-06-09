@@ -1,0 +1,30 @@
+# name: from asyncio import  
+from asyncio import run
+from contextlib import AsyncContextDecorator
+
+class mycontext(AsyncContextDecorator):
+    async def __aenter__(self):
+        print('Starting')
+        return self
+
+    async def __aexit__(self, *exc):
+        print('Finishing')
+        return False
+
+>>> @mycontext()
+... async def function():
+...     print('The bit in the middle')
+...
+>>> run(function())
+Starting
+The bit in the middle
+Finishing
+
+>>> async def function():
+...    async with mycontext():
+...         print('The bit in the middle')
+...
+>>> run(function())
+Starting
+The bit in the middle
+Finishing

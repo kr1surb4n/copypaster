@@ -1,0 +1,19 @@
+# name: >>> m = Message(poli 
+>>> m = Message(policy=SMTP)
+>>> m['To'] = 'Éric <foo@example.com>'
+>>> m['to']
+'Éric <foo@example.com>'
+>>> m['to'].addresses
+(Address(display_name='Éric', username='foo', domain='example.com'),)
+>>> m['to'].addresses[0].username
+'foo'
+>>> m['to'].addresses[0].display_name
+'Éric'
+>>> m['Date'] = email.utils.localtime()
+>>> m['Date'].datetime
+datetime.datetime(2012, 5, 25, 21, 39, 24, 465484, tzinfo=datetime.timezone(datetime.timedelta(-1, 72000), 'EDT'))
+>>> m['Date']
+'Fri, 25 May 2012 21:44:27 -0400'
+>>> print(m)
+To: =?utf-8?q?=C3=89ric?= <foo@example.com>
+Date: Fri, 25 May 2012 21:44:27 -0400

@@ -1,0 +1,12 @@
+# name: >>> def f(): f()
+... 
+>>> def f(): f()
+...
+>>> f()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 1, in f
+  File "<stdin>", line 1, in f
+  File "<stdin>", line 1, in f
+  [Previous line repeated 995 more times]
+RecursionError: maximum recursion depth exceeded

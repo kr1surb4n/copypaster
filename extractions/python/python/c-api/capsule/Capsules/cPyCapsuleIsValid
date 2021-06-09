@@ -1,0 +1,2 @@
+# name: c.PyCapsule_IsValid 
+int PyCapsule_IsValid(PyObject *capsule, const char *name)

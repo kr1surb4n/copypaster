@@ -1,0 +1,5 @@
+# name: curses.echo()        
+curses.echo()            # Enable echoing of characters
+
+# Get a 15-character string, with the cursor on the top line
+s = stdscr.getstr(0,0, 15)

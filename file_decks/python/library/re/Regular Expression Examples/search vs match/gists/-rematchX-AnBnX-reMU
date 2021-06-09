@@ -1,0 +1,4 @@
+# name: >>> re.match('X', 'A 
+>>> re.match('X', 'A\nB\nX', re.MULTILINE)  # No match
+>>> re.search('^X', 'A\nB\nX', re.MULTILINE)  # Match
+<re.Match object; span=(4, 5), match='X'>

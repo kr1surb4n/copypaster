@@ -1,0 +1,5 @@
+# name: <yourscript> -f outf 
+<yourscript> -f outfile --quiet
+<yourscript> --quiet --file outfile
+<yourscript> -q -foutfile
+<yourscript> -qfoutfile

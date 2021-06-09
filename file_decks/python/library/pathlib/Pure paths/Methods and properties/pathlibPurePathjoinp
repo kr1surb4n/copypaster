@@ -1,0 +1,2 @@
+# name: pathlib.PurePath.joi 
+PurePath.joinpath(*other)

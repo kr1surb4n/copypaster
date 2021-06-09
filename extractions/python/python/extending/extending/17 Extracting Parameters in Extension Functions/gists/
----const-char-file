@@ -1,0 +1,13 @@
+# name: {
+    const char *fi 
+{
+    const char *file;
+    const char *mode = "r";
+    int bufsize = 0;
+    ok = PyArg_ParseTuple(args, "s|si", &file, &mode, &bufsize);
+    /* A string, and optionally another string and an integer */
+    /* Possible Python calls:
+       f('spam')
+       f('spam', 'w')
+       f('spam', 'wb', 100000) */
+}

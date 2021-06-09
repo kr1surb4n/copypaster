@@ -1,0 +1,2 @@
+# name: os.setgid 
+os.setgid(gid)

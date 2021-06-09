@@ -1,0 +1,2 @@
+# name: ssl.OP_NO_RENEGOTIAT 
+ssl.OP_NO_RENEGOTIATION

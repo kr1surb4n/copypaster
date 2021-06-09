@@ -1,0 +1,2 @@
+# name: c.PyBufferProcs.bf_r 
+releasebufferproc PyBufferProcs.bf_releasebuffer

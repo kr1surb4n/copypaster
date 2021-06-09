@@ -1,0 +1,2 @@
+# name: socket.socket.recv_f 
+socket.recv_fds(sock, bufsize, maxfds[, flags])

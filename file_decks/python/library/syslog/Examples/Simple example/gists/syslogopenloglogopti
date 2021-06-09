@@ -1,0 +1,3 @@
+# name: syslog.openlog(logop 
+syslog.openlog(logoption=syslog.LOG_PID, facility=syslog.LOG_MAIL)
+syslog.syslog('E-mail processing initiated...')

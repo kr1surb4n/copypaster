@@ -1,0 +1,6 @@
+# name: >>> import string
+>> 
+>>> import string
+>>> t = string.Template('$page: $title')
+>>> t.substitute({'page':2, 'title': 'The Best of Times'})
+'2: The Best of Times'

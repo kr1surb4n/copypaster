@@ -1,0 +1,5 @@
+# name: >>> graph = {"D": {" 
+>>> graph = {"D": {"B", "C"}, "C": {"A"}, "B": {"A"}}
+>>> ts = TopologicalSorter(graph)
+>>> tuple(ts.static_order())
+('A', 'C', 'B', 'D')

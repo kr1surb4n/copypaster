@@ -1,0 +1,4 @@
+# name: filename = 'filename 
+filename = 'filename\u4500abc'
+with open(filename, 'w') as f:
+    f.write('blah\n')

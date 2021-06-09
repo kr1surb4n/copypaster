@@ -1,0 +1,24 @@
+# name: /*[clinic input]
+
+cu 
+/*[clinic input]
+
+curses.window.addch
+
+    [
+    x: int
+      X-coordinate.
+    y: int
+      Y-coordinate.
+    ]
+
+    ch: object
+      Character to add.
+
+    [
+    attr: long
+      Attributes for the character.
+    ]
+    /
+
+...

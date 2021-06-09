@@ -1,0 +1,6 @@
+# name: if (result == NULL)
+ 
+if (result == NULL)
+    return NULL; /* Pass error back */
+...use result...
+Py_DECREF(result);

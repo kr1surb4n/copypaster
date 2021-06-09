@@ -1,0 +1,2 @@
+# name: operator.ifloordiv 
+operator.ifloordiv(a, b)

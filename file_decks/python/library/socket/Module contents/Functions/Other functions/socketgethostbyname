@@ -1,0 +1,2 @@
+# name: socket.gethostbyname 
+socket.gethostbyname(hostname)

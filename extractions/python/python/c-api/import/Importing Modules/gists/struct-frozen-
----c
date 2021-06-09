@@ -1,0 +1,7 @@
+# name: struct _frozen {
+    
+struct _frozen {
+    const char *name;
+    const unsigned char *code;
+    int size;
+};

@@ -1,0 +1,2 @@
+# name: c.Py_QuietFlag 
+int Py_QuietFlag

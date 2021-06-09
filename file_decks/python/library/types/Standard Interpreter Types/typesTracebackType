@@ -1,0 +1,2 @@
+# name: types.TracebackType 
+class types.TracebackType(tb_next, tb_frame, tb_lasti, tb_lineno)

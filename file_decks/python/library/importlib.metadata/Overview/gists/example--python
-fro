@@ -1,0 +1,6 @@
+# name: (example) $ python
+> 
+(example) $ python
+>>> from importlib.metadata import version  
+>>> version('wheel')  
+'0.32.3'

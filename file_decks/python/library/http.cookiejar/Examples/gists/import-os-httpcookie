@@ -1,0 +1,6 @@
+# name: import os, http.cook 
+import os, http.cookiejar, urllib.request
+cj = http.cookiejar.MozillaCookieJar()
+cj.load(os.path.join(os.path.expanduser("~"), ".netscape", "cookies.txt"))
+opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+r = opener.open("http://example.com/")

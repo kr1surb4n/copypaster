@@ -1,0 +1,11 @@
+# name: >>> def side_effect( 
+>>> def side_effect(value):
+...     return value + 1
+...
+>>> m = MagicMock(side_effect=side_effect)
+>>> m(1)
+2
+>>> m(2)
+3
+>>> m.mock_calls
+[call(1), call(2)]

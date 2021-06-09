@@ -1,0 +1,13 @@
+# name: bool
+int
+unsigned in 
+bool
+int
+unsigned int
+long
+unsigned int
+size_t
+Py_ssize_t
+float
+double
+DecodeFSDefault

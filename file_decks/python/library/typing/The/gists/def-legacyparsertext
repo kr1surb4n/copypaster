@@ -1,0 +1,10 @@
+# name: def legacy_parser(te 
+def legacy_parser(text):
+    ...
+    return data
+
+# A static type checker will treat the above
+# as having the same signature as:
+def legacy_parser(text: Any) -> Any:
+    ...
+    return data

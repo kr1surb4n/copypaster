@@ -1,0 +1,2 @@
+# name: asyncio.loop.sendfil 
+coroutine loop.sendfile(transport, file, offset=0, count=None, *, fallback=True)

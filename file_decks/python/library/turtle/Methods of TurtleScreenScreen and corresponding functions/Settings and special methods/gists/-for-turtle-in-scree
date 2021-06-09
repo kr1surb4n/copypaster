@@ -1,0 +1,3 @@
+# name: >>> for turtle in sc 
+>>> for turtle in screen.turtles():
+...     turtle.color("red")

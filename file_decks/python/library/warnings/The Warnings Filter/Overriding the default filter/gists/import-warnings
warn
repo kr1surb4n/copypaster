@@ -1,0 +1,5 @@
+# name: import warnings
+warn 
+import warnings
+warnings.filterwarnings("default", category=DeprecationWarning,
+                                   module=user_ns.get("__name__"))

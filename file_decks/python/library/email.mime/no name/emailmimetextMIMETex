@@ -1,0 +1,2 @@
+# name: email.mime.text.MIME 
+class email.mime.text.MIMEText(_text, _subtype='plain', _charset=None, *, policy=compat32)

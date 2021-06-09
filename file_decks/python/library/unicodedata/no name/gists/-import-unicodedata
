@@ -1,0 +1,16 @@
+# name: >>> import unicodeda 
+>>> import unicodedata
+>>> unicodedata.lookup('LEFT CURLY BRACKET')
+'{'
+>>> unicodedata.name('/')
+'SOLIDUS'
+>>> unicodedata.decimal('9')
+9
+>>> unicodedata.decimal('a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: not a decimal
+>>> unicodedata.category('A')  # 'L'etter, 'u'ppercase
+'Lu'
+>>> unicodedata.bidirectional('\u0660') # 'A'rabic, 'N'umber
+'AN'

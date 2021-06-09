@@ -1,0 +1,2 @@
+# name: zlib.Compress.flush 
+Compress.flush([mode])

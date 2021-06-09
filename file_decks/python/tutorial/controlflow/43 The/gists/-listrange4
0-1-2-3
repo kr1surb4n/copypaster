@@ -1,0 +1,4 @@
+# name: >>> list(range(4))
+[ 
+>>> list(range(4))
+[0, 1, 2, 3]

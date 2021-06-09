@@ -1,0 +1,2 @@
+# name: difflib.restore 
+difflib.restore(sequence, which)

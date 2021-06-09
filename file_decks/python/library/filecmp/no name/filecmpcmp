@@ -1,0 +1,2 @@
+# name: filecmp.cmp 
+filecmp.cmp(f1, f2, shallow=True)

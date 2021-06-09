@@ -1,0 +1,8 @@
+# name: >>> import importlib 
+>>> import importlib
+>>> import cls
+>>> c = cls.C()                # Create an instance of C
+>>> importlib.reload(cls)
+<module 'cls' from 'cls.py'>
+>>> isinstance(c, cls.C)       # isinstance is false?!?
+False

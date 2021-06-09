@@ -1,0 +1,2 @@
+# name: bisect.bisect_right 
+bisect.bisect_right(a, x, lo=0, hi=len(a), *, key=None)

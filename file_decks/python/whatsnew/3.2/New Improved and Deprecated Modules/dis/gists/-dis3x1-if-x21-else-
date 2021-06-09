@@ -1,0 +1,18 @@
+# name: >>> dis('3*x+1 if x% 
+>>> dis('3*x+1 if x%2==1 else x//2')
+  1           0 LOAD_NAME                0 (x)
+              3 LOAD_CONST               0 (2)
+              6 BINARY_MODULO
+              7 LOAD_CONST               1 (1)
+             10 COMPARE_OP               2 (==)
+             13 POP_JUMP_IF_FALSE       28
+             16 LOAD_CONST               2 (3)
+             19 LOAD_NAME                0 (x)
+             22 BINARY_MULTIPLY
+             23 LOAD_CONST               1 (1)
+             26 BINARY_ADD
+             27 RETURN_VALUE
+        >>   28 LOAD_NAME                0 (x)
+             31 LOAD_CONST               0 (2)
+             34 BINARY_FLOOR_DIVIDE
+             35 RETURN_VALUE

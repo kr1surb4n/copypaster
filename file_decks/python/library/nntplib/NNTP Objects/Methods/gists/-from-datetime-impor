@@ -1,0 +1,7 @@
+# name: >>> from datetime im 
+>>> from datetime import date, timedelta
+>>> resp, groups = s.newgroups(date.today() - timedelta(days=3))
+>>> len(groups) 
+85
+>>> groups[0] 
+GroupInfo(group='gmane.network.tor.devel', last='4', first='1', flag='m')

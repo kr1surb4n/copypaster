@@ -1,0 +1,5 @@
+# name: >>> re.match(r"\W(.) 
+>>> re.match(r"\W(.)\1\W", " ff ")
+<re.Match object; span=(0, 4), match=' ff '>
+>>> re.match("\\W(.)\\1\\W", " ff ")
+<re.Match object; span=(0, 4), match=' ff '>

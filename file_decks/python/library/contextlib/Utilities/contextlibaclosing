@@ -1,0 +1,2 @@
+# name: contextlib.aclosing 
+class contextlib.aclosing(thing)

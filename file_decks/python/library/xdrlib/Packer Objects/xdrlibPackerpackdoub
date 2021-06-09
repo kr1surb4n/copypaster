@@ -1,0 +1,2 @@
+# name: xdrlib.Packer.pack_d 
+Packer.pack_double(value)

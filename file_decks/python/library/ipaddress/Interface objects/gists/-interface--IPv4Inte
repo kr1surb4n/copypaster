@@ -1,0 +1,4 @@
+# name: >>> interface = IPv4 
+>>> interface = IPv4Interface('192.0.2.5/24')
+>>> interface.with_hostmask
+'192.0.2.5/0.0.0.255'

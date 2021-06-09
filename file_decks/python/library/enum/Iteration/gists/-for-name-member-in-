@@ -1,0 +1,8 @@
+# name: >>> for name, member 
+>>> for name, member in Shape.__members__.items():
+...     name, member
+...
+('SQUARE', <Shape.SQUARE: 2>)
+('DIAMOND', <Shape.DIAMOND: 1>)
+('CIRCLE', <Shape.CIRCLE: 3>)
+('ALIAS_FOR_SQUARE', <Shape.SQUARE: 2>)

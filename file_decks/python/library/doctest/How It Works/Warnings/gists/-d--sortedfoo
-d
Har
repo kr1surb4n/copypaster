@@ -1,0 +1,4 @@
+# name: >>> d = sorted(foo() 
+>>> d = sorted(foo())
+>>> d
+['Harry', 'Hermione']

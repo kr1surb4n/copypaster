@@ -1,0 +1,2 @@
+# name: asyncio.loop.sock_se 
+coroutine loop.sock_sendfile(sock, file, offset=0, count=None, *, fallback=True)

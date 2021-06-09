@@ -1,0 +1,13 @@
+# name: >>> tp = turtle.pos( 
+>>> tp = turtle.pos()
+ >>> tp
+ (0.00,0.00)
+ >>> turtle.setpos(60,30)
+ >>> turtle.pos()
+ (60.00,30.00)
+ >>> turtle.setpos((20,80))
+ >>> turtle.pos()
+ (20.00,80.00)
+ >>> turtle.setpos(tp)
+ >>> turtle.pos()
+ (0.00,0.00)

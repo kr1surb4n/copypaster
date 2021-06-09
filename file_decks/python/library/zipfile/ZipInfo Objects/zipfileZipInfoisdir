@@ -1,0 +1,2 @@
+# name: zipfile.ZipInfo.is_d 
+ZipInfo.is_dir()

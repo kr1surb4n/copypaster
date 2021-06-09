@@ -1,0 +1,2 @@
+# name: tabnanny.check 
+tabnanny.check(file_or_dir)

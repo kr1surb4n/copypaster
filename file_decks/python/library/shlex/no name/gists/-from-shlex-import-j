@@ -1,0 +1,4 @@
+# name: >>> from shlex impor 
+>>> from shlex import join
+>>> print(join(['echo', '-n', 'Multiple words']))
+echo -n 'Multiple words'

@@ -1,0 +1,11 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('from ..foo.bar import a as b, c'), indent=4))
+Module(
+    body=[
+        ImportFrom(
+            module='foo.bar',
+            names=[
+                alias(name='a', asname='b'),
+                alias(name='c')],
+            level=2)],
+    type_ignores=[])

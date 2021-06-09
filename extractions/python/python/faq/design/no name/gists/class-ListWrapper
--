@@ -1,0 +1,18 @@
+# name: class ListWrapper:
+  
+class ListWrapper:
+    def __init__(self, the_list):
+        self.the_list = the_list
+
+    def __eq__(self, other):
+        return self.the_list == other.the_list
+
+    def __hash__(self):
+        l = self.the_list
+        result = 98767 - len(l)*555
+        for i, el in enumerate(l):
+            try:
+                result = result + (hash(el) % 9999999) * 1001 + i
+            except Exception:
+                result = (result % 7777777) + i * 333
+        return result

@@ -1,0 +1,2 @@
+# name: time.sleep 
+time.sleep(secs)

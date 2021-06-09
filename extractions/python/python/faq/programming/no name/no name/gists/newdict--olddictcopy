@@ -1,0 +1,2 @@
+# name: newdict = olddict.co 
+newdict = olddict.copy()

@@ -1,0 +1,8 @@
+# name: try:
+    with open(' 
+try:
+    with open('/tmp/input.txt', 'r') as f:
+        ...
+except OSError:
+    # 'File not found' error message.
+    print("Fichier non trouvé")

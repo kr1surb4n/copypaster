@@ -1,0 +1,28 @@
+# name: >>> parser.parse_arg 
+>>> parser.parse_args(['--help'])
+usage: PROG [-h] [--foo] {a,b} ...
+
+positional arguments:
+  {a,b}   sub-command help
+    a     a help
+    b     b help
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --foo   foo help
+
+>>> parser.parse_args(['a', '--help'])
+usage: PROG a [-h] bar
+
+positional arguments:
+  bar     bar help
+
+optional arguments:
+  -h, --help  show this help message and exit
+
+>>> parser.parse_args(['b', '--help'])
+usage: PROG b [-h] [--baz {X,Y,Z}]
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --baz {X,Y,Z}  baz help

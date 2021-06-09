@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_as 
+PyBufferProcs* PyTypeObject.tp_as_buffer

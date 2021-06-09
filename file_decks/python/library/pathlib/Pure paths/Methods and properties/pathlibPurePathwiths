@@ -1,0 +1,2 @@
+# name: pathlib.PurePath.wit 
+PurePath.with_suffix(suffix)

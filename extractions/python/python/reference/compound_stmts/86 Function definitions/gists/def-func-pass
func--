@@ -1,0 +1,4 @@
+# name: def func(): pass
+fun 
+def func(): pass
+func = f1(arg)(f2(func))

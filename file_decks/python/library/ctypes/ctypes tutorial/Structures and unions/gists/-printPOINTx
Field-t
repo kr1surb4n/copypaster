@@ -1,0 +1,7 @@
+# name: >>> print(POINT.x)
+< 
+>>> print(POINT.x)
+<Field type=c_long, ofs=0, size=4>
+>>> print(POINT.y)
+<Field type=c_long, ofs=4, size=4>
+>>>

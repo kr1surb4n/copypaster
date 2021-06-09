@@ -1,0 +1,7 @@
+# name: >>> mock = Mock(spec 
+>>> mock = Mock(spec=SomeClass)
+>>> isinstance(mock, SomeClass)
+True
+>>> mock = Mock(spec_set=SomeClass())
+>>> isinstance(mock, SomeClass)
+True

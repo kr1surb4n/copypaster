@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_al 
+allocfunc PyTypeObject.tp_alloc

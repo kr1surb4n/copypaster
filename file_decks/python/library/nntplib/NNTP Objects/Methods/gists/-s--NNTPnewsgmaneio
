@@ -1,0 +1,4 @@
+# name: >>> s = NNTP('news.g 
+>>> s = NNTP('news.gmane.io')
+>>> 'POST' in s.getcapabilities()
+True

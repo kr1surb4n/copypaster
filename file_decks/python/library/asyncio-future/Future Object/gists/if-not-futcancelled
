@@ -1,0 +1,3 @@
+# name: if not fut.cancelled 
+if not fut.cancelled():
+    fut.set_result(42)

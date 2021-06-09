@@ -1,0 +1,2 @@
+# name: c.PyDict_Size 
+Py_ssize_t PyDict_Size(PyObject *p)

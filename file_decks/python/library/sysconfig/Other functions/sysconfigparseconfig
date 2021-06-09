@@ -1,0 +1,2 @@
+# name: sysconfig.parse_conf 
+sysconfig.parse_config_h(fp[, vars])

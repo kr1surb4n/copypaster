@@ -1,0 +1,6 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.__str__ = Mock(return_value='wheeeeee')
+>>> str(mock)
+'wheeeeee'

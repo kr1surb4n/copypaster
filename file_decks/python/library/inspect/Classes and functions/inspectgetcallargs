@@ -1,0 +1,2 @@
+# name: inspect.getcallargs 
+inspect.getcallargs(func, /, *args, **kwds)

@@ -1,0 +1,2 @@
+# name: bytes.maketrans 
+static bytes.maketrans(from, to)

@@ -1,0 +1,3 @@
+# name: while chunk := file. 
+while chunk := file.read(9000):
+    process(chunk)

@@ -1,0 +1,4 @@
+# name: >>> from math import 
+>>> from math import isfinite
+>>> [isfinite(x) for x in (123, 4.56, float('Nan'), float('Inf'))]
+[True, True, False, False]

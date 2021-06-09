@@ -1,0 +1,2 @@
+# name: WindowsError 
+exception WindowsError

@@ -1,0 +1,2 @@
+# name: parser.compilest 
+parser.compilest(st, filename='<syntax-tree>')

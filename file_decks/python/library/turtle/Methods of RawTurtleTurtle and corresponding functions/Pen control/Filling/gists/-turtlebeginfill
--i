@@ -1,0 +1,6 @@
+# name: >>> turtle.begin_fil 
+>>> turtle.begin_fill()
+ >>> if turtle.filling():
+ ...    turtle.pensize(5)
+ ... else:
+ ...    turtle.pensize(3)

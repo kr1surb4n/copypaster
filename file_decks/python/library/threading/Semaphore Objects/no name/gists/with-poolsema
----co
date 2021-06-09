@@ -1,0 +1,8 @@
+# name: with pool_sema:
+     
+with pool_sema:
+    conn = connectdb()
+    try:
+        # ... use connection ...
+    finally:
+        conn.close()

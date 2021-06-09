@@ -1,0 +1,2 @@
+# name: logging.config.liste 
+logging.config.listen(port=DEFAULT_LOGGING_CONFIG_PORT, verify=None)

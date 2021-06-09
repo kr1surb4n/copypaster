@@ -1,0 +1,5 @@
+# name: >>> MessageBox()
+>>> 
+>>> MessageBox()
+>>> MessageBox(text="Spam, spam, spam")
+>>> MessageBox(flags=2, text="foo bar")

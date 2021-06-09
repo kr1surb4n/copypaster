@@ -1,0 +1,2 @@
+# name: c.PySlice_Unpack 
+int PySlice_Unpack(PyObject *slice, Py_ssize_t *start, Py_ssize_t *stop, Py_ssize_t *step)

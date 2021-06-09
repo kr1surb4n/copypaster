@@ -1,0 +1,3 @@
+# name: $ python logctx.py 2 
+$ python logctx.py 2>/dev/null
+5. This should appear twice - once on stderr and once on stdout.

@@ -1,0 +1,2 @@
+# name: c.PyFile_FromFd 
+PyObject* PyFile_FromFd(int fd, const char *name, const char *mode, int buffering, const char *encoding, const char *errors, const char *newline, int closefd)

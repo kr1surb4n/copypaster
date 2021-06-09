@@ -1,0 +1,2 @@
+# name: ipaddress.collapse_a 
+ipaddress.collapse_addresses(addresses)

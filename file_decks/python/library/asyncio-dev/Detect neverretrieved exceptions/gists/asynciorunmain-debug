@@ -1,0 +1,2 @@
+# name: asyncio.run(main(),  
+asyncio.run(main(), debug=True)

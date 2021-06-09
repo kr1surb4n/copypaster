@@ -1,0 +1,2 @@
+# name: collections.abc.Asyn 
+class collections.abc.AsyncIterator

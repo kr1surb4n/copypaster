@@ -1,0 +1,5 @@
+# name: >>> class Production 
+>>> class ProductionClass:
+...     def closer(self, something):
+...         something.close()
+...

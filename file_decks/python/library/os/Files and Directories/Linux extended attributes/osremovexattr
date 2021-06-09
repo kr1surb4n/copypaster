@@ -1,0 +1,2 @@
+# name: os.removexattr 
+os.removexattr(path, attribute, *, follow_symlinks=True)

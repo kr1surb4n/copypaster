@@ -1,0 +1,6 @@
+# name: >>> d = D()
+>>> d.f
+ 
+>>> d = D()
+>>> d.f
+<bound method D.f of <__main__.D object at 0x00B18C90>>

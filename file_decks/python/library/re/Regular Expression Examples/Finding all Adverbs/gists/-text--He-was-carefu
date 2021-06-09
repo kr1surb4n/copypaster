@@ -1,0 +1,4 @@
+# name: >>> text = "He was c 
+>>> text = "He was carefully disguised but captured quickly by police."
+>>> re.findall(r"\w+ly", text)
+['carefully', 'quickly']

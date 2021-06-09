@@ -1,0 +1,2 @@
+# name: str.encode 
+str.encode(encoding="utf-8", errors="strict")

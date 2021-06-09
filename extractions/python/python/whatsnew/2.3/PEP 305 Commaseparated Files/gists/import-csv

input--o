@@ -1,0 +1,9 @@
+# name: import csv
+
+input =  
+import csv
+
+input = open('datafile', 'rb')
+reader = csv.reader(input)
+for line in reader:
+    print line

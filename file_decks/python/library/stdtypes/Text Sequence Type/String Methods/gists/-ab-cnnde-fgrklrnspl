@@ -1,0 +1,5 @@
+# name: >>> 'ab c\n\nde fg\r 
+>>> 'ab c\n\nde fg\rkl\r\n'.splitlines()
+['ab c', '', 'de fg', 'kl']
+>>> 'ab c\n\nde fg\rkl\r\n'.splitlines(keepends=True)
+['ab c\n', '\n', 'de fg\r', 'kl\r\n']

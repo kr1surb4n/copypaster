@@ -1,0 +1,4 @@
+# name: >>> C() 
+<__main__.C 
+>>> C() 
+<__main__.C instance at 0x...>

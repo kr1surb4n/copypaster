@@ -1,0 +1,10 @@
+# name: import warnings
+
+def 
+import warnings
+
+def func():
+    return open(__file__)
+
+f = func()
+f = None

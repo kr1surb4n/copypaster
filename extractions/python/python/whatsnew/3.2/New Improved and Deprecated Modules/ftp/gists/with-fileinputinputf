@@ -1,0 +1,4 @@
+# name: with fileinput.input 
+with fileinput.input(files=('log1.txt', 'log2.txt')) as f:
+    for line in f:
+        process(line)

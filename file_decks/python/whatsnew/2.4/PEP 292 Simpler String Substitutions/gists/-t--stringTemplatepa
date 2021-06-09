@@ -1,0 +1,4 @@
+# name: >>> t = string.Templ 
+>>> t = string.Template('$page: $title')
+>>> t.safe_substitute({'page':3})
+'3: $title'

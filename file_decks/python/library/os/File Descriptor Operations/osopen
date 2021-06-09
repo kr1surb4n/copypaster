@@ -1,0 +1,2 @@
+# name: os.open 
+os.open(path, flags, mode=0o777, *, dir_fd=None)

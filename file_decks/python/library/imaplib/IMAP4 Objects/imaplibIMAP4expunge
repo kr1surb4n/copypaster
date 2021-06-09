@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.expung 
+IMAP4.expunge()

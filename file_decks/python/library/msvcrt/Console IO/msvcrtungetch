@@ -1,0 +1,2 @@
+# name: msvcrt.ungetch 
+msvcrt.ungetch(char)

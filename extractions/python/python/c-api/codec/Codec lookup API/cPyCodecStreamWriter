@@ -1,0 +1,2 @@
+# name: c.PyCodec_StreamWrit 
+PyObject* PyCodec_StreamWriter(const char *encoding, PyObject *stream, const char *errors)

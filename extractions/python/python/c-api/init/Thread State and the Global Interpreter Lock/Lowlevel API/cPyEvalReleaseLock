@@ -1,0 +1,2 @@
+# name: c.PyEval_ReleaseLock 
+void PyEval_ReleaseLock()

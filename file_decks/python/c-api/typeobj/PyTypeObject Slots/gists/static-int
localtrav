@@ -1,0 +1,10 @@
+# name: static int
+local_tra 
+static int
+local_traverse(localobject *self, visitproc visit, void *arg)
+{
+    Py_VISIT(self->args);
+    Py_VISIT(self->kw);
+    Py_VISIT(self->dict);
+    return 0;
+}

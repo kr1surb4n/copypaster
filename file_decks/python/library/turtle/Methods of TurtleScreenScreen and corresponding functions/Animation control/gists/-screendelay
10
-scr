@@ -1,0 +1,7 @@
+# name: >>> screen.delay()
+1 
+>>> screen.delay()
+10
+>>> screen.delay(5)
+>>> screen.delay()
+5

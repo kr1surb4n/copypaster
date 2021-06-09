@@ -1,0 +1,6 @@
+# name: >>> p = re.compile(' 
+>>> p = re.compile('\bclass\b')
+>>> print(p.search('no class at all'))
+None
+>>> print(p.search('\b' + 'class' + '\b'))
+<re.Match object; span=(0, 7), match='\x08class\x08'>

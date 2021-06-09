@@ -1,0 +1,2 @@
+# name: weakref.getweakrefs 
+weakref.getweakrefs(object)

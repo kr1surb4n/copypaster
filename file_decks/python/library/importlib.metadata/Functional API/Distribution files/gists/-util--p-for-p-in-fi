@@ -1,0 +1,10 @@
+# name: >>> util = [p for p  
+>>> util = [p for p in files('wheel') if 'util.py' in str(p)][0]  
+>>> util  
+PackagePath('wheel/util.py')
+>>> util.size  
+859
+>>> util.dist  
+<importlib.metadata._hooks.PathDistribution object at 0x101e0cef0>
+>>> util.hash  
+<FileHash mode: sha256 value: bYkw5oMccfazVCoYQwKkkemoVyMAFoR34mmKBx8R1NI>

@@ -1,0 +1,4 @@
+# name: pid = os.spawnlp(os. 
+pid = os.spawnlp(os.P_NOWAIT, "/bin/mycmd", "mycmd", "myarg")
+==>
+pid = Popen(["/bin/mycmd", "myarg"]).pid

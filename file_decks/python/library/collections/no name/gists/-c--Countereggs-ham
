@@ -1,0 +1,4 @@
+# name: >>> c = Counter(['eg 
+>>> c = Counter(['eggs', 'ham'])
+>>> c['bacon']                              # count of a missing element is zero
+0

@@ -1,0 +1,2 @@
+# name: asyncio.loop.sock_ac 
+coroutine loop.sock_accept(sock)

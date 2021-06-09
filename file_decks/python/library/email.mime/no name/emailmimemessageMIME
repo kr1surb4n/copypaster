@@ -1,0 +1,2 @@
+# name: email.mime.message.M 
+class email.mime.message.MIMEMessage(_msg, _subtype='rfc822', *, policy=compat32)

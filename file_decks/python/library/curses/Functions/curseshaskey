@@ -1,0 +1,2 @@
+# name: curses.has_key 
+curses.has_key(ch)

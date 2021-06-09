@@ -1,0 +1,8 @@
+# name: $ python3 prog.py 4  
+$ python3 prog.py 4 2
+16
+$ python3 prog.py 4 2 -v
+4^2 == 16
+$ python3 prog.py 4 2 -vv
+Running 'prog.py'
+4^2 == 16

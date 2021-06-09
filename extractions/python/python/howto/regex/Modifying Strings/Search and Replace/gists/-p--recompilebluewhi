@@ -1,0 +1,6 @@
+# name: >>> p = re.compile(' 
+>>> p = re.compile('(blue|white|red)')
+>>> p.subn('colour', 'blue socks and red shoes')
+('colour socks and colour shoes', 2)
+>>> p.subn('colour', 'no colours at all')
+('no colours at all', 0)

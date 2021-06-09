@@ -1,0 +1,20 @@
+# name: >>> from copy import 
+>>> from copy import deepcopy
+>>> class CopyingMock(MagicMock):
+...     def __call__(self, /, *args, **kwargs):
+...         args = deepcopy(args)
+...         kwargs = deepcopy(kwargs)
+...         return super(CopyingMock, self).__call__(*args, **kwargs)
+...
+>>> c = CopyingMock(return_value=None)
+>>> arg = set()
+>>> c(arg)
+>>> arg.add(1)
+>>> c.assert_called_with(set())
+>>> c.assert_called_with(arg)
+Traceback (most recent call last):
+    ...
+AssertionError: Expected call: mock({1})
+Actual call: mock(set())
+>>> c.foo
+<CopyingMock name='mock.foo' id='...'>

@@ -1,0 +1,4 @@
+# name: class Proto(Protocol 
+class Proto(Protocol):
+    def meth(self) -> int:
+        ...

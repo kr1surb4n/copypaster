@@ -1,0 +1,2 @@
+# name: itertools.chain.from 
+classmethod chain.from_iterable(iterable)

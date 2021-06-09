@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.uid 
+IMAP4.uid(command, arg[, ...])

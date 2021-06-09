@@ -1,0 +1,7 @@
+# name: >>> vk = d.viewkeys( 
+>>> vk = d.viewkeys()
+>>> vk
+dict_keys([0, 130, 10, ..., 250])
+>>> d[260] = '&'
+>>> vk
+dict_keys([0, 130, 260, 10, ..., 250])

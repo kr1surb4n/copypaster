@@ -1,0 +1,2 @@
+# name: bisect.insort_left 
+bisect.insort_left(a, x, lo=0, hi=len(a), *, key=None)

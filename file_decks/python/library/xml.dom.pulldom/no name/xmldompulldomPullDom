@@ -1,0 +1,2 @@
+# name: xml.dom.pulldom.Pull 
+class xml.dom.pulldom.PullDom(documentFactory=None)

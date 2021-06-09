@@ -1,0 +1,9 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('l[1:2]', mode='eval'), indent=4))
+Expression(
+    body=Subscript(
+        value=Name(id='l', ctx=Load()),
+        slice=Slice(
+            lower=Constant(value=1),
+            upper=Constant(value=2)),
+        ctx=Load()))

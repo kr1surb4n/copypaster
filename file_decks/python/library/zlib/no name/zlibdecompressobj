@@ -1,0 +1,2 @@
+# name: zlib.decompressobj 
+zlib.decompressobj(wbits=MAX_WBITS[, zdict])

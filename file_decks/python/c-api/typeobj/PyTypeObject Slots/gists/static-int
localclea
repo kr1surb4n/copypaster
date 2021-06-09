@@ -1,0 +1,11 @@
+# name: static int
+local_cle 
+static int
+local_clear(localobject *self)
+{
+    Py_CLEAR(self->key);
+    Py_CLEAR(self->args);
+    Py_CLEAR(self->kw);
+    Py_CLEAR(self->dict);
+    return 0;
+}

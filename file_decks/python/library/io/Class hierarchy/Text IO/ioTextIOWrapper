@@ -1,0 +1,2 @@
+# name: io.TextIOWrapper 
+class io.TextIOWrapper(buffer, encoding=None, errors=None, newline=None, line_buffering=False, write_through=False)

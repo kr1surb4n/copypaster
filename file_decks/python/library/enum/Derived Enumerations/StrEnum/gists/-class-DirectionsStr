@@ -1,0 +1,4 @@
+# name: >>> class Directions 
+>>> class Directions(StrEnum):
+...     NORTH = 'north',    # notice the trailing comma
+...     SOUTH = 'south'

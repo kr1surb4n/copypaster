@@ -1,0 +1,2 @@
+# name: c.richcmpfunc 
+PyObject *(*richcmpfunc)(PyObject *, PyObject *, int)

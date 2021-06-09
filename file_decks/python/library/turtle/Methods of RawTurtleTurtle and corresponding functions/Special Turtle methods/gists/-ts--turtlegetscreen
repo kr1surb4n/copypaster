@@ -1,0 +1,5 @@
+# name: >>> ts = turtle.gets 
+>>> ts = turtle.getscreen()
+>>> ts
+<turtle._Screen object at 0x...>
+>>> ts.bgcolor("pink")

@@ -1,0 +1,2 @@
+# name: urllib.parse.urlunsp 
+urllib.parse.urlunsplit(parts)

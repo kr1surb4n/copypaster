@@ -1,0 +1,8 @@
+# name: char *buf1 = PyMem_N 
+char *buf1 = PyMem_New(char, BUFSIZ);
+char *buf2 = (char *) malloc(BUFSIZ);
+char *buf3 = (char *) PyMem_Malloc(BUFSIZ);
+...
+PyMem_Del(buf3);  /* Wrong -- should be PyMem_Free() */
+free(buf2);       /* Right -- allocated via malloc() */
+free(buf1);       /* Fatal -- should be PyMem_Del()  */

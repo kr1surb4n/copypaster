@@ -1,0 +1,2 @@
+# name: sys.addaudithook 
+sys.addaudithook(hook)

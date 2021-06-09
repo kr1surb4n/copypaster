@@ -1,0 +1,4 @@
+# name: >>> # Round to two p 
+>>> # Round to two places
+>>> Decimal('3.214').quantize(TWOPLACES)
+Decimal('3.21')

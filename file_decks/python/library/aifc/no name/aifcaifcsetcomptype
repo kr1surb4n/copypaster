@@ -1,0 +1,2 @@
+# name: aifc.aifc.setcomptyp 
+aifc.setcomptype(type, name)

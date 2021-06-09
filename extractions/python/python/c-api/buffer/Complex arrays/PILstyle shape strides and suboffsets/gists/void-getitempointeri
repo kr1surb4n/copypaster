@@ -1,0 +1,13 @@
+# name: void *get_item_point 
+void *get_item_pointer(int ndim, void *buf, Py_ssize_t *strides,
+                       Py_ssize_t *suboffsets, Py_ssize_t *indices) {
+    char *pointer = (char*)buf;
+    int i;
+    for (i = 0; i < ndim; i++) {
+        pointer += strides[i] * indices[i];
+        if (suboffsets[i] >=0 ) {
+            pointer = *((char**)pointer) + suboffsets[i];
+        }
+    }
+    return (void*)pointer;
+}

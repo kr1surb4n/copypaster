@@ -1,0 +1,2 @@
+# name: sqlite3.Cursor.execu 
+sqlite3.Cursor.executescript

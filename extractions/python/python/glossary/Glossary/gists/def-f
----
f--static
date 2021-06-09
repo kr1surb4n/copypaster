@@ -1,0 +1,10 @@
+# name: def f(...):
+    ...
+ 
+def f(...):
+    ...
+f = staticmethod(f)
+
+@staticmethod
+def f(...):
+    ...

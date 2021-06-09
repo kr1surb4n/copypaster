@@ -1,0 +1,9 @@
+# name: >>> bytecode = dis.B 
+>>> bytecode = dis.Bytecode(myfunc)
+>>> for instr in bytecode:
+...     print(instr.opname)
+...
+LOAD_GLOBAL
+LOAD_FAST
+CALL_FUNCTION
+RETURN_VALUE

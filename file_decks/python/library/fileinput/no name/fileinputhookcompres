@@ -1,0 +1,2 @@
+# name: fileinput.hook_compr 
+fileinput.hook_compressed(filename, mode)

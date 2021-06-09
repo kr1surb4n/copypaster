@@ -1,0 +1,2 @@
+# name: opcode-JUMP_FORWARD 
+JUMP_FORWARD(delta)

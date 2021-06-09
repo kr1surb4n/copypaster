@@ -1,0 +1,2 @@
+# name: c.PyThreadState_SetA 
+int PyThreadState_SetAsyncExc(unsigned long id, PyObject *exc)

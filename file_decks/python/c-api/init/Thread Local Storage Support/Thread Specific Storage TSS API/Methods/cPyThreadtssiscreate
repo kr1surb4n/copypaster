@@ -1,0 +1,2 @@
+# name: c.PyThread_tss_is_cr 
+int PyThread_tss_is_created(Py_tss_t *key)

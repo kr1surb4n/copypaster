@@ -1,0 +1,2 @@
+# name: inspect.getcomments 
+inspect.getcomments(object)

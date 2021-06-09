@@ -1,0 +1,13 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>> libc.printf
+<_FuncPtr object at 0x...>
+>>> print(windll.kernel32.GetModuleHandleA)  
+<_FuncPtr object at 0x...>
+>>> print(windll.kernel32.MyOwnFunction)     
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "ctypes.py", line 239, in __getattr__
+    func = _StdcallFuncPtr(name, self)
+AttributeError: function 'MyOwnFunction' not found
+>>>

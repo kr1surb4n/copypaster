@@ -1,0 +1,7 @@
+# name: >>> apples = {}
+>>>  
+>>> apples = {}
+>>> apples[Color.RED] = 'red delicious'
+>>> apples[Color.GREEN] = 'granny smith'
+>>> apples == {Color.RED: 'red delicious', Color.GREEN: 'granny smith'}
+True

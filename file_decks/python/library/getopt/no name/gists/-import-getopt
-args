@@ -1,0 +1,11 @@
+# name: >>> import getopt
+>> 
+>>> import getopt
+>>> args = '-a -b -cfoo -d bar a1 a2'.split()
+>>> args
+['-a', '-b', '-cfoo', '-d', 'bar', 'a1', 'a2']
+>>> optlist, args = getopt.getopt(args, 'abc:d:')
+>>> optlist
+[('-a', ''), ('-b', ''), ('-c', 'foo'), ('-d', 'bar')]
+>>> args
+['a1', 'a2']

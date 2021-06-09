@@ -1,0 +1,8 @@
+# name: >>> try:
+...     D({ 
+>>> try:
+...     D({}).x
+... except AttributeError as exc:
+...     print(repr(exc.__context__))
+...
+KeyError('x',)

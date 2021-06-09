@@ -1,0 +1,2 @@
+# name: ctypes.Union 
+class ctypes.Union(*args, **kw)

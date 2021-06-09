@@ -1,0 +1,2 @@
+# name: zlib.compress 
+zlib.compress(data, /, level=-1)

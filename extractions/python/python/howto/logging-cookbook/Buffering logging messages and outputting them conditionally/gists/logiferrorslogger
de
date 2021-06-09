@@ -1,0 +1,4 @@
+# name: @log_if_errors(logge 
+@log_if_errors(logger)
+def foo(fail=False):
+    ...

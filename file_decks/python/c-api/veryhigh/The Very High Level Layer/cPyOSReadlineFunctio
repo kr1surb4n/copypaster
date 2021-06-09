@@ -1,0 +1,2 @@
+# name: c.PyOS_ReadlineFunct 
+char* (*PyOS_ReadlineFunctionPointer)(FILE *, FILE *, const char *)

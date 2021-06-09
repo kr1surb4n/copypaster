@@ -1,0 +1,2 @@
+# name: test.support.check_s 
+test.support.check_syntax_error(testcase, statement, errtext='', *, lineno=None, offset=None)

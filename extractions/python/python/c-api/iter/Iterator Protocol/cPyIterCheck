@@ -1,0 +1,2 @@
+# name: c.PyIter_Check 
+int PyIter_Check(PyObject *o)

@@ -1,0 +1,2 @@
+# name: ssl.SSLContext.wrap_ 
+SSLContext.wrap_bio(incoming, outgoing, server_side=False, server_hostname=None, session=None)

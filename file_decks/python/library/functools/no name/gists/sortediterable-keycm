@@ -1,0 +1,2 @@
+# name: sorted(iterable, key 
+sorted(iterable, key=cmp_to_key(locale.strcoll))  # locale-aware sort order

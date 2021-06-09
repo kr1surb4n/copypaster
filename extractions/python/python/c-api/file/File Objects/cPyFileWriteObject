@@ -1,0 +1,2 @@
+# name: c.PyFile_WriteObject 
+int PyFile_WriteObject(PyObject *obj, PyObject *p, int flags)

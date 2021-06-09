@@ -1,0 +1,6 @@
+# name: print(binascii.crc32 
+print(binascii.crc32(b"hello world"))
+# Or, in two pieces:
+crc = binascii.crc32(b"hello")
+crc = binascii.crc32(b" world", crc)
+print('crc32 = {:#010x}'.format(crc))

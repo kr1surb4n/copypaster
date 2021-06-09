@@ -1,0 +1,2 @@
+# name: c.PyThread_tss_free 
+void PyThread_tss_free(Py_tss_t *key)

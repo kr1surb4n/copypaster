@@ -1,2 +1,0 @@
-# name: git diff staged 
-git diff --staged

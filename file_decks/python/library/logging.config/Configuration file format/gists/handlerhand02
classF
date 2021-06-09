@@ -1,0 +1,52 @@
+# name: [handler_hand02]
+cla 
+[handler_hand02]
+class=FileHandler
+level=DEBUG
+formatter=form02
+args=('python.log', 'w')
+
+[handler_hand03]
+class=handlers.SocketHandler
+level=INFO
+formatter=form03
+args=('localhost', handlers.DEFAULT_TCP_LOGGING_PORT)
+
+[handler_hand04]
+class=handlers.DatagramHandler
+level=WARN
+formatter=form04
+args=('localhost', handlers.DEFAULT_UDP_LOGGING_PORT)
+
+[handler_hand05]
+class=handlers.SysLogHandler
+level=ERROR
+formatter=form05
+args=(('localhost', handlers.SYSLOG_UDP_PORT), handlers.SysLogHandler.LOG_USER)
+
+[handler_hand06]
+class=handlers.NTEventLogHandler
+level=CRITICAL
+formatter=form06
+args=('Python Application', '', 'Application')
+
+[handler_hand07]
+class=handlers.SMTPHandler
+level=WARN
+formatter=form07
+args=('localhost', 'from@abc', ['user1@abc', 'user2@xyz'], 'Logger Subject')
+kwargs={'timeout': 10.0}
+
+[handler_hand08]
+class=handlers.MemoryHandler
+level=NOTSET
+formatter=form08
+target=
+args=(10, ERROR)
+
+[handler_hand09]
+class=handlers.HTTPHandler
+level=NOTSET
+formatter=form09
+args=('localhost:9022', '/log', 'GET')
+kwargs={'secure': True}

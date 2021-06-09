@@ -1,0 +1,5 @@
+# name: >>> print(re.match(r 
+>>> print(re.match(r'From\s+', 'Fromage amk'))
+None
+>>> re.match(r'From\s+', 'From amk Thu May 14 19:12:10 1998')  
+<re.Match object; span=(0, 5), match='From '>

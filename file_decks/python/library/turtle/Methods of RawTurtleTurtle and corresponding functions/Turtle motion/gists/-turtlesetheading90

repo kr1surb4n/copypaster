@@ -1,0 +1,4 @@
+# name: >>> turtle.setheadin 
+>>> turtle.setheading(90)
+>>> turtle.heading()
+90.0

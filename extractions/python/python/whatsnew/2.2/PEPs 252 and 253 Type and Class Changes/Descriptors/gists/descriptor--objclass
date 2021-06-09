@@ -1,0 +1,3 @@
+# name: descriptor = obj.__c 
+descriptor = obj.__class__.x
+descriptor.__get__(obj)

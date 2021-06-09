@@ -1,0 +1,8 @@
+# name: $ ./python opt.py -i 
+$ ./python opt.py -i data arg1
+<Values at 0x400cad4c: {'input': 'data', 'length': None}>
+['arg1']
+$ ./python opt.py --input=data --length=4
+<Values at 0x400cad2c: {'input': 'data', 'length': 4}>
+[]
+$

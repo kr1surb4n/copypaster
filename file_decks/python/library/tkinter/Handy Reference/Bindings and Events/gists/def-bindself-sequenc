@@ -1,0 +1,2 @@
+# name: def bind(self, seque 
+def bind(self, sequence, func, add=''):

@@ -1,0 +1,13 @@
+# name: >>> a = Decimal('102 
+>>> a = Decimal('102.72')           # Initial fixed-point values
+>>> b = Decimal('3.17')
+>>> a + b                           # Addition preserves fixed-point
+Decimal('105.89')
+>>> a - b
+Decimal('99.55')
+>>> a * 42                          # So does integer multiplication
+Decimal('4314.24')
+>>> (a * b).quantize(TWOPLACES)     # Must quantize non-integer multiplication
+Decimal('325.62')
+>>> (b / a).quantize(TWOPLACES)     # And quantize division
+Decimal('0.03')

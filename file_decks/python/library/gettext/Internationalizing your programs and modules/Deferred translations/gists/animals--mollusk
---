@@ -1,0 +1,9 @@
+# name: animals = ['mollusk' 
+animals = ['mollusk',
+           'albatross',
+           'rat',
+           'penguin',
+           'python', ]
+# ...
+for a in animals:
+    print(a)

@@ -1,0 +1,2 @@
+# name: opcode-RAISE_VARARGS 
+RAISE_VARARGS(argc)

@@ -1,0 +1,5 @@
+# name: import config
+import 
+import config
+import mod
+print(config.x)

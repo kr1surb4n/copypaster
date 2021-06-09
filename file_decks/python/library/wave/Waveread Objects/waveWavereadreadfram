@@ -1,0 +1,2 @@
+# name: wave.Wave_read.readf 
+Wave_read.readframes(n)

@@ -1,0 +1,2 @@
+# name: modulefinder.AddPack 
+modulefinder.AddPackagePath(pkg_name, path)

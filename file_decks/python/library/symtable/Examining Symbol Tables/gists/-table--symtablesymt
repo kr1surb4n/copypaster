@@ -1,0 +1,4 @@
+# name: >>> table = symtable 
+>>> table = symtable.symtable("def some_func(): pass", "string", "exec")
+>>> table.lookup("some_func").is_namespace()
+True

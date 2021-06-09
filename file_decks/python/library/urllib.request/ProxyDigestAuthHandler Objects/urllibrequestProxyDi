@@ -1,0 +1,2 @@
+# name: urllib.request.Proxy 
+ProxyDigestAuthHandler.http_error_407(req, fp, code, msg, hdrs)

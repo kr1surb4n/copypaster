@@ -1,0 +1,3 @@
+# name: mydata = threading.l 
+mydata = threading.local()
+mydata.x = 1

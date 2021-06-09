@@ -1,0 +1,2 @@
+# name: curses.use_env 
+curses.use_env(flag)

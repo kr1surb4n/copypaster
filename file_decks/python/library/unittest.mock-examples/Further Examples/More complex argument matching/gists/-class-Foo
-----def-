@@ -1,0 +1,13 @@
+# name: >>> class Foo:
+...   
+>>> class Foo:
+...     def __init__(self, a, b):
+...         self.a, self.b = a, b
+...
+>>> mock = Mock(return_value=None)
+>>> mock(Foo(1, 2))
+>>> mock.assert_called_with(Foo(1, 2))
+Traceback (most recent call last):
+    ...
+AssertionError: Expected: call(<__main__.Foo object at 0x...>)
+Actual call: call(<__main__.Foo object at 0x...>)

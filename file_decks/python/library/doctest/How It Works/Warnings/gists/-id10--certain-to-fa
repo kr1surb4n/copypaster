@@ -1,0 +1,6 @@
+# name: >>> id(1.0) # certai 
+>>> id(1.0) # certain to fail some of the time
+7948648
+>>> class C: pass
+>>> C()   # the default repr() for instances embeds an address
+<__main__.C instance at 0x00AC18F0>

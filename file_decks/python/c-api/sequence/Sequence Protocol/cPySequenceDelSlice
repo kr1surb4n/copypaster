@@ -1,0 +1,2 @@
+# name: c.PySequence_DelSlic 
+int PySequence_DelSlice(PyObject *o, Py_ssize_t i1, Py_ssize_t i2)

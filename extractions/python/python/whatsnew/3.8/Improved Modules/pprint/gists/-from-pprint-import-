@@ -1,0 +1,11 @@
+# name: >>> from pprint impo 
+>>> from pprint import pprint, pp
+>>> d = dict(source='input.txt', operation='filter', destination='output.txt')
+>>> pp(d, width=40)                  # Original order
+{'source': 'input.txt',
+ 'operation': 'filter',
+ 'destination': 'output.txt'}
+>>> pprint(d, width=40)              # Keys sorted alphabetically
+{'destination': 'output.txt',
+ 'operation': 'filter',
+ 'source': 'input.txt'}

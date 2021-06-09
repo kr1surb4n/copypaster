@@ -1,0 +1,2 @@
+# name: multiprocessing.set_ 
+multiprocessing.set_executable()

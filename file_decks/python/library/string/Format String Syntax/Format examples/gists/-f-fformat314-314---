@@ -1,0 +1,7 @@
+# name: >>> '{:+f}; {:+f}'.f 
+>>> '{:+f}; {:+f}'.format(3.14, -3.14)  # show it always
+'+3.140000; -3.140000'
+>>> '{: f}; {: f}'.format(3.14, -3.14)  # show a space for positive numbers
+' 3.140000; -3.140000'
+>>> '{:-f}; {:-f}'.format(3.14, -3.14)  # show only the minus -- same as '{:f}; {:f}'
+'3.140000; -3.140000'

@@ -1,0 +1,7 @@
+# name: Usage: <yourscript>  
+Usage: <yourscript> [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f FILE, --file=FILE  write report to FILE
+  -q, --quiet           don't print status messages to stdout

@@ -1,0 +1,5 @@
+# name: >>> list(zip(range(3 
+>>> list(zip(range(3), ['fee', 'fi', 'fo', 'fum'], strict=True))
+Traceback (most recent call last):
+  ...
+ValueError: zip() argument 2 is longer than argument 1

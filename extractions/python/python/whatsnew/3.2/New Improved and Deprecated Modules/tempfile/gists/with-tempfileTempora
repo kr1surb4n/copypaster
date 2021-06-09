@@ -1,0 +1,3 @@
+# name: with tempfile.Tempor 
+with tempfile.TemporaryDirectory() as tmpdirname:
+    print('created temporary dir:', tmpdirname)

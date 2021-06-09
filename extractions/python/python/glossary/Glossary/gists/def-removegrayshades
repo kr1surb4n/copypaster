@@ -1,0 +1,4 @@
+# name: def remove_gray_shad 
+def remove_gray_shades(
+        colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:
+    pass

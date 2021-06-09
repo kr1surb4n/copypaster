@@ -1,0 +1,2 @@
+# name: random.triangular 
+random.triangular(low, high, mode)

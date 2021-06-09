@@ -1,0 +1,3 @@
+# name: $ readelf -S ./pytho 
+$ readelf -S ./python | grep .note.stapsdt
+[30] .note.stapsdt        NOTE         0000000000000000 00308d78

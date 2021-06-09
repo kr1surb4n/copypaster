@@ -1,0 +1,4 @@
+# name: >>> c = bz2.compress 
+>>> c = bz2.compress(data)
+>>> len(data) / len(c)  # Data compression ratio
+1.513595166163142

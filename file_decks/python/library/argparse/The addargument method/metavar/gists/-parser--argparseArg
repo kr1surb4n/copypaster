@@ -1,0 +1,11 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG')
+>>> parser.add_argument('-x', nargs=2)
+>>> parser.add_argument('--foo', nargs=2, metavar=('bar', 'baz'))
+>>> parser.print_help()
+usage: PROG [-h] [-x X X] [--foo bar baz]
+
+optional arguments:
+ -h, --help     show this help message and exit
+ -x X X
+ --foo bar baz

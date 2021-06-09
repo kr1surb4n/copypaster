@@ -1,0 +1,12 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> cursor = mock.connection.cursor.return_value
+>>> cursor.execute.return_value = ['foo']
+>>> mock.connection.cursor().execute("SELECT 1")
+['foo']
+>>> expected = call.connection.cursor().execute("SELECT 1").call_list()
+>>> mock.mock_calls
+[call.connection.cursor(), call.connection.cursor().execute('SELECT 1')]
+>>> mock.mock_calls == expected
+True

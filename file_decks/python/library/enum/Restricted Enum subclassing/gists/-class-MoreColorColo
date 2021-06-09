@@ -1,0 +1,7 @@
+# name: >>> class MoreColor( 
+>>> class MoreColor(Color):
+...     PINK = 17
+...
+Traceback (most recent call last):
+...
+TypeError: Cannot extend enumerations

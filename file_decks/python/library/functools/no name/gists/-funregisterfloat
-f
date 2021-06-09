@@ -1,0 +1,10 @@
+# name: >>> @fun.register(fl 
+>>> @fun.register(float)
+... @fun.register(Decimal)
+... def fun_num(arg, verbose=False):
+...     if verbose:
+...         print("Half of your number:", end=" ")
+...     print(arg / 2)
+...
+>>> fun_num is fun
+False

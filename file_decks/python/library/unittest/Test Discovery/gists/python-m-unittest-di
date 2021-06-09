@@ -1,0 +1,3 @@
+# name: python -m unittest d 
+python -m unittest discover -s project_directory -p "*_test.py"
+python -m unittest discover project_directory "*_test.py"

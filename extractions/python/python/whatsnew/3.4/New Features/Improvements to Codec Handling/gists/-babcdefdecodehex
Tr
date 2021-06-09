@@ -1,0 +1,15 @@
+# name: >>> b"abcdef".decode 
+>>> b"abcdef".decode("hex")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+LookupError: 'hex' is not a text encoding; use codecs.decode() to handle arbitrary codecs
+
+>>> "hello".encode("rot13")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+LookupError: 'rot13' is not a text encoding; use codecs.encode() to handle arbitrary codecs
+
+>>> open("foo.txt", encoding="hex")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+LookupError: 'hex' is not a text encoding; use codecs.open() to handle arbitrary codecs

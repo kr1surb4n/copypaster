@@ -1,0 +1,2 @@
+# name: typing.get_origin 
+typing.get_origin(tp)

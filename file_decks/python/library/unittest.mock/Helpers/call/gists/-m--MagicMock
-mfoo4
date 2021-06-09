@@ -1,0 +1,15 @@
+# name: >>> m = MagicMock()
+ 
+>>> m = MagicMock()
+>>> m.foo(4, 5, 6, arg='two', arg2='three')
+<MagicMock name='mock.foo()' id='...'>
+>>> kall = m.mock_calls[0]
+>>> name, args, kwargs = kall
+>>> name
+'foo'
+>>> args
+(4, 5, 6)
+>>> kwargs
+{'arg': 'two', 'arg2': 'three'}
+>>> name is m.mock_calls[0][0]
+True

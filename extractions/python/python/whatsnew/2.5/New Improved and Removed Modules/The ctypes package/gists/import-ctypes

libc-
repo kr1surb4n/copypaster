@@ -1,0 +1,7 @@
+# name: import ctypes
+
+libc  
+import ctypes
+
+libc = ctypes.CDLL('libc.so.6')
+result = libc.printf("Line of output\n")

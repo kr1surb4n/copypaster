@@ -1,0 +1,30 @@
+# name: >>> parser = ConfigP 
+>>> parser = ConfigParser(interpolation=ExtendedInterpolation())
+>>> parser.read_dict({'buildout': {'directory': '/home/ambv/zope9'},
+...                   'custom': {'prefix': '/usr/local'}})
+>>> parser.read_string("""
+... [buildout]
+... parts =
+...   zope9
+...   instance
+... find-links =
+...   ${buildout:directory}/downloads/dist
+...
+... [zope9]
+... recipe = plone.recipe.zope9install
+... location = /opt/zope
+...
+... [instance]
+... recipe = plone.recipe.zope9instance
+... zope9-location = ${zope9:location}
+... zope-conf = ${custom:prefix}/etc/zope.conf
+... """)
+>>> parser['buildout']['find-links']
+'\n/home/ambv/zope9/downloads/dist'
+>>> parser['instance']['zope-conf']
+'/usr/local/etc/zope.conf'
+>>> instance = parser['instance']
+>>> instance['zope-conf']
+'/usr/local/etc/zope.conf'
+>>> instance['zope9-location']
+'/opt/zope'

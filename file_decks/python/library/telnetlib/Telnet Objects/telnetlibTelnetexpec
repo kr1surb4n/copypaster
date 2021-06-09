@@ -1,0 +1,2 @@
+# name: telnetlib.Telnet.exp 
+Telnet.expect(list, timeout=None)

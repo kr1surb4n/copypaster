@@ -1,0 +1,2 @@
+# name: doctest.script_from_ 
+doctest.script_from_examples(s)

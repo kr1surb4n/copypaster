@@ -1,0 +1,2 @@
+# name: winreg.DeleteKeyEx 
+winreg.DeleteKeyEx(key, sub_key, access=KEY_WOW64_64KEY, reserved=0)

@@ -1,0 +1,11 @@
+# name: >>> from collections 
+>>> from collections.abc import Mapping
+>>> @fun.register
+... def _(arg: Mapping, verbose=False):
+...     if verbose:
+...         print("Keys & Values")
+...     for key, value in arg.items():
+...         print(key, "=>", value)
+...
+>>> fun({"a": "b"})
+a => b

@@ -1,0 +1,2 @@
+# name: _thread.get_ident 
+_thread.get_ident()

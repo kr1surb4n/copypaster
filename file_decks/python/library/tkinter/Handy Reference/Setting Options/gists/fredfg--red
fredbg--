@@ -1,0 +1,4 @@
+# name: fred["fg"] = "red"
+f 
+fred["fg"] = "red"
+fred["bg"] = "blue"

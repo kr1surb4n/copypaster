@@ -1,0 +1,17 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>> p = create_string_buffer(3)            # create a 3 byte buffer, initialized to NUL bytes
+>>> print(sizeof(p), repr(p.raw))
+3 b'\x00\x00\x00'
+>>> p = create_string_buffer(b"Hello")     # create a buffer containing a NUL terminated string
+>>> print(sizeof(p), repr(p.raw))
+6 b'Hello\x00'
+>>> print(repr(p.value))
+b'Hello'
+>>> p = create_string_buffer(b"Hello", 10) # create a 10 byte buffer
+>>> print(sizeof(p), repr(p.raw))
+10 b'Hello\x00\x00\x00\x00\x00'
+>>> p.value = b"Hi"
+>>> print(sizeof(p), repr(p.raw))
+10 b'Hi\x00lo\x00\x00\x00\x00\x00'
+>>>

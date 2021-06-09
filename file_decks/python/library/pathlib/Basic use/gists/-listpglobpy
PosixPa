@@ -1,0 +1,5 @@
+# name: >>> list(p.glob('**/ 
+>>> list(p.glob('**/*.py'))
+[PosixPath('test_pathlib.py'), PosixPath('setup.py'),
+ PosixPath('pathlib.py'), PosixPath('docs/conf.py'),
+ PosixPath('build/lib/pathlib.py')]

@@ -1,0 +1,4 @@
+# name: >>> p = PurePosixPat 
+>>> p = PurePosixPath('/a/b/c/d')
+>>> p.parent
+PurePosixPath('/a/b/c')

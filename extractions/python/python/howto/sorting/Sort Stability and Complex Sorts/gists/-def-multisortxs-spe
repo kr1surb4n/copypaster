@@ -1,0 +1,5 @@
+# name: >>> def multisort(xs 
+>>> def multisort(xs, specs):
+...     for key, reverse in reversed(specs):
+...         xs.sort(key=attrgetter(key), reverse=reverse)
+...     return xs

@@ -1,0 +1,2 @@
+# name: base64.b16decode 
+base64.b16decode(s, casefold=False)

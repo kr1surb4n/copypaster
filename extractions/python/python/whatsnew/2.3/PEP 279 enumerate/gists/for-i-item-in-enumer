@@ -1,0 +1,4 @@
+# name: for i, item in enume 
+for i, item in enumerate(L):
+    # ... compute some result based on item ...
+    L[i] = result

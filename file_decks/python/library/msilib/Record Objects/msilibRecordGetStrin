@@ -1,0 +1,2 @@
+# name: msilib.Record.GetStr 
+Record.GetString(field)

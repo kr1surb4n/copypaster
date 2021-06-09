@@ -1,0 +1,17 @@
+# name: >>> from __future__  
+>>> from __future__ import generator_stop
+
+>>> def gen():
+...     next(iter([]))
+...     yield
+...
+>>> next(gen())
+Traceback (most recent call last):
+  File "<stdin>", line 2, in gen
+StopIteration
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+RuntimeError: generator raised StopIteration

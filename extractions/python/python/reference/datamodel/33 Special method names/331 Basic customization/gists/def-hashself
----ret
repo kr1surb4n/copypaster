@@ -1,0 +1,4 @@
+# name: def __hash__(self):
+ 
+def __hash__(self):
+    return hash((self.name, self.nick, self.color))

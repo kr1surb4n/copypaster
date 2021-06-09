@@ -1,2 +1,0 @@
-# name: CLASS 5 
-class Person(val firstName: String, val lastName: String, var age: Int) { /*...*/ }

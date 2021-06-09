@@ -1,0 +1,2 @@
+# name: c.Py_GetArgcArgv 
+void Py_GetArgcArgv(int *argc, wchar_t ***argv)

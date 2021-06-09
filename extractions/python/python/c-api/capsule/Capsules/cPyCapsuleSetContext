@@ -1,0 +1,2 @@
+# name: c.PyCapsule_SetConte 
+int PyCapsule_SetContext(PyObject *capsule, void *context)

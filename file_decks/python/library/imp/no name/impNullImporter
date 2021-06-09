@@ -1,0 +1,2 @@
+# name: imp.NullImporter 
+class imp.NullImporter(path_string)

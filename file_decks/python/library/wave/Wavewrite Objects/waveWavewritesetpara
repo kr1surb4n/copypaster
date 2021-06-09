@@ -1,0 +1,2 @@
+# name: wave.Wave_write.setp 
+Wave_write.setparams(tuple)

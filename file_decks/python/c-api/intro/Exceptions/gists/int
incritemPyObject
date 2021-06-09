@@ -1,0 +1,44 @@
+# name: int
+incr_item(PyObje 
+int
+incr_item(PyObject *dict, PyObject *key)
+{
+    /* Objects all initialized to NULL for Py_XDECREF */
+    PyObject *item = NULL, *const_one = NULL, *incremented_item = NULL;
+    int rv = -1; /* Return value initialized to -1 (failure) */
+
+    item = PyObject_GetItem(dict, key);
+    if (item == NULL) {
+        /* Handle KeyError only: */
+        if (!PyErr_ExceptionMatches(PyExc_KeyError))
+            goto error;
+
+        /* Clear the error and use zero: */
+        PyErr_Clear();
+        item = PyLong_FromLong(0L);
+        if (item == NULL)
+            goto error;
+    }
+    const_one = PyLong_FromLong(1L);
+    if (const_one == NULL)
+        goto error;
+
+    incremented_item = PyNumber_Add(item, const_one);
+    if (incremented_item == NULL)
+        goto error;
+
+    if (PyObject_SetItem(dict, key, incremented_item) < 0)
+        goto error;
+    rv = 0; /* Success */
+    /* Continue with cleanup code */
+
+ error:
+    /* Cleanup code, shared by success and failure path */
+
+    /* Use Py_XDECREF() to ignore NULL references */
+    Py_XDECREF(item);
+    Py_XDECREF(const_one);
+    Py_XDECREF(incremented_item);
+
+    return rv; /* -1 for error, 0 for success */
+}

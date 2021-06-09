@@ -1,0 +1,2 @@
+# name: pathlib.Path.samefil 
+Path.samefile(other_path)

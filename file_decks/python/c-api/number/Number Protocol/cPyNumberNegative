@@ -1,0 +1,2 @@
+# name: c.PyNumber_Negative 
+PyObject* PyNumber_Negative(PyObject *o)

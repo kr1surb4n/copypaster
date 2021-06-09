@@ -1,0 +1,5 @@
+# name: Point = namedtuple(' 
+Point = namedtuple('Point', ['x', 'y'])
+Point.__doc__ += ': Cartesian coodinate'
+Point.x.__doc__ = 'abscissa'
+Point.y.__doc__ = 'ordinate'

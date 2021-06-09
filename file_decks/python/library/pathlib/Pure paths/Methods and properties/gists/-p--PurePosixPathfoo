@@ -1,0 +1,4 @@
+# name: >>> p = PurePosixPat 
+>>> p = PurePosixPath('foo/..')
+>>> p.parent
+PurePosixPath('foo')

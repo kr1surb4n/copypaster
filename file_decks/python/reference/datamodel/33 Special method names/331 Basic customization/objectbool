@@ -1,0 +1,2 @@
+# name: object.__bool__ 
+object.__bool__(self)

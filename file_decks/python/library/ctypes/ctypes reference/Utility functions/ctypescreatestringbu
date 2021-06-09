@@ -1,0 +1,2 @@
+# name: ctypes.create_string 
+ctypes.create_string_buffer(init_or_size, size=None)

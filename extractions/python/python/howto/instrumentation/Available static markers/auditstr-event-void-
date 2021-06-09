@@ -1,0 +1,2 @@
+# name: audit(str event, voi 
+audit(str event, void *tuple)

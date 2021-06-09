@@ -1,0 +1,24 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse("""\
+... async def f():
+...     await other_func()
+... """), indent=4))
+Module(
+    body=[
+        AsyncFunctionDef(
+            name='f',
+            args=arguments(
+                posonlyargs=[],
+                args=[],
+                kwonlyargs=[],
+                kw_defaults=[],
+                defaults=[]),
+            body=[
+                Expr(
+                    value=Await(
+                        value=Call(
+                            func=Name(id='other_func', ctx=Load()),
+                            args=[],
+                            keywords=[])))],
+            decorator_list=[])],
+    type_ignores=[])

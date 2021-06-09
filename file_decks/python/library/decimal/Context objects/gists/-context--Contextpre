@@ -1,0 +1,9 @@
+# name: >>> context = Contex 
+>>> context = Context(prec=5, rounding=ROUND_DOWN)
+>>> context.create_decimal_from_float(math.pi)
+Decimal('3.1415')
+>>> context = Context(prec=5, traps=[Inexact])
+>>> context.create_decimal_from_float(math.pi)
+Traceback (most recent call last):
+    ...
+decimal.Inexact: None

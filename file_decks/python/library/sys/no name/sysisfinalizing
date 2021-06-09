@@ -1,0 +1,2 @@
+# name: sys.is_finalizing 
+sys.is_finalizing()

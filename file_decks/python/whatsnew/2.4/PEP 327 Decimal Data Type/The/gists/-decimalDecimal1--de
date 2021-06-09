@@ -1,0 +1,9 @@
+# name: >>> decimal.Decimal( 
+>>> decimal.Decimal(1) / decimal.Decimal(0)
+Traceback (most recent call last):
+  ...
+decimal.DivisionByZero: x / 0
+>>> decimal.getcontext().traps[decimal.DivisionByZero] = False
+>>> decimal.Decimal(1) / decimal.Decimal(0)
+Decimal("Infinity")
+>>>

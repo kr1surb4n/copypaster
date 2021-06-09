@@ -1,0 +1,6 @@
+# name: array('l')
+array('u' 
+array('l')
+array('u', 'hello \u2641')
+array('l', [1, 2, 3, 4, 5])
+array('d', [1.0, 2.0, 3.14])

@@ -1,0 +1,8 @@
+# name: def main():
+    prin 
+def main():
+    print('Running test...')
+    ...
+
+if __name__ == '__main__':
+    main()

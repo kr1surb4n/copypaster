@@ -1,0 +1,2 @@
+# name: pstats.Stats 
+class pstats.Stats(*filenames or profile, stream=sys.stdout)

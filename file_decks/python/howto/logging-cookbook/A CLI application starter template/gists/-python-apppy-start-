@@ -1,0 +1,9 @@
+# name: $ python app.py star 
+$ python app.py start foo
+INFO start Started the 'foo' service.
+
+$ python app.py stop foo bar
+INFO stop Stopped the 'foo' and 'bar' services.
+
+$ python app.py restart foo bar baz
+INFO restart Restarted the 'foo', 'bar' and 'baz' services.

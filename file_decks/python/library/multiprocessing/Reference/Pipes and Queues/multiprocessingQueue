@@ -1,0 +1,2 @@
+# name: multiprocessing.Queu 
+multiprocessing.Queue.cancel_join_thread

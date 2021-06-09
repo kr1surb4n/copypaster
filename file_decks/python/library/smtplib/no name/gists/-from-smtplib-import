@@ -1,0 +1,7 @@
+# name: >>> from smtplib imp 
+>>> from smtplib import SMTP
+>>> with SMTP("domain.org") as smtp:
+...     smtp.noop()
+...
+(250, b'Ok')
+>>>

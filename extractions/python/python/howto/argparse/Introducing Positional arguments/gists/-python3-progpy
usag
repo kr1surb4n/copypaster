@@ -1,0 +1,15 @@
+# name: $ python3 prog.py
+us 
+$ python3 prog.py
+usage: prog.py [-h] echo
+prog.py: error: the following arguments are required: echo
+$ python3 prog.py --help
+usage: prog.py [-h] echo
+
+positional arguments:
+  echo
+
+optional arguments:
+  -h, --help  show this help message and exit
+$ python3 prog.py foo
+foo

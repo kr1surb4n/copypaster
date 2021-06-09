@@ -1,0 +1,13 @@
+# name: >>> def f(a, b):
+... 
+>>> def f(a, b):
+...     print(a, b)
+...
+>>> f(b=1, *(2,))
+2 1
+>>> f(a=1, *(2,))
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: f() got multiple values for keyword argument 'a'
+>>> f(1, *(2,))
+1 2

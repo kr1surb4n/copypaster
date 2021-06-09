@@ -1,0 +1,13 @@
+# name: >>> mock = AsyncMock 
+>>> mock = AsyncMock()
+>>> async def main(*args):
+...     await mock(*args)
+...
+>>> mock.await_args_list
+[]
+>>> asyncio.run(main('foo'))
+>>> mock.await_args_list
+[call('foo')]
+>>> asyncio.run(main('bar'))
+>>> mock.await_args_list
+[call('foo'), call('bar')]

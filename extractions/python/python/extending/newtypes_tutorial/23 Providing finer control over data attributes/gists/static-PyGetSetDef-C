@@ -1,0 +1,8 @@
+# name: static PyGetSetDef C 
+static PyGetSetDef Custom_getsetters[] = {
+    {"first", (getter) Custom_getfirst, (setter) Custom_setfirst,
+     "first name", NULL},
+    {"last", (getter) Custom_getlast, (setter) Custom_setlast,
+     "last name", NULL},
+    {NULL}  /* Sentinel */
+};

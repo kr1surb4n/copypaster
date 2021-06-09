@@ -1,0 +1,2 @@
+# name: os.posix_fallocate 
+os.posix_fallocate(fd, offset, len)

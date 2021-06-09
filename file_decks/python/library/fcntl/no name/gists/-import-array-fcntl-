@@ -1,0 +1,11 @@
+# name: >>> import array, fc 
+>>> import array, fcntl, struct, termios, os
+>>> os.getpgrp()
+13341
+>>> struct.unpack('h', fcntl.ioctl(0, termios.TIOCGPGRP, "  "))[0]
+13341
+>>> buf = array.array('h', [0])
+>>> fcntl.ioctl(0, termios.TIOCGPGRP, buf, 1)
+0
+>>> buf
+array('h', [13341])

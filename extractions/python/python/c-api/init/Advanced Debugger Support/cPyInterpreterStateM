@@ -1,0 +1,2 @@
+# name: c.PyInterpreterState 
+PyInterpreterState* PyInterpreterState_Main()

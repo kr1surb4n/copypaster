@@ -1,0 +1,3 @@
+# name: >>> mock = AsyncMock 
+>>> mock = AsyncMock()
+>>> mock.assert_not_awaited()

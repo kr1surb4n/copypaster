@@ -1,0 +1,6 @@
+# name: >>> m = MagicMock(at 
+>>> m = MagicMock(attribute=3, other='fish')
+>>> m.attribute
+3
+>>> m.other
+'fish'

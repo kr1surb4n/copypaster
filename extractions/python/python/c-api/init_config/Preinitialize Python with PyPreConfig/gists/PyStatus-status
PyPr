@@ -1,0 +1,18 @@
+# name: PyStatus status;
+PyP 
+PyStatus status;
+PyPreConfig preconfig;
+PyPreConfig_InitPythonConfig(&preconfig);
+
+preconfig.utf8_mode = 1;
+
+status = Py_PreInitialize(&preconfig);
+if (PyStatus_Exception(status)) {
+    Py_ExitStatusException(status);
+}
+
+/* at this point, Python speaks UTF-8 */
+
+Py_Initialize();
+/* ... use Python API here ... */
+Py_Finalize();

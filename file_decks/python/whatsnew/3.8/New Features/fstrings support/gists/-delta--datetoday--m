@@ -1,0 +1,4 @@
+# name: >>> delta = date.tod 
+>>> delta = date.today() - member_since
+>>> f'{user=!s}  {delta.days=:,d}'
+'user=eric_idle  delta.days=16,075'

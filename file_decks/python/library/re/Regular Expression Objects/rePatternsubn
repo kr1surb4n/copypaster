@@ -1,0 +1,2 @@
+# name: re.Pattern.subn 
+Pattern.subn(repl, string, count=0)

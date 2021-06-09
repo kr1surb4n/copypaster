@@ -1,0 +1,2 @@
+# name: nntplib.NNTP 
+class nntplib.NNTP(host, port=119, user=None, password=None, readermode=None, usenetrc=False[, timeout])

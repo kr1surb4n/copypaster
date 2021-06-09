@@ -1,0 +1,10 @@
+# name: @A
+@B
+@C
+def f ():
+  
+@A
+@B
+@C
+def f ():
+    ...

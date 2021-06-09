@@ -1,0 +1,6 @@
+# name: >>> from typing impo 
+>>> from typing import TypeVar
+
+>>> T = TypeVar('T')
+>>> list[T].__parameters__
+(~T,)

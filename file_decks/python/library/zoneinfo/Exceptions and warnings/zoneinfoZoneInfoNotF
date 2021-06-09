@@ -1,0 +1,2 @@
+# name: zoneinfo.ZoneInfoNot 
+exception zoneinfo.ZoneInfoNotFoundError

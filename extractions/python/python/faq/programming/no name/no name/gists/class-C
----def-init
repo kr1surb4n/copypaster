@@ -1,0 +1,8 @@
+# name: class C:
+    def __i 
+class C:
+    def __init__(self, i=None):
+        if i is None:
+            print("No arguments")
+        else:
+            print("Argument is", i)

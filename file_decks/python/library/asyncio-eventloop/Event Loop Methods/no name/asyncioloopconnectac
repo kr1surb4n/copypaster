@@ -1,0 +1,2 @@
+# name: asyncio.loop.connect 
+coroutine loop.connect_accepted_socket(protocol_factory, sock, *, ssl=None, ssl_handshake_timeout=None)

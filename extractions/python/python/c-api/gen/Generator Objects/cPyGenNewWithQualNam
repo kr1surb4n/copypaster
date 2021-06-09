@@ -1,0 +1,2 @@
+# name: c.PyGen_NewWithQualN 
+PyObject* PyGen_NewWithQualName(PyFrameObject *frame, PyObject *name, PyObject *qualname)

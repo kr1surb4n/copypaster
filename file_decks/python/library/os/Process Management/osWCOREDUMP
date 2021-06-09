@@ -1,0 +1,2 @@
+# name: os.WCOREDUMP 
+os.WCOREDUMP(status)

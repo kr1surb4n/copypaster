@@ -1,0 +1,2 @@
+# name: c.PyWrapper_New 
+PyObject* PyWrapper_New(PyObject *, PyObject *)

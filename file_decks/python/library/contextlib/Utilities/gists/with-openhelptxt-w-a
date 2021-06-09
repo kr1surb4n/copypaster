@@ -1,0 +1,4 @@
+# name: with open('help.txt' 
+with open('help.txt', 'w') as f:
+    with redirect_stdout(f):
+        help(pow)

@@ -1,0 +1,6 @@
+# name: runner = doctest.Doc 
+runner = doctest.DocTestRunner()
+for t in tests:
+    tried, failed = runner.run(t)
+
+runner.summarize(verbose=1)

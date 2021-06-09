@@ -1,0 +1,22 @@
+# name: % openssl req -new - 
+% openssl req -new -x509 -days 365 -nodes -out cert.pem -keyout cert.pem
+Generating a 1024 bit RSA private key
+.......++++++
+.............................++++++
+writing new private key to 'cert.pem'
+-----
+You are about to be asked to enter information that will be incorporated
+into your certificate request.
+What you are about to enter is what is called a Distinguished Name or a DN.
+There are quite a few fields but you can leave some blank
+For some fields there will be a default value,
+If you enter '.', the field will be left blank.
+-----
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:MyState
+Locality Name (eg, city) []:Some City
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:My Organization, Inc.
+Organizational Unit Name (eg, section) []:My Group
+Common Name (eg, YOUR name) []:myserver.mygroup.myorganization.com
+Email Address []:ops@myserver.mygroup.myorganization.com
+%

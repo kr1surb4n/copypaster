@@ -1,0 +1,2 @@
+# name: importlib.resources. 
+importlib.resources.is_resource(package, name)

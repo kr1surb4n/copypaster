@@ -1,0 +1,2 @@
+# name: urllib.parse.parse_q 
+urllib.parse.parse_qs(qs, keep_blank_values=False, strict_parsing=False, encoding='utf-8', errors='replace', max_num_fields=None)

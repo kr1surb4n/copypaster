@@ -1,0 +1,11 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> attrs = {'method.return_value': 3, 'other.side_effect': KeyError}
+>>> mock.configure_mock(**attrs)
+>>> mock.method()
+3
+>>> mock.other()
+Traceback (most recent call last):
+  ...
+KeyError

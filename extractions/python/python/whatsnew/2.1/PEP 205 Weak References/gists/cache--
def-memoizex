@@ -1,0 +1,16 @@
+# name: _cache = {}
+def memo 
+_cache = {}
+def memoize(x):
+    if _cache.has_key(x):
+        obj = _cache[x]()
+        # If weak reference object still exists,
+        # return it
+        if obj is not None: return obj
+
+    retval = f(x)
+
+    # Cache a weak reference
+    _cache[x] = weakref.ref(retval)
+
+    return retval

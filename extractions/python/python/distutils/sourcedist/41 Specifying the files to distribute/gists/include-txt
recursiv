@@ -1,0 +1,5 @@
+# name: include *.txt
+recurs 
+include *.txt
+recursive-include examples *.txt *.py
+prune examples/sample?/build

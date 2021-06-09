@@ -1,0 +1,5 @@
+# name: from abc import ABCM 
+from abc import ABCMeta
+
+class MyABC(metaclass=ABCMeta):
+    pass

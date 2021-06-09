@@ -1,0 +1,13 @@
+# name: class Component:
+
+   
+class Component:
+
+    name = String(minsize=3, maxsize=10, predicate=str.isupper)
+    kind = OneOf('wood', 'metal', 'plastic')
+    quantity = Number(minvalue=0)
+
+    def __init__(self, name, kind, quantity):
+        self.name = name
+        self.kind = kind
+        self.quantity = quantity

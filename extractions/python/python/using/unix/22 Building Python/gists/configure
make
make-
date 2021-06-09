@@ -1,0 +1,6 @@
+# name: ./configure
+make
+mak 
+./configure
+make
+make install

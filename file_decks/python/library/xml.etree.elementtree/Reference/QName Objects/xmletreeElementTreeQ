@@ -1,0 +1,2 @@
+# name: xml.etree.ElementTre 
+class xml.etree.ElementTree.QName(text_or_uri, tag=None)

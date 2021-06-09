@@ -1,0 +1,14 @@
+# name: >>> @fun.register
+.. 
+>>> @fun.register
+... def _(arg: int, verbose=False):
+...     if verbose:
+...         print("Strength in numbers, eh?", end=" ")
+...     print(arg)
+...
+>>> @fun.register
+... def _(arg: list, verbose=False):
+...     if verbose:
+...         print("Enumerate this:")
+...     for i, elem in enumerate(arg):
+...         print(i, elem)

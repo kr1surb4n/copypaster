@@ -1,0 +1,11 @@
+# name: class Cell:
+    ...
+ 
+class Cell:
+    ...
+
+    @property
+    def value(self):
+        "Recalculate the cell before returning value"
+        self.recalc()
+        return self._value

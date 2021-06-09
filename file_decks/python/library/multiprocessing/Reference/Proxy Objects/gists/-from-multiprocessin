@@ -1,0 +1,12 @@
+# name: >>> from multiproces 
+>>> from multiprocessing import Manager
+>>> manager = Manager()
+>>> l = manager.list([i*i for i in range(10)])
+>>> print(l)
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+>>> print(repr(l))
+<ListProxy object, typeid 'list' at 0x...>
+>>> l[4]
+16
+>>> l[2:5]
+[4, 9, 16]

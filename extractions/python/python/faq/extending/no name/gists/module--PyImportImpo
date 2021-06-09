@@ -1,0 +1,2 @@
+# name: module = PyImport_Im 
+module = PyImport_ImportModule("<modulename>");

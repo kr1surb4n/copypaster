@@ -1,0 +1,2 @@
+# name: test.support.run_doc 
+test.support.run_doctest(module, verbosity=None, optionflags=0)

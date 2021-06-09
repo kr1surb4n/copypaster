@@ -1,0 +1,9 @@
+# name: object
+    timedelta 
+object
+    timedelta
+    tzinfo
+        timezone
+    time
+    date
+        datetime

@@ -1,0 +1,6 @@
+# name: >>> import codecs
+>> 
+>>> import codecs
+>>> encoder = codecs.getincrementalencoder('hz')('strict')
+>>> b''.join(encoder.encode(x) for x in '\u52ff\u65bd\u65bc\u4eba\u3002 Bye.')
+b'~{NpJ)l6HK!#~} Bye.'

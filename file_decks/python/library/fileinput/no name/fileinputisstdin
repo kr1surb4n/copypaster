@@ -1,0 +1,2 @@
+# name: fileinput.isstdin 
+fileinput.isstdin()

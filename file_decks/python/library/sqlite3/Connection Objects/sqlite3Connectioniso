@@ -1,0 +1,2 @@
+# name: sqlite3.Connection.i 
+sqlite3.Connection.isolation_level

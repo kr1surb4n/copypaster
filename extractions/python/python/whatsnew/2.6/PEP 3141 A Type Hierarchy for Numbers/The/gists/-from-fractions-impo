@@ -1,0 +1,10 @@
+# name: >>> from fractions i 
+>>> from fractions import Fraction
+>>> a = Fraction(2, 3)
+>>> b = Fraction(2, 5)
+>>> float(a), float(b)
+(0.66666666666666663, 0.40000000000000002)
+>>> a+b
+Fraction(16, 15)
+>>> a/b
+Fraction(5, 3)

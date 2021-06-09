@@ -1,0 +1,5 @@
+# name: $ /usr/bin/foo -n 4x 
+$ /usr/bin/foo -n 4x
+Usage: foo [options]
+
+foo: error: option -n: invalid integer value: '4x'

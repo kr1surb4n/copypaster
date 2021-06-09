@@ -1,0 +1,2 @@
+# name: smtplib.SMTPServerDi 
+exception smtplib.SMTPServerDisconnected

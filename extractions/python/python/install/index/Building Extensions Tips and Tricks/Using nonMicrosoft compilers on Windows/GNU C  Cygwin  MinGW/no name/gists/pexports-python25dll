@@ -1,0 +1,2 @@
+# name: pexports python25.dl 
+pexports python25.dll >python25.def

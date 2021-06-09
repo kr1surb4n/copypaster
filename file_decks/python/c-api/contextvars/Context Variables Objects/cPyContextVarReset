@@ -1,0 +1,2 @@
+# name: c.PyContextVar_Reset 
+int PyContextVar_Reset(PyObject *var, PyObject *token)

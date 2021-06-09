@@ -1,0 +1,2 @@
+# name: time.thread_time_ns 
+time.thread_time_ns() → int

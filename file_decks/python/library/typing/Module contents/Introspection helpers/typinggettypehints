@@ -1,0 +1,2 @@
+# name: typing.get_type_hint 
+typing.get_type_hints(obj, globalns=None, localns=None, include_extras=False)

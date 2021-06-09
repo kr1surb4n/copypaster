@@ -1,0 +1,2 @@
+# name: c.PySet_Size 
+Py_ssize_t PySet_Size(PyObject *anyset)

@@ -1,0 +1,10 @@
+# name: >>> patcher = patch( 
+>>> patcher = patch('package.module.ClassName')
+>>> from package import module
+>>> original = module.ClassName
+>>> new_mock = patcher.start()
+>>> assert module.ClassName is not original
+>>> assert module.ClassName is new_mock
+>>> patcher.stop()
+>>> assert module.ClassName is original
+>>> assert module.ClassName is not new_mock

@@ -1,0 +1,17 @@
+# name: from contextlib impo 
+from contextlib import contextmanager
+
+@contextmanager
+def db_transaction (connection):
+    cursor = connection.cursor()
+    try:
+        yield cursor
+    except:
+        connection.rollback()
+        raise
+    else:
+        connection.commit()
+
+db = DatabaseConnection()
+with db_transaction(db) as cursor:
+    ...

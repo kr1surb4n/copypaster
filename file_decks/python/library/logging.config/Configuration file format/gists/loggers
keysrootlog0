@@ -1,0 +1,10 @@
+# name: [loggers]
+keys=root, 
+[loggers]
+keys=root,log02,log03,log04,log05,log06,log07
+
+[handlers]
+keys=hand01,hand02,hand03,hand04,hand05,hand06,hand07,hand08,hand09
+
+[formatters]
+keys=form01,form02,form03,form04,form05,form06,form07,form08,form09

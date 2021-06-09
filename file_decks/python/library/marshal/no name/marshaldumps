@@ -1,0 +1,2 @@
+# name: marshal.dumps 
+marshal.dumps(value[, version])

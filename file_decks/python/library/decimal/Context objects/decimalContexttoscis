@@ -1,0 +1,2 @@
+# name: decimal.Context.to_s 
+decimal.Context.to_sci_string

@@ -1,0 +1,2 @@
+# name: c.PySequence_Count 
+Py_ssize_t PySequence_Count(PyObject *o, PyObject *value)

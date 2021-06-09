@@ -1,0 +1,5 @@
+# name: >>> turtle.color("bl 
+>>> turtle.color("blue")
+>>> turtle.stamp()
+11
+>>> turtle.fd(50)

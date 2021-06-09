@@ -1,0 +1,3 @@
+# name: .tp_basicsize = size 
+.tp_basicsize = sizeof(CustomObject),
+.tp_itemsize = 0,

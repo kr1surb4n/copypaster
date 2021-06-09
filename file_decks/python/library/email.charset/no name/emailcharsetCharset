@@ -1,0 +1,2 @@
+# name: email.charset.Charse 
+class email.charset.Charset(input_charset=DEFAULT_CHARSET)

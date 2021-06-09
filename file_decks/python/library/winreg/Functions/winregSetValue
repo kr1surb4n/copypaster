@@ -1,0 +1,2 @@
+# name: winreg.SetValue 
+winreg.SetValue(key, sub_key, type, value)

@@ -1,0 +1,6 @@
+# name: PyThreadState *_save 
+PyThreadState *_save;
+
+_save = PyEval_SaveThread();
+... Do some blocking I/O operation ...
+PyEval_RestoreThread(_save);

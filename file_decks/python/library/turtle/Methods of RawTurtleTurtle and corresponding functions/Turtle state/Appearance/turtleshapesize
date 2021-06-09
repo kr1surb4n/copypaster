@@ -1,0 +1,2 @@
+# name: turtle.shapesize 
+turtle.shapesize(stretch_wid=None, stretch_len=None, outline=None)

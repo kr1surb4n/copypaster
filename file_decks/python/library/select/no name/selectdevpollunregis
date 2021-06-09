@@ -1,0 +1,2 @@
+# name: select.devpoll.unreg 
+devpoll.unregister(fd)

@@ -1,0 +1,2 @@
+# name: c.PyCapsule_Import 
+void* PyCapsule_Import(const char *name, int no_block)

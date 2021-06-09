@@ -1,0 +1,2 @@
+# name: http.client.CannotSe 
+exception http.client.CannotSendHeader

@@ -1,0 +1,6 @@
+# name: >>> subprocess.check 
+>>> subprocess.check_output(
+...     "ls non_existent_file; exit 0",
+...     stderr=subprocess.STDOUT,
+...     shell=True)
+'ls: non_existent_file: No such file or directory\n'

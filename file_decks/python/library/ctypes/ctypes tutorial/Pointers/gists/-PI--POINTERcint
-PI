@@ -1,0 +1,11 @@
+# name: >>> PI = POINTER(c_i 
+>>> PI = POINTER(c_int)
+>>> PI
+<class 'ctypes.LP_c_long'>
+>>> PI(42)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: expected c_long instead of int
+>>> PI(c_int(42))
+<ctypes.LP_c_long object at 0x...>
+>>>

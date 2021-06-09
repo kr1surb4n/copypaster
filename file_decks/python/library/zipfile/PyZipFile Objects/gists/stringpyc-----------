@@ -1,0 +1,6 @@
+# name: string.pyc           
+string.pyc                   # Top level name
+test/__init__.pyc            # Package directory
+test/testall.pyc             # Module test.testall
+test/bogus/__init__.pyc      # Subpackage directory
+test/bogus/myfile.pyc        # Submodule test.bogus.myfile

@@ -1,0 +1,2 @@
+# name: c.PyUnicode_WRITE 
+void PyUnicode_WRITE(int kind, void *data, Py_ssize_t index, Py_UCS4 value)

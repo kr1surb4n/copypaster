@@ -1,0 +1,9 @@
+# name: >>> pack('ci', b'*', 
+>>> pack('ci', b'*', 0x12131415)
+b'*\x00\x00\x00\x12\x13\x14\x15'
+>>> pack('ic', 0x12131415, b'*')
+b'\x12\x13\x14\x15*'
+>>> calcsize('ci')
+8
+>>> calcsize('ic')
+5

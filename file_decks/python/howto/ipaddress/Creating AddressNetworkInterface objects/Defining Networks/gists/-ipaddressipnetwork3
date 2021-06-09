@@ -1,0 +1,5 @@
+# name: >>> ipaddress.ip_net 
+>>> ipaddress.ip_network(3221225984)
+IPv4Network('192.0.2.0/32')
+>>> ipaddress.ip_network(42540766411282592856903984951653826560)
+IPv6Network('2001:db8::/128')

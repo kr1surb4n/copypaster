@@ -1,0 +1,13 @@
+# name: >>> getcontext().pre 
+>>> getcontext().prec = 20
+>>> u, v, w = Decimal(11111113), Decimal(-11111111), Decimal('7.51111111')
+>>> (u + v) + w
+Decimal('9.51111111')
+>>> u + (v + w)
+Decimal('9.51111111')
+>>>
+>>> u, v, w = Decimal(20000), Decimal(-6), Decimal('6.0000003')
+>>> (u*v) + (u*w)
+Decimal('0.0060000')
+>>> u * (v+w)
+Decimal('0.0060000')

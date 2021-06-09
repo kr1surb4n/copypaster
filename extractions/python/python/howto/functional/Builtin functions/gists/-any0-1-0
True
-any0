@@ -1,0 +1,14 @@
+# name: >>> any([0, 1, 0])
+T 
+>>> any([0, 1, 0])
+True
+>>> any([0, 0, 0])
+False
+>>> any([1, 1, 1])
+True
+>>> all([0, 1, 0])
+False
+>>> all([0, 0, 0])
+False
+>>> all([1, 1, 1])
+True

@@ -1,0 +1,2 @@
+# name: sqlite3.register_ada 
+sqlite3.register_adapter(type, callable)

@@ -1,0 +1,2 @@
+# name: aifc.aifc.writeframe 
+aifc.writeframesraw(data)

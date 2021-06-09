@@ -1,0 +1,2 @@
+# name: c.PyOS_BeforeFork 
+void PyOS_BeforeFork()

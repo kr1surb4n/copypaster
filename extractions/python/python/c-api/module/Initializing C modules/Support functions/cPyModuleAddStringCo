@@ -1,0 +1,2 @@
+# name: c.PyModule_AddString 
+int PyModule_AddStringConstant(PyObject *module, const char *name, const char *value)

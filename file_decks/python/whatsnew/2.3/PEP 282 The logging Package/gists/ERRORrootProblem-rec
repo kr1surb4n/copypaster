@@ -1,0 +1,6 @@
+# name: ERROR:root:Problem r 
+ERROR:root:Problem recorded
+Traceback (most recent call last):
+  File "t.py", line 6, in f
+    1/0
+ZeroDivisionError: integer division or modulo by zero

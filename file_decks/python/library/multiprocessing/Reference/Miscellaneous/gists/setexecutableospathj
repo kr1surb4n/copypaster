@@ -1,0 +1,2 @@
+# name: set_executable(os.pa 
+set_executable(os.path.join(sys.exec_prefix, 'pythonw.exe'))

@@ -1,0 +1,5 @@
+# name: itertools.repeat('ab 
+itertools.repeat('abc') =>
+  abc, abc, abc, abc, abc, abc, abc, abc, abc, abc, ...
+itertools.repeat('abc', 5) =>
+  abc, abc, abc, abc, abc

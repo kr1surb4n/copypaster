@@ -1,0 +1,5 @@
+# name: class C:
+    def __i 
+class C:
+    def __index__ (self):
+        return self.value

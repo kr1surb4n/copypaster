@@ -1,0 +1,2 @@
+# name: object.__iadd__ 
+object.__iadd__(self, other)

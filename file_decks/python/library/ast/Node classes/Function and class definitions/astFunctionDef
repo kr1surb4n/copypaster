@@ -1,0 +1,2 @@
+# name: ast.FunctionDef 
+class ast.FunctionDef(name, args, body, decorator_list, returns, type_comment)

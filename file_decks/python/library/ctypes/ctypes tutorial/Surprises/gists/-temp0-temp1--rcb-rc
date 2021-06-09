@@ -1,0 +1,5 @@
+# name: >>> temp0, temp1 = r 
+>>> temp0, temp1 = rc.b, rc.a
+>>> rc.a = temp0
+>>> rc.b = temp1
+>>>

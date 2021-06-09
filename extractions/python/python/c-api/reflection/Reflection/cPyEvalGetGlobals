@@ -1,0 +1,2 @@
+# name: c.PyEval_GetGlobals 
+PyObject* PyEval_GetGlobals(void)

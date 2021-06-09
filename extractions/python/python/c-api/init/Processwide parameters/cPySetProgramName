@@ -1,0 +1,2 @@
+# name: c.Py_SetProgramName 
+void Py_SetProgramName(const wchar_t *name)

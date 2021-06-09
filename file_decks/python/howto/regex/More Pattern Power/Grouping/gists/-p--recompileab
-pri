@@ -1,0 +1,4 @@
+# name: >>> p = re.compile(' 
+>>> p = re.compile('(ab)*')
+>>> print(p.match('ababababab').span())
+(0, 10)

@@ -1,0 +1,14 @@
+# name: >>> PurePosixPath('/ 
+>>> PurePosixPath('/a/b').is_absolute()
+True
+>>> PurePosixPath('a/b').is_absolute()
+False
+
+>>> PureWindowsPath('c:/a/b').is_absolute()
+True
+>>> PureWindowsPath('/a/b').is_absolute()
+False
+>>> PureWindowsPath('c:').is_absolute()
+False
+>>> PureWindowsPath('//some/share').is_absolute()
+True

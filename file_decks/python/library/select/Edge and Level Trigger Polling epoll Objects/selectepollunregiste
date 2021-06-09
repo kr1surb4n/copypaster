@@ -1,0 +1,2 @@
+# name: select.epoll.unregis 
+epoll.unregister(fd)

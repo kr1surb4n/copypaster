@@ -1,0 +1,2 @@
+# name: mailbox.MMDFMessage 
+class mailbox.MMDFMessage(message=None)

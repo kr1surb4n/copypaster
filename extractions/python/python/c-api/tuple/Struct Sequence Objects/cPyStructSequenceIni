@@ -1,0 +1,2 @@
+# name: c.PyStructSequence_I 
+int PyStructSequence_InitType2(PyTypeObject *type, PyStructSequence_Desc *desc)

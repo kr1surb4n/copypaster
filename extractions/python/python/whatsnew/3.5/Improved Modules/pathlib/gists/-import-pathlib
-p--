@@ -1,0 +1,6 @@
+# name: >>> import pathlib
+> 
+>>> import pathlib
+>>> p = pathlib.Path('~/spam42')
+>>> p.expanduser().write_text('ham')
+3

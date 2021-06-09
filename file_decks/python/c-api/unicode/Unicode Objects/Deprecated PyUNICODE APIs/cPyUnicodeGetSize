@@ -1,0 +1,2 @@
+# name: c.PyUnicode_GetSize 
+Py_ssize_t PyUnicode_GetSize(PyObject *unicode)

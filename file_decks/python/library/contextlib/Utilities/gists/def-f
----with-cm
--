@@ -1,0 +1,5 @@
+# name: def f():
+    with cm 
+def f():
+    with cm():
+        # Do stuff

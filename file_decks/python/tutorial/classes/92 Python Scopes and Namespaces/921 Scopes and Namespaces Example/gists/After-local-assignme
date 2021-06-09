@@ -1,0 +1,5 @@
+# name: After local assignme 
+After local assignment: test spam
+After nonlocal assignment: nonlocal spam
+After global assignment: nonlocal spam
+In global scope: global spam

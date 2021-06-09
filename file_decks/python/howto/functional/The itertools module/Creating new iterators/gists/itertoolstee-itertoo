@@ -1,0 +1,9 @@
+# name: itertools.tee( itert 
+itertools.tee( itertools.count() ) =>
+   iterA, iterB
+
+where iterA ->
+   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...
+
+and   iterB ->
+   0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...

@@ -1,0 +1,2 @@
+# name: pathlib.Path.home 
+classmethod Path.home()

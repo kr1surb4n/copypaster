@@ -1,0 +1,2 @@
+# name: property(fget=None,  
+property(fget=None, fset=None, fdel=None, doc=None) -> property

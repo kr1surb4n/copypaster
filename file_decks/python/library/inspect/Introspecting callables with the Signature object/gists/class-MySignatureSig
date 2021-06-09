@@ -1,0 +1,5 @@
+# name: class MySignature(Si 
+class MySignature(Signature):
+    pass
+sig = MySignature.from_callable(min)
+assert isinstance(sig, MySignature)

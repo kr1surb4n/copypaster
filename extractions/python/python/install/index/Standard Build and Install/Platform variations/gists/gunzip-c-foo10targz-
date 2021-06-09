@@ -1,0 +1,4 @@
+# name: gunzip -c foo-1.0.ta 
+gunzip -c foo-1.0.tar.gz | tar xf -    # unpacks into directory foo-1.0
+cd foo-1.0
+python setup.py install

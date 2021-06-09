@@ -1,0 +1,4 @@
+# name: >>> p = Path('docs/. 
+>>> p = Path('docs/../setup.py')
+>>> p.resolve()
+PosixPath('/home/antoine/pathlib/setup.py')

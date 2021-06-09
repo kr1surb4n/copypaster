@@ -1,0 +1,7 @@
+# name: >>> bar = Bar()
+>>>  
+>>> bar = Bar()
+>>> bar.values = cast((c_byte * 4)(), POINTER(c_int))
+>>> print(bar.values[0])
+0
+>>>

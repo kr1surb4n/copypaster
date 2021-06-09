@@ -1,0 +1,2 @@
+# name: c.PyObject_TypeCheck 
+int PyObject_TypeCheck(PyObject *o, PyTypeObject *type)

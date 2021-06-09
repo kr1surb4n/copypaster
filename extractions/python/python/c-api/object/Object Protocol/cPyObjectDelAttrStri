@@ -1,0 +1,2 @@
+# name: c.PyObject_DelAttrSt 
+int PyObject_DelAttrString(PyObject *o, const char *attr_name)

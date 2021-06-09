@@ -1,0 +1,7 @@
+# name: >>> m2.tobytes()
+'ab 
+>>> m2.tobytes()
+'abcdefghijklmnopqrstuvwxyz'
+>>> m2.tolist()
+[97, 98, 99, 100, 101, 102, 103, ... 121, 122]
+>>>

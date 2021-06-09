@@ -1,0 +1,2 @@
+# name: c.PyModule_NewObject 
+PyObject* PyModule_NewObject(PyObject *name)

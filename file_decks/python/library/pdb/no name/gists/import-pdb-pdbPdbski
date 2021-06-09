@@ -1,0 +1,2 @@
+# name: import pdb; pdb.Pdb( 
+import pdb; pdb.Pdb(skip=['django.*']).set_trace()

@@ -1,0 +1,2 @@
+# name: weakref.finalize.ate 
+weakref.finalize.atexit

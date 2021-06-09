@@ -1,0 +1,2 @@
+# name: c.PyException_SetCau 
+void PyException_SetCause(PyObject *ex, PyObject *cause)

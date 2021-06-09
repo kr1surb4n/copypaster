@@ -1,0 +1,2 @@
+# name: c.PyUnicode_EncodeMB 
+PyObject* PyUnicode_EncodeMBCS(const Py_UNICODE *s, Py_ssize_t size, const char *errors)

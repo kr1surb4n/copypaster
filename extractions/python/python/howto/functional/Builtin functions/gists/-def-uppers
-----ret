@@ -1,0 +1,4 @@
+# name: >>> def upper(s):
+.. 
+>>> def upper(s):
+...     return s.upper()

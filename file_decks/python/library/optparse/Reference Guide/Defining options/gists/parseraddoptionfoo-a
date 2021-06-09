@@ -1,0 +1,2 @@
+# name: parser.add_option("- 
+parser.add_option("--foo", attr=value, ...)

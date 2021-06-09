@@ -1,0 +1,8 @@
+# name: >>> from math import 
+>>> from math import erf, erfc, sqrt
+>>> erf(1.0/sqrt(2.0))   # portion of normal distribution within 1 standard deviation
+0.682689492137086
+>>> erfc(1.0/sqrt(2.0))  # portion of normal distribution outside 1 standard deviation
+0.31731050786291404
+>>> erf(1.0/sqrt(2.0)) + erfc(1.0/sqrt(2.0))
+1.0

@@ -1,0 +1,5 @@
+# name: >>> from typing impo 
+>>> from typing import TypeVar
+>>> Y = TypeVar('Y')
+>>> dict[str, Y][int]
+dict[str, int]

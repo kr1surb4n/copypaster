@@ -1,0 +1,6 @@
+# name: >>> from math import 
+>>> from math import exp, expm1
+>>> exp(1e-5) - 1  # gives result accurate to 11 places
+1.0000050000069649e-05
+>>> expm1(1e-5)    # result accurate to full precision
+1.0000050000166668e-05

@@ -1,0 +1,2 @@
+# name: dropwhile(lambda x:  
+dropwhile(lambda x: x<5, [1,4,6,4,1]) --> 6 4 1

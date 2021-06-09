@@ -1,0 +1,2 @@
+# name: faulthandler.unregis 
+faulthandler.unregister(signum)

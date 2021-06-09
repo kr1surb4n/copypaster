@@ -1,0 +1,6 @@
+# name: >>> member = Color.R 
+>>> member = Color.RED
+>>> member.name
+'RED'
+>>> member.value
+1

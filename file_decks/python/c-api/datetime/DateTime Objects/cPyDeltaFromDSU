@@ -1,0 +1,2 @@
+# name: c.PyDelta_FromDSU 
+PyObject* PyDelta_FromDSU(int days, int seconds, int useconds)

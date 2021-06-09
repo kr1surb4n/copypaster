@@ -1,0 +1,2 @@
+# name: c.Py_InitializeEx 
+void Py_InitializeEx(int initsigs)

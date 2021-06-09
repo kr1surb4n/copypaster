@@ -1,0 +1,14 @@
+# name: >>> m2[0] = 75
+Trace 
+>>> m2[0] = 75
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot modify read-only memory
+>>> b = bytearray(string.letters)  # Creating a mutable object
+>>> b
+bytearray(b'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+>>> mb = memoryview(b)
+>>> mb[0] = '*'         # Assign to view, changing the bytearray.
+>>> b[0:5]              # The bytearray has been changed.
+bytearray(b'*bcde')
+>>>

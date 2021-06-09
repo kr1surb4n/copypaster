@@ -1,0 +1,6 @@
+# name: >>> mock = Mock(side 
+>>> mock = Mock(side_effect=Exception('Boom!'))
+>>> mock()
+Traceback (most recent call last):
+  ...
+Exception: Boom!

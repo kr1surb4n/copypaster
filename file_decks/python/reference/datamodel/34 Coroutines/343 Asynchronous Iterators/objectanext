@@ -1,0 +1,2 @@
+# name: object.__anext__ 
+object.__anext__(self)

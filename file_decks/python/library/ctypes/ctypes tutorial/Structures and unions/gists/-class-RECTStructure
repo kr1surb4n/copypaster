@@ -1,0 +1,11 @@
+# name: >>> class RECT(Struc 
+>>> class RECT(Structure):
+...     _fields_ = [("upperleft", POINT),
+...                 ("lowerright", POINT)]
+...
+>>> rc = RECT(point)
+>>> print(rc.upperleft.x, rc.upperleft.y)
+0 5
+>>> print(rc.lowerright.x, rc.lowerright.y)
+0 0
+>>>

@@ -1,0 +1,2 @@
+# name: http.cookiejar.FileC 
+class http.cookiejar.FileCookieJar(filename, delayload=None, policy=None)

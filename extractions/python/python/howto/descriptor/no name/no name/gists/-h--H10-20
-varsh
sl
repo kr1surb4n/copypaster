@@ -1,0 +1,8 @@
+# name: >>> h = H(10, 20)
+>> 
+>>> h = H(10, 20)
+>>> vars(h)
+{'_slotvalues': [10, 20]}
+>>> h.x = 55
+>>> vars(h)
+{'_slotvalues': [55, 20]}

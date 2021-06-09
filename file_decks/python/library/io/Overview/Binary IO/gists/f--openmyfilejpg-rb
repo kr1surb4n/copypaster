@@ -1,0 +1,2 @@
+# name: f = open("myfile.jpg 
+f = open("myfile.jpg", "rb")

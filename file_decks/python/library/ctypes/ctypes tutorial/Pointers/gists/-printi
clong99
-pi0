@@ -1,0 +1,8 @@
+# name: >>> print(i)
+c_long( 
+>>> print(i)
+c_long(99)
+>>> pi[0] = 22
+>>> print(i)
+c_long(22)
+>>>

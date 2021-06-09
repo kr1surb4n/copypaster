@@ -1,0 +1,2 @@
+# name: attr = PyObject_GetA 
+attr = PyObject_GetAttrString(module, "<attrname>");

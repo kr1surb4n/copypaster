@@ -1,0 +1,10 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.__enter__ = Mock(return_value='foo')
+>>> mock.__exit__ = Mock(return_value=False)
+>>> with mock as m:
+...     assert m == 'foo'
+...
+>>> mock.__enter__.assert_called_with()
+>>> mock.__exit__.assert_called_with(None, None, None)

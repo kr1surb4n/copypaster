@@ -1,0 +1,2 @@
+# name: typing.ContextManage 
+class typing.ContextManager(Generic[T_co])

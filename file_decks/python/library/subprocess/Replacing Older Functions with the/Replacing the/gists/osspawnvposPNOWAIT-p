@@ -1,0 +1,4 @@
+# name: os.spawnvp(os.P_NOWA 
+os.spawnvp(os.P_NOWAIT, path, args)
+==>
+Popen([path] + args[1:])

@@ -1,0 +1,6 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('(x := 4)', mode='eval'), indent=4))
+Expression(
+    body=NamedExpr(
+        target=Name(id='x', ctx=Store()),
+        value=Constant(value=4)))

@@ -1,0 +1,2 @@
+# name: ast.Attribute 
+class ast.Attribute(value, attr, ctx)

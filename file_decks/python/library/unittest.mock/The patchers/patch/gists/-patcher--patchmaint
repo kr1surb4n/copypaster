@@ -1,0 +1,7 @@
+# name: >>> patcher = patch( 
+>>> patcher = patch('__main__.thing', first='one', second='two')
+>>> mock_thing = patcher.start()
+>>> mock_thing.first
+'one'
+>>> mock_thing.second
+'two'

@@ -1,0 +1,2 @@
+# name: prog -v --report rep 
+prog -v --report report.txt foo bar

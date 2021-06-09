@@ -1,0 +1,2 @@
+# name: c.PyOS_string_to_dou 
+double PyOS_string_to_double(const char *s, char **endptr, PyObject *overflow_exception)

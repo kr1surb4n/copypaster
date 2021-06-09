@@ -1,0 +1,7 @@
+# name: >>> p = re.compile(r 
+>>> p = re.compile(r'\W+')
+>>> p2 = re.compile(r'(\W+)')
+>>> p.split('This... is a test.')
+['This', 'is', 'a', 'test', '']
+>>> p2.split('This... is a test.')
+['This', '... ', 'is', ' ', 'a', ' ', 'test', '.', '']

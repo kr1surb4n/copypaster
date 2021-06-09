@@ -1,0 +1,2 @@
+# name: os.DirEntry.is_symli 
+os.DirEntry.is_symlink

@@ -1,0 +1,11 @@
+# name: >>> import sys
+>>> p 
+>>> import sys
+>>> print 'Platform: {0.platform}\nPython version: {0.version}'.format(sys)
+Platform: darwin
+Python version: 2.6a1+ (trunk:61261M, Mar  5 2008, 20:29:41)
+[GCC 4.0.1 (Apple Computer, Inc. build 5367)]'
+
+>>> import mimetypes
+>>> 'Content-type: {0[.mp4]}'.format(mimetypes.types_map)
+'Content-type: video/mp4'

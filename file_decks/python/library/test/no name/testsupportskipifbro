@@ -1,0 +1,2 @@
+# name: test.support.skip_if 
+test.support.skip_if_broken_multiprocessing_synchronize()

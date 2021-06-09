@@ -1,0 +1,2 @@
+# name: c.PyUnicodeTranslate 
+PyObject* PyUnicodeTranslateError_Create(const Py_UNICODE *object, Py_ssize_t length, Py_ssize_t start, Py_ssize_t end, const char *reason)

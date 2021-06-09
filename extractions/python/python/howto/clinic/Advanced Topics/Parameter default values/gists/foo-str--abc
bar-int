@@ -1,0 +1,5 @@
+# name: foo: str = "abc"
+bar 
+foo: str = "abc"
+bar: int = 123
+bat: float = 45.6

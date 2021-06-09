@@ -1,2 +1,0 @@
-# name: (series (lambda (size) (checkerboard (square size)))) 
-(series (lambda (size) (checkerboard (square size))))

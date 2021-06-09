@@ -1,0 +1,2 @@
+# name: platform.platform 
+platform.platform(aliased=0, terse=0)

@@ -1,0 +1,2 @@
+# name: c.PyImport_GetMagicN 
+long PyImport_GetMagicNumber()

@@ -1,0 +1,3 @@
+# name: with Popen(["ifconfi 
+with Popen(["ifconfig"], stdout=PIPE) as proc:
+    log.write(proc.stdout.read())

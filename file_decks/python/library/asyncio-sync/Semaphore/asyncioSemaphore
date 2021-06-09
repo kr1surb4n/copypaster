@@ -1,0 +1,2 @@
+# name: asyncio.Semaphore 
+class asyncio.Semaphore(value=1, *, loop=None)

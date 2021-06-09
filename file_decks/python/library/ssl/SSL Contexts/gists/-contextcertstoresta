@@ -1,0 +1,3 @@
+# name: >>> context.cert_sto 
+>>> context.cert_store_stats()
+{'crl': 0, 'x509_ca': 1, 'x509': 2}

@@ -1,0 +1,2 @@
+# name: http.cookiejar.Mozil 
+class http.cookiejar.MozillaCookieJar(filename, delayload=None, policy=None)

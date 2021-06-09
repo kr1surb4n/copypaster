@@ -1,0 +1,2 @@
+# name: c.PyContext_CopyCurr 
+PyObject *PyContext_CopyCurrent(void)

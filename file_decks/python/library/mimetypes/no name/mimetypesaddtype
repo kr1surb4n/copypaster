@@ -1,0 +1,2 @@
+# name: mimetypes.add_type 
+mimetypes.add_type(type, ext, strict=True)

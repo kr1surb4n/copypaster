@@ -1,0 +1,4 @@
+# name: >>> list(Shape)
+[<Sh 
+>>> list(Shape)
+[<Shape.SQUARE: 2>, <Shape.DIAMOND: 1>, <Shape.CIRCLE: 3>]

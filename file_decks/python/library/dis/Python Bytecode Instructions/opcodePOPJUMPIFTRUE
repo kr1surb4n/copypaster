@@ -1,0 +1,2 @@
+# name: opcode-POP_JUMP_IF_T 
+POP_JUMP_IF_TRUE(target)

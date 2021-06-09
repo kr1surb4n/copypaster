@@ -1,0 +1,2 @@
+# name: c.PyErr_BadArgument 
+int PyErr_BadArgument()

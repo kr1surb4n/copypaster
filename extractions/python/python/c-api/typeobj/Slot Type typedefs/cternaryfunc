@@ -1,0 +1,2 @@
+# name: c.ternaryfunc 
+PyObject *(*ternaryfunc)(PyObject *, PyObject *, PyObject *)

@@ -1,0 +1,6 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock().foo(a=2, b=3)
+<Mock name='mock().foo()' id='...'>
+>>> mock.return_value.foo.assert_called_with(a=2, b=3)

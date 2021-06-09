@@ -1,0 +1,2 @@
+# name: c.PyModule_AddObject 
+int PyModule_AddObjectRef(PyObject *module, const char *name, PyObject *value)

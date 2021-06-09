@@ -1,0 +1,2 @@
+# name: urllib.request.Cache 
+CacheFTPHandler.setMaxConns(m)

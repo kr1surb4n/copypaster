@@ -1,0 +1,2 @@
+# name: readline.replace_his 
+readline.replace_history_item(pos, line)

@@ -1,0 +1,2 @@
+# name: c.PyDateTime_Check 
+int PyDateTime_Check(PyObject *ob)

@@ -1,0 +1,3 @@
+# name: d = os.path.dirname( 
+d = os.path.dirname(sys.modules[package].__file__)
+data = open(os.path.join(d, resource), 'rb').read()

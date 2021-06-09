@@ -1,0 +1,7 @@
+# name: >>> input = open('/e 
+>>> input = open('/etc/passwd', 'r')
+>>> for line in reversed(list(input)):
+...   print line
+...
+root:*:0:0:System Administrator:/var/root:/bin/tcsh
+  ...

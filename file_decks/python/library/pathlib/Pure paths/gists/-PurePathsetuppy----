@@ -1,0 +1,3 @@
+# name: >>> PurePath('setup. 
+>>> PurePath('setup.py')      # Running on a Unix machine
+PurePosixPath('setup.py')

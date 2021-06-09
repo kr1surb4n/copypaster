@@ -1,0 +1,2 @@
+# name: object.__neg__ 
+object.__neg__(self)

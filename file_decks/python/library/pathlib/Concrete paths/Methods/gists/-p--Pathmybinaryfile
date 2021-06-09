@@ -1,0 +1,6 @@
+# name: >>> p = Path('my_bin 
+>>> p = Path('my_binary_file')
+>>> p.write_bytes(b'Binary file contents')
+20
+>>> p.read_bytes()
+b'Binary file contents'

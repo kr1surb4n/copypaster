@@ -1,0 +1,2 @@
+# name: fcntl.flock 
+fcntl.flock(fd, operation)

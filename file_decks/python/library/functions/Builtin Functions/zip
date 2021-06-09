@@ -1,0 +1,2 @@
+# name: zip 
+zip(*iterables, strict=False)

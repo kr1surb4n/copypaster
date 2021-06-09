@@ -1,0 +1,16 @@
+# name: # Examples from Semi 
+# Examples from Seminumerical Algorithms, Section 4.2.2.
+>>> from decimal import Decimal, getcontext
+>>> getcontext().prec = 8
+
+>>> u, v, w = Decimal(11111113), Decimal(-11111111), Decimal('7.51111111')
+>>> (u + v) + w
+Decimal('9.5111111')
+>>> u + (v + w)
+Decimal('10')
+
+>>> u, v, w = Decimal(20000), Decimal(-6), Decimal('6.0000003')
+>>> (u*v) + (u*w)
+Decimal('0.01')
+>>> u * (v+w)
+Decimal('0.0060000')

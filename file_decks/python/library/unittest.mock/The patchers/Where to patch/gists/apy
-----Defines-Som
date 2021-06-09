@@ -1,0 +1,8 @@
+# name: a.py
+    -> Defines  
+a.py
+    -> Defines SomeClass
+
+b.py
+    -> from a import SomeClass
+    -> some_function instantiates SomeClass

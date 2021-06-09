@@ -1,0 +1,5 @@
+# name: with os.scandir(path 
+with os.scandir(path) as it:
+    for entry in it:
+        if not entry.name.startswith('.') and entry.is_file():
+            print(entry.name)

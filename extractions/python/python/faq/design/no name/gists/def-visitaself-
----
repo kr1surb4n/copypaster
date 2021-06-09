@@ -1,0 +1,9 @@
+# name: def visit_a(self, .. 
+def visit_a(self, ...):
+    ...
+...
+
+def dispatch(self, value):
+    method_name = 'visit_' + str(value)
+    method = getattr(self, method_name)
+    method()

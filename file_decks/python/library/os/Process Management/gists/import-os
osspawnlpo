@@ -1,0 +1,7 @@
+# name: import os
+os.spawnlp 
+import os
+os.spawnlp(os.P_WAIT, 'cp', 'cp', 'index.html', '/dev/null')
+
+L = ['cp', 'index.html', '/dev/null']
+os.spawnvpe(os.P_WAIT, 'cp', L, os.environ)

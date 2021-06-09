@@ -1,0 +1,2 @@
+# name: decimal.Context.is_n 
+decimal.Context.is_nan

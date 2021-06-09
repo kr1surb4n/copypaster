@@ -1,0 +1,11 @@
+# name: Infinity - Infinity
+ 
+Infinity - Infinity
+0 * Infinity
+Infinity / Infinity
+x % 0
+Infinity % x
+sqrt(-x) and x > 0
+0 ** 0
+x ** (non-integer)
+x ** Infinity

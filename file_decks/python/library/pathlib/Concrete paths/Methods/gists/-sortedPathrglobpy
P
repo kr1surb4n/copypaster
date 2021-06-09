@@ -1,0 +1,7 @@
+# name: >>> sorted(Path().rg 
+>>> sorted(Path().rglob("*.py"))
+[PosixPath('build/lib/pathlib.py'),
+ PosixPath('docs/conf.py'),
+ PosixPath('pathlib.py'),
+ PosixPath('setup.py'),
+ PosixPath('test_pathlib.py')]

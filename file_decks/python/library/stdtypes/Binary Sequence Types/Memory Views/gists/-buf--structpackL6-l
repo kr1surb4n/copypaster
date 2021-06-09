@@ -1,0 +1,10 @@
+# name: >>> buf = struct.pac 
+>>> buf = struct.pack("L"*6, *list(range(6)))
+>>> x = memoryview(buf)
+>>> y = x.cast('L', shape=[2,3])
+>>> len(y)
+2
+>>> y.nbytes
+48
+>>> y.tolist()
+[[0, 1, 2], [3, 4, 5]]

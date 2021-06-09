@@ -1,0 +1,5 @@
+# name: def infinite_stream( 
+def infinite_stream(start: int) -> Iterator[int]:
+    while True:
+        yield start
+        start += 1

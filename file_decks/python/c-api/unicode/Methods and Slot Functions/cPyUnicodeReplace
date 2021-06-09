@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Replace 
+PyObject* PyUnicode_Replace(PyObject *str, PyObject *substr, PyObject *replstr, Py_ssize_t maxcount)

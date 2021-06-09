@@ -1,0 +1,8 @@
+# name: def f(): pass
+
+f.pub 
+def f(): pass
+
+f.publish = 1
+f.secure = 1
+f.grammar = "A ::= B (C D)*"

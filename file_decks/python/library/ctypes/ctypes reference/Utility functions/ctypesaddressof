@@ -1,0 +1,2 @@
+# name: ctypes.addressof 
+ctypes.addressof(obj)

@@ -1,0 +1,8 @@
+# name: >>> decimal.getconte 
+>>> decimal.getcontext().prec
+28
+>>> decimal.Decimal(1) / decimal.Decimal(7)
+Decimal("0.1428571428571428571428571429")
+>>> decimal.getcontext().prec = 9
+>>> decimal.Decimal(1) / decimal.Decimal(7)
+Decimal("0.142857143")

@@ -1,0 +1,3 @@
+# name: >>> pprint.saferepr( 
+>>> pprint.saferepr(stuff)
+"[<Recursion on list with id=...>, 'spam', 'eggs', 'lumberjack', 'knights', 'ni']"

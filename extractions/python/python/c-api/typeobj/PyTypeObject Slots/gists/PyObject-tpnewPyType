@@ -1,0 +1,2 @@
+# name: PyObject *tp_new(PyT 
+PyObject *tp_new(PyTypeObject *subtype, PyObject *args, PyObject *kwds);

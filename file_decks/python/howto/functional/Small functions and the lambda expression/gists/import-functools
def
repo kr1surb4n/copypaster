@@ -1,0 +1,7 @@
+# name: import functools
+def 
+import functools
+def combine(a, b):
+    return 0, a[1] + b[1]
+
+total = functools.reduce(combine, items)[1]

@@ -1,0 +1,12 @@
+# name: pipe = os.popen(cmd, 
+pipe = os.popen(cmd, 'w')
+...
+rc = pipe.close()
+if rc is not None and rc >> 8:
+    print("There were some errors")
+==>
+process = Popen(cmd, stdin=PIPE)
+...
+process.stdin.close()
+if process.wait() != 0:
+    print("There were some errors")

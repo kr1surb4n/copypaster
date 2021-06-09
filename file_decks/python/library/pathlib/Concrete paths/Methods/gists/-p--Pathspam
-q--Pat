@@ -1,0 +1,7 @@
+# name: >>> p = Path('spam') 
+>>> p = Path('spam')
+>>> q = Path('eggs')
+>>> p.samefile(q)
+False
+>>> p.samefile('spam')
+True

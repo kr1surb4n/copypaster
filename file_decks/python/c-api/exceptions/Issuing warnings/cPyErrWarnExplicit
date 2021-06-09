@@ -1,0 +1,2 @@
+# name: c.PyErr_WarnExplicit 
+int PyErr_WarnExplicit(PyObject *category, const char *message, const char *filename, int lineno, const char *module, PyObject *registry)

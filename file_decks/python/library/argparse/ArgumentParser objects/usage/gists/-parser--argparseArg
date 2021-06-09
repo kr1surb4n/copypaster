@@ -1,0 +1,13 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG', usage='%(prog)s [options]')
+>>> parser.add_argument('--foo', nargs='?', help='foo help')
+>>> parser.add_argument('bar', nargs='+', help='bar help')
+>>> parser.print_help()
+usage: PROG [options]
+
+positional arguments:
+ bar          bar help
+
+optional arguments:
+ -h, --help   show this help message and exit
+ --foo [FOO]  foo help

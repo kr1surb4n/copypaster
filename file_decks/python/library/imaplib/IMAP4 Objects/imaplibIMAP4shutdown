@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.shutdo 
+IMAP4.shutdown()

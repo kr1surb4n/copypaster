@@ -1,0 +1,9 @@
+# name: >>> short_array[:]
+[ 
+>>> short_array[:]
+[0, 0, 0, 0]
+>>> short_array[7]
+Traceback (most recent call last):
+    ...
+IndexError: invalid index
+>>>

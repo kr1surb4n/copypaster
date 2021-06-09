@@ -1,0 +1,2 @@
+# name: xml.sax.xmlreader.At 
+class xml.sax.xmlreader.AttributesNSImpl(attrs, qnames)

@@ -1,0 +1,23 @@
+# name: >>> n = 750          
+>>> n = 750             # Sample size
+>>> p = 0.65            # Preference for Python
+>>> q = 1.0 - p         # Preference for Ruby
+>>> k = 500             # Room capacity
+
+>>> # Approximation using the cumulative normal distribution
+>>> from math import sqrt
+>>> round(NormalDist(mu=n*p, sigma=sqrt(n*p*q)).cdf(k + 0.5), 4)
+0.8402
+
+>>> # Solution using the cumulative binomial distribution
+>>> from math import comb, fsum
+>>> round(fsum(comb(n, r) * p**r * q**(n-r) for r in range(k+1)), 4)
+0.8402
+
+>>> # Approximation using a simulation
+>>> from random import seed, choices
+>>> seed(8675309)
+>>> def trial():
+...     return choices(('Python', 'Ruby'), (p, q), k=n).count('Python')
+>>> mean(trial() <= k for i in range(10_000))
+0.8398

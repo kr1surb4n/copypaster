@@ -1,0 +1,9 @@
+# name: with open(fname, 'r' 
+with open(fname, 'r', encoding="ascii", errors="surrogateescape") as f:
+    data = f.read()
+
+# make changes to the string 'data'
+
+with open(fname + '.new', 'w',
+          encoding="ascii", errors="surrogateescape") as f:
+    f.write(data)

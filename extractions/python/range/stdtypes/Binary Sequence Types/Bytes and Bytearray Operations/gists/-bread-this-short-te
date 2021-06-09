@@ -1,0 +1,3 @@
+# name: >>> b'read this shor 
+>>> b'read this short text'.translate(None, b'aeiou')
+b'rd ths shrt txt'

@@ -1,0 +1,8 @@
+# name: >>> qsort(ia, len(ia 
+>>> qsort(ia, len(ia), sizeof(c_int), cmp_func)  
+py_cmp_func 5 1
+py_cmp_func 33 99
+py_cmp_func 7 33
+py_cmp_func 5 7
+py_cmp_func 1 7
+>>>

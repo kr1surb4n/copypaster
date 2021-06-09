@@ -1,0 +1,2 @@
+# name: curses.window.subpad 
+window.subpad(begin_y, begin_x)

@@ -1,0 +1,2 @@
+# name: os.lstat 
+os.lstat(path, *, dir_fd=None)

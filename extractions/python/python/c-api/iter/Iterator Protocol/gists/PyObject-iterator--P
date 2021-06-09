@@ -1,0 +1,23 @@
+# name: PyObject *iterator = 
+PyObject *iterator = PyObject_GetIter(obj);
+PyObject *item;
+
+if (iterator == NULL) {
+    /* propagate error */
+}
+
+while ((item = PyIter_Next(iterator))) {
+    /* do something with item */
+    ...
+    /* release reference when done */
+    Py_DECREF(item);
+}
+
+Py_DECREF(iterator);
+
+if (PyErr_Occurred()) {
+    /* propagate error */
+}
+else {
+    /* continue doing useful work */
+}

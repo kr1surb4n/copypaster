@@ -1,0 +1,2 @@
+# name: email.parser.BytesHe 
+class email.parser.BytesHeaderParser(_class=None, *, policy=policy.compat32)

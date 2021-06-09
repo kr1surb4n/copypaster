@@ -1,0 +1,2 @@
+# name: smtplib.SMTP.send_me 
+SMTP.send_message(msg, from_addr=None, to_addrs=None, mail_options=(), rcpt_options=())

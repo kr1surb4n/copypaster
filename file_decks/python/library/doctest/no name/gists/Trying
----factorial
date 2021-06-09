@@ -1,0 +1,16 @@
+# name: Trying:
+    factoria 
+Trying:
+    factorial(1e100)
+Expecting:
+    Traceback (most recent call last):
+        ...
+    OverflowError: n too large
+ok
+2 items passed all tests:
+   1 tests in __main__
+   8 tests in __main__.factorial
+9 tests in 2 items.
+9 passed and 0 failed.
+Test passed.
+$

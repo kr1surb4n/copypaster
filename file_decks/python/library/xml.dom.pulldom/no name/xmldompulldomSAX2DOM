@@ -1,0 +1,2 @@
+# name: xml.dom.pulldom.SAX2 
+class xml.dom.pulldom.SAX2DOM(documentFactory=None)

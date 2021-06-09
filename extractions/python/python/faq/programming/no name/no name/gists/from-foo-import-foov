@@ -1,0 +1,3 @@
+# name: from foo import foo_ 
+from foo import foo_var
+bar_var = 2

@@ -1,0 +1,4 @@
+# name: >>> getcontext().pre 
+>>> getcontext().prec = 3
+>>> +Decimal('1.23456789')      # unary plus triggers rounding
+Decimal('1.23')

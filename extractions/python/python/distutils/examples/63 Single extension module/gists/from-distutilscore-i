@@ -1,0 +1,7 @@
+# name: from distutils.core  
+from distutils.core import setup
+from distutils.extension import Extension
+setup(name='foobar',
+      version='1.0',
+      ext_modules=[Extension('foopkg.foo', ['foo.c'])],
+      )

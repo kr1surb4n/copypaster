@@ -1,0 +1,58 @@
+# name: Welcome to the turtl 
+Welcome to the turtle shell.   Type help or ? to list commands.
+
+(turtle) ?
+
+Documented commands (type help <topic>):
+========================================
+bye     color    goto     home  playback  record  right
+circle  forward  heading  left  position  reset   undo
+
+(turtle) help forward
+Move the turtle forward by the specified distance:  FORWARD 10
+(turtle) record spiral.cmd
+(turtle) position
+Current position is 0 0
+
+(turtle) heading
+Current heading is 0
+
+(turtle) reset
+(turtle) circle 20
+(turtle) right 30
+(turtle) circle 40
+(turtle) right 30
+(turtle) circle 60
+(turtle) right 30
+(turtle) circle 80
+(turtle) right 30
+(turtle) circle 100
+(turtle) right 30
+(turtle) circle 120
+(turtle) right 30
+(turtle) circle 120
+(turtle) heading
+Current heading is 180
+
+(turtle) forward 100
+(turtle)
+(turtle) right 90
+(turtle) forward 100
+(turtle)
+(turtle) right 90
+(turtle) forward 400
+(turtle) right 90
+(turtle) forward 500
+(turtle) right 90
+(turtle) forward 400
+(turtle) right 90
+(turtle) forward 300
+(turtle) playback spiral.cmd
+Current position is 0 0
+
+Current heading is 0
+
+Current heading is 180
+
+(turtle) bye
+Thank you for using Turtle

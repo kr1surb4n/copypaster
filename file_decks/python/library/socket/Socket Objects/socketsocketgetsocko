@@ -1,0 +1,2 @@
+# name: socket.socket.getsoc 
+socket.getsockopt(level, optname[, buflen])

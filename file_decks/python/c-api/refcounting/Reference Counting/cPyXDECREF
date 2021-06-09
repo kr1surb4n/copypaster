@@ -1,0 +1,2 @@
+# name: c.Py_XDECREF 
+void Py_XDECREF(PyObject *o)

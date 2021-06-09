@@ -1,0 +1,2 @@
+# name: c.PyBuffer_FromConti 
+int PyBuffer_FromContiguous(Py_buffer *view, void *buf, Py_ssize_t len, char fort)

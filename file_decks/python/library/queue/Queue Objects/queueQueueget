@@ -1,0 +1,2 @@
+# name: queue.Queue.get 
+Queue.get(block=True, timeout=None)

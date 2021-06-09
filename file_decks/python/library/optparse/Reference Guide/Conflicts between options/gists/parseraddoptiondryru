@@ -1,0 +1,2 @@
+# name: parser.add_option("- 
+parser.add_option("--dry-run", ..., help="new dry-run option")

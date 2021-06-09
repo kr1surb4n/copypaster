@@ -1,0 +1,2 @@
+# name: http.server.SimpleHT 
+http.server.SimpleHTTPRequestHandler.do_GET

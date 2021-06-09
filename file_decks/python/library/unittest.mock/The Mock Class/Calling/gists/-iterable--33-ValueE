@@ -1,0 +1,11 @@
+# name: >>> iterable = (33,  
+>>> iterable = (33, ValueError, 66)
+>>> m = MagicMock(side_effect=iterable)
+>>> m()
+33
+>>> m()
+Traceback (most recent call last):
+ ...
+ValueError
+>>> m()
+66

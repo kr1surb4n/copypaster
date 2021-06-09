@@ -1,0 +1,2 @@
+# name: c.PyUnicode_FromUnic 
+PyObject* PyUnicode_FromUnicode(const Py_UNICODE *u, Py_ssize_t size)

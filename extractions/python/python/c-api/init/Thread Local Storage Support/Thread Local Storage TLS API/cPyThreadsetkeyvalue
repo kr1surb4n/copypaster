@@ -1,0 +1,2 @@
+# name: c.PyThread_set_key_v 
+int PyThread_set_key_value(int key, void *value)

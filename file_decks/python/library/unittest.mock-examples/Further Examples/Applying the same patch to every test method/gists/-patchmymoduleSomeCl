@@ -1,0 +1,17 @@
+# name: >>> @patch('mymodule 
+>>> @patch('mymodule.SomeClass')
+... class MyTest(unittest.TestCase):
+...
+...     def test_one(self, MockSomeClass):
+...         self.assertIs(mymodule.SomeClass, MockSomeClass)
+...
+...     def test_two(self, MockSomeClass):
+...         self.assertIs(mymodule.SomeClass, MockSomeClass)
+...
+...     def not_a_test(self):
+...         return 'something'
+...
+>>> MyTest('test_one').test_one()
+>>> MyTest('test_two').test_two()
+>>> MyTest('test_two').not_a_test()
+'something'

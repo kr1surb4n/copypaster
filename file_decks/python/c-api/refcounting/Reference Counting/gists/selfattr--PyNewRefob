@@ -1,0 +1,2 @@
+# name: self->attr = Py_NewR 
+self->attr = Py_NewRef(obj);

@@ -1,0 +1,2 @@
+# name: c.PyAnySet_Check 
+int PyAnySet_Check(PyObject *p)

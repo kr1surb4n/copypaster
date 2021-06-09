@@ -1,0 +1,11 @@
+# name: >>> bytearray([65, 6 
+>>> bytearray([65, 66, 67])
+bytearray(b'ABC')
+>>> b = bytearray(u'\u21ef\u3244', 'utf-8')
+>>> b
+bytearray(b'\xe2\x87\xaf\xe3\x89\x84')
+>>> b[0] = '\xe3'
+>>> b
+bytearray(b'\xe3\x87\xaf\xe3\x89\x84')
+>>> unicode(str(b), 'utf-8')
+u'\u31ef \u3244'

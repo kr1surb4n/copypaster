@@ -1,0 +1,2 @@
+# name: difflib.context_diff 
+difflib.context_diff(a, b, fromfile='', tofile='', fromfiledate='', tofiledate='', n=3, lineterm='\n')

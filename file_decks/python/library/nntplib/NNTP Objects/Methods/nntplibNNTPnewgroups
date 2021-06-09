@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.newgrou 
+NNTP.newgroups(date, *, file=None)

@@ -1,0 +1,2 @@
+# name: /usr/bin/python setu 
+/usr/bin/python setup.py install --prefix=/usr/local

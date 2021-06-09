@@ -1,0 +1,5 @@
+# name: >>> from test.test_e 
+>>> from test.test_enum import Fruit
+>>> from pickle import dumps, loads
+>>> Fruit.TOMATO is loads(dumps(Fruit.TOMATO))
+True

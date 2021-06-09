@@ -1,0 +1,9 @@
+# name: >>> os.environ['TZ'] 
+>>> os.environ['TZ'] = 'EST+05EDT,M4.1.0,M10.5.0'
+>>> time.tzset()
+>>> time.strftime('%X %x %Z')
+'02:07:36 05/08/03 EDT'
+>>> os.environ['TZ'] = 'AEST-10AEDT-11,M10.5.0,M3.5.0'
+>>> time.tzset()
+>>> time.strftime('%X %x %Z')
+'16:08:12 05/08/03 AEST'

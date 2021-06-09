@@ -1,0 +1,2 @@
+# name: Extension('foo', ['f 
+Extension('foo', ['foo.c'], include_dirs=['/usr/include/X11'])

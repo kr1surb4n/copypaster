@@ -1,0 +1,10 @@
+# name: class Vehicle:
+    _ 
+class Vehicle:
+    __slots__ = ('id_number', 'make', 'model')
+
+>>> auto = Vehicle()
+>>> auto.id_nubmer = 'VYE483814LQEX'
+Traceback (most recent call last):
+    ...
+AttributeError: 'Vehicle' object has no attribute 'id_nubmer'

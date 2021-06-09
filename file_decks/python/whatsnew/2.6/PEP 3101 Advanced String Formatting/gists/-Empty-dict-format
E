@@ -1,0 +1,3 @@
+# name: >>> "Empty dict: {{} 
+>>> "Empty dict: {{}}".format()
+"Empty dict: {}"

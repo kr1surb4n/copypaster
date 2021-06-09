@@ -1,0 +1,7 @@
+# name: >>> def turn(x, y):
+ 
+>>> def turn(x, y):
+...     left(180)
+...
+>>> onclick(turn)  # Now clicking into the turtle will turn it.
+>>> onclick(None)  # event-binding will be removed

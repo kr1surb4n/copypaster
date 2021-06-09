@@ -1,0 +1,2 @@
+# name: c.PyDict_Check 
+int PyDict_Check(PyObject *p)

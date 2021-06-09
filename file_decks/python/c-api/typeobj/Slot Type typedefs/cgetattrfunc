@@ -1,0 +1,2 @@
+# name: c.getattrfunc 
+PyObject *(*getattrfunc)(PyObject *self, char *attr)

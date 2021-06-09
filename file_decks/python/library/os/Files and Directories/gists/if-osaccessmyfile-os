@@ -1,0 +1,5 @@
+# name: if os.access("myfile 
+if os.access("myfile", os.R_OK):
+    with open("myfile") as fp:
+        return fp.read()
+return "some default data"

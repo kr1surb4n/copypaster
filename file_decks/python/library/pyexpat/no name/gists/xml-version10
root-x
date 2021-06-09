@@ -1,0 +1,7 @@
+# name: <?xml version="1.0"? 
+<?xml version="1.0"?>
+<root xmlns    = "http://default-namespace.org/"
+      xmlns:py = "http://www.python.org/ns/">
+  <py:elem1 />
+  <elem2 xmlns="" />
+</root>

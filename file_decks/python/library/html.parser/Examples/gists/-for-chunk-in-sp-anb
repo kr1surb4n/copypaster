@@ -1,0 +1,9 @@
+# name: >>> for chunk in ['< 
+>>> for chunk in ['<sp', 'an>buff', 'ered ', 'text</s', 'pan>']:
+...     parser.feed(chunk)
+...
+Start tag: span
+Data     : buff
+Data     : ered
+Data     : text
+End tag  : span

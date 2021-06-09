@@ -1,0 +1,7 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG')
+>>> parser.add_argument('-x', action='store_true')
+>>> parser.add_argument('-y', action='store_true')
+>>> parser.add_argument('-z')
+>>> parser.parse_args(['-xyzZ'])
+Namespace(x=True, y=True, z='Z')

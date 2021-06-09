@@ -1,0 +1,2 @@
+# name: c.PyList_GetSlice 
+PyObject* PyList_GetSlice(PyObject *list, Py_ssize_t low, Py_ssize_t high)

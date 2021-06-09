@@ -1,0 +1,2 @@
+# name: ssl.enum_crls 
+ssl.enum_crls(store_name)

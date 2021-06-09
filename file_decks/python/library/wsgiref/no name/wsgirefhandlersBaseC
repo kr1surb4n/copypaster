@@ -1,0 +1,2 @@
+# name: wsgiref.handlers.Bas 
+class wsgiref.handlers.BaseCGIHandler(stdin, stdout, stderr, environ, multithread=True, multiprocess=False)

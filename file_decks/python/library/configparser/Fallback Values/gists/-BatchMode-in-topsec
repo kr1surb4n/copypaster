@@ -1,0 +1,8 @@
+# name: >>> 'BatchMode' in t 
+>>> 'BatchMode' in topsecret
+False
+>>> topsecret.getboolean('BatchMode', fallback=True)
+True
+>>> config['DEFAULT']['BatchMode'] = 'no'
+>>> topsecret.getboolean('BatchMode', fallback=True)
+False

@@ -1,0 +1,2 @@
+# name: configparser.Duplica 
+exception configparser.DuplicateOptionError

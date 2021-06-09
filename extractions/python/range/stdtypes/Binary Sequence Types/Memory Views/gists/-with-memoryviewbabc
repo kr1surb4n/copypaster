@@ -1,0 +1,9 @@
+# name: >>> with memoryview( 
+>>> with memoryview(b'abc') as m:
+...     m[0]
+...
+97
+>>> m[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: operation forbidden on released memoryview object

@@ -1,0 +1,5 @@
+# name: import sys
+sys.path. 
+import sys
+sys.path.insert(0, "/usr/home/joe/lib/python")
+sys.path.insert(0, "/usr/local/lib/python")

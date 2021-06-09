@@ -1,0 +1,2 @@
+# name: c.PyObject_SetAttr 
+int PyObject_SetAttr(PyObject *o, PyObject *attr_name, PyObject *v)

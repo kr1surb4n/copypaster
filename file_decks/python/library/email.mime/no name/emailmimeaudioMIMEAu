@@ -1,0 +1,2 @@
+# name: email.mime.audio.MIM 
+class email.mime.audio.MIMEAudio(_audiodata, _subtype=None, _encoder=email.encoders.encode_base64, *, policy=compat32, **_params)

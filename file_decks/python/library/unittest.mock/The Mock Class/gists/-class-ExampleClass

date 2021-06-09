@@ -1,0 +1,17 @@
+# name: >>> class ExampleCla 
+>>> class ExampleClass:
+...     def sync_foo():
+...         pass
+...     async def async_foo():
+...         pass
+...
+>>> a_mock = AsyncMock(ExampleClass)
+>>> a_mock.sync_foo
+<MagicMock name='mock.sync_foo' id='...'>
+>>> a_mock.async_foo
+<AsyncMock name='mock.async_foo' id='...'>
+>>> mock = Mock(ExampleClass)
+>>> mock.sync_foo
+<Mock name='mock.sync_foo' id='...'>
+>>> mock.async_foo
+<AsyncMock name='mock.async_foo' id='...'>

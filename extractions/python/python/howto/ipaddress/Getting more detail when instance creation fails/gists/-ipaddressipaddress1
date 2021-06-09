@@ -1,0 +1,18 @@
+# name: >>> ipaddress.ip_add 
+>>> ipaddress.ip_address("192.168.0.256")
+Traceback (most recent call last):
+  ...
+ValueError: '192.168.0.256' does not appear to be an IPv4 or IPv6 address
+>>> ipaddress.IPv4Address("192.168.0.256")
+Traceback (most recent call last):
+  ...
+ipaddress.AddressValueError: Octet 256 (> 255) not permitted in '192.168.0.256'
+
+>>> ipaddress.ip_network("192.168.0.1/64")
+Traceback (most recent call last):
+  ...
+ValueError: '192.168.0.1/64' does not appear to be an IPv4 or IPv6 network
+>>> ipaddress.IPv4Network("192.168.0.1/64")
+Traceback (most recent call last):
+  ...
+ipaddress.NetmaskValueError: '64' is not a valid netmask

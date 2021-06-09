@@ -1,0 +1,2 @@
+# name: xml.dom.pulldom.pars 
+xml.dom.pulldom.parse(stream_or_string, parser=None, bufsize=None)

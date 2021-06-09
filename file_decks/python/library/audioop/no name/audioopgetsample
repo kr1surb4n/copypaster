@@ -1,0 +1,2 @@
+# name: audioop.getsample 
+audioop.getsample(fragment, width, index)

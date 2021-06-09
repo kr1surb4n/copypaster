@@ -1,0 +1,4 @@
+# name: $ python -m tarfile  
+$ python -m tarfile -l /Users/tarek/myarchive.tar
+structure/content/
+structure/content/please_add.txt

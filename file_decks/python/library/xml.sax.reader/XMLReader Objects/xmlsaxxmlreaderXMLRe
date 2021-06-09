@@ -1,0 +1,2 @@
+# name: xml.sax.xmlreader.XM 
+XMLReader.setProperty(propertyname, value)

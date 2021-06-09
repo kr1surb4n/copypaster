@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_ve 
+vectorcallfunc PyTypeObject.tp_vectorcall

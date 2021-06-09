@@ -1,0 +1,13 @@
+# name: import os
+
+def main( 
+import os
+
+def main():
+    fp = open(__file__)
+    firstline = fp.readline()
+    print(firstline.rstrip())
+    os.close(fp.fileno())
+    # The file is closed implicitly
+
+main()

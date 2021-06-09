@@ -1,0 +1,6 @@
+# name: >>> class MyEnum(Int 
+>>> class MyEnum(IntEnum):
+...     example = '11', 16      # '11' will be interpreted as a hexadecimal
+...                             # number
+>>> MyEnum.example
+<MyEnum.example: 17>

@@ -1,0 +1,5 @@
+# name: for line in file:
+   
+for line in file:
+    # do something for each line
+    ...

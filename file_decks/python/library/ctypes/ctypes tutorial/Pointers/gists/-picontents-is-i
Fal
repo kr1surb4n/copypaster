@@ -1,0 +1,6 @@
+# name: >>> pi.contents is i 
+>>> pi.contents is i
+False
+>>> pi.contents is pi.contents
+False
+>>>

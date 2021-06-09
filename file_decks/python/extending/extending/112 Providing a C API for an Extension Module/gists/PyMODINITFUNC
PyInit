@@ -1,0 +1,15 @@
+# name: PyMODINIT_FUNC
+PyIni 
+PyMODINIT_FUNC
+PyInit_client(void)
+{
+    PyObject *m;
+
+    m = PyModule_Create(&clientmodule);
+    if (m == NULL)
+        return NULL;
+    if (import_spam() < 0)
+        return NULL;
+    /* additional initialization can happen here */
+    return m;
+}

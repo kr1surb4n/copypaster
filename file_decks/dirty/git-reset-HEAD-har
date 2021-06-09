@@ -1,2 +1,0 @@
-# name: git reset HEAD har 
-git reset HEAD~ --hard

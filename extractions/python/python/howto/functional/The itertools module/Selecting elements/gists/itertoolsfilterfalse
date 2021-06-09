@@ -1,0 +1,3 @@
+# name: itertools.filterfals 
+itertools.filterfalse(is_even, itertools.count()) =>
+  1, 3, 5, 7, 9, 11, 13, 15, ...

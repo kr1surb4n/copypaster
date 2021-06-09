@@ -1,0 +1,3 @@
+# name: >>> Decimal('12.0'). 
+>>> Decimal('12.0').compare_total(Decimal('12'))
+Decimal('-1')

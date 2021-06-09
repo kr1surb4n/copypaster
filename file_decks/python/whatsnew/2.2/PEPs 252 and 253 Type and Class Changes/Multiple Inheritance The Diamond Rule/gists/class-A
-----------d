@@ -1,0 +1,15 @@
+# name: class A:
+        ^ ^ 
+class A:
+        ^ ^  def save(self): ...
+       /   \
+      /     \
+     /       \
+    /         \
+class B     class C:
+    ^         ^  def save(self): ...
+     \       /
+      \     /
+       \   /
+        \ /
+      class D

@@ -1,0 +1,4 @@
+# name: arr = TenPointsArray 
+arr = TenPointsArrayType()
+for pt in arr:
+    print(pt.x, pt.y)

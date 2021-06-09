@@ -1,0 +1,2 @@
+# name: os.sched_setschedule 
+os.sched_setscheduler(pid, policy, param)

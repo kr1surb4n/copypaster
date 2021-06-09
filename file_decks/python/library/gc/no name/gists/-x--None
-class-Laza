@@ -1,0 +1,14 @@
+# name: >>> x = None
+>>> cla 
+>>> x = None
+>>> class Lazarus:
+...     def __del__(self):
+...         global x
+...         x = self
+...
+>>> lazarus = Lazarus()
+>>> gc.is_finalized(lazarus)
+False
+>>> del lazarus
+>>> gc.is_finalized(x)
+True

@@ -1,0 +1,2 @@
+# name: warnings.warn_explic 
+warnings.warn_explicit(message, category, filename, lineno, module=None, registry=None, module_globals=None, source=None)

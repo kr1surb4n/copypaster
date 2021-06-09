@@ -1,0 +1,6 @@
+# name: >>> fr = FullRandom( 
+>>> fr = FullRandom()
+>>> fr.random()
+0.05954861408025609
+>>> fr.expovariate(0.25)
+8.87925541791544

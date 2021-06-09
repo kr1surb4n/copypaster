@@ -1,0 +1,2 @@
+# name: c.PyRun_SimpleString 
+int PyRun_SimpleString(const char *command)

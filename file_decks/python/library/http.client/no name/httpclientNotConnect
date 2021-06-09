@@ -1,0 +1,2 @@
+# name: http.client.NotConne 
+exception http.client.NotConnected

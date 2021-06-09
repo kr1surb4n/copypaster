@@ -1,0 +1,2 @@
+# name: copyreg.pickle 
+copyreg.pickle(type, function, constructor=None)

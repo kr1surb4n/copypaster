@@ -1,0 +1,2 @@
+# name: c.PyDict_CheckExact 
+int PyDict_CheckExact(PyObject *p)

@@ -1,0 +1,6 @@
+# name: db_connection = Data 
+db_connection = DatabaseConnection()
+with db_connection as cursor:
+    cursor.execute('insert into ...')
+    cursor.execute('delete from ...')
+    # ... more operations ...

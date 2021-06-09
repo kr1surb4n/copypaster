@@ -1,0 +1,2 @@
+# name: tarfile.TarFile.gett 
+TarFile.gettarinfo(name=None, arcname=None, fileobj=None)

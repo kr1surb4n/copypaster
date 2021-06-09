@@ -1,0 +1,2 @@
+# name: smtplib.SMTP.ehlo 
+SMTP.ehlo(name='')

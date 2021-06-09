@@ -1,0 +1,6 @@
+# name: >>> print(indent(s,  
+>>> print(indent(s, '+ ', lambda line: True))
++ hello
++
++
++ world

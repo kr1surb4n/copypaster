@@ -1,0 +1,2 @@
+# name: select.epoll.poll 
+epoll.poll(timeout=None, maxevents=-1)

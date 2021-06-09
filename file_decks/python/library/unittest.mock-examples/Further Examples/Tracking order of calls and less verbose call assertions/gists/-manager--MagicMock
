@@ -1,0 +1,15 @@
+# name: >>> manager = MagicM 
+>>> manager = MagicMock()
+>>> with patch('mymodule.Class1') as MockClass1:
+...     with patch('mymodule.Class2') as MockClass2:
+...         manager.attach_mock(MockClass1, 'MockClass1')
+...         manager.attach_mock(MockClass2, 'MockClass2')
+...         MockClass1().foo()
+...         MockClass2().bar()
+<MagicMock name='mock.MockClass1().foo()' id='...'>
+<MagicMock name='mock.MockClass2().bar()' id='...'>
+>>> manager.mock_calls
+[call.MockClass1(),
+call.MockClass1().foo(),
+call.MockClass2(),
+call.MockClass2().bar()]

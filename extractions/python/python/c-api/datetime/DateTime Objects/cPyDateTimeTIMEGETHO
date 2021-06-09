@@ -1,0 +1,2 @@
+# name: c.PyDateTime_TIME_GE 
+int PyDateTime_TIME_GET_HOUR(PyDateTime_Time *o)

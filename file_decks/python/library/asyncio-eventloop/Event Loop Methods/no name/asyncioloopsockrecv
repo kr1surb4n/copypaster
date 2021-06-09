@@ -1,0 +1,2 @@
+# name: asyncio.loop.sock_re 
+coroutine loop.sock_recv(sock, nbytes)

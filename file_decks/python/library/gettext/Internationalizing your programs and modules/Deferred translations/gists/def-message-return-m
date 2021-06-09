@@ -1,0 +1,14 @@
+# name: def _(message): retu 
+def _(message): return message
+
+animals = [_('mollusk'),
+           _('albatross'),
+           _('rat'),
+           _('penguin'),
+           _('python'), ]
+
+del _
+
+# ...
+for a in animals:
+    print(_(a))

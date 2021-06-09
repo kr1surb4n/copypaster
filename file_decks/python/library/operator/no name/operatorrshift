@@ -1,0 +1,2 @@
+# name: operator.rshift 
+operator.rshift(a, b)

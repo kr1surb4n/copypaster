@@ -1,0 +1,6 @@
+# name: #!/usr/bin/env pytho 
+#!/usr/bin/env python
+# -*- coding: latin-1 -*-
+
+u = 'abcdé'
+print(ord(u[-1]))

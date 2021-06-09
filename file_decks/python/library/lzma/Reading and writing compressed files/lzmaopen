@@ -1,0 +1,2 @@
+# name: lzma.open 
+lzma.open(filename, mode="rb", *, format=None, check=-1, preset=None, filters=None, encoding=None, errors=None, newline=None)

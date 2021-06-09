@@ -1,0 +1,8 @@
+# name: static void
+newdatat 
+static void
+newdatatype_dealloc(newdatatypeobject *obj)
+{
+    free(obj->obj_UnderlyingDatatypePtr);
+    Py_TYPE(obj)->tp_free(obj);
+}

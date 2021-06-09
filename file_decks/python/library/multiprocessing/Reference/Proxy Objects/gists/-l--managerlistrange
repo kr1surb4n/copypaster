@@ -1,0 +1,10 @@
+# name: >>> l = manager.list 
+>>> l = manager.list(range(10))
+>>> l._callmethod('__len__')
+10
+>>> l._callmethod('__getitem__', (slice(2, 7),)) # equivalent to l[2:7]
+[2, 3, 4, 5, 6]
+>>> l._callmethod('__getitem__', (20,))          # equivalent to l[20]
+Traceback (most recent call last):
+...
+IndexError: list index out of range

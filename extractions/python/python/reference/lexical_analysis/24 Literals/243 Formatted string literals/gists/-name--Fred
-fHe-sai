@@ -1,0 +1,30 @@
+# name: >>> name = "Fred"
+>> 
+>>> name = "Fred"
+>>> f"He said his name is {name!r}."
+"He said his name is 'Fred'."
+>>> f"He said his name is {repr(name)}."  # repr() is equivalent to !r
+"He said his name is 'Fred'."
+>>> width = 10
+>>> precision = 4
+>>> value = decimal.Decimal("12.34567")
+>>> f"result: {value:{width}.{precision}}"  # nested fields
+'result:      12.35'
+>>> today = datetime(year=2017, month=1, day=27)
+>>> f"{today:%B %d, %Y}"  # using date format specifier
+'January 27, 2017'
+>>> f"{today=:%B %d, %Y}" # using date format specifier and debugging
+'today=January 27, 2017'
+>>> number = 1024
+>>> f"{number:#0x}"  # using integer format specifier
+'0x400'
+>>> foo = "bar"
+>>> f"{ foo = }" # preserves whitespace
+" foo = 'bar'"
+>>> line = "The mill's closed"
+>>> f"{line = }"
+'line = "The mill\'s closed"'
+>>> f"{line = :20}"
+"line = The mill's closed   "
+>>> f"{line = !r:20}"
+'line = "The mill\'s closed" '

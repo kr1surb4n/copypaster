@@ -1,0 +1,6 @@
+# name: >>> resp, descs = s. 
+>>> resp, descs = s.descriptions('gmane.comp.python.*')
+>>> len(descs) 
+295
+>>> descs.popitem() 
+('gmane.comp.python.bio.general', 'BioPython discussion list (Moderated)')

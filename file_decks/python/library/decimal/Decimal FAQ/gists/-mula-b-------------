@@ -1,0 +1,5 @@
+# name: >>> mul(a, b)        
+>>> mul(a, b)                       # Automatically preserve fixed-point
+Decimal('325.62')
+>>> div(b, a)
+Decimal('0.03')

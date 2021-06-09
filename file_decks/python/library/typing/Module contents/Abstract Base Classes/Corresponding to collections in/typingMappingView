@@ -1,0 +1,2 @@
+# name: typing.MappingView 
+class typing.MappingView(Sized, Iterable[T_co])

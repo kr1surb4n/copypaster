@@ -1,0 +1,9 @@
+# name: >>> MagicMock() == 3 
+>>> MagicMock() == 3
+False
+>>> MagicMock() != 3
+True
+>>> mock = MagicMock()
+>>> mock.__eq__.return_value = True
+>>> mock == 3
+True

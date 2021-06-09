@@ -1,0 +1,9 @@
+# name: static int
+Custom_tr 
+static int
+Custom_traverse(CustomObject *self, visitproc visit, void *arg)
+{
+    Py_VISIT(self->first);
+    Py_VISIT(self->last);
+    return 0;
+}

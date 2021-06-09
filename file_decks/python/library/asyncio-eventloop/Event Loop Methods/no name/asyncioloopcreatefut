@@ -1,0 +1,2 @@
+# name: asyncio.loop.create_ 
+loop.create_future()

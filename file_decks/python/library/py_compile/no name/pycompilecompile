@@ -1,0 +1,2 @@
+# name: py_compile.compile 
+py_compile.compile(file, cfile=None, dfile=None, doraise=False, optimize=-1, invalidation_mode=PycInvalidationMode.TIMESTAMP, quiet=0)

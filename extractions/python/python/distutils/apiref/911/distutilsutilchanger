@@ -1,0 +1,2 @@
+# name: distutils.util.chang 
+distutils.util.change_root(new_root, pathname)

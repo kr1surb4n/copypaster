@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Count 
+Py_ssize_t PyUnicode_Count(PyObject *str, PyObject *substr, Py_ssize_t start, Py_ssize_t end)

@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.append 
+IMAP4.append(mailbox, flags, date_time, message)

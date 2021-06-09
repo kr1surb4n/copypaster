@@ -1,0 +1,2 @@
+# name: ssl.SSLSocket.read 
+SSLSocket.read(len=1024, buffer=None)

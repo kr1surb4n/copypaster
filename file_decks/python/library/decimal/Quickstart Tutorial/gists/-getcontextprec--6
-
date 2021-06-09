@@ -1,0 +1,11 @@
+# name: >>> getcontext().pre 
+>>> getcontext().prec = 6
+>>> Decimal('3.0')
+Decimal('3.0')
+>>> Decimal('3.1415926535')
+Decimal('3.1415926535')
+>>> Decimal('3.1415926535') + Decimal('2.7182818285')
+Decimal('5.85987')
+>>> getcontext().rounding = ROUND_UP
+>>> Decimal('3.1415926535') + Decimal('2.7182818285')
+Decimal('5.85988')

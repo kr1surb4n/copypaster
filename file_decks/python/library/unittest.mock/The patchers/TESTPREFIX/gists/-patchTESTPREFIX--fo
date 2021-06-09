@@ -1,0 +1,18 @@
+# name: >>> patch.TEST_PREFI 
+>>> patch.TEST_PREFIX = 'foo'
+>>> value = 3
+>>>
+>>> @patch('__main__.value', 'not three')
+... class Thing:
+...     def foo_one(self):
+...         print(value)
+...     def foo_two(self):
+...         print(value)
+...
+>>>
+>>> Thing().foo_one()
+not three
+>>> Thing().foo_two()
+not three
+>>> value
+3

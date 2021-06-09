@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsUCS4Co 
+Py_UCS4* PyUnicode_AsUCS4Copy(PyObject *u)

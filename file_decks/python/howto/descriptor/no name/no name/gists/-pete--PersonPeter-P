@@ -1,0 +1,7 @@
+# name: >>> pete = Person('P 
+>>> pete = Person('Peter P', 10)
+INFO:root:Updating 'name' to 'Peter P'
+INFO:root:Updating 'age' to 10
+>>> kate = Person('Catherine C', 20)
+INFO:root:Updating 'name' to 'Catherine C'
+INFO:root:Updating 'age' to 20

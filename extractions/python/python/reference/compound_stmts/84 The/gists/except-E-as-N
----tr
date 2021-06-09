@@ -1,0 +1,7 @@
+# name: except E as N:
+    t 
+except E as N:
+    try:
+        foo
+    finally:
+        del N

@@ -1,0 +1,2 @@
+# name: audioop.tostereo 
+audioop.tostereo(fragment, width, lfactor, rfactor)

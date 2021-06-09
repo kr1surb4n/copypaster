@@ -1,0 +1,16 @@
+# name: >>> from wherever im 
+>>> from wherever import BraceMessage as __
+>>> print(__('Message with {0} {name}', 2, name='placeholders'))
+Message with 2 placeholders
+>>> class Point: pass
+...
+>>> p = Point()
+>>> p.x = 0.5
+>>> p.y = 0.5
+>>> print(__('Message with coordinates: ({point.x:.2f}, {point.y:.2f})',
+...       point=p))
+Message with coordinates: (0.50, 0.50)
+>>> from wherever import DollarMessage as __
+>>> print(__('Message with $num $what', num=2, what='placeholders'))
+Message with 2 placeholders
+>>>

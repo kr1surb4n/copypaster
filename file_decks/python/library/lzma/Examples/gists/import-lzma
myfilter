@@ -1,0 +1,9 @@
+# name: import lzma
+my_filte 
+import lzma
+my_filters = [
+    {"id": lzma.FILTER_DELTA, "dist": 5},
+    {"id": lzma.FILTER_LZMA2, "preset": 7 | lzma.PRESET_EXTREME},
+]
+with lzma.open("file.xz", "w", filters=my_filters) as f:
+    f.write(b"blah blah blah")

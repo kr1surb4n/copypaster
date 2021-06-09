@@ -1,0 +1,2 @@
+# name: symtable.Symbol.is_p 
+symtable.Symbol.is_parameter

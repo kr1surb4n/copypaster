@@ -1,0 +1,6 @@
+# name: >>> getcontext().pre 
+>>> getcontext().prec = 3
+>>> Decimal('3.4445') + Decimal('1.0023')
+Decimal('4.45')
+>>> Decimal('3.4445') + Decimal(0) + Decimal('1.0023')
+Decimal('4.44')

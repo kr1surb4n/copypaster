@@ -1,0 +1,16 @@
+# name: from distutils impor 
+from distutils import core
+kw = {'name': "Quixote",
+      'version': "0.5.1",
+      'description': "A highly Pythonic Web application framework",
+      # ...
+      }
+
+if (hasattr(core, 'setup_keywords') and
+    'classifiers' in core.setup_keywords):
+    kw['classifiers'] = \
+        ['Topic :: Internet :: WWW/HTTP :: Dynamic Content',
+         'Environment :: No Input/Output (Daemon)',
+         'Intended Audience :: Developers'],
+
+core.setup(**kw)

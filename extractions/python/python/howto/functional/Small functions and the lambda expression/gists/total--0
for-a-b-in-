@@ -1,0 +1,5 @@
+# name: total = 0
+for a, b i 
+total = 0
+for a, b in items:
+    total += b

@@ -1,0 +1,5 @@
+# name: >>> d = {'a': 1}
+>>> 
+>>> d = {'a': 1}
+>>> d.values() == d.values()
+False

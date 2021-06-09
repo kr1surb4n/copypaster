@@ -1,0 +1,4 @@
+# name: >>> compat_SMTP = po 
+>>> compat_SMTP = policy.compat32.clone(linesep='\r\n')
+>>> compat_strict = policy.compat32.clone(raise_on_defect=True)
+>>> compat_strict_SMTP = compat_SMTP + compat_strict

@@ -1,0 +1,10 @@
+# name: >>> class Perm(IntFl 
+>>> class Perm(IntFlag):
+...     R = 4
+...     W = 2
+...     X = 1
+...     RWX = 7
+>>> Perm.RWX
+<Perm.RWX: 7>
+>>> ~Perm.RWX
+<Perm.-8: -8>

@@ -1,0 +1,4 @@
+# name: testcase = unittest. 
+testcase = unittest.FunctionTestCase(testSomething,
+                                     setUp=makeSomethingDB,
+                                     tearDown=deleteSomethingDB)

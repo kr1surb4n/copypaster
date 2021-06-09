@@ -1,0 +1,4 @@
+# name: >>> s = '98765432112 
+>>> s = '9876543211234567'    # 16 significant digits is too many!
+>>> format(float(s), '.16g')  # conversion changes value
+'9876543211234568'

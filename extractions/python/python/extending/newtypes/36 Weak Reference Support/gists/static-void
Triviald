@@ -1,0 +1,11 @@
+# name: static void
+Trivial_ 
+static void
+Trivial_dealloc(TrivialObject *self)
+{
+    /* Clear weakrefs first before calling any destructors */
+    if (self->weakreflist != NULL)
+        PyObject_ClearWeakRefs((PyObject *) self);
+    /* ... remainder of destruction code omitted for brevity ... */
+    Py_TYPE(self)->tp_free((PyObject *) self);
+}

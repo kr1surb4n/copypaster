@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_se 
+setattrofunc PyTypeObject.tp_setattro

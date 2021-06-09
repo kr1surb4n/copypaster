@@ -1,0 +1,2 @@
+# name: c.PyException_GetTra 
+PyObject* PyException_GetTraceback(PyObject *ex)

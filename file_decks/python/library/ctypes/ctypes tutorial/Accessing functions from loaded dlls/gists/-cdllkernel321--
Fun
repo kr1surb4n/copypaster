@@ -1,0 +1,10 @@
+# name: >>> cdll.kernel32[1] 
+>>> cdll.kernel32[1]  
+<_FuncPtr object at 0x...>
+>>> cdll.kernel32[0]  
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "ctypes.py", line 310, in __getitem__
+    func = _StdcallFuncPtr(name, self)
+AttributeError: function ordinal 0 not found
+>>>

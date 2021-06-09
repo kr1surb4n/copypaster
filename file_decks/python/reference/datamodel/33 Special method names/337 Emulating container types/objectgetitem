@@ -1,0 +1,2 @@
+# name: object.__getitem__ 
+object.__getitem__(self, key)

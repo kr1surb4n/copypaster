@@ -1,0 +1,2 @@
+# name: c.PyThread_delete_ke 
+void PyThread_delete_key(int key)

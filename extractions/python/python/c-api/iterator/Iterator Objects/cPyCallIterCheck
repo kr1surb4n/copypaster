@@ -1,0 +1,2 @@
+# name: c.PyCallIter_Check 
+int PyCallIter_Check(op)

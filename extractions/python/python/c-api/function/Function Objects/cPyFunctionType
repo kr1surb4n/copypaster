@@ -1,0 +1,2 @@
+# name: c.PyFunction_Type 
+PyTypeObject PyFunction_Type

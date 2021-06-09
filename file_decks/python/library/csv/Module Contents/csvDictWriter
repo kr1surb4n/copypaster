@@ -1,0 +1,2 @@
+# name: csv.DictWriter 
+class csv.DictWriter(f, fieldnames, restval='', extrasaction='raise', dialect='excel', *args, **kwds)

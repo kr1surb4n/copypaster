@@ -1,0 +1,6 @@
+# name: >>> from math import 
+>>> from math import gamma, lgamma
+>>> gamma(7.0)           # six factorial
+720.0
+>>> lgamma(801.0)        # log(800 factorial)
+4551.950730698041

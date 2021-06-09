@@ -1,0 +1,10 @@
+# name: >>> import json, log 
+>>> import json, logging.config
+>>> with open('conf.json') as f:
+...     conf = json.load(f)
+...
+>>> logging.config.dictConfig(conf)
+>>> logging.info("Transaction completed normally")
+INFO    : root           : Transaction completed normally
+>>> logging.critical("Abnormal termination")
+2011-02-17 11:14:36,694 root            CRITICAL Abnormal termination

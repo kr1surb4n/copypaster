@@ -1,0 +1,2 @@
+# name: os.dup 
+os.dup(fd)

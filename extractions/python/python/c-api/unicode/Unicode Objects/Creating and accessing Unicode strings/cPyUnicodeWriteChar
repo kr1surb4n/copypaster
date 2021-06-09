@@ -1,0 +1,2 @@
+# name: c.PyUnicode_WriteCha 
+int PyUnicode_WriteChar(PyObject *unicode, Py_ssize_t index, Py_UCS4 character)

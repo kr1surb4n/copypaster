@@ -1,0 +1,3 @@
+# name: _PyObject_EXTRA_INIT 
+_PyObject_EXTRA_INIT
+1, type, size,

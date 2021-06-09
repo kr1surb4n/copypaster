@@ -1,0 +1,2 @@
+# name: locale.normalize 
+locale.normalize(localename)

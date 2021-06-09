@@ -1,0 +1,23 @@
+# name: >>> import shutil, p 
+>>> import shutil, pprint
+
+>>> os.chdir('mydata')  # change to the source directory
+>>> f = shutil.make_archive('/var/backup/mydata',
+...                         'zip')      # archive the current directory
+>>> f                                   # show the name of archive
+'/var/backup/mydata.zip'
+>>> os.chdir('tmp')                     # change to an unpacking
+>>> shutil.unpack_archive('/var/backup/mydata.zip')  # recover the data
+
+>>> pprint.pprint(shutil.get_archive_formats())  # display known formats
+[('bztar', "bzip2'ed tar-file"),
+ ('gztar', "gzip'ed tar-file"),
+ ('tar', 'uncompressed tar file'),
+ ('zip', 'ZIP file')]
+
+>>> shutil.register_archive_format(     # register a new archive format
+...     name='xz',
+...     function=xz.compress,           # callable archiving function
+...     extra_args=[('level', 8)],      # arguments to the function
+...     description='xz compression'
+... )

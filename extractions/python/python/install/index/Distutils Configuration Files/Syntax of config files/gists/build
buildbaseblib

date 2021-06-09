@@ -1,0 +1,5 @@
+# name: [build]
+build-base=b 
+[build]
+build-base=blib
+force=1

@@ -1,0 +1,2 @@
+# name: itertools.product 
+itertools.product(*iterables, repeat=1)

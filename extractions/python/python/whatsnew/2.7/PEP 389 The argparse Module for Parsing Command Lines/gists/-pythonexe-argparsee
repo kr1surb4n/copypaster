@@ -1,0 +1,12 @@
+# name: -> ./python.exe argp 
+-> ./python.exe argparse-example.py -v
+{'output': None,
+ 'is_verbose': True,
+ 'context': 0,
+ 'inputs': []}
+
+-> ./python.exe argparse-example.py -v -o /tmp/output -C 4 file1 file2
+{'output': '/tmp/output',
+ 'is_verbose': True,
+ 'context': 4,
+ 'inputs': ['file1', 'file2']}

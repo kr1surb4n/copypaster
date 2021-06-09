@@ -1,0 +1,2 @@
+# name: types.new_class 
+types.new_class(name, bases=(), kwds=None, exec_body=None)

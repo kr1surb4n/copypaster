@@ -1,0 +1,2 @@
+# name: c.PyBuffer_GetPointe 
+void* PyBuffer_GetPointer(Py_buffer *view, Py_ssize_t *indices)

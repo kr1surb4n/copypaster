@@ -1,0 +1,2 @@
+# name: logging.debug 
+logging.debug(msg, *args, **kwargs)

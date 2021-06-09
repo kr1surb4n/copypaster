@@ -1,0 +1,4 @@
+# name: if (PySlice_GetIndic 
+if (PySlice_GetIndicesEx(slice, length, &start, &stop, &step, &slicelength) < 0) {
+    // return error
+}

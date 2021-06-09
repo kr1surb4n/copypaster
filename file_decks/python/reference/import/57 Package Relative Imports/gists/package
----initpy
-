@@ -1,0 +1,12 @@
+# name: package/
+    __init_ 
+package/
+    __init__.py
+    subpackage1/
+        __init__.py
+        moduleX.py
+        moduleY.py
+    subpackage2/
+        __init__.py
+        moduleZ.py
+    moduleA.py

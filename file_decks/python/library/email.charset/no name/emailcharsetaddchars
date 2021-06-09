@@ -1,0 +1,2 @@
+# name: email.charset.add_ch 
+email.charset.add_charset(charset, header_enc=None, body_enc=None, output_charset=None)

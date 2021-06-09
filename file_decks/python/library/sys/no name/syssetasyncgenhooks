@@ -1,0 +1,2 @@
+# name: sys.set_asyncgen_hoo 
+sys.set_asyncgen_hooks(firstiter, finalizer)

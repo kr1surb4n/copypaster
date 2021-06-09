@@ -1,0 +1,2 @@
+# name: re.Pattern.split 
+Pattern.split(string, maxsplit=0)

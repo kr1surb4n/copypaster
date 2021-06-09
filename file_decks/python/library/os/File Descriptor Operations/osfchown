@@ -1,0 +1,2 @@
+# name: os.fchown 
+os.fchown(fd, uid, gid)

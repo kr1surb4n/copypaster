@@ -1,0 +1,9 @@
+# name: >>> fmt = '{0:{1}}'
+ 
+>>> fmt = '{0:{1}}'
+>>> width = 15
+>>> fmt.format('Invoice #1234', width)
+'Invoice #1234  '
+>>> width = 35
+>>> fmt.format('Invoice #1234', width)
+'Invoice #1234                      '

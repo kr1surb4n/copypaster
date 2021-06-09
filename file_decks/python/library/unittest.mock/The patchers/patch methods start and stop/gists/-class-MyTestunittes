@@ -1,0 +1,17 @@
+# name: >>> class MyTest(uni 
+>>> class MyTest(unittest.TestCase):
+...     def setUp(self):
+...         self.patcher1 = patch('package.module.Class1')
+...         self.patcher2 = patch('package.module.Class2')
+...         self.MockClass1 = self.patcher1.start()
+...         self.MockClass2 = self.patcher2.start()
+...
+...     def tearDown(self):
+...         self.patcher1.stop()
+...         self.patcher2.stop()
+...
+...     def test_something(self):
+...         assert package.module.Class1 is self.MockClass1
+...         assert package.module.Class2 is self.MockClass2
+...
+>>> MyTest('test_something').run()

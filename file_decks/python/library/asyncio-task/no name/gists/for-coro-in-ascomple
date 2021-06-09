@@ -1,0 +1,4 @@
+# name: for coro in as_compl 
+for coro in as_completed(aws):
+    earliest_result = await coro
+    # ...

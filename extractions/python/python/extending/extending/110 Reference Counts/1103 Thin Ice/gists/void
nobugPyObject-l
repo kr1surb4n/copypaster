@@ -1,0 +1,12 @@
+# name: void
+no_bug(PyObject 
+void
+no_bug(PyObject *list)
+{
+    PyObject *item = PyList_GetItem(list, 0);
+
+    Py_INCREF(item);
+    PyList_SetItem(list, 1, PyLong_FromLong(0L));
+    PyObject_Print(item, stdout, 0);
+    Py_DECREF(item);
+}

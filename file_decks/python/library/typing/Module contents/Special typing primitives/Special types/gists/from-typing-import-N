@@ -1,0 +1,5 @@
+# name: from typing import N 
+from typing import NoReturn
+
+def stop() -> NoReturn:
+    raise RuntimeError('no way')

@@ -1,0 +1,4 @@
+# name: >>> import custom
+>> 
+>>> import custom
+>>> mycustom = custom.Custom()

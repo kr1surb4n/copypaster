@@ -1,0 +1,2 @@
+# name: tkinter.filedialog.S 
+tkinter.filedialog.SaveFileDialog.ok_command

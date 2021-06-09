@@ -1,0 +1,5 @@
+# name: >>> Decimal('3.214') 
+>>> Decimal('3.214').quantize(TWOPLACES, context=Context(traps=[Inexact]))
+Traceback (most recent call last):
+   ...
+Inexact: None

@@ -1,0 +1,2 @@
+# name: curses.ascii.iscntrl 
+curses.ascii.iscntrl(c)

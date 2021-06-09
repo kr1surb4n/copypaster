@@ -1,0 +1,2 @@
+# name: mailbox.Maildir 
+class mailbox.Maildir(dirname, factory=None, create=True)

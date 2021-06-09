@@ -1,0 +1,7 @@
+# name: >>> import timeit
+>> 
+>>> import timeit
+>>> timeit.timeit('char in text', setup='text = "sample string"; char = "g"')
+0.41440500499993504
+>>> timeit.timeit('text.find(char)', setup='text = "sample string"; char = "g"')
+1.7246671520006203

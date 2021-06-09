@@ -1,0 +1,2 @@
+# name: os.strerror 
+os.strerror(code)

@@ -1,0 +1,6 @@
+# name: chunks = []
+for s in 
+chunks = []
+for s in my_strings:
+    chunks.append(s)
+result = ''.join(chunks)

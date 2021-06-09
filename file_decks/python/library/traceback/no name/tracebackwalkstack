@@ -1,0 +1,2 @@
+# name: traceback.walk_stack 
+traceback.walk_stack(f)

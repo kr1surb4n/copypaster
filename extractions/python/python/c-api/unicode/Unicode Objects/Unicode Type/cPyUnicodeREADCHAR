@@ -1,0 +1,2 @@
+# name: c.PyUnicode_READ_CHA 
+Py_UCS4 PyUnicode_READ_CHAR(PyObject *o, Py_ssize_t index)

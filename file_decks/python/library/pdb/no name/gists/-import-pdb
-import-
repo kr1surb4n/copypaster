@@ -1,0 +1,16 @@
+# name: >>> import pdb
+>>> i 
+>>> import pdb
+>>> import mymodule
+>>> mymodule.test()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "./mymodule.py", line 4, in test
+    test2()
+  File "./mymodule.py", line 3, in test2
+    print(spam)
+NameError: spam
+>>> pdb.pm()
+> ./mymodule.py(3)test2()
+-> print(spam)
+(Pdb)

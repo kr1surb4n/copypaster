@@ -1,0 +1,5 @@
+# name: >>> filename = 'some 
+>>> filename = 'somefile; rm -rf ~'
+>>> command = 'ls -l {}'.format(filename)
+>>> print(command)  # executed by a shell: boom!
+ls -l somefile; rm -rf ~

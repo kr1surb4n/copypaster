@@ -1,0 +1,2 @@
+# name: class bytes([source[ 
+class bytes([source[, encoding[, errors]]])

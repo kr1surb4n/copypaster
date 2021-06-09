@@ -1,0 +1,2 @@
+# name: curses.init_color 
+curses.init_color(color_number, r, g, b)

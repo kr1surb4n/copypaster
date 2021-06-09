@@ -1,0 +1,2 @@
+# name: c.PyException_GetCon 
+PyObject* PyException_GetContext(PyObject *ex)

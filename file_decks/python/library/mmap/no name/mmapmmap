@@ -1,0 +1,2 @@
+# name: mmap.mmap 
+class mmap.mmap(fileno, length, tagname=None, access=ACCESS_DEFAULT[, offset])

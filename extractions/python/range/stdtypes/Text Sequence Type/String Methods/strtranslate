@@ -1,0 +1,2 @@
+# name: str.translate 
+str.translate(table)

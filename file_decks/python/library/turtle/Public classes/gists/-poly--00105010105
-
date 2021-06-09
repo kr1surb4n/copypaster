@@ -1,0 +1,5 @@
+# name: >>> poly = ((0,0),(1 
+>>> poly = ((0,0),(10,-5),(0,10),(-10,-5))
+>>> s = Shape("compound")
+>>> s.addcomponent(poly, "red", "blue")
+>>> # ... add more components and then use register_shape()

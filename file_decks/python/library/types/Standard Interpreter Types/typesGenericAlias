@@ -1,0 +1,2 @@
+# name: types.GenericAlias 
+class types.GenericAlias(t_origin, t_args)

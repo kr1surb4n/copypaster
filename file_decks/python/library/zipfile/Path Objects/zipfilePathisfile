@@ -1,0 +1,2 @@
+# name: zipfile.Path.is_file 
+Path.is_file()

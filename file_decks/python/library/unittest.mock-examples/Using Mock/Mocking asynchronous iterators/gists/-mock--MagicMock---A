@@ -1,0 +1,8 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock()  # AsyncMock also works here
+>>> mock.__aiter__.return_value = [1, 2, 3]
+>>> async def main():
+...     return [i async for i in mock]
+...
+>>> asyncio.run(main())
+[1, 2, 3]

@@ -1,0 +1,4 @@
+# name: >>> p = PosixPath('~ 
+>>> p = PosixPath('~/films/Monty Python')
+>>> p.expanduser()
+PosixPath('/home/eric/films/Monty Python')

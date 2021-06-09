@@ -1,0 +1,2 @@
+# name: optparse.OptionParse 
+class optparse.OptionParser(...)

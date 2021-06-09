@@ -1,0 +1,2 @@
+# name: bytes.strip 
+bytes.strip([chars])

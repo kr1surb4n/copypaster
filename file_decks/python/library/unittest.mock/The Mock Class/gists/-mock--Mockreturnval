@@ -1,0 +1,10 @@
+# name: >>> mock = Mock(retu 
+>>> mock = Mock(return_value=None)
+>>> mock()
+>>> mock(3, 4)
+>>> mock(key='fish', next='w00t!')
+>>> mock.call_args_list
+[call(), call(3, 4), call(key='fish', next='w00t!')]
+>>> expected = [(), ((3, 4),), ({'key': 'fish', 'next': 'w00t!'},)]
+>>> mock.call_args_list == expected
+True

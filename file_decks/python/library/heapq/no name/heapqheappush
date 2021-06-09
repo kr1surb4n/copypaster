@@ -1,0 +1,2 @@
+# name: heapq.heappush 
+heapq.heappush(heap, item)

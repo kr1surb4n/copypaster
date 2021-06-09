@@ -1,0 +1,10 @@
+# name: >>> parent = MagicMo 
+>>> parent = MagicMock()
+>>> child1 = MagicMock(return_value=None)
+>>> child2 = MagicMock(return_value=None)
+>>> parent.child1 = child1
+>>> parent.child2 = child2
+>>> child1(1)
+>>> child2(2)
+>>> parent.mock_calls
+[call.child1(1), call.child2(2)]

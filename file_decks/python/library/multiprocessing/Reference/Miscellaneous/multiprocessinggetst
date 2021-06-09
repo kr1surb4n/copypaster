@@ -1,0 +1,2 @@
+# name: multiprocessing.get_ 
+multiprocessing.get_start_method(allow_none=False)

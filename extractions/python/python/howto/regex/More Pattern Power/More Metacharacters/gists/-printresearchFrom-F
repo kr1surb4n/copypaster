@@ -1,0 +1,5 @@
+# name: >>> print(re.search( 
+>>> print(re.search('^From', 'From Here to Eternity'))  
+<re.Match object; span=(0, 4), match='From'>
+>>> print(re.search('^From', 'Reciting From Memory'))
+None

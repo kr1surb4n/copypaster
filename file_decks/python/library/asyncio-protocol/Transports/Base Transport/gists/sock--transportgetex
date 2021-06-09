@@ -1,0 +1,4 @@
+# name: sock = transport.get 
+sock = transport.get_extra_info('socket')
+if sock is not None:
+    print(sock.getsockopt(...))

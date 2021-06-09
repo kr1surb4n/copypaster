@@ -1,0 +1,5 @@
+# name: >>> import select
+>> 
+>>> import select
+>>> select.PIPE_BUF  
+512

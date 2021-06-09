@@ -1,0 +1,2 @@
+# name: c.Py_CompileStringEx 
+PyObject* Py_CompileStringExFlags(const char *str, const char *filename, int start, PyCompilerFlags *flags, int optimize)

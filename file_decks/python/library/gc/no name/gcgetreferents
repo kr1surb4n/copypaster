@@ -1,0 +1,2 @@
+# name: gc.get_referents 
+gc.get_referents(*objs)

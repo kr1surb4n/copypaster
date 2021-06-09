@@ -1,0 +1,7 @@
+# name: >>> L = [1, 2, 3]
+>> 
+>>> L = [1, 2, 3]
+>>> iterator = iter(L)
+>>> a, b, c = iterator
+>>> a, b, c
+(1, 2, 3)

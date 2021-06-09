@@ -1,0 +1,2 @@
+# name: curses.is_term_resiz 
+curses.is_term_resized(nlines, ncols)

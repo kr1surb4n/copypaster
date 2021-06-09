@@ -1,0 +1,13 @@
+# name: formatters:
+  brief: 
+formatters:
+  brief:
+    format: '%(message)s'
+  default:
+    format: '%(asctime)s %(levelname)-8s %(name)-15s %(message)s'
+    datefmt: '%Y-%m-%d %H:%M:%S'
+  custom:
+      (): my.package.customFormatterFactory
+      bar: baz
+      spam: 99.9
+      answer: 42

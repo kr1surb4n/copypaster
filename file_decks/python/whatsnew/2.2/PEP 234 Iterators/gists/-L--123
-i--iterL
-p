@@ -1,0 +1,17 @@
+# name: >>> L = [1,2,3]
+>>>  
+>>> L = [1,2,3]
+>>> i = iter(L)
+>>> print i
+<iterator object at 0x8116870>
+>>> i.next()
+1
+>>> i.next()
+2
+>>> i.next()
+3
+>>> i.next()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in ?
+StopIteration
+>>>

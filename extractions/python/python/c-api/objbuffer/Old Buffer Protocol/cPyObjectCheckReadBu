@@ -1,0 +1,2 @@
+# name: c.PyObject_CheckRead 
+int PyObject_CheckReadBuffer(PyObject *o)

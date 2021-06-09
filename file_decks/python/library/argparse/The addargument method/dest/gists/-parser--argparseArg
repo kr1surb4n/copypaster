@@ -1,0 +1,5 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser()
+>>> parser.add_argument('--foo', dest='bar')
+>>> parser.parse_args('--foo XXX'.split())
+Namespace(bar='XXX')

@@ -1,0 +1,6 @@
+# name: >>> urllib.parse.url 
+>>> urllib.parse.urlencode([
+...      ('type', 'telenovela'),
+...      ('name', '¿Dónde Está Elisa?')],
+...      encoding='latin-1')
+'type=telenovela&name=%BFD%F3nde+Est%E1+Elisa%3F'

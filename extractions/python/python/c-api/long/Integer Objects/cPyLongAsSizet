@@ -1,0 +1,2 @@
+# name: c.PyLong_AsSize_t 
+size_t PyLong_AsSize_t(PyObject *pylong)

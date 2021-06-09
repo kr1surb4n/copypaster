@@ -1,0 +1,6 @@
+# name: >>> import os
+>>> wi 
+>>> import os
+>>> with open('converted.txt', 'wb') as f:
+...     f.write(msg.as_bytes(policy=msg.policy.clone(linesep=os.linesep)))
+17

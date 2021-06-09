@@ -1,0 +1,6 @@
+# name: >>> for block in s.g 
+>>> for block in s.get_matching_blocks():
+...     print("a[%d] and b[%d] match for %d elements" % block)
+a[0] and b[0] match for 8 elements
+a[8] and b[17] match for 21 elements
+a[29] and b[38] match for 0 elements

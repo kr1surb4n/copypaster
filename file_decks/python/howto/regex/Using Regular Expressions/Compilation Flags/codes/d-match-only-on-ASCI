@@ -1,0 +1,3 @@
+# name: \d match only on ASC 
+\d match only on ASCII
+characters with the respective property.

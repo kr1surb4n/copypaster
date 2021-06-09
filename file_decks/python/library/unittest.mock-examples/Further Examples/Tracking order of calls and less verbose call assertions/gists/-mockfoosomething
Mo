@@ -1,0 +1,5 @@
+# name: >>> mock_foo.somethi 
+>>> mock_foo.something()
+<Mock name='mock.foo.something()' id='...'>
+>>> mock_bar.other.thing()
+<Mock name='mock.bar.other.thing()' id='...'>

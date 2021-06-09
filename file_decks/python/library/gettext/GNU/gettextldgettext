@@ -1,0 +1,2 @@
+# name: gettext.ldgettext 
+gettext.ldgettext(domain, message)

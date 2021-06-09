@@ -1,0 +1,8 @@
+# name: >>> import parser
+>> 
+>>> import parser
+>>> st = parser.expr('a + 5')
+>>> code = st.compile('file.py')
+>>> a = 5
+>>> eval(code)
+10

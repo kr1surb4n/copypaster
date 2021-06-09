@@ -1,0 +1,2 @@
+# name: c.PyObject_LengthHin 
+Py_ssize_t PyObject_LengthHint(PyObject *o, Py_ssize_t default)

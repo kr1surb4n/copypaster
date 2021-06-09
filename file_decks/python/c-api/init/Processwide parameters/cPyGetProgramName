@@ -1,0 +1,2 @@
+# name: c.Py_GetProgramName 
+wchar* Py_GetProgramName()

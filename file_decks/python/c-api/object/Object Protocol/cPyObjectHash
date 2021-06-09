@@ -1,0 +1,2 @@
+# name: c.PyObject_Hash 
+Py_hash_t PyObject_Hash(PyObject *o)

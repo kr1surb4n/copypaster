@@ -1,0 +1,2 @@
+# name: c.PyArg_VaParse 
+int PyArg_VaParse(PyObject *args, const char *format, va_list vargs)

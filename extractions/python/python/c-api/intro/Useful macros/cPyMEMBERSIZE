@@ -1,0 +1,2 @@
+# name: c.Py_MEMBER_SIZE 
+Py_MEMBER_SIZE(type, member)

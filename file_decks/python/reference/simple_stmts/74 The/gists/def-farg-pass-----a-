@@ -1,0 +1,4 @@
+# name: def f(arg): pass     
+def f(arg): pass    # a function that does nothing (yet)
+
+class C: pass       # a class with no methods (yet)

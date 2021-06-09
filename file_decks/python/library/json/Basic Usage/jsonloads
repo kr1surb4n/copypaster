@@ -1,0 +1,2 @@
+# name: json.loads 
+json.loads(s, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw)

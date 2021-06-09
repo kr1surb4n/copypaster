@@ -1,0 +1,2 @@
+# name: urllib.request.HTTPD 
+HTTPDigestAuthHandler.http_error_401(req, fp, code, msg, hdrs)

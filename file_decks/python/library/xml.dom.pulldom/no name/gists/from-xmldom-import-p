@@ -1,0 +1,9 @@
+# name: from xml.dom import  
+from xml.dom import pulldom
+
+doc = pulldom.parse('sales_items.xml')
+for event, node in doc:
+    if event == pulldom.START_ELEMENT and node.tagName == 'item':
+        if int(node.getAttribute('price')) > 50:
+            doc.expandNode(node)
+            print(node.toxml())

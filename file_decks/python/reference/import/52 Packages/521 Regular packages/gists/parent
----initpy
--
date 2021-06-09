@@ -1,0 +1,10 @@
+# name: parent/
+    __init__ 
+parent/
+    __init__.py
+    one/
+        __init__.py
+    two/
+        __init__.py
+    three/
+        __init__.py

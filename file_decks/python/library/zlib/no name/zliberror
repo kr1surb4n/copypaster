@@ -1,0 +1,2 @@
+# name: zlib.error 
+exception zlib.error

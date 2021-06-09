@@ -1,0 +1,3 @@
+# name: # 'output' is of typ 
+# 'output' is of type 'int', not 'UserId'
+output = UserId(23413) + UserId(54341)

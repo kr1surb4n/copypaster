@@ -1,0 +1,9 @@
+# name: try:
+    import ssl
+ 
+try:
+    import ssl
+except ImportError:
+    pass
+else:
+    ...  # do something that requires SSL support

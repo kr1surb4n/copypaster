@@ -1,0 +1,3 @@
+# name: with swap_item(obj,  
+with swap_item(obj, "item", 5):
+    ...

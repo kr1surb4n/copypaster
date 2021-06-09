@@ -1,0 +1,8 @@
+# name: >>> import ipaddress 
+>>> import ipaddress
+>>> addr = ipaddress.IPv4Address('127.0.0.1')
+>>> addr.reverse_pointer
+'1.0.0.127.in-addr.arpa'
+>>> addr6 = ipaddress.IPv6Address('::1')
+>>> addr6.reverse_pointer
+'1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa'

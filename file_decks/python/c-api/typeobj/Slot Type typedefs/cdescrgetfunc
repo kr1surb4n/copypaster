@@ -1,0 +1,2 @@
+# name: c.descrgetfunc 
+PyObject *(*descrgetfunc)(PyObject *, PyObject *, PyObject *)

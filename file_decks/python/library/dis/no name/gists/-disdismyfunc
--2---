@@ -1,0 +1,7 @@
+# name: >>> dis.dis(myfunc)
+ 
+>>> dis.dis(myfunc)
+  2           0 LOAD_GLOBAL              0 (len)
+              2 LOAD_FAST                0 (alist)
+              4 CALL_FUNCTION            1
+              6 RETURN_VALUE

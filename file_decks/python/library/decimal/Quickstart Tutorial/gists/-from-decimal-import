@@ -1,0 +1,8 @@
+# name: >>> from decimal imp 
+>>> from decimal import *
+>>> getcontext()
+Context(prec=28, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999,
+        capitals=1, clamp=0, flags=[], traps=[Overflow, DivisionByZero,
+        InvalidOperation])
+
+>>> getcontext().prec = 7       # Set a new precision

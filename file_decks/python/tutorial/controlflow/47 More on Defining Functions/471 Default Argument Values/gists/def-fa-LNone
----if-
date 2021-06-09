@@ -1,0 +1,7 @@
+# name: def f(a, L=None):
+   
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L

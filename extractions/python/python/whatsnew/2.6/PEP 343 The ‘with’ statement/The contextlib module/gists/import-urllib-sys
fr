@@ -1,0 +1,8 @@
+# name: import urllib, sys
+f 
+import urllib, sys
+from contextlib import closing
+
+with closing(urllib.urlopen('http://www.yahoo.com')) as f:
+    for line in f:
+        sys.stdout.write(line)

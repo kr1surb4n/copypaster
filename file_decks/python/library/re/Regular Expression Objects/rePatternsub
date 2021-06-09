@@ -1,0 +1,2 @@
+# name: re.Pattern.sub 
+Pattern.sub(repl, string, count=0)

@@ -1,0 +1,11 @@
+# name: >>> class Bottles:
+. 
+>>> class Bottles:
+...     def __init__(self, number):
+...         self._as_parameter_ = number
+...
+>>> bottles = Bottles(42)
+>>> printf(b"%d bottles of beer\n", bottles)
+42 bottles of beer
+19
+>>>

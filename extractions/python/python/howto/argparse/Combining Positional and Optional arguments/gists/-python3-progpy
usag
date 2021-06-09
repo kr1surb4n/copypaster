@@ -1,0 +1,11 @@
+# name: $ python3 prog.py
+us 
+$ python3 prog.py
+usage: prog.py [-h] [-v] square
+prog.py: error: the following arguments are required: square
+$ python3 prog.py 4
+16
+$ python3 prog.py 4 --verbose
+the square of 4 equals 16
+$ python3 prog.py --verbose 4
+the square of 4 equals 16

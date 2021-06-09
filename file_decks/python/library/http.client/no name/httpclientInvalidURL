@@ -1,0 +1,2 @@
+# name: http.client.InvalidU 
+exception http.client.InvalidURL

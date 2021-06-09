@@ -1,0 +1,7 @@
+# name: for i in iter(obj):
+ 
+for i in iter(obj):
+    print(i)
+
+for i in obj:
+    print(i)

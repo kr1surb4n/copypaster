@@ -1,0 +1,2 @@
+# name: ssl.enum_certificate 
+ssl.enum_certificates(store_name)

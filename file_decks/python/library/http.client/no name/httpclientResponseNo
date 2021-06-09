@@ -1,0 +1,2 @@
+# name: http.client.Response 
+exception http.client.ResponseNotReady

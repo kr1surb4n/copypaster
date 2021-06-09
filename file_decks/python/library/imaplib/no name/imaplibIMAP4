@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4 
+class imaplib.IMAP4(host='', port=IMAP4_PORT, timeout=None)

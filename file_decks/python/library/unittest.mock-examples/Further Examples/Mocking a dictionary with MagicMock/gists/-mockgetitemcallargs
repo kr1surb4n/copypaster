@@ -1,0 +1,7 @@
+# name: >>> mock.__getitem__ 
+>>> mock.__getitem__.call_args_list
+[call('a'), call('c'), call('d'), call('b'), call('d')]
+>>> mock.__setitem__.call_args_list
+[call('b', 'fish'), call('d', 'eggs')]
+>>> my_dict
+{'a': 1, 'b': 'fish', 'c': 3, 'd': 'eggs'}

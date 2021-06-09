@@ -1,0 +1,2 @@
+# name: difflib.diff_bytes 
+difflib.diff_bytes(dfunc, a, b, fromfile=b'', tofile=b'', fromfiledate=b'', tofiledate=b'', n=3, lineterm=b'\n')

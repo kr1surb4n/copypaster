@@ -1,0 +1,7 @@
+# name: def check_complex(op 
+def check_complex(option, opt, value):
+    try:
+        return complex(value)
+    except ValueError:
+        raise OptionValueError(
+            "option %s: invalid complex value: %r" % (opt, value))

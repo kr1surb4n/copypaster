@@ -1,0 +1,5 @@
+# name: PyObject *tuple, *li 
+PyObject *tuple, *list;
+
+tuple = Py_BuildValue("(iis)", 1, 2, "three");
+list = Py_BuildValue("[iis]", 1, 2, "three");

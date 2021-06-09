@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_as 
+PyMappingMethods* PyTypeObject.tp_as_mapping

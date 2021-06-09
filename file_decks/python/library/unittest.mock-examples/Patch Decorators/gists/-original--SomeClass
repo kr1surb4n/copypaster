@@ -1,0 +1,15 @@
+# name: >>> original = SomeC 
+>>> original = SomeClass.attribute
+>>> @patch.object(SomeClass, 'attribute', sentinel.attribute)
+... def test():
+...     assert SomeClass.attribute == sentinel.attribute
+...
+>>> test()
+>>> assert SomeClass.attribute == original
+
+>>> @patch('package.module.attribute', sentinel.attribute)
+... def test():
+...     from package.module import attribute
+...     assert attribute is sentinel.attribute
+...
+>>> test()

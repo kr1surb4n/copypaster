@@ -1,0 +1,6 @@
+# name: class List(Structure 
+class List(Structure):
+    pass
+List._fields_ = [("pnext", POINTER(List)),
+                 ...
+                ]

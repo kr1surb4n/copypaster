@@ -1,0 +1,2 @@
+# name: ast.iter_child_nodes 
+ast.iter_child_nodes(node)

@@ -1,0 +1,2 @@
+# name: c.PyBuffer_SizeFromF 
+Py_ssize_t PyBuffer_SizeFromFormat(const char *format)

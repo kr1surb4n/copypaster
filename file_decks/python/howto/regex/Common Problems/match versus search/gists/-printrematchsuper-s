@@ -1,0 +1,5 @@
+# name: >>> print(re.match(' 
+>>> print(re.match('super', 'superstition').span())
+(0, 5)
+>>> print(re.match('super', 'insuperable'))
+None

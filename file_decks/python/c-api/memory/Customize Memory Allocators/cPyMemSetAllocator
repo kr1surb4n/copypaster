@@ -1,0 +1,2 @@
+# name: c.PyMem_SetAllocator 
+void PyMem_SetAllocator(PyMemAllocatorDomain domain, PyMemAllocatorEx *allocator)

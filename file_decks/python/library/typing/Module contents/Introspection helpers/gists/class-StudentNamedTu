@@ -1,0 +1,9 @@
+# name: class Student(NamedT 
+class Student(NamedTuple):
+    name: Annotated[str, 'some marker']
+
+get_type_hints(Student) == {'name': str}
+get_type_hints(Student, include_extras=False) == {'name': str}
+get_type_hints(Student, include_extras=True) == {
+    'name': Annotated[str, 'some marker']
+}

@@ -1,0 +1,7 @@
+# name: >>> screen.bgpic()
+' 
+>>> screen.bgpic()
+'nopic'
+>>> screen.bgpic("landscape.gif")
+>>> screen.bgpic()
+"landscape.gif"

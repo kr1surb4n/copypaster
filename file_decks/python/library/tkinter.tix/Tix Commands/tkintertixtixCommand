@@ -1,0 +1,2 @@
+# name: tkinter.tix.tixComma 
+tixCommand.tix_resetoptions(newScheme, newFontSet[, newScmPrio])

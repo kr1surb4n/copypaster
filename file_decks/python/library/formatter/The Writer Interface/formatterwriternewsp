@@ -1,0 +1,2 @@
+# name: formatter.writer.new 
+writer.new_spacing(spacing)

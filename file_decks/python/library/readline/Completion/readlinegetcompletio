@@ -1,0 +1,2 @@
+# name: readline.get_complet 
+readline.get_completion_type()

@@ -1,0 +1,2 @@
+# name: obj_total = sum(obj. 
+obj_total = sum(obj.count for obj in list_all_objects())

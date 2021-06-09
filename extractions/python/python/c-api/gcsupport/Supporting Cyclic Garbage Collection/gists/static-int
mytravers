@@ -1,0 +1,9 @@
+# name: static int
+my_traver 
+static int
+my_traverse(Noddy *self, visitproc visit, void *arg)
+{
+    Py_VISIT(self->foo);
+    Py_VISIT(self->bar);
+    return 0;
+}

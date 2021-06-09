@@ -1,0 +1,4 @@
+# name: message, or a dict w 
+message, or a dict whose values
+are used for the merge (when there is only one
+argument, and it is a dictionary).

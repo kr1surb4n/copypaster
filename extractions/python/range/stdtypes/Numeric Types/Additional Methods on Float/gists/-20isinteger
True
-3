@@ -1,0 +1,5 @@
+# name: >>> (-2.0).is_intege 
+>>> (-2.0).is_integer()
+True
+>>> (3.2).is_integer()
+False

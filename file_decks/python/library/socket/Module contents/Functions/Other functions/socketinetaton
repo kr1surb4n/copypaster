@@ -1,0 +1,2 @@
+# name: socket.inet_aton 
+socket.inet_aton(ip_string)

@@ -1,0 +1,2 @@
+# name: c.PyErr_SetString 
+void PyErr_SetString(PyObject *type, const char *message)

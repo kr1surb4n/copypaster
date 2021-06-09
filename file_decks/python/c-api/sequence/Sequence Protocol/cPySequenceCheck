@@ -1,0 +1,2 @@
+# name: c.PySequence_Check 
+int PySequence_Check(PyObject *o)

@@ -1,0 +1,2 @@
+# name: turtle.pensize 
+turtle.pensize(width=None)

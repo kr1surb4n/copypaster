@@ -1,0 +1,6 @@
+# name: >>> import ipaddress 
+>>> import ipaddress
+>>> ipaddress.IPv4Network(('127.0.0.0', 8))
+IPv4Network('127.0.0.0/8')
+>>> ipaddress.IPv4Network(('127.0.0.0', '255.0.0.0'))
+IPv4Network('127.0.0.0/8')

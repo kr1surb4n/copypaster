@@ -1,0 +1,2 @@
+# name: test.support.os_help 
+class test.support.os_helper.FakePath(path)

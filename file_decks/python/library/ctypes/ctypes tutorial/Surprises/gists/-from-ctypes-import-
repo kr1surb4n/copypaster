@@ -1,0 +1,18 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>> class POINT(Structure):
+...     _fields_ = ("x", c_int), ("y", c_int)
+...
+>>> class RECT(Structure):
+...     _fields_ = ("a", POINT), ("b", POINT)
+...
+>>> p1 = POINT(1, 2)
+>>> p2 = POINT(3, 4)
+>>> rc = RECT(p1, p2)
+>>> print(rc.a.x, rc.a.y, rc.b.x, rc.b.y)
+1 2 3 4
+>>> # now swap the two points
+>>> rc.a, rc.b = rc.b, rc.a
+>>> print(rc.a.x, rc.a.y, rc.b.x, rc.b.y)
+3 4 3 4
+>>>

@@ -1,0 +1,7 @@
+# name: >>> Original = Class 
+>>> Original = Class
+>>> patcher = patch('__main__.Class', spec=True)
+>>> MockClass = patcher.start()
+>>> instance = MockClass()
+>>> assert isinstance(instance, Original)
+>>> patcher.stop()

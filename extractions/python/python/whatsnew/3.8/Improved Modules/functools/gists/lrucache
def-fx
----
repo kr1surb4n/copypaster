@@ -1,0 +1,9 @@
+# name: @lru_cache
+def f(x): 
+@lru_cache
+def f(x):
+    ...
+
+@lru_cache(maxsize=256)
+def f(x):
+    ...

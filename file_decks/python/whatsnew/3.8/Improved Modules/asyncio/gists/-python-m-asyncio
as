@@ -1,0 +1,9 @@
+# name: $ python -m asyncio
+ 
+$ python -m asyncio
+asyncio REPL 3.8.0
+Use "await" directly instead of "asyncio.run()".
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import asyncio
+>>> await asyncio.sleep(10, result='hello')
+hello

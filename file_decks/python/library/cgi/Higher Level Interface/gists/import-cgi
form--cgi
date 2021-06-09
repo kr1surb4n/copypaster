@@ -1,0 +1,7 @@
+# name: import cgi
+form = cg 
+import cgi
+form = cgi.FieldStorage()
+user = form.getfirst("user", "").upper()    # This way it's safe.
+for item in form.getlist("item"):
+    do_something(item)

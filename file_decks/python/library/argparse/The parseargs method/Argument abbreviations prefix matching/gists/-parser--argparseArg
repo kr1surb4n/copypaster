@@ -1,0 +1,11 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG')
+>>> parser.add_argument('-bacon')
+>>> parser.add_argument('-badger')
+>>> parser.parse_args('-bac MMM'.split())
+Namespace(bacon='MMM', badger=None)
+>>> parser.parse_args('-bad WOOD'.split())
+Namespace(bacon=None, badger='WOOD')
+>>> parser.parse_args('-ba BA'.split())
+usage: PROG [-h] [-bacon BACON] [-badger BADGER]
+PROG: error: ambiguous option: -ba could match -badger, -bacon

@@ -1,0 +1,2 @@
+# name: urllib.request.Fancy 
+urllib.request.FancyURLopener.prompt_user_passwd

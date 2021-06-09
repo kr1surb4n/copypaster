@@ -1,0 +1,2 @@
+# name: str(encoding='name_o 
+str(encoding='name_of_encoding', accept={bytes, bytearray, str}, zeroes=True)

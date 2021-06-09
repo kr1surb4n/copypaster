@@ -1,0 +1,2 @@
+# name: c.PyWeakref_NewRef 
+PyObject* PyWeakref_NewRef(PyObject *ob, PyObject *callback)

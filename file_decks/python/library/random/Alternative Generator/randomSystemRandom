@@ -1,0 +1,2 @@
+# name: random.SystemRandom 
+class random.SystemRandom([seed])

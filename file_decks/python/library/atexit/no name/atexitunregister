@@ -1,0 +1,2 @@
+# name: atexit.unregister 
+atexit.unregister(func)

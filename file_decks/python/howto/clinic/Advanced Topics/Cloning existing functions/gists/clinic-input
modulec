@@ -1,0 +1,7 @@
+# name: /*[clinic input]
+mod 
+/*[clinic input]
+module.class.new_function [as c_basename] = module.class.existing_function
+
+Docstring for new_function goes here.
+[clinic start generated code]*/

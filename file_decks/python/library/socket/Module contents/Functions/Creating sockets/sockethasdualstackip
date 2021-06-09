@@ -1,0 +1,2 @@
+# name: socket.has_dualstack 
+socket.has_dualstack_ipv6()

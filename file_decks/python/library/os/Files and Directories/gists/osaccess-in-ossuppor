@@ -1,0 +1,2 @@
+# name: os.access in os.supp 
+os.access in os.supports_effective_ids

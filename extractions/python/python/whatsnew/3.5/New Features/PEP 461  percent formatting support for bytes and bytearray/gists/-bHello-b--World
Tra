@@ -1,0 +1,8 @@
+# name: >>> b'Hello %b!' % ' 
+>>> b'Hello %b!' % 'World'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: %b requires bytes, or an object that implements __bytes__, not 'str'
+
+>>> b'price: %a' % '10€'
+b"price: '10\\u20ac'"

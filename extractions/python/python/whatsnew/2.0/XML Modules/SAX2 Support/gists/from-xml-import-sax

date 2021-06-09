@@ -1,0 +1,20 @@
+# name: from xml import sax
+ 
+from xml import sax
+
+class SimpleHandler(sax.ContentHandler):
+    def startElement(self, name, attrs):
+        print 'Start of element:', name, attrs.keys()
+
+    def endElement(self, name):
+        print 'End of element:', name
+
+# Create a parser object
+parser = sax.make_parser()
+
+# Tell it what handler to use
+handler = SimpleHandler()
+parser.setContentHandler( handler )
+
+# Parse a file!
+parser.parse( 'hamlet.xml' )

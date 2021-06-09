@@ -1,0 +1,15 @@
+# name: if __name__ == '__ma 
+if __name__ == '__main__':
+    import doctest
+    flags = doctest.REPORT_NDIFF|doctest.FAIL_FAST
+    if len(sys.argv) > 1:
+        name = sys.argv[1]
+        if name in globals():
+            obj = globals()[name]
+        else:
+            obj = __test__[name]
+        doctest.run_docstring_examples(obj, globals(), name=name,
+                                       optionflags=flags)
+    else:
+        fail, total = doctest.testmod(optionflags=flags)
+        print("{} failures out of {} tests".format(fail, total))

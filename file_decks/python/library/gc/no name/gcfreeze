@@ -1,0 +1,2 @@
+# name: gc.freeze 
+gc.freeze()

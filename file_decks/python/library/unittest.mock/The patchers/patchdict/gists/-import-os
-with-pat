@@ -1,0 +1,8 @@
+# name: >>> import os
+>>> wi 
+>>> import os
+>>> with patch.dict('os.environ', {'newkey': 'newvalue'}):
+...     print(os.environ['newkey'])
+...
+newvalue
+>>> assert 'newkey' not in os.environ

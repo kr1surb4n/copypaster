@@ -1,0 +1,9 @@
+# name: >>> import dis
+>>> f 
+>>> import dis
+>>> for instr in dis.get_instructions(lambda x: x + 1):
+...     print(instr.opname)
+LOAD_FAST
+LOAD_CONST
+BINARY_ADD
+RETURN_VALUE

@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.xhdr 
+NNTP.xhdr(hdr, str, *, file=None)

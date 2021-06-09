@@ -1,0 +1,10 @@
+# name: $ tree tmp
+tmp
+└── r 
+$ tree tmp
+tmp
+└── root
+    └── structure
+        ├── content
+            └── please_add.txt
+        └── do_not_add.txt

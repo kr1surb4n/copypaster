@@ -1,0 +1,4 @@
+# name: print("Traceback (mo 
+print("Traceback (most recent call first):")
+for line in traceback:
+    print(line)

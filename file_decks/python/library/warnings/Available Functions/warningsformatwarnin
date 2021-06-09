@@ -1,0 +1,2 @@
+# name: warnings.formatwarni 
+warnings.formatwarning(message, category, filename, lineno, line=None)

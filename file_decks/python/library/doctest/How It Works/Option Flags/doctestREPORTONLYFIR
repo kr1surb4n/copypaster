@@ -1,0 +1,2 @@
+# name: doctest.REPORT_ONLY_ 
+doctest.REPORT_ONLY_FIRST_FAILURE

@@ -1,0 +1,2 @@
+# name: c.PyObject_CallOneAr 
+PyObject* PyObject_CallOneArg(PyObject *callable, PyObject *arg)

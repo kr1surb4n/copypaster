@@ -1,0 +1,2 @@
+# name: tkinter.messagebox.M 
+class tkinter.messagebox.Message(master=None, **options)

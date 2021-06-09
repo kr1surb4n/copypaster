@@ -1,0 +1,2 @@
+# name: bytes.split 
+bytes.split(sep=None, maxsplit=-1)

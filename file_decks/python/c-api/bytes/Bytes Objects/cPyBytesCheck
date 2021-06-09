@@ -1,0 +1,2 @@
+# name: c.PyBytes_Check 
+int PyBytes_Check(PyObject *o)

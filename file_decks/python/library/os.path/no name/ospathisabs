@@ -1,0 +1,2 @@
+# name: os.path.isabs 
+os.path.isabs(path)

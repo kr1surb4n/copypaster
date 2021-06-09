@@ -1,0 +1,10 @@
+# name: >>> # Field 0: left  
+>>> # Field 0: left justify, pad to 15 characters
+>>> # Field 1: right justify, pad to 6 characters
+>>> fmt = '{0:15} ${1:>6}'
+>>> fmt.format('Registration', 35)
+'Registration    $    35'
+>>> fmt.format('Tutorial', 50)
+'Tutorial        $    50'
+>>> fmt.format('Banquet', 125)
+'Banquet         $   125'

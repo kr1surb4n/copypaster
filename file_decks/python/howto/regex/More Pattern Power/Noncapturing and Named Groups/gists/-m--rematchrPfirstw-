@@ -1,0 +1,4 @@
+# name: >>> m = re.match(r'( 
+>>> m = re.match(r'(?P<first>\w+) (?P<last>\w+)', 'Jane Doe')
+>>> m.groupdict()
+{'first': 'Jane', 'last': 'Doe'}

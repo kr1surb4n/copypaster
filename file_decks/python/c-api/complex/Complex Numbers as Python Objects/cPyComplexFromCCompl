@@ -1,0 +1,2 @@
+# name: c.PyComplex_FromCCom 
+PyObject* PyComplex_FromCComplex(Py_complex v)

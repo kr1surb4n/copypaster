@@ -1,0 +1,5 @@
+# name: [command]
+option=val 
+[command]
+option=value
+...

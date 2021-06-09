@@ -1,0 +1,7 @@
+# name: >>> req = urllib.req 
+>>> req = urllib.request.Request('http://www.pretend_server.org')
+>>> try: urllib.request.urlopen(req)
+... except urllib.error.URLError as e:
+...     print(e.reason)      
+...
+(4, 'getaddrinfo failed')

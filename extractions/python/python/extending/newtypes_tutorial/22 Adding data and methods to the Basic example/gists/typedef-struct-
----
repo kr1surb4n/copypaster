@@ -1,0 +1,8 @@
+# name: typedef struct {
+    
+typedef struct {
+    PyObject_HEAD
+    PyObject *first; /* first name */
+    PyObject *last;  /* last name */
+    int number;
+} CustomObject;

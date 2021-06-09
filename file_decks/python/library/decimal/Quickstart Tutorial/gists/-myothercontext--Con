@@ -1,0 +1,21 @@
+# name: >>> myothercontext = 
+>>> myothercontext = Context(prec=60, rounding=ROUND_HALF_DOWN)
+>>> setcontext(myothercontext)
+>>> Decimal(1) / Decimal(7)
+Decimal('0.142857142857142857142857142857142857142857142857142857142857')
+
+>>> ExtendedContext
+Context(prec=9, rounding=ROUND_HALF_EVEN, Emin=-999999, Emax=999999,
+        capitals=1, clamp=0, flags=[], traps=[])
+>>> setcontext(ExtendedContext)
+>>> Decimal(1) / Decimal(7)
+Decimal('0.142857143')
+>>> Decimal(42) / Decimal(0)
+Decimal('Infinity')
+
+>>> setcontext(BasicContext)
+>>> Decimal(42) / Decimal(0)
+Traceback (most recent call last):
+  File "<pyshell#143>", line 1, in -toplevel-
+    Decimal(42) / Decimal(0)
+DivisionByZero: x / 0

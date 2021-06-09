@@ -1,0 +1,2 @@
+# name: tracemalloc.get_trac 
+tracemalloc.get_traced_memory()

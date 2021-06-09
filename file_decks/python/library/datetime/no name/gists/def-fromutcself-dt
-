@@ -1,0 +1,15 @@
+# name: def fromutc(self, dt 
+def fromutc(self, dt):
+    # raise ValueError error if dt.tzinfo is not self
+    dtoff = dt.utcoffset()
+    dtdst = dt.dst()
+    # raise ValueError if dtoff is None or dtdst is None
+    delta = dtoff - dtdst  # this is self's standard offset
+    if delta:
+        dt += delta   # convert to standard local time
+        dtdst = dt.dst()
+        # raise ValueError if dtdst is None
+    if dtdst:
+        return dt + dtdst
+    else:
+        return dt

@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.subscr 
+IMAP4.subscribe(mailbox)

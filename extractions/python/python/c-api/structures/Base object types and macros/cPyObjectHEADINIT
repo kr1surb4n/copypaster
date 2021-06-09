@@ -1,0 +1,2 @@
+# name: c.PyObject_HEAD_INIT 
+PyObject_HEAD_INIT(type)

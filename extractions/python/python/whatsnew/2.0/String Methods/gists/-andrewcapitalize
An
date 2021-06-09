@@ -1,0 +1,7 @@
+# name: >>> 'andrew'.capital 
+>>> 'andrew'.capitalize()
+'Andrew'
+>>> 'hostname'.replace('os', 'linux')
+'hlinuxtname'
+>>> 'moshe'.find('sh')
+2

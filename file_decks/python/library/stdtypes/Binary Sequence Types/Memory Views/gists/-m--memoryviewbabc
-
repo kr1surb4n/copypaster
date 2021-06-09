@@ -1,0 +1,7 @@
+# name: >>> m = memoryview(b 
+>>> m = memoryview(b'abc')
+>>> m.release()
+>>> m[0]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: operation forbidden on released memoryview object

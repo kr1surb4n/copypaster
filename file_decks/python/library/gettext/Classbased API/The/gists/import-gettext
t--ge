@@ -1,0 +1,5 @@
+# name: import gettext
+t = g 
+import gettext
+t = gettext.translation('mymodule', ...)
+_ = t.gettext

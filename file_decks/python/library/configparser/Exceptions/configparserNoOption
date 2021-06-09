@@ -1,0 +1,2 @@
+# name: configparser.NoOptio 
+exception configparser.NoOptionError

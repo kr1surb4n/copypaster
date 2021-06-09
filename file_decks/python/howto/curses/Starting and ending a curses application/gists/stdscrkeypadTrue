@@ -1,0 +1,2 @@
+# name: stdscr.keypad(True) 
+stdscr.keypad(True)

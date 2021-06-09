@@ -1,0 +1,2 @@
+# name: (fmt, channels, rate 
+(fmt, channels, rate) = dsp.setparameters(fmt, channels, rate)

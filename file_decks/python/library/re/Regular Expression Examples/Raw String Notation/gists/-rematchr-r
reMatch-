@@ -1,0 +1,5 @@
+# name: >>> re.match(r"\\",  
+>>> re.match(r"\\", r"\\")
+<re.Match object; span=(0, 1), match='\\'>
+>>> re.match("\\\\", r"\\")
+<re.Match object; span=(0, 1), match='\\'>

@@ -1,0 +1,13 @@
+# name: >>> bytecode = dis.B 
+>>> bytecode = dis.Bytecode(lambda x: x + 1, current_offset=3)
+>>> for instr in bytecode:
+...     print('{} ({})'.format(instr.opname, instr.opcode))
+LOAD_FAST (124)
+LOAD_CONST (100)
+BINARY_ADD (23)
+RETURN_VALUE (83)
+>>> bytecode.dis().splitlines()       
+['  1           0 LOAD_FAST                0 (x)',
+ '      -->     3 LOAD_CONST               1 (1)',
+ '              6 BINARY_ADD',
+ '              7 RETURN_VALUE']

@@ -1,0 +1,4 @@
+# name: for piece in food:
+  
+for piece in food:
+    print(piece)

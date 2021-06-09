@@ -1,0 +1,10 @@
+# name: >>> addr6.exploded
+' 
+>>> addr6.exploded
+'2001:0db8:0000:0000:0000:0000:0000:0001'
+>>> addr6.compressed
+'2001:db8::1'
+>>> net6.exploded
+'2001:0db8:0000:0000:0000:0000:0000:0000/96'
+>>> net6.compressed
+'2001:db8::/96'

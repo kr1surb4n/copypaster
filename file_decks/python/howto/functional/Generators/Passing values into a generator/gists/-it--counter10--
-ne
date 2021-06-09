@@ -1,0 +1,15 @@
+# name: >>> it = counter(10) 
+>>> it = counter(10)  
+>>> next(it)  
+0
+>>> next(it)  
+1
+>>> it.send(8)  
+8
+>>> next(it)  
+9
+>>> next(it)  
+Traceback (most recent call last):
+  File "t.py", line 15, in <module>
+    it.next()
+StopIteration

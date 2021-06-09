@@ -1,0 +1,2 @@
+# name: strip_text: set to t 
+strip_text: set to true to strip whitespace before and after text content

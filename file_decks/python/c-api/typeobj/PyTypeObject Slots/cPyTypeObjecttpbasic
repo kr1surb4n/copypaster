@@ -1,0 +1,2 @@
+# name: c.PyTypeObject.tp_ba 
+Py_ssize_t PyTypeObject.tp_basicsize

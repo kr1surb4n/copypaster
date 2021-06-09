@@ -1,0 +1,5 @@
+# name: discount = 0.0
+if (m 
+discount = 0.0
+if (mo := re.search(r'(\d+)% discount', advertisement)):
+    discount = float(mo.group(1)) / 100.0

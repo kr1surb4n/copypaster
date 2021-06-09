@@ -1,0 +1,2 @@
+# name: islice('ABCDEFG', 2, 
+islice('ABCDEFG', 2, None) --> C D E F G

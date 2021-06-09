@@ -1,0 +1,8 @@
+# name: PyDoc_STRVAR(pop_doc 
+PyDoc_STRVAR(pop_doc, "Remove and return the rightmost element.");
+
+static PyMethodDef deque_methods[] = {
+    // ...
+    {"pop", (PyCFunction)deque_pop, METH_NOARGS, pop_doc},
+    // ...
+}

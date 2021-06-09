@@ -1,0 +1,13 @@
+# name: >>> import multiproc 
+>>> import multiprocessing, logging
+>>> logger = multiprocessing.log_to_stderr()
+>>> logger.setLevel(logging.INFO)
+>>> logger.warning('doomed')
+[WARNING/MainProcess] doomed
+>>> m = multiprocessing.Manager()
+[INFO/SyncManager-...] child process calling self.run()
+[INFO/SyncManager-...] created temp directory /.../pymp-...
+[INFO/SyncManager-...] manager serving at '/.../listener-...'
+>>> del m
+[INFO/MainProcess] sending shutdown message to manager
+[INFO/SyncManager-...] manager exiting with exitcode 0

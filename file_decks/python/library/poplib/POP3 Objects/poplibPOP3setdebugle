@@ -1,0 +1,2 @@
+# name: poplib.POP3.set_debu 
+POP3.set_debuglevel(level)

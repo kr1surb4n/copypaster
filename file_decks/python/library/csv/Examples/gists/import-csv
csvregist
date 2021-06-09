@@ -1,0 +1,6 @@
+# name: import csv
+csv.regis 
+import csv
+csv.register_dialect('unixpwd', delimiter=':', quoting=csv.QUOTE_NONE)
+with open('passwd', newline='') as f:
+    reader = csv.reader(f, 'unixpwd')

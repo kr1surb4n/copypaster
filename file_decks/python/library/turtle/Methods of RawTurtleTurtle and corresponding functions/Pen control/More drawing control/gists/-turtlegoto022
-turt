@@ -1,0 +1,12 @@
+# name: >>> turtle.goto(0,-2 
+>>> turtle.goto(0,-22)
+>>> turtle.left(100)
+>>> turtle.position()
+(0.00,-22.00)
+>>> turtle.heading()
+100.0
+>>> turtle.reset()
+>>> turtle.position()
+(0.00,0.00)
+>>> turtle.heading()
+0.0

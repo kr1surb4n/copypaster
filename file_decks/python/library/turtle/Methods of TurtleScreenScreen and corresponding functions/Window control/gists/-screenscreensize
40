@@ -1,0 +1,6 @@
+# name: >>> screen.screensiz 
+>>> screen.screensize()
+(400, 300)
+>>> screen.screensize(2000,1500)
+>>> screen.screensize()
+(2000, 1500)

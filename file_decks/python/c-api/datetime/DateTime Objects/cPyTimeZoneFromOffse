@@ -1,0 +1,2 @@
+# name: c.PyTimeZone_FromOff 
+PyObject* PyTimeZone_FromOffsetAndName(PyDateTime_DeltaType* offset, PyUnicode* name)

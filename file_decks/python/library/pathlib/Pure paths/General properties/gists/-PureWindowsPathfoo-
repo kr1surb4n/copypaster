@@ -1,0 +1,7 @@
+# name: >>> PureWindowsPath( 
+>>> PureWindowsPath('foo') == PurePosixPath('foo')
+False
+>>> PureWindowsPath('foo') < PurePosixPath('foo')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '<' not supported between instances of 'PureWindowsPath' and 'PurePosixPath'

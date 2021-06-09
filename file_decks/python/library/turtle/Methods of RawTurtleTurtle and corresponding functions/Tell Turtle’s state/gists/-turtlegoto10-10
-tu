@@ -1,0 +1,4 @@
+# name: >>> turtle.goto(10,  
+>>> turtle.goto(10, 10)
+>>> turtle.towards(0,0)
+225.0

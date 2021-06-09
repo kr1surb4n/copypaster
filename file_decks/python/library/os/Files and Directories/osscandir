@@ -1,0 +1,2 @@
+# name: os.scandir 
+os.scandir(path='.')

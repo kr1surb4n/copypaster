@@ -1,0 +1,7 @@
+# name: >>> s = "a\xac\u1234 
+>>> s = "a\xac\u1234\u20ac\U00008000"
+... #     ^^^^ two-digit hex escape
+... #         ^^^^^^ four-digit Unicode escape
+... #                     ^^^^^^^^^^ eight-digit Unicode escape
+>>> [ord(c) for c in s]
+[97, 172, 4660, 8364, 32768]

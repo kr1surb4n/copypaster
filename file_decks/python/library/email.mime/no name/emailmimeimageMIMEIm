@@ -1,0 +1,2 @@
+# name: email.mime.image.MIM 
+class email.mime.image.MIMEImage(_imagedata, _subtype=None, _encoder=email.encoders.encode_base64, *, policy=compat32, **_params)

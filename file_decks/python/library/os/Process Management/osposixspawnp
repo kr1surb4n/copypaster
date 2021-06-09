@@ -1,0 +1,2 @@
+# name: os.posix_spawnp 
+os.posix_spawnp(path, argv, env, *, file_actions=None, setpgroup=None, resetids=False, setsid=False, setsigmask=(), setsigdef=(), scheduler=None)

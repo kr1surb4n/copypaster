@@ -1,0 +1,6 @@
+# name: >>> dir(Planet)
+['EA 
+>>> dir(Planet)
+['EARTH', 'JUPITER', 'MARS', 'MERCURY', 'NEPTUNE', 'SATURN', 'URANUS', 'VENUS', '__class__', '__doc__', '__members__', '__module__']
+>>> dir(Planet.EARTH)
+['__class__', '__doc__', '__module__', 'name', 'surface_gravity', 'value']

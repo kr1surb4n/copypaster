@@ -1,0 +1,14 @@
+# name: >>> resp, info = s.a 
+>>> resp, info = s.article('<20030112190404.GE29873@epoch.metaslash.com>')
+>>> info.number
+0
+>>> info.message_id
+'<20030112190404.GE29873@epoch.metaslash.com>'
+>>> len(info.lines)
+65
+>>> info.lines[0]
+b'Path: main.gmane.org!not-for-mail'
+>>> info.lines[1]
+b'From: Neal Norwitz <neal@metaslash.com>'
+>>> info.lines[-3:]
+[b'There is a patch for 2.3 as well as 2.2.', b'', b'Neal']

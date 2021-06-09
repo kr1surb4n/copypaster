@@ -1,0 +1,4 @@
+# name: ok = PyArg_ParseTupl 
+ok = PyArg_ParseTuple(args, "(ii)s#", &i, &j, &s, &size);
+    /* A pair of ints and a string, whose size is also returned */
+    /* Possible Python call: f((1, 2), 'three') */

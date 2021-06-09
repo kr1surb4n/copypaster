@@ -1,0 +1,2 @@
+# name: c.Py_InitializeFromC 
+PyStatus Py_InitializeFromConfig(const PyConfig *config)

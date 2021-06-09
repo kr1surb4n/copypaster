@@ -1,0 +1,9 @@
+# name: >>> os.environ['TZ'] 
+>>> os.environ['TZ'] = 'US/Eastern'
+>>> time.tzset()
+>>> time.tzname
+('EST', 'EDT')
+>>> os.environ['TZ'] = 'Egypt'
+>>> time.tzset()
+>>> time.tzname
+('EET', 'EEST')

@@ -1,0 +1,9 @@
+# name: try:
+    with open(" 
+try:
+    with open("document.txt") as f:
+        content = f.read()
+except FileNotFoundError:
+    print("document.txt file is missing")
+except PermissionError:
+    print("You are not allowed to read document.txt")

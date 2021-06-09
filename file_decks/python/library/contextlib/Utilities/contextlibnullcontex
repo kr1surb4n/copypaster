@@ -1,0 +1,2 @@
+# name: contextlib.nullconte 
+contextlib.nullcontext(enter_result=None)

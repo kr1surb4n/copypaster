@@ -1,0 +1,3 @@
+# name: >>> int.__subclasses 
+>>> int.__subclasses__()
+[<class 'bool'>]

@@ -1,0 +1,8 @@
+# name: import cProfile
+
+wit 
+import cProfile
+
+with cProfile.Profile() as profiler:
+      # code to be profiled
+      ...

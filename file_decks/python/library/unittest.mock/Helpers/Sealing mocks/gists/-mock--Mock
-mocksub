@@ -1,0 +1,9 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.submock.attribute1 = 2
+>>> mock.not_submock = mock.Mock(name="sample_name")
+>>> seal(mock)
+>>> mock.new_attribute  # This will raise AttributeError.
+>>> mock.submock.attribute2  # This will raise AttributeError.
+>>> mock.not_submock.attribute2  # This won't raise.

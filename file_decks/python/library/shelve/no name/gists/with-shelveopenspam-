@@ -1,0 +1,3 @@
+# name: with shelve.open('sp 
+with shelve.open('spam') as db:
+    db['eggs'] = 'eggs'

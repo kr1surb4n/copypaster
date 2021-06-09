@@ -1,0 +1,14 @@
+# name: >>> short_array = (c 
+>>> short_array = (c_short * 4)()
+>>> print(sizeof(short_array))
+8
+>>> resize(short_array, 4)
+Traceback (most recent call last):
+    ...
+ValueError: minimum size is 8
+>>> resize(short_array, 32)
+>>> sizeof(short_array)
+32
+>>> sizeof(type(short_array))
+8
+>>>

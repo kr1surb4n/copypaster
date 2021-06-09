@@ -1,0 +1,2 @@
+# name: binascii.b2a_hex 
+binascii.b2a_hex(data[, sep[, bytes_per_sep=1]])

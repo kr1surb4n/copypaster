@@ -1,0 +1,2 @@
+# name: c.ssizeargfunc 
+PyObject *(*ssizeargfunc)(PyObject *, Py_ssize_t)

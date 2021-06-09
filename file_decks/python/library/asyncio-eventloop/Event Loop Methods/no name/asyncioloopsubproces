@@ -1,0 +1,2 @@
+# name: asyncio.loop.subproc 
+coroutine loop.subprocess_shell(protocol_factory, cmd, *, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE, **kwargs)

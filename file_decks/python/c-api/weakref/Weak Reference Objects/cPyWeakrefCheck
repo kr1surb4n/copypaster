@@ -1,0 +1,2 @@
+# name: c.PyWeakref_Check 
+int PyWeakref_Check(ob)

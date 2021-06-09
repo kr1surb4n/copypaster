@@ -1,0 +1,5 @@
+# name: async def infinite_s 
+async def infinite_stream(start: int) -> AsyncIterator[int]:
+    while True:
+        yield start
+        start = await increment(start)

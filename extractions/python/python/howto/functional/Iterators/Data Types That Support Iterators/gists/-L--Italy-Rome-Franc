@@ -1,0 +1,4 @@
+# name: >>> L = [('Italy', ' 
+>>> L = [('Italy', 'Rome'), ('France', 'Paris'), ('US', 'Washington DC')]
+>>> dict(iter(L))
+{'Italy': 'Rome', 'France': 'Paris', 'US': 'Washington DC'}

@@ -1,0 +1,2 @@
+# name: pathlib.Path.rglob 
+Path.rglob(pattern)

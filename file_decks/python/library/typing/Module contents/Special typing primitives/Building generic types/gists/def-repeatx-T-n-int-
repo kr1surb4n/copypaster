@@ -1,0 +1,8 @@
+# name: def repeat(x: T, n:  
+def repeat(x: T, n: int) -> Sequence[T]:
+    """Return a list containing n references to x."""
+    return [x]*n
+
+def longest(x: A, y: A) -> A:
+    """Return the longest of two strings."""
+    return x if len(x) >= len(y) else y

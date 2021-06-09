@@ -1,0 +1,2 @@
+# name: symtable.symtable 
+symtable.symtable(code, filename, compile_type)

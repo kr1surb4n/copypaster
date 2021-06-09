@@ -1,0 +1,2 @@
+# name: ctypes.cast 
+ctypes.cast(obj, type)

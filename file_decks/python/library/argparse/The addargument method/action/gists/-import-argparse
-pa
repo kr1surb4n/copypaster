@@ -1,0 +1,7 @@
+# name: >>> import argparse
+ 
+>>> import argparse
+>>> parser = argparse.ArgumentParser()
+>>> parser.add_argument('--foo', action=argparse.BooleanOptionalAction)
+>>> parser.parse_args(['--no-foo'])
+Namespace(foo=False)

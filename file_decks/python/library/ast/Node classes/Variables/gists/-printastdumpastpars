@@ -1,0 +1,15 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('a, *b = it'), indent=4))
+Module(
+    body=[
+        Assign(
+            targets=[
+                Tuple(
+                    elts=[
+                        Name(id='a', ctx=Store()),
+                        Starred(
+                            value=Name(id='b', ctx=Store()),
+                            ctx=Store())],
+                    ctx=Store())],
+            value=Name(id='it', ctx=Load()))],
+    type_ignores=[])

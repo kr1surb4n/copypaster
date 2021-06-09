@@ -1,0 +1,3 @@
+# name: value = form.getlist 
+value = form.getlist("username")
+usernames = ",".join(value)

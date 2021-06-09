@@ -1,0 +1,5 @@
+# name: >>> type(1).__hash__ 
+>>> type(1).__hash__(1) == hash(1)
+True
+>>> type(int).__hash__(int) == hash(int)
+True

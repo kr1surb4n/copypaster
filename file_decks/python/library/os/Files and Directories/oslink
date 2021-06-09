@@ -1,0 +1,2 @@
+# name: os.link 
+os.link(src, dst, *, src_dir_fd=None, dst_dir_fd=None, follow_symlinks=True)

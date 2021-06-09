@@ -1,0 +1,9 @@
+# name: >>> s = c_char_p()
+> 
+>>> s = c_char_p()
+>>> s.value = b"abc def ghi"
+>>> s.value
+b'abc def ghi'
+>>> s.value is s.value
+False
+>>>

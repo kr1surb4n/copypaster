@@ -1,0 +1,13 @@
+# name: >>> class Color(Flag 
+>>> class Color(Flag):
+...     RED = auto()
+...     GREEN = auto()
+...     BLUE = auto()
+...     MAGENTA = RED | BLUE
+...     YELLOW = RED | GREEN
+...     CYAN = GREEN | BLUE
+...
+>>> Color(3)  # named combination
+<Color.YELLOW: 3>
+>>> Color(7)      # not named combination
+<Color.CYAN|MAGENTA|BLUE|YELLOW|GREEN|RED: 7>

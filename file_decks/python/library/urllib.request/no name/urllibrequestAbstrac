@@ -1,0 +1,2 @@
+# name: urllib.request.Abstr 
+class urllib.request.AbstractDigestAuthHandler(password_mgr=None)

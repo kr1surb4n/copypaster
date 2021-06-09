@@ -1,0 +1,2 @@
+# name: logging.logging.Form 
+logging.Formatter.__init__(fmt=None, datefmt=None, style='%')

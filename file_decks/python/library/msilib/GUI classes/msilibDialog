@@ -1,0 +1,2 @@
+# name: msilib.Dialog 
+class msilib.Dialog(db, name, x, y, w, h, attr, title, first, default, cancel)

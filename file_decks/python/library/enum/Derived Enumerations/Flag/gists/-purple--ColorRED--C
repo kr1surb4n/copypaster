@@ -1,0 +1,4 @@
+# name: >>> purple = Color.R 
+>>> purple = Color.RED | Color.BLUE
+>>> list(purple)
+[<Color.BLUE: 2>, <Color.RED: 1>]

@@ -1,0 +1,2 @@
+# name: c.PyLong_Check 
+int PyLong_Check(PyObject *p)

@@ -1,0 +1,10 @@
+# name: >>> class Color(NoVa 
+>>> class Color(NoValue):
+...     RED = 'stop'
+...     GREEN = 'go'
+...     BLUE = 'too fast!'
+...
+>>> Color.GREEN
+<Color.GREEN>
+>>> Color.GREEN.value
+'go'

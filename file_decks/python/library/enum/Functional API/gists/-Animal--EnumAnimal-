@@ -1,0 +1,2 @@
+# name: >>> Animal = Enum('A 
+>>> Animal = Enum('Animal', 'ANT BEE CAT DOG', qualname='SomeData.Animal')

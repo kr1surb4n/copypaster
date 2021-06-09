@@ -1,0 +1,12 @@
+# name: root = doc.documentE 
+root = doc.documentElement
+
+# Remove the first child
+root.removeChild( root.childNodes[0] )
+
+# Move the new first child to the end
+root.appendChild( root.childNodes[0] )
+
+# Insert the new first child (originally,
+# the third child) before the 20th child.
+root.insertBefore( root.childNodes[0], root.childNodes[20] )

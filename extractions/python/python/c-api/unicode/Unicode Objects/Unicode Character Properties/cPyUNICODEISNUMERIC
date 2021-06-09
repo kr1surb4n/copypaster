@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_ISNUMER 
+int Py_UNICODE_ISNUMERIC(Py_UNICODE ch)

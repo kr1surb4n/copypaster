@@ -1,0 +1,2 @@
+# name: tkinter.messagebox.a 
+tkinter.messagebox.askquestion(title=None, message=None, **options)

@@ -1,0 +1,7 @@
+# name: >>> turtle.color("re 
+>>> turtle.color("red", "green")
+ >>> turtle.color()
+ ('red', 'green')
+ >>> color("#285078", "#a0c8f0")
+ >>> color()
+ ((40.0, 80.0, 120.0), (160.0, 200.0, 240.0))

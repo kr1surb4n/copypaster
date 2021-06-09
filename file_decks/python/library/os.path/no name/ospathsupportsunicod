@@ -1,0 +1,2 @@
+# name: os.path.supports_uni 
+os.path.supports_unicode_filenames

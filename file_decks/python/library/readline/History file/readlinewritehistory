@@ -1,0 +1,2 @@
+# name: readline.write_histo 
+readline.write_history_file([filename])

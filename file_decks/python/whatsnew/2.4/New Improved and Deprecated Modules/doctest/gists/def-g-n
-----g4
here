@@ -1,0 +1,12 @@
+# name: def g (n):
+    """>> 
+def g (n):
+    """>>> g(4)
+here
+is
+a
+lengthy
+>>>"""
+    L = 'here is a rather lengthy list of words'.split()
+    for word in L[:n]:
+        print word

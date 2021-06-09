@@ -1,0 +1,2 @@
+# name: object.__len__ 
+object.__len__(self)

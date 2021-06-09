@@ -1,0 +1,12 @@
+# name: import ast
+
+t = ast. 
+import ast
+
+t = ast.parse("""
+d = {}
+for i in 'abcdefghijklm':
+    d[i + i] = ord(i) - ord('a') + 1
+print d
+""")
+print ast.dump(t)

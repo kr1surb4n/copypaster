@@ -1,0 +1,2 @@
+# name: bz2.BZ2Compressor 
+class bz2.BZ2Compressor(compresslevel=9)

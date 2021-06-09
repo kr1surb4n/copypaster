@@ -1,0 +1,3 @@
+# name: UserId = NewType('Us 
+UserId = NewType('UserId', int)
+first_user = UserId(1)

@@ -1,0 +1,2 @@
+# name: ssl.SSLContext.set_a 
+SSLContext.set_alpn_protocols(protocols)

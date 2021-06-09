@@ -1,0 +1,2 @@
+# name: coroutine.send 
+coroutine.send(value)

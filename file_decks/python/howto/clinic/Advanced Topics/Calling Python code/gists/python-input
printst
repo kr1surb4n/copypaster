@@ -1,0 +1,7 @@
+# name: /*[python input]
+pri 
+/*[python input]
+print('static int __ignored_unused_variable__ = 0;')
+[python start generated code]*/
+static int __ignored_unused_variable__ = 0;
+/*[python checksum:...]*/

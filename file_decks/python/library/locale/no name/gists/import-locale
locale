@@ -1,0 +1,4 @@
+# name: import locale
+locale 
+import locale
+locale.setlocale(locale.LC_ALL, '')

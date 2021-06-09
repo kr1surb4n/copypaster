@@ -1,0 +1,2 @@
+# name: c.PyMarshal_ReadLast 
+PyObject* PyMarshal_ReadLastObjectFromFile(FILE *file)

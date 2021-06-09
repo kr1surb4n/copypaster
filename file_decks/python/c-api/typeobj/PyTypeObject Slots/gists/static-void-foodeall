@@ -1,0 +1,7 @@
+# name: static void foo_deal 
+static void foo_dealloc(foo_object *self) {
+    PyTypeObject *tp = Py_TYPE(self);
+    // free references and buffers here
+    tp->tp_free(self);
+    Py_DECREF(tp);
+}

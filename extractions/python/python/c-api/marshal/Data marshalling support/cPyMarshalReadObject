@@ -1,0 +1,2 @@
+# name: c.PyMarshal_ReadObje 
+PyObject* PyMarshal_ReadObjectFromString(const char *data, Py_ssize_t len)

@@ -1,0 +1,2 @@
+# name: c.PyThreadState_Next 
+PyThreadState* PyThreadState_Next(PyThreadState *tstate)

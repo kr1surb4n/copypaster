@@ -1,0 +1,2 @@
+# name: object.__setstate__ 
+object.__setstate__(state)

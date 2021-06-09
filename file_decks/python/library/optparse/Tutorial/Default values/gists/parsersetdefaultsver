@@ -1,0 +1,4 @@
+# name: parser.set_defaults( 
+parser.set_defaults(verbose=True)
+parser.add_option(...)
+(options, args) = parser.parse_args()

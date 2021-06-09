@@ -1,0 +1,2 @@
+# name: c.Py_AddPendingCall 
+int Py_AddPendingCall(int (*func)(void *), void *arg)

@@ -1,0 +1,4 @@
+# name: >>> m = p.match('tem 
+>>> m = p.match('tempo')
+>>> m
+<re.Match object; span=(0, 5), match='tempo'>

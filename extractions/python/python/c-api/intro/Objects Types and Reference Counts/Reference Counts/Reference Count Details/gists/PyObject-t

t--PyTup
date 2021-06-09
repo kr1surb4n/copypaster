@@ -1,0 +1,9 @@
+# name: PyObject *t;
+
+t = Py 
+PyObject *t;
+
+t = PyTuple_New(3);
+PyTuple_SetItem(t, 0, PyLong_FromLong(1L));
+PyTuple_SetItem(t, 1, PyLong_FromLong(2L));
+PyTuple_SetItem(t, 2, PyUnicode_FromString("three"));

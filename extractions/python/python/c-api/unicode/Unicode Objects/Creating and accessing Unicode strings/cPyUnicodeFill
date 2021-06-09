@@ -1,0 +1,2 @@
+# name: c.PyUnicode_Fill 
+Py_ssize_t PyUnicode_Fill(PyObject *unicode, Py_ssize_t start, Py_ssize_t length, Py_UCS4 fill_char)

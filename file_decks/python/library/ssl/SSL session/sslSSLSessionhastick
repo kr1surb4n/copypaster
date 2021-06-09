@@ -1,0 +1,2 @@
+# name: ssl.SSLSession.has_t 
+ssl.SSLSession.has_ticket

@@ -1,0 +1,9 @@
+# name: from collections.abc 
+from collections.abc import Callable
+
+def feeder(get_next_item: Callable[[], str]) -> None:
+    # Body
+
+def async_query(on_success: Callable[[int], None],
+                on_error: Callable[[int, Exception], None]) -> None:
+    # Body

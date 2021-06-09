@@ -1,0 +1,2 @@
+# name: xml.dom.NotFoundErr 
+exception xml.dom.NotFoundErr

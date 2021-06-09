@@ -1,0 +1,2 @@
+# name: c.PyUnicode_CompareW 
+int PyUnicode_CompareWithASCIIString(PyObject *uni, const char *string)

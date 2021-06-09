@@ -1,0 +1,12 @@
+# name: >>> p = PurePosixPat 
+>>> p = PurePosixPath('/etc/passwd')
+>>> p.relative_to('/')
+PurePosixPath('etc/passwd')
+>>> p.relative_to('/etc')
+PurePosixPath('passwd')
+>>> p.relative_to('/usr')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "pathlib.py", line 694, in relative_to
+    .format(str(self), str(formatted)))
+ValueError: '/etc/passwd' is not in the subpath of '/usr' OR one path is relative and the other absolute.

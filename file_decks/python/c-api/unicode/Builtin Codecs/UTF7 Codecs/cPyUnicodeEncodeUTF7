@@ -1,0 +1,2 @@
+# name: c.PyUnicode_EncodeUT 
+PyObject* PyUnicode_EncodeUTF7(const Py_UNICODE *s, Py_ssize_t size, int base64SetO, int base64WhiteSpace, const char *errors)

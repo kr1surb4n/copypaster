@@ -1,0 +1,10 @@
+# name: >>> f = NamedTempora 
+>>> f = NamedTemporaryFile(delete=False)
+>>> f.name
+'/tmp/tmptjujjt'
+>>> f.write(b"Hello World!\n")
+13
+>>> f.close()
+>>> os.unlink(f.name)
+>>> os.path.exists(f.name)
+False

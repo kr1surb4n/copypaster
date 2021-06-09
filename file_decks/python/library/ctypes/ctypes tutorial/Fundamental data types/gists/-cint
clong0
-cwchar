@@ -1,0 +1,9 @@
+# name: >>> c_int()
+c_long(0 
+>>> c_int()
+c_long(0)
+>>> c_wchar_p("Hello, World")
+c_wchar_p(140018365411392)
+>>> c_ushort(-3)
+c_ushort(65533)
+>>>

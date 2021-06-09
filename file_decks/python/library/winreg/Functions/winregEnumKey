@@ -1,0 +1,2 @@
+# name: winreg.EnumKey 
+winreg.EnumKey(key, index)

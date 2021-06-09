@@ -1,0 +1,2 @@
+# name: winreg.QueryValueEx 
+winreg.QueryValueEx(key, value_name)

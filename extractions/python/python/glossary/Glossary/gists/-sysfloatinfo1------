@@ -1,0 +1,7 @@
+# name: >>> sys.float_info[1 
+>>> sys.float_info[1]                   # indexed access
+1024
+>>> sys.float_info.max_exp              # named field access
+1024
+>>> isinstance(sys.float_info, tuple)   # kind of tuple
+True

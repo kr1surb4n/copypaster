@@ -1,0 +1,4 @@
+# name: from tkinter import  
+from tkinter import tix
+from tkinter.constants import *
+root = tix.Tk()

@@ -1,0 +1,10 @@
+# name: [bdist_rpm]
+release  
+[bdist_rpm]
+release = 1
+packager = Greg Ward <gward@python.net>
+doc_files = CHANGES.txt
+            README.txt
+            USAGE.txt
+            doc/
+            examples/

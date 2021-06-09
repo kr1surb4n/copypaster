@@ -1,0 +1,7 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock(return_value=sentinel.file_handle)
+>>> with patch('builtins.open', mock):
+...     handle = open('filename', 'r')
+...
+>>> mock.assert_called_with('filename', 'r')
+>>> assert handle == sentinel.file_handle, "incorrect file handle returned"

@@ -1,0 +1,9 @@
+# name: default              
+default                      # Show all warnings (even those ignored by default)
+ignore                       # Ignore all warnings
+error                        # Convert all warnings to errors
+error::ResourceWarning       # Treat ResourceWarning messages as errors
+default::DeprecationWarning  # Show DeprecationWarning messages
+ignore,default:::mymodule    # Only report warnings triggered by "mymodule"
+error:::mymodule[.*]         # Convert warnings to errors in "mymodule"
+                             # and any subpackages of "mymodule"

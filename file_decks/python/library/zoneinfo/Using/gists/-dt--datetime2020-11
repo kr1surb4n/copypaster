@@ -1,0 +1,7 @@
+# name: >>> dt = datetime(20 
+>>> dt = datetime(2020, 11, 1, 1, tzinfo=ZoneInfo("America/Los_Angeles"))
+>>> print(dt)
+2020-11-01 01:00:00-07:00
+
+>>> print(dt.replace(fold=1))
+2020-11-01 01:00:00-08:00

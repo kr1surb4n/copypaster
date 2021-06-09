@@ -1,0 +1,2 @@
+# name: decimal.Decimal.to_e 
+decimal.Decimal.to_eng_string

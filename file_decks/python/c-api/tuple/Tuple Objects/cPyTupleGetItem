@@ -1,0 +1,2 @@
+# name: c.PyTuple_GetItem 
+PyObject* PyTuple_GetItem(PyObject *p, Py_ssize_t pos)

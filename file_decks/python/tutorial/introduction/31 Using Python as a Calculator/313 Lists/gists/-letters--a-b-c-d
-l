@@ -1,0 +1,4 @@
+# name: >>> letters = ['a',  
+>>> letters = ['a', 'b', 'c', 'd']
+>>> len(letters)
+4

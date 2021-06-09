@@ -1,0 +1,8 @@
+# name: class C:
+
+   @classm 
+class C:
+
+   @classmethod
+   def meth (cls):
+       ...

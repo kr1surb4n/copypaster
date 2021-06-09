@@ -1,0 +1,2 @@
+# name: queue.Empty 
+exception queue.Empty

@@ -1,0 +1,3 @@
+# name: $ readelf -S libpyth 
+$ readelf -S libpython3.3dm.so.1.0 | grep .note.stapsdt
+[29] .note.stapsdt        NOTE         0000000000000000 00365b68

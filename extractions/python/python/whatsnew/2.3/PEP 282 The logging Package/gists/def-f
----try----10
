@@ -1,0 +1,7 @@
+# name: def f():
+    try:    
+def f():
+    try:    1/0
+    except: logging.exception('Problem recorded')
+
+f()

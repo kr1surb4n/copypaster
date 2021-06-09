@@ -1,0 +1,4 @@
+# name: >>> d = bz2.decompre 
+>>> d = bz2.decompress(c)
+>>> data == d  # Check equality to original object after round-trip
+True

@@ -1,0 +1,8 @@
+# name: from xml.etree impor 
+from xml.etree import ElementTree as ET
+
+tree = ET.parse('ex-1.xml')
+
+feed = urllib.urlopen(
+          'http://planet.python.org/rss10.xml')
+tree = ET.parse(feed)

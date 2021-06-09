@@ -1,7 +1,0 @@
-# name: git checkout nameo 
-git checkout name-of-the-correct-branch
-# grab the last commit to master
-git cherry-pick master
-# delete it from master
-git checkout master
-git reset HEAD~ --hard

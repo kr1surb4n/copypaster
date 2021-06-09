@@ -1,0 +1,4 @@
+# name: >>> expected = [call 
+>>> expected = [call.method(), call.attribute.method(10, x=53)]
+>>> mock.mock_calls == expected
+True

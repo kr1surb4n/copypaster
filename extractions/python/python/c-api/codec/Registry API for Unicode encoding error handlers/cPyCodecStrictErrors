@@ -1,0 +1,2 @@
+# name: c.PyCodec_StrictErro 
+PyObject* PyCodec_StrictErrors(PyObject *exc)

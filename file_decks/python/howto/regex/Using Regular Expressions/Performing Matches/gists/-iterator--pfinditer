@@ -1,0 +1,10 @@
+# name: >>> iterator = p.fin 
+>>> iterator = p.finditer('12 drummers drumming, 11 ... 10 ...')
+>>> iterator  
+<callable_iterator object at 0x...>
+>>> for match in iterator:
+...     print(match.span())
+...
+(0, 2)
+(22, 24)
+(29, 31)

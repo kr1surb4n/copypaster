@@ -1,0 +1,6 @@
+# name: >>> import os
+>>> p  
+>>> import os
+>>> p = PurePath('/etc')
+>>> os.fspath(p)
+'/etc'

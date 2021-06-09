@@ -1,0 +1,20 @@
+# name: >>> from contextlib  
+>>> from contextlib import contextmanager
+>>> @contextmanager
+... def singleuse():
+...     print("Before")
+...     yield
+...     print("After")
+...
+>>> cm = singleuse()
+>>> with cm:
+...     pass
+...
+Before
+After
+>>> with cm:
+...     pass
+...
+Traceback (most recent call last):
+    ...
+RuntimeError: generator didn't yield

@@ -1,0 +1,2 @@
+# name: c.PyMethod_New 
+PyObject* PyMethod_New(PyObject *func, PyObject *self)

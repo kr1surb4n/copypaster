@@ -1,0 +1,2 @@
+# name: http.cookies.CookieE 
+exception http.cookies.CookieError

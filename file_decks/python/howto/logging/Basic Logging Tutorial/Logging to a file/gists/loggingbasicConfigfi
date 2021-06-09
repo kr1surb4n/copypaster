@@ -1,0 +1,2 @@
+# name: logging.basicConfig( 
+logging.basicConfig(filename='example.log', filemode='w', level=logging.DEBUG)

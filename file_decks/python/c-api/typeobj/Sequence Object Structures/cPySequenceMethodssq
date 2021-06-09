@@ -1,0 +1,2 @@
+# name: c.PySequenceMethods. 
+ssizeargfunc PySequenceMethods.sq_inplace_repeat

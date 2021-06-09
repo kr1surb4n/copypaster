@@ -1,0 +1,3 @@
+# name: sentence := "Store i 
+sentence := "Store it in the neighboring harbor"
+if (i := find("or", sentence)) > 5 then write(i)

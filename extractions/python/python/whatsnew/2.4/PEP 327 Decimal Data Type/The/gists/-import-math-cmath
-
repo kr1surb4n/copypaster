@@ -1,0 +1,7 @@
+# name: >>> import math, cma 
+>>> import math, cmath
+>>> d = decimal.Decimal('123456789012.345')
+>>> math.sqrt(d)
+351364.18288201344
+>>> cmath.sqrt(-d)
+351364.18288201344j

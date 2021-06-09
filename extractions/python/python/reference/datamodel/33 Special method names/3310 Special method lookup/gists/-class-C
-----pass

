@@ -1,0 +1,11 @@
+# name: >>> class C:
+...     
+>>> class C:
+...     pass
+...
+>>> c = C()
+>>> c.__len__ = lambda: 5
+>>> len(c)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: object of type 'C' has no len()

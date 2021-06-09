@@ -1,0 +1,7 @@
+# name: >>> class Something: 
+>>> class Something:
+...     def __init__(self):
+...         self.backend = BackendProvider()
+...     def method(self):
+...         response = self.backend.get_endpoint('foobar').create_call('spam', 'eggs').start_call()
+...         # more code

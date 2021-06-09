@@ -1,2 +1,0 @@
-# name: (add-drawing (pict+code (circle 10))) 
-(add-drawing (pict+code (circle 10)))

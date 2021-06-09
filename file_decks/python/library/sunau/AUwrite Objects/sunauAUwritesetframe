@@ -1,0 +1,2 @@
+# name: sunau.AU_write.setfr 
+AU_write.setframerate(n)

@@ -1,0 +1,5 @@
+# name: def starmap(function 
+def starmap(function, iterable):
+    # starmap(pow, [(2,5), (3,2), (10,3)]) --> 32 9 1000
+    for args in iterable:
+        yield function(*args)

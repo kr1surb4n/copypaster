@@ -1,0 +1,4 @@
+# name: >>> urljoin('http:// 
+>>> urljoin('http://www.cwi.nl/%7Eguido/Python.html',
+...         '//www.python.org/%7Eguido')
+'http://www.python.org/%7Eguido'

@@ -1,0 +1,2 @@
+# name: functools.partial 
+functools.partial(func, /, *args, **keywords)

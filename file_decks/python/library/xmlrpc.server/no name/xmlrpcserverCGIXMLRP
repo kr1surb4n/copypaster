@@ -1,0 +1,2 @@
+# name: xmlrpc.server.CGIXML 
+class xmlrpc.server.CGIXMLRPCRequestHandler(allow_none=False, encoding=None, use_builtin_types=False)

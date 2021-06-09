@@ -1,0 +1,2 @@
+# name: getopt.getopt 
+getopt.getopt(args, shortopts, longopts=[])

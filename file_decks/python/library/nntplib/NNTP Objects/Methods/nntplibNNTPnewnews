@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.newnews 
+NNTP.newnews(group, date, *, file=None)

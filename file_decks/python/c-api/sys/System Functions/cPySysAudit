@@ -1,0 +1,2 @@
+# name: c.PySys_Audit 
+int PySys_Audit(const char *event, const char *format, ...)

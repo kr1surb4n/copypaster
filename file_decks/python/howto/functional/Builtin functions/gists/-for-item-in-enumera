@@ -1,0 +1,6 @@
+# name: >>> for item in enum 
+>>> for item in enumerate(['subject', 'verb', 'object']):
+...     print(item)
+(0, 'subject')
+(1, 'verb')
+(2, 'object')

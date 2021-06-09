@@ -1,0 +1,2 @@
+# name: c.PyDec_IsNaN 
+int PyDec_IsNaN(const PyObject *dec)

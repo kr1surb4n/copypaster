@@ -1,0 +1,3 @@
+# name: $ /usr/bin/foo --ver 
+$ /usr/bin/foo --version
+foo 1.0

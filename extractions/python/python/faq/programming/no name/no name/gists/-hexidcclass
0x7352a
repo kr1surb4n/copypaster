@@ -1,0 +1,5 @@
+# name: >>> hex(id(c.__class 
+>>> hex(id(c.__class__))
+'0x7352a0'
+>>> hex(id(cls.C))
+'0x4198d0'

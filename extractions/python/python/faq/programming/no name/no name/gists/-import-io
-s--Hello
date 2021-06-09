@@ -1,0 +1,23 @@
+# name: >>> import io
+>>> s  
+>>> import io
+>>> s = "Hello, world"
+>>> sio = io.StringIO(s)
+>>> sio.getvalue()
+'Hello, world'
+>>> sio.seek(7)
+7
+>>> sio.write("there!")
+6
+>>> sio.getvalue()
+'Hello, there!'
+
+>>> import array
+>>> a = array.array('u', s)
+>>> print(a)
+array('u', 'Hello, world')
+>>> a[0] = 'y'
+>>> print(a)
+array('u', 'yello, world')
+>>> a.tounicode()
+'yello, world'

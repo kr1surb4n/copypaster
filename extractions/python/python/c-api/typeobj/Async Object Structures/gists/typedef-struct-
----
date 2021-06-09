@@ -1,0 +1,8 @@
+# name: typedef struct {
+    
+typedef struct {
+    unaryfunc am_await;
+    unaryfunc am_aiter;
+    unaryfunc am_anext;
+    sendfunc am_send;
+} PyAsyncMethods;

@@ -1,0 +1,5 @@
+# name: if (PySlice_Unpack(s 
+if (PySlice_Unpack(slice, &start, &stop, &step) < 0) {
+    // return error
+}
+slicelength = PySlice_AdjustIndices(length, &start, &stop, step);

@@ -1,0 +1,10 @@
+# name: >>> for part in msg. 
+>>> for part in msg.walk():
+...     print(part.get_content_type())
+multipart/report
+text/plain
+message/delivery-status
+text/plain
+text/plain
+message/rfc822
+text/plain

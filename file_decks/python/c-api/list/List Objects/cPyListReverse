@@ -1,0 +1,2 @@
+# name: c.PyList_Reverse 
+int PyList_Reverse(PyObject *list)

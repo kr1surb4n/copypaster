@@ -1,0 +1,4 @@
+# name: >>> cv = screen.getc 
+>>> cv = screen.getcanvas()
+>>> cv
+<turtle.ScrolledCanvas object ...>

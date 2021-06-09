@@ -1,0 +1,2 @@
+# name: pr = cProfile.Profil 
+pr = cProfile.Profile(your_integer_time_func, 0.001)

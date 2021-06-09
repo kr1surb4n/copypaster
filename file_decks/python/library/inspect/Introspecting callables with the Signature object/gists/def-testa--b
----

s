@@ -1,0 +1,8 @@
+# name: def test(a, *, b):
+  
+def test(a, *, b):
+    ...
+
+sig = signature(test)
+ba = sig.bind(10, b=20)
+test(*ba.args, **ba.kwargs)

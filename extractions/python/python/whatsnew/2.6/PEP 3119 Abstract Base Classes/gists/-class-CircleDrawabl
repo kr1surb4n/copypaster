@@ -1,0 +1,9 @@
+# name: >>> class Circle(Dra 
+>>> class Circle(Drawable):
+...     pass
+...
+>>> c = Circle()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: Can't instantiate abstract class Circle with abstract methods draw
+>>>

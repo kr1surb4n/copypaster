@@ -1,0 +1,2 @@
+# name: signal.pthread_kill 
+signal.pthread_kill(thread_id, signalnum)

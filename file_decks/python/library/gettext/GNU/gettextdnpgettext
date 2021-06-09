@@ -1,0 +1,2 @@
+# name: gettext.dnpgettext 
+gettext.dnpgettext(domain, context, singular, plural, n)

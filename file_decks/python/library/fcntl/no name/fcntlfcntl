@@ -1,0 +1,2 @@
+# name: fcntl.fcntl 
+fcntl.fcntl(fd, cmd, arg=0)

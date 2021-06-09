@@ -1,0 +1,2 @@
+# name: wave.Wave_write.setf 
+Wave_write.setframerate(n)

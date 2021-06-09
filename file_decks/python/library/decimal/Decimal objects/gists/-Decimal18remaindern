@@ -1,0 +1,7 @@
+# name: >>> Decimal(18).rema 
+>>> Decimal(18).remainder_near(Decimal(10))
+Decimal('-2')
+>>> Decimal(25).remainder_near(Decimal(10))
+Decimal('5')
+>>> Decimal(35).remainder_near(Decimal(10))
+Decimal('-5')

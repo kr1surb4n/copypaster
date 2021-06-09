@@ -1,0 +1,13 @@
+# name: >>> gc.is_tracked(0) 
+>>> gc.is_tracked(0)
+False
+>>> gc.is_tracked("a")
+False
+>>> gc.is_tracked([])
+True
+>>> gc.is_tracked({})
+False
+>>> gc.is_tracked({"a": 1})
+False
+>>> gc.is_tracked({"a": []})
+True

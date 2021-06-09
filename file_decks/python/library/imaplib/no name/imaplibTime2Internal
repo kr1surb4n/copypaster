@@ -1,0 +1,2 @@
+# name: imaplib.Time2Interna 
+imaplib.Time2Internaldate(date_time)

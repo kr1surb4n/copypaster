@@ -1,0 +1,2 @@
+# name: c.PyAnySet_CheckExac 
+int PyAnySet_CheckExact(PyObject *p)

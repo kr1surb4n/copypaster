@@ -1,0 +1,7 @@
+# name: >>> obj = Object()
+> 
+>>> obj = Object()
+>>> weakref.finalize(obj, print, "obj dead or exiting")
+<finalize object at ...; for 'Object' at ...>
+>>> exit()
+obj dead or exiting

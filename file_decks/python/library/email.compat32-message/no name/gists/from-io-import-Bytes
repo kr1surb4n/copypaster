@@ -1,0 +1,7 @@
+# name: from io import Bytes 
+from io import BytesIO
+from email.generator import BytesGenerator
+fp = BytesIO()
+g = BytesGenerator(fp, mangle_from_=True, maxheaderlen=60)
+g.flatten(msg)
+text = fp.getvalue()

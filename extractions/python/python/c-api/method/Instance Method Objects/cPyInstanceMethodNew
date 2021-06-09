@@ -1,0 +1,2 @@
+# name: c.PyInstanceMethod_N 
+PyObject* PyInstanceMethod_New(PyObject *func)

@@ -1,0 +1,2 @@
+# name: codecs.getreader 
+codecs.getreader(encoding)

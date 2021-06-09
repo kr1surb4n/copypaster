@@ -1,0 +1,10 @@
+# name: class Function:
+     
+class Function:
+    ...
+
+    def __get__(self, obj, objtype=None):
+        "Simulate func_descr_get() in Objects/funcobject.c"
+        if obj is None:
+            return self
+        return MethodType(self, obj)

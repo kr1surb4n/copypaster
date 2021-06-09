@@ -1,0 +1,5 @@
+# name: >>> PurePath('foo',  
+>>> PurePath('foo', 'some/path', 'bar')
+PurePosixPath('foo/some/path/bar')
+>>> PurePath(Path('foo'), Path('bar'))
+PurePosixPath('foo/bar')

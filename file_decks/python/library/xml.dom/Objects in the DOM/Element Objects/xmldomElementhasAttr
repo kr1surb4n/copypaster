@@ -1,0 +1,2 @@
+# name: xml.dom.Element.hasA 
+Element.hasAttributeNS(namespaceURI, localName)

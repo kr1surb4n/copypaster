@@ -1,0 +1,2 @@
+# name: c.PyErr_NewException 
+PyObject* PyErr_NewException(const char *name, PyObject *base, PyObject *dict)

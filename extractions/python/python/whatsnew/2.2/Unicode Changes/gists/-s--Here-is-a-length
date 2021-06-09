@@ -1,0 +1,17 @@
+# name: >>> s = """Here is a 
+>>> s = """Here is a lengthy piece of redundant, overly verbose,
+... and repetitive text.
+... """
+>>> data = s.encode('zlib')
+>>> data
+'x\x9c\r\xc9\xc1\r\x80 \x10\x04\xc0?Ul...'
+>>> data.decode('zlib')
+'Here is a lengthy piece of redundant, overly verbose,\nand repetitive text.\n'
+>>> print s.encode('uu')
+begin 666 <data>
+M2&5R92!I<R!A(&QE;F=T:'D@<&EE8V4@;V8@<F5D=6YD86YT+"!O=F5R;'D@
+>=F5R8F]S92P*86YD(')E<&5T:71I=F4@=&5X="X*
+
+end
+>>> "sheesh".encode('rot-13')
+'furrfu'

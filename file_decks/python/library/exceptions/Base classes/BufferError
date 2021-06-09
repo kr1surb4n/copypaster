@@ -1,0 +1,2 @@
+# name: BufferError 
+exception BufferError

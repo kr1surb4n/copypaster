@@ -1,0 +1,2 @@
+# name: pdb.Pdb 
+class pdb.Pdb(completekey='tab', stdin=None, stdout=None, skip=None, nosigint=False, readrc=True)

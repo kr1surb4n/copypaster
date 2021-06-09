@@ -1,0 +1,2 @@
+# name: typing.Type 
+class typing.Type(Generic[CT_co])

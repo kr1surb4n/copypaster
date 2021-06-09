@@ -1,0 +1,8 @@
+# name: static int
+newdataty 
+static int
+newdatatype_setattr(newdatatypeobject *obj, char *name, PyObject *v)
+{
+    PyErr_Format(PyExc_RuntimeError, "Read-only attribute: %s", name);
+    return -1;
+}

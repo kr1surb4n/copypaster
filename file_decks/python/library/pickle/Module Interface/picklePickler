@@ -1,0 +1,2 @@
+# name: pickle.Pickler 
+class pickle.Pickler(file, protocol=None, *, fix_imports=True, buffer_callback=None)

@@ -1,0 +1,2 @@
+# name: curses.window.attrof 
+window.attroff(attr)

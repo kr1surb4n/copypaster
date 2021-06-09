@@ -1,0 +1,3 @@
+# name: tree = ast.parse('fo 
+tree = ast.parse('foo', mode='eval')
+new_tree = fix_missing_locations(RewriteName().visit(tree))

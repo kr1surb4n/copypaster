@@ -1,0 +1,11 @@
+# name: void *vtable;
+
+if (! 
+void *vtable;
+
+if (!PyCapsule_IsValid(capsule, "mymodule.CAPI") {
+        PyErr_SetString(PyExc_ValueError, "argument type invalid");
+        return NULL;
+}
+
+vtable = PyCapsule_GetPointer(capsule, "mymodule.CAPI");

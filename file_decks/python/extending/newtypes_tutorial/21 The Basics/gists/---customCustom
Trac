@@ -1,0 +1,5 @@
+# name: >>> "" + custom.Cust 
+>>> "" + custom.Custom()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can only concatenate str (not "custom.Custom") to str

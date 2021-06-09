@@ -1,0 +1,22 @@
+# name: PyMODINIT_FUNC
+PyIni 
+PyMODINIT_FUNC
+PyInit_spam(void)
+{
+    PyObject *m;
+
+    m = PyModule_Create(&spammodule);
+    if (m == NULL)
+        return NULL;
+
+    SpamError = PyErr_NewException("spam.error", NULL, NULL);
+    Py_XINCREF(SpamError);
+    if (PyModule_AddObject(m, "error", SpamError) < 0) {
+        Py_XDECREF(SpamError);
+        Py_CLEAR(SpamError);
+        Py_DECREF(m);
+        return NULL;
+    }
+
+    return m;
+}

@@ -1,0 +1,3 @@
+# name: >>> context = ssl.SS 
+>>> context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+>>> context.load_verify_locations("/etc/ssl/certs/ca-bundle.crt")

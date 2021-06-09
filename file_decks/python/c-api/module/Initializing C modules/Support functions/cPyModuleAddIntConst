@@ -1,0 +1,2 @@
+# name: c.PyModule_AddIntCon 
+int PyModule_AddIntConstant(PyObject *module, const char *name, long value)

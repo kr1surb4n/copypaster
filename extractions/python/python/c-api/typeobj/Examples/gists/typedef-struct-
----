@@ -1,0 +1,13 @@
+# name: typedef struct {
+    
+typedef struct {
+    PyObject_VAR_HEAD
+    const char *data[1];
+} MyObject;
+
+static PyTypeObject MyObject_Type = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    .tp_name = "mymod.MyObject",
+    .tp_basicsize = sizeof(MyObject) - sizeof(char *),
+    .tp_itemsize = sizeof(char *),
+};

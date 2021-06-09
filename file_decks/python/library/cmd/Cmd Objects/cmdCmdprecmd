@@ -1,0 +1,2 @@
+# name: cmd.Cmd.precmd 
+Cmd.precmd(line)

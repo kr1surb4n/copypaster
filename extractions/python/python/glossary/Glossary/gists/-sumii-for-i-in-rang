@@ -1,0 +1,3 @@
+# name: >>> sum(i*i for i in 
+>>> sum(i*i for i in range(10))         # sum of squares 0, 1, 4, ... 81
+285

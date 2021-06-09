@@ -1,0 +1,4 @@
+# name: >>> import zipapp
+>> 
+>>> import zipapp
+>>> zipapp.create_archive('old_archive.pyz', 'new_archive.pyz', '/usr/bin/python3')

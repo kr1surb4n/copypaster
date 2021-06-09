@@ -1,0 +1,2 @@
+# name: c.PySequence_Repeat 
+PyObject* PySequence_Repeat(PyObject *o, Py_ssize_t count)

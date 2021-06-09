@@ -1,0 +1,2 @@
+# name: c.PySet_Clear 
+int PySet_Clear(PyObject *set)

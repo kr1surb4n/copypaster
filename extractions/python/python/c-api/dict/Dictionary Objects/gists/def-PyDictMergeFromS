@@ -1,0 +1,5 @@
+# name: def PyDict_MergeFrom 
+def PyDict_MergeFromSeq2(a, seq2, override):
+    for key, value in seq2:
+        if override or key not in a:
+            a[key] = value

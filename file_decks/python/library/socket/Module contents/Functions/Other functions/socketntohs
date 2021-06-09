@@ -1,0 +1,2 @@
+# name: socket.ntohs 
+socket.ntohs(x)

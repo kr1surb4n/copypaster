@@ -1,0 +1,4 @@
+# name: >>> s = SequenceMatc 
+>>> s = SequenceMatcher(None, "abxcd", "abcd")
+>>> s.get_matching_blocks()
+[Match(a=0, b=0, size=2), Match(a=3, b=2, size=2), Match(a=5, b=4, size=0)]

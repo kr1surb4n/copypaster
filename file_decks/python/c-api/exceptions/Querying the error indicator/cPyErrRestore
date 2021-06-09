@@ -1,0 +1,2 @@
+# name: c.PyErr_Restore 
+void PyErr_Restore(PyObject *type, PyObject *value, PyObject *traceback)

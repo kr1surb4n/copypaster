@@ -1,0 +1,2 @@
+# name: http.cookiejar.LWPCo 
+class http.cookiejar.LWPCookieJar(filename, delayload=None, policy=None)

@@ -1,0 +1,2 @@
+# name: turtle.register_shap 
+turtle.register_shape(name, shape=None)

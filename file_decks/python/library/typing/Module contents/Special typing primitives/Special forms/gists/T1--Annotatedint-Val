@@ -1,0 +1,3 @@
+# name: T1 = Annotated[int,  
+T1 = Annotated[int, ValueRange(-10, 5)]
+T2 = Annotated[T1, ValueRange(-20, 3)]

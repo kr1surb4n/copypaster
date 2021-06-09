@@ -1,0 +1,18 @@
+# name: >>> msg = email.mess 
+>>> msg = email.message_from_file(somefile)
+>>> _structure(msg)
+multipart/mixed
+    text/plain
+    text/plain
+    multipart/digest
+        message/rfc822
+            text/plain
+        message/rfc822
+            text/plain
+        message/rfc822
+            text/plain
+        message/rfc822
+            text/plain
+        message/rfc822
+            text/plain
+    text/plain

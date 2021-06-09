@@ -1,0 +1,11 @@
+# name: >>> import locale
+>> 
+>>> import locale
+>>> locale.setlocale(locale.LC_NUMERIC, 'de_DE.UTF-8')
+'de_DE.UTF-8'
+>>> locale.delocalize('1.234,56')
+'1234.56'
+>>> locale.setlocale(locale.LC_NUMERIC, 'en_US.UTF-8')
+'en_US.UTF-8'
+>>> locale.delocalize('1,234.56')
+'1234.56'

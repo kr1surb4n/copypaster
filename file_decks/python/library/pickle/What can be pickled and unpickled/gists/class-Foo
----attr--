@@ -1,0 +1,6 @@
+# name: class Foo:
+    attr  
+class Foo:
+    attr = 'A class attribute'
+
+picklestring = pickle.dumps(Foo)

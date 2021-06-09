@@ -1,0 +1,2 @@
+# name: inspect.getargspec 
+inspect.getargspec(func)

@@ -1,0 +1,6 @@
+# name: # Syntax error
+[x, y 
+# Syntax error
+[x, y for x in seq1 for y in seq2]
+# Correct
+[(x, y) for x in seq1 for y in seq2]

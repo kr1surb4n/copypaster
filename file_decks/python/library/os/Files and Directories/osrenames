@@ -1,0 +1,2 @@
+# name: os.renames 
+os.renames(old, new)

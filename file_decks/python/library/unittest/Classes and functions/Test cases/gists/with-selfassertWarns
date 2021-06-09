@@ -1,0 +1,3 @@
+# name: with self.assertWarn 
+with self.assertWarnsRegex(RuntimeWarning, 'unsafe frobnicating'):
+    frobnicate('/etc/passwd')

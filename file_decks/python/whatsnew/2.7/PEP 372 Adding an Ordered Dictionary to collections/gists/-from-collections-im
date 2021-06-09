@@ -1,0 +1,7 @@
+# name: >>> from collections 
+>>> from collections import OrderedDict
+>>> d = OrderedDict([('first', 1),
+...                  ('second', 2),
+...                  ('third', 3)])
+>>> d.items()
+[('first', 1), ('second', 2), ('third', 3)]

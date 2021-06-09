@@ -1,0 +1,9 @@
+# name: >>> # Substitute pos 
+>>> # Substitute positional argument 0 into the string.
+>>> "User ID: {0}".format("root")
+'User ID: root'
+>>> # Use the named keyword arguments
+>>> "User ID: {uid}   Last seen: {last_login}".format(
+...    uid="root",
+...    last_login = "5 Mar 2008 07:20")
+'User ID: root   Last seen: 5 Mar 2008 07:20'

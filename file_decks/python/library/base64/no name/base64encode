@@ -1,0 +1,2 @@
+# name: base64.encode 
+base64.encode(input, output)

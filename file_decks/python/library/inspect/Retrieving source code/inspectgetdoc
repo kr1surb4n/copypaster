@@ -1,0 +1,2 @@
+# name: inspect.getdoc 
+inspect.getdoc(object)

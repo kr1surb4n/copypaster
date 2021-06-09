@@ -1,0 +1,5 @@
+# name: >>> vars(vars(Person 
+>>> vars(vars(Person)['name'])
+{'public_name': 'name', 'private_name': '_name'}
+>>> vars(vars(Person)['age'])
+{'public_name': 'age', 'private_name': '_age'}

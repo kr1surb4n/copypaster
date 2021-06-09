@@ -1,0 +1,3 @@
+# name: with self.assertRais 
+with self.assertRaisesRegex(ValueError, 'literal'):
+   int('XYZ')

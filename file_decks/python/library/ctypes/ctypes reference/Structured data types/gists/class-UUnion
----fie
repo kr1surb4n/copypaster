@@ -1,0 +1,11 @@
+# name: class _U(Union):
+    
+class _U(Union):
+    _fields_ = [("lptdesc", POINTER(TYPEDESC)),
+                ("lpadesc", POINTER(ARRAYDESC)),
+                ("hreftype", HREFTYPE)]
+
+class TYPEDESC(Structure):
+    _anonymous_ = ("u",)
+    _fields_ = [("u", _U),
+                ("vt", VARTYPE)]

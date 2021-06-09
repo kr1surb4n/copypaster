@@ -1,0 +1,2 @@
+# name: typing.Awaitable 
+class typing.Awaitable(Generic[T_co])

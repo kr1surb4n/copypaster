@@ -1,0 +1,7 @@
+# name: >>> p = PurePath('/e 
+>>> p = PurePath('/etc')
+>>> str(p)
+'/etc'
+>>> p = PureWindowsPath('c:/Program Files')
+>>> str(p)
+'c:\\Program Files'

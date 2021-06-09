@@ -1,0 +1,17 @@
+# name: >>> parser.parse_arg 
+>>> parser.parse_args('-h'.split())
+
+usage: manage_cloud.py [-h] -u USER
+                       {deploy,start,stop} HOSTNAME [HOSTNAME ...]
+
+Manage servers
+
+positional arguments:
+  {deploy,start,stop}   action on each target
+  HOSTNAME              url for target machines
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -u USER, --user USER  login as user
+
+Tested on Solaris and Linux

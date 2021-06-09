@@ -1,0 +1,3 @@
+# name: >>> b'Hello World'.l 
+>>> b'Hello World'.lower()
+b'hello world'

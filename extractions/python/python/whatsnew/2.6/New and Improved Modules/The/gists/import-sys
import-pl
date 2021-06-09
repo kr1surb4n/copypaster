@@ -1,0 +1,23 @@
+# name: import sys
+import pl 
+import sys
+import plistlib
+import datetime
+
+# Create data structure
+data_struct = dict(lastAccessed=datetime.datetime.now(),
+                   version=1,
+                   categories=('Personal','Shared','Private'))
+
+# Create string containing XML.
+plist_str = plistlib.writePlistToString(data_struct)
+new_struct = plistlib.readPlistFromString(plist_str)
+print data_struct
+print new_struct
+
+# Write data structure to a file and read it back.
+plistlib.writePlist(data_struct, '/tmp/customizations.plist')
+new_struct = plistlib.readPlist('/tmp/customizations.plist')
+
+# read/writePlist accepts file-like objects as well as paths.
+plistlib.writePlist(data_struct, sys.stdout)

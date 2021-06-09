@@ -1,0 +1,24 @@
+# name: class Member:
+
+    d 
+class Member:
+
+    def __init__(self, name, clsname, offset):
+        'Emulate PyMemberDef in Include/structmember.h'
+        # Also see descr_new() in Objects/descrobject.c
+        self.name = name
+        self.clsname = clsname
+        self.offset = offset
+
+    def __get__(self, obj, objtype=None):
+        'Emulate member_get() in Objects/descrobject.c'
+        # Also see PyMember_GetOne() in Python/structmember.c
+        return obj._slotvalues[self.offset]
+
+    def __set__(self, obj, value):
+        'Emulate member_set() in Objects/descrobject.c'
+        obj._slotvalues[self.offset] = value
+
+    def __repr__(self):
+        'Emulate member_repr() in Objects/descrobject.c'
+        return f'<Member {self.name!r} of {self.clsname!r}>'

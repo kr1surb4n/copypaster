@@ -1,0 +1,2 @@
+# name: unittest.mock.Mock 
+class unittest.mock.Mock(spec=None, side_effect=None, return_value=DEFAULT, wraps=None, name=None, spec_set=None, unsafe=False, **kwargs)

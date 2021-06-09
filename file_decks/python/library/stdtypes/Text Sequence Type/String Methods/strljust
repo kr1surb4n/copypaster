@@ -1,0 +1,2 @@
+# name: str.ljust 
+str.ljust(width[, fillchar])

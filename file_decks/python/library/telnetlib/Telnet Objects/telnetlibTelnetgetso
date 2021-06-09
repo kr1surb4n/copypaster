@@ -1,0 +1,2 @@
+# name: telnetlib.Telnet.get 
+Telnet.get_socket()

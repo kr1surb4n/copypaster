@@ -1,0 +1,4 @@
+# name: with open(fileName,  
+with open(fileName, 'rb') as fp:
+    pl = load(fp)
+print(pl["aKey"])

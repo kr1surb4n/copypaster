@@ -1,0 +1,7 @@
+# name: >>> import pathlib
+> 
+>>> import pathlib
+>>> p1 = pathlib.Path('/etc/hosts')
+>>> p2 = pathlib.Path('/etc/../etc/hosts')
+>>> p1.samefile(p2)
+True

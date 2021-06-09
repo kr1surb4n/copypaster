@@ -1,0 +1,2 @@
+# name: c.PyUnicode_New 
+PyObject* PyUnicode_New(Py_ssize_t size, Py_UCS4 maxchar)

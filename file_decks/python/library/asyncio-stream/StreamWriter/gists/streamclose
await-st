@@ -1,0 +1,4 @@
+# name: stream.close()
+await 
+stream.close()
+await stream.wait_closed()

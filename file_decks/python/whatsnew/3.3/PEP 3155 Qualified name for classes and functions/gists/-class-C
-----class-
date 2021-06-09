@@ -1,0 +1,15 @@
+# name: >>> class C:
+...     
+>>> class C:
+...     class D:
+...         def meth(self):
+...             pass
+...
+>>> C.D.__name__
+'D'
+>>> C.D.__qualname__
+'C.D'
+>>> C.D.meth.__name__
+'meth'
+>>> C.D.meth.__qualname__
+'C.D.meth'

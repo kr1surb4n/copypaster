@@ -1,0 +1,2 @@
+# name: python -m http.serve 
+python -m http.server --cgi 8000

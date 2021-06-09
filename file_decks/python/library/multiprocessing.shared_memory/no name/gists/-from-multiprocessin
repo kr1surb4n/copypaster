@@ -1,0 +1,30 @@
+# name: >>> from multiproces 
+>>> from multiprocessing import shared_memory
+>>> a = shared_memory.ShareableList(['howdy', b'HoWdY', -273.154, 100, None, True, 42])
+>>> [ type(entry) for entry in a ]
+[<class 'str'>, <class 'bytes'>, <class 'float'>, <class 'int'>, <class 'NoneType'>, <class 'bool'>, <class 'int'>]
+>>> a[2]
+-273.154
+>>> a[2] = -78.5
+>>> a[2]
+-78.5
+>>> a[2] = 'dry ice'  # Changing data types is supported as well
+>>> a[2]
+'dry ice'
+>>> a[2] = 'larger than previously allocated storage space'
+Traceback (most recent call last):
+  ...
+ValueError: exceeds available storage for existing str
+>>> a[2]
+'dry ice'
+>>> len(a)
+7
+>>> a.index(42)
+6
+>>> a.count(b'howdy')
+0
+>>> a.count(b'HoWdY')
+1
+>>> a.shm.close()
+>>> a.shm.unlink()
+>>> del a  # Use of a ShareableList after call to unlink() is unsupported

@@ -1,0 +1,2 @@
+# name: c.PyUnicode_EncodeLo 
+PyObject* PyUnicode_EncodeLocale(PyObject *unicode, const char *errors)

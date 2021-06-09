@@ -1,8 +1,0 @@
-# name: WHEN 
-    when (obj) {
-        1          -> "One"
-        "Hello"    -> "Greeting"
-        is Long    -> "Long"
-        !is String -> "Not a string"
-        else       -> "Unknown"
-    }

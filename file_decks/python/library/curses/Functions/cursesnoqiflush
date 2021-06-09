@@ -1,0 +1,2 @@
+# name: curses.noqiflush 
+curses.noqiflush()

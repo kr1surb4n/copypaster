@@ -1,0 +1,8 @@
+# name: class A:
+  pass
+
+A = 
+class A:
+  pass
+
+A = foo(bar(A))

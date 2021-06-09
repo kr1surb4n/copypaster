@@ -1,0 +1,6 @@
+# name: >>> p = re.compile(r 
+>>> p = re.compile(r'\W+')
+>>> p.split('This is a test, short and sweet, of split().')
+['This', 'is', 'a', 'test', 'short', 'and', 'sweet', 'of', 'split', '']
+>>> p.split('This is a test, short and sweet, of split().', 3)
+['This', 'is', 'a', 'test, short and sweet, of split().']

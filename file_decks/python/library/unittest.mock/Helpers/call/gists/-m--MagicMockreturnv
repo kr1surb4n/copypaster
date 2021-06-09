@@ -1,0 +1,6 @@
+# name: >>> m = MagicMock(re 
+>>> m = MagicMock(return_value=None)
+>>> m(1, 2, a='foo', b='bar')
+>>> m()
+>>> m.call_args_list == [call(1, 2, a='foo', b='bar'), call()]
+True

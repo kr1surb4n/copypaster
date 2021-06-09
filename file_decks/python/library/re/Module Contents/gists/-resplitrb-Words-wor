@@ -1,0 +1,7 @@
+# name: >>> re.split(r'\b',  
+>>> re.split(r'\b', 'Words, words, words.')
+['', 'Words', ', ', 'words', ', ', 'words', '.']
+>>> re.split(r'\W*', '...words...')
+['', '', 'w', 'o', 'r', 'd', 's', '', '']
+>>> re.split(r'(\W*)', '...words...')
+['', '...', '', '', 'w', '', 'o', '', 'r', '', 'd', '', 's', '...', '', '', '']

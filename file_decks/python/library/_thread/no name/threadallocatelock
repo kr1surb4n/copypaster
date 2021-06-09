@@ -1,0 +1,2 @@
+# name: _thread.allocate_loc 
+_thread.allocate_lock()

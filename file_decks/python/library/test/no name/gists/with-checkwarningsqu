@@ -1,0 +1,10 @@
+# name: with check_warnings( 
+with check_warnings(quiet=True) as w:
+    warnings.warn("foo")
+    assert str(w.args[0]) == "foo"
+    warnings.warn("bar")
+    assert str(w.args[0]) == "bar"
+    assert str(w.warnings[0].args[0]) == "foo"
+    assert str(w.warnings[1].args[0]) == "bar"
+    w.reset()
+    assert len(w.warnings) == 0

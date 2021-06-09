@@ -1,0 +1,4 @@
+# name: function(args).mydic 
+function(args).mydict[index][index].a = 21
+function(args).mydict[index][index].b = 42
+function(args).mydict[index][index].c = 63

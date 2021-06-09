@@ -1,0 +1,2 @@
+# name: getattr(obj, methodn 
+getattr(obj, methodname)(*args, **kwds)

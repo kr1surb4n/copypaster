@@ -1,0 +1,2 @@
+# name: ast.AsyncFor 
+class ast.AsyncFor(target, iter, body, orelse, type_comment)

@@ -1,0 +1,2 @@
+# name: readline.append_hist 
+readline.append_history_file(nelements[, filename])

@@ -1,0 +1,2 @@
+# name: tempfile.NamedTempor 
+tempfile.NamedTemporaryFile(mode='w+b', buffering=-1, encoding=None, newline=None, suffix=None, prefix=None, dir=None, delete=True, *, errors=None)

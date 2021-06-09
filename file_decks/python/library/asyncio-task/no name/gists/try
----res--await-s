@@ -1,0 +1,6 @@
+# name: try:
+    res = await 
+try:
+    res = await shield(something())
+except CancelledError:
+    res = None

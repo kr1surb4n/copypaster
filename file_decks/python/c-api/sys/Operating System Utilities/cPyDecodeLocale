@@ -1,0 +1,2 @@
+# name: c.Py_DecodeLocale 
+wchar_t* Py_DecodeLocale(const char* arg, size_t *size)

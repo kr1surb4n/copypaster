@@ -1,0 +1,2 @@
+# name: email.errors.Boundar 
+exception email.errors.BoundaryError

@@ -1,0 +1,2 @@
+# name: c.Py_Finalize 
+void Py_Finalize()

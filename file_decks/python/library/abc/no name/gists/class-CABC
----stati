@@ -1,0 +1,7 @@
+# name: class C(ABC):
+    @s 
+class C(ABC):
+    @staticmethod
+    @abstractmethod
+    def my_abstract_staticmethod(...):
+        ...

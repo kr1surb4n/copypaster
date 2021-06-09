@@ -1,0 +1,2 @@
+# name: object.__index__ 
+object.__index__(self)

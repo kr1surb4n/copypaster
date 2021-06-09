@@ -1,0 +1,2 @@
+# name: c.PyNumber_Multiply 
+PyObject* PyNumber_Multiply(PyObject *o1, PyObject *o2)

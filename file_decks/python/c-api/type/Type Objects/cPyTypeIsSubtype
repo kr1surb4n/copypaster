@@ -1,0 +1,2 @@
+# name: c.PyType_IsSubtype 
+int PyType_IsSubtype(PyTypeObject *a, PyTypeObject *b)

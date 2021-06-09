@@ -1,0 +1,2 @@
+# name: codecs.decode 
+codecs.decode(obj, encoding='utf-8', errors='strict')

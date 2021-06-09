@@ -1,0 +1,11 @@
+# name: >>> u0 = datetime(20 
+>>> u0 = datetime(2016, 11, 6, 4, tzinfo=timezone.utc)
+>>> for i in range(4):
+...     u = u0 + i*HOUR
+...     t = u.astimezone(Eastern)
+...     print(u.time(), 'UTC =', t.time(), t.tzname(), t.fold)
+...
+04:00:00 UTC = 00:00:00 EDT 0
+05:00:00 UTC = 01:00:00 EDT 0
+06:00:00 UTC = 01:00:00 EST 1
+07:00:00 UTC = 02:00:00 EST 0

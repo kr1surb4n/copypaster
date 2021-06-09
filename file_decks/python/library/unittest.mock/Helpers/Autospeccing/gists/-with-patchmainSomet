@@ -1,0 +1,8 @@
+# name: >>> with patch('__ma 
+>>> with patch('__main__.Something', autospec=True, spec_set=True):
+...   thing = Something()
+...   thing.a = 33
+...
+Traceback (most recent call last):
+ ...
+AttributeError: Mock object has no attribute 'a'

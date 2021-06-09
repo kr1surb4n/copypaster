@@ -1,0 +1,7 @@
+# name: >>> height_male = No 
+>>> height_male = NormalDist.from_samples([6, 5.92, 5.58, 5.92])
+>>> height_female = NormalDist.from_samples([5, 5.5, 5.42, 5.75])
+>>> weight_male = NormalDist.from_samples([180, 190, 170, 165])
+>>> weight_female = NormalDist.from_samples([100, 150, 130, 150])
+>>> foot_size_male = NormalDist.from_samples([12, 11, 12, 10])
+>>> foot_size_female = NormalDist.from_samples([6, 8, 7, 9])

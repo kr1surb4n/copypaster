@@ -1,0 +1,3 @@
+# name: >>> dict[str, list[i 
+>>> dict[str, list[int]].__args__
+(<class 'str'>, list[int])

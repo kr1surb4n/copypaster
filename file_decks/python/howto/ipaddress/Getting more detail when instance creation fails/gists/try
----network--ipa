@@ -1,0 +1,6 @@
+# name: try:
+    network = i 
+try:
+    network = ipaddress.IPv4Network(address)
+except ValueError:
+    print('address/netmask is invalid for IPv4:', address)

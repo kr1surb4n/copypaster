@@ -1,0 +1,5 @@
+# name: >>> fun.dispatch(flo 
+>>> fun.dispatch(float)
+<function fun_num at 0x1035a2840>
+>>> fun.dispatch(dict)    # note: default implementation
+<function fun at 0x103fe0000>

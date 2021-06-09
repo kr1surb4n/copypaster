@@ -1,0 +1,13 @@
+# name: >>> import string
+>> 
+>>> import string
+>>> m = memoryview(string.letters)
+>>> m
+<memory at 0x37f850>
+>>> len(m)           # Returns length of underlying object
+52
+>>> m[0], m[25], m[26]   # Indexing returns one byte
+('a', 'z', 'A')
+>>> m2 = m[0:26]         # Slicing returns another memoryview
+>>> m2
+<memory at 0x37f080>

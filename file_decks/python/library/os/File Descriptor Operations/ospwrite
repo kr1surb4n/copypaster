@@ -1,0 +1,2 @@
+# name: os.pwrite 
+os.pwrite(fd, str, offset)

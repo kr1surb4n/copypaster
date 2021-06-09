@@ -1,0 +1,2 @@
+# name: smtplib.SMTP.ehlo_or 
+SMTP.ehlo_or_helo_if_needed()

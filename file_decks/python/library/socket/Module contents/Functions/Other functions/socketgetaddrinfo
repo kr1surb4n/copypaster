@@ -1,0 +1,2 @@
+# name: socket.getaddrinfo 
+socket.getaddrinfo(host, port, family=0, type=0, proto=0, flags=0)

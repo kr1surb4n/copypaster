@@ -1,0 +1,2 @@
+# name: c.allocfunc 
+PyObject *(*allocfunc)(PyTypeObject *cls, Py_ssize_t nitems)

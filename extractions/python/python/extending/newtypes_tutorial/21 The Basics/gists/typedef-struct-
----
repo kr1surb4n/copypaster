@@ -1,0 +1,6 @@
+# name: typedef struct {
+    
+typedef struct {
+    PyObject_HEAD
+    double ob_fval;
+} PyFloatObject;

@@ -1,0 +1,9 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='myprogram')
+>>> parser.add_argument('--foo', help='foo of the %(prog)s program')
+>>> parser.print_help()
+usage: myprogram [-h] [--foo FOO]
+
+optional arguments:
+ -h, --help  show this help message and exit
+ --foo FOO   foo of the myprogram program

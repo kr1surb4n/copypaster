@@ -1,0 +1,13 @@
+# name: import sys
+
+def main 
+import sys
+
+def main():
+    fp = open(sys.argv[1])
+    nlines = len(fp.readlines())
+    print(nlines)
+    # The file is closed implicitly
+
+if __name__ == "__main__":
+    main()

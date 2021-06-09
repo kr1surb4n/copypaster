@@ -1,0 +1,22 @@
+# name: >>> import dis, rand 
+>>> import dis, random
+>>> dis.show_code(random.choice)
+Name:              choice
+Filename:          /Library/Frameworks/Python.framework/Versions/3.2/lib/python3.2/random.py
+Argument count:    2
+Kw-only arguments: 0
+Number of locals:  3
+Stack size:        11
+Flags:             OPTIMIZED, NEWLOCALS, NOFREE
+Constants:
+   0: 'Choose a random element from a non-empty sequence.'
+   1: 'Cannot choose from an empty sequence'
+Names:
+   0: _randbelow
+   1: len
+   2: ValueError
+   3: IndexError
+Variable names:
+   0: self
+   1: seq
+   2: i

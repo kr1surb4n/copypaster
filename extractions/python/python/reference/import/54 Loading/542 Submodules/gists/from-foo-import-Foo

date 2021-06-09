@@ -1,0 +1,3 @@
+# name: from .foo import Foo 
+from .foo import Foo
+from .bar import Bar

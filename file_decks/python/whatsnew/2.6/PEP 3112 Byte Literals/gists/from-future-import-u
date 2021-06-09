@@ -1,0 +1,7 @@
+# name: from __future__ impo 
+from __future__ import unicode_literals
+
+s = ('\u751f\u3080\u304e\u3000\u751f\u3054'
+     '\u3081\u3000\u751f\u305f\u307e\u3054')
+
+print len(s)               # 12 Unicode characters

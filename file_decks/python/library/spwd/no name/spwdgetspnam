@@ -1,0 +1,2 @@
+# name: spwd.getspnam 
+spwd.getspnam(name)

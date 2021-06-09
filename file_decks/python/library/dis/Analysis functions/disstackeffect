@@ -1,0 +1,2 @@
+# name: dis.stack_effect 
+dis.stack_effect(opcode, oparg=None, *, jump=None)

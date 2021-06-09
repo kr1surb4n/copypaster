@@ -1,0 +1,2 @@
+# name: pkgutil.extend_path 
+pkgutil.extend_path(path, name)

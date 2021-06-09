@@ -1,0 +1,15 @@
+# name: Task exception was n 
+Task exception was never retrieved
+future: <Task finished coro=<bug() done, defined at test.py:3>
+    exception=Exception('not consumed') created at asyncio/tasks.py:321>
+
+source_traceback: Object created at (most recent call last):
+  File "../t.py", line 9, in <module>
+    asyncio.run(main(), debug=True)
+
+< .. >
+
+Traceback (most recent call last):
+  File "../t.py", line 4, in bug
+    raise Exception("not consumed")
+Exception: not consumed

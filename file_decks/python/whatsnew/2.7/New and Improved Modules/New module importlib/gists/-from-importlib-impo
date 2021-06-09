@@ -1,0 +1,9 @@
+# name: >>> from importlib i 
+>>> from importlib import import_module
+>>> anydbm = import_module('anydbm')  # Standard absolute import
+>>> anydbm
+<module 'anydbm' from '/p/python/Lib/anydbm.py'>
+>>> # Relative import
+>>> file_util = import_module('..file_util', 'distutils.command')
+>>> file_util
+<module 'distutils.file_util' from '/python/Lib/distutils/file_util.pyc'>

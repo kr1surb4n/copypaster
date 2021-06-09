@@ -1,0 +1,4 @@
+# name: charref = re.compile 
+charref = re.compile("&#(0[0-7]+"
+                     "|[0-9]+"
+                     "|x[0-9a-fA-F]+);")

@@ -1,0 +1,4 @@
+# name: with concurrent.futu 
+with concurrent.futures.ProcessPoolExecutor(max_workers=10) as executor:
+    for i in range(10):
+        executor.submit(worker_process, queue, worker_configurer)

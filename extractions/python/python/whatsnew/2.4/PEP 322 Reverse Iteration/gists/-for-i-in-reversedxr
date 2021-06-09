@@ -1,0 +1,7 @@
+# name: >>> for i in reverse 
+>>> for i in reversed(xrange(1,4)):
+...    print i
+...
+3
+2
+1

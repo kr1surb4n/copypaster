@@ -1,0 +1,3 @@
+# name: >>> issubclass(bool, 
+>>> issubclass(bool, int | str)
+True

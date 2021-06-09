@@ -1,0 +1,13 @@
+# name: >>> import gzip
+>>>  
+>>> import gzip
+>>> s = 'Three shall be the number thou shalt count, '
+>>> s += 'and the number of the counting shall be three'
+>>> b = s.encode()                        # convert to utf-8
+>>> len(b)
+89
+>>> c = gzip.compress(b)
+>>> len(c)
+77
+>>> gzip.decompress(c).decode()[:42]      # decompress and convert to text
+'Three shall be the number thou shalt count'

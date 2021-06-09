@@ -1,0 +1,9 @@
+# name: >>> import types
+>>> 
+>>> import types
+>>> isinstance(int | str, types.Union)
+True
+>>> types.Union()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: cannot create 'types.Union' instances

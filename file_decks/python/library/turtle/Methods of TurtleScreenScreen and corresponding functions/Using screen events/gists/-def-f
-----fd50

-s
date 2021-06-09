@@ -1,0 +1,7 @@
+# name: >>> def f():
+...     
+>>> def f():
+...     fd(50)
+...
+>>> screen.onkey(f, "Up")
+>>> screen.listen()

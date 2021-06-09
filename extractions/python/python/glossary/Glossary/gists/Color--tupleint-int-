@@ -1,0 +1,5 @@
+# name: Color = tuple[int, i 
+Color = tuple[int, int, int]
+
+def remove_gray_shades(colors: list[Color]) -> list[Color]:
+    pass

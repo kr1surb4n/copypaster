@@ -1,0 +1,17 @@
+# name: >>> import numpy
+
+>> 
+>>> import numpy
+
+>>> x = numpy.ones(3)
+>>> x
+array([ 1., 1., 1.])
+
+>>> m = numpy.eye(3)
+>>> m
+array([[ 1., 0., 0.],
+       [ 0., 1., 0.],
+       [ 0., 0., 1.]])
+
+>>> x @ m
+array([ 1., 1., 1.])

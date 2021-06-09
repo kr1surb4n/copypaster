@@ -1,0 +1,2 @@
+# name: c.PyDict_Clear 
+void PyDict_Clear(PyObject *p)

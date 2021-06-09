@@ -1,0 +1,11 @@
+# name: >>> i = c_int(42)
+>> 
+>>> i = c_int(42)
+>>> print(i)
+c_long(42)
+>>> print(i.value)
+42
+>>> i.value = -99
+>>> print(i.value)
+-99
+>>>

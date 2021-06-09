@@ -1,0 +1,2 @@
+# name: raise Exception("foo 
+raise Exception("foo occurred").with_traceback(tracebackobj)

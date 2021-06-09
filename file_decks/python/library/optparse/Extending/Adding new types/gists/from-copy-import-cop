@@ -1,0 +1,3 @@
+# name: from copy import cop 
+from copy import copy
+from optparse import Option, OptionValueError

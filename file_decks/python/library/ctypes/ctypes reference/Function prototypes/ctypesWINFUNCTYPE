@@ -1,0 +1,2 @@
+# name: ctypes.WINFUNCTYPE 
+ctypes.WINFUNCTYPE(restype, *argtypes, use_errno=False, use_last_error=False)

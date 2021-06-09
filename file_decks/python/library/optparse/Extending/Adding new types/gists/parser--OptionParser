@@ -1,0 +1,3 @@
+# name: parser = OptionParse 
+parser = OptionParser(option_class=MyOption)
+parser.add_option("-c", type="complex")

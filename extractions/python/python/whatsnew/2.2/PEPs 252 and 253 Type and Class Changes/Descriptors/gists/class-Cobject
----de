@@ -1,0 +1,10 @@
+# name: class C(object):
+    
+class C(object):
+    def f(arg1, arg2):
+        ...
+    f = staticmethod(f)
+
+    def g(cls, arg1, arg2):
+        ...
+    g = classmethod(g)

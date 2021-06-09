@@ -1,0 +1,2 @@
+# name: py_modules = ['mod1' 
+py_modules = ['mod1', 'pkg.mod2']

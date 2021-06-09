@@ -1,0 +1,2 @@
+# name: c.PyObject_GenericGe 
+PyObject* PyObject_GenericGetDict(PyObject *o, void *context)

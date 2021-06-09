@@ -1,0 +1,4 @@
+# name: $ python -m zipapp m 
+$ python -m zipapp myapp -p "/usr/bin/env python"
+$ ./myapp.pyz
+<output from myapp>

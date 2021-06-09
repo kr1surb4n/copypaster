@@ -1,0 +1,2 @@
+# name: c.PyDict_SetDefault 
+PyObject* PyDict_SetDefault(PyObject *p, PyObject *key, PyObject *defaultobj)

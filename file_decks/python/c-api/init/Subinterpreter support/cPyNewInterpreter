@@ -1,0 +1,2 @@
+# name: c.Py_NewInterpreter 
+PyThreadState* Py_NewInterpreter()

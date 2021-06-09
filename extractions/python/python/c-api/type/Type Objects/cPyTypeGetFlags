@@ -1,0 +1,2 @@
+# name: c.PyType_GetFlags 
+unsigned long PyType_GetFlags(PyTypeObject* type)

@@ -1,0 +1,14 @@
+# name: >>> from enum import 
+>>> from enum import IntFlag
+>>> class Perm(IntFlag):
+...     R = 4
+...     W = 2
+...     X = 1
+...
+>>> Perm.R | Perm.W
+<Perm.R|W: 6>
+>>> Perm.R + Perm.W
+6
+>>> RW = Perm.R | Perm.W
+>>> Perm.R in RW
+True

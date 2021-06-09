@@ -1,0 +1,2 @@
+# name: c.PyModule_AddString 
+int PyModule_AddStringMacro(PyObject *module, macro)

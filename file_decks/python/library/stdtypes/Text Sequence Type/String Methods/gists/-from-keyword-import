@@ -1,0 +1,7 @@
+# name: >>> from keyword imp 
+>>> from keyword import iskeyword
+
+>>> 'hello'.isidentifier(), iskeyword('hello')
+True, False
+>>> 'def'.isidentifier(), iskeyword('def')
+True, True

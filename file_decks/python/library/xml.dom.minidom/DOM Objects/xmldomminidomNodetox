@@ -1,0 +1,2 @@
+# name: xml.dom.minidom.Node 
+Node.toxml(encoding=None, standalone=None)

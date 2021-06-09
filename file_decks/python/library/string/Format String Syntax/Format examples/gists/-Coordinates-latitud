@@ -1,0 +1,6 @@
+# name: >>> 'Coordinates: {l 
+>>> 'Coordinates: {latitude}, {longitude}'.format(latitude='37.24N', longitude='-115.81W')
+'Coordinates: 37.24N, -115.81W'
+>>> coord = {'latitude': '37.24N', 'longitude': '-115.81W'}
+>>> 'Coordinates: {latitude}, {longitude}'.format(**coord)
+'Coordinates: 37.24N, -115.81W'

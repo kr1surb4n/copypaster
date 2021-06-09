@@ -1,0 +1,2 @@
+# name: smtplib.SMTPRecipien 
+exception smtplib.SMTPRecipientsRefused

@@ -1,0 +1,7 @@
+# name: >>> @patch('package. 
+>>> @patch('package.module.ClassName.attribute', sentinel.attribute)
+... def test():
+...     from package.module import ClassName
+...     assert ClassName.attribute == sentinel.attribute
+...
+>>> test()

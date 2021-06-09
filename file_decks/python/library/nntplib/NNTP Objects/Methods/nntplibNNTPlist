@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.list 
+NNTP.list(group_pattern=None, *, file=None)

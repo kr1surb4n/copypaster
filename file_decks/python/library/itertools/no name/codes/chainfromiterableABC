@@ -1,0 +1,2 @@
+# name: chain.from_iterable( 
+chain.from_iterable(['ABC', 'DEF']) --> A B C D E F

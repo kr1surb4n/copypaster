@@ -1,0 +1,2 @@
+# name: c.PyCapsule_GetPoint 
+void* PyCapsule_GetPointer(PyObject *capsule, const char *name)

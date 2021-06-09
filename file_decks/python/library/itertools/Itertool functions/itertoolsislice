@@ -1,0 +1,2 @@
+# name: itertools.islice 
+itertools.islice(iterable, stop)

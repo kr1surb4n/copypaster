@@ -1,0 +1,8 @@
+# name: >>> r = urllib.parse 
+>>> r = urllib.parse.urldefrag('http://python.org/about/#target')
+>>> r
+DefragResult(url='http://python.org/about/', fragment='target')
+>>> r[0]
+'http://python.org/about/'
+>>> r.fragment
+'target'

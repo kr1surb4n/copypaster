@@ -1,0 +1,2 @@
+# name: telnetlib.Telnet.set 
+Telnet.set_option_negotiation_callback(callback)

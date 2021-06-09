@@ -1,0 +1,2 @@
+# name: multiprocessing.Pipe 
+multiprocessing.Pipe([duplex])

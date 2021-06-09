@@ -1,0 +1,5 @@
+# name: >>> PureWindowsPath( 
+>>> PureWindowsPath('nul').is_reserved()
+True
+>>> PurePosixPath('nul').is_reserved()
+False

@@ -1,0 +1,11 @@
+# name: >>> import csv, sys
+ 
+>>> import csv, sys
+>>> w = csv.DictWriter(sys.stdout, ['name', 'dept'], dialect='unix')
+>>> w.writeheader()
+"name","dept"
+>>> w.writerows([
+...     {'name': 'tom', 'dept': 'accounting'},
+...     {'name': 'susan', 'dept': 'Salesl'}])
+"tom","accounting"
+"susan","sales"

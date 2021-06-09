@@ -1,0 +1,6 @@
+# name: @f1(arg)
+@f2
+class F 
+@f1(arg)
+@f2
+class Foo: pass

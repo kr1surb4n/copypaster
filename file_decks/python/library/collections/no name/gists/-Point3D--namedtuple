@@ -1,0 +1,2 @@
+# name: >>> Point3D = namedt 
+>>> Point3D = namedtuple('Point3D', Point._fields + ('z',))

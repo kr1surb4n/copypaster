@@ -1,0 +1,15 @@
+# name: static PyObject *
+ne 
+static PyObject *
+newdatatype_getattr(newdatatypeobject *obj, char *name)
+{
+    if (strcmp(name, "data") == 0)
+    {
+        return PyLong_FromLong(obj->data);
+    }
+
+    PyErr_Format(PyExc_AttributeError,
+                 "'%.50s' object has no attribute '%.400s'",
+                 tp->tp_name, name);
+    return NULL;
+}

@@ -1,0 +1,8 @@
+# name: File "./example.txt" 
+File "./example.txt", line 14, in example.txt
+Failed example:
+    factorial(6)
+Expected:
+    120
+Got:
+    720

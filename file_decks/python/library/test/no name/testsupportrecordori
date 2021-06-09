@@ -1,0 +1,2 @@
+# name: test.support.record_ 
+test.support.record_original_stdout(stdout)

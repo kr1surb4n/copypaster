@@ -1,0 +1,3 @@
+# name: >>> r = RECT(POINT(1 
+>>> r = RECT(POINT(1, 2), POINT(3, 4))
+>>> r = RECT((1, 2), (3, 4))

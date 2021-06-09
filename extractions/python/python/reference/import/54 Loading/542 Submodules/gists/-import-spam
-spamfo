@@ -1,0 +1,7 @@
+# name: >>> import spam
+>>>  
+>>> import spam
+>>> spam.foo
+<module 'spam.foo' from '/tmp/imports/spam/foo.py'>
+>>> spam.bar
+<module 'spam.bar' from '/tmp/imports/spam/bar.py'>

@@ -1,0 +1,2 @@
+# name: dis.Bytecode 
+class dis.Bytecode(x, *, first_line=None, current_offset=None)

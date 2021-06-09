@@ -1,0 +1,7 @@
+# name: >>> turtle.hideturtl 
+>>> turtle.hideturtle()
+>>> turtle.isvisible()
+False
+>>> turtle.showturtle()
+>>> turtle.isvisible()
+True

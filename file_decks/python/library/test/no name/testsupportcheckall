@@ -1,0 +1,2 @@
+# name: test.support.check__ 
+test.support.check__all__(test_case, module, name_of_module=None, extra=(), not_exported=())

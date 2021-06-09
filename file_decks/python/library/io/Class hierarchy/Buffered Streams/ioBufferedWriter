@@ -1,0 +1,2 @@
+# name: io.BufferedWriter 
+class io.BufferedWriter(raw, buffer_size=DEFAULT_BUFFER_SIZE)

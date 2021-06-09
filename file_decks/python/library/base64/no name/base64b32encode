@@ -1,0 +1,2 @@
+# name: base64.b32encode 
+base64.b32encode(s)

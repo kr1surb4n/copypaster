@@ -1,0 +1,2 @@
+# name: zoneinfo.ZoneInfo.cl 
+classmethod ZoneInfo.clear_cache(*, only_keys=None)

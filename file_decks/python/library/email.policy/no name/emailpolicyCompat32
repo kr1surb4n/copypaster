@@ -1,0 +1,2 @@
+# name: email.policy.Compat3 
+class email.policy.Compat32(**kw)

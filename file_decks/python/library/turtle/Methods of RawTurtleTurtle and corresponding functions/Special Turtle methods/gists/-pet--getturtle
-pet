@@ -1,0 +1,5 @@
+# name: >>> pet = getturtle( 
+>>> pet = getturtle()
+>>> pet.fd(50)
+>>> pet
+<turtle.Turtle object at 0x...>

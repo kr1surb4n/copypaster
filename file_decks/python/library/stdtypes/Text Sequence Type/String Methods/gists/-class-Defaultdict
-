@@ -1,0 +1,7 @@
+# name: >>> class Default(di 
+>>> class Default(dict):
+...     def __missing__(self, key):
+...         return key
+...
+>>> '{name} was born in {country}'.format_map(Default(name='Guido'))
+'Guido was born in country'

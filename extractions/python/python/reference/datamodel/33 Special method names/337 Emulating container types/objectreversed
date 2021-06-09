@@ -1,0 +1,2 @@
+# name: object.__reversed__ 
+object.__reversed__(self)

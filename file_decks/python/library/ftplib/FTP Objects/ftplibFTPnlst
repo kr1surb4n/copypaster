@@ -1,0 +1,2 @@
+# name: ftplib.FTP.nlst 
+FTP.nlst(argument[, ...])

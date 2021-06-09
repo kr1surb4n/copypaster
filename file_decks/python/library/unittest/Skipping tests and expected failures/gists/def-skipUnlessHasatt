@@ -1,0 +1,5 @@
+# name: def skipUnlessHasatt 
+def skipUnlessHasattr(obj, attr):
+    if hasattr(obj, attr):
+        return lambda func: func
+    return unittest.skip("{!r} doesn't have {!r}".format(obj, attr))

@@ -1,0 +1,3 @@
+# name: >>> list[int].__orig 
+>>> list[int].__origin__
+<class 'list'>

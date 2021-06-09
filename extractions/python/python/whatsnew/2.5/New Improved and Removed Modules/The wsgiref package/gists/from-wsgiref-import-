@@ -1,0 +1,9 @@
+# name: from wsgiref import  
+from wsgiref import simple_server
+
+wsgi_app = ...
+
+host = ''
+port = 8000
+httpd = simple_server.make_server(host, port, wsgi_app)
+httpd.serve_forever()

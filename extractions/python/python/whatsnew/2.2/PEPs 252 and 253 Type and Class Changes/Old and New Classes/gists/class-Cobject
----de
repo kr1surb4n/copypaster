@@ -1,0 +1,6 @@
+# name: class C(object):
+    
+class C(object):
+    def __init__ (self):
+        ...
+    ...

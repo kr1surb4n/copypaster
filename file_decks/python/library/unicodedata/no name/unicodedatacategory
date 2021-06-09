@@ -1,0 +1,2 @@
+# name: unicodedata.category 
+unicodedata.category(chr)

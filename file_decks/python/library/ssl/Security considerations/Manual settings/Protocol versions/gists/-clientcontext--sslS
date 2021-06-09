@@ -1,0 +1,4 @@
+# name: >>> client_context = 
+>>> client_context = ssl.SSLContext(ssl.PROTOCOL_TLS_CLIENT)
+>>> client_context.options |= ssl.OP_NO_TLSv1
+>>> client_context.options |= ssl.OP_NO_TLSv1_1

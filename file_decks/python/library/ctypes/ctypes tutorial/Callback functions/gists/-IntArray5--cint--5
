@@ -1,0 +1,6 @@
+# name: >>> IntArray5 = c_in 
+>>> IntArray5 = c_int * 5
+>>> ia = IntArray5(5, 1, 7, 33, 99)
+>>> qsort = libc.qsort
+>>> qsort.restype = None
+>>>

@@ -1,0 +1,3 @@
+# name: set line_prefix "str 
+set line_prefix "string"
+set line_suffix "string"

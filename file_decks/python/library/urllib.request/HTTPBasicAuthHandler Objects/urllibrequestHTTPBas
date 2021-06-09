@@ -1,0 +1,2 @@
+# name: urllib.request.HTTPB 
+HTTPBasicAuthHandler.http_error_401(req, fp, code, msg, hdrs)

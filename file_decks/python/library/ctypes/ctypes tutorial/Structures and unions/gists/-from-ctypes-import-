@@ -1,0 +1,17 @@
+# name: >>> from ctypes impo 
+>>> from ctypes import *
+>>> class POINT(Structure):
+...     _fields_ = [("x", c_int),
+...                 ("y", c_int)]
+...
+>>> point = POINT(10, 20)
+>>> print(point.x, point.y)
+10 20
+>>> point = POINT(y=5)
+>>> print(point.x, point.y)
+0 5
+>>> POINT(1, 2, 3)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: too many initializers
+>>>

@@ -1,0 +1,2 @@
+# name: c.PyTuple_Check 
+int PyTuple_Check(PyObject *p)

@@ -1,0 +1,7 @@
+# name: >>> Color.BLUE == Co 
+>>> Color.BLUE == Color.RED
+False
+>>> Color.BLUE != Color.RED
+True
+>>> Color.BLUE == Color.BLUE
+True

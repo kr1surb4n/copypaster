@@ -1,0 +1,2 @@
+# name: email.utils.decode_r 
+email.utils.decode_rfc2231(s)

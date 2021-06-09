@@ -1,0 +1,8 @@
+# name: import sqlite3
+
+sour 
+import sqlite3
+
+source = sqlite3.connect('existing_db.db')
+dest = sqlite3.connect(':memory:')
+source.backup(dest)

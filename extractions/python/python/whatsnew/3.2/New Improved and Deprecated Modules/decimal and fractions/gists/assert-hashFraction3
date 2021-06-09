@@ -1,0 +1,3 @@
+# name: assert hash(Fraction 
+assert hash(Fraction(3, 2)) == hash(1.5) == \
+       hash(Decimal("1.5")) == hash(complex(1.5, 0))

@@ -1,0 +1,5 @@
+# name: >>> b'MiscTests'.rem 
+>>> b'MiscTests'.removesuffix(b'Tests')
+b'Misc'
+>>> b'TmpDirMixin'.removesuffix(b'Tests')
+b'TmpDirMixin'

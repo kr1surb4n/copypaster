@@ -1,0 +1,2 @@
+# name: curses.window.overwr 
+window.overwrite(destwin[, sminrow, smincol, dminrow, dmincol, dmaxrow, dmaxcol])

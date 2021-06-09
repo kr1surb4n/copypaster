@@ -1,0 +1,9 @@
+# name: from xml.dom.minidom 
+from xml.dom.minidom import getDOMImplementation
+
+impl = getDOMImplementation()
+
+newdoc = impl.createDocument(None, "some_tag", None)
+top_element = newdoc.documentElement
+text = newdoc.createTextNode('Some textual content.')
+top_element.appendChild(text)

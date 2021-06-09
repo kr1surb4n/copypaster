@@ -1,0 +1,4 @@
+# name: options, args = op.p 
+options, args = op.parse_args(sys.argv[1:])
+print options
+print args

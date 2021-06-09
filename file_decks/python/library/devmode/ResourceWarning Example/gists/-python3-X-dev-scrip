@@ -1,0 +1,6 @@
+# name: $ python3 -X dev scr 
+$ python3 -X dev script.py README.txt
+269
+script.py:10: ResourceWarning: unclosed file <_io.TextIOWrapper name='README.rst' mode='r' encoding='UTF-8'>
+  main()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback

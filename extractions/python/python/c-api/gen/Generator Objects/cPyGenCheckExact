@@ -1,0 +1,2 @@
+# name: c.PyGen_CheckExact 
+int PyGen_CheckExact(PyObject *ob)

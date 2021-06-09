@@ -1,0 +1,2 @@
+# name: c.PyArg_Parse 
+int PyArg_Parse(PyObject *args, const char *format, ...)

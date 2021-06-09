@@ -1,0 +1,2 @@
+# name: asyncio.run_coroutin 
+asyncio.run_coroutine_threadsafe(coro, loop)

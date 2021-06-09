@@ -1,0 +1,6 @@
+# name: button   .fred   -fg 
+button   .fred   -fg red -text "hi there"
+   ^       ^     \______________________/
+   |       |                |
+ class    new            options
+command  widget  (-opt val -opt val ...)

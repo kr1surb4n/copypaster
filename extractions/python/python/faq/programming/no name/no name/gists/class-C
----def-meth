@@ -1,0 +1,5 @@
+# name: class C:
+    def met 
+class C:
+    def meth(self, arg):
+        return arg * 2 + self.attribute

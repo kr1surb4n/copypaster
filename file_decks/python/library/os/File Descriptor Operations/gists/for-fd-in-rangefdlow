@@ -1,0 +1,6 @@
+# name: for fd in range(fd_l 
+for fd in range(fd_low, fd_high):
+    try:
+        os.close(fd)
+    except OSError:
+        pass

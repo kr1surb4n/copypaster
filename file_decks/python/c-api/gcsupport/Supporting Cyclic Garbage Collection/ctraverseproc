@@ -1,0 +1,2 @@
+# name: c.traverseproc 
+int (*traverseproc)(PyObject *self, visitproc visit, void *arg)

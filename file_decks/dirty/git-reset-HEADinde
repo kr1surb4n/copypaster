@@ -1,2 +1,0 @@
-# name: git reset HEADinde 
-git reset HEAD@{index}

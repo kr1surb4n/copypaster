@@ -1,0 +1,2 @@
+# name: sqlite3.connect 
+sqlite3.connect(database[, timeout, detect_types, isolation_level, check_same_thread, factory, cached_statements, uri])

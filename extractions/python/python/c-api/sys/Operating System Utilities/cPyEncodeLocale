@@ -1,0 +1,2 @@
+# name: c.Py_EncodeLocale 
+char* Py_EncodeLocale(const wchar_t *text, size_t *error_pos)

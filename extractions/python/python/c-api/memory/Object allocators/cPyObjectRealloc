@@ -1,0 +1,2 @@
+# name: c.PyObject_Realloc 
+void* PyObject_Realloc(void *p, size_t n)

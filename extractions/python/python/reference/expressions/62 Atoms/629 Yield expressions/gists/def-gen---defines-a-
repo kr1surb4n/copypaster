@@ -1,0 +1,6 @@
+# name: def gen():  # define 
+def gen():  # defines a generator function
+    yield 123
+
+async def agen(): # defines an asynchronous generator function
+    yield 123

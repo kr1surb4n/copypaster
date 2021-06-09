@@ -1,0 +1,2 @@
+# name: xmlrpc.server.DocXML 
+DocXMLRPCServer.set_server_documentation(server_documentation)

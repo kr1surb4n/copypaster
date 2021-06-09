@@ -1,0 +1,7 @@
+# name: >>> ipaddress.ip_add 
+>>> ipaddress.ip_address(1)
+IPv4Address('0.0.0.1')
+>>> ipaddress.IPv4Address(1)
+IPv4Address('0.0.0.1')
+>>> ipaddress.IPv6Address(1)
+IPv6Address('::1')

@@ -1,0 +1,10 @@
+# name: static int
+SubList_i 
+static int
+SubList_init(SubListObject *self, PyObject *args, PyObject *kwds)
+{
+    if (PyList_Type.tp_init((PyObject *) self, args, kwds) < 0)
+        return -1;
+    self->state = 0;
+    return 0;
+}

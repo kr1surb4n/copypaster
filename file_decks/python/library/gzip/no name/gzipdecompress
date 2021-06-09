@@ -1,0 +1,2 @@
+# name: gzip.decompress 
+gzip.decompress(data)

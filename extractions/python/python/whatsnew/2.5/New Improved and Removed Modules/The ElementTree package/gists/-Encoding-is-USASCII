@@ -1,0 +1,7 @@
+# name: # Encoding is US-ASC 
+# Encoding is US-ASCII
+tree.write('output.xml')
+
+# Encoding is UTF-8
+f = open('output.xml', 'w')
+tree.write(f, encoding='utf-8')

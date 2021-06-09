@@ -1,0 +1,2 @@
+# name: c.PyDec_FromUint128T 
+PyObject *PyDec_FromUint128Triple(const mpd_uint128_triple_t *triple)

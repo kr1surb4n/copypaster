@@ -1,0 +1,6 @@
+# name: >>> print("Hello")
+H 
+>>> print("Hello")
+Hello
+>>> "Hello" * 3
+'HelloHelloHello'

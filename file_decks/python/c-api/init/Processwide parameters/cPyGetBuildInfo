@@ -1,0 +1,2 @@
+# name: c.Py_GetBuildInfo 
+const char* Py_GetBuildInfo()

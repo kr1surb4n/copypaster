@@ -1,0 +1,7 @@
+# name: from abc import abst 
+from abc import abstractproperty
+...
+
+@abstractproperty
+def readonly(self):
+   return self._x

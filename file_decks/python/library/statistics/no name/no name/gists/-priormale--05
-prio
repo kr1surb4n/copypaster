@@ -1,0 +1,8 @@
+# name: >>> prior_male = 0.5 
+>>> prior_male = 0.5
+>>> prior_female = 0.5
+>>> posterior_male = (prior_male * height_male.pdf(ht) *
+...                   weight_male.pdf(wt) * foot_size_male.pdf(fs))
+
+>>> posterior_female = (prior_female * height_female.pdf(ht) *
+...                     weight_female.pdf(wt) * foot_size_female.pdf(fs))

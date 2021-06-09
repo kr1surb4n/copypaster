@@ -1,0 +1,14 @@
+# name: >>> req = urllib.req 
+>>> req = urllib.request.Request('http://www.python.org/fish.html')
+>>> try:
+...     urllib.request.urlopen(req)
+... except urllib.error.HTTPError as e:
+...     print(e.code)
+...     print(e.read())  
+...
+404
+b'<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n\n\n<html
+  ...
+  <title>Page Not Found</title>\n
+  ...

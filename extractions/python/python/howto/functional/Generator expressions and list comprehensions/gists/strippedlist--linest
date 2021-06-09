@@ -1,0 +1,3 @@
+# name: stripped_list = [lin 
+stripped_list = [line.strip() for line in line_list
+                 if line != ""]

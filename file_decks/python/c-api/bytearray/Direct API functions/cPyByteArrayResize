@@ -1,0 +1,2 @@
+# name: c.PyByteArray_Resize 
+int PyByteArray_Resize(PyObject *bytearray, Py_ssize_t len)

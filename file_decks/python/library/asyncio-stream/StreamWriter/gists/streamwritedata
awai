@@ -1,0 +1,4 @@
+# name: stream.write(data)
+a 
+stream.write(data)
+await stream.drain()

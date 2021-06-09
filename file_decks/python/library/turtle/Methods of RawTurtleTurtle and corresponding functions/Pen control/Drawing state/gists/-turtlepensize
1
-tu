@@ -1,0 +1,4 @@
+# name: >>> turtle.pensize() 
+>>> turtle.pensize()
+1
+>>> turtle.pensize(10)   # from here on lines of width 10 are drawn

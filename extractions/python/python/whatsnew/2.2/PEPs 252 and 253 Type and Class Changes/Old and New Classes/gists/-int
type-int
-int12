@@ -1,0 +1,6 @@
+# name: >>> int
+<type 'int'> 
+>>> int
+<type 'int'>
+>>> int('123')
+123

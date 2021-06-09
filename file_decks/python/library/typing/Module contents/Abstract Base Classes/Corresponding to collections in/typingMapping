@@ -1,0 +1,2 @@
+# name: typing.Mapping 
+class typing.Mapping(Sized, Collection[KT], Generic[VT_co])

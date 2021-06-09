@@ -1,0 +1,2 @@
+# name: termios.tcsetattr 
+termios.tcsetattr(fd, when, attributes)

@@ -1,0 +1,5 @@
+# name: $ python setup.py ch 
+$ python setup.py check --restructuredtext
+running check
+warning: check: Title underline too short. (line 2)
+warning: check: Could not finish the parsing.

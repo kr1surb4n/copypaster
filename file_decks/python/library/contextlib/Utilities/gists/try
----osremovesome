@@ -1,0 +1,11 @@
+# name: try:
+    os.remove(' 
+try:
+    os.remove('somefile.tmp')
+except FileNotFoundError:
+    pass
+
+try:
+    os.remove('someotherfile.tmp')
+except FileNotFoundError:
+    pass

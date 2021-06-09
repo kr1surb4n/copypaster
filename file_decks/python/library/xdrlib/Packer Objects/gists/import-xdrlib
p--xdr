@@ -1,0 +1,5 @@
+# name: import xdrlib
+p = xd 
+import xdrlib
+p = xdrlib.Packer()
+p.pack_list([1, 2, 3], p.pack_int)

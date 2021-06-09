@@ -1,0 +1,11 @@
+# name: import doctest
+print 
+import doctest
+print(doctest.script_from_examples(r"""
+    Set x and y to 1 and 2.
+    >>> x, y = 1, 2
+
+    Print their sum:
+    >>> print(x+y)
+    3
+"""))

@@ -1,0 +1,12 @@
+# name: >>> for item in tabl 
+>>> for item in table:
+...     if item.name is None:
+...         break
+...     print(item.name.decode("ascii"), item.size)
+...
+_frozen_importlib 31764
+_frozen_importlib_external 41499
+__hello__ 161
+__phello__ -161
+__phello__.spam 161
+>>>

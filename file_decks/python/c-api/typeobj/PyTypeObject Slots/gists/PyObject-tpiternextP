@@ -1,0 +1,2 @@
+# name: PyObject *tp_iternex 
+PyObject *tp_iternext(PyObject *self);

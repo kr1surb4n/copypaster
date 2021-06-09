@@ -1,0 +1,9 @@
+# name: >>> obj = []
+>>> has 
+>>> obj = []
+>>> hasattr(obj, 'append')
+True
+>>> isinstance(obj, list)
+True
+>>> isinstance(obj, tuple)
+False

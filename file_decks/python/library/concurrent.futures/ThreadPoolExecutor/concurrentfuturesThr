@@ -1,0 +1,2 @@
+# name: concurrent.futures.T 
+class concurrent.futures.ThreadPoolExecutor(max_workers=None, thread_name_prefix='', initializer=None, initargs=())

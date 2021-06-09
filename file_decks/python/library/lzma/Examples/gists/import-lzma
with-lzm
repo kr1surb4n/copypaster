@@ -1,0 +1,5 @@
+# name: import lzma
+with lzm 
+import lzma
+with lzma.open("file.xz") as f:
+    file_content = f.read()

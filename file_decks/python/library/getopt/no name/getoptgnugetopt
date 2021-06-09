@@ -1,0 +1,2 @@
+# name: getopt.gnu_getopt 
+getopt.gnu_getopt(args, shortopts, longopts=[])

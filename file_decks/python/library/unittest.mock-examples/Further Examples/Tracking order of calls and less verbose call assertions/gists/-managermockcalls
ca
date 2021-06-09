@@ -1,0 +1,3 @@
+# name: >>> manager.mock_cal 
+>>> manager.mock_calls
+[call.foo.something(), call.bar.other.thing()]

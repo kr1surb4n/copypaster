@@ -1,0 +1,8 @@
+# name: Python 2.4 (#26, Aug 
+Python 2.4 (#26, Aug  7 2004, 17:19:02)
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.prefix
+'/usr'
+>>> sys.exec_prefix
+'/usr'

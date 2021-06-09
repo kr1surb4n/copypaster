@@ -1,0 +1,2 @@
+# name: void tp_free(void *s 
+void tp_free(void *self);

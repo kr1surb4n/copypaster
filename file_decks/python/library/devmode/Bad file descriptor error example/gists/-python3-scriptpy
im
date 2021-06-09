@@ -1,0 +1,12 @@
+# name: $ python3 script.py
+ 
+$ python3 script.py
+import os
+script.py:10: ResourceWarning: unclosed file <_io.TextIOWrapper name='script.py' mode='r' encoding='UTF-8'>
+  main()
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Exception ignored in: <_io.TextIOWrapper name='script.py' mode='r' encoding='UTF-8'>
+Traceback (most recent call last):
+  File "script.py", line 10, in <module>
+    main()
+OSError: [Errno 9] Bad file descriptor

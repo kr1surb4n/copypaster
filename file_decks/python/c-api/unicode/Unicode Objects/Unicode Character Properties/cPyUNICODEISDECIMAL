@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_ISDECIM 
+int Py_UNICODE_ISDECIMAL(Py_UNICODE ch)

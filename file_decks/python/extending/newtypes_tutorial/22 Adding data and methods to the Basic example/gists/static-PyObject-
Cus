@@ -1,0 +1,15 @@
+# name: static PyObject *
+Cu 
+static PyObject *
+Custom_name(CustomObject *self, PyObject *Py_UNUSED(ignored))
+{
+    if (self->first == NULL) {
+        PyErr_SetString(PyExc_AttributeError, "first");
+        return NULL;
+    }
+    if (self->last == NULL) {
+        PyErr_SetString(PyExc_AttributeError, "last");
+        return NULL;
+    }
+    return PyUnicode_FromFormat("%S %S", self->first, self->last);
+}

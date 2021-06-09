@@ -1,0 +1,2 @@
+# name: asyncio.open_unix_co 
+coroutine asyncio.open_unix_connection(path=None, *, loop=None, limit=None, ssl=None, sock=None, server_hostname=None, ssl_handshake_timeout=None)

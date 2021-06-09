@@ -1,0 +1,5 @@
+# name: a = ZoneInfo(key)
+b  
+a = ZoneInfo(key)
+b = ZoneInfo(key)
+assert a is b

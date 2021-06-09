@@ -1,0 +1,10 @@
+# name: from contextlib impo 
+from contextlib import ExitStack
+
+with ExitStack() as stack:
+    @stack.callback
+    def cleanup_resources():
+        ...
+    result = perform_operation()
+    if result:
+        stack.pop_all()

@@ -1,0 +1,2 @@
+# name: aifc.aifc.setparams 
+aifc.setparams(nchannels, sampwidth, framerate, comptype, compname)

@@ -1,0 +1,2 @@
+# name: asyncio.wrap_future 
+asyncio.wrap_future(future, *, loop=None)

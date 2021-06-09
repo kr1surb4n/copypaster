@@ -1,0 +1,2 @@
+# name: c.PyUnicode_EncodeCo 
+PyObject* PyUnicode_EncodeCodePage(int code_page, PyObject *unicode, const char *errors)

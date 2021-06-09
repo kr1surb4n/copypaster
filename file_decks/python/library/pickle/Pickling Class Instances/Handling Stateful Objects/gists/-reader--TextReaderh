@@ -1,0 +1,9 @@
+# name: >>> reader = TextRea 
+>>> reader = TextReader("hello.txt")
+>>> reader.readline()
+'1: Hello world!'
+>>> reader.readline()
+'2: I am line number two.'
+>>> new_reader = pickle.loads(pickle.dumps(reader))
+>>> new_reader.readline()
+'3: Goodbye!'

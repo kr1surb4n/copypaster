@@ -1,0 +1,6 @@
+# name: from distutils.sysco 
+from distutils.sysconfig import get_python_inc
+incdir = os.path.join(get_python_inc(plat_specific=1), 'Numerical')
+setup(...,
+      Extension(..., include_dirs=[incdir]),
+      )

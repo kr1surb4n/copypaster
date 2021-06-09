@@ -1,0 +1,20 @@
+# name: PyStatus alloc(void  
+PyStatus alloc(void **ptr, size_t size)
+{
+    *ptr = PyMem_RawMalloc(size);
+    if (*ptr == NULL) {
+        return PyStatus_NoMemory();
+    }
+    return PyStatus_Ok();
+}
+
+int main(int argc, char **argv)
+{
+    void *ptr;
+    PyStatus status = alloc(&ptr, 16);
+    if (PyStatus_Exception(status)) {
+        Py_ExitStatusException(status);
+    }
+    PyMem_Free(ptr);
+    return 0;
+}

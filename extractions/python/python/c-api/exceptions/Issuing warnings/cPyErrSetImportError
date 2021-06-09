@@ -1,0 +1,2 @@
+# name: c.PyErr_SetImportErr 
+PyObject* PyErr_SetImportErrorSubclass(PyObject *exception, PyObject *msg, PyObject *name, PyObject *path)

@@ -1,0 +1,6 @@
+# name: itertools.starmap(os 
+itertools.starmap(os.path.join,
+                  [('/bin', 'python'), ('/usr', 'bin', 'java'),
+                   ('/usr', 'bin', 'perl'), ('/usr', 'bin', 'ruby')])
+=>
+  /bin/python, /usr/bin/java, /usr/bin/perl, /usr/bin/ruby

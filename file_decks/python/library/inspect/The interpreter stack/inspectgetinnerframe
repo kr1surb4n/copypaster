@@ -1,0 +1,2 @@
+# name: inspect.getinnerfram 
+inspect.getinnerframes(traceback, context=1)

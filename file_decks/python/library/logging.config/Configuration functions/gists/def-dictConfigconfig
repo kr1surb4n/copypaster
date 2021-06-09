@@ -1,0 +1,3 @@
+# name: def dictConfig(confi 
+def dictConfig(config):
+    dictConfigClass(config).configure()

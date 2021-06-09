@@ -1,0 +1,17 @@
+# name: import os
+
+# semapho 
+import os
+
+# semaphore with start value '1'
+fd = os.eventfd(1, os.EFD_SEMAPHORE | os.EFC_CLOEXEC)
+try:
+    # acquire semaphore
+    v = os.eventfd_read(fd)
+    try:
+        do_work()
+    finally:
+        # release semaphore
+        os.eventfd_write(fd, v)
+finally:
+    os.close(fd)

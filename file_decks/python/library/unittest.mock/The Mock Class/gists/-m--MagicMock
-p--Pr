@@ -1,0 +1,8 @@
+# name: >>> m = MagicMock()
+ 
+>>> m = MagicMock()
+>>> p = PropertyMock(return_value=3)
+>>> type(m).foo = p
+>>> m.foo
+3
+>>> p.assert_called_once_with()

@@ -1,0 +1,2 @@
+# name: contextlib.redirect_ 
+contextlib.redirect_stderr(new_target)

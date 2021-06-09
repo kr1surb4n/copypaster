@@ -1,0 +1,12 @@
+# name: >>> diff = ndiff('on 
+>>> diff = ndiff('one\ntwo\nthree\n'.splitlines(keepends=True),
+...              'ore\ntree\nemu\n'.splitlines(keepends=True))
+>>> diff = list(diff) # materialize the generated delta into a list
+>>> print(''.join(restore(diff, 1)), end="")
+one
+two
+three
+>>> print(''.join(restore(diff, 2)), end="")
+ore
+tree
+emu

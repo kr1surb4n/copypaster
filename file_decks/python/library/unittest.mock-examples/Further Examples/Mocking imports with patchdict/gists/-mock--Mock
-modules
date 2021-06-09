@@ -1,0 +1,10 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> modules = {'package': mock, 'package.module': mock.module}
+>>> with patch.dict('sys.modules', modules):
+...    from package.module import fooble
+...    fooble()
+...
+<Mock name='mock.module.fooble()' id='...'>
+>>> mock.module.fooble.assert_called_once_with()

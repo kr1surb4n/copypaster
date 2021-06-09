@@ -1,0 +1,2 @@
+# name: struct.pack_into 
+struct.pack_into(format, buffer, offset, v1, v2, ...)

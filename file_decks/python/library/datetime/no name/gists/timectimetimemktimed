@@ -1,0 +1,2 @@
+# name: time.ctime(time.mkti 
+time.ctime(time.mktime(d.timetuple()))

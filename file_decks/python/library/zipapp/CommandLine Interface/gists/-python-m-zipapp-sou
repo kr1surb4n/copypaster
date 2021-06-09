@@ -1,0 +1,2 @@
+# name: $ python -m zipapp s 
+$ python -m zipapp source [options]

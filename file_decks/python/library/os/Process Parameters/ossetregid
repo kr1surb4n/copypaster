@@ -1,0 +1,2 @@
+# name: os.setregid 
+os.setregid(rgid, egid)

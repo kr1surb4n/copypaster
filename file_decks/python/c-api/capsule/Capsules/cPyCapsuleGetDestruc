@@ -1,0 +1,2 @@
+# name: c.PyCapsule_GetDestr 
+PyCapsule_Destructor PyCapsule_GetDestructor(PyObject *capsule)

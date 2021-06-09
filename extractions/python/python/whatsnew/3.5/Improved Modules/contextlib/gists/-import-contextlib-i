@@ -1,0 +1,8 @@
+# name: >>> import contextli 
+>>> import contextlib, io, logging
+>>> f = io.StringIO()
+>>> with contextlib.redirect_stderr(f):
+...     logging.warning('warning')
+...
+>>> f.getvalue()
+'WARNING:root:warning\n'

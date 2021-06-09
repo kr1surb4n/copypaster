@@ -1,0 +1,13 @@
+# name: >>> class Shape(Enum 
+>>> class Shape(Enum):
+...     SQUARE = 2
+...     DIAMOND = 1
+...     CIRCLE = 3
+...     ALIAS_FOR_SQUARE = 2
+...
+>>> Shape.SQUARE
+<Shape.SQUARE: 2>
+>>> Shape.ALIAS_FOR_SQUARE
+<Shape.SQUARE: 2>
+>>> Shape(2)
+<Shape.SQUARE: 2>

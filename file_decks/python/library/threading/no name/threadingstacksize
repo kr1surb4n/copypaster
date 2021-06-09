@@ -1,0 +1,2 @@
+# name: threading.stack_size 
+threading.stack_size([size])

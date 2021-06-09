@@ -1,0 +1,2 @@
+# name: curses.echo 
+curses.echo()

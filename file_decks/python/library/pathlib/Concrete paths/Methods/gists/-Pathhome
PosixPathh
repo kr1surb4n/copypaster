@@ -1,0 +1,4 @@
+# name: >>> Path.home()
+Posi 
+>>> Path.home()
+PosixPath('/home/antoine')

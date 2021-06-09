@@ -1,0 +1,2 @@
+# name: c.vectorcallfunc 
+PyObject *(*vectorcallfunc)(PyObject *callable, PyObject *const *args, size_t nargsf, PyObject *kwnames)

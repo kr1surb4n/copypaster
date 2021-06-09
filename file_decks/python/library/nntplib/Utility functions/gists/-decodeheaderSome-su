@@ -1,0 +1,7 @@
+# name: >>> decode_header("S 
+>>> decode_header("Some subject")
+'Some subject'
+>>> decode_header("=?ISO-8859-15?Q?D=E9buter_en_Python?=")
+'Débuter en Python'
+>>> decode_header("Re: =?UTF-8?B?cHJvYmzDqG1lIGRlIG1hdHJpY2U=?=")
+'Re: problème de matrice'

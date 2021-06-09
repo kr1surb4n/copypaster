@@ -1,0 +1,11 @@
+# name: >>> from io import S 
+>>> from io import StringIO
+>>> def foo():
+...     print('Something')
+...
+>>> @patch('sys.stdout', new_callable=StringIO)
+... def test(mock_stdout):
+...     foo()
+...     assert mock_stdout.getvalue() == 'Something\n'
+...
+>>> test()

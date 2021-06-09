@@ -1,0 +1,8 @@
+# name: class Descriptor:
+   
+class Descriptor:
+    ...
+    @property
+    def __isabstractmethod__(self):
+        return any(getattr(f, '__isabstractmethod__', False) for
+                   f in (self._fget, self._fset, self._fdel))

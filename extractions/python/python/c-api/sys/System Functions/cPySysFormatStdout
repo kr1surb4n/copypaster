@@ -1,0 +1,2 @@
+# name: c.PySys_FormatStdout 
+void PySys_FormatStdout(const char *format, ...)

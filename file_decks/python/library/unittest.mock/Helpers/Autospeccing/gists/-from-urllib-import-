@@ -1,0 +1,5 @@
+# name: >>> from urllib impo 
+>>> from urllib import request
+>>> mock_request = create_autospec(request)
+>>> mock_request.Request('foo', 'bar')
+<NonCallableMagicMock name='mock.Request()' spec='Request' id='...'>

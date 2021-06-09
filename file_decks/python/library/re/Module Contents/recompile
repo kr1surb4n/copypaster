@@ -1,0 +1,2 @@
+# name: re.compile 
+re.compile(pattern, flags=0)

@@ -1,0 +1,2 @@
+# name: c.PyDict_SetItem 
+int PyDict_SetItem(PyObject *p, PyObject *key, PyObject *val)

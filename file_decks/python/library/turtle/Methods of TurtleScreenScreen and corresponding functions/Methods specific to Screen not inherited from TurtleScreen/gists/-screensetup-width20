@@ -1,0 +1,5 @@
+# name: >>> screen.setup (wi 
+>>> screen.setup (width=200, height=200, startx=0, starty=0)
+>>>              # sets window to 200x200 pixels, in upper left of screen
+>>> screen.setup(width=.75, height=0.5, startx=None, starty=None)
+>>>              # sets window to 75% of screen by 50% of screen and centers

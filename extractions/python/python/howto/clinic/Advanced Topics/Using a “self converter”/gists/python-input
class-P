@@ -1,0 +1,17 @@
+# name: /*[python input]
+cla 
+/*[python input]
+class PicklerObject_converter(self_converter):
+    type = "PicklerObject *"
+[python start generated code]*/
+
+/*[clinic input]
+
+_pickle.Pickler.dump
+
+  self: PicklerObject
+  obj: object
+  /
+
+Write a pickled representation of the given object to the open file.
+[clinic start generated code]*/

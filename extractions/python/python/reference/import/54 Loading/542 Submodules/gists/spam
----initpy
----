@@ -1,0 +1,6 @@
+# name: spam/
+    __init__.p 
+spam/
+    __init__.py
+    foo.py
+    bar.py

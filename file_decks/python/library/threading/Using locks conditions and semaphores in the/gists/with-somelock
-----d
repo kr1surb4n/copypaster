@@ -1,0 +1,4 @@
+# name: with some_lock:
+     
+with some_lock:
+    # do something...

@@ -1,0 +1,2 @@
+# name: c.PyDict_SetItemStri 
+int PyDict_SetItemString(PyObject *p, const char *key, PyObject *val)

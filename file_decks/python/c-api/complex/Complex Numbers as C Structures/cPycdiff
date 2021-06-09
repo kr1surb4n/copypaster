@@ -1,0 +1,2 @@
+# name: c._Py_c_diff 
+Py_complex _Py_c_diff(Py_complex left, Py_complex right)

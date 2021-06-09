@@ -1,0 +1,2 @@
+# name: c.PySys_AddAuditHook 
+int PySys_AddAuditHook(Py_AuditHookFunction hook, void *userData)

@@ -1,0 +1,7 @@
+# name: >>> print(re.search( 
+>>> print(re.search('}$', '{block}'))  
+<re.Match object; span=(6, 7), match='}'>
+>>> print(re.search('}$', '{block} '))
+None
+>>> print(re.search('}$', '{block}\n'))  
+<re.Match object; span=(6, 7), match='}'>

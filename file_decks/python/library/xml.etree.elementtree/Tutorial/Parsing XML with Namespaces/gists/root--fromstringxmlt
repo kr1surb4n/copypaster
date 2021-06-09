@@ -1,0 +1,7 @@
+# name: root = fromstring(xm 
+root = fromstring(xml_text)
+for actor in root.findall('{http://people.example.com}actor'):
+    name = actor.find('{http://people.example.com}name')
+    print(name.text)
+    for char in actor.findall('{http://characters.example.com}character'):
+        print(' |-->', char.text)

@@ -1,0 +1,9 @@
+# name: >>> PurePosixPath('f 
+>>> PurePosixPath('foo') == PurePosixPath('FOO')
+False
+>>> PureWindowsPath('foo') == PureWindowsPath('FOO')
+True
+>>> PureWindowsPath('FOO') in { PureWindowsPath('foo') }
+True
+>>> PureWindowsPath('C:') < PureWindowsPath('d:')
+True

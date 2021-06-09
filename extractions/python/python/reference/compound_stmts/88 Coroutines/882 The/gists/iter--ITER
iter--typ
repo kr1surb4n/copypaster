@@ -1,0 +1,15 @@
+# name: iter = (ITER)
+iter = 
+iter = (ITER)
+iter = type(iter).__aiter__(iter)
+running = True
+
+while running:
+    try:
+        TARGET = await type(iter).__anext__(iter)
+    except StopAsyncIteration:
+        running = False
+    else:
+        SUITE
+else:
+    SUITE2

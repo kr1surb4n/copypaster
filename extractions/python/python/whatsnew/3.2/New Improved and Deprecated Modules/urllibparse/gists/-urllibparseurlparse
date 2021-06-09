@@ -1,0 +1,4 @@
+# name: >>> urllib.parse.url 
+>>> urllib.parse.urlparse(b'http://www.python.org:80/about/') 
+ParseResultBytes(scheme=b'http', netloc=b'www.python.org:80',
+                 path=b'/about/', params=b'', query=b'', fragment=b'')

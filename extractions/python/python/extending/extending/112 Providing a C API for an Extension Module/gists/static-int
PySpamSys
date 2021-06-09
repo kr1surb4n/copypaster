@@ -1,0 +1,7 @@
+# name: static int
+PySpam_Sy 
+static int
+PySpam_System(const char *command)
+{
+    return system(command);
+}

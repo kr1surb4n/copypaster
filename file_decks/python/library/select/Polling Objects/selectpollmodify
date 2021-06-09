@@ -1,0 +1,2 @@
+# name: select.poll.modify 
+poll.modify(fd, eventmask)

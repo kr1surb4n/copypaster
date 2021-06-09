@@ -1,0 +1,2 @@
+# name: statistics.stdev 
+statistics.stdev(data, xbar=None)

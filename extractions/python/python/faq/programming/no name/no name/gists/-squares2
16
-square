@@ -1,0 +1,7 @@
+# name: >>> squares[2]()
+16
+ 
+>>> squares[2]()
+16
+>>> squares[4]()
+16

@@ -1,0 +1,2 @@
+# name: uuid.uuid5 
+uuid.uuid5(namespace, name)

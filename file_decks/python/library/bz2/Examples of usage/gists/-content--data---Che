@@ -1,0 +1,3 @@
+# name: >>> content == data  
+>>> content == data  # Check equality to original object after round-trip
+True

@@ -1,0 +1,2 @@
+# name: c.PyDelta_Check 
+int PyDelta_Check(PyObject *ob)

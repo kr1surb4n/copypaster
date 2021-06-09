@@ -1,0 +1,2 @@
+# name: c.PyMem_Resize 
+TYPE* PyMem_Resize(void *p, TYPE, size_t n)

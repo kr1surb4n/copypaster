@@ -1,0 +1,2 @@
+# name: c.PySequence_InPlace 
+PyObject* PySequence_InPlaceConcat(PyObject *o1, PyObject *o2)

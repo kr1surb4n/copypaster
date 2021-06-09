@@ -1,0 +1,9 @@
+# name: class RewriteName(No 
+class RewriteName(NodeTransformer):
+
+    def visit_Name(self, node):
+        return Subscript(
+            value=Name(id='data', ctx=Load()),
+            slice=Constant(value=node.id),
+            ctx=node.ctx
+        )

@@ -1,0 +1,2 @@
+# name: ctypes.CFUNCTYPE 
+ctypes.CFUNCTYPE(restype, *argtypes, use_errno=False, use_last_error=False)

@@ -1,0 +1,4 @@
+# name: >>> D.__dict__['f']
+ 
+>>> D.__dict__['f']
+<function D.f at 0x00C45070>

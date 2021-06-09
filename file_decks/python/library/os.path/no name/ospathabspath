@@ -1,0 +1,2 @@
+# name: os.path.abspath 
+os.path.abspath(path)

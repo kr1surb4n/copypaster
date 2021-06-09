@@ -1,0 +1,6 @@
+# name: >>> pattern = re.com 
+>>> pattern = re.compile("o[gh]")
+>>> pattern.fullmatch("dog")      # No match as "o" is not at the start of "dog".
+>>> pattern.fullmatch("ogre")     # No match as not the full string matches.
+>>> pattern.fullmatch("doggie", 1, 3)   # Matches within given limits.
+<re.Match object; span=(1, 3), match='og'>

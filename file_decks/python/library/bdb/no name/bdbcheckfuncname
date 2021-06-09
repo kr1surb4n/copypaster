@@ -1,0 +1,2 @@
+# name: bdb.checkfuncname 
+bdb.checkfuncname(b, frame)

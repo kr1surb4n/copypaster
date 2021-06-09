@@ -1,0 +1,2 @@
+# name: datetime.time.replac 
+time.replace(hour=self.hour, minute=self.minute, second=self.second, microsecond=self.microsecond, tzinfo=self.tzinfo, * fold=0)

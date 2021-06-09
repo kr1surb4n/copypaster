@@ -1,0 +1,19 @@
+# name: >>> colormode()
+ 1.0 
+>>> colormode()
+ 1.0
+ >>> turtle.pencolor()
+ 'red'
+ >>> turtle.pencolor("brown")
+ >>> turtle.pencolor()
+ 'brown'
+ >>> tup = (0.2, 0.8, 0.55)
+ >>> turtle.pencolor(tup)
+ >>> turtle.pencolor()
+ (0.2, 0.8, 0.5490196078431373)
+ >>> colormode(255)
+ >>> turtle.pencolor()
+ (51.0, 204.0, 140.0)
+ >>> turtle.pencolor('#32c18f')
+ >>> turtle.pencolor()
+ (50.0, 193.0, 143.0)

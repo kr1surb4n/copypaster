@@ -1,0 +1,3 @@
+# name: with OpenKey(HKEY_LO 
+with OpenKey(HKEY_LOCAL_MACHINE, "foo") as key:
+    ...  # work with key

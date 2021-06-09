@@ -1,0 +1,8 @@
+# name: >>> s = 'a\tb\a<\x02 
+>>> s = 'a\tb\a<\x02><\r>\bc\nd'  # Enter 22 chars.
+>>> len(s)
+14
+>>> s  # Display repr(s)
+'a\tb\x07<\x02><\r>\x08c\nd'
+>>> print(s, end='')  # Display s as is.
+# Result varies by OS and font.  Try it.

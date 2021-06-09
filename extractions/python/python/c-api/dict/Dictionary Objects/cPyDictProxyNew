@@ -1,0 +1,2 @@
+# name: c.PyDictProxy_New 
+PyObject* PyDictProxy_New(PyObject *mapping)

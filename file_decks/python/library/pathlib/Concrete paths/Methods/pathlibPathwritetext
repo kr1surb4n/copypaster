@@ -1,0 +1,2 @@
+# name: pathlib.Path.write_t 
+Path.write_text(data, encoding=None, errors=None, newline=None)

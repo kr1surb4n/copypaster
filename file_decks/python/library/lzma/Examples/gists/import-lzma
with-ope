@@ -1,0 +1,8 @@
+# name: import lzma
+with ope 
+import lzma
+with open("file.xz", "wb") as f:
+    f.write(b"This data will not be compressed\n")
+    with lzma.open(f, "w") as lzf:
+        lzf.write(b"This *will* be compressed\n")
+    f.write(b"Not compressed\n")

@@ -1,0 +1,2 @@
+# name: operator.and_ 
+operator.and_(a, b)

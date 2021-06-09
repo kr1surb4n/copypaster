@@ -1,0 +1,2 @@
+# name: c.PyUnicode_AsUTF8An 
+const char* PyUnicode_AsUTF8AndSize(PyObject *unicode, Py_ssize_t *size)

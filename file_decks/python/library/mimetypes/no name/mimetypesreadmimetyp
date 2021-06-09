@@ -1,0 +1,2 @@
+# name: mimetypes.read_mime_ 
+mimetypes.read_mime_types(filename)

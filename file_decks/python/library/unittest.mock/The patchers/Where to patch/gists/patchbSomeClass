@@ -1,0 +1,2 @@
+# name: @patch('b.SomeClass' 
+@patch('b.SomeClass')

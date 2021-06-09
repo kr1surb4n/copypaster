@@ -1,0 +1,5 @@
+# name: >>> printf(b"An int  
+>>> printf(b"An int %d, a double %f\n", 1234, c_double(3.14))
+An int 1234, a double 3.140000
+31
+>>>

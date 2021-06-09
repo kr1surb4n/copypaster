@@ -1,0 +1,2 @@
+# name: c.PyType_IS_GC 
+int PyType_IS_GC(PyTypeObject *o)

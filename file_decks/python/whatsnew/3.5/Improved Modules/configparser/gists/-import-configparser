@@ -1,0 +1,16 @@
+# name: >>> import configpar 
+>>> import configparser
+>>> conv = {}
+>>> conv['list'] = lambda v: [e.strip() for e in v.split() if e.strip()]
+>>> cfg = configparser.ConfigParser(converters=conv)
+>>> cfg.read_string("""
+... [s]
+... list = a b c d e f g
+... """)
+>>> cfg.get('s', 'list')
+'a b c d e f g'
+>>> cfg.getlist('s', 'list')
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> section = cfg['s']
+>>> section.getlist('list')
+['a', 'b', 'c', 'd', 'e', 'f', 'g']

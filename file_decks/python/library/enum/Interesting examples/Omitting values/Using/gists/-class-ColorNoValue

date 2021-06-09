@@ -1,0 +1,8 @@
+# name: >>> class Color(NoVa 
+>>> class Color(NoValue):
+...     RED = auto()
+...     BLUE = auto()
+...     GREEN = auto()
+...
+>>> Color.GREEN
+<Color.GREEN>

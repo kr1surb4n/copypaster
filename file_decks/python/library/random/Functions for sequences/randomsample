@@ -1,0 +1,2 @@
+# name: random.sample 
+random.sample(population, k, *, counts=None)

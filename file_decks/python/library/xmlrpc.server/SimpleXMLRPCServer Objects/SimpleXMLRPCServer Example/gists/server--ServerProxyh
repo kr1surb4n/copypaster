@@ -1,0 +1,17 @@
+# name: server = ServerProxy 
+server = ServerProxy("http://localhost:8000")
+
+try:
+    print(server.currentTime.getCurrentTime())
+except Error as v:
+    print("ERROR", v)
+
+multi = MultiCall(server)
+multi.getData()
+multi.pow(2,9)
+multi.add(1,2)
+try:
+    for response in multi():
+        print(response)
+except Error as v:
+    print("ERROR", v)

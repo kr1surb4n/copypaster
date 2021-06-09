@@ -1,0 +1,6 @@
+# name: parser.set_defaults( 
+parser.set_defaults(mode="advanced")
+parser.add_option("--advanced", action="store_const",
+                  dest="mode", const="advanced")
+parser.add_option("--novice", action="store_const",
+                  dest="mode", const="novice")

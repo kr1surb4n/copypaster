@@ -1,0 +1,2 @@
+# name: typedef PyObject *(* 
+typedef PyObject *(*getter)(PyObject *, void *);

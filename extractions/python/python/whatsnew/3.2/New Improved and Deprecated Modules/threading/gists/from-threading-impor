@@ -1,0 +1,12 @@
+# name: from threading impor 
+from threading import Barrier, Thread
+
+def get_votes(site):
+    ballots = conduct_election(site)
+    all_polls_closed.wait()        # do not count until all polls are closed
+    totals = summarize(ballots)
+    publish(site, totals)
+
+all_polls_closed = Barrier(len(sites))
+for site in sites:
+    Thread(target=get_votes, args=(site,)).start()

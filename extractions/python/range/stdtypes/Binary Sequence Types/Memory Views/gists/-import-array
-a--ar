@@ -1,0 +1,16 @@
+# name: >>> import array
+>>> 
+>>> import array
+>>> a = array.array('i', [1,2,3,4,5])
+>>> m = memoryview(a)
+>>> len(m)
+5
+>>> m.nbytes
+20
+>>> y = m[::2]
+>>> len(y)
+3
+>>> y.nbytes
+12
+>>> len(y.tobytes())
+12

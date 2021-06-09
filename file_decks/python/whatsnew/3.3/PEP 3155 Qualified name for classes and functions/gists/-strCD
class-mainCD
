@@ -1,0 +1,6 @@
+# name: >>> str(C.D)
+"<class 
+>>> str(C.D)
+"<class '__main__.C.D'>"
+>>> str(C.D.meth)
+'<function C.D.meth at 0x7f46b9fe31e0>'

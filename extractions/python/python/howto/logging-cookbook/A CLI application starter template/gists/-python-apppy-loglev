@@ -1,0 +1,4 @@
+# name: $ python app.py --lo 
+$ python app.py --log-level WARNING start foo
+$ python app.py --log-level WARNING stop foo bar
+$ python app.py --log-level WARNING restart foo bar baz

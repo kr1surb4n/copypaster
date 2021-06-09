@@ -1,0 +1,7 @@
+# name: >>> p = Path('setup. 
+>>> p = Path('setup.py')
+>>> p.stat().st_mode
+33277
+>>> p.chmod(0o444)
+>>> p.stat().st_mode
+33060

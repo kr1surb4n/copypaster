@@ -1,0 +1,4 @@
+# name: >>> stats = context. 
+>>> stats = context.session_stats()
+>>> stats['hits'], stats['misses']
+(0, 0)

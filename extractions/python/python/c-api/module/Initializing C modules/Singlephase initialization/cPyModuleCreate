@@ -1,0 +1,2 @@
+# name: c.PyModule_Create 
+PyObject* PyModule_Create(PyModuleDef *def)

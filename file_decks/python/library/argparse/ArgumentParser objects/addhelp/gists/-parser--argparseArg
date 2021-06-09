@@ -1,0 +1,7 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG', prefix_chars='+/')
+>>> parser.print_help()
+usage: PROG [+h]
+
+optional arguments:
+  +h, ++help  show this help message and exit

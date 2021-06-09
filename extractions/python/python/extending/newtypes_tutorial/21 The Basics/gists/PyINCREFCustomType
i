@@ -1,0 +1,7 @@
+# name: Py_INCREF(&CustomTyp 
+Py_INCREF(&CustomType);
+if (PyModule_AddObject(m, "Custom", (PyObject *) &CustomType) < 0) {
+    Py_DECREF(&CustomType);
+    Py_DECREF(m);
+    return NULL;
+}

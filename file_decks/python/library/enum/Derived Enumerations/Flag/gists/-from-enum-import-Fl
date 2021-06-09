@@ -1,0 +1,11 @@
+# name: >>> from enum import 
+>>> from enum import Flag, auto
+>>> class Color(Flag):
+...     RED = auto()
+...     BLUE = auto()
+...     GREEN = auto()
+...
+>>> Color.RED & Color.GREEN
+<Color.0: 0>
+>>> bool(Color.RED & Color.GREEN)
+False

@@ -1,0 +1,2 @@
+# name: gc.get_referrers 
+gc.get_referrers(*objs)

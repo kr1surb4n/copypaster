@@ -1,0 +1,6 @@
+# name: >>> x = 10
+>>> def f 
+>>> x = 10
+>>> def foo():
+...     print(x)
+...     x += 1

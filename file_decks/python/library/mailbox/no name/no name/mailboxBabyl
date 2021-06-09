@@ -1,0 +1,2 @@
+# name: mailbox.Babyl 
+class mailbox.Babyl(path, factory=None, create=True)

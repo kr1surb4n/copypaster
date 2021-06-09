@@ -1,0 +1,2 @@
+# name: os.fchmod 
+os.fchmod(fd, mode)

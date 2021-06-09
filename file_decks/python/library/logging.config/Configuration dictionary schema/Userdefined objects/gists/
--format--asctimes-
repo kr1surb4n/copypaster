@@ -1,0 +1,6 @@
+# name: {
+  'format' : '%(as 
+{
+  'format' : '%(asctime)s %(levelname)-8s %(name)-15s %(message)s',
+  'datefmt' : '%Y-%m-%d %H:%M:%S'
+}

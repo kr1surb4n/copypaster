@@ -1,0 +1,9 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.method()
+<Mock name='mock.method()' id='...'>
+>>> mock.property.method.attribute()
+<Mock name='mock.property.method.attribute()' id='...'>
+>>> mock.method_calls
+[call.method(), call.property.method.attribute()]

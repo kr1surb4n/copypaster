@@ -1,0 +1,2 @@
+# name: pathlib.Path.link_to 
+Path.link_to(target)

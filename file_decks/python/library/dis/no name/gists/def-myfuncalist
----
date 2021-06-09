@@ -1,0 +1,4 @@
+# name: def myfunc(alist):
+  
+def myfunc(alist):
+    return len(alist)

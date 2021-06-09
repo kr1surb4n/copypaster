@@ -1,0 +1,2 @@
+# name: c.PyUnicodeDecodeErr 
+int PyUnicodeDecodeError_SetReason(PyObject *exc, const char *reason)

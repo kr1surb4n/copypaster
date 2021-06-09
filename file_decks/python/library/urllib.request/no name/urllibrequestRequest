@@ -1,0 +1,2 @@
+# name: urllib.request.Reque 
+class urllib.request.Request(url, data=None, headers={}, origin_req_host=None, unverifiable=False, method=None)

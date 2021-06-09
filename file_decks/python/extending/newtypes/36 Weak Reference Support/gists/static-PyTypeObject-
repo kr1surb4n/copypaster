@@ -1,0 +1,6 @@
+# name: static PyTypeObject  
+static PyTypeObject TrivialType = {
+    PyVarObject_HEAD_INIT(NULL, 0)
+    /* ... other members omitted for brevity ... */
+    .tp_weaklistoffset = offsetof(TrivialObject, weakreflist),
+};

@@ -1,0 +1,3 @@
+# name: >>> pprint.isreadabl 
+>>> pprint.isreadable(stuff)
+False

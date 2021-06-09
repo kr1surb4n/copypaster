@@ -1,0 +1,6 @@
+# name: >>> p = Path('.')
+>> 
+>>> p = Path('.')
+>>> [x for x in p.iterdir() if x.is_dir()]
+[PosixPath('.hg'), PosixPath('docs'), PosixPath('dist'),
+ PosixPath('__pycache__'), PosixPath('build')]

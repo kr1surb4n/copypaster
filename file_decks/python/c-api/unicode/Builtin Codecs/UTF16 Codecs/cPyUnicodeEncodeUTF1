@@ -1,0 +1,2 @@
+# name: c.PyUnicode_EncodeUT 
+PyObject* PyUnicode_EncodeUTF16(const Py_UNICODE *s, Py_ssize_t size, const char *errors, int byteorder)

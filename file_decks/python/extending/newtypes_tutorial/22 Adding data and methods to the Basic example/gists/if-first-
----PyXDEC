@@ -1,0 +1,7 @@
+# name: if (first) {
+    Py_ 
+if (first) {
+    Py_XDECREF(self->first);
+    Py_INCREF(first);
+    self->first = first;
+}

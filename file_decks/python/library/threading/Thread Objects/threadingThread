@@ -1,0 +1,2 @@
+# name: threading.Thread 
+class threading.Thread(group=None, target=None, name=None, args=(), kwargs={}, *, daemon=None)

@@ -1,0 +1,11 @@
+# name: >>> import random
+>> 
+>>> import random
+>>> # Generate 8 random numbers between [0, 10000)
+>>> rand_list = random.sample(range(10000), 8)
+>>> rand_list  
+[769, 7953, 9828, 6431, 8442, 9878, 6213, 2207]
+>>> sorted(rand_list)  
+[769, 2207, 6213, 6431, 7953, 8442, 9828, 9878]
+>>> sorted(rand_list, reverse=True)  
+[9878, 9828, 8442, 7953, 6431, 6213, 2207, 769]

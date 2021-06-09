@@ -1,0 +1,9 @@
+# name: import cProfile
+
+wit 
+import cProfile
+
+with cProfile.Profile() as pr:
+    # ... do something ...
+
+pr.print_stats()

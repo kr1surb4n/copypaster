@@ -1,0 +1,5 @@
+# name: >>> digits_re = r'\d 
+>>> digits_re = r'\d+'
+>>> sample = '/usr/sbin/sendmail - 0 errors, 12 warnings'
+>>> print(re.sub(digits_re, digits_re.replace('\\', r'\\'), sample))
+/usr/sbin/sendmail - \d+ errors, \d+ warnings

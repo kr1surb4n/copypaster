@@ -1,0 +1,8 @@
+# name: >>> p = re.compile(r 
+>>> p = re.compile(r'\bclass\b')
+>>> print(p.search('no class at all'))
+<re.Match object; span=(3, 8), match='class'>
+>>> print(p.search('the declassified algorithm'))
+None
+>>> print(p.search('one subclass is'))
+None

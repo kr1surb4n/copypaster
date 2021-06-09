@@ -1,0 +1,3 @@
+# name: p.sort_stats(SortKey 
+p.sort_stats(SortKey.NAME)
+p.print_stats()

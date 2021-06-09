@@ -1,0 +1,10 @@
+# name: >>> turtle.heading() 
+>>> turtle.heading()
+90.0
+>>> turtle.position()
+(0.00,-10.00)
+>>> turtle.home()
+>>> turtle.position()
+(0.00,0.00)
+>>> turtle.heading()
+0.0

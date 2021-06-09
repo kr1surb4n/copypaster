@@ -1,0 +1,2 @@
+# name: os.stat_result.st_rd 
+os.stat_result.st_rdev

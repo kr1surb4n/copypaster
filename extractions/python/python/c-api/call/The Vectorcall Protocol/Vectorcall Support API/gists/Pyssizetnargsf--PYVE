@@ -1,0 +1,2 @@
+# name: (Py_ssize_t)(nargsf  
+(Py_ssize_t)(nargsf & ~PY_VECTORCALL_ARGUMENTS_OFFSET)

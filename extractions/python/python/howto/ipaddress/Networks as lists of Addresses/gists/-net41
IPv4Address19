@@ -1,0 +1,10 @@
+# name: >>> net4[1]
+IPv4Addr 
+>>> net4[1]
+IPv4Address('192.0.2.1')
+>>> net4[-1]
+IPv4Address('192.0.2.255')
+>>> net6[1]
+IPv6Address('2001:db8::1')
+>>> net6[-1]
+IPv6Address('2001:db8::ffff:ffff')

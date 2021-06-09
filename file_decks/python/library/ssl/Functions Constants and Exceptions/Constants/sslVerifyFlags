@@ -1,0 +1,2 @@
+# name: ssl.VerifyFlags 
+class ssl.VerifyFlags

@@ -1,0 +1,3 @@
+# name: stripped_lines = [li 
+stripped_lines = [line.strip() for line in lines]
+existing_files = filter(os.path.exists, file_list)

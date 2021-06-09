@@ -1,0 +1,6 @@
+# name: def readline_generat 
+def readline_generator(fp):
+    line = fp.readline()
+    while line:
+        yield line
+        line = fp.readline()

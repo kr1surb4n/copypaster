@@ -1,0 +1,2 @@
+# name: raise new_exc from o 
+raise new_exc from original_exc

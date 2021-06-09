@@ -1,0 +1,10 @@
+# name: /*[clinic input]
+pic 
+/*[clinic input]
+pickle.Pickler.dump
+
+    obj: object
+    file as file_obj: object
+    protocol: object = NULL
+    *
+    fix_imports: bool = True

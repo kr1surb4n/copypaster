@@ -1,0 +1,4 @@
+# name: >>> temperature_febr 
+>>> temperature_february = NormalDist(5, 2.5)             # Celsius
+>>> temperature_february * (9/5) + 32                     # Fahrenheit
+NormalDist(mu=41.0, sigma=4.5)

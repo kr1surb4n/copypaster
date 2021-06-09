@@ -1,0 +1,19 @@
+# name: >>> u = chr(40960) + 
+>>> u = chr(40960) + 'abcd' + chr(1972)
+>>> u.encode('utf-8')
+b'\xea\x80\x80abcd\xde\xb4'
+>>> u.encode('ascii')  
+Traceback (most recent call last):
+    ...
+UnicodeEncodeError: 'ascii' codec can't encode character '\ua000' in
+  position 0: ordinal not in range(128)
+>>> u.encode('ascii', 'ignore')
+b'abcd'
+>>> u.encode('ascii', 'replace')
+b'?abcd?'
+>>> u.encode('ascii', 'xmlcharrefreplace')
+b'&#40960;abcd&#1972;'
+>>> u.encode('ascii', 'backslashreplace')
+b'\\ua000abcd\\u07b4'
+>>> u.encode('ascii', 'namereplace')
+b'\\N{YI SYLLABLE IT}abcd\\u07b4'

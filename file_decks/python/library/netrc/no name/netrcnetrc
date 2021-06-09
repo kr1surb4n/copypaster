@@ -1,0 +1,2 @@
+# name: netrc.netrc 
+class netrc.netrc([file])

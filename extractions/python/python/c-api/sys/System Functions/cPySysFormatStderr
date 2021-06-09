@@ -1,0 +1,2 @@
+# name: c.PySys_FormatStderr 
+void PySys_FormatStderr(const char *format, ...)

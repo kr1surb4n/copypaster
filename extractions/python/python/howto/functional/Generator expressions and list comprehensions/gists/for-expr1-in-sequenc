@@ -1,0 +1,14 @@
+# name: for expr1 in sequenc 
+for expr1 in sequence1:
+    if not (condition1):
+        continue   # Skip this element
+    for expr2 in sequence2:
+        if not (condition2):
+            continue   # Skip this element
+        ...
+        for exprN in sequenceN:
+            if not (conditionN):
+                continue   # Skip this element
+
+            # Output the value of
+            # the expression.

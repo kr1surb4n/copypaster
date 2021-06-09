@@ -1,0 +1,5 @@
+# name: >>> median_grouped([ 
+>>> median_grouped([1, 3, 3, 5, 7], interval=1)
+3.25
+>>> median_grouped([1, 3, 3, 5, 7], interval=2)
+3.5

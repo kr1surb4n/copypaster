@@ -1,0 +1,2 @@
+# name: c.PyDateTime_GET_YEA 
+int PyDateTime_GET_YEAR(PyDateTime_Date *o)

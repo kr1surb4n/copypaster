@@ -1,0 +1,2 @@
+# name: smtplib.LMTP 
+class smtplib.LMTP(host='', port=LMTP_PORT, local_hostname=None, source_address=None[, timeout])

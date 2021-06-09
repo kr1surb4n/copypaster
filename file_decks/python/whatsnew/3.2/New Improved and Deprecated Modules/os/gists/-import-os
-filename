@@ -1,0 +1,6 @@
+# name: >>> import os
+>>> fi 
+>>> import os
+>>> filename = 'Sehenswürdigkeiten'
+>>> os.fsencode(filename)
+b'Sehensw\xc3\xbcrdigkeiten'

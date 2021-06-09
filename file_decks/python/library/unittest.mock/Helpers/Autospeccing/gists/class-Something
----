@@ -1,0 +1,4 @@
+# name: class Something:
+    
+class Something:
+    a = 33

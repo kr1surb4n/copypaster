@@ -1,0 +1,4 @@
+# name: import cgitb
+cgitb.e 
+import cgitb
+cgitb.enable(display=0, logdir="/path/to/logdir")

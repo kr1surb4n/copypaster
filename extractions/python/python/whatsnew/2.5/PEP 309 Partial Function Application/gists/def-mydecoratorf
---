@@ -1,0 +1,7 @@
+# name: def my_decorator(f): 
+def my_decorator(f):
+    @functools.wraps(f)
+    def wrapper(*args, **kwds):
+        print 'Calling decorated function'
+        return f(*args, **kwds)
+    return wrapper

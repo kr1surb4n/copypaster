@@ -1,0 +1,2 @@
+# name: weakref.finalize.det 
+weakref.finalize.detach

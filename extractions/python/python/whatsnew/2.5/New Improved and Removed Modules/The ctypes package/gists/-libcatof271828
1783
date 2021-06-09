@@ -1,0 +1,6 @@
+# name: >>> libc.atof('2.718 
+>>> libc.atof('2.71828')
+-1783957616
+>>> libc.atof.restype = ctypes.c_double
+>>> libc.atof('2.71828')
+2.71828

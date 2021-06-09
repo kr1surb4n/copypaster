@@ -1,0 +1,2 @@
+# name: poplib.POP3.quit 
+POP3.quit()

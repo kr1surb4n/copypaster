@@ -1,0 +1,2 @@
+# name: unicodedata.name 
+unicodedata.name(chr[, default])

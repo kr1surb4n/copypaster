@@ -1,0 +1,2 @@
+# name: xml.etree.ElementTre 
+xml.etree.ElementInclude.include(elem, loader=None, base_url=None, max_depth=6)

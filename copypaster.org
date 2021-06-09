@@ -349,8 +349,13 @@ on app and other subapps.
 Soon I will have a simple GTK3 App Framework :D
 
 Now i have to look into parsing the documentation.
-
-** TODO parse python documentation
+** TODO fix the issue with removing stuff.
+** TODO file_loader - make it check files if they are text (fails on non-text)
+** TODO the snippets load slow. maybe some optimization?
+So the snippets load slow (due to the python)
+** TODO parse ctags generated file to build tree structure of functions and variable names
+** DONE parse python documentation
+- State "DONE"       from "WAITING"    [2021-06-09 Mi 14:40]
 so i switched to folders.
 i use a threads for going through sections.
 they are pretty nested. 3 levels.
@@ -362,3 +367,12 @@ probably something with path, elements, and traversing
 code objects are ok as long they are not in the
 dl or dt. if they are in dt or dl, they produce
 a lot of mess.
+
+<2021-06-09 Mi>
+so i am able to parse a single html file from the
+python docs. now i have to make the script accept
+the path to a file
+
+also, prune the folders.
+
+everything is done.

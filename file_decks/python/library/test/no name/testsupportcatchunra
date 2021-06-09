@@ -1,0 +1,2 @@
+# name: test.support.catch_u 
+test.support.catch_unraisable_exception()

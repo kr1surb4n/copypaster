@@ -1,0 +1,8 @@
+# name: example.py:7: Resour 
+example.py:7: ResourceWarning: unclosed file <_io.TextIOWrapper name='example.py' mode='r' encoding='UTF-8'>
+  f = None
+Object allocated at (most recent call first):
+  File "example.py", lineno 4
+    return open(__file__)
+  File "example.py", lineno 6
+    f = func()

@@ -1,0 +1,2 @@
+# name: asyncio.loop.connect 
+coroutine loop.connect_write_pipe(protocol_factory, pipe)

@@ -1,0 +1,7 @@
+# name: >>> @fun.register(co 
+>>> @fun.register(complex)
+... def _(arg, verbose=False):
+...     if verbose:
+...         print("Better than complicated.", end=" ")
+...     print(arg.real, arg.imag)
+...

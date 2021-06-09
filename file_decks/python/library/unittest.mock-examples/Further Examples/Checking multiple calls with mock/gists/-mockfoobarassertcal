@@ -1,0 +1,7 @@
+# name: >>> mock.foo_bar.ass 
+>>> mock.foo_bar.assert_called_once_with('baz', spam='eggs')
+>>> mock.foo_bar()
+>>> mock.foo_bar.assert_called_once_with('baz', spam='eggs')
+Traceback (most recent call last):
+    ...
+AssertionError: Expected to be called once. Called 2 times.

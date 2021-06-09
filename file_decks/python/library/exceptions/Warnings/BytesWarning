@@ -1,0 +1,2 @@
+# name: BytesWarning 
+exception BytesWarning

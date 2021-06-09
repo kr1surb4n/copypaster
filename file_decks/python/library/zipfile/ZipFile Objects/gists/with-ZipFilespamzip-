@@ -1,0 +1,4 @@
+# name: with ZipFile('spam.z 
+with ZipFile('spam.zip') as myzip:
+    with myzip.open('eggs.txt') as myfile:
+        print(myfile.read())

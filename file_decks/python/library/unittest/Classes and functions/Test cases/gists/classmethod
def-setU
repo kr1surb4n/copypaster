@@ -1,0 +1,5 @@
+# name: @classmethod
+def set 
+@classmethod
+def setUpClass(cls):
+    ...

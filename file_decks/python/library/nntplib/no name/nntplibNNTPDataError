@@ -1,0 +1,2 @@
+# name: nntplib.NNTPDataErro 
+exception nntplib.NNTPDataError

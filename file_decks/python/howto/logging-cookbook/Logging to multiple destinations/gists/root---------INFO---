@@ -1,0 +1,5 @@
+# name: root        : INFO   
+root        : INFO     Jackdaws love my big sphinx of quartz.
+myapp.area1 : INFO     How quickly daft jumping zebras vex.
+myapp.area2 : WARNING  Jail zesty vixen who grabbed pay from quack.
+myapp.area2 : ERROR    The five boxing wizards jump quickly.

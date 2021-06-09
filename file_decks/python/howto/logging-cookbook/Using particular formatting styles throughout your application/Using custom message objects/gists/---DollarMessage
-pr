@@ -1,0 +1,5 @@
+# name: >>> __ = DollarMessa 
+>>> __ = DollarMessage
+>>> print(__('Message with $num $what', num=2, what='placeholders'))
+Message with 2 placeholders
+>>>

@@ -1,0 +1,8 @@
+# name: element = root.find( 
+element = root.find('foo')
+
+if not element:  # careful!
+    print("element not found, or element has no subelements")
+
+if element is None:
+    print("element not found")

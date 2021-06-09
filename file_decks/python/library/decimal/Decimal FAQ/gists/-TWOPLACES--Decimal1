@@ -1,0 +1,2 @@
+# name: >>> TWOPLACES = Deci 
+>>> TWOPLACES = Decimal(10) ** -2       # same as Decimal('0.01')

@@ -1,0 +1,10 @@
+# name: >>> class Color(Enum 
+>>> class Color(Enum):
+...     _order_ = 'RED GREEN BLUE'
+...     RED = 1
+...     BLUE = 3
+...     GREEN = 2
+...
+Traceback (most recent call last):
+...
+TypeError: member order does not match _order_

@@ -1,0 +1,2 @@
+# name: lzma.compress 
+lzma.compress(data, format=FORMAT_XZ, check=-1, preset=None, filters=None)

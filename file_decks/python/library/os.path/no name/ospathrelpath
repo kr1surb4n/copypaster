@@ -1,0 +1,2 @@
+# name: os.path.relpath 
+os.path.relpath(path, start=os.curdir)

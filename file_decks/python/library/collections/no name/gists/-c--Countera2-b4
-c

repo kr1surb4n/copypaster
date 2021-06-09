@@ -1,0 +1,6 @@
+# name: >>> c = Counter(a=2, 
+>>> c = Counter(a=2, b=-4)
+>>> +c
+Counter({'a': 2})
+>>> -c
+Counter({'b': 4})

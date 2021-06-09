@@ -1,0 +1,2 @@
+# name: urllib.request.build 
+urllib.request.build_opener([handler, ...])

@@ -1,0 +1,9 @@
+# name: def check_moon(optio 
+def check_moon(option, opt_str, value, parser):
+    if is_moon_full():
+        raise OptionValueError("%s option invalid when moon is full"
+                               % opt_str)
+    setattr(parser.values, option.dest, 1)
+...
+parser.add_option("--foo",
+                  action="callback", callback=check_moon, dest="foo")

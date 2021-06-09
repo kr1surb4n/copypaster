@@ -1,0 +1,2 @@
+# name: c.PyNumber_ToBase 
+PyObject* PyNumber_ToBase(PyObject *n, int base)

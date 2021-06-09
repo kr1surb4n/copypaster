@@ -1,0 +1,2 @@
+# name: quit 
+quit(code=None)

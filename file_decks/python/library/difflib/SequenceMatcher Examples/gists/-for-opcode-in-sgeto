@@ -1,0 +1,6 @@
+# name: >>> for opcode in s. 
+>>> for opcode in s.get_opcodes():
+...     print("%6s a[%d:%d] b[%d:%d]" % opcode)
+ equal a[0:8] b[0:8]
+insert a[8:8] b[8:17]
+ equal a[8:29] b[17:38]

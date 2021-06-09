@@ -1,0 +1,6 @@
+# name: >>> from imaplib imp 
+>>> from imaplib import IMAP4
+>>> with IMAP4("domain.org") as M:
+...     M.noop()
+...
+('OK', [b'Nothing Accomplished. d25if65hy903weo.87'])

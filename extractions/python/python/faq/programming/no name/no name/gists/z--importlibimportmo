@@ -1,0 +1,2 @@
+# name: z = importlib.import 
+z = importlib.import_module('x.y.z')

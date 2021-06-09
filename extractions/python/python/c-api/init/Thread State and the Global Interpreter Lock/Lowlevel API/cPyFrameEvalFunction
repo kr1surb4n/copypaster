@@ -1,0 +1,2 @@
+# name: c._PyFrameEvalFuncti 
+PyObject* (*_PyFrameEvalFunction)(PyThreadState *tstate, PyFrameObject *frame, int throwflag)

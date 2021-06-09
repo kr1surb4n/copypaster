@@ -1,0 +1,5 @@
+# name: >>> email = "tony@ti 
+>>> email = "tony@tiremove_thisger.net"
+>>> m = re.search("remove_this", email)
+>>> email[:m.start()] + email[m.end():]
+'tony@tiger.net'

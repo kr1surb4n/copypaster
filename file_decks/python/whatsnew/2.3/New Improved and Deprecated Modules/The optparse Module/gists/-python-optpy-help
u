@@ -1,0 +1,11 @@
+# name: $ ./python opt.py -- 
+$ ./python opt.py --help
+usage: opt.py [options]
+
+options:
+  -h, --help            show this help message and exit
+  -iINPUT, --input=INPUT
+                        set input filename
+  -lLENGTH, --length=LENGTH
+                        set maximum length of output
+$

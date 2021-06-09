@@ -1,0 +1,5 @@
+# name: >>> code = compile(' 
+>>> code = compile('a + 5', 'file.py', 'eval')
+>>> a = 5
+>>> eval(code)
+10

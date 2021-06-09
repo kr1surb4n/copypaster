@@ -1,0 +1,7 @@
+# name: def main():
+    # Cl 
+def main():
+    # Close the file explicitly when exiting the with block
+    with open(sys.argv[1]) as fp:
+        nlines = len(fp.readlines())
+    print(nlines)

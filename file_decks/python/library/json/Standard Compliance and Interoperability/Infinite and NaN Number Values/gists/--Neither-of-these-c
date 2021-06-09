@@ -1,0 +1,11 @@
+# name: >>> # Neither of the 
+>>> # Neither of these calls raises an exception, but the results are not valid JSON
+>>> json.dumps(float('-inf'))
+'-Infinity'
+>>> json.dumps(float('nan'))
+'NaN'
+>>> # Same when deserializing
+>>> json.loads('-Infinity')
+-inf
+>>> json.loads('NaN')
+nan

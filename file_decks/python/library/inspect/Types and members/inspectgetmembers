@@ -1,0 +1,2 @@
+# name: inspect.getmembers 
+inspect.getmembers(object[, predicate])

@@ -1,0 +1,6 @@
+# name: >>> def foo(a, b='ha 
+>>> def foo(a, b='ham', *args): pass
+>>> ba = inspect.signature(foo).bind('spam')
+>>> ba.apply_defaults()
+>>> ba.arguments
+{'a': 'spam', 'b': 'ham', 'args': ()}

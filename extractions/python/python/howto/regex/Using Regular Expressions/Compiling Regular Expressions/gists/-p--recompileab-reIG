@@ -1,0 +1,2 @@
+# name: >>> p = re.compile(' 
+>>> p = re.compile('ab*', re.IGNORECASE)

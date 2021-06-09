@@ -1,0 +1,4 @@
+# name: >>> comment_string = 
+>>> comment_string = '#....... Section 3.2.1 Issue #32 .......'
+>>> comment_string.strip('.#! ')
+'Section 3.2.1 Issue #32'

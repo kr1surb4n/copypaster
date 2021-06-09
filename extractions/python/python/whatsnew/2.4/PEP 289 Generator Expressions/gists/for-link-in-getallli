@@ -1,0 +1,5 @@
+# name: for link in get_all_ 
+for link in get_all_links():
+    if link.followed:
+        continue
+    ...

@@ -1,0 +1,2 @@
+# name: cmdoption-timeit-s 
+-s S, --setup=S

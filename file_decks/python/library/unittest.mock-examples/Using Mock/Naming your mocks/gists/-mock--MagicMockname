@@ -1,0 +1,6 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock(name='foo')
+>>> mock
+<MagicMock name='foo' id='...'>
+>>> mock.method
+<MagicMock name='foo.method' id='...'>

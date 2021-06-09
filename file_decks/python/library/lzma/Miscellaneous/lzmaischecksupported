@@ -1,0 +1,2 @@
+# name: lzma.is_check_suppor 
+lzma.is_check_supported(check)

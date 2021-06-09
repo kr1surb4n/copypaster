@@ -1,0 +1,11 @@
+# name: >>> from shutil impo 
+>>> from shutil import make_archive
+>>> import os
+>>> archive_name = os.path.expanduser(os.path.join('~', 'myarchive'))
+>>> make_archive(
+...     archive_name,
+...     'tar',
+...     root_dir='tmp/root',
+...     base_dir='structure/content',
+... )
+'/Users/tarek/my_archive.tar'

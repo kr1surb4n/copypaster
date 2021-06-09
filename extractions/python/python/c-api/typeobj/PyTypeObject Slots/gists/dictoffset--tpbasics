@@ -1,0 +1,4 @@
+# name: dictoffset = tp_basi 
+dictoffset = tp_basicsize + abs(ob_size)*tp_itemsize + tp_dictoffset
+if dictoffset is not aligned on sizeof(void*):
+    round up to sizeof(void*)

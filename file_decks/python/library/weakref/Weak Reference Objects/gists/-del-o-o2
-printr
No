@@ -1,0 +1,5 @@
+# name: >>> del o, o2
+>>> pr 
+>>> del o, o2
+>>> print(r())
+None

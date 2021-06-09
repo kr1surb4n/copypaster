@@ -1,0 +1,2 @@
+# name: c.PyCode_Type 
+PyTypeObject PyCode_Type

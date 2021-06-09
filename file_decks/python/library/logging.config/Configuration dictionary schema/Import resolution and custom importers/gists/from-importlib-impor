@@ -1,0 +1,5 @@
+# name: from importlib impor 
+from importlib import import_module
+from logging.config import BaseConfigurator
+
+BaseConfigurator.importer = staticmethod(import_module)

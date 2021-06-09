@@ -1,0 +1,4 @@
+# name: parser.add_option("- 
+parser.add_option("-n", "--dry-run", ...)
+...
+parser.add_option("-n", "--noisy", ...)

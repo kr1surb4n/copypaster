@@ -1,0 +1,10 @@
+# name: >>> running = True
+> 
+>>> running = True
+>>> def f():
+...     if running:
+...         fd(50)
+...         lt(60)
+...         screen.ontimer(f, 250)
+>>> f()   ### makes the turtle march around
+>>> running = False

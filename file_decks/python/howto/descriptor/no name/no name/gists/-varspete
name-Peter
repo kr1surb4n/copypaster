@@ -1,0 +1,6 @@
+# name: >>> vars(pete)
+{'_na 
+>>> vars(pete)
+{'_name': 'Peter P', '_age': 10}
+>>> vars(kate)
+{'_name': 'Catherine C', '_age': 20}

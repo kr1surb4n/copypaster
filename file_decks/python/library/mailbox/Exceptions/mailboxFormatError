@@ -1,0 +1,2 @@
+# name: mailbox.FormatError 
+exception mailbox.FormatError

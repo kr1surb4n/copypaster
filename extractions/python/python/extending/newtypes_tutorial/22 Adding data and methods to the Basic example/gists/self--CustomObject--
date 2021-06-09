@@ -1,0 +1,2 @@
+# name: self = (CustomObject 
+self = (CustomObject *) type->tp_alloc(type, 0);

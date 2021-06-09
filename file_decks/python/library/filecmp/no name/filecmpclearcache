@@ -1,0 +1,2 @@
+# name: filecmp.clear_cache 
+filecmp.clear_cache()

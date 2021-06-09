@@ -1,0 +1,11 @@
+# name: @dataclass
+class Bas 
+@dataclass
+class Base:
+    x: Any = 15.0
+    y: int = 0
+
+@dataclass
+class C(Base):
+    z: int = 10
+    x: int = 15

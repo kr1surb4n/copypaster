@@ -1,0 +1,2 @@
+# name: tkinter.messagebox.s 
+tkinter.messagebox.showwarning(title=None, message=None, **options)

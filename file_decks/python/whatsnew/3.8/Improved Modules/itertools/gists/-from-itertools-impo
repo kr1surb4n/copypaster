@@ -1,0 +1,4 @@
+# name: >>> from itertools i 
+>>> from itertools import accumulate
+>>> list(accumulate([10, 5, 30, 15], initial=1000))
+[1000, 1010, 1015, 1045, 1060]

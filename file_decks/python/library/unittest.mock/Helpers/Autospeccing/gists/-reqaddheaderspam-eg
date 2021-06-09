@@ -1,0 +1,8 @@
+# name: >>> req.add_header(' 
+>>> req.add_header('spam', 'eggs')
+<MagicMock name='request.Request().add_header()' id='...'>
+>>> req.add_header.assret_called_with
+Traceback (most recent call last):
+ ...
+AttributeError: Mock object has no attribute 'assret_called_with'
+>>> req.add_header.assert_called_with('spam', 'eggs')

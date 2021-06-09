@@ -1,0 +1,2 @@
+# name: c.PyType_HasFeature 
+int PyType_HasFeature(PyTypeObject *o, int feature)

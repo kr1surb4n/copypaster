@@ -1,0 +1,9 @@
+# name: static int
+Custom_cl 
+static int
+Custom_clear(CustomObject *self)
+{
+    Py_CLEAR(self->first);
+    Py_CLEAR(self->last);
+    return 0;
+}

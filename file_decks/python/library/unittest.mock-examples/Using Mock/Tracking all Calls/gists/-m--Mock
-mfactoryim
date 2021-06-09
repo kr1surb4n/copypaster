@@ -1,0 +1,7 @@
+# name: >>> m = Mock()
+>>> m 
+>>> m = Mock()
+>>> m.factory(important=True).deliver()
+<Mock name='mock.factory().deliver()' id='...'>
+>>> m.mock_calls[-1] == call.factory(important=False).deliver()
+True

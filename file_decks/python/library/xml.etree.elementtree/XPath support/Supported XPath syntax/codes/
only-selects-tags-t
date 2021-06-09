@@ -1,0 +1,4 @@
+# name: {}*
+only selects tag 
+{}*
+only selects tags that are not in a namespace.

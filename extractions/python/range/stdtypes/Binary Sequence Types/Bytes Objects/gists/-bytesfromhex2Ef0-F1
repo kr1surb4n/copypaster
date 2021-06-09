@@ -1,0 +1,3 @@
+# name: >>> bytes.fromhex('2 
+>>> bytes.fromhex('2Ef0 F1f2  ')
+b'.\xf0\xf1\xf2'

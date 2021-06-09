@@ -1,0 +1,8 @@
+# name: try:
+    ...
+except  
+try:
+    ...
+except SomeException:
+    tb = sys.exc_info()[2]
+    raise OtherException(...).with_traceback(tb)

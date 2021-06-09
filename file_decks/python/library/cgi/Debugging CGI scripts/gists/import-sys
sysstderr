@@ -1,0 +1,7 @@
+# name: import sys
+sys.stder 
+import sys
+sys.stderr = sys.stdout
+print("Content-Type: text/plain")
+print()
+...your code here...

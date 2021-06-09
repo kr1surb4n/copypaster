@@ -1,0 +1,2 @@
+# name: tokenize.detect_enco 
+tokenize.detect_encoding(readline)

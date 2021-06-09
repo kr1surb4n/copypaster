@@ -1,0 +1,2 @@
+# name: c.PyObject_Size 
+Py_ssize_t PyObject_Size(PyObject *o)

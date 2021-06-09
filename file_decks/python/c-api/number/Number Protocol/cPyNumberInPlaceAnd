@@ -1,0 +1,2 @@
+# name: c.PyNumber_InPlaceAn 
+PyObject* PyNumber_InPlaceAnd(PyObject *o1, PyObject *o2)

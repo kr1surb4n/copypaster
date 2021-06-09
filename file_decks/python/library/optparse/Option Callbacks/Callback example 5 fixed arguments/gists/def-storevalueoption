@@ -1,0 +1,7 @@
+# name: def store_value(opti 
+def store_value(option, opt_str, value, parser):
+    setattr(parser.values, option.dest, value)
+...
+parser.add_option("--foo",
+                  action="callback", callback=store_value,
+                  type="int", nargs=3, dest="foo")

@@ -1,0 +1,2 @@
+# name: signal.siginterrupt 
+signal.siginterrupt(signalnum, flag)

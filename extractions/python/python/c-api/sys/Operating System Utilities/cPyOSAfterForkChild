@@ -1,0 +1,2 @@
+# name: c.PyOS_AfterFork_Chi 
+void PyOS_AfterFork_Child()

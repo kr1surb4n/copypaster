@@ -1,0 +1,6 @@
+# name: $ /usr/bin/foo -n
+Us 
+$ /usr/bin/foo -n
+Usage: foo [options]
+
+foo: error: -n option requires an argument

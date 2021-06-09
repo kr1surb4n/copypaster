@@ -1,0 +1,5 @@
+# name: >>> (1, 2)[3] = 'moo 
+>>> (1, 2)[3] = 'moo'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: object doesn't support item assignment

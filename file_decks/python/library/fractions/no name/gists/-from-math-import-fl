@@ -1,0 +1,4 @@
+# name: >>> from math import 
+>>> from math import floor
+>>> floor(Fraction(355, 113))
+3

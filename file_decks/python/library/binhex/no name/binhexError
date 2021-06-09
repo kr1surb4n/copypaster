@@ -1,0 +1,2 @@
+# name: binhex.Error 
+exception binhex.Error

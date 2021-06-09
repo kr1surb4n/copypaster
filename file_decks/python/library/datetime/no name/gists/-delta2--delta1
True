@@ -1,0 +1,8 @@
+# name: >>> delta2 > delta1
+ 
+>>> delta2 > delta1
+True
+>>> delta2 > 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: '>' not supported between instances of 'datetime.timedelta' and 'int'

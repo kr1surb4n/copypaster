@@ -1,0 +1,6 @@
+# name: >>> @patch('sys.non_ 
+>>> @patch('sys.non_existing_attribute', 42, create=True)
+... def test(mock_stdout):
+...     assert sys.non_existing_attribute == 42
+...
+>>> test()

@@ -1,0 +1,4 @@
+# name: class Derived(Base): 
+class Derived(Base):
+    def meth(self):
+        super().meth()  # calls Base.meth

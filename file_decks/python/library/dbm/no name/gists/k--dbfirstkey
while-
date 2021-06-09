@@ -1,0 +1,6 @@
+# name: k = db.firstkey()
+wh 
+k = db.firstkey()
+while k != None:
+    print(k)
+    k = db.nextkey(k)

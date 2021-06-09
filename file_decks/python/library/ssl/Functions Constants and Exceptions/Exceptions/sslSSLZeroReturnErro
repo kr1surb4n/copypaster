@@ -1,0 +1,2 @@
+# name: ssl.SSLZeroReturnErr 
+exception ssl.SSLZeroReturnError

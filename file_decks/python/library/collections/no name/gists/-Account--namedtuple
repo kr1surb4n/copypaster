@@ -1,0 +1,6 @@
+# name: >>> Account = namedt 
+>>> Account = namedtuple('Account', ['type', 'balance'], defaults=[0])
+>>> Account._field_defaults
+{'balance': 0}
+>>> Account('premium')
+Account(type='premium', balance=0)

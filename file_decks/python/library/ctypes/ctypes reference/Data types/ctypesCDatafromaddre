@@ -1,0 +1,2 @@
+# name: ctypes._CData.from_a 
+ctypes._CData.from_address

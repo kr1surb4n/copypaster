@@ -1,0 +1,6 @@
+# name: >>> mock = Mock()
+>> 
+>>> mock = Mock()
+>>> mock.side_effect = [3, 2, 1]
+>>> mock(), mock(), mock()
+(3, 2, 1)

@@ -1,0 +1,2 @@
+# name: str.strip 
+str.strip([chars])

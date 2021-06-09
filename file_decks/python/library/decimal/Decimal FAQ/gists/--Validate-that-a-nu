@@ -1,0 +1,4 @@
+# name: >>> # Validate that  
+>>> # Validate that a number does not exceed two places
+>>> Decimal('3.21').quantize(TWOPLACES, context=Context(traps=[Inexact]))
+Decimal('3.21')

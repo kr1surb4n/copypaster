@@ -1,0 +1,6 @@
+# name: >>> print(ast.dump(a 
+>>> print(ast.dump(ast.parse('pass'), indent=4))
+Module(
+    body=[
+        Pass()],
+    type_ignores=[])

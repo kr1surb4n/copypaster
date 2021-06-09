@@ -1,0 +1,17 @@
+# name: >>> eps = entry_poin 
+>>> eps = entry_points()  
+>>> list(eps)  
+['console_scripts', 'distutils.commands', 'distutils.setup_keywords', 'egg_info.writers', 'setuptools.installation']
+>>> scripts = eps['console_scripts']  
+>>> wheel = [ep for ep in scripts if ep.name == 'wheel'][0]  
+>>> wheel  
+EntryPoint(name='wheel', value='wheel.cli:main', group='console_scripts')
+>>> wheel.module  
+'wheel.cli'
+>>> wheel.attr  
+'main'
+>>> wheel.extras  
+[]
+>>> main = wheel.load()  
+>>> main  
+<function main at 0x103528488>

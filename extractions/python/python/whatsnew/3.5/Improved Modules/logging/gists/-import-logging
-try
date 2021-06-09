@@ -1,0 +1,8 @@
+# name: >>> import logging
+> 
+>>> import logging
+>>> try:
+...     1/0
+... except ZeroDivisionError as ex:
+...     logging.error('exception', exc_info=ex)
+ERROR:root:exception

@@ -1,0 +1,8 @@
+# name: from xml.parsers.exp 
+from xml.parsers.expat import ParserCreate, ExpatError, errors
+
+p = ParserCreate()
+try:
+    p.Parse(some_xml_document)
+except ExpatError as err:
+    print("Error:", errors.messages[err.code])

@@ -1,0 +1,13 @@
+# name: class UpperOut:
+
+    
+class UpperOut:
+
+    def __init__(self, outfile):
+        self._outfile = outfile
+
+    def write(self, s):
+        self._outfile.write(s.upper())
+
+    def __getattr__(self, name):
+        return getattr(self._outfile, name)

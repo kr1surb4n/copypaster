@@ -1,0 +1,7 @@
+# name: -ffoo
+-f foo
+--file= 
+-ffoo
+-f foo
+--file=foo
+--file foo

@@ -1,0 +1,7 @@
+# name: >>> ipaddress.IPv4Ad 
+>>> ipaddress.IPv4Address('192.168.0.1')
+IPv4Address('192.168.0.1')
+>>> ipaddress.IPv4Address(3232235521)
+IPv4Address('192.168.0.1')
+>>> ipaddress.IPv4Address(b'\xC0\xA8\x00\x01')
+IPv4Address('192.168.0.1')

@@ -1,0 +1,14 @@
+# name: static int
+add_spam( 
+static int
+add_spam(PyObject *module, int value)
+{
+    PyObject *obj = PyLong_FromLong(value);
+    if (PyModule_AddObject(module, "spam", obj) < 0) {
+        Py_XDECREF(obj);
+        return -1;
+    }
+    // PyModule_AddObject() stole a reference to obj:
+    // Py_DECREF(obj) is not needed here
+    return 0;
+}

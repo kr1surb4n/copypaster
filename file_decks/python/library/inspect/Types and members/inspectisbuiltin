@@ -1,0 +1,2 @@
+# name: inspect.isbuiltin 
+inspect.isbuiltin(object)

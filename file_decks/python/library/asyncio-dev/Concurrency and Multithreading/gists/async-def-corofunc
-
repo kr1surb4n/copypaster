@@ -1,0 +1,9 @@
+# name: async def coro_func( 
+async def coro_func():
+     return await asyncio.sleep(1, 42)
+
+# Later in another OS thread:
+
+future = asyncio.run_coroutine_threadsafe(coro_func(), loop)
+# Wait for the result:
+result = future.result()

@@ -1,0 +1,2 @@
+# name: argparse.ArgumentPar 
+ArgumentParser.parse_known_args(args=None, namespace=None)

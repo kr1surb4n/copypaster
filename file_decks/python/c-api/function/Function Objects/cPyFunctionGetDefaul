@@ -1,0 +1,2 @@
+# name: c.PyFunction_GetDefa 
+PyObject* PyFunction_GetDefaults(PyObject *op)

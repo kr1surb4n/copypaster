@@ -1,0 +1,4 @@
+# name: >>> with q.open() as 
+>>> with q.open() as f: f.readline()
+...
+'#!/bin/bash\n'

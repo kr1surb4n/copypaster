@@ -1,0 +1,2 @@
+# name: x = json.load(f) 
+x = json.load(f)

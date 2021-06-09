@@ -1,0 +1,9 @@
+# name: >>> Path('.').exists 
+>>> Path('.').exists()
+True
+>>> Path('setup.py').exists()
+True
+>>> Path('/etc').exists()
+True
+>>> Path('nonexistentfile').exists()
+False

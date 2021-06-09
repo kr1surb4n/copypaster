@@ -1,0 +1,7 @@
+# name: def concat(a: AnyStr 
+def concat(a: AnyStr, b: AnyStr) -> AnyStr:
+    return a + b
+
+concat(u"foo", u"bar")  # Ok, output has type 'unicode'
+concat(b"foo", b"bar")  # Ok, output has type 'bytes'
+concat(u"foo", b"bar")  # Error, cannot mix unicode and bytes

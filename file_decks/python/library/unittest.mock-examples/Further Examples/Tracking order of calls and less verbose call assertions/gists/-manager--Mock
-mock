@@ -1,0 +1,4 @@
+# name: >>> manager = Mock() 
+>>> manager = Mock()
+>>> mock_foo = manager.foo
+>>> mock_bar = manager.bar

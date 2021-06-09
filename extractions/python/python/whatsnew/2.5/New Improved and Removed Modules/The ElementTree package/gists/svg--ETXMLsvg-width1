@@ -1,0 +1,5 @@
+# name: svg = ET.XML("""<svg 
+svg = ET.XML("""<svg width="10px" version="1.0">
+             </svg>""")
+svg.set('height', '320px')
+svg.append(elem1)

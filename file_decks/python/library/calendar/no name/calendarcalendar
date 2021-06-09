@@ -1,0 +1,2 @@
+# name: calendar.calendar 
+calendar.calendar(year, w=2, l=1, c=6, m=3)

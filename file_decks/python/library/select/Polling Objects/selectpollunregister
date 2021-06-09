@@ -1,0 +1,2 @@
+# name: select.poll.unregist 
+poll.unregister(fd)

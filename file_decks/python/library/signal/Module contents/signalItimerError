@@ -1,0 +1,2 @@
+# name: signal.ItimerError 
+exception signal.ItimerError

@@ -1,0 +1,2 @@
+# name: distutils.core.Comma 
+class distutils.core.Command

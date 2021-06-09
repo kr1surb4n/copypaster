@@ -1,0 +1,9 @@
+# name: >>> cmd = 'deploy sn 
+>>> cmd = 'deploy sneezy.example.com sleepy.example.com -u skycaptain'
+>>> result = parser.parse_args(cmd.split())
+>>> result.action
+'deploy'
+>>> result.targets
+['sneezy.example.com', 'sleepy.example.com']
+>>> result.user
+'skycaptain'

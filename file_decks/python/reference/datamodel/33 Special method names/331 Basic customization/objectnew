@@ -1,0 +1,2 @@
+# name: object.__new__ 
+object.__new__(cls[, ...])

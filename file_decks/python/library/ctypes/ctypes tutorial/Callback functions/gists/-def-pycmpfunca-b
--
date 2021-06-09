@@ -1,0 +1,13 @@
+# name: >>> def py_cmp_func( 
+>>> def py_cmp_func(a, b):
+...     print("py_cmp_func", a[0], b[0])
+...     return a[0] - b[0]
+...
+>>>
+>>> qsort(ia, len(ia), sizeof(c_int), CMPFUNC(py_cmp_func)) 
+py_cmp_func 5 1
+py_cmp_func 33 99
+py_cmp_func 7 33
+py_cmp_func 1 7
+py_cmp_func 5 7
+>>>

@@ -1,0 +1,2 @@
+# name: http.client.Improper 
+exception http.client.ImproperConnectionState

@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.xover 
+NNTP.xover(start, end, *, file=None)

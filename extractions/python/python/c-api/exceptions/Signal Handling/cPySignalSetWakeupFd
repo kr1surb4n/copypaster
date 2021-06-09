@@ -1,0 +1,2 @@
+# name: c.PySignal_SetWakeup 
+int PySignal_SetWakeupFd(int fd)

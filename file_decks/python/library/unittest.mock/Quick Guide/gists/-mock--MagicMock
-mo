@@ -1,0 +1,6 @@
+# name: >>> mock = MagicMock 
+>>> mock = MagicMock()
+>>> mock.__str__.return_value = 'foobarbaz'
+>>> str(mock)
+'foobarbaz'
+>>> mock.__str__.assert_called_with()

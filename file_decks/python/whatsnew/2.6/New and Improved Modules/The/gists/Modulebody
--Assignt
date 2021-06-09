@@ -1,0 +1,32 @@
+# name: Module(body=[
+  Assi 
+Module(body=[
+  Assign(targets=[
+    Name(id='d', ctx=Store())
+   ], value=Dict(keys=[], values=[]))
+  For(target=Name(id='i', ctx=Store()),
+      iter=Str(s='abcdefghijklm'), body=[
+    Assign(targets=[
+      Subscript(value=
+        Name(id='d', ctx=Load()),
+          slice=
+          Index(value=
+            BinOp(left=Name(id='i', ctx=Load()), op=Add(),
+             right=Name(id='i', ctx=Load()))), ctx=Store())
+     ], value=
+     BinOp(left=
+      BinOp(left=
+       Call(func=
+        Name(id='ord', ctx=Load()), args=[
+          Name(id='i', ctx=Load())
+         ], keywords=[], starargs=None, kwargs=None),
+       op=Sub(), right=Call(func=
+        Name(id='ord', ctx=Load()), args=[
+          Str(s='a')
+         ], keywords=[], starargs=None, kwargs=None)),
+       op=Add(), right=Num(n=1)))
+    ], orelse=[])
+   Print(dest=None, values=[
+     Name(id='d', ctx=Load())
+   ], nl=True)
+ ])

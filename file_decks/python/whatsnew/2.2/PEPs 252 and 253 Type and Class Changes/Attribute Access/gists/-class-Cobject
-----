@@ -1,0 +1,14 @@
+# name: >>> class C(object): 
+>>> class C(object):
+...     __slots__ = ('template', 'name')
+...
+>>> obj = C()
+>>> print obj.template
+None
+>>> obj.template = 'Test'
+>>> print obj.template
+Test
+>>> obj.newattr = None
+Traceback (most recent call last):
+  File "<stdin>", line 1, in ?
+AttributeError: 'C' object has no attribute 'newattr'

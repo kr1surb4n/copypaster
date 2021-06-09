@@ -1,0 +1,2 @@
+# name: optparse.OptionParse 
+OptionParser.add_option(option)

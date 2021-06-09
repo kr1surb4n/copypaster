@@ -1,0 +1,5 @@
+# name: >>> from logging imp 
+>>> from logging import basicConfig
+>>> basicConfig(style='%', format="%(name)s -> %(levelname)s: %(message)s")
+>>> basicConfig(style='{', format="{name} -> {levelname} {message}")
+>>> basicConfig(style='$', format="$name -> $levelname: $message")

@@ -1,0 +1,2 @@
+# name: def __init__(self, x 
+def __init__(self, x: int = 15, y: int = 0, z: int = 10):

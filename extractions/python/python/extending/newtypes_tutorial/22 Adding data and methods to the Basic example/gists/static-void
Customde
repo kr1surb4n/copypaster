@@ -1,0 +1,9 @@
+# name: static void
+Custom_d 
+static void
+Custom_dealloc(CustomObject *self)
+{
+    Py_XDECREF(self->first);
+    Py_XDECREF(self->last);
+    Py_TYPE(self)->tp_free((PyObject *) self);
+}

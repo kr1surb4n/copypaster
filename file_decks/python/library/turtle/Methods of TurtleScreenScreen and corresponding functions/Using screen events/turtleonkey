@@ -1,0 +1,2 @@
+# name: turtle.onkey 
+turtle.onkey(fun, key)

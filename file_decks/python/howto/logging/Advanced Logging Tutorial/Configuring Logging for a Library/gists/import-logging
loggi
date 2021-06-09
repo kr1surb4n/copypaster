@@ -1,0 +1,4 @@
+# name: import logging
+loggi 
+import logging
+logging.getLogger('foo').addHandler(logging.NullHandler())

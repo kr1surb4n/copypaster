@@ -1,0 +1,10 @@
+# name: handlers:
+  file:
+   
+handlers:
+  file:
+    # configuration of file handler goes here
+
+  custom:
+    (): my.package.MyHandler
+    alternate: cfg://handlers.file

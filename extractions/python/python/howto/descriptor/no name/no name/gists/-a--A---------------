@@ -1,0 +1,6 @@
+# name: >>> a = A()          
+>>> a = A()                     # Make an instance of class A
+>>> a.x                         # Normal attribute lookup
+5
+>>> a.y                         # Descriptor lookup
+10

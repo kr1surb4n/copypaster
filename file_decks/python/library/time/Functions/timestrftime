@@ -1,0 +1,2 @@
+# name: time.strftime 
+time.strftime(format[, t])

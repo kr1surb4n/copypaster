@@ -1,0 +1,2 @@
+# name: c.PyType_FromSpec 
+PyObject* PyType_FromSpec(PyType_Spec *spec)

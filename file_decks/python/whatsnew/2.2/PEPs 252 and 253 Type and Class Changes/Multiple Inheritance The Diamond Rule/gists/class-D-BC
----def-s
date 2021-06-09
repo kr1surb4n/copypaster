@@ -1,0 +1,8 @@
+# name: class D (B,C):
+    d 
+class D (B,C):
+    def save (self):
+        # Call superclass .save()
+        super(D, self).save()
+        # Save D's private information here
+        ...

@@ -1,0 +1,2 @@
+# name: python -m compileall 
+python -m compileall .

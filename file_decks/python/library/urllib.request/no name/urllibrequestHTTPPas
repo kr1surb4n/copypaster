@@ -1,0 +1,2 @@
+# name: urllib.request.HTTPP 
+class urllib.request.HTTPPasswordMgrWithPriorAuth

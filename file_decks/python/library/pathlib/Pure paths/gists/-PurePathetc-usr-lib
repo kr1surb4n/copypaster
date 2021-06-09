@@ -1,0 +1,5 @@
+# name: >>> PurePath('/etc', 
+>>> PurePath('/etc', '/usr', 'lib64')
+PurePosixPath('/usr/lib64')
+>>> PureWindowsPath('c:/Windows', 'd:bar')
+PureWindowsPath('d:bar')

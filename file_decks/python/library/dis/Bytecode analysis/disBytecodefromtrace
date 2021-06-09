@@ -1,0 +1,2 @@
+# name: dis.Bytecode.from_tr 
+dis.Bytecode.from_traceback

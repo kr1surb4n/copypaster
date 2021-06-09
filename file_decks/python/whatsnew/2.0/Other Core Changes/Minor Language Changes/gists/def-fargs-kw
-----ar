@@ -1,0 +1,6 @@
+# name: def f(*args, **kw):
+ 
+def f(*args, **kw):
+    # args is a tuple of positional args,
+    # kw is a dictionary of keyword args
+    ...

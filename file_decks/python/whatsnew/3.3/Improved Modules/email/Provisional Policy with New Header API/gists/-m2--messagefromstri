@@ -1,0 +1,4 @@
+# name: >>> m2 = message_fro 
+>>> m2 = message_from_string(str(m))
+>>> m2['to']
+'Éric <foo@example.com>'

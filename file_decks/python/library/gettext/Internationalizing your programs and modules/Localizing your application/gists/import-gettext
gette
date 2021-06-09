@@ -1,0 +1,4 @@
+# name: import gettext
+gette 
+import gettext
+gettext.install('myapplication', '/usr/share/locale')

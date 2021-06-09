@@ -1,0 +1,2 @@
+# name: str.split 
+str.split(sep=None, maxsplit=-1)

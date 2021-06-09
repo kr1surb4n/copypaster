@@ -1,0 +1,15 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(
+...     prog='PROG',
+...     formatter_class=argparse.MetavarTypeHelpFormatter)
+>>> parser.add_argument('--foo', type=int)
+>>> parser.add_argument('bar', type=float)
+>>> parser.print_help()
+usage: PROG [-h] [--foo int] float
+
+positional arguments:
+  float
+
+optional arguments:
+  -h, --help  show this help message and exit
+  --foo int

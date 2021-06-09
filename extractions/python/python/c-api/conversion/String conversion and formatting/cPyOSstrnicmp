@@ -1,0 +1,2 @@
+# name: c.PyOS_strnicmp 
+int PyOS_strnicmp(const char *s1, const char *s2, Py_ssize_t  size)

@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_ISALNUM 
+int Py_UNICODE_ISALNUM(Py_UNICODE ch)

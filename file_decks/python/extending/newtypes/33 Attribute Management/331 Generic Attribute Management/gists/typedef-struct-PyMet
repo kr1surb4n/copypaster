@@ -1,0 +1,7 @@
+# name: typedef struct PyMet 
+typedef struct PyMethodDef {
+    const char  *ml_name;       /* method name */
+    PyCFunction  ml_meth;       /* implementation function */
+    int          ml_flags;      /* flags */
+    const char  *ml_doc;        /* docstring */
+} PyMethodDef;

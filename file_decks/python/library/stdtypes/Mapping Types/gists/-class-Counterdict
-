@@ -1,0 +1,10 @@
+# name: >>> class Counter(di 
+>>> class Counter(dict):
+...     def __missing__(self, key):
+...         return 0
+>>> c = Counter()
+>>> c['red']
+0
+>>> c['red'] += 1
+>>> c['red']
+1

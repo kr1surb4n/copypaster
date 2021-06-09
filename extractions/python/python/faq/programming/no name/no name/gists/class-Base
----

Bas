@@ -1,0 +1,10 @@
+# name: class Base:
+    ...
+ 
+class Base:
+    ...
+
+BaseAlias = Base
+
+class Derived(BaseAlias):
+    ...

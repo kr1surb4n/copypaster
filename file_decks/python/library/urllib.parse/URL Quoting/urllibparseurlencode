@@ -1,0 +1,2 @@
+# name: urllib.parse.urlenco 
+urllib.parse.urlencode(query, doseq=False, safe='', encoding=None, errors=None, quote_via=quote_plus)

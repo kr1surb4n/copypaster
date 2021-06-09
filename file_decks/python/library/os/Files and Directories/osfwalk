@@ -1,0 +1,2 @@
+# name: os.fwalk 
+os.fwalk(top='.', topdown=True, onerror=None, *, follow_symlinks=False, dir_fd=None)

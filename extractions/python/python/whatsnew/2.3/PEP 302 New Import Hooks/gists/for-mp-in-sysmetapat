@@ -1,0 +1,19 @@
+# name: for mp in sys.meta_p 
+for mp in sys.meta_path:
+    loader = mp(fullname)
+    if loader is not None:
+        <module> = loader.load_module(fullname)
+
+for path in sys.path:
+    for hook in sys.path_hooks:
+        try:
+            importer = hook(path)
+        except ImportError:
+            # ImportError, so try the other path hooks
+            pass
+        else:
+            loader = importer.find_module(fullname)
+            <module> = loader.load_module(fullname)
+
+# Not found!
+raise ImportError

@@ -1,0 +1,4 @@
+# name: def __bool__(self):
+ 
+def __bool__(self):
+    return bool(self.value)

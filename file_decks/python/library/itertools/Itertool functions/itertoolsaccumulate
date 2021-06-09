@@ -1,0 +1,2 @@
+# name: itertools.accumulate 
+itertools.accumulate(iterable[, func, *, initial=None])

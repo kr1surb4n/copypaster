@@ -1,0 +1,2 @@
+# name: c.PyUnicode_DecodeUT 
+PyObject* PyUnicode_DecodeUTF32Stateful(const char *s, Py_ssize_t size, const char *errors, int *byteorder, Py_ssize_t *consumed)

@@ -1,0 +1,2 @@
+# name: ssl.PEM_cert_to_DER_ 
+ssl.PEM_cert_to_DER_cert(PEM_cert_string)

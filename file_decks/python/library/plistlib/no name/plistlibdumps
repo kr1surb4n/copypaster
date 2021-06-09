@@ -1,0 +1,2 @@
+# name: plistlib.dumps 
+plistlib.dumps(value, *, fmt=FMT_XML, sort_keys=True, skipkeys=False)

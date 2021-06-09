@@ -1,0 +1,2 @@
+# name: asyncio.all_tasks 
+asyncio.all_tasks(loop=None)

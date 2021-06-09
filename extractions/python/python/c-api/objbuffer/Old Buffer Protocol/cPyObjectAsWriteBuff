@@ -1,0 +1,2 @@
+# name: c.PyObject_AsWriteBu 
+int PyObject_AsWriteBuffer(PyObject *obj, void **buffer, Py_ssize_t *buffer_len)

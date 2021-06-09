@@ -1,0 +1,9 @@
+# name: def frob(val):
+    p 
+def frob(val):
+    pass
+
+def grob(val):
+    "First frob and then clear val"
+    frob(val)
+    val.clear()

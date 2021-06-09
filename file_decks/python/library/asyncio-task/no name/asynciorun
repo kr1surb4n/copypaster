@@ -1,0 +1,2 @@
+# name: asyncio.run 
+asyncio.run(coro, *, debug=False)

@@ -1,0 +1,34 @@
+# name: void init_python(voi 
+void init_python(void)
+{
+    PyStatus status;
+
+    PyConfig config;
+    PyConfig_InitPythonConfig(&config);
+    config._init_main = 0;
+
+    /* ... customize 'config' configuration ... */
+
+    status = Py_InitializeFromConfig(&config);
+    PyConfig_Clear(&config);
+    if (PyStatus_Exception(status)) {
+        Py_ExitStatusException(status);
+    }
+
+    /* Use sys.stderr because sys.stdout is only created
+       by _Py_InitializeMain() */
+    int res = PyRun_SimpleString(
+        "import sys; "
+        "print('Run Python code before _Py_InitializeMain', "
+               "file=sys.stderr)");
+    if (res < 0) {
+        exit(1);
+    }
+
+    /* ... put more configuration code here ... */
+
+    status = _Py_InitializeMain();
+    if (PyStatus_Exception(status)) {
+        Py_ExitStatusException(status);
+    }
+}

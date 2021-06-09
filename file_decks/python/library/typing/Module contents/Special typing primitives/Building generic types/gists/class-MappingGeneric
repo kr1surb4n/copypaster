@@ -1,0 +1,5 @@
+# name: class Mapping(Generi 
+class Mapping(Generic[KT, VT]):
+    def __getitem__(self, key: KT) -> VT:
+        ...
+        # Etc.

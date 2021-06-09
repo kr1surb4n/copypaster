@@ -1,0 +1,3 @@
+# name: option_list = [MyOpt 
+option_list = [MyOption("-c", action="store", type="complex", dest="c")]
+parser = OptionParser(option_list=option_list)

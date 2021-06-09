@@ -1,0 +1,2 @@
+# name: asyncio.loop.sock_se 
+coroutine loop.sock_sendall(sock, data)

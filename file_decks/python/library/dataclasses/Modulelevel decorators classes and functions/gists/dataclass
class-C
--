@@ -1,0 +1,11 @@
+# name: @dataclass
+class C:
+ 
+@dataclass
+class C:
+    x: int
+    y: 'typing.Any'
+    z: int = 5
+
+    def add_one(self):
+        return self.x + 1

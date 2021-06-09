@@ -1,0 +1,5 @@
+# name: class A:
+    x = 5   
+class A:
+    x = 5                       # Regular class attribute
+    y = Ten()                   # Descriptor instance

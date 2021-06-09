@@ -1,0 +1,2 @@
+# name: c.Py_SetPythonHome 
+void Py_SetPythonHome(const wchar_t *home)

@@ -1,0 +1,2 @@
+# name: c.PyOS_InputHook 
+int (*PyOS_InputHook)(void)

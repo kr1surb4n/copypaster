@@ -1,0 +1,9 @@
+# name: import mailbox
+desti 
+import mailbox
+destination = mailbox.MH('~/Mail')
+destination.lock()
+for message in mailbox.Babyl('~/RMAIL'):
+    destination.add(mailbox.MHMessage(message))
+destination.flush()
+destination.unlock()

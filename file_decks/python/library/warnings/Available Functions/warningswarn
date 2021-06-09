@@ -1,0 +1,2 @@
+# name: warnings.warn 
+warnings.warn(message, category=None, stacklevel=1, source=None)

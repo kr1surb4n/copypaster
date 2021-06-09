@@ -1,0 +1,11 @@
+# name: int ok;
+int i, j;
+lo 
+int ok;
+int i, j;
+long k, l;
+const char *s;
+Py_ssize_t size;
+
+ok = PyArg_ParseTuple(args, ""); /* No arguments */
+    /* Python call: f() */

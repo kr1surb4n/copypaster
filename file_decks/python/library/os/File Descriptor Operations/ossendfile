@@ -1,0 +1,2 @@
+# name: os.sendfile 
+os.sendfile(out_fd, in_fd, offset, count)

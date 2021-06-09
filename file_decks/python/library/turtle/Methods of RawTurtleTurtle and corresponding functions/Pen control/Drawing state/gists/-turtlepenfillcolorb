@@ -1,0 +1,15 @@
+# name: >>> turtle.pen(fillc 
+>>> turtle.pen(fillcolor="black", pencolor="red", pensize=10)
+>>> sorted(turtle.pen().items())
+[('fillcolor', 'black'), ('outline', 1), ('pencolor', 'red'),
+ ('pendown', True), ('pensize', 10), ('resizemode', 'noresize'),
+ ('shearfactor', 0.0), ('shown', True), ('speed', 9),
+ ('stretchfactor', (1.0, 1.0)), ('tilt', 0.0)]
+>>> penstate=turtle.pen()
+>>> turtle.color("yellow", "")
+>>> turtle.penup()
+>>> sorted(turtle.pen().items())[:3]
+[('fillcolor', ''), ('outline', 1), ('pencolor', 'yellow')]
+>>> turtle.pen(penstate, fillcolor="green")
+>>> sorted(turtle.pen().items())[:3]
+[('fillcolor', 'green'), ('outline', 1), ('pencolor', 'red')]

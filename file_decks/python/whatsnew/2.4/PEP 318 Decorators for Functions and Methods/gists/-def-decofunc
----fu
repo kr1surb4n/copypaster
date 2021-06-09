@@ -1,0 +1,14 @@
+# name: >>> def deco(func):
+ 
+>>> def deco(func):
+...    func.attr = 'decorated'
+...    return func
+...
+>>> @deco
+... def f(): pass
+...
+>>> f
+<function f at 0x402ef0d4>
+>>> f.attr
+'decorated'
+>>>

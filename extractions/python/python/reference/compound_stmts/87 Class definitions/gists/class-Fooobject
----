@@ -1,0 +1,4 @@
+# name: class Foo(object):
+  
+class Foo(object):
+    pass

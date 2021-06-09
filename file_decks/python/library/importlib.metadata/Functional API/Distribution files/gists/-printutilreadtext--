@@ -1,0 +1,9 @@
+# name: >>> print(util.read_ 
+>>> print(util.read_text())  
+import base64
+import sys
+...
+def as_bytes(s):
+    if isinstance(s, text_type):
+        return s.encode('utf-8')
+    return s

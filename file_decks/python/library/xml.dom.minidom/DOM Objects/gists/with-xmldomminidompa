@@ -1,0 +1,3 @@
+# name: with xml.dom.minidom 
+with xml.dom.minidom.parse(datasource) as dom:
+    ... # Work with dom.

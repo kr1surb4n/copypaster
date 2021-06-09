@@ -1,0 +1,2 @@
+# name: os.sysconf 
+os.sysconf(name)

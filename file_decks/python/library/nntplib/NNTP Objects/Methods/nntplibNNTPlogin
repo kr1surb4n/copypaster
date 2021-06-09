@@ -1,0 +1,2 @@
+# name: nntplib.NNTP.login 
+NNTP.login(user=None, password=None, usenetrc=True)

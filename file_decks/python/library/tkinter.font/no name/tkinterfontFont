@@ -1,0 +1,2 @@
+# name: tkinter.font.Font 
+class tkinter.font.Font(root=None, font=None, name=None, exists=False, **options)

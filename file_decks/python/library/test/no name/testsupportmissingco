@@ -1,0 +1,2 @@
+# name: test.support.missing 
+test.support.missing_compiler_executable(cmd_names=[])

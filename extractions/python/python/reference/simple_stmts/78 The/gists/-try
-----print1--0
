@@ -1,0 +1,10 @@
+# name: >>> try:
+...     pri 
+>>> try:
+...     print(1 / 0)
+... except:
+...     raise RuntimeError("Something bad happened") from None
+...
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+RuntimeError: Something bad happened

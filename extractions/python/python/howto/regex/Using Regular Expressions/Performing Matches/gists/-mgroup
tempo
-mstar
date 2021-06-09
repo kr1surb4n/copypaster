@@ -1,0 +1,8 @@
+# name: >>> m.group()
+'tempo 
+>>> m.group()
+'tempo'
+>>> m.start(), m.end()
+(0, 5)
+>>> m.span()
+(0, 5)

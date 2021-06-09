@@ -1,0 +1,2 @@
+# name: collections.abc.Hash 
+class collections.abc.Hashable

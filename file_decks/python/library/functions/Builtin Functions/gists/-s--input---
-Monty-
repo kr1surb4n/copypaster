@@ -1,0 +1,5 @@
+# name: >>> s = input('--> ' 
+>>> s = input('--> ')  
+--> Monty Python's Flying Circus
+>>> s  
+"Monty Python's Flying Circus"

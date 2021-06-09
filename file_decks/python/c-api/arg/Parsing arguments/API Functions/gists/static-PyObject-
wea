@@ -1,0 +1,14 @@
+# name: static PyObject *
+we 
+static PyObject *
+weakref_ref(PyObject *self, PyObject *args)
+{
+    PyObject *object;
+    PyObject *callback = NULL;
+    PyObject *result = NULL;
+
+    if (PyArg_UnpackTuple(args, "ref", 1, 2, &object, &callback)) {
+        result = PyWeakref_NewRef(object, callback);
+    }
+    return result;
+}

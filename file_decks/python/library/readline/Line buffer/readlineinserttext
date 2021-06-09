@@ -1,0 +1,2 @@
+# name: readline.insert_text 
+readline.insert_text(string)

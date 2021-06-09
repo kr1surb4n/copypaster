@@ -1,0 +1,6 @@
+# name: >>> m = re.match(r"( 
+>>> m = re.match(r"(\d+)\.?(\d+)?", "24")
+>>> m.groups()      # Second group defaults to None.
+('24', None)
+>>> m.groups('0')   # Now, the second group defaults to '0'.
+('24', '0')

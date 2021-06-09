@@ -1,0 +1,9 @@
+# name: >>> a + 4
+Decimal("3 
+>>> a + 4
+Decimal("39.72")
+>>> a + 4.5
+Traceback (most recent call last):
+  ...
+TypeError: You can interact Decimal only with int, long or Decimal data types.
+>>>

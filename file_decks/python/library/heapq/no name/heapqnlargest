@@ -1,0 +1,2 @@
+# name: heapq.nlargest 
+heapq.nlargest(n, iterable, key=None)

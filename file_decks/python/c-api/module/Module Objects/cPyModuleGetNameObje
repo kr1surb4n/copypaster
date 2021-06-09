@@ -1,0 +1,2 @@
+# name: c.PyModule_GetNameOb 
+PyObject* PyModule_GetNameObject(PyObject *module)

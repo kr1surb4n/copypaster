@@ -1,0 +1,5 @@
+# name: >>> for i in ia: pri 
+>>> for i in ia: print(i, end=" ")
+...
+1 5 7 33 99
+>>>

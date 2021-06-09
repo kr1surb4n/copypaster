@@ -1,0 +1,2 @@
+# name: c.PyImport_Import 
+PyObject* PyImport_Import(PyObject *name)

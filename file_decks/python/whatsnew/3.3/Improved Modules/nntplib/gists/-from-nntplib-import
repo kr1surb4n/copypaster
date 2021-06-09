@@ -1,0 +1,7 @@
+# name: >>> from nntplib imp 
+>>> from nntplib import NNTP
+>>> with NNTP('news.gmane.org') as n:
+...     n.group('gmane.comp.python.committers')
+...
+('211 1755 1 1755 gmane.comp.python.committers', 1755, 1, 1755, 'gmane.comp.python.committers')
+>>>

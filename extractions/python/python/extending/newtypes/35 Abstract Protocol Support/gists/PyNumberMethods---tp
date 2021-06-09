@@ -1,0 +1,4 @@
+# name: PyNumberMethods   *t 
+PyNumberMethods   *tp_as_number;
+PySequenceMethods *tp_as_sequence;
+PyMappingMethods  *tp_as_mapping;

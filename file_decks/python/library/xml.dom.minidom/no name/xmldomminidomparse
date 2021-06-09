@@ -1,0 +1,2 @@
+# name: xml.dom.minidom.pars 
+xml.dom.minidom.parse(filename_or_file, parser=None, bufsize=None)

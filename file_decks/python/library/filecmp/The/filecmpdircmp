@@ -1,0 +1,2 @@
+# name: filecmp.dircmp 
+class filecmp.dircmp(a, b, ignore=None, hide=None)

@@ -1,0 +1,2 @@
+# name: c.PyEval_RestoreThre 
+void PyEval_RestoreThread(PyThreadState *tstate)

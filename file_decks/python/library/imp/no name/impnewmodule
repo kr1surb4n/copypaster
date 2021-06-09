@@ -1,0 +1,2 @@
+# name: imp.new_module 
+imp.new_module(name)

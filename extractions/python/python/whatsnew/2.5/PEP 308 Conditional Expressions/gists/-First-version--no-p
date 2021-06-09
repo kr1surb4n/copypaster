@@ -1,0 +1,6 @@
+# name: # First version -- n 
+# First version -- no parens
+level = 1 if logging else 0
+
+# Second version -- with parens
+level = (1 if logging else 0)

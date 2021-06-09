@@ -1,0 +1,9 @@
+# name: xml_data = "<root>.. 
+xml_data = "<root>...</root>"
+print(canonicalize(xml_data))
+
+with open("c14n_output.xml", mode='w', encoding='utf-8') as out_file:
+    canonicalize(xml_data, out=out_file)
+
+with open("c14n_output.xml", mode='w', encoding='utf-8') as out_file:
+    canonicalize(from_file="inputfile.xml", out=out_file)

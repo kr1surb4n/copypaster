@@ -1,0 +1,2 @@
+# name: importlib.util.cache 
+importlib.util.cache_from_source(path, debug_override=None, *, optimization=None)

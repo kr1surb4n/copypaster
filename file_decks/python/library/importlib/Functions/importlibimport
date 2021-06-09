@@ -1,0 +1,2 @@
+# name: importlib.__import__ 
+importlib.__import__(name, globals=None, locals=None, fromlist=(), level=0)

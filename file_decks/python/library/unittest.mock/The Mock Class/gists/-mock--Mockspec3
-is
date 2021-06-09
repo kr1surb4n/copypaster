@@ -1,0 +1,4 @@
+# name: >>> mock = Mock(spec 
+>>> mock = Mock(spec=3)
+>>> isinstance(mock, int)
+True

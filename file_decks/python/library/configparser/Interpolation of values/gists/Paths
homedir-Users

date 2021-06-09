@@ -1,0 +1,9 @@
+# name: [Paths]
+home_dir: /U 
+[Paths]
+home_dir: /Users
+my_dir: ${home_dir}/lumberjack
+my_pictures: ${my_dir}/Pictures
+
+[Escape]
+cost: $$80  # use a $$ to escape the $ sign ($ is the only character that needs to be escaped)

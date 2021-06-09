@@ -1,0 +1,11 @@
+# name: >>> parser = argpars 
+>>> parser = argparse.ArgumentParser(prog='PROG')
+>>> parser.add_argument('-f', '--foo')
+>>> parser.add_argument('bar')
+>>> parser.parse_args(['BAR'])
+Namespace(bar='BAR', foo=None)
+>>> parser.parse_args(['BAR', '--foo', 'FOO'])
+Namespace(bar='BAR', foo='FOO')
+>>> parser.parse_args(['--foo', 'FOO'])
+usage: PROG [-h] [-f FOO] bar
+PROG: error: the following arguments are required: bar

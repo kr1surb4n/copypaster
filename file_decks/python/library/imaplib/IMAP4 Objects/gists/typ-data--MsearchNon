@@ -1,0 +1,5 @@
+# name: typ, data = M.search 
+typ, data = M.search(None, 'ALL')
+for num in data[0].split():
+   M.store(num, '+FLAGS', '\\Deleted')
+M.expunge()

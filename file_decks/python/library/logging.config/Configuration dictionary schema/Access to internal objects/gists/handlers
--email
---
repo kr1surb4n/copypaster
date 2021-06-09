@@ -1,0 +1,12 @@
+# name: handlers:
+  email:
+  
+handlers:
+  email:
+    class: logging.handlers.SMTPHandler
+    mailhost: localhost
+    fromaddr: my_app@domain.tld
+    toaddrs:
+      - support_team@domain.tld
+      - dev_team@domain.tld
+    subject: Houston, we have a problem.

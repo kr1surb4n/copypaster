@@ -1,0 +1,2 @@
+# name: tkinter.Widget.tk.cr 
+Widget.tk.createfilehandler(file, mask, func)

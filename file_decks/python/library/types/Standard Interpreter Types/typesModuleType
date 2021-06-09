@@ -1,0 +1,2 @@
+# name: types.ModuleType 
+class types.ModuleType(name, doc=None)

@@ -1,0 +1,2 @@
+# name: turtle.write_docstri 
+turtle.write_docstringdict(filename="turtle_docstringdict")

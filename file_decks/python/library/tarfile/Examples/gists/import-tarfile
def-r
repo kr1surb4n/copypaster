@@ -1,0 +1,10 @@
+# name: import tarfile
+def r 
+import tarfile
+def reset(tarinfo):
+    tarinfo.uid = tarinfo.gid = 0
+    tarinfo.uname = tarinfo.gname = "root"
+    return tarinfo
+tar = tarfile.open("sample.tar.gz", "w:gz")
+tar.add("foo", filter=reset)
+tar.close()

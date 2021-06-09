@@ -1,0 +1,2 @@
+# name: curses.init_pair 
+curses.init_pair(pair_number, fg, bg)

@@ -1,0 +1,7 @@
+# name: (PY_MAJOR_VERSION, # 
+(PY_MAJOR_VERSION, # the 2 in 2.1.0a3; an int
+ PY_MINOR_VERSION, # the 1; an int
+ PY_MICRO_VERSION, # the 0; an int
+ PY_RELEASE_LEVEL, # "alpha", "beta", "candidate" or "final"; string
+ PY_RELEASE_SERIAL # the 3; an int
+)

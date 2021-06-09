@@ -1,0 +1,2 @@
+# name: c.PyErr_BadInternalC 
+void PyErr_BadInternalCall()

@@ -1,0 +1,11 @@
+# name: >>> b = shared_memor 
+>>> b = shared_memory.ShareableList(range(5))         # In a first process
+>>> c = shared_memory.ShareableList(name=b.shm.name)  # In a second process
+>>> c
+ShareableList([0, 1, 2, 3, 4], name='...')
+>>> c[-1] = -999
+>>> b[-1]
+-999
+>>> b.shm.close()
+>>> c.shm.close()
+>>> c.shm.unlink()

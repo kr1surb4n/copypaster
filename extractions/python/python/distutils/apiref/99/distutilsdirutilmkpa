@@ -1,0 +1,2 @@
+# name: distutils.dir_util.m 
+distutils.dir_util.mkpath(name[, mode=0o777, verbose=0, dry_run=0])

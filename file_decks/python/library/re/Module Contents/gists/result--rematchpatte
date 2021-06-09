@@ -1,0 +1,2 @@
+# name: result = re.match(pa 
+result = re.match(pattern, string)

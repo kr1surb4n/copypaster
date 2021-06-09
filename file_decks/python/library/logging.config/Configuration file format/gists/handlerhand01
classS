@@ -1,0 +1,7 @@
+# name: [handler_hand01]
+cla 
+[handler_hand01]
+class=StreamHandler
+level=NOTSET
+formatter=form01
+args=(sys.stdout,)

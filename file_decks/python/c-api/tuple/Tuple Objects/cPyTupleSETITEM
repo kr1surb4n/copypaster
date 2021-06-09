@@ -1,0 +1,2 @@
+# name: c.PyTuple_SET_ITEM 
+void PyTuple_SET_ITEM(PyObject *p, Py_ssize_t pos, PyObject *o)

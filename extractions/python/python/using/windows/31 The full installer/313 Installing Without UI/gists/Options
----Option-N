@@ -1,0 +1,9 @@
+# name: <Options>
+    <Optio 
+<Options>
+    <Option Name="InstallAllUsers" Value="no" />
+    <Option Name="Include_launcher" Value="0" />
+    <Option Name="Include_test" Value="no" />
+    <Option Name="SimpleInstall" Value="yes" />
+    <Option Name="SimpleInstallDescription">Just for me, no test suite</Option>
+</Options>

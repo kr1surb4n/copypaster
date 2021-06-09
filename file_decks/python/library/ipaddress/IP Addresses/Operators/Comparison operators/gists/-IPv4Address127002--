@@ -1,0 +1,11 @@
+# name: >>> IPv4Address('127 
+>>> IPv4Address('127.0.0.2') > IPv4Address('127.0.0.1')
+True
+>>> IPv4Address('127.0.0.2') == IPv4Address('127.0.0.1')
+False
+>>> IPv4Address('127.0.0.2') != IPv4Address('127.0.0.1')
+True
+>>> IPv6Address('fe80::1234') == IPv6Address('fe80::1234%1')
+False
+>>> IPv6Address('fe80::1234%1') != IPv6Address('fe80::1234%2')
+True

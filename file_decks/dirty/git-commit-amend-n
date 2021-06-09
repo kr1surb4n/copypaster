@@ -1,2 +1,0 @@
-# name: git commit amend n 
-git commit --amend --no-edit

@@ -1,0 +1,2 @@
+# name: tokenize.generate_to 
+tokenize.generate_tokens(readline)

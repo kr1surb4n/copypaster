@@ -1,0 +1,2 @@
+# name: os.killpg 
+os.killpg(pgid, sig)

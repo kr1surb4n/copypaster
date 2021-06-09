@@ -1,0 +1,2 @@
+# name: asyncio.StreamWriter 
+asyncio.StreamWriter.is_closing

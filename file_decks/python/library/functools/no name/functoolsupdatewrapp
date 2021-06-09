@@ -1,0 +1,2 @@
+# name: functools.update_wra 
+functools.update_wrapper(wrapper, wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)

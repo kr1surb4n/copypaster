@@ -1,0 +1,11 @@
+# name: class C(ABC):
+    @p 
+class C(ABC):
+    @property
+    def x(self):
+        ...
+
+    @x.setter
+    @abstractmethod
+    def x(self, val):
+        ...

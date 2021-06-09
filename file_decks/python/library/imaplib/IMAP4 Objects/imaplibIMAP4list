@@ -1,0 +1,2 @@
+# name: imaplib.IMAP4.list 
+IMAP4.list([directory[, pattern]])

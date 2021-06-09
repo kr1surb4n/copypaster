@@ -1,0 +1,2 @@
+# name: weakref.finalize 
+class weakref.finalize(obj, func, /, *args, **kwargs)

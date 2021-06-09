@@ -1,0 +1,10 @@
+# name: list of:
++------+    
+list of:
++------+                   +---------+
+|module| --DocTestFinder-> | DocTest | --DocTestRunner-> results
++------+    |        ^     +---------+     |       ^    (printed)
+            |        |     | Example |     |       |
+            v        |     |   ...   |     v       |
+           DocTestParser   | Example |   OutputChecker
+                           +---------+

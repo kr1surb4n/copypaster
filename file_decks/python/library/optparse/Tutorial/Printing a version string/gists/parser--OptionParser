@@ -1,0 +1,2 @@
+# name: parser = OptionParse 
+parser = OptionParser(usage="%prog [-f] [-q]", version="%prog 1.0")

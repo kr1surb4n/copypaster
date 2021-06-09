@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_ISTITLE 
+int Py_UNICODE_ISTITLE(Py_UNICODE ch)

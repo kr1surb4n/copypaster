@@ -1,0 +1,2 @@
+# name: unittest.addModuleCl 
+unittest.addModuleCleanup(function, /, *args, **kwargs)

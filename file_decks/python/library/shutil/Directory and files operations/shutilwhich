@@ -1,0 +1,2 @@
+# name: shutil.which 
+shutil.which(cmd, mode=os.F_OK | os.X_OK, path=None)

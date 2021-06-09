@@ -1,0 +1,2 @@
+# name: timeit.Timer 
+class timeit.Timer(stmt='pass', setup='pass', timer=<timer function>, globals=None)

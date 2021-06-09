@@ -1,0 +1,8 @@
+# name: >>> from email.messa 
+>>> from email.message import Message
+>>> from email.header import Header
+>>> msg = Message()
+>>> h = Header('p\xf6stal', 'iso-8859-1')
+>>> msg['Subject'] = h
+>>> msg.as_string()
+'Subject: =?iso-8859-1?q?p=F6stal?=\n\n'

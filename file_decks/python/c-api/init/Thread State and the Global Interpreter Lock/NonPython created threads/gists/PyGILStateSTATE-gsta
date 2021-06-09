@@ -1,0 +1,10 @@
+# name: PyGILState_STATE gst 
+PyGILState_STATE gstate;
+gstate = PyGILState_Ensure();
+
+/* Perform Python actions here. */
+result = CallSomeFunction();
+/* evaluate result or handle exception */
+
+/* Release the thread. No Python API allowed beyond this point. */
+PyGILState_Release(gstate);

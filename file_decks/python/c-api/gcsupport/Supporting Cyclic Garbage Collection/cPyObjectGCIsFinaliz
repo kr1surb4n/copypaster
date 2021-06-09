@@ -1,0 +1,2 @@
+# name: c.PyObject_GC_IsFina 
+int PyObject_GC_IsFinalized(PyObject *op)

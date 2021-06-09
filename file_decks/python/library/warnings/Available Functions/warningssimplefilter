@@ -1,0 +1,2 @@
+# name: warnings.simplefilte 
+warnings.simplefilter(action, category=Warning, lineno=0, append=False)

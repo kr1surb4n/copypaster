@@ -1,0 +1,2 @@
+# name: logging.log 
+logging.log(level, msg, *args, **kwargs)

@@ -1,0 +1,11 @@
+# name: >>> def foo(a, b, *, 
+>>> def foo(a, b, *, c, d=10):
+...     pass
+
+>>> sig = signature(foo)
+>>> for param in sig.parameters.values():
+...     print(param.kind.description)
+positional or keyword
+positional or keyword
+keyword-only
+keyword-only

@@ -1,0 +1,9 @@
+# name: >>> m = MagicMock()
+ 
+>>> m = MagicMock()
+>>> m().foo().bar().baz()
+<MagicMock name='mock().foo().bar().baz()' id='...'>
+>>> m.one().two().three()
+<MagicMock name='mock.one().two().three()' id='...'>
+>>> calls = call.one().two().three().call_list()
+>>> m.assert_has_calls(calls)

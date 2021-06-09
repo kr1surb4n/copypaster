@@ -1,0 +1,6 @@
+# name: #define NDEBUG 1
+#de 
+#define NDEBUG 1
+#define HAVE_STRFTIME
+#undef HAVE_FOO
+#undef HAVE_BAR

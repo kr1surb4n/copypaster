@@ -1,0 +1,5 @@
+# name: >>> h1 = http.client 
+>>> h1 = http.client.HTTPConnection('www.python.org')
+>>> h2 = http.client.HTTPConnection('www.python.org:80')
+>>> h3 = http.client.HTTPConnection('www.python.org', 80)
+>>> h4 = http.client.HTTPConnection('www.python.org', 80, timeout=10)

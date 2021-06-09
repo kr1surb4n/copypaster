@@ -1,0 +1,12 @@
+# name: int arg;
+PyObject *a 
+int arg;
+PyObject *arglist;
+PyObject *result;
+...
+arg = 123;
+...
+/* Time to call the callback */
+arglist = Py_BuildValue("(i)", arg);
+result = PyObject_CallObject(my_callback, arglist);
+Py_DECREF(arglist);

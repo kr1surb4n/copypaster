@@ -1,0 +1,2 @@
+# name: array.array 
+class array.array(typecode[, initializer])

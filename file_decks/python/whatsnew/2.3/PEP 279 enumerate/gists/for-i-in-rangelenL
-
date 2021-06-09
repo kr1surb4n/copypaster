@@ -1,0 +1,5 @@
+# name: for i in range(len(L 
+for i in range(len(L)):
+    item = L[i]
+    # ... compute some result based on item ...
+    L[i] = result

@@ -1,0 +1,2 @@
+# name: smtplib.SMTPAuthenti 
+exception smtplib.SMTPAuthenticationError

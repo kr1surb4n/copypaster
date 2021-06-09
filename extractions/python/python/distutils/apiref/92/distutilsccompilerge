@@ -1,0 +1,2 @@
+# name: distutils.ccompiler. 
+distutils.ccompiler.get_default_compiler(osname, platform)

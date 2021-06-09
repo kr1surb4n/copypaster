@@ -1,0 +1,7 @@
+# name: from collections.abc 
+from collections.abc import Coroutine
+c = None # type: Coroutine[list[str], str, int]
+...
+x = c.send('hi') # type: list[str]
+async def bar() -> None:
+    x = await c # type: int

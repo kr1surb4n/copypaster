@@ -1,0 +1,4 @@
+# name: # Call 'print("Futur 
+# Call 'print("Future:", fut)' when "fut" is done.
+fut.add_done_callback(
+    functools.partial(print, "Future:"))

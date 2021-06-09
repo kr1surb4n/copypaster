@@ -1,0 +1,10 @@
+# name: VERSION = '1.0'
+setu 
+VERSION = '1.0'
+setup(name='PyPackage',
+      version=VERSION,
+      requires=['numarray', 'zlib (>=1.1.4)'],
+      obsoletes=['OldPackage']
+      download_url=('http://www.example.com/pypackage/dist/pkg-%s.tar.gz'
+                    % VERSION),
+     )

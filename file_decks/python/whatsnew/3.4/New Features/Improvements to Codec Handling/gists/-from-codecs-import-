@@ -1,0 +1,6 @@
+# name: >>> from codecs impo 
+>>> from codecs import encode, decode
+>>> encode(b"hello", "hex")
+b'68656c6c6f'
+>>> decode(b"68656c6c6f", "hex")
+b'hello'

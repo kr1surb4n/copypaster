@@ -1,0 +1,9 @@
+# name: pat = re.compile(r"" 
+pat = re.compile(r"""
+ \s*                 # Skip leading whitespace
+ (?P<header>[^:]+)   # Header name
+ \s* :               # Whitespace, and a colon
+ (?P<value>.*?)      # The header's value -- *? used to
+                     # lose the following trailing whitespace
+ \s*$                # Trailing whitespace to end-of-line
+""", re.VERBOSE)

@@ -1,0 +1,3 @@
+# name: prog = re.compile(pa 
+prog = re.compile(pattern)
+result = prog.match(string)

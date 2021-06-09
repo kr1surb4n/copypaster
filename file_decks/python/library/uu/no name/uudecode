@@ -1,0 +1,2 @@
+# name: uu.decode 
+uu.decode(in_file, out_file=None, mode=None, quiet=False)

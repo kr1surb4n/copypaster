@@ -1,0 +1,2 @@
+# name: from sound.effects.e 
+from sound.effects.echo import echofilter

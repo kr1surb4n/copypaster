@@ -1,0 +1,6 @@
+# name: import gettext
+cat = 
+import gettext
+cat = gettext.Catalog(domain, localedir)
+_ = cat.gettext
+print(_('hello world'))

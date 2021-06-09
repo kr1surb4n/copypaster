@@ -1,0 +1,13 @@
+# name: from distutils.core  
+from distutils.core import setup
+
+desc = """\
+My description
+==============
+
+This is the description of the ``foobar`` package.
+"""
+
+setup(name='foobar', version='1', author='tarek',
+    author_email='tarek@ziade.org',
+    url='http://example.com', long_description=desc)

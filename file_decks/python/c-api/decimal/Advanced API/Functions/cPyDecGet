@@ -1,0 +1,2 @@
+# name: c.PyDec_Get 
+mpd_t *PyDec_Get(PyObject *v)

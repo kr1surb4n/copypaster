@@ -1,0 +1,2 @@
+# name: xml.dom.minidom.Node 
+Node.toprettyxml(indent="\t", newl="\n", encoding=None, standalone=None)

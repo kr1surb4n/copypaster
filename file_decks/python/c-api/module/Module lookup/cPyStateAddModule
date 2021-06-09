@@ -1,0 +1,2 @@
+# name: c.PyState_AddModule 
+int PyState_AddModule(PyObject *module, PyModuleDef *def)

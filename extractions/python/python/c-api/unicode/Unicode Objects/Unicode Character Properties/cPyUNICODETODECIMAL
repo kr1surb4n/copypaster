@@ -1,0 +1,2 @@
+# name: c.Py_UNICODE_TODECIM 
+int Py_UNICODE_TODECIMAL(Py_UNICODE ch)

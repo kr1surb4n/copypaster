@@ -1,0 +1,19 @@
+# name: static PyObject *
+ne 
+static PyObject *
+newdatatype_call(newdatatypeobject *self, PyObject *args, PyObject *kwds)
+{
+    PyObject *result;
+    const char *arg1;
+    const char *arg2;
+    const char *arg3;
+
+    if (!PyArg_ParseTuple(args, "sss:call", &arg1, &arg2, &arg3)) {
+        return NULL;
+    }
+    result = PyUnicode_FromFormat(
+        "Returning -- value: [%d] arg1: [%s] arg2: [%s] arg3: [%s]\n",
+        obj->obj_UnderlyingDatatypePtr->size,
+        arg1, arg2, arg3);
+    return result;
+}

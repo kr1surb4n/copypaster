@@ -1,0 +1,2 @@
+# name: datetime.date.replac 
+date.replace(year=self.year, month=self.month, day=self.day)

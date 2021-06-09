@@ -1,0 +1,2 @@
+# name: asyncio.loop.run_in_ 
+awaitable loop.run_in_executor(executor, func, *args)

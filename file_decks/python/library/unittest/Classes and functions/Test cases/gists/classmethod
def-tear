@@ -1,0 +1,5 @@
+# name: @classmethod
+def tea 
+@classmethod
+def tearDownClass(cls):
+    ...

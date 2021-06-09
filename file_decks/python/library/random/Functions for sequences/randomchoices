@@ -1,0 +1,2 @@
+# name: random.choices 
+random.choices(population, weights=None, *, cum_weights=None, k=1)

@@ -1,0 +1,5 @@
+# name: import lzma
+data_in  
+import lzma
+data_in = b"Insert Data Here"
+data_out = lzma.compress(data_in)

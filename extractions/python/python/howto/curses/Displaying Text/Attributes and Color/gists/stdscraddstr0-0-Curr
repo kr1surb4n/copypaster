@@ -1,0 +1,4 @@
+# name: stdscr.addstr(0, 0,  
+stdscr.addstr(0, 0, "Current mode: Typing mode",
+              curses.A_REVERSE)
+stdscr.refresh()

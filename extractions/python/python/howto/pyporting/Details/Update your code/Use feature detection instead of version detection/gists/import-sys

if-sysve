@@ -1,0 +1,9 @@
+# name: import sys
+
+if sys.v 
+import sys
+
+if sys.version_info[0] > 2:
+    from importlib import abc
+else:
+    from importlib2 import abc

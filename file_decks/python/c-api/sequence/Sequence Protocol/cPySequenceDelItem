@@ -1,0 +1,2 @@
+# name: c.PySequence_DelItem 
+int PySequence_DelItem(PyObject *o, Py_ssize_t i)

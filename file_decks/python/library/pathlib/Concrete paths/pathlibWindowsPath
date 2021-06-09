@@ -1,0 +1,2 @@
+# name: pathlib.WindowsPath 
+class pathlib.WindowsPath(*pathsegments)

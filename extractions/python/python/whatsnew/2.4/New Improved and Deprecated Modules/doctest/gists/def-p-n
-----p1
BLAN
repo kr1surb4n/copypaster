@@ -1,0 +1,7 @@
+# name: def p (n):
+    """>> 
+def p (n):
+    """>>> p(1)
+<BLANKLINE>
+>>>
+"""

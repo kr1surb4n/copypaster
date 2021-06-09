@@ -1,0 +1,8 @@
+# name: from typing import T 
+from typing import TypeVar, Generic
+...
+
+T = TypeVar('T')
+
+class Pair(Generic[T, T]):   # INVALID
+    ...

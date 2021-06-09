@@ -1,0 +1,2 @@
+# name: c.PyDec_GetDigits 
+int64_t PyDec_GetDigits(const PyObject *dec)

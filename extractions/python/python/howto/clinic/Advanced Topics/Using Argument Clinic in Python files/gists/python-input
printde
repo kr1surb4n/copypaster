@@ -1,0 +1,7 @@
+# name: #/*[python input]
+#p 
+#/*[python input]
+#print("def foo(): pass")
+#[python start generated code]*/
+def foo(): pass
+#/*[python checksum:...]*/

@@ -1,0 +1,6 @@
+# name: >>> Color(1)
+<Color. 
+>>> Color(1)
+<Color.RED: 1>
+>>> Color(3)
+<Color.BLUE: 3>

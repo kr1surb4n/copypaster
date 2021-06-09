@@ -1,0 +1,2 @@
+# name: ssl.create_default_c 
+ssl.create_default_context(purpose=Purpose.SERVER_AUTH, cafile=None, capath=None, cadata=None)

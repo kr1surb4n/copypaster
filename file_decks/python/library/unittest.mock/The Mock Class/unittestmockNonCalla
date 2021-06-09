@@ -1,0 +1,2 @@
+# name: unittest.mock.NonCal 
+class unittest.mock.NonCallableMock(spec=None, wraps=None, name=None, spec_set=None, **kwargs)

@@ -1,0 +1,2 @@
+# name: os.pwritev 
+os.pwritev(fd, buffers, offset, flags=0)

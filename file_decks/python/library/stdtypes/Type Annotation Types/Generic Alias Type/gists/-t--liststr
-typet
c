@@ -1,0 +1,9 @@
+# name: >>> t = list[str]
+>> 
+>>> t = list[str]
+>>> type(t)
+<class 'types.GenericAlias'>
+
+>>> l = t()
+>>> type(l)
+<class 'list'>

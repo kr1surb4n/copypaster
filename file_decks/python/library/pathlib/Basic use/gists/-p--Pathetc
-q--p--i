@@ -1,0 +1,7 @@
+# name: >>> p = Path('/etc') 
+>>> p = Path('/etc')
+>>> q = p / 'init.d' / 'reboot'
+>>> q
+PosixPath('/etc/init.d/reboot')
+>>> q.resolve()
+PosixPath('/etc/rc.d/init.d/halt')

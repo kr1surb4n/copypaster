@@ -1,0 +1,4 @@
+# name: >>> FrozenTable = PO 
+>>> FrozenTable = POINTER(struct_frozen)
+>>> table = FrozenTable.in_dll(pythonapi, "PyImport_FrozenModules")
+>>>

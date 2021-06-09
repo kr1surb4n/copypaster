@@ -1,0 +1,8 @@
+# name: >>> cert = {'subject 
+>>> cert = {'subject': ((('commonName', 'example.com'),),)}
+>>> ssl.match_hostname(cert, "example.com")
+>>> ssl.match_hostname(cert, "example.org")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/py3k/Lib/ssl.py", line 130, in match_hostname
+ssl.CertificateError: hostname 'example.org' doesn't match 'example.com'

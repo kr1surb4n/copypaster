@@ -1,0 +1,12 @@
+# name: >>> from email impor 
+>>> from email import message_from_binary_file
+>>> from email.generator import BytesGenerator
+>>> from email import policy
+>>> from subprocess import Popen, PIPE
+>>> with open('mymsg.txt', 'rb') as f:
+...     msg = message_from_binary_file(f, policy=policy.default)
+>>> p = Popen(['sendmail', msg['To'].addresses[0]], stdin=PIPE)
+>>> g = BytesGenerator(p.stdin, policy=msg.policy.clone(linesep='\r\n'))
+>>> g.flatten(msg)
+>>> p.stdin.close()
+>>> rc = p.wait()

@@ -1,0 +1,2 @@
+# name: c.PyUnicode_InternIn 
+void PyUnicode_InternInPlace(PyObject **string)

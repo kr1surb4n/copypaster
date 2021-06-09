@@ -1,0 +1,2 @@
+# name: email.parser.Parser 
+class email.parser.Parser(_class=None, *, policy=policy.compat32)

@@ -1,0 +1,2 @@
+# name: typing.is_typeddict 
+typing.is_typeddict(tp)

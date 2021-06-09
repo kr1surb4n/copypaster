@@ -1,0 +1,4 @@
+# name: >>> PurePath()
+PureP 
+>>> PurePath()
+PurePosixPath('.')

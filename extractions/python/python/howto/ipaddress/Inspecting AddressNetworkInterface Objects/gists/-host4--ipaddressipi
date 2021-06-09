@@ -1,0 +1,7 @@
+# name: >>> host4 = ipaddres 
+>>> host4 = ipaddress.ip_interface('192.0.2.1/24')
+>>> host4.network
+IPv4Network('192.0.2.0/24')
+>>> host6 = ipaddress.ip_interface('2001:db8::1/96')
+>>> host6.network
+IPv6Network('2001:db8::/96')

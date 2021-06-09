@@ -1,0 +1,2 @@
+# name: atexit.register 
+atexit.register(func, *args, **kwargs)

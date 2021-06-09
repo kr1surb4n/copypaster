@@ -1,0 +1,2 @@
+# name: c.PyFunction_SetClos 
+int PyFunction_SetClosure(PyObject *op, PyObject *closure)

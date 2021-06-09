@@ -1,0 +1,2 @@
+# name: c.PyCapsule_SetPoint 
+int PyCapsule_SetPointer(PyObject *capsule, void *pointer)

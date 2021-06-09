@@ -1,0 +1,2 @@
+# name: traceback.print_stac 
+traceback.print_stack(f=None, limit=None, file=None)

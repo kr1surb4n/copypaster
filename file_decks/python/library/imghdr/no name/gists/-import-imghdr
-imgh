@@ -1,0 +1,5 @@
+# name: >>> import imghdr
+>> 
+>>> import imghdr
+>>> imghdr.what('bass.gif')
+'gif'

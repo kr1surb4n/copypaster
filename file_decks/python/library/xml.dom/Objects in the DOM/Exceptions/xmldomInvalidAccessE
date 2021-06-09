@@ -1,0 +1,2 @@
+# name: xml.dom.InvalidAcces 
+exception xml.dom.InvalidAccessErr

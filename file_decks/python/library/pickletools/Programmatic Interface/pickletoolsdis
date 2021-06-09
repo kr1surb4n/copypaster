@@ -1,0 +1,2 @@
+# name: pickletools.dis 
+pickletools.dis(pickle, out=None, memo=None, indentlevel=4, annotate=0)

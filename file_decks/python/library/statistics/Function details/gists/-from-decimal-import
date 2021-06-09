@@ -1,0 +1,8 @@
+# name: >>> from decimal imp 
+>>> from decimal import Decimal as D
+>>> variance([D("27.5"), D("30.25"), D("30.25"), D("34.5"), D("41.75")])
+Decimal('31.01875')
+
+>>> from fractions import Fraction as F
+>>> variance([F(1, 6), F(1, 2), F(5, 3)])
+Fraction(67, 108)

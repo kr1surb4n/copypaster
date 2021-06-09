@@ -1,0 +1,2 @@
+# name: delitem(seq, slice(i 
+delitem(seq, slice(i, j))

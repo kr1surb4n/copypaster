@@ -1,0 +1,2 @@
+# name: asyncio.Protocol.eof 
+Protocol.eof_received()

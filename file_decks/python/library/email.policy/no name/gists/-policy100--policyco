@@ -1,0 +1,9 @@
+# name: >>> policy100 = poli 
+>>> policy100 = policy.compat32.clone(max_line_length=100)
+>>> policy80 = policy.compat32.clone(max_line_length=80)
+>>> apolicy = policy100 + policy80
+>>> apolicy.max_line_length
+80
+>>> apolicy = policy80 + policy100
+>>> apolicy.max_line_length
+100

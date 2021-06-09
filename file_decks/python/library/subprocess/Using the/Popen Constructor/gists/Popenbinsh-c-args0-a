@@ -1,0 +1,2 @@
+# name: Popen(['/bin/sh', '- 
+Popen(['/bin/sh', '-c', args[0], args[1], ...])

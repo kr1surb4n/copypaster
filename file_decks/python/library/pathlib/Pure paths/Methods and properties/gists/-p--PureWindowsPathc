@@ -1,0 +1,10 @@
+# name: >>> p = PureWindowsP 
+>>> p = PureWindowsPath('c:/Downloads/pathlib.tar.gz')
+>>> p.with_suffix('.bz2')
+PureWindowsPath('c:/Downloads/pathlib.tar.bz2')
+>>> p = PureWindowsPath('README')
+>>> p.with_suffix('.txt')
+PureWindowsPath('README.txt')
+>>> p = PureWindowsPath('README.txt')
+>>> p.with_suffix('')
+PureWindowsPath('README')

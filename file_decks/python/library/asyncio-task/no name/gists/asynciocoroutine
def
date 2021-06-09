@@ -1,0 +1,8 @@
+# name: @asyncio.coroutine
+d 
+@asyncio.coroutine
+def old_style_coroutine():
+    yield from asyncio.sleep(1)
+
+async def main():
+    await old_style_coroutine()

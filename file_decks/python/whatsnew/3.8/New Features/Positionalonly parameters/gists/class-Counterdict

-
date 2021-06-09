@@ -1,0 +1,5 @@
+# name: class Counter(dict): 
+class Counter(dict):
+
+    def __init__(self, iterable=None, /, **kwds):
+        # Note "iterable" is a possible keyword argument

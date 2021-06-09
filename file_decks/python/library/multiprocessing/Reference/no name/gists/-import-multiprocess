@@ -1,0 +1,14 @@
+# name: >>> import multiproc 
+>>> import multiprocessing, time, signal
+ >>> p = multiprocessing.Process(target=time.sleep, args=(1000,))
+ >>> print(p, p.is_alive())
+ <Process ... initial> False
+ >>> p.start()
+ >>> print(p, p.is_alive())
+ <Process ... started> True
+ >>> p.terminate()
+ >>> time.sleep(0.1)
+ >>> print(p, p.is_alive())
+ <Process ... stopped exitcode=-SIGTERM> False
+ >>> p.exitcode == -signal.SIGTERM
+ True

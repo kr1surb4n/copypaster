@@ -1,0 +1,2 @@
+# name: enum.IntEnum 
+class enum.IntEnum

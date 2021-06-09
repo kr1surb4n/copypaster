@@ -1,0 +1,12 @@
+# name: >>> # Create a recur 
+>>> # Create a recursive data structure
+... L = [1,2,3]
+>>> L.append(L)
+>>> L # Show Python's default output
+[1, 2, 3, [...]]
+>>> # Use pprint.pprint() as the display function
+... import sys, pprint
+>>> sys.displayhook = pprint.pprint
+>>> L
+[1, 2, 3,  <Recursion on list with id=135143996>]
+>>>

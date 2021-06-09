@@ -1,0 +1,10 @@
+# name: >>> getcontext().pre 
+>>> getcontext().prec = 28
+>>> Decimal(2).sqrt()
+Decimal('1.414213562373095048801688724')
+>>> Decimal(1).exp()
+Decimal('2.718281828459045235360287471')
+>>> Decimal('10').ln()
+Decimal('2.302585092994045684017991455')
+>>> Decimal('10').log10()
+Decimal('1')

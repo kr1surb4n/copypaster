@@ -1,0 +1,2 @@
+# name: c.Py_PreInitializeFr 
+PyStatus Py_PreInitializeFromArgs(const PyPreConfig *preconfig, int argc, wchar_t * const * argv)

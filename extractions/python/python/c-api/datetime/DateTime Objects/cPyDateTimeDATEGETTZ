@@ -1,0 +1,2 @@
+# name: c.PyDateTime_DATE_GE 
+PyObject* PyDateTime_DATE_GET_TZINFO(PyDateTime_DateTime *o)

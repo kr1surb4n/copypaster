@@ -1,0 +1,6 @@
+# name: pkg/
+pkg/__init__.py 
+pkg/
+pkg/__init__.py
+pkg/main.py
+pkg/string.py

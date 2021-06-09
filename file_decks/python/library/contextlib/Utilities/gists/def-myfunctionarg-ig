@@ -1,0 +1,10 @@
+# name: def myfunction(arg,  
+def myfunction(arg, ignore_exceptions=False):
+    if ignore_exceptions:
+        # Use suppress to ignore all exceptions.
+        cm = contextlib.suppress(Exception)
+    else:
+        # Do not ignore any exceptions, cm has no effect.
+        cm = contextlib.nullcontext()
+    with cm:
+        # Do something

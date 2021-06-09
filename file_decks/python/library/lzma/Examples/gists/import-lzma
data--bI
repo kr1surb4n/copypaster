@@ -1,0 +1,6 @@
+# name: import lzma
+data = b 
+import lzma
+data = b"Insert Data Here"
+with lzma.open("file.xz", "w") as f:
+    f.write(data)

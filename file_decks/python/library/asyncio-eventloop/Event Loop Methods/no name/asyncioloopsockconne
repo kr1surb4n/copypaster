@@ -1,0 +1,2 @@
+# name: asyncio.loop.sock_co 
+coroutine loop.sock_connect(sock, address)

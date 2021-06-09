@@ -1,0 +1,2 @@
+# name: email.header.make_he 
+email.header.make_header(decoded_seq, maxlinelen=None, header_name=None, continuation_ws=' ')

@@ -1,0 +1,13 @@
+# name: >>> import hashlib
+
+ 
+>>> import hashlib
+
+>>> hashlib.algorithms_guaranteed
+{'sha1', 'sha224', 'sha384', 'sha256', 'sha512', 'md5'}
+
+>>> hashlib.algorithms_available
+{'md2', 'SHA256', 'SHA512', 'dsaWithSHA', 'mdc2', 'SHA224', 'MD4', 'sha256',
+'sha512', 'ripemd160', 'SHA1', 'MDC2', 'SHA', 'SHA384', 'MD2',
+'ecdsa-with-SHA1','md4', 'md5', 'sha1', 'DSA-SHA', 'sha224',
+'dsaEncryption', 'DSA', 'RIPEMD160', 'sha', 'MD5', 'sha384'}

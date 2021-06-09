@@ -1,0 +1,4 @@
+# name: time.struct_time((d. 
+time.struct_time((d.year, d.month, d.day,
+                  d.hour, d.minute, d.second,
+                  d.weekday(), yday, dst))

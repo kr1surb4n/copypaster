@@ -1,0 +1,2 @@
+# name: smtplib.SMTPHeloErro 
+exception smtplib.SMTPHeloError

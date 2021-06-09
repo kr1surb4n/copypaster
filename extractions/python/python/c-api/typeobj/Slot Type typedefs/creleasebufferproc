@@ -1,0 +1,2 @@
+# name: c.releasebufferproc 
+void (*releasebufferproc)(PyObject *, Py_buffer *)

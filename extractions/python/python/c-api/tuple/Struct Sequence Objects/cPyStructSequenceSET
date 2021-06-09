@@ -1,0 +1,2 @@
+# name: c.PyStructSequence_S 
+void PyStructSequence_SET_ITEM(PyObject *p, Py_ssize_t *pos, PyObject *o)

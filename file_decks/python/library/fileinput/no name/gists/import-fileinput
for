@@ -1,0 +1,5 @@
+# name: import fileinput
+for 
+import fileinput
+for line in fileinput.input():
+    process(line)

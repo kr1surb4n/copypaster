@@ -1,0 +1,2 @@
+# name: csv.get_dialect 
+csv.get_dialect(name)

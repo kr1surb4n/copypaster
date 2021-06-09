@@ -1,0 +1,5 @@
+# name: >>> list(map(round,  
+>>> list(map(round, sat.quantiles()))
+[928, 1060, 1192]
+>>> list(map(round, sat.quantiles(n=10)))
+[810, 896, 958, 1011, 1060, 1109, 1162, 1224, 1310]

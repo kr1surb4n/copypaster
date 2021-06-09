@@ -1,0 +1,8 @@
+# name: class A:
+   pass
+des 
+class A:
+   pass
+descr = custom_descriptor()
+A.attr = descr
+descr.__set_name__(A, 'attr')

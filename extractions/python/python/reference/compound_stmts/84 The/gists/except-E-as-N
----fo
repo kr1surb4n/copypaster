@@ -1,0 +1,4 @@
+# name: except E as N:
+    f 
+except E as N:
+    foo

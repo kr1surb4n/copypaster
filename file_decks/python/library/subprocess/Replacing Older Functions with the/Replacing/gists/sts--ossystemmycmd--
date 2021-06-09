@@ -1,0 +1,4 @@
+# name: sts = os.system("myc 
+sts = os.system("mycmd" + " myarg")
+# becomes
+sts = call("mycmd" + " myarg", shell=True)

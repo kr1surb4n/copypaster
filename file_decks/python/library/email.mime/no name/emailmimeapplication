@@ -1,0 +1,2 @@
+# name: email.mime.applicati 
+class email.mime.application.MIMEApplication(_data, _subtype='octet-stream', _encoder=email.encoders.encode_base64, *, policy=compat32, **_params)

@@ -1,0 +1,2 @@
+# name: sys.getdlopenflags 
+sys.getdlopenflags()

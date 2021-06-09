@@ -1,0 +1,2 @@
+# name: output=check_output( 
+output=check_output("dmesg | grep hda", shell=True)

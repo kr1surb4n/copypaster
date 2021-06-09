@@ -1,0 +1,4 @@
+# name: [bcd]*
+matches one l 
+[bcd]*
+matches one less character.

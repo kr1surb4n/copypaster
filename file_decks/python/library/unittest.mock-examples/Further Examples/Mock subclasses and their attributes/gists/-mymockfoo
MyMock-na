@@ -1,0 +1,10 @@
+# name: >>> mymock.foo
+<MyMo 
+>>> mymock.foo
+<MyMock name='mock.foo' id='...'>
+>>> mymock.foo.has_been_called()
+False
+>>> mymock.foo()
+<MyMock name='mock.foo()' id='...'>
+>>> mymock.foo.has_been_called()
+True

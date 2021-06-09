@@ -1,0 +1,11 @@
+# name: class E:
+    @static 
+class E:
+    @staticmethod
+    def f(x):
+        print(x)
+
+>>> E.f(3)
+3
+>>> E().f(3)
+3

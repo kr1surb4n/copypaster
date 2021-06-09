@@ -1,0 +1,4 @@
+# name: >>> p = re.compile(r 
+>>> p = re.compile(r'\d+')
+>>> p.findall('12 drummers drumming, 11 pipers piping, 10 lords a-leaping')
+['12', '11', '10']

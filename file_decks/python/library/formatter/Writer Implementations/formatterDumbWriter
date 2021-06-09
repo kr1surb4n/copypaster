@@ -1,0 +1,2 @@
+# name: formatter.DumbWriter 
+class formatter.DumbWriter(file=None, maxcol=72)

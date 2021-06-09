@@ -1,0 +1,2 @@
+# name: csv.DictReader 
+class csv.DictReader(f, fieldnames=None, restkey=None, restval=None, dialect='excel', *args, **kwds)

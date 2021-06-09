@@ -1,0 +1,17 @@
+# name: >>> mock['a']
+1
+>>>  
+>>> mock['a']
+1
+>>> mock['c']
+3
+>>> mock['d']
+Traceback (most recent call last):
+    ...
+KeyError: 'd'
+>>> mock['b'] = 'fish'
+>>> mock['d'] = 'eggs'
+>>> mock['b']
+'fish'
+>>> mock['d']
+'eggs'

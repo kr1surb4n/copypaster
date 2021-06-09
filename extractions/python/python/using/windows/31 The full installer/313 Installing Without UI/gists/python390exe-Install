@@ -1,0 +1,3 @@
+# name: python-3.9.0.exe Ins 
+python-3.9.0.exe InstallAllUsers=0 Include_launcher=0 Include_test=0
+    SimpleInstall=1 SimpleInstallDescription="Just for me, no test suite."

@@ -1,0 +1,2 @@
+# name: is_64bits = sys.maxs 
+is_64bits = sys.maxsize > 2**32

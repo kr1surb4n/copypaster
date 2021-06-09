@@ -1,0 +1,2 @@
+# name: c.PyUnicode_FindChar 
+Py_ssize_t PyUnicode_FindChar(PyObject *str, Py_UCS4 ch, Py_ssize_t start, Py_ssize_t end, int direction)

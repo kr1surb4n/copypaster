@@ -1,0 +1,9 @@
+# name: import urllib.reques 
+import urllib.request
+from http.cookiejar import CookieJar, DefaultCookiePolicy
+policy = DefaultCookiePolicy(
+    rfc2965=True, strict_ns_domain=Policy.DomainStrict,
+    blocked_domains=["ads.net", ".ads.net"])
+cj = CookieJar(policy)
+opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
+r = opener.open("http://example.com/")

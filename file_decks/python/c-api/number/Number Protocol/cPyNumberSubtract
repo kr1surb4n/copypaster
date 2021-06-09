@@ -1,0 +1,2 @@
+# name: c.PyNumber_Subtract 
+PyObject* PyNumber_Subtract(PyObject *o1, PyObject *o2)

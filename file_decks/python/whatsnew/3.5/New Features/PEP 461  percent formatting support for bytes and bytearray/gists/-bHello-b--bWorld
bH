@@ -1,0 +1,6 @@
+# name: >>> b'Hello %b!' % b 
+>>> b'Hello %b!' % b'World'
+b'Hello World!'
+
+>>> b'x=%i y=%f' % (1, 2.5)
+b'x=1 y=2.500000'

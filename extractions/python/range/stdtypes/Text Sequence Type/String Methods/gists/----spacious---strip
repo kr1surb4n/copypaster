@@ -1,0 +1,5 @@
+# name: >>> '   spacious   ' 
+>>> '   spacious   '.strip()
+'spacious'
+>>> 'www.example.com'.strip('cmowz.')
+'example'

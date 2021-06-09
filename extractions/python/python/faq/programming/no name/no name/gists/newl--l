@@ -1,0 +1,2 @@
+# name: new_l = l[:] 
+new_l = l[:]

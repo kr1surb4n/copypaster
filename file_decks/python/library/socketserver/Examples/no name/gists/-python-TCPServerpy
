@@ -1,0 +1,6 @@
+# name: $ python TCPServer.p 
+$ python TCPServer.py
+127.0.0.1 wrote:
+b'hello world with TCP'
+127.0.0.1 wrote:
+b'python is nice'

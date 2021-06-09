@@ -1,0 +1,12 @@
+# name: idle.py [-c command] 
+idle.py [-c command] [-d] [-e] [-h] [-i] [-r file] [-s] [-t title] [-] [arg] ...
+
+-c command  run command in the shell window
+-d          enable debugger and open shell window
+-e          open editor window
+-h          print help message with legal combinations and exit
+-i          open shell window
+-r file     run file in shell window
+-s          run $IDLESTARTUP or $PYTHONSTARTUP first, in shell window
+-t title    set title of shell window
+-           run stdin in shell (- must be last option before args)

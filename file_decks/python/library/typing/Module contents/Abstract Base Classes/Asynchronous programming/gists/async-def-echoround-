@@ -1,0 +1,6 @@
+# name: async def echo_round 
+async def echo_round() -> AsyncGenerator[int, float]:
+    sent = yield 0
+    while sent >= 0.0:
+        rounded = await round(sent)
+        sent = yield rounded

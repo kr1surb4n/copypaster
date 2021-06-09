@@ -1,0 +1,4 @@
+# name: enterprise_d = Stars 
+enterprise_d = Starship(3000)
+enterprise_d.stats = {} # Error, setting class variable on instance
+Starship.stats = {}     # This is OK

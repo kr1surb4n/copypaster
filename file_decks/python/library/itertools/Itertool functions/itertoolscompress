@@ -1,0 +1,2 @@
+# name: itertools.compress 
+itertools.compress(data, selectors)

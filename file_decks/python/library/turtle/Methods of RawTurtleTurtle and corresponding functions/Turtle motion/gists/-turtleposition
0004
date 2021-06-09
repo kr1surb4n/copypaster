@@ -1,0 +1,6 @@
+# name: >>> turtle.position( 
+>>> turtle.position()
+(0.00,40.00)
+>>> turtle.sety(-10)
+>>> turtle.position()
+(0.00,-10.00)

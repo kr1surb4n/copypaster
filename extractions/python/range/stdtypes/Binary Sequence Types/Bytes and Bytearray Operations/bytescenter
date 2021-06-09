@@ -1,0 +1,2 @@
+# name: bytes.center 
+bytes.center(width[, fillbyte])

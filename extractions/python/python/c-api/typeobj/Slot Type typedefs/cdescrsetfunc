@@ -1,0 +1,2 @@
+# name: c.descrsetfunc 
+int (*descrsetfunc)(PyObject *, PyObject *, PyObject *)

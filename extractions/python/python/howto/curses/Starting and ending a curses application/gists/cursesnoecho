@@ -1,0 +1,2 @@
+# name: curses.noecho() 
+curses.noecho()

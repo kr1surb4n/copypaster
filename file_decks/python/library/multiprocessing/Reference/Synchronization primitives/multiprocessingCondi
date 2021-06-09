@@ -1,0 +1,2 @@
+# name: multiprocessing.Cond 
+class multiprocessing.Condition([lock])

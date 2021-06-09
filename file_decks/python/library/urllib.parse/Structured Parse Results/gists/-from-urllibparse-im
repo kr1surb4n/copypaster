@@ -1,0 +1,9 @@
+# name: >>> from urllib.pars 
+>>> from urllib.parse import urlsplit
+>>> url = 'HTTP://www.Python.org/doc/#'
+>>> r1 = urlsplit(url)
+>>> r1.geturl()
+'http://www.Python.org/doc/'
+>>> r2 = urlsplit(r1.geturl())
+>>> r2.geturl()
+'http://www.Python.org/doc/'

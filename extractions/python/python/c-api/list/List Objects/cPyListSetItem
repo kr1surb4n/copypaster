@@ -1,0 +1,2 @@
+# name: c.PyList_SetItem 
+int PyList_SetItem(PyObject *list, Py_ssize_t index, PyObject *item)

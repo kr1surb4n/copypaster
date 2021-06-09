@@ -1,0 +1,2 @@
+# name: cmdoption-compileall 
+--invalidation-mode [timestamp|checked-hash|unchecked-hash]

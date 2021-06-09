@@ -1,0 +1,4 @@
+# name: button .fred -fg red 
+button .fred -fg red        =====>  fred = Button(panel, fg="red")
+.fred configure -fg red     =====>  fred["fg"] = red
+                            OR ==>  fred.config(fg="red")

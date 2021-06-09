@@ -1,0 +1,8 @@
+# name: new_f = codecs.Strea 
+new_f = codecs.StreamRecoder(f,
+    # en/decoder: used by read() to encode its results and
+    # by write() to decode its input.
+    codecs.getencoder('utf-8'), codecs.getdecoder('utf-8'),
+
+    # reader/writer: used to read and write to the stream.
+    codecs.getreader('latin-1'), codecs.getwriter('latin-1') )

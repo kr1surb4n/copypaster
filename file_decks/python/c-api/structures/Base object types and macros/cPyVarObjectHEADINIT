@@ -1,0 +1,2 @@
+# name: c.PyVarObject_HEAD_I 
+PyVarObject_HEAD_INIT(type, size)

@@ -1,0 +1,2 @@
+# name: c.PyErr_NormalizeExc 
+void PyErr_NormalizeException(PyObject**exc, PyObject**val, PyObject**tb)

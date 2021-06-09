@@ -1,0 +1,2 @@
+# name: sqrt(sum((px - qx) * 
+sqrt(sum((px - qx) ** 2.0 for px, qx in zip(p, q)))

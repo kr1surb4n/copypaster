@@ -1,0 +1,2 @@
+# name: ssl.SSLContext.set_e 
+SSLContext.set_ecdh_curve(curve_name)

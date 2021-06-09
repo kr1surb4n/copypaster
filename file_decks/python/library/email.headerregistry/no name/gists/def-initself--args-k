@@ -1,0 +1,4 @@
+# name: def init(self, /, *a 
+def init(self, /, *args, **kw):
+    self._myattr = kw.pop('myattr')
+    super().init(*args, **kw)

@@ -1,0 +1,2 @@
+# name: c.PyTZInfo_Check 
+int PyTZInfo_Check(PyObject *ob)

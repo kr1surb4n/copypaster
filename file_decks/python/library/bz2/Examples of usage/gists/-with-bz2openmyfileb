@@ -1,0 +1,4 @@
+# name: >>> with bz2.open("m 
+>>> with bz2.open("myfile.bz2", "rb") as f:
+...     # Decompress data from file
+...     content = f.read()

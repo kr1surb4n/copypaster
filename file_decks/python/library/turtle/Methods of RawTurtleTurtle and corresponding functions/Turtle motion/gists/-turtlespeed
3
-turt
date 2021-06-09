@@ -1,0 +1,10 @@
+# name: >>> turtle.speed()
+3 
+>>> turtle.speed()
+3
+>>> turtle.speed('normal')
+>>> turtle.speed()
+6
+>>> turtle.speed(9)
+>>> turtle.speed()
+9

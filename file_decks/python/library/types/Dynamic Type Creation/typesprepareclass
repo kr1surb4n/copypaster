@@ -1,0 +1,2 @@
+# name: types.prepare_class 
+types.prepare_class(name, bases=(), kwds=None)

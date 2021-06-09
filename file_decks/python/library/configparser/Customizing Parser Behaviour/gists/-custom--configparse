@@ -1,0 +1,10 @@
+# name: >>> custom = configp 
+>>> custom = configparser.ConfigParser()
+>>> custom['section1'] = {'funky': 'nope'}
+>>> custom['section1'].getboolean('funky')
+Traceback (most recent call last):
+...
+ValueError: Not a boolean: nope
+>>> custom.BOOLEAN_STATES = {'sure': True, 'nope': False}
+>>> custom['section1'].getboolean('funky')
+False

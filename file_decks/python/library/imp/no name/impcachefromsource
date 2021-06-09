@@ -1,0 +1,2 @@
+# name: imp.cache_from_sourc 
+imp.cache_from_source(path, debug_override=None)

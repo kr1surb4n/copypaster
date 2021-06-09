@@ -1,0 +1,2 @@
+# name: functools.singledisp 
+class functools.singledispatchmethod(func)

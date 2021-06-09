@@ -1,0 +1,2 @@
+# name: wsgiref.util.guess_s 
+wsgiref.util.guess_scheme(environ)

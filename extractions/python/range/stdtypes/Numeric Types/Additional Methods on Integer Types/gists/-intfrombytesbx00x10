@@ -1,0 +1,11 @@
+# name: >>> int.from_bytes(b 
+>>> int.from_bytes(b'\x00\x10', byteorder='big')
+16
+>>> int.from_bytes(b'\x00\x10', byteorder='little')
+4096
+>>> int.from_bytes(b'\xfc\x00', byteorder='big', signed=True)
+-1024
+>>> int.from_bytes(b'\xfc\x00', byteorder='big', signed=False)
+64512
+>>> int.from_bytes([255, 0, 0], byteorder='big')
+16711680

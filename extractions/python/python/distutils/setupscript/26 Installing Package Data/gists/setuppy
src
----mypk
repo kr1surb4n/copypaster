@@ -1,0 +1,12 @@
+# name: setup.py
+src/
+    my 
+setup.py
+src/
+    mypkg/
+        __init__.py
+        module.py
+        data/
+            tables.dat
+            spoons.dat
+            forks.dat

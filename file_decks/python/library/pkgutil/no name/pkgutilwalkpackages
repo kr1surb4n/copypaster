@@ -1,0 +1,2 @@
+# name: pkgutil.walk_package 
+pkgutil.walk_packages(path=None, prefix='', onerror=None)

@@ -1,0 +1,10 @@
+# name: test_format (__main_ 
+test_format (__main__.MyTestCase) ... skipped 'not supported in this library version'
+test_nothing (__main__.MyTestCase) ... skipped 'demonstrating skipping'
+test_maybe_skipped (__main__.MyTestCase) ... skipped 'external resource not available'
+test_windows_support (__main__.MyTestCase) ... skipped 'requires Windows'
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK (skipped=4)

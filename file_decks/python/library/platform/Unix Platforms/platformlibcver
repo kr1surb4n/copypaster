@@ -1,0 +1,2 @@
+# name: platform.libc_ver 
+platform.libc_ver(executable=sys.executable, lib='', version='', chunksize=16384)

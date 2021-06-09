@@ -1,0 +1,2 @@
+# name: c.PyList_Check 
+int PyList_Check(PyObject *p)

@@ -1,0 +1,9 @@
+# name: >>> from enum import 
+>>> from enum import Enum, auto
+>>> class Color(Enum):
+...     red = auto()
+...     blue = auto()
+...     green = auto()
+...
+>>> list(Color)
+[<Color.red: 1>, <Color.blue: 2>, <Color.green: 3>]
