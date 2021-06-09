@@ -1,2 +1,0 @@
-# name: strreplaceold new  
-str.replace(old, new[, count])

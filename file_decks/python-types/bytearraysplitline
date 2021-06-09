@@ -1,2 +1,0 @@
-# name: bytearraysplitline 
-bytearray.splitlines(keepends=False)

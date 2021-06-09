@@ -1,28 +1,90 @@
 from lxml import etree, html
 from collections import namedtuple
 import logging as l
+import logging as log
 from functools import partial
 from os.path import isdir, splitext, join
 from os import mkdir
+import os
 import glob
 import yaml
+import threading, queue
+import string
+
+tasks = queue.Queue()
+
+rules = str.maketrans('', '', string.punctuation)
+join = os.path.join
+
+name_counter = 1
+
+MAX_FILENAME_LENGTH = 20
+FILENAME = "stdtypes.html"
+THING = "¶"
+
+def placeholder_name():
+    _lock = threading.Lock()
+    with _lock:
+        global name_counter
+        name = f"snippet_{name_counter}"
+        name_counter += 1
+
+    return name
+
+def clean_folder(name: str):
+    if not name:
+        name ="no name"
+
+    name = name.strip()
+    name = name.rstrip("——")
+    return name.strip()
+
+def clean_name(name: str):
+
+    if name is None:
+        name = "None"
 
 
-LINE_END = "¶"
+    name.strip()
+    name.strip(THING)
+
+    if len(name) > MAX_FILENAME_LENGTH:
+        name = name[:MAX_FILENAME_LENGTH]
+
+    return name
+
+def clean_filename(name: str):
+
+    if name is None:
+        name = "None"
+
+
+    name = name.strip()
+    name = name.strip(THING)
+    name = name.translate(rules)
+
+    if len(name) > MAX_FILENAME_LENGTH:
+        name = name[:MAX_FILENAME_LENGTH]
+
+    if len(name) == 0:
+        name = placeholder_name()
+
+    return name.replace(" ", "-")
+
 
 
 class Snippet:
     def __init__(self, name="", content="", path=""):
-        self.name = name
-        self.path = path
-        self.content = content
+        self.path = ""
 
-    @property
-    def file_name(self) -> str:
-        return self.name.replace(" ", "-")
+        self.name = clean_name(name)
+        self.filename = clean_filename(name)
+
+        self.content = content.strip(THING)
+        self.prefix_filename_with(path)
 
     def prefix_filename_with(self, path_to_containing_folder):
-        self.path = os.path.join(path_to_containing_folder, self.file_name)
+        self.path = os.path.join(path_to_containing_folder, self.filename)
 
     def populate(self, snippet_dictionary: dict):
         self.content = str(snippet_dictionary.get(VALUE, ""))
@@ -59,10 +121,6 @@ def text_from(tree):
     return etree.tostring(tree, method="text", encoding="UTF-8").strip().decode()
 
 
-FILENAME = "stdtypes.html"
-FOLDER = "library"
-
-
 def read(filename):
     with open(filename, 'r') as f:
         return f.read()
@@ -70,9 +128,6 @@ def read(filename):
 def write(filename, content):
     with open(filename, 'w') as f:
         f.write(content)
-
-
-
 
 
 def main_title(tree):
@@ -89,10 +144,12 @@ def title(tree):
 
 def dt(tree):
     name = tree.get('id')
-    text = text_from(tree)
+    value = text_from(tree)
 
-    return name, text
-
+    if name:    
+        return name.strip(), value
+    else:
+        return value, value
 
 def dd(tree):
     info = text_from(tree)
@@ -102,71 +159,28 @@ def dd(tree):
 def code(tree):
     _code = text_from(tree)
 
-    return Button(name=_code, value=_code, info="", tag="code")
+    # name, value, info, tag
+    return _code, _code
 
 
 def definition(tree):
-    dt_tree = tree.xpath("//dt")
-    dd_tree = tree.xpath("//dd")
-    name, text = dt(dt_tree[0])
-    return Button(
-        name=name, value=text, info=dd(dd_tree[0]), tag=tree.attrib.get('class')
-    )
+    dt_tree = [dt for dt in tree.iter("dt")][0]
+    dd_tree = [dd for dd in tree.iter("dd")][0]
+    name, value = dt(dt_tree)
 
+    # for future, yes, i know
+    info=dd(dd_tree)
+    tag=tree.attrib.get('class')
 
-def section(tree):
-    # id value is a good dict key
-    id = tree.get('id')
+    return name, value
 
-    #  section_name = find_first_header in section
-    name = title(tree)
+def subdefinition(tree):
+    name, value = definition(tree)
 
-    # extract all dl
-    definitions = [definition(dl) for dl in tree.iter('dl')]
-
-    # extract all code
-    codes = [code(pre) for pre in tree.xpath("//div[@class='highlight']/pre")]
-
-    return Deck(id, name, definitions + codes)
-
-
-def walk_sections(tree):
-    """
-    I have a section, that has many more sections,
-    """
-    decks = {}
-    deck_tree = {}
-
-    id = '-----'
-
-    for top_section_tree in tree.xpath("//*[@class='body']/*[@class='section']"):
-
-        id = top_section_tree.get('id')  # id value is a good dict key
-
-        level = {}
-        for section_tree in top_section_tree.xpath(
-            "//*[@id='{}']/*[@class='section']".format(id)
-        ):
-            deck = section(section_tree)
-
-            decks[deck.id] = deck
-            level[deck.id] = {}
-
-        deck_tree[id] = level
-
-    return id, decks, deck_tree
-
-
-def collection(tree):
-    name = main_title(tree)
-
-    id, decks, deck_tree = walk_sections(tree)
-
-    # if len(deck_tree) == 1:
-    #     decks[id] = Deck(id, name, [])
-
-    return id, name, decks, deck_tree
-
+    # cause, in subdefinition the id
+    # has the full code and the value is
+    # only function name
+    return name, name
 
 def load_element(file):
     l.info("Reading file to tree")
@@ -252,40 +266,6 @@ def test_title():
     assert "Truth Value Testing" == title(h2[0])
 
 
-def test_collection():
-    content_tree = load_tree(FILENAME)
-    assert content_tree is not None
-
-    id, name, decks, decks_tree = collection(content_tree)
-    assert id == "built-in-types"
-    assert name == "Built-in Types"
-
-    first_element = list(decks.keys())[0]
-
-    assert decks[first_element].name == "Truth Value Testing"
-
-    assert len(decks.keys()) == 14
-    assert 'built-in-types' in decks_tree
-    assert len(decks_tree) == 1
-    assert len(decks_tree['built-in-types']) == 14
-
-
-def useless_code():
-
-    decks = {}
-    tree = {}
-
-    for file in folder:
-        file_tree = load_tree(file)
-
-        _, folder, filename = slices(file)
-        name = splitext(filename)[0]
-
-        _, file_decks, file_decks_tree = collection(file_tree)
-
-        decks.update(file_decks)
-        tree.update({name: file_decks_tree})
-
 
 def slashes2under(path):
     return path.replace("/", "_")
@@ -295,55 +275,90 @@ def test_slashes2():
     assert "dupa_jasio_pierdzi_stasio" == slashes2under("dupa/jasio/pierdzi/stasio")
 
 
+def walk(section, path):
+    global tasks
+
+    # id value is a good dict key
+    section_id = section.get('id')
+
+    name = title(section)
+
+    print(f"path: {path}, name: {name}")
+
+    if not path:
+        path = ""
+
+    new_path = os.path.join(path, clean_folder(name))
+    os.mkdir(new_path)
+
+    gists_path = join(new_path, "gists")
+    os.mkdir(gists_path)
+
+    codes_path = join(new_path, "codes")
+    os.mkdir(codes_path)
+
+    # extract all dl
+    definitions = [Snippet(*definition(dl), new_path) for dl in section.xpath(f"//*[@id='{section_id}']/dl")]
+    definitions += [Snippet(*subdefinition(dl), new_path) for dl in section.xpath(f"//*[@id='{section_id}']/dl//dl")]
+
+
+    # extract all code
+    pres = [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/div[@class='highlight']/pre")]
+    pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/dl//div[@class='highlight']/pre")]
+    pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/div[@class='highlight-default']/pre")]
+    pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/dl//div[@class='highlight-default']/pre")]
+
+
+    codes = [Snippet(*code(_codes), codes_path) for _codes in section.xpath(f"//*[@id='{section_id}']/table//p/code")]
+    
+    [snippet.save() for snippet in definitions]
+    [snippet.save() for snippet in pres]
+    [snippet.save() for snippet in codes]
+    
+    for section_tree in section.xpath(
+            subsection_of(section_id)
+        ):
+    
+            tasks.put((section_tree, new_path))
+
+def worker():
+    global tasks
+
+    while True:
+        section_tree, path = tasks.get()
+        log.debug(f'Working on path: {path}')
+
+        walk(section_tree, path)
+        log.debug(f'Finished {path}')
+        tasks.task_done()
+
+def subsection_of(section):
+    return f"//*[@id='{section}']/*[@class='section']"
+
+
 if __name__ == "__main__":
 
-    filenames = {}
+    PATH = FILENAME.split(".")[0]
 
-    SAVE_FOLDER = "output"
-
-    for file in glob.glob("html/**/*.html"):
-        if isdir(file):
-            continue
-
-        _, folder, filename = slices(file)
-
-        try:
-            mkdir(join(SAVE_FOLDER, folder))
-        except FileExistsError:
-            pass
-
-        name = splitext(filename)[0]
-        xpath = splitext(file)[0]
-
-        print(xpath)
-        yaml_key = slashes2under(xpath)
-        print(yaml_key)
-        filenames[yaml_key] = (
-            name,
-            xpath,
-            file,
-        )
-
-        content_tree = load_tree(file)
-
-        collection_id, collection_name, decks, decks_tree = collection(content_tree)
-
-        folder = join(SAVE_FOLDER, folder, name)
-
-        try:
-            mkdir(folder)
-        except FileExistsError:
-            pass
-
-        for key, deck in decks.items():
-            fname = key + ".yml"
-            deck.save(join(folder, fname))
+    os.mkdir(PATH)
 
     content_tree = load_tree(FILENAME)
 
-    id, name, decks, decks_tree = collection(content_tree)
 
-    write('id', id)
-    write('name', name)
-    write('decks', str(decks.keys()))
-    write('tree', str(decks_tree))
+    for top_section_tree in content_tree.xpath("//*[@class='body']/*[@class='section']"):
+
+        top_section = top_section_tree.get('id')  # id value is a good dict key
+
+        for section_tree in top_section_tree.xpath(
+            subsection_of(top_section)
+        ):
+    
+            tasks.put((section_tree, PATH))
+
+    # turn-on the worker thread
+    threading.Thread(target=worker, daemon=True).start()
+
+    # block until all tasks are done
+    tasks.join()
+
+    print("stuff done")

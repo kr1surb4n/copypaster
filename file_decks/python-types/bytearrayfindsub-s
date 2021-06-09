@@ -1,2 +1,0 @@
-# name: bytearrayfindsub s 
-bytearray.find(sub[, start[, end]])

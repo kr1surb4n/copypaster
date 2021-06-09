@@ -1,2 +1,0 @@
-# name: bytearrayrindexsub 
-bytearray.rindex(sub[, start[, end]])

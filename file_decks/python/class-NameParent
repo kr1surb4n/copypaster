@@ -1,3 +1,0 @@
-# name: class NameParent 
-class Name(Parent):
-	pass

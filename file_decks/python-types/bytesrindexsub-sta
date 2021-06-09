@@ -1,2 +1,0 @@
-# name: bytesrindexsub sta 
-bytes.rindex(sub[, start[, end]])

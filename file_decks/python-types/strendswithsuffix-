@@ -1,2 +1,0 @@
-# name: strendswithsuffix  
-str.endswith(suffix[, start[, end]])

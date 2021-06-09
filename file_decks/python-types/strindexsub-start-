@@ -1,2 +1,0 @@
-# name: strindexsub start  
-str.index(sub[, start[, end]])

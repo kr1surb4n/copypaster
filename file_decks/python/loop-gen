@@ -1,4 +1,0 @@
-# name: loop gen 
-values = (-x for x in [1,2,3,4,5])
-for x in values:
-    print(x)

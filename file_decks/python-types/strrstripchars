@@ -1,2 +1,0 @@
-# name: strrstripchars 
-str.rstrip([chars])

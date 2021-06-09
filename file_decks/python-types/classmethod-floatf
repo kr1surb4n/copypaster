@@ -1,2 +1,0 @@
-# name: classmethod floatf 
-classmethod float.fromhex(s)

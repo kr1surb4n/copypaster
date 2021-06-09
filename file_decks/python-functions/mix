@@ -1,2 +1,0 @@
-# name: mix 
-min(iterable, *[, key, default])

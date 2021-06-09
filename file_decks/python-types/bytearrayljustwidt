@@ -1,2 +1,0 @@
-# name: bytearrayljustwidt 
-bytearray.ljust(width[, fillbyte])

@@ -1,2 +1,0 @@
-# name: strfindsub start e 
-str.find(sub[, start[, end]])

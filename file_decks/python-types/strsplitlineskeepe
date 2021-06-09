@@ -1,2 +1,0 @@
-# name: strsplitlineskeepe 
-str.splitlines([keepends])

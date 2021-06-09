@@ -1,2 +1,0 @@
-# name: bytestranslatetabl 
-bytes.translate(table, /, delete=b')

@@ -1,2 +1,0 @@
-# name: isinstanceobj type 
-isinstance(obj, type)

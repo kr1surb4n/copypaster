@@ -1,2 +1,0 @@
-# name: static bytearrayma 
-static bytearray.maketrans(from, to)

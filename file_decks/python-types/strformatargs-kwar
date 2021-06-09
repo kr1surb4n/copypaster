@@ -1,2 +1,0 @@
-# name: strformatargs kwar 
-str.format(*args, **kwargs)

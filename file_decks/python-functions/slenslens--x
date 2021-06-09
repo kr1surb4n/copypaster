@@ -1,2 +1,0 @@
-# name: slenslens  x 
-s[len(s):len(s)] = [x]

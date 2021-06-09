@@ -1,5 +1,0 @@
-# name: while x  4
-    pri 
-while x < 4:
-    print(x)
-    x += 1  

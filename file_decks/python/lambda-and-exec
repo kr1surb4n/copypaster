@@ -1,2 +1,0 @@
-# name: lambda and exec 
-(lambda x: x > 2)(3)

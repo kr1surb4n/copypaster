@@ -1,2 +1,0 @@
-# name: printHello World e 
-print("Hello, World", end="!")

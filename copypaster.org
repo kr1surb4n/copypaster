@@ -351,3 +351,14 @@ Soon I will have a simple GTK3 App Framework :D
 Now i have to look into parsing the documentation.
 
 ** TODO parse python documentation
+so i switched to folders.
+i use a threads for going through sections.
+they are pretty nested. 3 levels.
+
+currently i cant get the definitions.
+i dont know why. have to debugg tomorrow.
+probably something with path, elements, and traversing
+
+code objects are ok as long they are not in the
+dl or dt. if they are in dt or dl, they produce
+a lot of mess.

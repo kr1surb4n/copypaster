@@ -1,2 +1,0 @@
-# name: inttobyteslength b 
-int.to_bytes(length, byteorder, *, signed=False)

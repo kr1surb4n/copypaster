@@ -1,4 +1,0 @@
-# name: init 
-    def __init__(self, name):
-        # Assign the argument to the instance's name attribute
-        self.name = name

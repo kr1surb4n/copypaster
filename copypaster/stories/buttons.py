@@ -82,7 +82,7 @@ def save_snippet(*args, **kwargs):
         return False
 
     if not title:
-        title = value
+        title = content
 
     log.debug("Adding new button to grid ...")
     emit("add_button", title, content)

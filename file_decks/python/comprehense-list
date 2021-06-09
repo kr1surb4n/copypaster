@@ -1,2 +1,0 @@
-# name: comprehense list 
-[add_10(i) for i in [1, 2, 3]]

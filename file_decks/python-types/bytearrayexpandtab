@@ -1,2 +1,0 @@
-# name: bytearrayexpandtab 
-bytearray.expandtabs(tabsize=8)

@@ -1,2 +1,0 @@
-# name: dictgetone 4 
-dict.get("one", 4)

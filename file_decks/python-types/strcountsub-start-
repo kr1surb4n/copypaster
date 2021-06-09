@@ -1,2 +1,0 @@
-# name: strcountsub start  
-str.count(sub[, start[, end]])

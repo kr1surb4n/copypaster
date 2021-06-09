@@ -1,3 +1,0 @@
-# name: print 
-print(*objects, sep=' ', end='
-', file=sys.stdout, flush=False)

@@ -1,2 +1,0 @@
-# name: min 
-min(arg1, arg2, *args[, key])

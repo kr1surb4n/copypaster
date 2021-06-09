@@ -49,7 +49,24 @@ def placeholder_name():
     return name
 
 def clean_name(name: str):
-    name.strip()
+
+    if name is None:
+        name = "None"
+
+    name = name.strip()
+
+    if len(name) > MAX_FILENAME_LENGTH:
+        name = name[:MAX_FILENAME_LENGTH]
+
+    return name
+
+def clean_filename(name: str):
+
+    if name is None:
+        name = "None"
+
+
+    name = name.strip()
     name = name.translate(rules)
 
     if len(name) > MAX_FILENAME_LENGTH:
@@ -58,7 +75,7 @@ def clean_name(name: str):
     if len(name) == 0:
         name = placeholder_name()
 
-    return name
+    return name.replace(" ", "-")
 
 class Folder:
     def __init__(self, name="", path=""):
@@ -77,17 +94,18 @@ class Folder:
 
 class Snippet:
     def __init__(self, name="", content="", path=""):
-        self.name = name
+
+        self.name = clean_name(name)
+        self.filename = clean_filename(name)
+
         self.path = path
         self.content = content
 
-    @property
-    def file_name(self) -> str:
-        return self.name.replace(" ", "-")
 
     def prefix_filename_with(self, path_to_containing_folder):
-        self.path = os.path.join(path_to_containing_folder, self.file_name)
+        self.path = os.path.join(path_to_containing_folder, self.filename)
 
+    # TODO: fix where the populate is
     def populate(self, snippet_dictionary: dict):
         self.content = str(snippet_dictionary.get(VALUE, ""))
         self.name = str(snippet_dictionary.get(NAME, clean_name(self.content)))

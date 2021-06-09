@@ -1,2 +1,0 @@
-# name: bytearrayzfillwidt 
-bytearray.zfill(width)

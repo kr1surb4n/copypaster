@@ -1,2 +1,0 @@
-# name: bytearraystartswit 
-bytearray.startswith(prefix[, start[, end]])

@@ -1,4 +1,0 @@
-# name: main sec 
-if __name__ == '__main__':
-    # Instantiate a class
-    i = Human(name="Ian")

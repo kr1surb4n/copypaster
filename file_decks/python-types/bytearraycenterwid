@@ -1,2 +1,0 @@
-# name: bytearraycenterwid 
-bytearray.center(width[, fillbyte])

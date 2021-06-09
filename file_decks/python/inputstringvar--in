@@ -1,2 +1,0 @@
-# name: inputstringvar  in 
-input_string_var = input("Enter some data: ")

@@ -1,4 +1,0 @@
-# name: static meth 
-    @staticmethod
-    def method():
-        return "*grunt*"

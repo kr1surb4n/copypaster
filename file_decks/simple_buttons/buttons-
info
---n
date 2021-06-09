@@ -1,7 +1,0 @@
-# name: buttons 
-info
-   n 
-buttons: []
-info:
-  - name: Dirty
-  - category: tests

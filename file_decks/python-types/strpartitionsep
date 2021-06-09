@@ -1,2 +1,0 @@
-# name: strpartitionsep 
-str.partition(sep)

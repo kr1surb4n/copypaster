@@ -1,2 +1,0 @@
-# name: OSError 
-OSError(errno, strerror[, filename[, winerror[, filename2]]])

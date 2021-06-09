@@ -1,2 +1,0 @@
-# name: strrsplitsepNone m 
-str.rsplit(sep=None, maxsplit=-1)

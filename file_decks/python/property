@@ -1,4 +1,0 @@
-# name: property 
-    @property
-    def age(self):
-        return self._age

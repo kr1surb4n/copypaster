@@ -1,2 +1,0 @@
-# name: bytesrfindsub star 
-bytes.rfind(sub[, start[, end]])

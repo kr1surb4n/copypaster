@@ -1,3 +1,0 @@
-# name: for i value in enu 
-for i, value in enumerate(animals):
-    print(i, value)

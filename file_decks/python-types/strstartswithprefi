@@ -1,2 +1,0 @@
-# name: strstartswithprefi 
-str.startswith(prefix[, start[, end]])

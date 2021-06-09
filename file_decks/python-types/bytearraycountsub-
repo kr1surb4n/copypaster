@@ -1,2 +1,0 @@
-# name: bytearraycountsub  
-bytearray.count(sub[, start[, end]])

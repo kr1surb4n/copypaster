@@ -1,2 +1,0 @@
-# name: bytearraydecodeenc 
-bytearray.decode(encoding=utf-8", errors="strict")

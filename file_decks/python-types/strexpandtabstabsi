@@ -1,2 +1,0 @@
-# name: strexpandtabstabsi 
-str.expandtabs(tabsize=8)

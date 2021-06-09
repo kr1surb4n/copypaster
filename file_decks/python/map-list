@@ -1,2 +1,0 @@
-# name: map list 
-list(map(add_10, [1, 2, 3]))

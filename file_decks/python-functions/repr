@@ -1,2 +1,0 @@
-# name: repr 
-repr(obj).encode("ascii", backslashreplace)

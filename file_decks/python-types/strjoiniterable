@@ -1,2 +1,0 @@
-# name: strjoiniterable 
-str.join(iterable)

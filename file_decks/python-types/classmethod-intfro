@@ -1,2 +1,0 @@
-# name: classmethod intfro 
-classmethod int.from_bytes(bytes, byteorder, *, signed=False)

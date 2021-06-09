@@ -1,2 +1,0 @@
-# name: bytearraypartition 
-bytearray.partition(sep)

@@ -1,2 +1,0 @@
-# name: bytearrayrstripcha 
-bytearray.rstrip([chars])

@@ -1,2 +1,0 @@
-# name: ahref 
-//a[contains(@href, "://")]

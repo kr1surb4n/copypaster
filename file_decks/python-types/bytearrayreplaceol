@@ -1,2 +1,0 @@
-# name: bytearrayreplaceol 
-bytearray.replace(old, new[, count])

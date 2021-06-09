@@ -1,2 +1,0 @@
-# name: bytesfindsub start 
-bytes.find(sub[, start[, end]])
