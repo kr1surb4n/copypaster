@@ -46,6 +46,16 @@ Features
 * With folders you can have a tree structure, that allows to store many objects, and use them with ease. 
 * TODO Images on buttons
 
+TODO
+----
+1. Fix bug with removing elements
+2. File loader should check if the file is a text file (do not load binary)
+3. Snippets load slow. 
+4. Load CTAGS files as functions and variable names in different tabs (add notebook)
+   - choose file to use
+   - check if changes
+
+
 Credits
 -------
 
