@@ -54,7 +54,9 @@ TODO
 4. Load CTAGS files as functions and variable names in different tabs (add notebook)
    - choose file to use
    - check if changes
-
+5. app/styles.py needs complete redesing. 
+6. implement tests for app components
+7. extract app as stand alone project
 
 Credits
 -------
