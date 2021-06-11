@@ -8,3 +8,7 @@ def error_show_dialog(message):
     dialog = DialogError(__.Application.win, message)
     dialog.run()
     dialog.destroy()
+
+
+def test_dialog_stories():
+    raise NotImplementedError("Tests for dialog stories are missing")

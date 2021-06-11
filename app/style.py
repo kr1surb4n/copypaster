@@ -71,3 +71,7 @@ def reload_default_styles():
     )
 
     Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
+
+
+def test_styles():
+    raise NotImplementedError("styles need tests")

@@ -3,8 +3,8 @@
 """Top-level package for Copypaster."""
 
 # Hello!
-__author__ = """Przemek Kot"""
-__email__ = "kris@whereibend.space"
+__author__ = """Kris Urbanski"""
+__email__ = "kris@plumplum.space"
 __version__ = "0.1.0"
 
 import logging

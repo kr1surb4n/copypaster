@@ -12,10 +12,13 @@ from app.register import register_instance, Register as __
 import gi
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk  # noqa
+from gi.repository import GObject, Gtk  # noqa
 
 
 class GtkBuilder(Gtk.Builder):
+    """This extends the Gtk.Builder, so that
+    you can register a custom type during init,
+    and before loading Glade file"""
 
     def __init__(self, *args, **kwargs):
         self.custom_objects = {}
@@ -28,6 +31,9 @@ class GtkBuilder(Gtk.Builder):
         """
         Looks up a type by name, using the virtual function that Gtk.Builder
         has for that purpose.
+
+        searches the type in `self.custom_objects` dictionaries.
+
 
         Parameters:  type_name (str) – type name to lookup
         Returns:     the GObject.GType found for type_name
@@ -46,3 +52,19 @@ class GtkBuilder(Gtk.Builder):
 
 builder = GtkBuilder()
 __.Builder = builder
+
+
+
+def test_builder_happy_path():
+    builder = GtkBuilder()
+
+    missing = 'missing'
+    mycustomtype = 'mycustomtype'
+    
+    class MyCustomType:
+        ...
+    
+    builder.add_custom_object(mycustomtype, MyCustomType)
+
+    assert builder.do_get_type_from_name(mycustomtype) == MyCustomType
+    assert isinstance(builder.do_get_type_from_name(missing), GObject.GType)

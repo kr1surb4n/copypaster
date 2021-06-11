@@ -1,16 +1,41 @@
+"""This is dictionary object storing object used within the
+application.
+
+It is a Register of objects.
+
+Usage:
+
+```
+# create the register
+Register = ObjectRegister()
+
+# decorate a class
+@register_instance
+class SomeObject:
+    def __init__(self):
+        self.value = 1
+
+# create an instance
+instance = SomeObject()
+
+# you can access the instance with:
+Register.SomeObject
+
+```
+
+Import it like this, for easier use:
+```from register import Register as __```
+
+With that in our example, you could
+access the instance with:
+```__.SomeObject     # way better then Register.SomeObject```
+
+
+"""
 import functools
 
-
 class ObjectRegister(dict):
-    """Is a dictionary and stores stuff. Mainly objects.
-    This way you can build a complex application using very easy code.
-
-    Below you have two functions that allow for a fancy object
-    handling.
-    When the object name you can access it
-    by using i.e. `_.Config` you will get object under the
-    key `Config`.
-    """
+    
 
     def __setattr__(self, name, value):
         self[name] = value
@@ -18,41 +43,25 @@ class ObjectRegister(dict):
     def __getattr__(self, name):
         return self[name]
 
-    def __lt__(self, other):
-        """This function allows for fancy object assigment.
-        Where `other` is a tuple: class name, instance.
-
-        i.e.:  Register < (class.name, instance)
-        """
-        name, value = other
-
-        self[name] = value
-
 
 Register = ObjectRegister()
 
 
-def make_register(Register):
-    def registrar(object):
-        Register[object.__name__] = object
-        return object
-
-    return registrar
-
-
-register = make_register(Register)
-
-
 def register_instance(cls):
-    """This decorator adds an object instance when the object
-    is initiated."""
+    """This decorator adds the object instance to the Registry,
+    when the decorated object is initiated.
+    
+    Registered object is accessible through it's class name.
+
+
+    """
 
     @functools.wraps(cls)
     def wrapper_decorator(*args, **kwargs):
 
         instance = cls(*args, **kwargs)
 
-        Register[cls.__name__] = instance
+        Register[cls.__name__] = instance       # hmm, this dictates the CamelCase names
 
         return instance
 
@@ -64,37 +73,29 @@ def test_object_register():
     dummy = "Stub"
     value = " "
 
-    o_reg = ObjectRegister()
+    reg = ObjectRegister()
 
-    o_reg[dummy] = value
+    reg[dummy] = value
 
-    assert dummy in o_reg  # is dummy in register?
+    assert dummy in reg  # is dummy in register?
+    assert reg.Stub      # can i access the Stub by name?
+    assert reg.Stub == value  # is value correct?
 
-    assert o_reg.Stub == value  # is value correct?
-
-    o_reg.Stub = 1  # can I change the value?
-    assert o_reg.Stub == 1
+    reg.Stub = 1  # can I change the value?
+    assert reg.Stub == 1
 
     # does the setter and getter send exceptions on bad key?
     import pytest
 
     with pytest.raises(KeyError):
-        o_reg.Exception
-
-    register = make_register(o_reg)
-
-    @register
-    def number(i):
-        return i
-
-    assert o_reg.number(2) == 2
+        reg.Exception
 
 
 def test_decorator():
     """Next lets see if the register_instance works"""
 
     @register_instance
-    class Manequin:
+    class SomeObject:
         """Our test object"""
 
         def __init__(self):
@@ -102,9 +103,9 @@ def test_decorator():
 
     global Register
 
-    korper = Manequin()
+    instance = SomeObject()
 
-    assert Register.Manequin  # is object in Register?
-    assert Register.Manequin.value == 1  # is it's value correct?
+    assert Register.SomeObject  # is object in Register?
+    assert Register.SomeObject.value == 1  # is the value correct?
 
-    del korper
+    del instance

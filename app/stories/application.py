@@ -1,5 +1,5 @@
 from app.register import Register as __
-from app.signal_bus import subscribe, emit, signals
+from app.signal_bus import subscribe, emit
 from app.widgets.dialogs import DialogError
 
 
@@ -35,3 +35,8 @@ def on_quit_app(*args):
 @subscribe
 def quit_app(*args):
     __.Application.handle_quit('action', 'param')
+
+
+
+def test_application_stories():
+    raise NotImplementedError("Tests for application stories are missing")

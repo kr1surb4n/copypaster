@@ -17,7 +17,6 @@ default_config_path = expanduser("~/.config/app.conf")
 def main(config):
     """Console script for app."""
     log.info("Started Kr15 Gtk App")
-    log.info("app.cli.main")
 
     try:
         pass

@@ -19,15 +19,7 @@ I run `emit` function and this runs some functions. I don't know what happens.""
 def not_implemented(event_name):
     def wrapps(*args, **kwargs):
         raise NotImplementedError("something has not implemented " + event_name)
-
     return wrapps
-
-# TODO remove this from here
-# generaly good idea, (the stuff on the bottom, commented is cool)
-class Signals(dict):
-    def __getattr__(self, name):
-        return self[name]
-        # return name.replace('_', ' ')
 
 
 @register_instance
@@ -58,33 +50,26 @@ class SignalBus:
             [callback(*args, **kwargs) for callback in receivers]
         except Exception as e:
             log.critical(str(e))
-            raise e
-
         return True
 
 
 signal_bus = SignalBus()
 
-signals = Signals()
-
-
-def make_subscribe(signals, signal_bus):
+def make_subscribe(signal_bus):
     def subscriber(func):
         signal_bus.subscribe(func.__name__, func)
-        signals[func.__name__] = func.__name__
 
         return func
 
     return subscriber
 
 
-subscribe = make_subscribe(signals, signal_bus)
+subscribe = make_subscribe(signal_bus)
 
 
 def make_emit(signal_bus):
     def emiter(event, *args, **kwargs):
         return signal_bus.emit(event, *args, **kwargs)
-
     return emiter
 
 
@@ -92,23 +77,10 @@ emit = make_emit(signal_bus)
 
 
 def test_signals():
-
-    signals = Signals()
     signal_bus = SignalBus()
 
-    subscribe = make_subscribe(signals, signal_bus)
+    subscribe = make_subscribe(signal_bus)
 
-    name = 'name'
-    second_name = 'second_name'
-    value = 1
-    second_value = 2
-
-    signals[name] = value
-    signals[second_name] = second_value
-
-    assert signals.name == value
-    assert signals.second_name == second_value
-    assert signals.name != signals.second_name
 
     counter = 1
 
@@ -118,24 +90,23 @@ def test_signals():
         counter += 1
         return counter
 
-    assert counter == 1
-
-    # subscribe works
-    assert signals.count == 'count'
+    signal_name = count.__name__
 
     # subscribe didn't run the function
     assert counter == 1  # a sanity check
 
-    # count work
+    # count workS
     assert count() == 2
     assert counter == 2
 
-    assert signal_bus.emit(signals.count)
+    # emit signal
+    assert signal_bus.emit(signal_name)
     assert counter == 3
 
     emit = make_emit(signal_bus)
 
-    assert emit(signals.count)
+    # test emit function
+    assert emit(signal_name)
     assert counter == 4
 
 
@@ -162,19 +133,17 @@ def test_signal_bus():
     success = Simplex()
     second = Simplex()
 
-    sbus = SignalBus()
+    signal_bus = SignalBus()
 
-    sbus.subscribe(test_event, success.test_event)
-    assert sbus.emit(test_event)
+    signal_bus.subscribe(test_event, success.test_event)
+    assert signal_bus.emit(test_event)
 
     assert success.x == 1
 
-    import pytest
-
-    sbus.subscribe(test_event, second.test_event)
-    sbus.emit(test_event)
+    signal_bus.subscribe(test_event, second.test_event)
+    signal_bus.emit(test_event)
 
     assert second.y == 1
     assert success.y == 2
 
-    assert not sbus.emit(test_error)
+    assert not signal_bus.emit(test_error)

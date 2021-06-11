@@ -42,3 +42,7 @@ class Config:
 
 config = Config()
 __.Config = config
+
+
+def test_config():
+    raise NotImplementedError("Config needs tests")

@@ -7,7 +7,8 @@ from app.register import Register as __
 
 
 def main_function(config_file):
-    # create and run the application, exit with the value returned by
+    # create and run the application, 
+    # exit with the value returned by
     # running the program
     log.debug("Initializing services...")
 
@@ -23,16 +24,15 @@ def main_function(config_file):
 
     log.debug("Loading Widgets usig GtkBuilder...")
     from app.builder import builder  # noqa
+    from app.layout_events import Layout_events
 
     builder.set_application(application)  # works without it
     builder.add_from_file(os.path.join(CURRENT_DIR, "layout.glade"))
+    builder.connect_signals(Layout_events)
 
     __.main_window = builder.get_object("main_window")
     __.welcome_sign = builder.get_object("welcome_sign")
 
-    from app.layout_events import Layout_events
-
-    builder.connect_signals(Layout_events)
 
     log.debug("Importing stories...")
     import app.stories  # noqa
@@ -59,7 +59,7 @@ def test_main_function():
     assert __.Config
     assert __.SignalBus
     assert __.Application
-    assert __.builder
+    assert __.Builder
     assert __.main_window
     assert __.welcome_sign
     assert __.welcome_sign.get_text() == "I am Kr15 GTK App"
