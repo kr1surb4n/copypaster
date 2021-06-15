@@ -23,11 +23,12 @@ you get the idea. And in "folder" you can have normal buttons.
 do what you want.
 
 """
-
+import os
 import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
+from app.signal_bus import emit
 from copypaster.widgets.buttons import Copy, GoTo, AddFolder, AddSnippet, FunctionalButton
 from copypaster import log
 
@@ -111,9 +112,21 @@ how_to_sort = {
 ex = lambda x: str(x)[1:5]
 
 def sort_function(child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, *user_data):
-    first = child1.get_children()[0]
-    second = child2.get_children()[0]
+    # if you have removed element using destroy
+    # you will have a hole in Flowbox
+    #
+    # this hole causes me to use those ifs
 
+    if child1.get_children():
+        first = child1.get_children()[0]
+    else:
+        return FIRST_GOES_SECOND
+
+    if child2.get_children():
+        second = child2.get_children()[0]
+    else:
+        return FIRST_STAYS_FIRST
+    
     sort = how_to_sort[(ex(first), ex(second))]
     return sort(first, second)
 
@@ -125,21 +138,50 @@ class ButtonGrid(Gtk.FlowBox):
     """As the name says. Generally it's a wrapper on a list
     that is displayed as a grid of buttons"""
 
-    def __init__(self, buttons={}, path: str = None, parent_path: str = None):
+    @property
+    def is_empty(self):
+        if len(self.buttons) == 0:
+            return True
+        
+        return False
+
+    def __init__(self, path: str = None, root: str = None):
         Gtk.FlowBox.__init__(self)
 
-        self.buttons = buttons
+        if path:
+            self.path = path
+            self.parent_path = os.path.dirname(path)
+
+        self.root = root
+
+        self.buttons = {}
+        self.controls = {}
 
         self.set_valign(Gtk.Align.START)
         self.set_selection_mode(Gtk.SelectionMode.NONE)
         self.set_sort_func(sort_function)
 
+        self.add_controll_buttons()
+
+    def add_controll_buttons(self):
+        if not self.root:
+            up_to_parent = GoTo(
+                name="..",
+                position=self.path,
+                destination=self.parent_path
+            )
+            self.controls[GoTo] = up_to_parent
+            up_to_parent.show()
+            self.add(up_to_parent)
+
         snippet = AddSnippet()
-        self.append(snippet)
+        self.controls[AddSnippet] = snippet
+        self.add(snippet)
         snippet.show()
 
         folder = AddFolder()
-        self.append(folder)
+        self.controls[AddFolder] = snippet
+        self.add(folder)
         folder.show()
 
     def append(self, button):
@@ -151,20 +193,20 @@ class ButtonGrid(Gtk.FlowBox):
         self.buttons[button._id] = button
         self.add(button)
 
-    def remove(self, button):
-        super().remove(button)
-        button.delete()
-        del self.buttons[button._id]
-        
+    def get_rid_off_it(self, button):
 
-    def add_go_to_parent_button(self, current, parent):
-        up_to_parent = GoTo(
-                    name="..",
-                    position=current,
-                    destination=parent
-        )
-        up_to_parent.show()
-        self.append(up_to_parent)
+        _id = button._id
+        if hasattr(button, 'delete'):
+            button.delete()
+        button.destroy()
+        
+        if _id in self.buttons:
+            self.buttons[_id] = 1
+            del self.buttons[_id]
+
+        self.invalidate_sort()
+
+
 
 class ButtonTree(Gtk.Stack):
     "Object representing whole tree of folders and files"
@@ -189,6 +231,7 @@ class ButtonTree(Gtk.Stack):
             self.add_named(grid, name)
 
     def goto(self, destination):
+        log.debug(f"Switching grid to {destination}")
         self.current_level = destination
         self.set_visible_child_name(destination)
 
@@ -200,8 +243,7 @@ class ButtonTree(Gtk.Stack):
         self.current_grid.append(button)
 
     def remove_button_from_current_grid(self, button):
-        self.current_grid.remove(button)
+        self.current_grid.get_rid_off_it(button)
 
-    def show_root(self):
-        log.debug("Back to root")
-        self.set_visible_child_name(self.root)
+    def remove_grid(self, button):
+        del self.tree[button.destination]

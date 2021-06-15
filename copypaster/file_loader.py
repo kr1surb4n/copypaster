@@ -1,10 +1,7 @@
-import yaml
 import os
 import threading, queue
-from pathlib import Path
-import configparser
-import yaml
 import string
+from typing import Tuple
 
 import gi
 
@@ -18,7 +15,7 @@ from copypaster import log, PROJECT_DIR
 tasks = queue.Queue()
 Decks = {}
 
-BACKUP_FOLDER = os.path.join(PROJECT_DIR, "file_decks")
+BACKUP_FOLDER = os.path.join(PROJECT_DIR, "filedecks")
 PATH_TO_SNIPPETS_FOLDER = os.environ.get('SNIPPETS_FOLDER', BACKUP_FOLDER)
 
 CLICK_COUNT = "click_count"
@@ -147,21 +144,22 @@ def button_made_from(entry: os.DirEntry) -> Gtk.Button:
                 position=os.path.dirname(entry.path),
                 destination=entry.path,
             )
-        
-def walk(folder: str):
+
+def prepare_decks(folder: str):
+    """Will create the decks and add them to the stack"""
     global Decks
     global Decks_Data
     global tasks
 
     print(f"Working on folder: {folder}")
 
-    deck = ButtonGrid()
-
-    parent_folder = os.path.dirname(folder)
-
-    if folder != PATH_TO_SNIPPETS_FOLDER:
-        deck.add_go_to_parent_button(folder, parent_folder)
-
+    # remove root
+    if folder ==  PATH_TO_SNIPPETS_FOLDER:
+        log.debug("in root")
+        deck = ButtonGrid(path=folder, root=PATH_TO_SNIPPETS_FOLDER)
+    else:
+        deck = ButtonGrid(path=folder)
+    
     # TODO: here i can read a file with metadata
 
     with os.scandir(folder) as it:
@@ -172,10 +170,26 @@ def walk(folder: str):
             if entry.is_dir():
                 tasks.put(entry.path)
 
-            deck.append(button_made_from(entry))
-
-    deck.show()
+    deck.show_all()
     Decks[folder] = deck
+
+def load_folder(deck):
+    """"""
+    folder = deck.path
+
+    print(f"Working on folder: {folder}")
+
+    # TODO: here i can read a file with metadata
+
+    with os.scandir(folder) as it:
+        for entry in it:
+            if entry.name.startswith('.'):
+                continue
+
+            deck.append(button_made_from(entry))
+    
+    deck.show_all()
+
 
 def worker():
     global tasks
@@ -184,12 +198,12 @@ def worker():
         folder = tasks.get()
         log.debug(f'Working on folder: {folder}')
 
-        walk(folder)
+        prepare_decks(folder)
         log.debug(f'Finished {folder}')
         tasks.task_done()
 
 
-def load_snippets() -> (dict, str):
+def load_snippets() -> Tuple[dict, str]:
     log.info('Loading snippets')
     global tasks
     global Decks

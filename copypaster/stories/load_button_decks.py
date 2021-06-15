@@ -2,7 +2,7 @@ from app.register import Register as __
 from copypaster import log, PROJECT_DIR
 import os
 from app.signal_bus import emit, subscribe
-from copypaster.file_loader import load_snippets
+from copypaster.file_loader import load_snippets, load_folder
 from copypaster.widgets.containers import ButtonGrid, ButtonTree
 
 
@@ -20,7 +20,7 @@ def initialize_snippets():
     log.debug("Loading snippets")
 
     __.Snippets.initialize(*load_snippets())
-    __.Snippets.show_root()
+    change_button_grid("Starting", __.Snippets.root)
     __.Snippets.show()
     
     __.main_window.show_all()  # redraw everything
@@ -29,6 +29,13 @@ def initialize_snippets():
 @subscribe
 def change_button_grid(current_position, destination):
     log.debug(f"Switch to the other branch from {current_position} to  {destination}")
+
+    destination_grid = __.Snippets.tree[destination]
+    
+    if destination_grid.is_empty:
+        log.debug("Grid is empty, loading...")
+
+        load_folder(destination_grid)
 
     __.Snippets.goto(destination)
     show_current_possition_as(destination)

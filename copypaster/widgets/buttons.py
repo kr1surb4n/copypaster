@@ -137,6 +137,7 @@ class GoTo(Gtk.Button, Id):
         if __.AppState == __.State.REMOVE:
             log.debug("Removing button...")
             emit("remove_button", self)
+            emit("remove_folder", self)
 
         if __.AppState != __.State.REMOVE:
             emit("change_button_grid", self.current_position, self.destination)

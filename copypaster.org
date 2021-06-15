@@ -353,6 +353,52 @@ Now i have to look into parsing the documentation.
 ** TODO file_loader - make it check files if they are text (fails on non-text)
 ** TODO the snippets load slow. maybe some optimization?
 So the snippets load slow (due to the python)
+
+
+*** structure:
+
+**** initialize
+
+copypaster/stories/load_button_decks::initialize_snippets
+
+which does:
+
+    __.Snippets.initialize(*load_snippets())
+    __.Snippets.show_root()
+    __.Snippets.show()
+    
+    __.main_window.show_all()  
+
+**** change deck
+
+copypaster/stories/load_button_decks::change_button_grid(current_position, destination)
+
+and it does:
+
+__.Snippets.goto(destination)
+
+
+*** proposed plan
+
+so the idea is like this.
+
+during start,
+    thread will walk over snippets, but
+        it will only list down all folder,
+        create ButtonGrid for a given path.
+
+when you click on opening folder,
+the current deck will be cleaned
+the target deck will load it's contents
+
+ButtonGrid will be responsible now for:
+- parent button,
+- add snippet button,
+- add folder button,
+- loading of the contents (maybe)
+
+
+
 ** TODO parse ctags generated file to build tree structure of functions and variable names
 ** DONE parse python documentation
 - State "DONE"       from "WAITING"    [2021-06-09 Mi 14:40]

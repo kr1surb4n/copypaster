@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block scripts %}
+    <script src="{{ url_for('static', filename='api.js')|autoversion }}"></script>
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='api.css')|autoversion }}">
+{% endblock %}
+
+{% set docsNavBack={
+    "url": "/docs/home.html",
+    "text": "Kotlin Docs"
+} %}
+
+{% block content %}
+    <div class="g-grid">
+        <div class="api-layout">
+            <div class="api-layout_button-box">
+                <a class="scroll-button-back" href="/docs/home.html">← Docs</a>
+                <button class="scroll-button-top"></button>
+            </div>
+
+            <article role="main" class="page-content g-9">
+                {{ page.content | safe }}
+            </article>
+        </div>
+    </div>
+{% endblock %}

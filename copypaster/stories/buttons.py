@@ -41,6 +41,10 @@ def remove_button(button):
     __.Snippets.remove_button_from_current_grid(button)
 
 @subscribe
+def remove_folder(button):
+    __.Snippets.remove_grid(button)
+
+@subscribe
 def edit_button(button_to_edit):
     dialog = __.snippet_dialog
     dialog.run()
@@ -139,21 +143,16 @@ def add_folder(folder_name):
     folder.suffix_path(__.Snippets.current_level)
     folder.save()
 
-    goto = GoTo(
-        name=folder.name, 
-        position=__.Snippets.current_level,
-        destination=folder.path)
-    __.Snippets.add_to_current_grid(goto)
+    grid = ButtonGrid(path=folder.path)
 
-
-    grid = ButtonGrid()
-    grid.add_go_to_parent_button(folder.path, __.Snippets.current_level)
-    grid.show()
-
+    folder_button = GoTo(folder_name, __.Snippets.current_level, folder.path)
+    
     __.Snippets.tree[folder.path] = grid
     __.Snippets.add_named(grid, folder.path)
 
-    goto.show()
+    __.Snippets.current_grid.append(folder_button)
+    folder_button.show()
+
 
 @subscribe
 def open_add_button_dialog(*args):
