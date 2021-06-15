@@ -349,11 +349,19 @@ on app and other subapps.
 Soon I will have a simple GTK3 App Framework :D
 
 Now i have to look into parsing the documentation.
-** TODO fix the issue with removing stuff.
+** DONE fix the issue with removing stuff.
 ** TODO file_loader - make it check files if they are text (fails on non-text)
-** TODO the snippets load slow. maybe some optimization?
+** TODO load performance checks
+** DONE the snippets load slow. maybe some optimization?
 So the snippets load slow (due to the python)
 
+I have partitioned the proces of loading decks, by loading them on the
+first try when they are used.
+
+This needs more work. As this is not the best solution.
+
+Python decks have been moved outside. They are big (? 20000 something elements).
+For now this has to work like that.
 
 *** structure:
 
@@ -397,7 +405,8 @@ ButtonGrid will be responsible now for:
 - add folder button,
 - loading of the contents (maybe)
 
-
+well, ended up on making several things at a time. 
+well, but it worked.
 
 ** TODO parse ctags generated file to build tree structure of functions and variable names
 ** DONE parse python documentation
