@@ -112,7 +112,7 @@ class Snippet:
     def load(self, path: str):
         self.path = path
 
-        print(f"floading path {path}")
+        log.info(f"Loading path {path}")
         with open(path, 'r') as f:
             content = f.readlines()
 
@@ -151,11 +151,10 @@ def prepare_decks(folder: str):
     global Decks_Data
     global tasks
 
-    print(f"Working on folder: {folder}")
+    log.info(f"Working on folder: {folder}")
 
     # remove root
     if folder ==  PATH_TO_SNIPPETS_FOLDER:
-        log.debug("in root")
         deck = ButtonGrid(path=folder, root=PATH_TO_SNIPPETS_FOLDER)
     else:
         deck = ButtonGrid(path=folder)
@@ -177,7 +176,7 @@ def load_folder(deck):
     """"""
     folder = deck.path
 
-    print(f"Working on folder: {folder}")
+    log.info(f"Working on folder: {folder}")
 
     # TODO: here i can read a file with metadata
 

@@ -2,7 +2,6 @@
 import os
 import threading, queue
 from pathlib import Path
-import configparser
 from dataclasses import dataclass, asdict, astuple
 import yaml
 import string
@@ -149,7 +148,7 @@ def deyaml(folder):
 def worker():
     while True:
         folder = kolejka_folder.get()
-        print(f'Working on folder: {folder}')
+        log.info(f'Working on folder: {folder}')
 
         deyaml(folder)
         print(f'Finished {folder}')

@@ -1,0 +1,4 @@
+# name: block 
+network_interface {
+    # ...
+  }

@@ -48,9 +48,10 @@ Features
 
 TODO
 ----
-1. Fix bug with removing elements
-2. File loader should check if the file is a text file (do not load binary)
-3. Snippets load slow. 
+1. File loader should check if the file is a text file (do not load binary)
+2. Snippets loading slow. (logging is a drag)
+   a) Do performance checks.
+   b) Add some info for user that stuff is loading (splash)
 4. Load CTAGS files as functions and variable names in different tabs (add notebook)
    - choose file to use
    - check if changes

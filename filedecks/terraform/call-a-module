@@ -1,0 +1,6 @@
+# name: call a module 
+module "servers" {
+  source = "./app-cluster"
+
+  servers = 5
+}
