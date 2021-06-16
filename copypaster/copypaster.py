@@ -62,7 +62,9 @@ def main_function(config_file = None):
     import copypaster.stories  # noqa
 
     log.debug("Starting the Application...")
-    exit_status = application.run(sys.argv)
+    # exit_status = application.run(sys.argv)
+    exit_status = application.run()
+
 
     log.debug("Returning exit status value...")
     return exit_status

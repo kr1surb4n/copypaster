@@ -7,6 +7,7 @@ __author__ = """Przemek Kot"""
 __email__ = "kris@plumplum.space"
 __version__ = "0.1.0"
 from functools import wraps
+from app import log
 import logging
 import os
 
@@ -16,7 +17,7 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
 log = logging.getLogger("CopyPaster")
-log.setLevel(logging.DEBUG)
+log.setLevel(logging.WARN)
 logging.info("Start Copypaster")
 
 

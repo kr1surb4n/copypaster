@@ -4,6 +4,7 @@
 import sys
 import click
 from os.path import expanduser
+import logging
 
 from copypaster import log
 from copypaster.copypaster import main_function
@@ -14,10 +15,16 @@ default_config_path = expanduser("~/.config/copypaster.conf")
 
 @click.command()
 @click.option("--config", default=default_config_path)
-def main(config):
+@click.option('--debug', is_flag=True, default=False, help='turn log level DEBUG on')
+def main(config, debug):
     """Console script for copypaster."""
+    if debug:
+        log.setLevel(logging.DEBUG)
+        
     log.info("Started CopyPaster")
     log.info("copypaster.cli.main")
+
+
 
     try:
         main_function(config)
