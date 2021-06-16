@@ -7,7 +7,7 @@ __author__ = """Przemek Kot"""
 __email__ = "kris@plumplum.space"
 __version__ = "0.1.0"
 from functools import wraps
-from app import log
+from app import log as applog
 import logging
 import os
 

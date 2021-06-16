@@ -16,7 +16,7 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
 log = logging.getLogger("Kr15 App")
-log.setLevel(logging.DEBUG)
+log.setLevel(logging.WARN)
 
 
 class State:

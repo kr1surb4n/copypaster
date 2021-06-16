@@ -38,7 +38,7 @@ def main_function(config_file):
     import app.stories  # noqa
 
     log.debug("Starting1 the Application...")
-    exit_status = application.run(sys.argv)
+    exit_status = application.run()
 
     log.debug("Returning exit status value...")
     return exit_status
