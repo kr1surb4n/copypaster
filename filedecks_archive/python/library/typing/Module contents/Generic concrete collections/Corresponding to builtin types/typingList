@@ -1,2 +1,0 @@
-# name: typing.List 
-class typing.List(list, MutableSequence[T])

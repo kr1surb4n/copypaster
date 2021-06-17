@@ -1,2 +1,0 @@
-# name: loop.call_soon_threa 
-loop.call_soon_threadsafe(fut.cancel)

@@ -1,2 +1,0 @@
-# name: ftplib.FTP.retrlines 
-FTP.retrlines(cmd, callback=None)

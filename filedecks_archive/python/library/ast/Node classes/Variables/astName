@@ -1,2 +1,0 @@
-# name: ast.Name 
-class ast.Name(id, ctx)

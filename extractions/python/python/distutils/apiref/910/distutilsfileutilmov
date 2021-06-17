@@ -1,2 +1,0 @@
-# name: distutils.file_util. 
-distutils.file_util.move_file(src, dst[, verbose, dry_run])

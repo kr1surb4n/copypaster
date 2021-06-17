@@ -1,5 +1,0 @@
-# name: PyObject *_PyCFuncti 
-PyObject *_PyCFunctionFastWithKeywords(PyObject *self,
-                                       PyObject *const *args,
-                                       Py_ssize_t nargs,
-                                       PyObject *kwnames);

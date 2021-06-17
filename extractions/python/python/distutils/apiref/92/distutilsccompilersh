@@ -1,2 +1,0 @@
-# name: distutils.ccompiler. 
-distutils.ccompiler.show_compilers()

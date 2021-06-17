@@ -1,2 +1,0 @@
-# name: statistics.median_gr 
-statistics.median_grouped(data, interval=1)

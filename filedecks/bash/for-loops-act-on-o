@@ -1,2 +1,0 @@
-# name: for loops act on o 
-for Output in $(ls)

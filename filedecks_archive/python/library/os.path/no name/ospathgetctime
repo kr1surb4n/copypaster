@@ -1,2 +1,0 @@
-# name: os.path.getctime 
-os.path.getctime(path)

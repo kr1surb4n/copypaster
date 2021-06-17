@@ -1,2 +1,0 @@
-# name: Arrayprototypefind 
-Array.prototype.find(callbackFn(element[, index[, array]])[, thisArg])

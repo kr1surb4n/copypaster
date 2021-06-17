@@ -1,2 +1,0 @@
-# name: ast.Yield 
-class ast.Yield(value)

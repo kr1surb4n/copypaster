@@ -1,2 +1,0 @@
-# name: smtplib.SMTPResponse 
-exception smtplib.SMTPResponseException

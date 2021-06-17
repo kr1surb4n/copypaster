@@ -1,2 +1,0 @@
-# name: unittest.TestSuite 
-class unittest.TestSuite(tests=())

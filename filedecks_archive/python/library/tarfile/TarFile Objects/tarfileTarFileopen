@@ -1,2 +1,0 @@
-# name: tarfile.TarFile.open 
-classmethod TarFile.open(...)

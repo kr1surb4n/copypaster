@@ -1,2 +1,0 @@
-# name: int tp_clear(PyObjec 
-int tp_clear(PyObject *);

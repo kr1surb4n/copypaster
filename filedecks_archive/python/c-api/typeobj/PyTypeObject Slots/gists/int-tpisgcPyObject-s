@@ -1,2 +1,0 @@
-# name: int tp_is_gc(PyObjec 
-int tp_is_gc(PyObject *self);

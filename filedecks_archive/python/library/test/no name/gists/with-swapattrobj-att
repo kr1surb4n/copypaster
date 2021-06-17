@@ -1,3 +1,0 @@
-# name: with swap_attr(obj,  
-with swap_attr(obj, "attr", 5):
-    ...

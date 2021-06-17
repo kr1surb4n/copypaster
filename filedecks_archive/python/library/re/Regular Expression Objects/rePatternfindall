@@ -1,2 +1,0 @@
-# name: re.Pattern.findall 
-Pattern.findall(string[, pos[, endpos]])

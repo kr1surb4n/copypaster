@@ -1,2 +1,0 @@
-# name: int tp_init(PyObject 
-int tp_init(PyObject *self, PyObject *args, PyObject *kwds);

@@ -1,2 +1,0 @@
-# name: csv.unregister_diale 
-csv.unregister_dialect(name)

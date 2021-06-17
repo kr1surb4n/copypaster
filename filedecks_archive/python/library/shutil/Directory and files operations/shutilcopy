@@ -1,2 +1,0 @@
-# name: shutil.copy 
-shutil.copy(src, dst, *, follow_symlinks=True)

@@ -1,3 +1,0 @@
-# name: class EnumName([mix- 
-class EnumName([mix-in, ...,] [data-type,] base-enum):
-    pass

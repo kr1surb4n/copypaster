@@ -1,2 +1,0 @@
-# name: os.path.commonprefix 
-os.path.commonprefix(list)

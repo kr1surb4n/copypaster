@@ -1,2 +1,0 @@
-# name: pickle.PickleBuffer 
-class pickle.PickleBuffer(buffer)

@@ -1,2 +1,0 @@
-# name: inspect.getattr_stat 
-inspect.getattr_static(obj, attr, default=None)

@@ -1,2 +1,0 @@
-# name: c.PyBytes_FromFormat 
-PyObject* PyBytes_FromFormat(const char *format, ...)

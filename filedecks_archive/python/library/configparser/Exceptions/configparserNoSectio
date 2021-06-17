@@ -1,2 +1,0 @@
-# name: configparser.NoSecti 
-exception configparser.NoSectionError

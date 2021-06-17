@@ -1,2 +1,0 @@
-# name: queue.Queue.put 
-Queue.put(item, block=True, timeout=None)

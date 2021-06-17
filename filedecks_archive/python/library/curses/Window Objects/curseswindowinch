@@ -1,2 +1,0 @@
-# name: curses.window.inch 
-window.inch([y, x])

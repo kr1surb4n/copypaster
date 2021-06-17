@@ -1,2 +1,0 @@
-# name: colorsys.hls_to_rgb 
-colorsys.hls_to_rgb(h, l, s)

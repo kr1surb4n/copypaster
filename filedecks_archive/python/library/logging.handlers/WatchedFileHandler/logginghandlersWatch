@@ -1,2 +1,0 @@
-# name: logging.handlers.Wat 
-logging.handlers.WatchedFileHandler.emit

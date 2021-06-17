@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_ve 
-unsigned int PyTypeObject.tp_version_tag

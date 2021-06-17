@@ -1,2 +1,0 @@
-# name: c.PyGILState_Check 
-int PyGILState_Check()

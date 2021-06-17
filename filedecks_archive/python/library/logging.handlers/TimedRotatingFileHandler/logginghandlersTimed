@@ -1,2 +1,0 @@
-# name: logging.handlers.Tim 
-logging.handlers.TimedRotatingFileHandler.emit

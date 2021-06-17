@@ -1,2 +1,0 @@
-# name: return catcharAt1 
-return 'cat'.charAt(1)

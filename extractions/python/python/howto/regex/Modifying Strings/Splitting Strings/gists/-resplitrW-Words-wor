@@ -1,7 +1,0 @@
-# name: >>> re.split(r'[\W]+ 
->>> re.split(r'[\W]+', 'Words, words, words.')
-['Words', 'words', 'words', '']
->>> re.split(r'([\W]+)', 'Words, words, words.')
-['Words', ', ', 'words', ', ', 'words', '.', '']
->>> re.split(r'[\W]+', 'Words, words, words.', 1)
-['Words', 'words, words.']

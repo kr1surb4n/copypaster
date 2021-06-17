@@ -1,2 +1,0 @@
-# name: void tp_dealloc(PyOb 
-void tp_dealloc(PyObject *self);

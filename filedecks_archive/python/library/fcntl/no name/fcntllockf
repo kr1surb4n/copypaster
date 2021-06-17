@@ -1,2 +1,0 @@
-# name: fcntl.lockf 
-fcntl.lockf(fd, cmd, len=0, start=0, whence=0)

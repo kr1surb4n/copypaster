@@ -1,2 +1,0 @@
-# name: code.InteractiveCons 
-class code.InteractiveConsole(locals=None, filename="<console>")

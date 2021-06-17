@@ -1,2 +1,0 @@
-# name: concurrent.futures.C 
-exception concurrent.futures.CancelledError

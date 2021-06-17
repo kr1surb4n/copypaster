@@ -1,3 +1,0 @@
-# name: f"abc {a["x"]} def"  
-f"abc {a["x"]} def"    # error: outer string literal ended prematurely
-f"abc {a['x']} def"    # workaround: use different quoting

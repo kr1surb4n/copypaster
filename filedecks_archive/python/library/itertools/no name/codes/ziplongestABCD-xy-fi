@@ -1,2 +1,0 @@
-# name: zip_longest('ABCD',  
-zip_longest('ABCD', 'xy', fillvalue='-') --> Ax By C- D-

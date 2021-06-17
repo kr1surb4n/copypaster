@@ -1,2 +1,0 @@
-# name: xmlrpc.client.dumps 
-xmlrpc.client.dumps(params, methodname=None, methodresponse=None, encoding=None, allow_none=False)

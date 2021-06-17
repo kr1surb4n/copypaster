@@ -1,2 +1,0 @@
-# name: strftimeformat  ti 
-strftime([format [, timestamp [, utc-flag] ] ])

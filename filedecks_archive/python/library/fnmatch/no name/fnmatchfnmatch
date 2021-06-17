@@ -1,2 +1,0 @@
-# name: fnmatch.fnmatch 
-fnmatch.fnmatch(filename, pattern)

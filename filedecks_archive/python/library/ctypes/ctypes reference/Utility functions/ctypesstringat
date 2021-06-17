@@ -1,2 +1,0 @@
-# name: ctypes.string_at 
-ctypes.string_at(address, size=-1)

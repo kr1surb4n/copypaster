@@ -1,2 +1,0 @@
-# name: ast.Await 
-class ast.Await(value)

@@ -1,2 +1,0 @@
-# name: c.PyObject_NewVar 
-TYPE* PyObject_NewVar(TYPE, PyTypeObject *type, Py_ssize_t size)

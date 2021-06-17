@@ -1,2 +1,0 @@
-# name: xmlrpc.client.loads 
-xmlrpc.client.loads(data, use_datetime=False, use_builtin_types=False)

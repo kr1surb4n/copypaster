@@ -1,7 +1,0 @@
-# name: WINUSERAPI int WINAP 
-WINUSERAPI int WINAPI
-MessageBoxW(
-    HWND hWnd,
-    LPCWSTR lpText,
-    LPCWSTR lpCaption,
-    UINT uType);

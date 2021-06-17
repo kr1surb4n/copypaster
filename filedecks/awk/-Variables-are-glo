@@ -1,3 +1,0 @@
-# name:  Variables are glo 
-# Variables are global. Just set them or use them, no need to declare..
-    count = 0;

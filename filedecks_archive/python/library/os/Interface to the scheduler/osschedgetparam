@@ -1,2 +1,0 @@
-# name: os.sched_getparam 
-os.sched_getparam(pid)

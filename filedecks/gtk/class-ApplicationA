@@ -1,4 +1,0 @@
-# name: class ApplicationA 
-class Application(AppCallbacks, Gtk.Application):
-    # constructor of the Gtk Application
-    win = None

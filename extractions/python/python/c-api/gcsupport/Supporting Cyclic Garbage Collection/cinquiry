@@ -1,2 +1,0 @@
-# name: c.inquiry 
-int (*inquiry)(PyObject *self)

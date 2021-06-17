@@ -1,2 +1,0 @@
-# name: pkgutil.find_loader 
-pkgutil.find_loader(fullname)

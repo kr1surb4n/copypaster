@@ -1,3 +1,0 @@
-# name: >>> multisort(list(s 
->>> multisort(list(student_objects), (('grade', True), ('age', False)))
-[('dave', 'B', 10), ('jane', 'B', 12), ('john', 'A', 15)]

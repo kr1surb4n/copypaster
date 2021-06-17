@@ -1,2 +1,0 @@
-# name: email.header.decode_ 
-email.header.decode_header(header)

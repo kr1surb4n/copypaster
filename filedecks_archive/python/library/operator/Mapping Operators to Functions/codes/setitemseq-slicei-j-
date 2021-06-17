@@ -1,2 +1,0 @@
-# name: setitem(seq, slice(i 
-setitem(seq, slice(i, j), values)

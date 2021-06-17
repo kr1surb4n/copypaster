@@ -1,2 +1,0 @@
-# name: PyObject *am_await(P 
-PyObject *am_await(PyObject *self);

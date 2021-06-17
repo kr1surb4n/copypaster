@@ -1,5 +1,0 @@
-# name: >>> 'TestHook'.remov 
->>> 'TestHook'.removeprefix('Test')
-'Hook'
->>> 'BaseTestCase'.removeprefix('Test')
-'BaseTestCase'

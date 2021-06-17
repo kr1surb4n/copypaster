@@ -1,3 +1,0 @@
-# name: for chunk in json.JS 
-for chunk in json.JSONEncoder().iterencode(bigobject):
-    mysocket.write(chunk)

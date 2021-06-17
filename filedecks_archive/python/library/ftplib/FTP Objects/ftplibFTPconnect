@@ -1,2 +1,0 @@
-# name: ftplib.FTP.connect 
-FTP.connect(host='', port=0, timeout=None, source_address=None)

@@ -1,2 +1,0 @@
-# name: c.PyObject_GenericGe 
-PyObject* PyObject_GenericGetAttr(PyObject *o, PyObject *name)

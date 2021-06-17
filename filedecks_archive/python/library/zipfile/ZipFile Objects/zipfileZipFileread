@@ -1,2 +1,0 @@
-# name: zipfile.ZipFile.read 
-ZipFile.read(name, pwd=None)

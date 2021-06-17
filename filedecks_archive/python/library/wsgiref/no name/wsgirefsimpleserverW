@@ -1,2 +1,0 @@
-# name: wsgiref.simple_serve 
-wsgiref.simple_server.WSGIRequestHandler.handle

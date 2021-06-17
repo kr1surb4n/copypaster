@@ -1,3 +1,0 @@
-# name: >>> Decimal(2).fma(3 
->>> Decimal(2).fma(3, 5)
-Decimal('11')

@@ -1,2 +1,0 @@
-# name: print(_('This string 
-print(_('This string will be translated.'))

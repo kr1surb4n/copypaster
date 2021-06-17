@@ -1,2 +1,0 @@
-# name: curses.set_tabsize 
-curses.set_tabsize(size)

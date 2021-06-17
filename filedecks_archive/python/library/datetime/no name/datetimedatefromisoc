@@ -1,2 +1,0 @@
-# name: datetime.date.fromis 
-classmethod date.fromisocalendar(year, week, day)

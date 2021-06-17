@@ -1,2 +1,0 @@
-# name: pdb.runcall 
-pdb.runcall(function, *args, **kwds)

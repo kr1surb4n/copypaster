@@ -1,2 +1,0 @@
-# name: socket.gethostbyaddr 
-socket.gethostbyaddr(ip_address)

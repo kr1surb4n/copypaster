@@ -1,2 +1,0 @@
-# name: math.perm 
-math.perm(n, k=None)

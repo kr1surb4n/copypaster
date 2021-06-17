@@ -1,2 +1,0 @@
-# name: readline.set_auto_hi 
-readline.set_auto_history(enabled)

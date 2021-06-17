@@ -1,2 +1,0 @@
-# name: c.PyCodec_BackslashR 
-PyObject* PyCodec_BackslashReplaceErrors(PyObject *exc)

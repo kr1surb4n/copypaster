@@ -1,2 +1,0 @@
-# name: c.PyContextVar_Set 
-PyObject *PyContextVar_Set(PyObject *var, PyObject *value)

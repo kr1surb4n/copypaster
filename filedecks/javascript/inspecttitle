@@ -1,2 +1,0 @@
-# name: inspecttitle 
-inspect($("#title"))

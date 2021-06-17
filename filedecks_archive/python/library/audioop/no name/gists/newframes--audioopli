@@ -1,3 +1,0 @@
-# name: new_frames = audioop 
-new_frames = audioop.lin2lin(frames, old_width, 1)
-new_frames = audioop.bias(new_frames, 1, 128)

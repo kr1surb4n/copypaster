@@ -1,2 +1,0 @@
-# name: xml.etree.ElementTre 
-xml.etree.ElementTree.register_namespace(prefix, uri)

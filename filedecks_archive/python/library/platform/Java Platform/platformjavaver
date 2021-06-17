@@ -1,2 +1,0 @@
-# name: platform.java_ver 
-platform.java_ver(release='', vendor='', vminfo=('', '', ''), osinfo=('', '', ''))

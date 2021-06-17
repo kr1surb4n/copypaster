@@ -1,2 +1,0 @@
-# name: turtle.Shape 
-class turtle.Shape(type_, data)

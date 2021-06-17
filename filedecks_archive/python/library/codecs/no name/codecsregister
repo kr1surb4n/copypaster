@@ -1,2 +1,0 @@
-# name: codecs.register 
-codecs.register(search_function)

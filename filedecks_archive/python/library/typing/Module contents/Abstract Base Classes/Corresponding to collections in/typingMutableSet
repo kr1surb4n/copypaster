@@ -1,2 +1,0 @@
-# name: typing.MutableSet 
-class typing.MutableSet(AbstractSet[T])

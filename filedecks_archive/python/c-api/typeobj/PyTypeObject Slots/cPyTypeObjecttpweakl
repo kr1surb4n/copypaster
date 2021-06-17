@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_we 
-PyObject* PyTypeObject.tp_weaklist

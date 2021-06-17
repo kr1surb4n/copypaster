@@ -1,2 +1,0 @@
-# name: datetime.time.fromis 
-classmethod time.fromisoformat(time_string)

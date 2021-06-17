@@ -1,2 +1,0 @@
-# name: dataclasses.is_datac 
-dataclasses.is_dataclass(class_or_instance)

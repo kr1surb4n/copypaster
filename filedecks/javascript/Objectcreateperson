@@ -1,2 +1,0 @@
-# name: Objectcreateperson 
-Object.create(person1);

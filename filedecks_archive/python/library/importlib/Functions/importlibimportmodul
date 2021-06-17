@@ -1,2 +1,0 @@
-# name: importlib.import_mod 
-importlib.import_module(name, package=None)

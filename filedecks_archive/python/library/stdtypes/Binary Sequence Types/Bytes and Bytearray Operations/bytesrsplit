@@ -1,2 +1,0 @@
-# name: bytes.rsplit 
-bytes.rsplit(sep=None, maxsplit=-1)

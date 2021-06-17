@@ -1,2 +1,0 @@
-# name: gettext.ngettext 
-gettext.ngettext(singular, plural, n)

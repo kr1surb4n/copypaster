@@ -1,2 +1,0 @@
-# name: marshal.dump 
-marshal.dump(value, file[, version])

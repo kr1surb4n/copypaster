@@ -1,7 +1,0 @@
-# name: >>> screen.bgcolor(" 
->>> screen.bgcolor("orange")
->>> screen.bgcolor()
-'orange'
->>> screen.bgcolor("#800080")
->>> screen.bgcolor()
-(128.0, 0.0, 128.0)

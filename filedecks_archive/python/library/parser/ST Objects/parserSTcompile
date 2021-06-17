@@ -1,2 +1,0 @@
-# name: parser.ST.compile 
-ST.compile(filename='<syntax-tree>')

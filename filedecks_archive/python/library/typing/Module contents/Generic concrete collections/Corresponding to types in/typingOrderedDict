@@ -1,2 +1,0 @@
-# name: typing.OrderedDict 
-class typing.OrderedDict(collections.OrderedDict, MutableMapping[KT, VT])

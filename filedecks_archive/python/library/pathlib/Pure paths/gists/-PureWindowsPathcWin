@@ -1,3 +1,0 @@
-# name: >>> PureWindowsPath( 
->>> PureWindowsPath('c:/Windows', '/Program Files')
-PureWindowsPath('c:/Program Files')

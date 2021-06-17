@@ -1,2 +1,0 @@
-# name: nntplib.NNTP.set_deb 
-NNTP.set_debuglevel(level)

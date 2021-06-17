@@ -1,2 +1,0 @@
-# name: c.PyType_Ready 
-int PyType_Ready(PyTypeObject *type)

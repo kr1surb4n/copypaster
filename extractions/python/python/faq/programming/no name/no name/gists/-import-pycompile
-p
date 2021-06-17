@@ -1,3 +1,0 @@
-# name: >>> import py_compil 
->>> import py_compile
->>> py_compile.compile('foo.py')

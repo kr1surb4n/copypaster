@@ -1,2 +1,0 @@
-# name: inspect.isawaitable 
-inspect.isawaitable(object)

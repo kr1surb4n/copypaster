@@ -1,2 +1,0 @@
-# name: c.PySeqIter_Check 
-int PySeqIter_Check(op)

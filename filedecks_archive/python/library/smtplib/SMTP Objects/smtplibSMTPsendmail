@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.sendmai 
-SMTP.sendmail(from_addr, to_addrs, msg, mail_options=(), rcpt_options=())

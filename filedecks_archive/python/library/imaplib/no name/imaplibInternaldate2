@@ -1,2 +1,0 @@
-# name: imaplib.Internaldate 
-imaplib.Internaldate2tuple(datestr)

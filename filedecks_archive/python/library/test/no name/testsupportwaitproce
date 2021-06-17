@@ -1,2 +1,0 @@
-# name: test.support.wait_pr 
-test.support.wait_process(pid, *, exitcode, timeout=None)

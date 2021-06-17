@@ -1,5 +1,0 @@
-# name: >>> PurePosixPath('b 
->>> PurePosixPath('b.py').match('*.PY')
-False
->>> PureWindowsPath('b.py').match('*.PY')
-True

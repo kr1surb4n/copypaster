@@ -1,2 +1,0 @@
-# name: c.PyCapsule_SetDestr 
-int PyCapsule_SetDestructor(PyObject *capsule, PyCapsule_Destructor destructor)

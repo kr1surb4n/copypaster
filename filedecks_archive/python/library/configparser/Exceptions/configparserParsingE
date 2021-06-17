@@ -1,2 +1,0 @@
-# name: configparser.Parsing 
-exception configparser.ParsingError

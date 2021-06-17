@@ -1,3 +1,0 @@
-# name: S = dot((dot(H, beta 
-S = dot((dot(H, beta) - r).T,
-        dot(inv(dot(dot(H, V), H.T)), dot(H, beta) - r))

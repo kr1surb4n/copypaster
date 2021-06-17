@@ -1,2 +1,0 @@
-# name: socket.socket.sendms 
-socket.sendmsg(buffers[, ancdata[, flags[, address]]])

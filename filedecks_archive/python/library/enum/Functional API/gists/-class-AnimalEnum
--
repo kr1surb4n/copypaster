@@ -1,7 +1,0 @@
-# name: >>> class Animal(Enu 
->>> class Animal(Enum):
-...     ANT = 1
-...     BEE = 2
-...     CAT = 3
-...     DOG = 4
-...

@@ -1,2 +1,0 @@
-# name: curses.color_content 
-curses.color_content(color_number)

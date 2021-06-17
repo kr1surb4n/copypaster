@@ -1,2 +1,0 @@
-# name: os.close 
-os.close(fd)

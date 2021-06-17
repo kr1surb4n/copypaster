@@ -1,2 +1,0 @@
-# name: c.PyInstanceMethod_C 
-int PyInstanceMethod_Check(PyObject *o)

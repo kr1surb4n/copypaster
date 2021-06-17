@@ -1,2 +1,0 @@
-# name: os.waitid 
-os.waitid(idtype, id, options)

@@ -1,3 +1,0 @@
-# name: >>> range(10).__geti 
->>> range(10).__getitem__(slice(0, 5, 2))
-[0, 2, 4]

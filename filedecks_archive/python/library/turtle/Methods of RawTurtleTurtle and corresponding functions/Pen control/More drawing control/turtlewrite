@@ -1,2 +1,0 @@
-# name: turtle.write 
-turtle.write(arg, move=False, align="left", font=("Arial", 8, "normal"))

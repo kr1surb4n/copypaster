@@ -1,2 +1,0 @@
-# name: signal.strsignal 
-signal.strsignal(signalnum)

@@ -1,2 +1,0 @@
-# name: xmlrpc.server.DocCGI 
-class xmlrpc.server.DocCGIXMLRPCRequestHandler

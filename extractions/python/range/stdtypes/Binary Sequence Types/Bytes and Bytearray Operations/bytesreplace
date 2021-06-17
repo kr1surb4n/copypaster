@@ -1,2 +1,0 @@
-# name: bytes.replace 
-bytes.replace(old, new[, count])

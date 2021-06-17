@@ -1,2 +1,0 @@
-# name: curses.newpad 
-curses.newpad(nlines, ncols)

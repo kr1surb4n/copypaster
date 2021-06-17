@@ -1,2 +1,0 @@
-# name: select.devpoll.regis 
-devpoll.register(fd[, eventmask])

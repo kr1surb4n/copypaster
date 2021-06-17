@@ -1,2 +1,0 @@
-# name: zipfile.Path.open 
-Path.open(mode='r', *, pwd, **)

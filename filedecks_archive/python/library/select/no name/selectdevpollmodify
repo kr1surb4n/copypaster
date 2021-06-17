@@ -1,2 +1,0 @@
-# name: select.devpoll.modif 
-devpoll.modify(fd[, eventmask])

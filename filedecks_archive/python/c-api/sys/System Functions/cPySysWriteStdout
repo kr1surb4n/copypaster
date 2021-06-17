@@ -1,2 +1,0 @@
-# name: c.PySys_WriteStdout 
-void PySys_WriteStdout(const char *format, ...)

@@ -1,2 +1,0 @@
-# name: c.PyObject_GetAttrSt 
-PyObject* PyObject_GetAttrString(PyObject *o, const char *attr_name)

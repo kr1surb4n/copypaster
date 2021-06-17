@@ -1,2 +1,0 @@
-# name: c.PyDict_DelItem 
-int PyDict_DelItem(PyObject *p, PyObject *key)

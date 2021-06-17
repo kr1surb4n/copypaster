@@ -1,2 +1,0 @@
-# name: PyArg_ParseTuple(arg 
-PyArg_ParseTuple(args, "O|O:ref", &object, &callback)

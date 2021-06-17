@@ -1,2 +1,0 @@
-# name: smtplib.SMTPDataErro 
-exception smtplib.SMTPDataError

@@ -1,3 +1,0 @@
-# name:             action 
-            action = AnAction.new(action_name, None, callback)
-            self.add_action(action)

@@ -1,2 +1,0 @@
-# name: socket.getservbyname 
-socket.getservbyname(servicename[, protocolname])

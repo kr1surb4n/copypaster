@@ -1,2 +1,0 @@
-# name: urllib.request.BaseH 
-BaseHandler.http_error_default(req, fp, code, msg, hdrs)

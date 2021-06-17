@@ -1,2 +1,0 @@
-# name: pipes.Template.open 
-Template.open(file, mode)

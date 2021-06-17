@@ -1,2 +1,0 @@
-# name: Arrayprototypeincl 
-Array.prototype.includes(valueToFind[, fromIndex])

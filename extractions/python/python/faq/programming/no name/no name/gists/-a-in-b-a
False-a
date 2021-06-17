@@ -1,4 +1,0 @@
-# name: >>> "a" in "b", "a"
- 
->>> "a" in "b", "a"
-(False, 'a')

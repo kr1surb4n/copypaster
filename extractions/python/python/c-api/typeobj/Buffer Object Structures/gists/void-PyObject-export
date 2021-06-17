@@ -1,2 +1,0 @@
-# name: void (PyObject *expo 
-void (PyObject *exporter, Py_buffer *view);

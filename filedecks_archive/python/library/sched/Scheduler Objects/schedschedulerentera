@@ -1,2 +1,0 @@
-# name: sched.scheduler.ente 
-scheduler.enterabs(time, priority, action, argument=(), kwargs={})

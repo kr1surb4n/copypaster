@@ -1,2 +1,0 @@
-# name: c.PyObject_Call 
-PyObject* PyObject_Call(PyObject *callable, PyObject *args, PyObject *kwargs)

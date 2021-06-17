@@ -1,7 +1,0 @@
-# name: >>> repr(list[int])
- 
->>> repr(list[int])
-'list[int]'
-
->>> str(list[int])
-'list[int]'

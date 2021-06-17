@@ -1,2 +1,0 @@
-# name: c.PyCodec_StreamRead 
-PyObject* PyCodec_StreamReader(const char *encoding, PyObject *stream, const char *errors)

@@ -1,2 +1,0 @@
-# name: winsound.MessageBeep 
-winsound.MessageBeep(type=MB_OK)

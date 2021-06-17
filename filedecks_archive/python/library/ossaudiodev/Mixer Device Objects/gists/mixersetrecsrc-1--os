@@ -1,2 +1,0 @@
-# name: mixer.setrecsrc (1 < 
-mixer.setrecsrc (1 << ossaudiodev.SOUND_MIXER_MIC)

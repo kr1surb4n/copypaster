@@ -1,2 +1,0 @@
-# name: time.perf_counter_ns 
-time.perf_counter_ns() → int

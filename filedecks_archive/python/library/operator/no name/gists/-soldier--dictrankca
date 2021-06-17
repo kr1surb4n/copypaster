@@ -1,4 +1,0 @@
-# name: >>> soldier = dict(r 
->>> soldier = dict(rank='captain', name='dotterbart')
->>> itemgetter('rank')(soldier)
-'captain'

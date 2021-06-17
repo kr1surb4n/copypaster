@@ -1,2 +1,0 @@
-# name: asyncio.loop.is_runn 
-loop.is_running()

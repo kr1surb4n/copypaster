@@ -1,2 +1,0 @@
-# name: webbrowser.controlle 
-controller.open_new_tab(url)

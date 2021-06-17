@@ -1,2 +1,0 @@
-# name: os.set_handle_inheri 
-os.set_handle_inheritable(handle, inheritable)

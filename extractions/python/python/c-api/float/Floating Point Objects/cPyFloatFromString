@@ -1,2 +1,0 @@
-# name: c.PyFloat_FromString 
-PyObject* PyFloat_FromString(PyObject *str)

@@ -1,2 +1,0 @@
-# name: ipaddress.NetmaskVal 
-exception ipaddress.NetmaskValueError(ValueError)

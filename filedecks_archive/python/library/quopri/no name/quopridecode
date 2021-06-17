@@ -1,2 +1,0 @@
-# name: quopri.decode 
-quopri.decode(input, output, header=False)

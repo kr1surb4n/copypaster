@@ -1,2 +1,0 @@
-# name: pathlib.Path.touch 
-Path.touch(mode=0o666, exist_ok=True)

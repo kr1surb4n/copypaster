@@ -1,2 +1,0 @@
-# name: logging.handlers.Buf 
-logging.handlers.BufferingHandler.shouldFlush

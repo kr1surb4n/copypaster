@@ -1,2 +1,0 @@
-# name: c.PyObject_DelAttr 
-int PyObject_DelAttr(PyObject *o, PyObject *attr_name)

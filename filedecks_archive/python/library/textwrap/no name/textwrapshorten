@@ -1,2 +1,0 @@
-# name: textwrap.shorten 
-textwrap.shorten(text, width, **kwargs)

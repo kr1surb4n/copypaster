@@ -1,2 +1,0 @@
-# name: socket.socket.setblo 
-socket.setblocking(flag)

@@ -1,5 +1,0 @@
-# name: >>> b'1234'.isdigit( 
->>> b'1234'.isdigit()
-True
->>> b'1.23'.isdigit()
-False

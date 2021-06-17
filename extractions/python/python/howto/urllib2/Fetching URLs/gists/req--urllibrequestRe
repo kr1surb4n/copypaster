@@ -1,2 +1,0 @@
-# name: req = urllib.request 
-req = urllib.request.Request('ftp://example.com/')

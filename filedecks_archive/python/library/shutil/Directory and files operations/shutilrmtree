@@ -1,2 +1,0 @@
-# name: shutil.rmtree 
-shutil.rmtree(path, ignore_errors=False, onerror=None)

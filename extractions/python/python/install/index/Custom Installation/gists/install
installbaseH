@@ -1,8 +1,0 @@
-# name: [install]
-install-ba 
-[install]
-install-base=$HOME/python
-install-purelib=lib
-install-platlib=lib.$PLAT
-install-scripts=scripts
-install-data=data

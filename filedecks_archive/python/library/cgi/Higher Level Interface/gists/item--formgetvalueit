@@ -1,6 +1,0 @@
-# name: item = form.getvalue 
-item = form.getvalue("item")
-if isinstance(item, list):
-    # The user is requesting more than one item.
-else:
-    # The user is requesting only one item.

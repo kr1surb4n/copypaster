@@ -1,2 +1,0 @@
-# name: c.PyCell_Get 
-PyObject* PyCell_Get(PyObject *cell)

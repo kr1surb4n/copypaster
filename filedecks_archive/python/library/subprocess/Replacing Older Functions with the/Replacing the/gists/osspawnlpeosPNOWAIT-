@@ -1,4 +1,0 @@
-# name: os.spawnlpe(os.P_NOW 
-os.spawnlpe(os.P_NOWAIT, "/bin/mycmd", "mycmd", "myarg", env)
-==>
-Popen(["/bin/mycmd", "myarg"], env={"PATH": "/usr/bin"})

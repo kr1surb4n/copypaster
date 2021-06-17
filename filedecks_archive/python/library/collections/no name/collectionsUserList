@@ -1,2 +1,0 @@
-# name: collections.UserList 
-class collections.UserList([list])

@@ -1,2 +1,0 @@
-# name: c.Py_SET_TYPE 
-void Py_SET_TYPE(PyObject *o, PyTypeObject *type)

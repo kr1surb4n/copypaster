@@ -1,2 +1,0 @@
-# name: c.initproc 
-int (*initproc)(PyObject *, PyObject *, PyObject *)

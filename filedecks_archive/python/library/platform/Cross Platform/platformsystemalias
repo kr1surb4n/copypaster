@@ -1,2 +1,0 @@
-# name: platform.system_alia 
-platform.system_alias(system, release, version)

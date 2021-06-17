@@ -1,4 +1,0 @@
-# name: import doctest
-docte 
-import doctest
-doctest.testfile("example.txt")

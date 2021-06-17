@@ -1,2 +1,0 @@
-# name: hashlib.pbkdf2_hmac 
-hashlib.pbkdf2_hmac(hash_name, password, salt, iterations, dklen=None)

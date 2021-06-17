@@ -1,2 +1,0 @@
-# name: pathlib.PurePath 
-class pathlib.PurePath(*pathsegments)

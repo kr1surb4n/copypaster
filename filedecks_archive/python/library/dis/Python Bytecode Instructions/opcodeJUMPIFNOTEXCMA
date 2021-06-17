@@ -1,2 +1,0 @@
-# name: opcode-JUMP_IF_NOT_E 
-JUMP_IF_NOT_EXC_MATCH(target)

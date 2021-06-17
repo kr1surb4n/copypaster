@@ -1,3 +1,0 @@
-# name: with patch.multiple( 
-with patch.multiple(settings, FIRST_PATCH='one', SECOND_PATCH='two'):
-    ...

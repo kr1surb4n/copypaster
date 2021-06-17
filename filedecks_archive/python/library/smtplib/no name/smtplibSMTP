@@ -1,2 +1,0 @@
-# name: smtplib.SMTP 
-class smtplib.SMTP(host='', port=0, local_hostname=None, [timeout, ]source_address=None)

@@ -1,2 +1,0 @@
-# name: typing.Iterable 
-class typing.Iterable(Generic[T_co])

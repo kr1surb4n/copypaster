@@ -1,2 +1,0 @@
-# name: test.support.get_att 
-test.support.get_attribute(obj, name)

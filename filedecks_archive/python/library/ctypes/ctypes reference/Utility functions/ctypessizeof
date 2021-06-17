@@ -1,2 +1,0 @@
-# name: ctypes.sizeof 
-ctypes.sizeof(obj_or_type)

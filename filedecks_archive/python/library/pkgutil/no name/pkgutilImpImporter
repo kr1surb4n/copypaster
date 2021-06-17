@@ -1,2 +1,0 @@
-# name: pkgutil.ImpImporter 
-class pkgutil.ImpImporter(dirname=None)

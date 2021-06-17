@@ -1,2 +1,0 @@
-# name: email.headerregistry 
-email.headerregistry.Address.__str__

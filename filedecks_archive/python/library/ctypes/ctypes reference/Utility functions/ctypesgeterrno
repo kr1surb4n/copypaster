@@ -1,2 +1,0 @@
-# name: ctypes.get_errno 
-ctypes.get_errno()

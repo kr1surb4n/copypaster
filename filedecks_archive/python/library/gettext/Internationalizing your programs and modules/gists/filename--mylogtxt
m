@@ -1,5 +1,0 @@
-# name: filename = 'mylog.tx 
-filename = 'mylog.txt'
-message = _('writing a log message')
-with open(filename, 'w') as fp:
-    fp.write(message)

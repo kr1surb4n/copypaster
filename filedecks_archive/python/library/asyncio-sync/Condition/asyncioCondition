@@ -1,2 +1,0 @@
-# name: asyncio.Condition 
-class asyncio.Condition(lock=None, *, loop=None)

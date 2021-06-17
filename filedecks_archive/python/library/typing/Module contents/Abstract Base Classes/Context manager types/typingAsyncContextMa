@@ -1,2 +1,0 @@
-# name: typing.AsyncContextM 
-class typing.AsyncContextManager(Generic[T_co])

@@ -1,2 +1,0 @@
-# name: http.cookies.BaseCoo 
-class http.cookies.BaseCookie([input])

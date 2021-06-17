@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.setann 
-IMAP4.setannotation(mailbox, entry, attribute[, ...])

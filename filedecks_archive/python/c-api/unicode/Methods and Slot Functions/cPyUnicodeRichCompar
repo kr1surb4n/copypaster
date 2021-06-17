@@ -1,2 +1,0 @@
-# name: c.PyUnicode_RichComp 
-PyObject* PyUnicode_RichCompare(PyObject *left, PyObject *right, int op)

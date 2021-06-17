@@ -1,2 +1,0 @@
-# name: curses.has_extended_ 
-curses.has_extended_color_support()

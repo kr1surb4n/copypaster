@@ -1,2 +1,0 @@
-# name: signal.sigtimedwait 
-signal.sigtimedwait(sigset, timeout)

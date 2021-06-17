@@ -1,3 +1,0 @@
-# name:  Another file can  
--- Another file can use mod.lua's functionality:
-local mod = require('mod')  -- Run the file mod.lua.

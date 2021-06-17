@@ -1,2 +1,0 @@
-# name: test.support.bytecod 
-BytecodeTestCase.assertNotInBytecode(x, opname, argval=_UNSPECIFIED)

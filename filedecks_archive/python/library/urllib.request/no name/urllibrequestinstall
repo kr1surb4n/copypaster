@@ -1,2 +1,0 @@
-# name: urllib.request.insta 
-urllib.request.install_opener(opener)

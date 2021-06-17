@@ -1,3 +1,0 @@
-# name:  Prints the number 
-# Prints the number of fields on this line
-    print NF;

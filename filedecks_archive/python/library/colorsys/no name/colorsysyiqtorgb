@@ -1,2 +1,0 @@
-# name: colorsys.yiq_to_rgb 
-colorsys.yiq_to_rgb(y, i, q)

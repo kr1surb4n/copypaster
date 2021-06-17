@@ -1,2 +1,0 @@
-# name: Print 2 elements s 
-${array0[@]:3:2}

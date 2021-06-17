@@ -1,2 +1,0 @@
-# name: c.PyNumber_InPlaceOr 
-PyObject* PyNumber_InPlaceOr(PyObject *o1, PyObject *o2)

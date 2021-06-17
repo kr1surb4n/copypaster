@@ -1,2 +1,0 @@
-# name: unittest.mock.Proper 
-class unittest.mock.PropertyMock(*args, **kwargs)

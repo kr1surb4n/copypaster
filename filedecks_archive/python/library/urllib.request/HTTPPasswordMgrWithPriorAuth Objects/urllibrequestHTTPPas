@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPP 
-HTTPPasswordMgrWithPriorAuth.is_authenticated(self, authuri)

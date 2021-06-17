@@ -1,6 +1,0 @@
-# name: while n  3 
-  n
- 
-while (n < 3) {
-  n++;
-}

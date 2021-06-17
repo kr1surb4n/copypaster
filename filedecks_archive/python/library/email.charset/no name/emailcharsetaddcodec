@@ -1,2 +1,0 @@
-# name: email.charset.add_co 
-email.charset.add_codec(charset, codecname)

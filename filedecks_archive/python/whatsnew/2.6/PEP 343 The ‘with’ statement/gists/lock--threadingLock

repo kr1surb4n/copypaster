@@ -1,5 +1,0 @@
-# name: lock = threading.Loc 
-lock = threading.Lock()
-with lock:
-    # Critical section of code
-    ...

@@ -1,2 +1,0 @@
-# name: turtle.goto 
-turtle.goto(x, y=None)

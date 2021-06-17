@@ -1,2 +1,0 @@
-# name: shutil.register_arch 
-shutil.register_archive_format(name, function[, extra_args[, description]])

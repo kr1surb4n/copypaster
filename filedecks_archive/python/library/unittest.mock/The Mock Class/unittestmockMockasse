@@ -1,2 +1,0 @@
-# name: unittest.mock.Mock.a 
-unittest.mock.Mock.assert_not_called

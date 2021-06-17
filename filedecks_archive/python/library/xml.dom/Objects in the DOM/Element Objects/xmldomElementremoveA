@@ -1,2 +1,0 @@
-# name: xml.dom.Element.remo 
-Element.removeAttributeNS(namespaceURI, localName)

@@ -1,2 +1,0 @@
-# name: os.WSTOPSIG 
-os.WSTOPSIG(status)

@@ -1,2 +1,0 @@
-# name: c.PyCodec_RegisterEr 
-int PyCodec_RegisterError(const char *name, PyObject *error)

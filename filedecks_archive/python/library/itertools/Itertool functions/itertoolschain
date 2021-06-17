@@ -1,2 +1,0 @@
-# name: itertools.chain 
-itertools.chain(*iterables)

@@ -1,2 +1,0 @@
-# name: Stringprototypesli 
-String.prototype.slice(beginIndex[, endIndex])

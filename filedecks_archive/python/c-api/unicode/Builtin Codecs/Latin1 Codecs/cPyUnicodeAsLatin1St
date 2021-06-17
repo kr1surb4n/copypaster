@@ -1,2 +1,0 @@
-# name: c.PyUnicode_AsLatin1 
-PyObject* PyUnicode_AsLatin1String(PyObject *unicode)

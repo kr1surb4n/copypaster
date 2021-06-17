@@ -1,2 +1,0 @@
-# name: c.PyObject_GC_UnTrac 
-void PyObject_GC_UnTrack(void *op)

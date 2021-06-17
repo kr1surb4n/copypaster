@@ -1,2 +1,0 @@
-# name: Stringprototyperep 
-String.prototype.replace(searchFor, replaceWith)

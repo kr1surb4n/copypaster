@@ -1,2 +1,0 @@
-# name: sqlite3.IntegrityErr 
-exception sqlite3.IntegrityError

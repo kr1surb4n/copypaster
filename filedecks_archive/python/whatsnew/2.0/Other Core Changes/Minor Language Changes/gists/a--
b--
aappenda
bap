@@ -1,7 +1,0 @@
-# name: a = []
-b = []
-a.appe 
-a = []
-b = []
-a.append(a)
-b.append(b)

@@ -1,2 +1,0 @@
-# name: random.Random 
-class random.Random([seed])

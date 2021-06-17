@@ -1,2 +1,0 @@
-# name: ast.NodeVisitor 
-class ast.NodeVisitor

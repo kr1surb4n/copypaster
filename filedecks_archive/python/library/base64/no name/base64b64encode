@@ -1,2 +1,0 @@
-# name: base64.b64encode 
-base64.b64encode(s, altchars=None)

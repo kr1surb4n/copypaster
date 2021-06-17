@@ -1,2 +1,0 @@
-# name: c.PyObject_RichCompa 
-int PyObject_RichCompareBool(PyObject *o1, PyObject *o2, int opid)

@@ -1,2 +1,0 @@
-# name: pyclbr.readmodule_ex 
-pyclbr.readmodule_ex(module, path=None)

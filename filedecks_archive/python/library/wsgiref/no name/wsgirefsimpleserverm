@@ -1,2 +1,0 @@
-# name: wsgiref.simple_serve 
-wsgiref.simple_server.make_server(host, port, app, server_class=WSGIServer, handler_class=WSGIRequestHandler)

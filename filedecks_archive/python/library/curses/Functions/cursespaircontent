@@ -1,2 +1,0 @@
-# name: curses.pair_content 
-curses.pair_content(pair_number)

@@ -1,2 +1,0 @@
-# name: DateprototypetoJSO 
-Date.prototype.toJSON()

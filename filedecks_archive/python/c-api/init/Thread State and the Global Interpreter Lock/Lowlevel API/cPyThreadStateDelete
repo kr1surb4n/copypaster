@@ -1,2 +1,0 @@
-# name: c.PyThreadState_Dele 
-void PyThreadState_DeleteCurrent(void)

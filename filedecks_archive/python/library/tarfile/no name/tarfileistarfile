@@ -1,2 +1,0 @@
-# name: tarfile.is_tarfile 
-tarfile.is_tarfile(name)

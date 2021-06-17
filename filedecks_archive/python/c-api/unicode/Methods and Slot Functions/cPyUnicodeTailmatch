@@ -1,2 +1,0 @@
-# name: c.PyUnicode_Tailmatc 
-Py_ssize_t PyUnicode_Tailmatch(PyObject *str, PyObject *substr, Py_ssize_t start, Py_ssize_t end, int direction)

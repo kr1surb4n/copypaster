@@ -1,2 +1,0 @@
-# name: c.PyInterpreterState 
-PyThreadState * PyInterpreterState_ThreadHead(PyInterpreterState *interp)

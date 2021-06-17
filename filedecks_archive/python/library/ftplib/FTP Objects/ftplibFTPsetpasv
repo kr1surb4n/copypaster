@@ -1,2 +1,0 @@
-# name: ftplib.FTP.set_pasv 
-FTP.set_pasv(val)

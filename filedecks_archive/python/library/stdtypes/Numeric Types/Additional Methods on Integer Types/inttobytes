@@ -1,2 +1,0 @@
-# name: int.to_bytes 
-int.to_bytes(length, byteorder, *, signed=False)

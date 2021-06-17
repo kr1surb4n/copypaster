@@ -1,2 +1,0 @@
-# name: http.client.parse_he 
-http.client.parse_headers(fp)

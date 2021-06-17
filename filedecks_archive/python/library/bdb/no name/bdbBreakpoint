@@ -1,2 +1,0 @@
-# name: bdb.Breakpoint 
-class bdb.Breakpoint(self, file, line, temporary=0, cond=None, funcname=None)

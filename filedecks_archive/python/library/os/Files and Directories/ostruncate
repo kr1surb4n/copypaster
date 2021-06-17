@@ -1,2 +1,0 @@
-# name: os.truncate 
-os.truncate(path, length)

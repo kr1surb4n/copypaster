@@ -1,2 +1,0 @@
-# name: c.PyObject_Not 
-int PyObject_Not(PyObject *o)

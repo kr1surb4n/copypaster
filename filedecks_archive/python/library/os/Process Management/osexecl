@@ -1,2 +1,0 @@
-# name: os.execl 
-os.execl(path, arg0, arg1, ...)

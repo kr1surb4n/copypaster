@@ -1,2 +1,0 @@
-# name: c.PyThread_tss_creat 
-int PyThread_tss_create(Py_tss_t *key)

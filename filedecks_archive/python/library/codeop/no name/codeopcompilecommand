@@ -1,2 +1,0 @@
-# name: codeop.compile_comma 
-codeop.compile_command(source, filename="<input>", symbol="single")

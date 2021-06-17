@@ -1,2 +1,0 @@
-# name: ctypes.PYFUNCTYPE 
-ctypes.PYFUNCTYPE(restype, *argtypes)

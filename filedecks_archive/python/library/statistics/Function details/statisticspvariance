@@ -1,2 +1,0 @@
-# name: statistics.pvariance 
-statistics.pvariance(data, mu=None)

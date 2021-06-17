@@ -1,7 +1,0 @@
-# name: >>> for child in roo 
->>> for child in root:
-...     print(child.tag, child.attrib)
-...
-country {'name': 'Liechtenstein'}
-country {'name': 'Singapore'}
-country {'name': 'Panama'}

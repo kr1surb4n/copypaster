@@ -1,2 +1,0 @@
-# name: email.errors.Message 
-exception email.errors.MessageError

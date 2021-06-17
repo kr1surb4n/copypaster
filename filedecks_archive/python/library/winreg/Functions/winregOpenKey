@@ -1,2 +1,0 @@
-# name: winreg.OpenKey 
-winreg.OpenKey(key, sub_key, reserved=0, access=KEY_READ)

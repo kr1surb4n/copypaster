@@ -1,3 +1,0 @@
-# name: >>> 1 / Decimal('Inf 
->>> 1 / Decimal('Infinity')
-Decimal('0E-1000026')

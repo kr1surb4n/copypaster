@@ -1,2 +1,0 @@
-# name: traceback.print_tb 
-traceback.print_tb(tb, limit=None, file=None)

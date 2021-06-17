@@ -1,2 +1,0 @@
-# name: stat.S_ISBLK 
-stat.S_ISBLK(mode)

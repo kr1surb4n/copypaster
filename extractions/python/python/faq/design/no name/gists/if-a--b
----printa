@@ -1,4 +1,0 @@
-# name: if a == b:
-    print 
-if a == b:
-    print(a)

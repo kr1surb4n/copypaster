@@ -1,2 +1,0 @@
-# name: c.PyComplex_Check 
-int PyComplex_Check(PyObject *p)

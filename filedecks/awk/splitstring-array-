@@ -1,2 +1,0 @@
-# name: splitstring array  
-split(string, array [, fieldsep [, seps ] ])

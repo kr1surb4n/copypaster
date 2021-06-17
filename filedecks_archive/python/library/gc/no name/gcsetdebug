@@ -1,2 +1,0 @@
-# name: gc.set_debug 
-gc.set_debug(flags)

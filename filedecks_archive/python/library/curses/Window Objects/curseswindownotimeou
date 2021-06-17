@@ -1,2 +1,0 @@
-# name: curses.window.notime 
-window.notimeout(flag)

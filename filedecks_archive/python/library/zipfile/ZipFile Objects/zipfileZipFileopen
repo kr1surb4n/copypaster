@@ -1,2 +1,0 @@
-# name: zipfile.ZipFile.open 
-ZipFile.open(name, mode='r', pwd=None, *, force_zip64=False)

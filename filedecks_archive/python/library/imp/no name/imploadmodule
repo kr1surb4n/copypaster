@@ -1,2 +1,0 @@
-# name: imp.load_module 
-imp.load_module(name, file, pathname, description)

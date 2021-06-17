@@ -1,2 +1,0 @@
-# name: curses.window.timeou 
-window.timeout(delay)

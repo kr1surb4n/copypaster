@@ -1,3 +1,0 @@
-# name: def get_position_in_ 
-def get_position_in_index(word_list: Mapping[str, int], word: str) -> int:
-    return word_list[word]

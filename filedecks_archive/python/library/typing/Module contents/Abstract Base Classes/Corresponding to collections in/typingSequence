@@ -1,2 +1,0 @@
-# name: typing.Sequence 
-class typing.Sequence(Reversible[T_co], Collection[T_co])

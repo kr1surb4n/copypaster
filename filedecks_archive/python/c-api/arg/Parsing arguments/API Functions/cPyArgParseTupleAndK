@@ -1,2 +1,0 @@
-# name: c.PyArg_ParseTupleAn 
-int PyArg_ParseTupleAndKeywords(PyObject *args, PyObject *kw, const char *format, char *keywords[], ...)

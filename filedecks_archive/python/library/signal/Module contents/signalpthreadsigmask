@@ -1,2 +1,0 @@
-# name: signal.pthread_sigma 
-signal.pthread_sigmask(how, mask)

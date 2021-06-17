@@ -1,4 +1,0 @@
-# name: import calendar
-cale 
-import calendar
-calendar.setfirstweekday(calendar.SUNDAY)

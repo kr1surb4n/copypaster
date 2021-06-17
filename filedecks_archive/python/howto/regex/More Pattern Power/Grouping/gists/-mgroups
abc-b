@@ -1,4 +1,0 @@
-# name: >>> m.groups()
-('abc 
->>> m.groups()
-('abc', 'b')

@@ -1,2 +1,0 @@
-# name: ssl.SSLSocket.shared 
-SSLSocket.shared_ciphers()

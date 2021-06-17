@@ -1,2 +1,0 @@
-# name: curses.window.insch 
-window.insch(ch[, attr])

@@ -1,2 +1,0 @@
-# name: my.package.customFor 
-my.package.customFormatterFactory(bar='baz', spam=99.9, answer=42)

@@ -1,2 +1,0 @@
-# name: asyncio.iscoroutine 
-asyncio.iscoroutine(obj)

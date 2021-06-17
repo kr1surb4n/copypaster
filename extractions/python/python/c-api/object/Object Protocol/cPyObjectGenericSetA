@@ -1,2 +1,0 @@
-# name: c.PyObject_GenericSe 
-int PyObject_GenericSetAttr(PyObject *o, PyObject *name, PyObject *value)

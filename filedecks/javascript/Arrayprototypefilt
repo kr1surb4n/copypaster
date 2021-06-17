@@ -1,2 +1,0 @@
-# name: Arrayprototypefilt 
-Array.prototype.filter(callbackFn(element[, index[, array]])[, thisArg])

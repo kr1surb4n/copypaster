@@ -1,3 +1,0 @@
-# name: from xml.dom import  
-from xml.dom import minidom
-doc = minidom.parse('hamlet.xml')

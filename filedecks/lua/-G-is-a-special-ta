@@ -1,3 +1,0 @@
-# name:  G is a special ta 
--- _G is a special table of all globals.
-print(_G['_G'] == _G)  -- Prints 'true'.

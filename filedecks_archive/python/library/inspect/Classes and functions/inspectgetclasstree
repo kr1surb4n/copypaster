@@ -1,2 +1,0 @@
-# name: inspect.getclasstree 
-inspect.getclasstree(classes, unique=False)

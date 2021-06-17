@@ -1,2 +1,0 @@
-# name: curses.color_pair 
-curses.color_pair(color_number)

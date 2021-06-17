@@ -1,2 +1,0 @@
-# name: os.closerange 
-os.closerange(fd_low, fd_high)

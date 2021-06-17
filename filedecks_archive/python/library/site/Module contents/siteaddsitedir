@@ -1,2 +1,0 @@
-# name: site.addsitedir 
-site.addsitedir(sitedir, known_paths=None)

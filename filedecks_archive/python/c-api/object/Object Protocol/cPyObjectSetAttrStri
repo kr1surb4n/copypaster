@@ -1,2 +1,0 @@
-# name: c.PyObject_SetAttrSt 
-int PyObject_SetAttrString(PyObject *o, const char *attr_name, PyObject *v)

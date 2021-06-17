@@ -1,2 +1,0 @@
-# name: c.PyMapping_DelItemS 
-int PyMapping_DelItemString(PyObject *o, const char *key)

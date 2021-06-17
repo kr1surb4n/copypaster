@@ -1,2 +1,0 @@
-# name: pathlib.Path.is_char 
-Path.is_char_device()

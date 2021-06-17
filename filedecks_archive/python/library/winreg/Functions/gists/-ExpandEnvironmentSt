@@ -1,3 +1,0 @@
-# name: >>> ExpandEnvironmen 
->>> ExpandEnvironmentStrings('%windir%')
-'C:\\Windows'

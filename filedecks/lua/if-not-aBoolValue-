@@ -1,2 +1,0 @@
-# name: if not aBoolValue  
-if not aBoolValue then print('twas false') end

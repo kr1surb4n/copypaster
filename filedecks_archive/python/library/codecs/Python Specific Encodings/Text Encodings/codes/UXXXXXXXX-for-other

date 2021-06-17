@@ -1,7 +1,0 @@
-# name: \UXXXXXXXX for other 
-\UXXXXXXXX for other
-code points. Existing
-backslashes are not
-escaped in any way.
-It is used in the Python
-pickle protocol.

@@ -1,3 +1,0 @@
-# name: self.assertRaisesReg 
-self.assertRaisesRegex(ValueError, "invalid literal for.*XYZ'$",
-                       int, 'XYZ')

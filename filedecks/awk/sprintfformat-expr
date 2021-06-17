@@ -1,2 +1,0 @@
-# name: sprintfformat expr 
-sprintf(format, expression1, …)

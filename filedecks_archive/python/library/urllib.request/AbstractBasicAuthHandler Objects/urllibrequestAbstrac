@@ -1,2 +1,0 @@
-# name: urllib.request.Abstr 
-AbstractBasicAuthHandler.http_error_auth_reqed(authreq, host, req, headers)

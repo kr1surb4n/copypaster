@@ -1,3 +1,0 @@
-# name: cfgparser = ConfigPa 
-cfgparser = ConfigParser()
-cfgparser.optionxform = str

@@ -1,2 +1,0 @@
-# name: c.PyDelta_CheckExact 
-int PyDelta_CheckExact(PyObject *ob)

@@ -1,2 +1,0 @@
-# name: pathlib.PureWindowsP 
-class pathlib.PureWindowsPath(*pathsegments)

@@ -1,2 +1,0 @@
-# name: c.Py_AtExit 
-int Py_AtExit(void (*func)())

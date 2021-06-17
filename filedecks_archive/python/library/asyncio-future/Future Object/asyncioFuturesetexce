@@ -1,2 +1,0 @@
-# name: asyncio.Future.set_e 
-asyncio.Future.set_exception

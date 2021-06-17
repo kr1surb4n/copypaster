@@ -1,2 +1,0 @@
-# name: datetime.datetime.ut 
-classmethod datetime.utcnow()

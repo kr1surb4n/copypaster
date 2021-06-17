@@ -1,2 +1,0 @@
-# name: pathlib.PosixPath 
-class pathlib.PosixPath(*pathsegments)

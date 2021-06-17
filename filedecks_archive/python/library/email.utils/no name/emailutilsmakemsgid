@@ -1,2 +1,0 @@
-# name: email.utils.make_msg 
-email.utils.make_msgid(idstring=None, domain=None)

@@ -1,2 +1,0 @@
-# name: c.Py_XNewRef 
-PyObject* Py_XNewRef(PyObject *o)

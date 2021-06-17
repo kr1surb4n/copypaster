@@ -1,5 +1,0 @@
-# name: >>> parser.feed('&gt 
->>> parser.feed('&gt;&#62;&#x3E;')
-Named ent: >
-Num ent  : >
-Num ent  : >

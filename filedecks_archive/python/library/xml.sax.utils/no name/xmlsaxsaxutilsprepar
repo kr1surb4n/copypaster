@@ -1,2 +1,0 @@
-# name: xml.sax.saxutils.pre 
-xml.sax.saxutils.prepare_input_source(source, base='')

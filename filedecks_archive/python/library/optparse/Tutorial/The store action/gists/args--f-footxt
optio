@@ -1,3 +1,0 @@
-# name: args = ["-f", "foo.t 
-args = ["-f", "foo.txt"]
-(options, args) = parser.parse_args(args)

@@ -1,2 +1,0 @@
-# name: asyncio.gather 
-awaitable asyncio.gather(*aws, loop=None, return_exceptions=False)

@@ -1,3 +1,0 @@
-# name: >>> Dict.fromkeys('a 
->>> Dict.fromkeys('abracadabra')
-{'a': None, 'r': None, 'b': None, 'c': None, 'd': None}

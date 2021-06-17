@@ -1,2 +1,0 @@
-# name: ast.UnaryOp 
-class ast.UnaryOp(op, operand)

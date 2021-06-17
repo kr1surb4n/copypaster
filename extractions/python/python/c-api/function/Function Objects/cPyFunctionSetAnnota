@@ -1,2 +1,0 @@
-# name: c.PyFunction_SetAnno 
-int PyFunction_SetAnnotations(PyObject *op, PyObject *annotations)

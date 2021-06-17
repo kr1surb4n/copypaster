@@ -1,2 +1,0 @@
-# name: c.PyList_Insert 
-int PyList_Insert(PyObject *list, Py_ssize_t index, PyObject *item)

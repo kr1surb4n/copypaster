@@ -1,2 +1,0 @@
-# name: http.server.CGIHTTPR 
-http.server.CGIHTTPRequestHandler.do_POST

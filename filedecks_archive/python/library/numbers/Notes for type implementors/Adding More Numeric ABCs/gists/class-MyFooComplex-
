@@ -1,3 +1,0 @@
-# name: class MyFoo(Complex) 
-class MyFoo(Complex): ...
-MyFoo.register(Real)

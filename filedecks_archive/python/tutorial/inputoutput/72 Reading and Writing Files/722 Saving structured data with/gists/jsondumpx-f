@@ -1,2 +1,0 @@
-# name: json.dump(x, f) 
-json.dump(x, f)

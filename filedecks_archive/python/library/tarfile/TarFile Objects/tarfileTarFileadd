@@ -1,2 +1,0 @@
-# name: tarfile.TarFile.add 
-TarFile.add(name, arcname=None, recursive=True, *, filter=None)

@@ -1,2 +1,0 @@
-# name: syslog.openlog 
-syslog.openlog([ident[, logoption[, facility]]])

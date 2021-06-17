@@ -1,2 +1,0 @@
-# name: datetime.datetime.co 
-classmethod datetime.combine(date, time, tzinfo=self.tzinfo)

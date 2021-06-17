@@ -1,2 +1,0 @@
-# name: asyncio.Task 
-class asyncio.Task(coro, *, loop=None, name=None)

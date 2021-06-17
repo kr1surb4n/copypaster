@@ -1,2 +1,0 @@
-# name: ast.AugAssign 
-class ast.AugAssign(target, op, value)

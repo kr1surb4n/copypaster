@@ -1,2 +1,0 @@
-# name: logging.handlers.Soc 
-logging.handlers.SocketHandler.createSocket

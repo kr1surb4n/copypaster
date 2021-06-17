@@ -1,2 +1,0 @@
-# name: c.PyTuple_Pack 
-PyObject* PyTuple_Pack(Py_ssize_t n, ...)

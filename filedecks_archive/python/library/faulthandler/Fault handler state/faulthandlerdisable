@@ -1,2 +1,0 @@
-# name: faulthandler.disable 
-faulthandler.disable()

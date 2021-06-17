@@ -1,2 +1,0 @@
-# name: c.PyUnicode_Transfor 
-PyObject* PyUnicode_TransformDecimalToASCII(Py_UNICODE *s, Py_ssize_t size)

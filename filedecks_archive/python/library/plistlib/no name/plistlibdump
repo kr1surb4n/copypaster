@@ -1,2 +1,0 @@
-# name: plistlib.dump 
-plistlib.dump(value, fp, *, fmt=FMT_XML, sort_keys=True, skipkeys=False)

@@ -1,2 +1,0 @@
-# name: c.PyUnicode_GetLengt 
-Py_ssize_t PyUnicode_GetLength(PyObject *unicode)

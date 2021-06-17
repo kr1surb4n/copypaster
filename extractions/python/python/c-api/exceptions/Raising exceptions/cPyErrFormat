@@ -1,2 +1,0 @@
-# name: c.PyErr_Format 
-PyObject* PyErr_Format(PyObject *exception, const char *format, ...)

@@ -1,2 +1,0 @@
-# name: ctypes.LibraryLoader 
-class ctypes.LibraryLoader(dlltype)

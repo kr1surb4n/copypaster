@@ -1,2 +1,0 @@
-# name: codecs.StreamWriter 
-class codecs.StreamWriter(stream, errors='strict')

@@ -1,2 +1,0 @@
-# name: tarfile.TarInfo 
-class tarfile.TarInfo(name="")

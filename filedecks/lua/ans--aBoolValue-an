@@ -1,2 +1,0 @@
-# name: ans  aBoolValue an 
-ans = aBoolValue and 'yes' or 'no'  --> 'no'

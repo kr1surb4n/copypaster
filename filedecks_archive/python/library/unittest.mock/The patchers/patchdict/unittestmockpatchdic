@@ -1,2 +1,0 @@
-# name: unittest.mock.patch. 
-patch.dict(in_dict, values=(), clear=False, **kwargs)

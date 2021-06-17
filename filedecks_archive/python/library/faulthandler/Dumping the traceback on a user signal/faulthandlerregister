@@ -1,2 +1,0 @@
-# name: faulthandler.registe 
-faulthandler.register(signum, file=sys.stderr, all_threads=True, chain=False)

@@ -1,2 +1,0 @@
-# name: check_warnings(("",  
-check_warnings(("", Warning), quiet=True)

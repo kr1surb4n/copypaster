@@ -1,2 +1,0 @@
-# name: c.PyByteArray_CheckE 
-int PyByteArray_CheckExact(PyObject *o)

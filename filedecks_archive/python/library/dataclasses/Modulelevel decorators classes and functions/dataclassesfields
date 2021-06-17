@@ -1,2 +1,0 @@
-# name: dataclasses.fields 
-dataclasses.fields(class_or_instance)

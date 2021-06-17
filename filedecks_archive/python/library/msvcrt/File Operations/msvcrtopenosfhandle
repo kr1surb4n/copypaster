@@ -1,2 +1,0 @@
-# name: msvcrt.open_osfhandl 
-msvcrt.open_osfhandle(handle, flags)

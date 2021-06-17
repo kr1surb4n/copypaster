@@ -1,3 +1,0 @@
-# name: class IntEnum(int, E 
-class IntEnum(int, Enum):
-    pass

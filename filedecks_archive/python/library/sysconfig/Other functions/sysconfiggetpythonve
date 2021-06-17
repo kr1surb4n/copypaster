@@ -1,2 +1,0 @@
-# name: sysconfig.get_python 
-sysconfig.get_python_version()

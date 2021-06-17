@@ -1,2 +1,0 @@
-# name: pipes.Template.prepe 
-Template.prepend(cmd, kind)

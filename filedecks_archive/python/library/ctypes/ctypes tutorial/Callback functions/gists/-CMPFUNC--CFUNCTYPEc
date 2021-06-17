@@ -1,3 +1,0 @@
-# name: >>> CMPFUNC = CFUNCT 
->>> CMPFUNC = CFUNCTYPE(c_int, POINTER(c_int), POINTER(c_int))
->>>

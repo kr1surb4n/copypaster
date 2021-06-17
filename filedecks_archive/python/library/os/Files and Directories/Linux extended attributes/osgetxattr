@@ -1,2 +1,0 @@
-# name: os.getxattr 
-os.getxattr(path, attribute, *, follow_symlinks=True)

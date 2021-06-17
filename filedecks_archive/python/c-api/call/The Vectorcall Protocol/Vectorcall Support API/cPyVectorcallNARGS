@@ -1,2 +1,0 @@
-# name: c.PyVectorcall_NARGS 
-Py_ssize_t PyVectorcall_NARGS(size_t nargsf)

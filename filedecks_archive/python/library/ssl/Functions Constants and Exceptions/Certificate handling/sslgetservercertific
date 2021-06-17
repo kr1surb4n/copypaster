@@ -1,2 +1,0 @@
-# name: ssl.get_server_certi 
-ssl.get_server_certificate(addr, ssl_version=PROTOCOL_TLS, ca_certs=None)

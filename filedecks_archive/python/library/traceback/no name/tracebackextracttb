@@ -1,2 +1,0 @@
-# name: traceback.extract_tb 
-traceback.extract_tb(tb, limit=None)

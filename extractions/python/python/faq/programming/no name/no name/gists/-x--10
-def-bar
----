@@ -1,7 +1,0 @@
-# name: >>> x = 10
->>> def b 
->>> x = 10
->>> def bar():
-...     print(x)
->>> bar()
-10

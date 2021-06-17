@@ -1,8 +1,0 @@
-# name: res = PyObject_CallM 
-res = PyObject_CallMethod(f, "seek", "(ii)", 10, 0);
-if (res == NULL) {
-        ... an exception occurred ...
-}
-else {
-        Py_DECREF(res);
-}

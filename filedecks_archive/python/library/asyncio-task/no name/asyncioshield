@@ -1,2 +1,0 @@
-# name: asyncio.shield 
-awaitable asyncio.shield(aw, *, loop=None)

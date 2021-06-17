@@ -1,2 +1,0 @@
-# name: calendar.Calendar 
-class calendar.Calendar(firstweekday=0)

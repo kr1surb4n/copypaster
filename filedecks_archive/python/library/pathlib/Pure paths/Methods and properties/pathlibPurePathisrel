@@ -1,2 +1,0 @@
-# name: pathlib.PurePath.is_ 
-PurePath.is_relative_to(*other)

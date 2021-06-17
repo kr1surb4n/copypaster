@@ -1,2 +1,0 @@
-# name: root = ET.fromstring 
-root = ET.fromstring(country_data_as_string)

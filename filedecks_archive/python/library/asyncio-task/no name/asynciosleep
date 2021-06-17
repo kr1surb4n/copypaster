@@ -1,2 +1,0 @@
-# name: asyncio.sleep 
-coroutine asyncio.sleep(delay, result=None, *, loop=None)

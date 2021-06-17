@@ -1,2 +1,0 @@
-# name: def my_callback(opti 
-def my_callback(option, opt, value, parser):

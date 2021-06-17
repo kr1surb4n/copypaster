@@ -1,2 +1,0 @@
-# name: f"newline: {ord('\n' 
-f"newline: {ord('\n')}"  # raises SyntaxError

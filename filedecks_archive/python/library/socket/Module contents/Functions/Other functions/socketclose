@@ -1,2 +1,0 @@
-# name: socket.close 
-socket.close(fd)

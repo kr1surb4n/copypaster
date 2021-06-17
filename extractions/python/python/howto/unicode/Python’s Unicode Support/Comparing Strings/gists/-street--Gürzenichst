@@ -1,4 +1,0 @@
-# name: >>> street = 'Gürzen 
->>> street = 'Gürzenichstraße'
->>> street.casefold()
-'gürzenichstrasse'

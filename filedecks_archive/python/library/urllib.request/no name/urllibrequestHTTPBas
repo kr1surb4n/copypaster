@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPB 
-class urllib.request.HTTPBasicAuthHandler(password_mgr=None)

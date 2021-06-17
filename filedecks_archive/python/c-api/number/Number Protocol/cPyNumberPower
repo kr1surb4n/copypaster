@@ -1,2 +1,0 @@
-# name: c.PyNumber_Power 
-PyObject* PyNumber_Power(PyObject *o1, PyObject *o2, PyObject *o3)

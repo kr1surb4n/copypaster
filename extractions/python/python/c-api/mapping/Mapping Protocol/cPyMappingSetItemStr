@@ -1,2 +1,0 @@
-# name: c.PyMapping_SetItemS 
-int PyMapping_SetItemString(PyObject *o, const char *key, PyObject *v)

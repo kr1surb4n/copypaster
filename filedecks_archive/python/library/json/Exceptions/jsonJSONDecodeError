@@ -1,2 +1,0 @@
-# name: json.JSONDecodeError 
-exception json.JSONDecodeError(msg, doc, pos)

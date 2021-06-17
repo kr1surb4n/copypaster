@@ -1,2 +1,0 @@
-# name: gettext.translation 
-gettext.translation(domain, localedir=None, languages=None, class_=None, fallback=False, codeset=None)

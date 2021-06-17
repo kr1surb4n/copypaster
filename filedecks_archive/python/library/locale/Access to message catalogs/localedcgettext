@@ -1,2 +1,0 @@
-# name: locale.dcgettext 
-locale.dcgettext(domain, msg, category)

@@ -1,2 +1,0 @@
-# name: ast.iter_fields 
-ast.iter_fields(node)

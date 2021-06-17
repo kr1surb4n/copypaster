@@ -1,2 +1,0 @@
-# name: str.removeprefix 
-str.removeprefix(prefix, /)

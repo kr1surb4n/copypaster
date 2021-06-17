@@ -1,2 +1,0 @@
-# name: c.PyArg_ValidateKeyw 
-int PyArg_ValidateKeywordArguments(PyObject *)

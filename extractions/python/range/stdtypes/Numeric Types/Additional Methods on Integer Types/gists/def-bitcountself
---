@@ -1,3 +1,0 @@
-# name: def bit_count(self): 
-def bit_count(self):
-    return bin(self).count("1")

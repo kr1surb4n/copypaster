@@ -1,2 +1,0 @@
-# name: pathlib.Path.read_by 
-Path.read_bytes()

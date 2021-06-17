@@ -1,2 +1,0 @@
-# name: ast.ClassDef 
-class ast.ClassDef(name, bases, keywords, starargs, kwargs, body, decorator_list)

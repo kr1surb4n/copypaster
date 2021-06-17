@@ -1,2 +1,0 @@
-# name: pat = re.compile(r"\ 
-pat = re.compile(r"\s*(?P<header>[^:]+)\s*:(?P<value>.*?)\s*$")

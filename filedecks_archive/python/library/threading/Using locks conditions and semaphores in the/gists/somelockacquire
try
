@@ -1,7 +1,0 @@
-# name: some_lock.acquire()
- 
-some_lock.acquire()
-try:
-    # do something...
-finally:
-    some_lock.release()

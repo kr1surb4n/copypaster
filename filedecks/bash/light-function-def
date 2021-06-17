@@ -1,5 +1,0 @@
-# name: light function def 
-foo ()
-{
-    return 0
-}

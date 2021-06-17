@@ -1,2 +1,0 @@
-# name: c.PyThread_create_ke 
-int PyThread_create_key()

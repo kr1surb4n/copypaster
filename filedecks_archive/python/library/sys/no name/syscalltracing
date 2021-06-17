@@ -1,2 +1,0 @@
-# name: sys.call_tracing 
-sys.call_tracing(func, args)

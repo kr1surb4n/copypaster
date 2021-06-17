@@ -1,4 +1,0 @@
-# name: class Foo: pass
-Foo  
-class Foo: pass
-Foo = f1(arg)(f2(Foo))

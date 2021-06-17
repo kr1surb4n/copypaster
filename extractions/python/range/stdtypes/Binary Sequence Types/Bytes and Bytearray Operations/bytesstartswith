@@ -1,2 +1,0 @@
-# name: bytes.startswith 
-bytes.startswith(prefix[, start[, end]])

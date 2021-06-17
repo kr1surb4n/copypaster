@@ -1,2 +1,0 @@
-# name: typing.ValuesView 
-class typing.ValuesView(MappingView[VT_co])

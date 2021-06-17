@@ -1,2 +1,0 @@
-# name: c.Py_BytesMain 
-int Py_BytesMain(int argc, char **argv)

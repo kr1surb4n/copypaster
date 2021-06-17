@@ -1,2 +1,0 @@
-# name: xml.dom.DOMImplement 
-DOMImplementation.createDocumentType(qualifiedName, publicId, systemId)

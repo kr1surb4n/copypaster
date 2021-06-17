@@ -1,2 +1,0 @@
-# name: curses.window.addstr 
-window.addstr(str[, attr])

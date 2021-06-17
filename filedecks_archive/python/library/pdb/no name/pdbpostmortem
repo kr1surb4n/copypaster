@@ -1,2 +1,0 @@
-# name: pdb.post_mortem 
-pdb.post_mortem(traceback=None)

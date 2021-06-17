@@ -1,2 +1,0 @@
-# name: pdbcommand-tbreak 
-tbreak [([filename:]lineno | function) [, condition]]

@@ -1,2 +1,0 @@
-# name: os.path.splitdrive 
-os.path.splitdrive(path)

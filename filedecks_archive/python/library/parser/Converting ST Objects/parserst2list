@@ -1,2 +1,0 @@
-# name: parser.st2list 
-parser.st2list(st, line_info=False, col_info=False)

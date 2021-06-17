@@ -1,2 +1,0 @@
-# name: importlib.util.decod 
-importlib.util.decode_source(source_bytes)

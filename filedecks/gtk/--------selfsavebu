@@ -1,3 +1,0 @@
-# name:         selfsavebu 
-        self.save_button = Gtk.Button(label="QuickSave")
-        self.save_button.connect('clicked', self.quick_save)

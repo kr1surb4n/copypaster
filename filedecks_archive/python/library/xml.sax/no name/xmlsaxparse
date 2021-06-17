@@ -1,2 +1,0 @@
-# name: xml.sax.parse 
-xml.sax.parse(filename_or_stream, handler, error_handler=handler.ErrorHandler())

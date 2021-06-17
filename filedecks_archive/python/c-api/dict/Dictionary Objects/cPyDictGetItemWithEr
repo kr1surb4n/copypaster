@@ -1,2 +1,0 @@
-# name: c.PyDict_GetItemWith 
-PyObject* PyDict_GetItemWithError(PyObject *p, PyObject *key)

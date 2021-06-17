@@ -1,8 +1,0 @@
-# name: def search(obj):
-    
-def search(obj):
-    if isinstance(obj, Mailbox):
-        ...  # code to search a mailbox
-    elif isinstance(obj, Document):
-        ...  # code to search a document
-    elif ...

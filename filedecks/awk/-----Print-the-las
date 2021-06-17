@@ -1,3 +1,0 @@
-# name:      Print the las 
-    # Print the last field on this line
-    print $NF;

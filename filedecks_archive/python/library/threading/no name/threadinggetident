@@ -1,2 +1,0 @@
-# name: threading.get_ident 
-threading.get_ident()

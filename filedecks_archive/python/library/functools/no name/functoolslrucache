@@ -1,2 +1,0 @@
-# name: functools.lru_cache 
-@functools.lru_cache(user_function)

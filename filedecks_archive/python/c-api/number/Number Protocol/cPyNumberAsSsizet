@@ -1,2 +1,0 @@
-# name: c.PyNumber_AsSsize_t 
-Py_ssize_t PyNumber_AsSsize_t(PyObject *o, PyObject *exc)

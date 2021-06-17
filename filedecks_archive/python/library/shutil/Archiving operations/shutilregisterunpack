@@ -1,2 +1,0 @@
-# name: shutil.register_unpa 
-shutil.register_unpack_format(name, extensions, function[, extra_args[, description]])

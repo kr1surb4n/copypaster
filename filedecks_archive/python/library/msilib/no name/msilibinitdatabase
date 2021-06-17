@@ -1,2 +1,0 @@
-# name: msilib.init_database 
-msilib.init_database(name, schema, ProductName, ProductCode, ProductVersion, Manufacturer)

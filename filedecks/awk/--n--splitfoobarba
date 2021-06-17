@@ -1,2 +1,0 @@
-# name:   n  splitfoobarba 
-  n = split("foo:bar:baz", arr, ":");

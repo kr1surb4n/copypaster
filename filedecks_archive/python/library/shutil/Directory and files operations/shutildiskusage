@@ -1,2 +1,0 @@
-# name: shutil.disk_usage 
-shutil.disk_usage(path)

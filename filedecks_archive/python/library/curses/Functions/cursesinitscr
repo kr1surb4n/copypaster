@@ -1,2 +1,0 @@
-# name: curses.initscr 
-curses.initscr()

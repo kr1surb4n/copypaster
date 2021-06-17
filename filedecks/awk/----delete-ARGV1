@@ -1,2 +1,0 @@
-# name:     delete ARGV1 
-    delete ARGV[1];

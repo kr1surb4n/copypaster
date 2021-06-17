@@ -1,2 +1,0 @@
-# name: socket.if_nametoinde 
-socket.if_nametoindex(if_name)

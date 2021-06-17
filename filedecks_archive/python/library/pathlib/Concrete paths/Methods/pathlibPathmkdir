@@ -1,2 +1,0 @@
-# name: pathlib.Path.mkdir 
-Path.mkdir(mode=0o777, parents=False, exist_ok=False)

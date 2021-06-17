@@ -1,2 +1,0 @@
-# name: c.PyMarshal_WriteObj 
-PyObject* PyMarshal_WriteObjectToString(PyObject *value, int version)

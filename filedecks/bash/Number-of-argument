@@ -1,2 +1,0 @@
-# name: Number of argument 
-echo "Number of arguments passed to script: $#"

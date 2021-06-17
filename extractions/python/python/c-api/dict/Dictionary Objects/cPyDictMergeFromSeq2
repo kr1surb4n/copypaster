@@ -1,2 +1,0 @@
-# name: c.PyDict_MergeFromSe 
-int PyDict_MergeFromSeq2(PyObject *a, PyObject *seq2, int override)

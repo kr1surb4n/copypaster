@@ -1,8 +1,0 @@
-# name: >>> def test(a, b):
- 
->>> def test(a, b):
-...     pass
->>> sig = signature(test)
->>> new_sig = sig.replace(return_annotation="new return anno")
->>> str(new_sig)
-"(a, b) -> 'new return anno'"

@@ -1,2 +1,0 @@
-# name: c.PyLong_AsUnsignedL 
-unsigned long long PyLong_AsUnsignedLongLongMask(PyObject *obj)

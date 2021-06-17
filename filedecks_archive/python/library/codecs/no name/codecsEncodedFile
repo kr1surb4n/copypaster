@@ -1,2 +1,0 @@
-# name: codecs.EncodedFile 
-codecs.EncodedFile(file, data_encoding, file_encoding=None, errors='strict')

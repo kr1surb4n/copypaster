@@ -1,2 +1,0 @@
-# name: functools.reduce 
-functools.reduce(function, iterable[, initializer])

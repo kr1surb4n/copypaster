@@ -1,2 +1,0 @@
-# name: c.PyImport_GetImport 
-PyObject* PyImport_GetImporter(PyObject *path)

@@ -1,2 +1,0 @@
-# name: time.time_ns 
-time.time_ns() → int

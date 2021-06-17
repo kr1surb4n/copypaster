@@ -1,2 +1,0 @@
-# name: tarfile.HeaderError 
-exception tarfile.HeaderError

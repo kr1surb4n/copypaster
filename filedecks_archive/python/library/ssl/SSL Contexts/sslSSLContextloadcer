@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.load_ 
-SSLContext.load_cert_chain(certfile, keyfile=None, password=None)

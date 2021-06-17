@@ -1,2 +1,0 @@
-# name: re.split 
-re.split(pattern, string, maxsplit=0, flags=0)

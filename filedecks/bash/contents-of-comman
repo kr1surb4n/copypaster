@@ -1,2 +1,0 @@
-# name: contents of comman 
-Contents=$(cat file.txt)

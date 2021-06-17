@@ -1,2 +1,0 @@
-# name: >>> urlopen(Request( 
->>> urlopen(Request('https://www.python.org', method='HEAD'))

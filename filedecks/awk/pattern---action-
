@@ -1,4 +1,0 @@
-# name: pattern   action 
- 
-[pattern]  { action }
- pattern  [{ action }]

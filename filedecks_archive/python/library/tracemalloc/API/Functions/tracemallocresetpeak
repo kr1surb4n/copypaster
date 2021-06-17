@@ -1,2 +1,0 @@
-# name: tracemalloc.reset_pe 
-tracemalloc.reset_peak()

@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_mr 
-PyObject* PyTypeObject.tp_mro

@@ -1,2 +1,0 @@
-# name: object.__contains__ 
-object.__contains__(self, item)

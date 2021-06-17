@@ -1,2 +1,0 @@
-# name: substrstring start 
-substr(string, start [, length ])

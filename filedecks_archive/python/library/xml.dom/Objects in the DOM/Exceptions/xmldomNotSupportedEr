@@ -1,2 +1,0 @@
-# name: xml.dom.NotSupported 
-exception xml.dom.NotSupportedErr

@@ -1,2 +1,0 @@
-# name: asyncio.loop.run_for 
-loop.run_forever()

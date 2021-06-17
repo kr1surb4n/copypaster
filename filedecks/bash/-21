@@ -1,2 +1,0 @@
-# name:  21 
-python hello.py > "output-and-error.log" 2>&1

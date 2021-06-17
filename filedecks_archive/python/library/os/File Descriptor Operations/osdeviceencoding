@@ -1,2 +1,0 @@
-# name: os.device_encoding 
-os.device_encoding(fd)

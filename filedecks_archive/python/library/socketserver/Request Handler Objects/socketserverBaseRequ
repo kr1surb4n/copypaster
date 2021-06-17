@@ -1,2 +1,0 @@
-# name: socketserver.BaseReq 
-socketserver.BaseRequestHandler.finish

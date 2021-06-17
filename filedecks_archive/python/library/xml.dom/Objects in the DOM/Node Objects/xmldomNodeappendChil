@@ -1,2 +1,0 @@
-# name: xml.dom.Node.appendC 
-Node.appendChild(newChild)

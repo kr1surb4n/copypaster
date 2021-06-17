@@ -1,2 +1,0 @@
-# name: c.PyFile_SetOpenCode 
-int PyFile_SetOpenCodeHook(Py_OpenCodeHookFunction handler)

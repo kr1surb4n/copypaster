@@ -1,2 +1,0 @@
-# name: ossaudiodev.oss_mixe 
-oss_mixer_device.set_recsrc(bitmask)

@@ -1,2 +1,0 @@
-# name: test.support.no_trac 
-@test.support.no_tracing(func)

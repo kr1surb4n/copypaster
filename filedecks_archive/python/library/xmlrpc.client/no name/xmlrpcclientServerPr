@@ -1,2 +1,0 @@
-# name: xmlrpc.client.Server 
-class xmlrpc.client.ServerProxy(uri, transport=None, encoding=None, verbose=False, allow_none=False, use_datetime=False, use_builtin_types=False, *, headers=(), context=None)

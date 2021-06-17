@@ -1,2 +1,0 @@
-# name: optparse.OptionParse 
-OptionParser.get_option_group(opt_str)

@@ -1,2 +1,0 @@
-# name: NumberparseIntstri 
-Number.parseInt(string, [radix])

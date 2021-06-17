@@ -1,2 +1,0 @@
-# name: ssl.SSLWantReadError 
-exception ssl.SSLWantReadError

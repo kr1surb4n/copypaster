@@ -1,2 +1,0 @@
-# name: h.add_header('conten 
-h.add_header('content-disposition', 'attachment', filename='bud.gif')

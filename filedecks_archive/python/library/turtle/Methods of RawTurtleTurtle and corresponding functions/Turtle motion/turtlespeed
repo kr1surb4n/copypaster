@@ -1,2 +1,0 @@
-# name: turtle.speed 
-turtle.speed(speed=None)

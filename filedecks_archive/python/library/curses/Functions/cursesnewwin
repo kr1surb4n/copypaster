@@ -1,2 +1,0 @@
-# name: curses.newwin 
-curses.newwin(nlines, ncols)

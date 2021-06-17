@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.create 
-IMAP4.create(mailbox)

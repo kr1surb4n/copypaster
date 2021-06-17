@@ -1,2 +1,0 @@
-# name: os.lchown 
-os.lchown(path, uid, gid)

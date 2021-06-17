@@ -1,2 +1,0 @@
-# name: done, pending = awai 
-done, pending = await asyncio.wait(aws)

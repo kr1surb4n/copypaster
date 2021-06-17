@@ -1,2 +1,0 @@
-# name: xml.dom.getDOMImplem 
-xml.dom.getDOMImplementation(name=None, features=())

@@ -1,2 +1,0 @@
-# name: sys.excepthook 
-sys.excepthook(type, value, traceback)

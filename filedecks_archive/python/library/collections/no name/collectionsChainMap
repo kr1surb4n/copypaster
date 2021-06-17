@@ -1,2 +1,0 @@
-# name: collections.ChainMap 
-class collections.ChainMap(*maps)

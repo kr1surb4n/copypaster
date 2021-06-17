@@ -1,2 +1,0 @@
-# name: os.sched_yield 
-os.sched_yield()

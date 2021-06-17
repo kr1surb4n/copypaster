@@ -1,2 +1,0 @@
-# name: asyncio.WriteTranspo 
-class asyncio.WriteTransport(BaseTransport)

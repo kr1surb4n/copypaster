@@ -1,5 +1,0 @@
-# name: output push
-output p 
-output push
-output pop
-output preset <preset>

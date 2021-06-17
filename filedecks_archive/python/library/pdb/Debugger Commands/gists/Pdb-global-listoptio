@@ -1,3 +1,0 @@
-# name: (Pdb) global list_op 
-(Pdb) global list_options; list_options = ['-l']
-(Pdb)

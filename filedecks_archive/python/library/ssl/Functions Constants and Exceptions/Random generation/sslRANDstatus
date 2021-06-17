@@ -1,2 +1,0 @@
-# name: ssl.RAND_status 
-ssl.RAND_status()

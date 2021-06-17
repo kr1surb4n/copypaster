@@ -1,2 +1,0 @@
-# name: test.support.run_in_ 
-test.support.run_in_subinterp(code)

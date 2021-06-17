@@ -1,5 +1,0 @@
-# name: ref = function(args) 
-ref = function(args).mydict[index][index]
-ref.a = 21
-ref.b = 42
-ref.c = 63

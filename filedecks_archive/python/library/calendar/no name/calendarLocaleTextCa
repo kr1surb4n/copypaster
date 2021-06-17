@@ -1,2 +1,0 @@
-# name: calendar.LocaleTextC 
-class calendar.LocaleTextCalendar(firstweekday=0, locale=None)

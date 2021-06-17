@@ -1,3 +1,0 @@
-# name: >>> from importlib.m 
->>> from importlib.metadata import distribution  
->>> dist = distribution('wheel')

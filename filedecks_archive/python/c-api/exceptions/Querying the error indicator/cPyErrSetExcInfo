@@ -1,2 +1,0 @@
-# name: c.PyErr_SetExcInfo 
-void PyErr_SetExcInfo(PyObject *type, PyObject *value, PyObject *traceback)

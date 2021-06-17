@@ -1,2 +1,0 @@
-# name: f = open("myfile.txt 
-f = open("myfile.txt", "r", encoding="utf-8")

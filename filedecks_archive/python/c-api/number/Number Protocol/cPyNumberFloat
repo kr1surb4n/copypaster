@@ -1,2 +1,0 @@
-# name: c.PyNumber_Float 
-PyObject* PyNumber_Float(PyObject *o)

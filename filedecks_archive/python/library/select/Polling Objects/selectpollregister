@@ -1,2 +1,0 @@
-# name: select.poll.register 
-poll.register(fd[, eventmask])

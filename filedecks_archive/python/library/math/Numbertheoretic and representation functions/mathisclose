@@ -1,2 +1,0 @@
-# name: math.isclose 
-math.isclose(a, b, *, rel_tol=1e-09, abs_tol=0.0)

@@ -1,7 +1,0 @@
-# name: try:
-    cache
-excep 
-try:
-    cache
-except NameError:
-    cache = {}

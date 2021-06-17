@@ -1,3 +1,0 @@
-# name: def func(foo, bar=No 
-def func(foo, bar=None, **kwargs):
-    pass

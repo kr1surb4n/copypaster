@@ -1,2 +1,0 @@
-# name: sys.setprofile 
-sys.setprofile(profilefunc)

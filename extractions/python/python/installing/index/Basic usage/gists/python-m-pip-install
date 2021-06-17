@@ -1,2 +1,0 @@
-# name: python -m pip instal 
-python -m pip install --upgrade SomePackage

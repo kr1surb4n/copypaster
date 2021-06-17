@@ -1,2 +1,0 @@
-# name: operator.methodcalle 
-operator.methodcaller(name, /, *args, **kwargs)

@@ -1,2 +1,0 @@
-# name: Union[int] == int  # 
-Union[int] == int  # The constructor actually returns int

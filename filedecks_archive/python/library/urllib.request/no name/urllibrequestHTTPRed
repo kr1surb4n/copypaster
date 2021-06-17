@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPR 
-class urllib.request.HTTPRedirectHandler

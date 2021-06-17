@@ -1,2 +1,0 @@
-# name: c.PySys_WriteStderr 
-void PySys_WriteStderr(const char *format, ...)

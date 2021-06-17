@@ -1,2 +1,0 @@
-# name: c.PyDict_Update 
-int PyDict_Update(PyObject *a, PyObject *b)

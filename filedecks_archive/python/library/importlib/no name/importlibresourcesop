@@ -1,2 +1,0 @@
-# name: importlib.resources. 
-importlib.resources.open_text(package, resource, encoding='utf-8', errors='strict')

@@ -1,2 +1,0 @@
-# name: struct.pack 
-struct.pack(format, v1, v2, ...)

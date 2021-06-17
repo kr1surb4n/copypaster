@@ -1,2 +1,0 @@
-# name: c.PyDateTime_DELTA_G 
-int PyDateTime_DELTA_GET_SECONDS(PyDateTime_Delta *o)

@@ -1,2 +1,0 @@
-# name: statistics.pstdev 
-statistics.pstdev(data, mu=None)

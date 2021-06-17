@@ -1,2 +1,0 @@
-# name: >>> screen.textinput 
->>> screen.textinput("NIM", "Name of first player:")

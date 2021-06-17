@@ -1,6 +1,0 @@
-# name: >>> f.read()
-'This i 
->>> f.read()
-'This is the entire file.\n'
->>> f.read()
-''

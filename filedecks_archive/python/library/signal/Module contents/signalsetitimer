@@ -1,2 +1,0 @@
-# name: signal.setitimer 
-signal.setitimer(which, seconds, interval=0.0)

@@ -1,2 +1,0 @@
-# name: operator.matmul 
-operator.matmul(a, b)

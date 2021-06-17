@@ -1,2 +1,0 @@
-# name: wsgiref.simple_serve 
-wsgiref.simple_server.demo_app(environ, start_response)

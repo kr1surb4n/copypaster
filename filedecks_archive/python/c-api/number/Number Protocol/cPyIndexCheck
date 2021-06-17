@@ -1,2 +1,0 @@
-# name: c.PyIndex_Check 
-int PyIndex_Check(PyObject *o)

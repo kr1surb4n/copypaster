@@ -1,2 +1,0 @@
-# name: exec(command, __main 
-exec(command, __main__.__dict__, __main__.__dict__)

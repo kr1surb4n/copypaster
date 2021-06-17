@@ -1,2 +1,0 @@
-# name: c.PyNumber_InPlaceRe 
-PyObject* PyNumber_InPlaceRemainder(PyObject *o1, PyObject *o2)

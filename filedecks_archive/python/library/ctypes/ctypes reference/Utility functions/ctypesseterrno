@@ -1,2 +1,0 @@
-# name: ctypes.set_errno 
-ctypes.set_errno(value)

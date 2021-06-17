@@ -1,2 +1,0 @@
-# name: c.PyUnicode_DecodeCh 
-PyObject* PyUnicode_DecodeCharmap(const char *data, Py_ssize_t size, PyObject *mapping, const char *errors)

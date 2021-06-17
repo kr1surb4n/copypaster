@@ -1,4 +1,0 @@
-# name: def handle_write(sel 
-def handle_write(self):
-    sent = self.send(self.buffer)
-    self.buffer = self.buffer[sent:]

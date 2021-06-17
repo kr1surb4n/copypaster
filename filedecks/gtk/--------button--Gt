@@ -1,3 +1,0 @@
-# name:         button  Gt 
-        _button = Gtk.ToggleButton(name)
-        _button.connect("toggled", callback, ind)

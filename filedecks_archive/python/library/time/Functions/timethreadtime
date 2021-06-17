@@ -1,2 +1,0 @@
-# name: time.thread_time 
-time.thread_time() → float

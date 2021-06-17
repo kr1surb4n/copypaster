@@ -1,2 +1,0 @@
-# name: email.utils.format_d 
-email.utils.format_datetime(self.datetime)

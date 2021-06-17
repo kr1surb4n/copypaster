@@ -1,2 +1,0 @@
-# name: c.PyObject_CallMetho 
-PyObject* PyObject_CallMethodNoArgs(PyObject *obj, PyObject *name)

@@ -1,2 +1,0 @@
-# name: locale.dgettext 
-locale.dgettext(domain, msg)

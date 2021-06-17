@@ -1,2 +1,0 @@
-# name: os.sched_setaffinity 
-os.sched_setaffinity(pid, mask)

@@ -1,2 +1,0 @@
-# name: datetime.date.fromti 
-classmethod date.fromtimestamp(timestamp)

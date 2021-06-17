@@ -1,2 +1,0 @@
-# name: turtle.clearstamps 
-turtle.clearstamps(n=None)

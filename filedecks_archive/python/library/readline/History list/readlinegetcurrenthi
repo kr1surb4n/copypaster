@@ -1,2 +1,0 @@
-# name: readline.get_current 
-readline.get_current_history_length()

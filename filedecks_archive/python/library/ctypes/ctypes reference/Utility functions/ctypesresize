@@ -1,2 +1,0 @@
-# name: ctypes.resize 
-ctypes.resize(obj, size)

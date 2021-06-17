@@ -1,2 +1,0 @@
-# name: asyncio.loop.get_tas 
-loop.get_task_factory()

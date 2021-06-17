@@ -1,2 +1,0 @@
-# name: asyncio.loop.getname 
-coroutine loop.getnameinfo(sockaddr, flags=0)

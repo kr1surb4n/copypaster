@@ -1,2 +1,0 @@
-# name: socket.socket.sendfi 
-socket.sendfile(file, offset=0, count=None)

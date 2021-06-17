@@ -1,2 +1,0 @@
-# name: turtle.onkeypress 
-turtle.onkeypress(fun, key=None)

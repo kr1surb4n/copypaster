@@ -1,2 +1,0 @@
-# name: distutils.core.setup 
-distutils.core.setup(arguments)

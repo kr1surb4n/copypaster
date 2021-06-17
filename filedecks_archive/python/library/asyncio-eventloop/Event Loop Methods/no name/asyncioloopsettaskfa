@@ -1,2 +1,0 @@
-# name: asyncio.loop.set_tas 
-loop.set_task_factory(factory)

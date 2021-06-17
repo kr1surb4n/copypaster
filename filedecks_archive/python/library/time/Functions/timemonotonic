@@ -1,2 +1,0 @@
-# name: time.monotonic 
-time.monotonic() → float

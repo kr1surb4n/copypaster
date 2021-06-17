@@ -1,2 +1,0 @@
-# name: curses.set_escdelay 
-curses.set_escdelay(ms)

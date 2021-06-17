@@ -1,2 +1,0 @@
-# name: asyncio.Future.remov 
-asyncio.Future.remove_done_callback

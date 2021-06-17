@@ -1,2 +1,0 @@
-# name: os.startfile 
-os.startfile(path[, operation])

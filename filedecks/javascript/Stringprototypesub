@@ -1,2 +1,0 @@
-# name: Stringprototypesub 
-String.prototype.substring(indexStart [, indexEnd])

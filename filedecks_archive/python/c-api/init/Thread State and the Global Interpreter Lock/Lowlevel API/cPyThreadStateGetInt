@@ -1,2 +1,0 @@
-# name: c.PyThreadState_GetI 
-PyInterpreterState* PyThreadState_GetInterpreter(PyThreadState *tstate)

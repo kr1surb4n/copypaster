@@ -1,3 +1,0 @@
-# name: >>> sorted(student_o 
->>> sorted(student_objects, key=attrgetter('grade', 'age'))
-[('john', 'A', 15), ('dave', 'B', 10), ('jane', 'B', 12)]

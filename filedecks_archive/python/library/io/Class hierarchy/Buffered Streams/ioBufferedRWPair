@@ -1,2 +1,0 @@
-# name: io.BufferedRWPair 
-class io.BufferedRWPair(reader, writer, buffer_size=DEFAULT_BUFFER_SIZE)

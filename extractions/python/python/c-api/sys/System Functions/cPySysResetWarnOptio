@@ -1,2 +1,0 @@
-# name: c.PySys_ResetWarnOpt 
-void PySys_ResetWarnOptions()

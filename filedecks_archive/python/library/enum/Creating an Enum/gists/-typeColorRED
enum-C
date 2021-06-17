@@ -1,6 +1,0 @@
-# name: >>> type(Color.RED)
- 
->>> type(Color.RED)
-<enum 'Color'>
->>> isinstance(Color.GREEN, Color)
-True

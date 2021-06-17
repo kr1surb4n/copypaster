@@ -1,2 +1,0 @@
-# name: if x < y < z: print( 
-if x < y < z: print(x); print(y); print(z)

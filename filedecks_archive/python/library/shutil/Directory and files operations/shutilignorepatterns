@@ -1,2 +1,0 @@
-# name: shutil.ignore_patter 
-shutil.ignore_patterns(*patterns)

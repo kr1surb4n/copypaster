@@ -1,2 +1,0 @@
-# name: combinations_with_re 
-combinations_with_replacement('ABCD', 2)

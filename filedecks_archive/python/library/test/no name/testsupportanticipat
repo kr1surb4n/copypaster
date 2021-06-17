@@ -1,2 +1,0 @@
-# name: test.support.anticip 
-@test.support.anticipate_failure(condition)

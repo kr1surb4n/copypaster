@@ -1,2 +1,0 @@
-# name: turtle.setundobuffer 
-turtle.setundobuffer(size)

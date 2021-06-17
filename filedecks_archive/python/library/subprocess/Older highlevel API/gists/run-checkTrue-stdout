@@ -1,2 +1,0 @@
-# name: run(..., check=True, 
-run(..., check=True, stdout=PIPE).stdout

@@ -1,2 +1,0 @@
-# name: datetime.tzinfo.tzna 
-tzinfo.tzname(dt)

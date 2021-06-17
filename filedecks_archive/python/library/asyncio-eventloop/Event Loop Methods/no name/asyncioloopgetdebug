@@ -1,2 +1,0 @@
-# name: asyncio.loop.get_deb 
-loop.get_debug()

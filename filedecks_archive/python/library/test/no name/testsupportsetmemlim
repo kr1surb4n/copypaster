@@ -1,2 +1,0 @@
-# name: test.support.set_mem 
-test.support.set_memlimit(limit)

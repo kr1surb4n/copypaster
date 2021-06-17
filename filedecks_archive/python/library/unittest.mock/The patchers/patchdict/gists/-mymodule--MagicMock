@@ -1,8 +1,0 @@
-# name: >>> mymodule = Magic 
->>> mymodule = MagicMock()
->>> mymodule.function.return_value = 'fish'
->>> with patch.dict('sys.modules', mymodule=mymodule):
-...     import mymodule
-...     mymodule.function('some', 'args')
-...
-'fish'

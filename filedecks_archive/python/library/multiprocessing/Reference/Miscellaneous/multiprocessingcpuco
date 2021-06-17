@@ -1,2 +1,0 @@
-# name: multiprocessing.cpu_ 
-multiprocessing.cpu_count()

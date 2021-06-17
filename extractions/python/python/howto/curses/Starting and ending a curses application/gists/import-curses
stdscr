@@ -1,4 +1,0 @@
-# name: import curses
-stdscr 
-import curses
-stdscr = curses.initscr()

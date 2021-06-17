@@ -1,2 +1,0 @@
-# name: asyncio.loop.add_sig 
-loop.add_signal_handler(signum, callback, *args)

@@ -1,2 +1,0 @@
-# name: c.PyInit_modulename 
-PyObject* PyInit_modulename(void)

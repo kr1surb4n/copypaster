@@ -1,2 +1,0 @@
-# name: multiprocessing.Sema 
-class multiprocessing.Semaphore([value])

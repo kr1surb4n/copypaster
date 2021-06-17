@@ -1,3 +1,0 @@
-# name: dom3 = parseString(" 
-dom3 = parseString("<myxml>Some data</myxml>")
-assert dom3.documentElement.tagName == "myxml"

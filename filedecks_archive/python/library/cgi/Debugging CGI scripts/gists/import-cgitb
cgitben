@@ -1,4 +1,0 @@
-# name: import cgitb
-cgitb.e 
-import cgitb
-cgitb.enable()

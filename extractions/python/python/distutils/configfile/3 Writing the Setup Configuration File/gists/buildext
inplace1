@@ -1,4 +1,0 @@
-# name: [build_ext]
-inplace= 
-[build_ext]
-inplace=1

@@ -1,2 +1,0 @@
-# name: asyncio.Future 
-class asyncio.Future(*, loop=None)

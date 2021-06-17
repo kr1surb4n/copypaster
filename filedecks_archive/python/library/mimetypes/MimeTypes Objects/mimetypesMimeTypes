@@ -1,2 +1,0 @@
-# name: mimetypes.MimeTypes 
-class mimetypes.MimeTypes(filenames=(), strict=True)

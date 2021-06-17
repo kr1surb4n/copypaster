@@ -1,2 +1,0 @@
-# name: readline.parse_and_b 
-readline.parse_and_bind(string)

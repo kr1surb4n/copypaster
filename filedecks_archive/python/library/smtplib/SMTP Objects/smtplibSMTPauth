@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.auth 
-SMTP.auth(mechanism, authobject, *, initial_response_ok=True)

@@ -1,2 +1,0 @@
-# name: grp.getgrnam 
-grp.getgrnam(name)

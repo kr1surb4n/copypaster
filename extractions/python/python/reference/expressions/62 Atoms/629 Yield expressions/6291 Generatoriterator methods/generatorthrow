@@ -1,2 +1,0 @@
-# name: generator.throw 
-generator.throw(type[, value[, traceback]])

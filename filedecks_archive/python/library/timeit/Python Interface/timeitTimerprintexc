@@ -1,2 +1,0 @@
-# name: timeit.Timer.print_e 
-timeit.Timer.print_exc

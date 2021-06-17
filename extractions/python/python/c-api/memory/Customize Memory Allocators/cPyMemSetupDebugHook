@@ -1,2 +1,0 @@
-# name: c.PyMem_SetupDebugHo 
-void PyMem_SetupDebugHooks(void)

@@ -1,4 +1,0 @@
-# name: def getcount():
-     
-def getcount():
-    return C.count

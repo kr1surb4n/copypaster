@@ -1,2 +1,0 @@
-# name: ast.comprehension 
-class ast.comprehension(target, iter, ifs, is_async)

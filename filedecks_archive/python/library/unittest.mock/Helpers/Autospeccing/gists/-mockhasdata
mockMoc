@@ -1,5 +1,0 @@
-# name: >>> mock.has_data()
- 
->>> mock.has_data()
-<mock.Mock object at 0x...>
->>> mock.has_data.assret_called_with()

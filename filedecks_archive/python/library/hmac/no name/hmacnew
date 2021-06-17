@@ -1,2 +1,0 @@
-# name: hmac.new 
-hmac.new(key, msg=None, digestmod='')

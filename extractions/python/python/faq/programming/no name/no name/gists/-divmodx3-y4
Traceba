@@ -1,5 +1,0 @@
-# name: >>> divmod(x=3, y=4) 
->>> divmod(x=3, y=4)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: divmod() takes no keyword arguments

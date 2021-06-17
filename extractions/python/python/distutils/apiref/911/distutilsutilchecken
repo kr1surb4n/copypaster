@@ -1,2 +1,0 @@
-# name: distutils.util.check 
-distutils.util.check_environ()

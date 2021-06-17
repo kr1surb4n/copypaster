@@ -1,6 +1,0 @@
-# name: --- build/ --- lib/
- 
---- build/ --- lib/
-or
---- build/ --- lib.<plat>/
-               temp.<plat>/

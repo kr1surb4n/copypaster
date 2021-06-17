@@ -1,2 +1,0 @@
-# name: os.path.sameopenfile 
-os.path.sameopenfile(fp1, fp2)

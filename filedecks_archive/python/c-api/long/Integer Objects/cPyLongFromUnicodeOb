@@ -1,2 +1,0 @@
-# name: c.PyLong_FromUnicode 
-PyObject* PyLong_FromUnicodeObject(PyObject *u, int base)

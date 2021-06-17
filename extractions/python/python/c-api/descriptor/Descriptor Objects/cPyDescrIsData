@@ -1,2 +1,0 @@
-# name: c.PyDescr_IsData 
-int PyDescr_IsData(PyObject *descr)

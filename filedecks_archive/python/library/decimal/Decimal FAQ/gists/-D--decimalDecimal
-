@@ -1,4 +1,0 @@
-# name: >>> D = decimal.Deci 
->>> D = decimal.Decimal
->>> D('1.23') + D('3.45')
-Decimal('4.68')

@@ -1,3 +1,0 @@
-# name: l1 = tkinter.Label(t 
-l1 = tkinter.Label(text="Test", fg="black", bg="white")
-l2 = tkinter.Label(text="Test", fg="black", bg="white")

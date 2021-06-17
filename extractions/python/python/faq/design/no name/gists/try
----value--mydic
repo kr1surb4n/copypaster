@@ -1,7 +1,0 @@
-# name: try:
-    value = myd 
-try:
-    value = mydict[key]
-except KeyError:
-    mydict[key] = getvalue(key)
-    value = mydict[key]

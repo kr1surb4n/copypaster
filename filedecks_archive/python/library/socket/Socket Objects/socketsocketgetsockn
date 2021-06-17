@@ -1,2 +1,0 @@
-# name: socket.socket.getsoc 
-socket.getsockname()

@@ -1,2 +1,0 @@
-# name: c.PySeqIter_New 
-PyObject* PySeqIter_New(PyObject *seq)

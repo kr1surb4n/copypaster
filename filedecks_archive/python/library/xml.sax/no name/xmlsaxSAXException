@@ -1,2 +1,0 @@
-# name: xml.sax.SAXException 
-exception xml.sax.SAXException(msg, exception=None)

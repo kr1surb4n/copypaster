@@ -1,3 +1,0 @@
-# name: StrCache = 'Cache[st 
-StrCache = 'Cache[str]'  # a type alias
-LOG_PREFIX = 'LOG[DEBUG]'  # a module constant

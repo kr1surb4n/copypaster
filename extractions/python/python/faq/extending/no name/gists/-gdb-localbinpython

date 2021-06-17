@@ -1,7 +1,0 @@
-# name: $ gdb /local/bin/pyt 
-$ gdb /local/bin/python
-gdb) run myscript.py
-gdb) continue # repeat until your extension is loaded
-gdb) finish   # so that your extension is loaded
-gdb) br myfunction.c:50
-gdb) continue

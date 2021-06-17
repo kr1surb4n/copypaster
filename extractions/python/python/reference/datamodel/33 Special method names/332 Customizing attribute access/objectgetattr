@@ -1,2 +1,0 @@
-# name: object.__getattr__ 
-object.__getattr__(self, name)

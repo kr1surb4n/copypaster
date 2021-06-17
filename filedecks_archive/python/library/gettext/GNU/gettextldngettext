@@ -1,2 +1,0 @@
-# name: gettext.ldngettext 
-gettext.ldngettext(domain, singular, plural, n)

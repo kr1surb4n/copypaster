@@ -1,2 +1,0 @@
-# name: pickle.dump 
-pickle.dump(obj, file, protocol=None, *, fix_imports=True, buffer_callback=None)

@@ -1,2 +1,0 @@
-# name: PyObject *tp_str(PyO 
-PyObject *tp_str(PyObject *self);

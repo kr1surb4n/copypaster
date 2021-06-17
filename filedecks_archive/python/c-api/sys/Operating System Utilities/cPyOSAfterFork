@@ -1,2 +1,0 @@
-# name: c.PyOS_AfterFork 
-void PyOS_AfterFork()

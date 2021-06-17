@@ -1,5 +1,0 @@
-# name: >>> b'Hello World'.i 
->>> b'Hello World'.istitle()
-True
->>> b'Hello world'.istitle()
-False

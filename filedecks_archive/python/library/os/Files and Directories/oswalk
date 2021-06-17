@@ -1,2 +1,0 @@
-# name: os.walk 
-os.walk(top, topdown=True, onerror=None, followlinks=False)

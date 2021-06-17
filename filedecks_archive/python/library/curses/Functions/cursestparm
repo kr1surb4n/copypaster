@@ -1,2 +1,0 @@
-# name: curses.tparm 
-curses.tparm(str[, ...])

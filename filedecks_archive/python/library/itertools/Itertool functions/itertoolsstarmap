@@ -1,2 +1,0 @@
-# name: itertools.starmap 
-itertools.starmap(function, iterable)

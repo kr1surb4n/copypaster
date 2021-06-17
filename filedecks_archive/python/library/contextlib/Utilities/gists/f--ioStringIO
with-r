@@ -1,6 +1,0 @@
-# name: f = io.StringIO()
-wi 
-f = io.StringIO()
-with redirect_stdout(f):
-    help(pow)
-s = f.getvalue()

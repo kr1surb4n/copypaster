@@ -1,2 +1,0 @@
-# name: weakref.WeakMethod 
-class weakref.WeakMethod(method)

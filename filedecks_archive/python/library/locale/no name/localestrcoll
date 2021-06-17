@@ -1,2 +1,0 @@
-# name: locale.strcoll 
-locale.strcoll(string1, string2)

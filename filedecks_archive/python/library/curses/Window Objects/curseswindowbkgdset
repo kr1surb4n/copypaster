@@ -1,2 +1,0 @@
-# name: curses.window.bkgdse 
-window.bkgdset(ch[, attr])

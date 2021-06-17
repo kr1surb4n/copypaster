@@ -1,2 +1,0 @@
-# name: urllib.request.FTPHa 
-FTPHandler.ftp_open(req)

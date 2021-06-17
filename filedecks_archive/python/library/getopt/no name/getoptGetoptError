@@ -1,2 +1,0 @@
-# name: getopt.GetoptError 
-exception getopt.GetoptError

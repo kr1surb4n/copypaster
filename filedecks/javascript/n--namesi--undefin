@@ -1,2 +1,0 @@
-# name: n  namesi  undefin 
-n = names[i] != undefined ? names[i] : '';

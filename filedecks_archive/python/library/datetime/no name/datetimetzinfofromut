@@ -1,2 +1,0 @@
-# name: datetime.tzinfo.from 
-tzinfo.fromutc(dt)

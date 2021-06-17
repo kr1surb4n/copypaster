@@ -1,4 +1,0 @@
-# name: import emb
-print("Nu 
-import emb
-print("Number of arguments", emb.numargs())

@@ -1,2 +1,0 @@
-# name: nntplib.NNTPProtocol 
-exception nntplib.NNTPProtocolError

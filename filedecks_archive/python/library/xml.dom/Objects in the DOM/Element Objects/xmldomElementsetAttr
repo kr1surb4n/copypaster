@@ -1,2 +1,0 @@
-# name: xml.dom.Element.setA 
-Element.setAttributeNS(namespaceURI, qname, value)

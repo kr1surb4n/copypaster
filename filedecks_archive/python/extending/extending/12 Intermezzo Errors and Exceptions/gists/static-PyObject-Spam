@@ -1,2 +1,0 @@
-# name: static PyObject *Spa 
-static PyObject *SpamError;

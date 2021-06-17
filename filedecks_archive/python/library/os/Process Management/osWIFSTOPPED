@@ -1,2 +1,0 @@
-# name: os.WIFSTOPPED 
-os.WIFSTOPPED(status)

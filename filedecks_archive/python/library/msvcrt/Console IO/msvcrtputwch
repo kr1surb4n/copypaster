@@ -1,2 +1,0 @@
-# name: msvcrt.putwch 
-msvcrt.putwch(unicode_char)

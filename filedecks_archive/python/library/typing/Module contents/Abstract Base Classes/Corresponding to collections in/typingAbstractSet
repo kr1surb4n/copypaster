@@ -1,2 +1,0 @@
-# name: typing.AbstractSet 
-class typing.AbstractSet(Sized, Collection[T_co])

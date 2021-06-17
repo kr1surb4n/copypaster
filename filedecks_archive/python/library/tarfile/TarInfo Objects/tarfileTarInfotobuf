@@ -1,2 +1,0 @@
-# name: tarfile.TarInfo.tobu 
-TarInfo.tobuf(format=DEFAULT_FORMAT, encoding=ENCODING, errors='surrogateescape')

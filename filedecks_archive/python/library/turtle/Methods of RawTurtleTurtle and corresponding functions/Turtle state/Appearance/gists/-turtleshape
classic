@@ -1,7 +1,0 @@
-# name: >>> turtle.shape()
-' 
->>> turtle.shape()
-'classic'
->>> turtle.shape("turtle")
->>> turtle.shape()
-'turtle'

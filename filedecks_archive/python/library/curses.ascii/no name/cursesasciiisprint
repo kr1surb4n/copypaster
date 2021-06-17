@@ -1,2 +1,0 @@
-# name: curses.ascii.isprint 
-curses.ascii.isprint(c)

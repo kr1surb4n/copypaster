@@ -1,2 +1,0 @@
-# name: object.__lt__ 
-object.__lt__(self, other)

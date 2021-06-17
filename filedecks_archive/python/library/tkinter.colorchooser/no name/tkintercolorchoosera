@@ -1,2 +1,0 @@
-# name: tkinter.colorchooser 
-tkinter.colorchooser.askcolor(color=None, **options)

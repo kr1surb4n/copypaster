@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.delete 
-IMAP4.delete(mailbox)

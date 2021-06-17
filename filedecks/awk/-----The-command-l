@@ -1,4 +1,0 @@
-# name:      The command l 
-    # The command line is in a special array called ARGV
-    for (argnum in ARGV)
-        print ARGV[argnum];

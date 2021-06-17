@@ -1,4 +1,0 @@
-# name: def foo(mydict=None) 
-def foo(mydict=None):
-    if mydict is None:
-        mydict = {}  # create a new dict for local namespace

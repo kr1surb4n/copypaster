@@ -1,2 +1,0 @@
-# name: object.__set_name__ 
-object.__set_name__(self, owner, name)

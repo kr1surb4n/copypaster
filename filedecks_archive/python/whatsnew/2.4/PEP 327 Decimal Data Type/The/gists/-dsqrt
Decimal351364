@@ -1,4 +1,0 @@
-# name: >>> d.sqrt()
-Decimal 
->>> d.sqrt()
-Decimal("351364.1828820134592177245001")

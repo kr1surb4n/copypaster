@@ -1,2 +1,0 @@
-# name: map(f, iterA, iterB, 
-map(f, iterA, iterB, ...) returns an iterator over the sequence

@@ -1,5 +1,0 @@
-# name: with A() as a:
-    w 
-with A() as a:
-    with B() as b:
-        SUITE

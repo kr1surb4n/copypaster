@@ -1,2 +1,0 @@
-# name: queue.Queue.put_nowa 
-Queue.put_nowait(item)

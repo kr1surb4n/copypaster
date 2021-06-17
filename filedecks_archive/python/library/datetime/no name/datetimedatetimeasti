@@ -1,2 +1,0 @@
-# name: datetime.datetime.as 
-datetime.astimezone(tz=None)

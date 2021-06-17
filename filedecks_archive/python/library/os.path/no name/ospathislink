@@ -1,2 +1,0 @@
-# name: os.path.islink 
-os.path.islink(path)

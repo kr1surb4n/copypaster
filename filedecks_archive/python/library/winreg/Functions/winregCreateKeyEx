@@ -1,2 +1,0 @@
-# name: winreg.CreateKeyEx 
-winreg.CreateKeyEx(key, sub_key, reserved=0, access=KEY_WRITE)

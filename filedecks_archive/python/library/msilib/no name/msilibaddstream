@@ -1,2 +1,0 @@
-# name: msilib.add_stream 
-msilib.add_stream(database, name, path)

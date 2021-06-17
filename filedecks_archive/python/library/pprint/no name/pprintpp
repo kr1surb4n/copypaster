@@ -1,2 +1,0 @@
-# name: pprint.pp 
-pprint.pp(object, *args, sort_dicts=False, **kwargs)

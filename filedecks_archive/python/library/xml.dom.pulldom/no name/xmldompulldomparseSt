@@ -1,2 +1,0 @@
-# name: xml.dom.pulldom.pars 
-xml.dom.pulldom.parseString(string, parser=None)

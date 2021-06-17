@@ -1,2 +1,0 @@
-# name: shlex.shlex.error_le 
-shlex.error_leader(infile=None, lineno=None)

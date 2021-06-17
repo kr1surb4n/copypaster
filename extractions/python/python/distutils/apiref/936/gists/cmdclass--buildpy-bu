@@ -1,2 +1,0 @@
-# name: cmdclass = {'build_p 
-cmdclass = {'build_py': build_py}

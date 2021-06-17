@@ -1,2 +1,0 @@
-# name: object.__get__ 
-object.__get__(self, instance, owner=None)

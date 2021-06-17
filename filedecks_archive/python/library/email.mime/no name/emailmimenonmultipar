@@ -1,2 +1,0 @@
-# name: email.mime.nonmultip 
-class email.mime.nonmultipart.MIMENonMultipart

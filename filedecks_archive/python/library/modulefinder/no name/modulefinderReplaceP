@@ -1,2 +1,0 @@
-# name: modulefinder.Replace 
-modulefinder.ReplacePackage(oldname, newname)

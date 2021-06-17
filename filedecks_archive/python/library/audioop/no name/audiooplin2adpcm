@@ -1,2 +1,0 @@
-# name: audioop.lin2adpcm 
-audioop.lin2adpcm(fragment, width, state)

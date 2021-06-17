@@ -1,2 +1,0 @@
-# name: int tp_setattro(PyOb 
-int tp_setattro(PyObject *self, PyObject *attr, PyObject *value);

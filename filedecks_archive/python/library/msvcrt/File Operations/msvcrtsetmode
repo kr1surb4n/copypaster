@@ -1,2 +1,0 @@
-# name: msvcrt.setmode 
-msvcrt.setmode(fd, flags)

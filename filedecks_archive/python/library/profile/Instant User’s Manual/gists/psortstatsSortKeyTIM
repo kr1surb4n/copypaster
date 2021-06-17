@@ -1,2 +1,0 @@
-# name: p.sort_stats(SortKey 
-p.sort_stats(SortKey.TIME, SortKey.CUMULATIVE).print_stats(.5, 'init')

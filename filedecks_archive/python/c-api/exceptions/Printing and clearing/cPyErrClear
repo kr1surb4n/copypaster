@@ -1,2 +1,0 @@
-# name: c.PyErr_Clear 
-void PyErr_Clear()

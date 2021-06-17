@@ -1,2 +1,0 @@
-# name: os.waitstatus_to_exi 
-os.waitstatus_to_exitcode(status)

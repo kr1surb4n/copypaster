@@ -1,2 +1,0 @@
-# name: turtle.screensize 
-turtle.screensize(canvwidth=None, canvheight=None, bg=None)

@@ -1,7 +1,0 @@
-# name: >>> d.f.__func__
-<fu 
->>> d.f.__func__
-<function D.f at 0x1012e5ae8>
-
->>> d.f.__self__
-<__main__.D object at 0x1012e1f98>

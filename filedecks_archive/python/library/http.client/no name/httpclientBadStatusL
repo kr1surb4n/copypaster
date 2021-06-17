@@ -1,2 +1,0 @@
-# name: http.client.BadStatu 
-exception http.client.BadStatusLine

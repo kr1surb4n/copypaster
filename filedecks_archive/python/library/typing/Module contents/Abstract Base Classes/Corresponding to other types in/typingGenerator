@@ -1,2 +1,0 @@
-# name: typing.Generator 
-class typing.Generator(Iterator[T_co], Generic[T_co, T_contra, V_co])

@@ -1,2 +1,0 @@
-# name: distutils.ccompiler. 
-distutils.ccompiler.CCompiler.debug_print

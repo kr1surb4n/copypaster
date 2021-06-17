@@ -1,2 +1,0 @@
-# name: c.PyObject_SetItem 
-int PyObject_SetItem(PyObject *o, PyObject *key, PyObject *v)

@@ -1,2 +1,0 @@
-# name: functools.cached_pro 
-@functools.cached_property(func)

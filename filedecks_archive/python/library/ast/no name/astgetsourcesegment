@@ -1,2 +1,0 @@
-# name: ast.get_source_segme 
-ast.get_source_segment(source, node, *, padded=False)

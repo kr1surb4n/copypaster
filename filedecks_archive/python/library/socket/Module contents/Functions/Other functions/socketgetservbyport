@@ -1,2 +1,0 @@
-# name: socket.getservbyport 
-socket.getservbyport(port[, protocolname])

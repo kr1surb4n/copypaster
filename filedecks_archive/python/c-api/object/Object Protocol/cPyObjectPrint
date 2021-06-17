@@ -1,2 +1,0 @@
-# name: c.PyObject_Print 
-int PyObject_Print(PyObject *o, FILE *fp, int flags)

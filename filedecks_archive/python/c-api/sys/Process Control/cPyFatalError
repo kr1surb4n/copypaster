@@ -1,2 +1,0 @@
-# name: c.Py_FatalError 
-void Py_FatalError(const char *message)

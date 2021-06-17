@@ -1,2 +1,0 @@
-# name: ArrayprototypeforE 
-Array.prototype.forEach(callbackFn(currentValue[, index[, array]])[, thisArg])

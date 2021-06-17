@@ -1,2 +1,0 @@
-# name: pprint.PrettyPrinter 
-PrettyPrinter.format(object, context, maxlevels, level)

@@ -1,2 +1,0 @@
-# name: importlib.abc.Loader 
-importlib.abc.Loader.load_module

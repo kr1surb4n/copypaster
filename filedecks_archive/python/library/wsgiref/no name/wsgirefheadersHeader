@@ -1,2 +1,0 @@
-# name: wsgiref.headers.Head 
-wsgiref.headers.Headers.add_header

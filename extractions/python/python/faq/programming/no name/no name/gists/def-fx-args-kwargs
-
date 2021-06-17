@@ -1,6 +1,0 @@
-# name: def f(x, *args, **kw 
-def f(x, *args, **kwargs):
-    ...
-    kwargs['width'] = '14.3c'
-    ...
-    g(x, *args, **kwargs)

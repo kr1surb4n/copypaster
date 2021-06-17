@@ -1,2 +1,0 @@
-# name: _thread.stack_size 
-_thread.stack_size([size])

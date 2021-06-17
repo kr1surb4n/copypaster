@@ -1,2 +1,0 @@
-# name: c.PySet_Discard 
-int PySet_Discard(PyObject *set, PyObject *key)

@@ -1,2 +1,0 @@
-# name: sys.getsizeof 
-sys.getsizeof(object[, default])

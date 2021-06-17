@@ -1,2 +1,0 @@
-# name: os.path.ismount 
-os.path.ismount(path)

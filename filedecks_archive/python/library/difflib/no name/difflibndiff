@@ -1,2 +1,0 @@
-# name: difflib.ndiff 
-difflib.ndiff(a, b, linejunk=None, charjunk=IS_CHARACTER_JUNK)

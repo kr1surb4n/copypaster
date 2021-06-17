@@ -1,2 +1,0 @@
-# name: asyncio.DatagramProt 
-class asyncio.DatagramProtocol(BaseProtocol)

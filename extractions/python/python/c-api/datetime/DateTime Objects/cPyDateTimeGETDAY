@@ -1,2 +1,0 @@
-# name: c.PyDateTime_GET_DAY 
-int PyDateTime_GET_DAY(PyDateTime_Date *o)

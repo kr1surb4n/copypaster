@@ -1,2 +1,0 @@
-# name: preplacedog monkey 
-p.replace('dog', 'monkey')

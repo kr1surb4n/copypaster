@@ -1,2 +1,0 @@
-# name: cgi.parse_header 
-cgi.parse_header(string)

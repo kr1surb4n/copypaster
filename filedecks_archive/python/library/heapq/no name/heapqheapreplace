@@ -1,2 +1,0 @@
-# name: heapq.heapreplace 
-heapq.heapreplace(heap, item)

@@ -1,2 +1,0 @@
-# name: doctest.debug 
-doctest.debug(module, name, pm=False)

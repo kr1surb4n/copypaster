@@ -1,2 +1,0 @@
-# name: object.__del__ 
-object.__del__(self)

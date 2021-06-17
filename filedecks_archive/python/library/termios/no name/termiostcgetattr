@@ -1,2 +1,0 @@
-# name: termios.tcgetattr 
-termios.tcgetattr(fd)

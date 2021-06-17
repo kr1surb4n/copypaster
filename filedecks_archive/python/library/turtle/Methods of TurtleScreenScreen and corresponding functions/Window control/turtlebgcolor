@@ -1,2 +1,0 @@
-# name: turtle.bgcolor 
-turtle.bgcolor(*args)

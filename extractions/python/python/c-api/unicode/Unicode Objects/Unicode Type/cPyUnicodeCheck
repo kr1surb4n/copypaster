@@ -1,2 +1,0 @@
-# name: c.PyUnicode_Check 
-int PyUnicode_Check(PyObject *o)

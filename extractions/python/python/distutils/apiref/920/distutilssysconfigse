@@ -1,2 +1,0 @@
-# name: distutils.sysconfig. 
-distutils.sysconfig.set_python_build()

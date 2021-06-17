@@ -1,2 +1,0 @@
-# name: Extension('foo', ['s 
-Extension('foo', ['src/foo1.c', 'src/foo2.c'])

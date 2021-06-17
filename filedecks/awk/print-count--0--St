@@ -1,2 +1,0 @@
-# name: print count  0  St 
-print (count == 0) ? "Starting with count of 0" : "Huh?";

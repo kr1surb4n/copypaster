@@ -1,2 +1,0 @@
-# name: asyncio.loop.run_unt 
-loop.run_until_complete(future)

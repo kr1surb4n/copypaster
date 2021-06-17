@@ -1,2 +1,0 @@
-# name: os.sched_getschedule 
-os.sched_getscheduler(pid)

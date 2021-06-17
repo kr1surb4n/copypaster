@@ -1,2 +1,0 @@
-# name: stat.S_ISREG 
-stat.S_ISREG(mode)

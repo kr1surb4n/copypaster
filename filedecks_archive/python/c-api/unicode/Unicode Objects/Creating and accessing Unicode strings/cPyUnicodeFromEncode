@@ -1,2 +1,0 @@
-# name: c.PyUnicode_FromEnco 
-PyObject* PyUnicode_FromEncodedObject(PyObject *obj, const char *encoding, const char *errors)

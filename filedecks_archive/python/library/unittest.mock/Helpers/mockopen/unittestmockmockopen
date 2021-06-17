@@ -1,2 +1,0 @@
-# name: unittest.mock.mock_o 
-unittest.mock.mock_open(mock=None, read_data=None)

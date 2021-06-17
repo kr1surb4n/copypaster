@@ -1,3 +1,0 @@
-# name: instance = SomeClass 
-instance = SomeClass()
-instance.myself = instance

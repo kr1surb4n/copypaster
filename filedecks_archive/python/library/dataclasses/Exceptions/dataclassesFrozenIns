@@ -1,2 +1,0 @@
-# name: dataclasses.FrozenIn 
-exception dataclasses.FrozenInstanceError

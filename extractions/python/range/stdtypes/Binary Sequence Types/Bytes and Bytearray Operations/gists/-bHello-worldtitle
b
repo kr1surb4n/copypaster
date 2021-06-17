@@ -1,3 +1,0 @@
-# name: >>> b'Hello world'.t 
->>> b'Hello world'.title()
-b'Hello World'

@@ -1,2 +1,0 @@
-# name: os.fdatasync 
-os.fdatasync(fd)

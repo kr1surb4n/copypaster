@@ -1,2 +1,0 @@
-# name: c.PyDateTime_GET_MON 
-int PyDateTime_GET_MONTH(PyDateTime_Date *o)

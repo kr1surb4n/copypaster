@@ -1,2 +1,0 @@
-# name: codecs.CodecInfo 
-class codecs.CodecInfo(encode, decode, streamreader=None, streamwriter=None, incrementalencoder=None, incrementaldecoder=None, name=None)

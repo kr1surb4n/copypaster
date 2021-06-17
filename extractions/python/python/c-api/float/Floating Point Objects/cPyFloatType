@@ -1,2 +1,0 @@
-# name: c.PyFloat_Type 
-PyTypeObject PyFloat_Type

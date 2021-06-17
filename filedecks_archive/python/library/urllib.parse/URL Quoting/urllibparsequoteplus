@@ -1,2 +1,0 @@
-# name: urllib.parse.quote_p 
-urllib.parse.quote_plus(string, safe='', encoding=None, errors=None)

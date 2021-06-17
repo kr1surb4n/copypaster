@@ -1,2 +1,0 @@
-# name: c.PyFloat_GetMax 
-double PyFloat_GetMax()

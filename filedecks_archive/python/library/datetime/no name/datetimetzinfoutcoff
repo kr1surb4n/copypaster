@@ -1,2 +1,0 @@
-# name: datetime.tzinfo.utco 
-tzinfo.utcoffset(dt)

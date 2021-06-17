@@ -1,2 +1,0 @@
-# name: asynchat.async_chat. 
-async_chat.set_terminator(term)

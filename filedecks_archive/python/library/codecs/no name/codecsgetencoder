@@ -1,2 +1,0 @@
-# name: codecs.getencoder 
-codecs.getencoder(encoding)

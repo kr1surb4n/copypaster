@@ -1,3 +1,0 @@
-# name: StrCache: TypeAlias  
-StrCache: TypeAlias = 'Cache[str]'  # a type alias
-LOG_PREFIX = 'LOG[DEBUG]'  # a module constant

@@ -1,2 +1,0 @@
-# name: os.getgroups 
-os.getgroups()

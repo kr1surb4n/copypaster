@@ -1,2 +1,0 @@
-# name: dis.show_code 
-dis.show_code(x, *, file=None)

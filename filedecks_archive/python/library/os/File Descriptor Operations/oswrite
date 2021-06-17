@@ -1,2 +1,0 @@
-# name: os.write 
-os.write(fd, str)

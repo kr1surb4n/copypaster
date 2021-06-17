@@ -1,2 +1,0 @@
-# name: dis.dis 
-dis.dis(x=None, *, file=None, depth=None)

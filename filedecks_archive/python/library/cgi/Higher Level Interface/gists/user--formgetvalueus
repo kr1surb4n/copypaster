@@ -1,2 +1,0 @@
-# name: user = form.getvalue 
-user = form.getvalue("user").upper()

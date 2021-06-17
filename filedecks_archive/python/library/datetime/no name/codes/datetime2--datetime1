@@ -1,2 +1,0 @@
-# name: datetime2 = datetime 
-datetime2 = datetime1 - timedelta

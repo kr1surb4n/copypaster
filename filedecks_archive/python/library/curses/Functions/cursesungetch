@@ -1,2 +1,0 @@
-# name: curses.ungetch 
-curses.ungetch(ch)

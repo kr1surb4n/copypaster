@@ -1,2 +1,0 @@
-# name: pathlib.PurePath.rel 
-PurePath.relative_to(*other)

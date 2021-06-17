@@ -1,3 +1,0 @@
-# name: def square(number: i 
-def square(number: int | float) -> int | float:
-    return number ** 2

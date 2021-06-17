@@ -1,4 +1,0 @@
-# name: string 
-variable "image_id" {
-  type = string
-}

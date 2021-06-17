@@ -1,2 +1,0 @@
-# name: curses.get_tabsize 
-curses.get_tabsize()

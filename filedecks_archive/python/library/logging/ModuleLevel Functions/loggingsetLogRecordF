@@ -1,2 +1,0 @@
-# name: logging.setLogRecord 
-logging.setLogRecordFactory(factory)

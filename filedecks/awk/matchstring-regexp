@@ -1,2 +1,0 @@
-# name: matchstring regexp 
-match(string, regexp [, array])

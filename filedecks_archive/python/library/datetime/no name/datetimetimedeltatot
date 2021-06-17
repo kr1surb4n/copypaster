@@ -1,2 +1,0 @@
-# name: datetime.timedelta.t 
-timedelta.total_seconds()

@@ -1,2 +1,0 @@
-# name: http.client.HTTPConn 
-class http.client.HTTPConnection(host, port=None, [timeout, ]source_address=None, blocksize=8192)

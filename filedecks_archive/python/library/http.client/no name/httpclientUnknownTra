@@ -1,2 +1,0 @@
-# name: http.client.UnknownT 
-exception http.client.UnknownTransferEncoding

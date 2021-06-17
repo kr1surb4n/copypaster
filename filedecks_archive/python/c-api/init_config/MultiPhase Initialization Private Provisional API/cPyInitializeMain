@@ -1,2 +1,0 @@
-# name: c._Py_InitializeMain 
-PyStatus _Py_InitializeMain(void)

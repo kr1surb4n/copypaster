@@ -1,2 +1,0 @@
-# name: turtle.setup 
-turtle.setup(width=_CFG["width"], height=_CFG["height"], startx=_CFG["leftright"], starty=_CFG["topbottom"])

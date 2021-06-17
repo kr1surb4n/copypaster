@@ -1,2 +1,0 @@
-# name: http.client.Incomple 
-exception http.client.IncompleteRead

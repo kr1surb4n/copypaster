@@ -1,2 +1,0 @@
-# name: pprint.pformat 
-pprint.pformat(object, indent=1, width=80, depth=None, *, compact=False, sort_dicts=True)

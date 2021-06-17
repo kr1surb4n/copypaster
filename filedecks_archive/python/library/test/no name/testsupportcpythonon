@@ -1,2 +1,0 @@
-# name: test.support.cpython 
-@test.support.cpython_only(test)

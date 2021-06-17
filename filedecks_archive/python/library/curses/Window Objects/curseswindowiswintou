@@ -1,2 +1,0 @@
-# name: curses.window.is_win 
-window.is_wintouched()

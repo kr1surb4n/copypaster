@@ -1,2 +1,0 @@
-# name: sched.scheduler.canc 
-scheduler.cancel(event)

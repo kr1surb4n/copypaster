@@ -1,2 +1,0 @@
-# name: logging.error 
-logging.error(msg, *args, **kwargs)

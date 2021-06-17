@@ -1,2 +1,0 @@
-# name: mailbox.Message 
-class mailbox.Message(message=None)

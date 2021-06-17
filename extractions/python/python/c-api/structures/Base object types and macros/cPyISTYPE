@@ -1,2 +1,0 @@
-# name: c.Py_IS_TYPE 
-int Py_IS_TYPE(PyObject *o, PyTypeObject *type)

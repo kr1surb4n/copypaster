@@ -1,2 +1,0 @@
-# name: int tp_traverse(PyOb 
-int tp_traverse(PyObject *self, visitproc visit, void *arg);

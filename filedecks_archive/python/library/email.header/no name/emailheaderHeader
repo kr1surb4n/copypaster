@@ -1,2 +1,0 @@
-# name: email.header.Header 
-class email.header.Header(s=None, charset=None, maxlinelen=None, header_name=None, continuation_ws=' ', errors='strict')

@@ -1,2 +1,0 @@
-# name: ctypes.wstring_at 
-ctypes.wstring_at(address, size=-1)

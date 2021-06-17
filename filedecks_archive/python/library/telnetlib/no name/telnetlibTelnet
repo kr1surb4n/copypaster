@@ -1,2 +1,0 @@
-# name: telnetlib.Telnet 
-class telnetlib.Telnet(host=None, port=0[, timeout])

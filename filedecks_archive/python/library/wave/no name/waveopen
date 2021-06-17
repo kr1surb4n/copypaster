@@ -1,2 +1,0 @@
-# name: wave.open 
-wave.open(file, mode=None)

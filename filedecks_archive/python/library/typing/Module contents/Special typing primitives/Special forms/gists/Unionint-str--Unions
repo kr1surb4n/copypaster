@@ -1,2 +1,0 @@
-# name: Union[int, str] == U 
-Union[int, str] == Union[str, int]

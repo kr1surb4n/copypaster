@@ -1,7 +1,0 @@
-# name: >>> root.tag
-'data'
- 
->>> root.tag
-'data'
->>> root.attrib
-{}

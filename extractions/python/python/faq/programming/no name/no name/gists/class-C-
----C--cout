@@ -1,6 +1,0 @@
-# name: class C {
-    C() {  
-class C {
-    C() { cout << "No arguments\n"; }
-    C(int i) { cout << "Argument is " << i << "\n"; }
-}

@@ -1,2 +1,0 @@
-# name: nntplib.NNTP.ihave 
-NNTP.ihave(message_id, data)

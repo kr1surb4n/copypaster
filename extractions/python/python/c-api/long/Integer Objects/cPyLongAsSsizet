@@ -1,2 +1,0 @@
-# name: c.PyLong_AsSsize_t 
-Py_ssize_t PyLong_AsSsize_t(PyObject *pylong)

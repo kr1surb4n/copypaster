@@ -1,3 +1,0 @@
-# name: glob.glob(os.path.jo 
-glob.glob(os.path.join('mydir', 'subdir', '*.html'))
-os.listdir(os.path.join('mydir', 'subdir'))

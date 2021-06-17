@@ -1,2 +1,0 @@
-# name: curses.window.nodela 
-window.nodelay(flag)

@@ -1,2 +1,0 @@
-# name: datetime.date.strfti 
-date.strftime(format)

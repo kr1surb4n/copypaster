@@ -1,2 +1,0 @@
-# name: importlib.abc.Inspec 
-importlib.abc.InspectLoader.load_module

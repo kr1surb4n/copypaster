@@ -1,2 +1,0 @@
-# name: os.setegid 
-os.setegid(egid)

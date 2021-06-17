@@ -1,2 +1,0 @@
-# name: curses.window.redraw 
-window.redrawwin()

@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_di 
-PyObject* PyTypeObject.tp_dict

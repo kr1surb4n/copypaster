@@ -1,2 +1,0 @@
-# name: concurrent.futures.B 
-exception concurrent.futures.BrokenExecutor

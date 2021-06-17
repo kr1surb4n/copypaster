@@ -1,7 +1,0 @@
-# name: PyMODINIT_FUNC
-PyIni 
-PyMODINIT_FUNC
-PyInit_spam(void)
-{
-    return PyModule_Create(&spammodule);
-}

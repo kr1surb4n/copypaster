@@ -1,2 +1,0 @@
-# name: c.Py_CLEAR 
-void Py_CLEAR(PyObject *o)

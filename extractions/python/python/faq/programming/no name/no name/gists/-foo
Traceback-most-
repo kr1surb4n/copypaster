@@ -1,6 +1,0 @@
-# name: >>> foo()
-Traceback  
->>> foo()
-Traceback (most recent call last):
-  ...
-UnboundLocalError: local variable 'x' referenced before assignment

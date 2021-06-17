@@ -1,2 +1,0 @@
-# name: c.PyMethod_GET_FUNCT 
-PyObject* PyMethod_GET_FUNCTION(PyObject *meth)

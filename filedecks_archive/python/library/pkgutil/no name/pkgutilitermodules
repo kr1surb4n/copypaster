@@ -1,2 +1,0 @@
-# name: pkgutil.iter_modules 
-pkgutil.iter_modules(path=None, prefix='')

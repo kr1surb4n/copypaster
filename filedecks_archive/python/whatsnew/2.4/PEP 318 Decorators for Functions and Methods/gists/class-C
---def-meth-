@@ -1,7 +1,0 @@
-# name: class C:
-   def meth 
-class C:
-   def meth (cls):
-       ...
-
-   meth = classmethod(meth)   # Rebind name to wrapped-up class method

@@ -1,2 +1,0 @@
-# name: c.PyDict_Items 
-PyObject* PyDict_Items(PyObject *p)

@@ -1,2 +1,0 @@
-# name: $ 2to3 -w example.py 
-$ 2to3 -w example.py

@@ -1,2 +1,0 @@
-# name: object.__init_subcla 
-classmethod object.__init_subclass__(cls)

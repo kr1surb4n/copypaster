@@ -1,2 +1,0 @@
-# name: threading.settrace 
-threading.settrace(func)

@@ -1,2 +1,0 @@
-# name: c.Py_Main 
-int Py_Main(int argc, wchar_t **argv)

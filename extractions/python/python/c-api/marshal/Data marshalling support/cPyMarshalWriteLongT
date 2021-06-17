@@ -1,2 +1,0 @@
-# name: c.PyMarshal_WriteLon 
-void PyMarshal_WriteLongToFile(long value, FILE *file, int version)

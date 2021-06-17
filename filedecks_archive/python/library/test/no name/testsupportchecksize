@@ -1,2 +1,0 @@
-# name: test.support.checksi 
-test.support.checksizeof(test, o, size)

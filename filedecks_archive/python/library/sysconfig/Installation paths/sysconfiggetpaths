@@ -1,2 +1,0 @@
-# name: sysconfig.get_paths 
-sysconfig.get_paths([scheme[, vars[, expand]]])

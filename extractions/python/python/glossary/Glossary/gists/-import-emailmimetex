@@ -1,4 +1,0 @@
-# name: >>> import email.mim 
->>> import email.mime.text
->>> email.mime.text.__name__
-'email.mime.text'

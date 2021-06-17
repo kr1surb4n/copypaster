@@ -1,2 +1,0 @@
-# name: msg['Date'] = dateti 
-msg['Date'] = datetime(2011, 7, 15, 21)

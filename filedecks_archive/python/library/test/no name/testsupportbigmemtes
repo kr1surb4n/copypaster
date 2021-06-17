@@ -1,2 +1,0 @@
-# name: test.support.bigmemt 
-@test.support.bigmemtest(size, memuse, dry_run=True)

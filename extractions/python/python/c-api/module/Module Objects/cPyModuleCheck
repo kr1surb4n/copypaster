@@ -1,2 +1,0 @@
-# name: c.PyModule_Check 
-int PyModule_Check(PyObject *p)

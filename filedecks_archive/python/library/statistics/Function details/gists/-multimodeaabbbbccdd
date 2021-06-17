@@ -1,5 +1,0 @@
-# name: >>> multimode('aabbb 
->>> multimode('aabbbbccddddeeffffgg')
-['b', 'd', 'f']
->>> multimode('')
-[]

@@ -1,2 +1,0 @@
-# name: c.PyModule_AddFuncti 
-int PyModule_AddFunctions(PyObject *module, PyMethodDef *functions)

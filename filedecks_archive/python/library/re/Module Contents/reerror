@@ -1,2 +1,0 @@
-# name: re.error 
-exception re.error(msg, pattern=None, pos=None)

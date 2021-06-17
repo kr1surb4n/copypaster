@@ -1,2 +1,0 @@
-# name: c.PyModule_AddIntMac 
-int PyModule_AddIntMacro(PyObject *module, macro)

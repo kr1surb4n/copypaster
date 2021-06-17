@@ -1,4 +1,0 @@
-# name: result = bytearray() 
-result = bytearray()
-for b in my_bytes_objects:
-    result += b

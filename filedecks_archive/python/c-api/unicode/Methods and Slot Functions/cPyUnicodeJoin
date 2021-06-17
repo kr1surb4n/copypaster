@@ -1,2 +1,0 @@
-# name: c.PyUnicode_Join 
-PyObject* PyUnicode_Join(PyObject *separator, PyObject *seq)

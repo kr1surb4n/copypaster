@@ -1,2 +1,0 @@
-# name: nntplib.NNTP.body 
-NNTP.body(message_spec=None, *, file=None)

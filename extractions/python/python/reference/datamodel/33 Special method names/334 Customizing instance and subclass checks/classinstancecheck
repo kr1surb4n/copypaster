@@ -1,2 +1,0 @@
-# name: class.__instancechec 
-class.__instancecheck__(self, instance)

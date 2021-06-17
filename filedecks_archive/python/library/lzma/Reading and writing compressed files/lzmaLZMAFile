@@ -1,2 +1,0 @@
-# name: lzma.LZMAFile 
-class lzma.LZMAFile(filename=None, mode="r", *, format=None, check=-1, preset=None, filters=None)

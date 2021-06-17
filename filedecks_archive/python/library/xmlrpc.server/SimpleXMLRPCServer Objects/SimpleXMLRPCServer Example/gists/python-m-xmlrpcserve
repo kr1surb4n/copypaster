@@ -1,2 +1,0 @@
-# name: python -m xmlrpc.ser 
-python -m xmlrpc.server

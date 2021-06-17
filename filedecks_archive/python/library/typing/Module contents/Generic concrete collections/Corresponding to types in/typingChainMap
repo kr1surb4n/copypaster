@@ -1,2 +1,0 @@
-# name: typing.ChainMap 
-class typing.ChainMap(collections.ChainMap, MutableMapping[KT, VT])

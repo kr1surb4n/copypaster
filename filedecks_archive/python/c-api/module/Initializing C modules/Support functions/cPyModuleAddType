@@ -1,2 +1,0 @@
-# name: c.PyModule_AddType 
-int PyModule_AddType(PyObject *module, PyTypeObject *type)

@@ -1,2 +1,0 @@
-# name: c.PyObject_GC_IsTrac 
-int PyObject_GC_IsTracked(PyObject *op)

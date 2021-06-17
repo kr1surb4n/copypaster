@@ -1,2 +1,0 @@
-# name: turtle.Vec2D 
-class turtle.Vec2D(x, y)

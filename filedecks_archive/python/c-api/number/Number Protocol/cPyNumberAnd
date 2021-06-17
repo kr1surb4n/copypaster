@@ -1,2 +1,0 @@
-# name: c.PyNumber_And 
-PyObject* PyNumber_And(PyObject *o1, PyObject *o2)

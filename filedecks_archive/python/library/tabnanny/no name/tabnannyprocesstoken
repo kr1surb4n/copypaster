@@ -1,2 +1,0 @@
-# name: tabnanny.process_tok 
-tabnanny.process_tokens(tokens)

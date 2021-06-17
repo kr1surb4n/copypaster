@@ -1,2 +1,0 @@
-# name: con.create_collation 
-con.create_collation("reverse", None)

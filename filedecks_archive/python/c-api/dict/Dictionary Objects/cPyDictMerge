@@ -1,2 +1,0 @@
-# name: c.PyDict_Merge 
-int PyDict_Merge(PyObject *a, PyObject *b, int override)

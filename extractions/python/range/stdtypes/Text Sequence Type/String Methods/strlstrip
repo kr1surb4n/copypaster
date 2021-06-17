@@ -1,2 +1,0 @@
-# name: str.lstrip 
-str.lstrip([chars])

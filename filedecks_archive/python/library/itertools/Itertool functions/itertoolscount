@@ -1,2 +1,0 @@
-# name: itertools.count 
-itertools.count(start=0, step=1)

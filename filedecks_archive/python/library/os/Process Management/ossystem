@@ -1,2 +1,0 @@
-# name: os.system 
-os.system(command)

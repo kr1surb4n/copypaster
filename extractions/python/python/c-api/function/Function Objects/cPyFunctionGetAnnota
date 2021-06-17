@@ -1,2 +1,0 @@
-# name: c.PyFunction_GetAnno 
-PyObject *PyFunction_GetAnnotations(PyObject *op)

@@ -1,2 +1,0 @@
-# name: pipes.Template.copy 
-Template.copy(infile, outfile)

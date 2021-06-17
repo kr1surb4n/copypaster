@@ -1,2 +1,0 @@
-# name: weakref.ref 
-class weakref.ref(object[, callback])

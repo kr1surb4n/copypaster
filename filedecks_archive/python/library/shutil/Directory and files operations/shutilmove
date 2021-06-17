@@ -1,2 +1,0 @@
-# name: shutil.move 
-shutil.move(src, dst, copy_function=copy2)

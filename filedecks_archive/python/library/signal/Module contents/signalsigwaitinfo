@@ -1,2 +1,0 @@
-# name: signal.sigwaitinfo 
-signal.sigwaitinfo(sigset)

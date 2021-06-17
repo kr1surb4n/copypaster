@@ -1,2 +1,0 @@
-# name: c.PyNumber_InPlaceAd 
-PyObject* PyNumber_InPlaceAdd(PyObject *o1, PyObject *o2)

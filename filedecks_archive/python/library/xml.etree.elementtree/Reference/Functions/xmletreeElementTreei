@@ -1,2 +1,0 @@
-# name: xml.etree.ElementTre 
-xml.etree.ElementTree.iterparse(source, events=None, parser=None)

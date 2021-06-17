@@ -1,2 +1,0 @@
-# name: dis.get_instructions 
-dis.get_instructions(x, *, first_line=None)

@@ -1,5 +1,0 @@
-# name:     loop 
-         
-    loop {
-        println!("again!");
-    }

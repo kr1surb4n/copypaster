@@ -1,2 +1,0 @@
-# name: sts = subprocess.cal 
-sts = subprocess.call('dpkg -i /tmp/new-package.deb', shell=True)

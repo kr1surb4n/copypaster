@@ -1,2 +1,0 @@
-# name: c.PyFile_GetLine 
-PyObject* PyFile_GetLine(PyObject *p, int n)

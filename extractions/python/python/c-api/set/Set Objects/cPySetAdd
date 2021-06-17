@@ -1,2 +1,0 @@
-# name: c.PySet_Add 
-int PySet_Add(PyObject *set, PyObject *key)

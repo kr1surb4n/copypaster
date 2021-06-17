@@ -1,2 +1,0 @@
-# name: codecs.StreamRecoder 
-class codecs.StreamRecoder(stream, encode, decode, Reader, Writer, errors='strict')

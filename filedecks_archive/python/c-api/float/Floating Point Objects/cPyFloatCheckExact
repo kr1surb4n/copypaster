@@ -1,2 +1,0 @@
-# name: c.PyFloat_CheckExact 
-int PyFloat_CheckExact(PyObject *p)

@@ -1,2 +1,0 @@
-# name: socket.socket(socket 
-socket.socket(socket.AF_CAN, socket.SOCK_DGRAM, socket.CAN_BCM)

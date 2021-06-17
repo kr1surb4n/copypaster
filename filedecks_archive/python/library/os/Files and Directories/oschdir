@@ -1,2 +1,0 @@
-# name: os.chdir 
-os.chdir(path)

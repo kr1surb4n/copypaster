@@ -1,2 +1,0 @@
-# name: os.path.expanduser 
-os.path.expanduser(path)

@@ -1,2 +1,0 @@
-# name: c.PyThread_tss_set 
-int PyThread_tss_set(Py_tss_t *key, void *value)

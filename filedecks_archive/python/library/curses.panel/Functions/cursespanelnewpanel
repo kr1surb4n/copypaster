@@ -1,2 +1,0 @@
-# name: curses.panel.new_pan 
-curses.panel.new_panel(win)

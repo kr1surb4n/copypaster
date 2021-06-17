@@ -1,2 +1,0 @@
-# name: sys.getrefcount 
-sys.getrefcount(object)

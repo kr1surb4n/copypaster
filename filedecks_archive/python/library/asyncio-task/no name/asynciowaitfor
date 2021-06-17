@@ -1,2 +1,0 @@
-# name: asyncio.wait_for 
-coroutine asyncio.wait_for(aw, timeout, *, loop=None)

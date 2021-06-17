@@ -1,2 +1,0 @@
-# name: email.errors.Multipa 
-exception email.errors.MultipartConversionError

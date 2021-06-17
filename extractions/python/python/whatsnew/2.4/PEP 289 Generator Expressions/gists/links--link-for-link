@@ -1,4 +1,0 @@
-# name: links = (link for li 
-links = (link for link in get_all_links() if not link.followed)
-for link in links:
-    ...

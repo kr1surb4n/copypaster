@@ -1,2 +1,0 @@
-# name: traceback.format_exc 
-traceback.format_exception(exc, /, [value, tb, ]limit=None, chain=True)

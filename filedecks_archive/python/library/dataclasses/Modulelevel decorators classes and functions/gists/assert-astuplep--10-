@@ -1,3 +1,0 @@
-# name: assert astuple(p) == 
-assert astuple(p) == (10, 20)
-assert astuple(c) == ([(0, 0), (10, 4)],)

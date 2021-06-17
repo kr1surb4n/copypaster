@@ -1,2 +1,0 @@
-# name: Stringprototypemat 
-String.prototype.matchAll(regexp)

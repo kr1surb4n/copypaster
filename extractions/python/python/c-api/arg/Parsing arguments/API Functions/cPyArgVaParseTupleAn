@@ -1,2 +1,0 @@
-# name: c.PyArg_VaParseTuple 
-int PyArg_VaParseTupleAndKeywords(PyObject *args, PyObject *kw, const char *format, char *keywords[], va_list vargs)

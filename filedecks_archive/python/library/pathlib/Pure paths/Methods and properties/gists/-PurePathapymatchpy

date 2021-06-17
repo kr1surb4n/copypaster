@@ -1,5 +1,0 @@
-# name: >>> PurePath('/a.py' 
->>> PurePath('/a.py').match('/*.py')
-True
->>> PurePath('a/b.py').match('/*.py')
-False

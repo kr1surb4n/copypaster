@@ -1,2 +1,0 @@
-# name: c.PyNumber_InPlaceXo 
-PyObject* PyNumber_InPlaceXor(PyObject *o1, PyObject *o2)

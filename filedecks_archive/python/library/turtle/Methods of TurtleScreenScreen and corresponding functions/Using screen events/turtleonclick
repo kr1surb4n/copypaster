@@ -1,2 +1,0 @@
-# name: turtle.onclick 
-turtle.onclick(fun, btn=1, add=None)

@@ -1,2 +1,0 @@
-# name: c.PyFunction_GetCode 
-PyObject* PyFunction_GetCode(PyObject *op)

@@ -1,2 +1,0 @@
-# name: calendar.weekday 
-calendar.weekday(year, month, day)

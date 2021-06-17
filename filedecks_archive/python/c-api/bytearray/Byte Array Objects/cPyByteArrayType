@@ -1,2 +1,0 @@
-# name: c.PyByteArray_Type 
-PyTypeObject PyByteArray_Type

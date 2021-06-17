@@ -1,2 +1,0 @@
-# name: ast.alias 
-class ast.alias(name, asname)

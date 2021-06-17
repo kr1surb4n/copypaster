@@ -1,2 +1,0 @@
-# name: pkgutil.get_importer 
-pkgutil.get_importer(path_item)

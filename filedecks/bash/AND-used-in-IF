@@ -1,2 +1,0 @@
-# name: AND used in IF 
-if [ "$Name" == "Steve" ] && [ "$Age" -eq 15 ]

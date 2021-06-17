@@ -1,2 +1,0 @@
-# name: $ python -m zipfile  
-$ python -m zipfile -c monty.zip life-of-brian_1979/

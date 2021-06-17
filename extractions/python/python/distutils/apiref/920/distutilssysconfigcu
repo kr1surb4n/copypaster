@@ -1,2 +1,0 @@
-# name: distutils.sysconfig. 
-distutils.sysconfig.customize_compiler(compiler)

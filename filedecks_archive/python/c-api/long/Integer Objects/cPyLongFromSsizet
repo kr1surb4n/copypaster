@@ -1,2 +1,0 @@
-# name: c.PyLong_FromSsize_t 
-PyObject* PyLong_FromSsize_t(Py_ssize_t v)

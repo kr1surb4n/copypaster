@@ -1,2 +1,0 @@
-# name: collections.abc.Coro 
-class collections.abc.Coroutine

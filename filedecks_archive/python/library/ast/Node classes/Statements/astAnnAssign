@@ -1,2 +1,0 @@
-# name: ast.AnnAssign 
-class ast.AnnAssign(target, annotation, value, simple)

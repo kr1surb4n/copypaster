@@ -1,2 +1,0 @@
-# name: winreg.ExpandEnviron 
-winreg.ExpandEnvironmentStrings(str)

@@ -1,2 +1,0 @@
-# name: c.PySequence_Index 
-Py_ssize_t PySequence_Index(PyObject *o, PyObject *value)

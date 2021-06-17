@@ -1,2 +1,0 @@
-# name: locale.getpreferrede 
-locale.getpreferredencoding(do_setlocale=True)

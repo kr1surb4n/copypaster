@@ -1,2 +1,0 @@
-# name: c.PyCodec_Incrementa 
-PyObject* PyCodec_IncrementalDecoder(const char *encoding, const char *errors)

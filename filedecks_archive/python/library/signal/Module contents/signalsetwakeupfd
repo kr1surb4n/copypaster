@@ -1,2 +1,0 @@
-# name: signal.set_wakeup_fd 
-signal.set_wakeup_fd(fd, *, warn_on_full_buffer=True)

@@ -1,2 +1,0 @@
-# name: Stringprototypeinc 
-String.prototype.includes(searchString [, position])

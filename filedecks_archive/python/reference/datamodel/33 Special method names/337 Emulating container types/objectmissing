@@ -1,2 +1,0 @@
-# name: object.__missing__ 
-object.__missing__(self, key)

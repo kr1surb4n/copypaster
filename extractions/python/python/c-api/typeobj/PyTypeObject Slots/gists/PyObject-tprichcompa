@@ -1,2 +1,0 @@
-# name: PyObject *tp_richcom 
-PyObject *tp_richcompare(PyObject *self, PyObject *other, int op);

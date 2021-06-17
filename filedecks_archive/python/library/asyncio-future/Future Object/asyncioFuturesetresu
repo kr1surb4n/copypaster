@@ -1,2 +1,0 @@
-# name: asyncio.Future.set_r 
-asyncio.Future.set_result

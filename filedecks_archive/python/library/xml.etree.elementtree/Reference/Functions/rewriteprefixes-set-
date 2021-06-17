@@ -1,2 +1,0 @@
-# name: rewrite_prefixes: se 
-rewrite_prefixes: set to true to replace namespace prefixes by “n{number}”

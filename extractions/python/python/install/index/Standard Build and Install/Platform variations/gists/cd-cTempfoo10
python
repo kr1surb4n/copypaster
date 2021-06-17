@@ -1,4 +1,0 @@
-# name: cd c:\Temp\foo-1.0
-p 
-cd c:\Temp\foo-1.0
-python setup.py install

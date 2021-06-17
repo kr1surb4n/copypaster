@@ -1,3 +1,0 @@
-# name: FeatureName = _Featu 
-FeatureName = _Feature(OptionalRelease, MandatoryRelease,
-                       CompilerFlag)

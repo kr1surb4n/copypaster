@@ -1,3 +1,0 @@
-# name: if (PyType_Ready(&Cu 
-if (PyType_Ready(&CustomType) < 0)
-    return;

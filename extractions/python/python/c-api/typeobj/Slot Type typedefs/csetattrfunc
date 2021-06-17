@@ -1,2 +1,0 @@
-# name: c.setattrfunc 
-int (*setattrfunc)(PyObject *self, char *attr, PyObject *value)

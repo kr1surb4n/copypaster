@@ -1,2 +1,0 @@
-# name: import  foo  bar   
-import { foo , bar } from "module-name/path/to/specific/un-exported/file";

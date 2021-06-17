@@ -1,2 +1,0 @@
-# name: os.setpriority 
-os.setpriority(which, who, priority)

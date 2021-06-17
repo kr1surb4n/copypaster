@@ -1,2 +1,0 @@
-# name: typedef int (*setter 
-typedef int (*setter)(PyObject *, PyObject *, void *);

@@ -1,2 +1,0 @@
-# name: email.utils.mktime_t 
-email.utils.mktime_tz(tuple)

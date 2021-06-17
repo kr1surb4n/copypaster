@@ -1,2 +1,0 @@
-# name: os.preadv 
-os.preadv(fd, buffers, offset, flags=0)

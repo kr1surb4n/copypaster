@@ -1,2 +1,0 @@
-# name: xdrlib.ConversionErr 
-exception xdrlib.ConversionError

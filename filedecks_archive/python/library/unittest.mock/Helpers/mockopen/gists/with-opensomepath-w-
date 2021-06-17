@@ -1,3 +1,0 @@
-# name: with open('/some/pat 
-with open('/some/path', 'w') as f:
-    f.write('something')

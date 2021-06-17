@@ -1,2 +1,0 @@
-# name: time.clock_settime 
-time.clock_settime(clk_id, time: float)

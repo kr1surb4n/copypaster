@@ -1,2 +1,0 @@
-# name: bz2.compress 
-bz2.compress(data, compresslevel=9)

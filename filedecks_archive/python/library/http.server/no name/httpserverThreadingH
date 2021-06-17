@@ -1,2 +1,0 @@
-# name: http.server.Threadin 
-class http.server.ThreadingHTTPServer(server_address, RequestHandlerClass)

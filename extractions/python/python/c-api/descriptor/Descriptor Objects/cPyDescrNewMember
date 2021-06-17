@@ -1,2 +1,0 @@
-# name: c.PyDescr_NewMember 
-PyObject* PyDescr_NewMember(PyTypeObject *type, struct PyMemberDef *meth)

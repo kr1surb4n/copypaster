@@ -1,2 +1,0 @@
-# name: codecs.iterdecode 
-codecs.iterdecode(iterator, encoding, errors='strict', **kwargs)

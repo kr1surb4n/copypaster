@@ -1,2 +1,0 @@
-# name: xml.sax.SAXNotSuppor 
-exception xml.sax.SAXNotSupportedException(msg, exception=None)

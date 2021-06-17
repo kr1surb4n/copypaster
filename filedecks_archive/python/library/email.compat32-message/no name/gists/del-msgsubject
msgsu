@@ -1,4 +1,0 @@
-# name: del msg['subject']
-m 
-del msg['subject']
-msg['subject'] = 'Python roolz!'

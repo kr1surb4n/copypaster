@@ -1,2 +1,0 @@
-# name: c.PyBytes_FromObject 
-PyObject* PyBytes_FromObject(PyObject *o)

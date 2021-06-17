@@ -1,2 +1,0 @@
-# name: os.putenv 
-os.putenv(key, value)

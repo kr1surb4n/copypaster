@@ -1,2 +1,0 @@
-# name: pty.spawn 
-pty.spawn(argv[, master_read[, stdin_read]])

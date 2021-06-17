@@ -1,2 +1,0 @@
-# name: os.isatty 
-os.isatty(fd)

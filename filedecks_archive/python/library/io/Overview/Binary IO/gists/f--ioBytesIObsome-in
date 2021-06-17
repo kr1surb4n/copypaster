@@ -1,2 +1,0 @@
-# name: f = io.BytesIO(b"som 
-f = io.BytesIO(b"some initial binary data: \x00\x01")

@@ -1,2 +1,0 @@
-# name: c.PyWeakref_GET_OBJE 
-PyObject* PyWeakref_GET_OBJECT(PyObject *ref)

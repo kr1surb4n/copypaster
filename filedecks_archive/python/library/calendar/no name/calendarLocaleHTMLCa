@@ -1,2 +1,0 @@
-# name: calendar.LocaleHTMLC 
-class calendar.LocaleHTMLCalendar(firstweekday=0, locale=None)

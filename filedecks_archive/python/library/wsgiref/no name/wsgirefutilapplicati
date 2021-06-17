@@ -1,2 +1,0 @@
-# name: wsgiref.util.applica 
-wsgiref.util.application_uri(environ)

@@ -1,2 +1,0 @@
-# name: tracemalloc.clear_tr 
-tracemalloc.clear_traces()

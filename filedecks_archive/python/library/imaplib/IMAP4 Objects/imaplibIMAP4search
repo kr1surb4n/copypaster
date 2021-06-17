@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.search 
-IMAP4.search(charset, criterion[, ...])

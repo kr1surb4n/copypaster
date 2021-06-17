@@ -1,2 +1,0 @@
-# name: os.getenvb 
-os.getenvb(key, default=None)

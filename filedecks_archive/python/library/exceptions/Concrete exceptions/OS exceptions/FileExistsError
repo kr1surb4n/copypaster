@@ -1,2 +1,0 @@
-# name: FileExistsError 
-exception FileExistsError

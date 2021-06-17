@@ -1,2 +1,0 @@
-# name: distutils.util.rfc82 
-distutils.util.rfc822_escape(header)

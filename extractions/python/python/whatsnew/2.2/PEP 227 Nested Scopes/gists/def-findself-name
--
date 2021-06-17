@@ -1,6 +1,0 @@
-# name: def find(self, name) 
-def find(self, name):
-    "Return list of any entries equal to 'name'"
-    L = filter(lambda x, name=name: x == name,
-               self.list_attribute)
-    return L

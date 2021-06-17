@@ -1,2 +1,0 @@
-# name: linecache.getline 
-linecache.getline(filename, lineno, module_globals=None)

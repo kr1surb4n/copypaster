@@ -1,3 +1,0 @@
-# name: si = subprocess.STAR 
-si = subprocess.STARTUPINFO()
-si.dwFlags = subprocess.STARTF_USESTDHANDLES | subprocess.STARTF_USESHOWWINDOW

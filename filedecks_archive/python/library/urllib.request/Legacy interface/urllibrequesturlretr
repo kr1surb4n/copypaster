@@ -1,2 +1,0 @@
-# name: urllib.request.urlre 
-urllib.request.urlretrieve(url, filename=None, reporthook=None, data=None)

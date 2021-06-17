@@ -1,2 +1,0 @@
-# name: let mut f  Fileope 
-let mut f = File::open("foo.txt")?;

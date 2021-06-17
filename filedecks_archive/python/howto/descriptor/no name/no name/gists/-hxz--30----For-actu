@@ -1,2 +1,0 @@
-# name: >>> h.xz = 30   # Fo 
->>> h.xz = 30   # For actual __slots__ this would raise an AttributeError

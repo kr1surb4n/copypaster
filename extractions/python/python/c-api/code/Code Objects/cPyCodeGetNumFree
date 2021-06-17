@@ -1,2 +1,0 @@
-# name: c.PyCode_GetNumFree 
-int PyCode_GetNumFree(PyCodeObject *co)

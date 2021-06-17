@@ -1,2 +1,0 @@
-# name: dbm.dumb.open 
-dbm.dumb.open(filename[, flag[, mode]])

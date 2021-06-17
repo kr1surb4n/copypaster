@@ -1,2 +1,0 @@
-# name: c.lenfunc 
-Py_ssize_t (*lenfunc)(PyObject *)

@@ -1,2 +1,0 @@
-# name: c.PyObject_IsInstanc 
-int PyObject_IsInstance(PyObject *inst, PyObject *cls)

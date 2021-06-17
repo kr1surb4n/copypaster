@@ -1,2 +1,0 @@
-# name: ftplib.FTP.dir 
-FTP.dir(argument[, ...])

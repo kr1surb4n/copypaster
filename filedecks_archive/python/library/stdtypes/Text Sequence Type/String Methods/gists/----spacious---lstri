@@ -1,5 +1,0 @@
-# name: >>> '   spacious   ' 
->>> '   spacious   '.lstrip()
-'spacious   '
->>> 'www.example.com'.lstrip('cmowz.')
-'example.com'

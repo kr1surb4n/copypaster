@@ -1,2 +1,0 @@
-# name: func(option, opt_str 
-func(option, opt_str, value, parser, *args, **kwargs)

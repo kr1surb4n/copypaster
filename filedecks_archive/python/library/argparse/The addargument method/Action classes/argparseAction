@@ -1,2 +1,0 @@
-# name: argparse.Action 
-class argparse.Action(option_strings, dest, nargs=None, const=None, default=None, type=None, choices=None, required=False, help=None, metavar=None)

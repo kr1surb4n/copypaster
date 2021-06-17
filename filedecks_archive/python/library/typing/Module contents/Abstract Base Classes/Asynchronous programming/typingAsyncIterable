@@ -1,2 +1,0 @@
-# name: typing.AsyncIterable 
-class typing.AsyncIterable(Generic[T_co])

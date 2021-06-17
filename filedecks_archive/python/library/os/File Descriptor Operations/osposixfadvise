@@ -1,2 +1,0 @@
-# name: os.posix_fadvise 
-os.posix_fadvise(fd, offset, len, advice)

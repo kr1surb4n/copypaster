@@ -1,2 +1,0 @@
-# name: os.wait3 
-os.wait3(options)

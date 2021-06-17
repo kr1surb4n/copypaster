@@ -1,2 +1,0 @@
-# name: os.eventfd_write 
-os.eventfd_write(fd, value)

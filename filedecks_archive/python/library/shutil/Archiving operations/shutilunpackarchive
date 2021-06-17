@@ -1,2 +1,0 @@
-# name: shutil.unpack_archiv 
-shutil.unpack_archive(filename[, extract_dir[, format]])

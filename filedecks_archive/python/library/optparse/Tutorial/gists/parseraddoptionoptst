@@ -1,3 +1,0 @@
-# name: parser.add_option(op 
-parser.add_option(opt_str, ...,
-                  attr=value, ...)

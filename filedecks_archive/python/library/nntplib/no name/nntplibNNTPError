@@ -1,2 +1,0 @@
-# name: nntplib.NNTPError 
-exception nntplib.NNTPError

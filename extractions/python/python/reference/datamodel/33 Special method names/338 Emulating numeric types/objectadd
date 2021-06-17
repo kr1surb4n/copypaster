@@ -1,2 +1,0 @@
-# name: object.__add__ 
-object.__add__(self, other)

@@ -1,2 +1,0 @@
-# name: ftplib.FTP.retrbinar 
-FTP.retrbinary(cmd, callback, blocksize=8192, rest=None)

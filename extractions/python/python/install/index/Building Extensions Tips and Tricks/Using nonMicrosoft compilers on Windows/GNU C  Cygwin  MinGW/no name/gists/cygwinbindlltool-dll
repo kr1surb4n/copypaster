@@ -1,2 +1,0 @@
-# name: /cygwin/bin/dlltool  
-/cygwin/bin/dlltool --dllname python25.dll --def python25.def --output-lib libpython25.a

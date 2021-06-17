@@ -1,2 +1,0 @@
-# name: let matchesarray   
-let matches_array = str.match(regexp);

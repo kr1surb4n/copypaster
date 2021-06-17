@@ -1,2 +1,0 @@
-# name: xml.dom.minidom.Node 
-Node.writexml(writer, indent="", addindent="", newl="", encoding=None, standalone=None)

@@ -1,2 +1,0 @@
-# name: $ python -m tarfile  
-$ python -m tarfile -c monty.tar life-of-brian_1979/

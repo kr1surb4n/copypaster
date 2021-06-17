@@ -1,2 +1,0 @@
-# name: c.PyDateTime_CheckEx 
-int PyDateTime_CheckExact(PyObject *ob)

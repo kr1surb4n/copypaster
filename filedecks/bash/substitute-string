@@ -1,2 +1,0 @@
-# name: substitute string 
-${Variable/Some/A}

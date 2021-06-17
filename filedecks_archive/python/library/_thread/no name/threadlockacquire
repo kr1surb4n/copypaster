@@ -1,2 +1,0 @@
-# name: _thread.lock.acquire 
-lock.acquire(waitflag=1, timeout=-1)

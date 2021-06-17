@@ -1,2 +1,0 @@
-# name: awk f programfile  
-awk -f program-file input-file1

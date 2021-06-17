@@ -1,2 +1,0 @@
-# name: asyncio.BaseTranspor 
-BaseTransport.get_protocol()

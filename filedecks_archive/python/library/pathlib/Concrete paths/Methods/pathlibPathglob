@@ -1,2 +1,0 @@
-# name: pathlib.Path.glob 
-Path.glob(pattern)

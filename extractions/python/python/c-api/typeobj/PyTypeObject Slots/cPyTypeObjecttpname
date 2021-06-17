@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_na 
-const char* PyTypeObject.tp_name

@@ -1,2 +1,0 @@
-# name: urllib.request.Proxy 
-class urllib.request.ProxyDigestAuthHandler(password_mgr=None)

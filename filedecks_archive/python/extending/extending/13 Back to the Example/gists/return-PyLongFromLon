@@ -1,2 +1,0 @@
-# name: return PyLong_FromLo 
-return PyLong_FromLong(sts);

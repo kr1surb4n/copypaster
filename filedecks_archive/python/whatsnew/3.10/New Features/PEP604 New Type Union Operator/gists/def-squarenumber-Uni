@@ -1,3 +1,0 @@
-# name: def square(number: U 
-def square(number: Union[int, float]) -> Union[int, float]:
-    return number ** 2

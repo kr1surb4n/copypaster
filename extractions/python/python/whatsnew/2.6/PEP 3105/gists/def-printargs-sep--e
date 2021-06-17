@@ -1,2 +1,0 @@
-# name: def print(*args, sep 
-def print(*args, sep=' ', end='\n', file=None)

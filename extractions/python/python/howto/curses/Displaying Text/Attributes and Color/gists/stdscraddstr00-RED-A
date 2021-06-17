@@ -1,2 +1,0 @@
-# name: stdscr.addstr(0,0, " 
-stdscr.addstr(0,0, "RED ALERT!", curses.color_pair(1))

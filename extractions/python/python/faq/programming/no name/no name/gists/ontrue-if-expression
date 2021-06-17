@@ -1,5 +1,0 @@
-# name: [on_true] if [expres 
-[on_true] if [expression] else [on_false]
-
-x, y = 50, 25
-small = x if x < y else y

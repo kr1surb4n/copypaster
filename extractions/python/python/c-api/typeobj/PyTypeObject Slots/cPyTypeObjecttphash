@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_ha 
-hashfunc PyTypeObject.tp_hash

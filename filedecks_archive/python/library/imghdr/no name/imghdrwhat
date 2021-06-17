@@ -1,2 +1,0 @@
-# name: imghdr.what 
-imghdr.what(file, h=None)

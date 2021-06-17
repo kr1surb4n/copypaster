@@ -1,2 +1,0 @@
-# name: c.PyLong_AsVoidPtr 
-void* PyLong_AsVoidPtr(PyObject *pylong)

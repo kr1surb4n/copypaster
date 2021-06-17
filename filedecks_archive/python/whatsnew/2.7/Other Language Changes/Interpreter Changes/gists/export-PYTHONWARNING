@@ -1,2 +1,0 @@
-# name: export PYTHONWARNING 
-export PYTHONWARNINGS=all,error:::Cookie:0

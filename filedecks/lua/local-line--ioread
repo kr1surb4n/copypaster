@@ -1,2 +1,0 @@
-# name: local line  ioread 
-local line = io.read()

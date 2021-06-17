@@ -1,2 +1,0 @@
-# name: typedef void (*PyCap 
-typedef void (*PyCapsule_Destructor)(PyObject *);

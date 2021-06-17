@@ -1,2 +1,0 @@
-# name: aifc.open 
-aifc.open(file, mode=None)

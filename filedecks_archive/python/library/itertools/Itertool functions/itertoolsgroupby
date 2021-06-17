@@ -1,2 +1,0 @@
-# name: itertools.groupby 
-itertools.groupby(iterable, key=None)

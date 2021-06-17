@@ -1,2 +1,0 @@
-# name: shelve.Shelf 
-class shelve.Shelf(dict, protocol=None, writeback=False, keyencoding='utf-8')

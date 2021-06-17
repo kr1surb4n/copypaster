@@ -1,2 +1,0 @@
-# name: ast.dump 
-ast.dump(node, annotate_fields=True, include_attributes=False, *, indent=None)

@@ -1,2 +1,0 @@
-# name: cmd.Cmd.completedefa 
-Cmd.completedefault(text, line, begidx, endidx)

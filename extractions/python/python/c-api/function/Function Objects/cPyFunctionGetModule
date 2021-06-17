@@ -1,2 +1,0 @@
-# name: c.PyFunction_GetModu 
-PyObject* PyFunction_GetModule(PyObject *op)

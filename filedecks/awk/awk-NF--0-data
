@@ -1,3 +1,0 @@
-# name: awk NF  0 data
- 
-awk 'NF > 0' data

@@ -1,2 +1,0 @@
-# name: curses.window.move 
-window.move(new_y, new_x)

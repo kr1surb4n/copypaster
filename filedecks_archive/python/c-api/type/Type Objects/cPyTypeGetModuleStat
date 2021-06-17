@@ -1,2 +1,0 @@
-# name: c.PyType_GetModuleSt 
-void* PyType_GetModuleState(PyTypeObject *type)

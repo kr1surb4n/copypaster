@@ -1,2 +1,0 @@
-# name: str.expandtabs 
-str.expandtabs(tabsize=8)

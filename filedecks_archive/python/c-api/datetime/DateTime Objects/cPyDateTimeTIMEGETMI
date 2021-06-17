@@ -1,2 +1,0 @@
-# name: c.PyDateTime_TIME_GE 
-int PyDateTime_TIME_GET_MICROSECOND(PyDateTime_Time *o)

@@ -1,2 +1,0 @@
-# name: curses.window.delch 
-window.delch([y, x])

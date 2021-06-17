@@ -1,2 +1,0 @@
-# name: error output 
-python hello.py 2> "error.err"

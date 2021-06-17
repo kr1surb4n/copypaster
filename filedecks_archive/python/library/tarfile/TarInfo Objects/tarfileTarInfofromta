@@ -1,2 +1,0 @@
-# name: tarfile.TarInfo.from 
-classmethod TarInfo.fromtarfile(tarfile)

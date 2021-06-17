@@ -1,2 +1,0 @@
-# name: wsgiref.util.FileWra 
-class wsgiref.util.FileWrapper(filelike, blksize=8192)

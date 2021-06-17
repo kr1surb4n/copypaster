@@ -1,2 +1,0 @@
-# name: c.PyFunction_New 
-PyObject* PyFunction_New(PyObject *code, PyObject *globals)

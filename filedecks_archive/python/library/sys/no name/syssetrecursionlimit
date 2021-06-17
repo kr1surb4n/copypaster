@@ -1,2 +1,0 @@
-# name: sys.setrecursionlimi 
-sys.setrecursionlimit(limit)

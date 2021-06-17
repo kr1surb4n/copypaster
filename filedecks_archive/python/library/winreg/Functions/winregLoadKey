@@ -1,2 +1,0 @@
-# name: winreg.LoadKey 
-winreg.LoadKey(key, sub_key, file_name)

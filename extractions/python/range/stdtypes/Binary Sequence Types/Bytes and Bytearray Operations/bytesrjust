@@ -1,2 +1,0 @@
-# name: bytes.rjust 
-bytes.rjust(width[, fillbyte])

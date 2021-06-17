@@ -1,2 +1,0 @@
-# name: optparse.OptionParse 
-OptionParser.set_defaults(dest=value, ...)

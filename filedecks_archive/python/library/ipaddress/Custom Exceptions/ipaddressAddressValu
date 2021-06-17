@@ -1,2 +1,0 @@
-# name: ipaddress.AddressVal 
-exception ipaddress.AddressValueError(ValueError)

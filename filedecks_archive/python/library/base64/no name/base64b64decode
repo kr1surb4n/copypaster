@@ -1,2 +1,0 @@
-# name: base64.b64decode 
-base64.b64decode(s, altchars=None, validate=False)

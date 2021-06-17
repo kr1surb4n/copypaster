@@ -1,2 +1,0 @@
-# name: socket.CMSG_SPACE 
-socket.CMSG_SPACE(length)

@@ -1,2 +1,0 @@
-# name: ftplib.FTP.rename 
-FTP.rename(fromname, toname)

@@ -1,2 +1,0 @@
-# name: c.PyTuple_New 
-PyObject* PyTuple_New(Py_ssize_t len)

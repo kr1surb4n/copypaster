@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.load_ 
-SSLContext.load_dh_params(dhfile)

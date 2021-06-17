@@ -1,2 +1,0 @@
-# name: lzma.decompress 
-lzma.decompress(data, format=FORMAT_AUTO, memlimit=None, filters=None)

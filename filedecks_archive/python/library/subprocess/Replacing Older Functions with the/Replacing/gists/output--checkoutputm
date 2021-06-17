@@ -1,2 +1,0 @@
-# name: output = check_outpu 
-output = check_output(["mycmd", "myarg"])

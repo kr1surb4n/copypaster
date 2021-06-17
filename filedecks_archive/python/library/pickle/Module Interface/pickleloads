@@ -1,2 +1,0 @@
-# name: pickle.loads 
-pickle.loads(data, /, *, fix_imports=True, encoding="ASCII", errors="strict", buffers=None)

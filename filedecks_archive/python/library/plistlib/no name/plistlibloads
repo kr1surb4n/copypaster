@@ -1,2 +1,0 @@
-# name: plistlib.loads 
-plistlib.loads(data, *, fmt=None, dict_type=dict)

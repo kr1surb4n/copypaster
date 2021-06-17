@@ -1,2 +1,0 @@
-# name: signal.alarm 
-signal.alarm(time)

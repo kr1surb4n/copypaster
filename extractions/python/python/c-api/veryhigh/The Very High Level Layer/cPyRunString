@@ -1,2 +1,0 @@
-# name: c.PyRun_String 
-PyObject* PyRun_String(const char *str, int start, PyObject *globals, PyObject *locals)

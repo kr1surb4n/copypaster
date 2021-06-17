@@ -1,2 +1,0 @@
-# name: threading.setprofile 
-threading.setprofile(func)

@@ -1,2 +1,0 @@
-# name: asyncio.WriteTranspo 
-WriteTransport.write_eof()

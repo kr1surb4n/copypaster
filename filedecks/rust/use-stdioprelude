@@ -1,2 +1,0 @@
-# name: use stdioprelude 
-use std::io::prelude::*;

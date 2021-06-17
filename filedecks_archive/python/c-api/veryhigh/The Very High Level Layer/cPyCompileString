@@ -1,2 +1,0 @@
-# name: c.Py_CompileString 
-PyObject* Py_CompileString(const char *str, const char *filename, int start)

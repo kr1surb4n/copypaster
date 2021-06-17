@@ -1,2 +1,0 @@
-# name: codecs.ignore_errors 
-codecs.ignore_errors(exception)

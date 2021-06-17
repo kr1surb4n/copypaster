@@ -1,2 +1,0 @@
-# name: distutils.archive_ut 
-distutils.archive_util.make_zipfile(base_name, base_dir[, verbose=0, dry_run=0])

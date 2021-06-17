@@ -1,2 +1,0 @@
-# name: os.chown 
-os.chown(path, uid, gid, *, dir_fd=None, follow_symlinks=True)

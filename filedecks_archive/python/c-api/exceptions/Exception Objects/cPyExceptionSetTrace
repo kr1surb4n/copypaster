@@ -1,2 +1,0 @@
-# name: c.PyException_SetTra 
-int PyException_SetTraceback(PyObject *ex, PyObject *tb)

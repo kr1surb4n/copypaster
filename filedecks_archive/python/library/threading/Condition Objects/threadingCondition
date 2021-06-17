@@ -1,2 +1,0 @@
-# name: threading.Condition 
-class threading.Condition(lock=None)

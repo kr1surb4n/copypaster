@@ -1,2 +1,0 @@
-# name: c.PyObject_InitVar 
-PyVarObject* PyObject_InitVar(PyVarObject *op, PyTypeObject *type, Py_ssize_t size)

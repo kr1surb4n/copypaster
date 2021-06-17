@@ -1,2 +1,0 @@
-# name: c.PyNumber_InPlaceSu 
-PyObject* PyNumber_InPlaceSubtract(PyObject *o1, PyObject *o2)

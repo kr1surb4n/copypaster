@@ -1,2 +1,0 @@
-# name: codecs.getwriter 
-codecs.getwriter(encoding)

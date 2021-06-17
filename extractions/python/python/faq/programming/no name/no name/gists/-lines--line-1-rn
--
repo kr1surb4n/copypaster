@@ -1,6 +1,0 @@
-# name: >>> lines = ("line 1 
->>> lines = ("line 1 \r\n"
-...          "\r\n"
-...          "\r\n")
->>> lines.rstrip("\n\r")
-'line 1 '

@@ -1,2 +1,0 @@
-# name: ssl.SSLSocket.verify 
-SSLSocket.verify_client_post_handshake()

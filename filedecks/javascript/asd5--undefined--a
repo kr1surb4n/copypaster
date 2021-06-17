@@ -1,2 +1,0 @@
-# name: asd5  undefined  a 
-asd[5] != undefined ? asd[5] : false; 

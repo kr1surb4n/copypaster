@@ -1,3 +1,0 @@
-# name: readonly attribute s 
-readonly attribute string someValue;
-         attribute string anotherValue;

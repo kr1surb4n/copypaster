@@ -1,2 +1,0 @@
-# name: StringprototypetoU 
-String.prototype.toUpperCase()

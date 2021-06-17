@@ -1,2 +1,0 @@
-# name: shutil.unregister_un 
-shutil.unregister_unpack_format(name)

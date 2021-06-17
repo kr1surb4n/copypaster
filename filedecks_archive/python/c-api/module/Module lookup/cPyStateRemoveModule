@@ -1,2 +1,0 @@
-# name: c.PyState_RemoveModu 
-int PyState_RemoveModule(PyModuleDef *def)

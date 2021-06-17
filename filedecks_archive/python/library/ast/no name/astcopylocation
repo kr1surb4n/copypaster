@@ -1,2 +1,0 @@
-# name: ast.copy_location 
-ast.copy_location(new_node, old_node)

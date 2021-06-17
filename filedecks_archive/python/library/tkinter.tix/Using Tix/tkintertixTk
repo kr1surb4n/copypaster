@@ -1,2 +1,0 @@
-# name: tkinter.tix.Tk 
-class tkinter.tix.Tk(screenName=None, baseName=None, className='Tix')

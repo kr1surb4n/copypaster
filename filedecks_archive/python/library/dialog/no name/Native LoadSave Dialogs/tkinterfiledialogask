@@ -1,2 +1,0 @@
-# name: tkinter.filedialog.a 
-tkinter.filedialog.askdirectory(**options)

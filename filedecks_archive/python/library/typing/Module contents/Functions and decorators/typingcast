@@ -1,2 +1,0 @@
-# name: typing.cast 
-typing.cast(typ, val)

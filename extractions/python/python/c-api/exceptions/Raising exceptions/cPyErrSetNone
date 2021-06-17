@@ -1,2 +1,0 @@
-# name: c.PyErr_SetNone 
-void PyErr_SetNone(PyObject *type)

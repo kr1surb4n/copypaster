@@ -1,2 +1,0 @@
-# name: inspect.unwrap 
-inspect.unwrap(func, *, stop=None)

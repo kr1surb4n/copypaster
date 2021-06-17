@@ -1,2 +1,0 @@
-# name: c.PyNumber_Absolute 
-PyObject* PyNumber_Absolute(PyObject *o)

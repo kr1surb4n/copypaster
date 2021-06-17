@@ -1,2 +1,0 @@
-# name: f = open("/mydir/fil 
-f = open("/mydir/file.txt")  # works fine!

@@ -1,2 +1,0 @@
-# name: c.PyObject_IS_GC 
-int PyObject_IS_GC(PyObject *obj)

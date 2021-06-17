@@ -1,2 +1,0 @@
-# name: c.PyNumber_Index 
-PyObject* PyNumber_Index(PyObject *o)

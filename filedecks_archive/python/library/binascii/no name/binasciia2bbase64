@@ -1,2 +1,0 @@
-# name: binascii.a2b_base64 
-binascii.a2b_base64(string)

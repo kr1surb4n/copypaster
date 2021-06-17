@@ -1,2 +1,0 @@
-# name: dis.disassemble 
-dis.disassemble(code, lasti=-1, *, file=None)

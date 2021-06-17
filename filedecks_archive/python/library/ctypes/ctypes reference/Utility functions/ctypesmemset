@@ -1,2 +1,0 @@
-# name: ctypes.memset 
-ctypes.memset(dst, c, count)

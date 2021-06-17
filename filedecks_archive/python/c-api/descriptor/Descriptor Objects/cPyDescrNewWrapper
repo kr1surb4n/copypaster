@@ -1,2 +1,0 @@
-# name: c.PyDescr_NewWrapper 
-PyObject* PyDescr_NewWrapper(PyTypeObject *type, struct wrapperbase *wrapper, void *wrapped)

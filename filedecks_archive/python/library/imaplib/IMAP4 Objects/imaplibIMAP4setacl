@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.setacl 
-IMAP4.setacl(mailbox, who, what)

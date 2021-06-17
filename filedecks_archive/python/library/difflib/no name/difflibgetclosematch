@@ -1,2 +1,0 @@
-# name: difflib.get_close_ma 
-difflib.get_close_matches(word, possibilities, n=3, cutoff=0.6)

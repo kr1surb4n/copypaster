@@ -1,2 +1,0 @@
-# name: c.PySet_Check 
-int PySet_Check(PyObject *p)

@@ -1,2 +1,0 @@
-# name: curses.window.scroll 
-window.scroll([lines=1])

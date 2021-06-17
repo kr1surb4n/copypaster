@@ -1,2 +1,0 @@
-# name: ctypes.create_unicod 
-ctypes.create_unicode_buffer(init_or_size, size=None)

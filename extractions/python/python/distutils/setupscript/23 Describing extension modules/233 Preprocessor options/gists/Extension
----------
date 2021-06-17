@@ -1,6 +1,0 @@
-# name: Extension(...,
-      
-Extension(...,
-          define_macros=[('NDEBUG', '1'),
-                         ('HAVE_STRFTIME', None)],
-          undef_macros=['HAVE_FOO', 'HAVE_BAR'])

@@ -1,2 +1,0 @@
-# name: Popen(["/usr/bin/git 
-Popen(["/usr/bin/git", "commit", "-m", "Fixes a bug."])

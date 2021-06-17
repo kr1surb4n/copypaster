@@ -1,2 +1,0 @@
-# name: asyncio.Queue 
-class asyncio.Queue(maxsize=0, *, loop=None)

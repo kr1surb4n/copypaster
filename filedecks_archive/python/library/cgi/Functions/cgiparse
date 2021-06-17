@@ -1,2 +1,0 @@
-# name: cgi.parse 
-cgi.parse(fp=None, environ=os.environ, keep_blank_values=False, strict_parsing=False)

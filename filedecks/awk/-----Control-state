@@ -1,6 +1,0 @@
-# name:      Control state 
-    # Control statements
-    if (count == 0)
-        print "Starting with count of 0";
-    else
-        print "Huh?";

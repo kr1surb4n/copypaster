@@ -1,2 +1,0 @@
-# name: print >> sys.stderr, 
-print >> sys.stderr, "Warning: action field not supplied"

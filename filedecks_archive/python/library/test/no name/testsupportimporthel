@@ -1,2 +1,0 @@
-# name: test.support.import_ 
-class test.support.import_helper.DirsOnSysPath(*paths)

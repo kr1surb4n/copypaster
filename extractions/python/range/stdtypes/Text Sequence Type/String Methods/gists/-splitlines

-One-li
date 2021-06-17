@@ -1,6 +1,0 @@
-# name: >>> "".splitlines()
- 
->>> "".splitlines()
-[]
->>> "One line\n".splitlines()
-['One line']

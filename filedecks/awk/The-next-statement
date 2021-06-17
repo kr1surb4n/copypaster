@@ -1,2 +1,0 @@
-# name: The next statement 
-The next statement forces awk to immediately stop processing the current record and go on to the next 

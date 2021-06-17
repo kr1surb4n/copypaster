@@ -1,2 +1,0 @@
-# name: io.BufferedReader 
-class io.BufferedReader(raw, buffer_size=DEFAULT_BUFFER_SIZE)

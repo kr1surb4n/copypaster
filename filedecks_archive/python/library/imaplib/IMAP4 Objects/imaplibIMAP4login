@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.login 
-IMAP4.login(user, password)

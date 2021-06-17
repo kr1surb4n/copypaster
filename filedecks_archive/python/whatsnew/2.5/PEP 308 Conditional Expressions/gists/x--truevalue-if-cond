@@ -1,2 +1,0 @@
-# name: x = true_value if co 
-x = true_value if condition else false_value

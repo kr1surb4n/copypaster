@@ -1,2 +1,0 @@
-# name: curses.textpad.recta 
-curses.textpad.rectangle(win, uly, ulx, lry, lrx)

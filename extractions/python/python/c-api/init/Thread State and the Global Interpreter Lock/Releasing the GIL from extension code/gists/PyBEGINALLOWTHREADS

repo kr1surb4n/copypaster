@@ -1,4 +1,0 @@
-# name: Py_BEGIN_ALLOW_THREA 
-Py_BEGIN_ALLOW_THREADS
-... Do some blocking I/O operation ...
-Py_END_ALLOW_THREADS

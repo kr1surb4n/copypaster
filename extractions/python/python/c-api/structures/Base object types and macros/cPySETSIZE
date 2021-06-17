@@ -1,2 +1,0 @@
-# name: c.Py_SET_SIZE 
-void Py_SET_SIZE(PyVarObject *o, Py_ssize_t size)

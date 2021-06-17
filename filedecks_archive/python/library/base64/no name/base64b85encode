@@ -1,2 +1,0 @@
-# name: base64.b85encode 
-base64.b85encode(b, pad=False)

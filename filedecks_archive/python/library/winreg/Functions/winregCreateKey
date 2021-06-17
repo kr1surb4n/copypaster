@@ -1,2 +1,0 @@
-# name: winreg.CreateKey 
-winreg.CreateKey(key, sub_key)

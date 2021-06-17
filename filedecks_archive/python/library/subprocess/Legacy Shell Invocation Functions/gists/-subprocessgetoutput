@@ -1,3 +1,0 @@
-# name: >>> subprocess.getou 
->>> subprocess.getoutput('ls /bin/ls')
-'/bin/ls'

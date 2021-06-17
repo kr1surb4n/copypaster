@@ -1,2 +1,0 @@
-# name: formatter.AbstractFo 
-class formatter.AbstractFormatter(writer)

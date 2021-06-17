@@ -1,4 +1,0 @@
-# name: struct PyMethodDef * 
-struct PyMethodDef *tp_methods;
-struct PyMemberDef *tp_members;
-struct PyGetSetDef *tp_getset;

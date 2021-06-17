@@ -1,2 +1,0 @@
-# name: c.PyContext_CheckExa 
-int PyContext_CheckExact(PyObject *o)

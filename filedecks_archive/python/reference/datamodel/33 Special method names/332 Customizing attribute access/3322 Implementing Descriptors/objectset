@@ -1,2 +1,0 @@
-# name: object.__set__ 
-object.__set__(self, instance, value)

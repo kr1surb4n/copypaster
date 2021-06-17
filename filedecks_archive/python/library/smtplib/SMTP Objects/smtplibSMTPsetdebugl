@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.set_deb 
-SMTP.set_debuglevel(level)

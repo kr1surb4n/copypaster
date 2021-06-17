@@ -1,2 +1,0 @@
-# name: socket.create_connec 
-socket.create_connection(address[, timeout[, source_address]])

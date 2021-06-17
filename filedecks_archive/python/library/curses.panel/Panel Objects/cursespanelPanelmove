@@ -1,2 +1,0 @@
-# name: curses.panel.Panel.m 
-Panel.move(y, x)

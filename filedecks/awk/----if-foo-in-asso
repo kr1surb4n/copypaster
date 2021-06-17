@@ -1,3 +1,0 @@
-# name:     if foo in asso 
-    if ("foo" in assoc)
-        print "Fooey!";

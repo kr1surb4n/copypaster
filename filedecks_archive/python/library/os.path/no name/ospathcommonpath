@@ -1,2 +1,0 @@
-# name: os.path.commonpath 
-os.path.commonpath(paths)

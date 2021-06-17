@@ -1,2 +1,0 @@
-# name: mailcap.findmatch 
-mailcap.findmatch(caps, MIMEtype, key='view', filename='/dev/null', plist=[])

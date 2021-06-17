@@ -1,2 +1,0 @@
-# name: os.set_inheritable 
-os.set_inheritable(fd, inheritable)

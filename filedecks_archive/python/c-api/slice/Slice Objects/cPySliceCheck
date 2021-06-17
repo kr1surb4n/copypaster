@@ -1,2 +1,0 @@
-# name: c.PySlice_Check 
-int PySlice_Check(PyObject *ob)

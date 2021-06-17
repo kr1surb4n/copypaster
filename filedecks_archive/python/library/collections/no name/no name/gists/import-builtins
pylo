@@ -1,4 +1,0 @@
-# name: import builtins
-pylo 
-import builtins
-pylookup = ChainMap(locals(), globals(), vars(builtins))

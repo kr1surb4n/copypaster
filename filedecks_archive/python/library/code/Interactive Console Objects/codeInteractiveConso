@@ -1,2 +1,0 @@
-# name: code.InteractiveCons 
-InteractiveConsole.raw_input(prompt="")

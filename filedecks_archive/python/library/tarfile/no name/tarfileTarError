@@ -1,2 +1,0 @@
-# name: tarfile.TarError 
-exception tarfile.TarError

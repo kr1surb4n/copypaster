@@ -1,2 +1,0 @@
-# name: inspect.Parameter 
-class inspect.Parameter(name, kind, *, default=Parameter.empty, annotation=Parameter.empty)

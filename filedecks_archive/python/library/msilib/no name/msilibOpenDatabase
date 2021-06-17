@@ -1,2 +1,0 @@
-# name: msilib.OpenDatabase 
-msilib.OpenDatabase(path, persist)

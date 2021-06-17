@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.getquo 
-IMAP4.getquotaroot(mailbox)

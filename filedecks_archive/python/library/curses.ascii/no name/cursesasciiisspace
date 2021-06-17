@@ -1,2 +1,0 @@
-# name: curses.ascii.isspace 
-curses.ascii.isspace(c)

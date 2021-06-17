@@ -1,2 +1,0 @@
-# name: c.PyFile_WriteString 
-int PyFile_WriteString(const char *s, PyObject *p)

@@ -1,4 +1,0 @@
-# name: >>> s = 'supercalifr 
->>> s = 'supercalifragilisticexpialidocious'
->>> len(s)
-34

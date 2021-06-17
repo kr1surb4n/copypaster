@@ -1,2 +1,0 @@
-# name: curses.panel.update_ 
-curses.panel.update_panels()

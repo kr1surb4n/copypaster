@@ -1,2 +1,0 @@
-# name: substing 
-${Variable:0:Length}

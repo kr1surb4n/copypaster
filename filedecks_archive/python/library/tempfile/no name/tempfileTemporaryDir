@@ -1,2 +1,0 @@
-# name: tempfile.TemporaryDi 
-tempfile.TemporaryDirectory(suffix=None, prefix=None, dir=None)

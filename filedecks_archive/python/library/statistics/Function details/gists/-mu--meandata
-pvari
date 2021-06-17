@@ -1,5 +1,0 @@
-# name: >>> mu = mean(data)
- 
->>> mu = mean(data)
->>> pvariance(data, mu)
-1.25

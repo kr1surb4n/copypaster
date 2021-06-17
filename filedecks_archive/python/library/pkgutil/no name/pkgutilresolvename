@@ -1,2 +1,0 @@
-# name: pkgutil.resolve_name 
-pkgutil.resolve_name(name)

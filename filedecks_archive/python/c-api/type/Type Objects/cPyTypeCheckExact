@@ -1,2 +1,0 @@
-# name: c.PyType_CheckExact 
-int PyType_CheckExact(PyObject *o)

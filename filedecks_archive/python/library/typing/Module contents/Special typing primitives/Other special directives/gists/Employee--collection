@@ -1,2 +1,0 @@
-# name: Employee = collectio 
-Employee = collections.namedtuple('Employee', ['name', 'id'])

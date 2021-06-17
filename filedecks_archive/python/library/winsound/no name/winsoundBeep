@@ -1,2 +1,0 @@
-# name: winsound.Beep 
-winsound.Beep(frequency, duration)

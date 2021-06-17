@@ -1,2 +1,0 @@
-# name: zipfile.ZipFile.geti 
-ZipFile.getinfo(name)

@@ -1,2 +1,0 @@
-# name: select.kqueue.fileno 
-kqueue.fileno()

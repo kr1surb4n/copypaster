@@ -1,2 +1,0 @@
-# name: Py_DEPRECATED(3.8) P 
-Py_DEPRECATED(3.8) PyAPI_FUNC(int) Py_OldFunction(void);

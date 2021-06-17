@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.getann 
-IMAP4.getannotation(mailbox, entry, attribute)

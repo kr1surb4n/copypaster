@@ -1,2 +1,0 @@
-# name: termios.tcdrain 
-termios.tcdrain(fd)

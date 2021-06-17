@@ -1,3 +1,0 @@
-# name: (options, args) = pa 
-(options, args) = parser.parse_args(["-n42"])
-print(options.num)

@@ -1,2 +1,0 @@
-# name: c.PyThread_tss_get 
-void* PyThread_tss_get(Py_tss_t *key)

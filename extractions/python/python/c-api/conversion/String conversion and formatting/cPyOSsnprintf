@@ -1,2 +1,0 @@
-# name: c.PyOS_snprintf 
-int PyOS_snprintf(char *str, size_t size, const char *format, ...)

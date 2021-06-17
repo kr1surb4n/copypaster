@@ -1,2 +1,0 @@
-# name: c.PyNumber_InPlaceMa 
-PyObject* PyNumber_InPlaceMatrixMultiply(PyObject *o1, PyObject *o2)

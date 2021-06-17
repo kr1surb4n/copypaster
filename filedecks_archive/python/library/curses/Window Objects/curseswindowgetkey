@@ -1,2 +1,0 @@
-# name: curses.window.getkey 
-window.getkey([y, x])

@@ -1,2 +1,0 @@
-# name: asyncio.loop.is_clos 
-loop.is_closed()

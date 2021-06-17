@@ -1,2 +1,0 @@
-# name: sys.setdlopenflags 
-sys.setdlopenflags(n)

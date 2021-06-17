@@ -1,3 +1,0 @@
-# name: >>> decimal.Decimal( 
->>> decimal.Decimal((1, (1, 4, 7, 5), -2))
-Decimal("-14.75")

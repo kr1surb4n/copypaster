@@ -1,2 +1,0 @@
-# name: product('ABCD', repe 
-product('ABCD', repeat=2)

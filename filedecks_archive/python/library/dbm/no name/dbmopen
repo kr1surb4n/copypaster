@@ -1,2 +1,0 @@
-# name: dbm.open 
-dbm.open(file, flag='r', mode=0o666)

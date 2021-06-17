@@ -1,2 +1,0 @@
-# name: xmlrpc.server.Simple 
-class xmlrpc.server.SimpleXMLRPCRequestHandler

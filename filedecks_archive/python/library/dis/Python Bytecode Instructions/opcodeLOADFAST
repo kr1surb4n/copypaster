@@ -1,2 +1,0 @@
-# name: opcode-LOAD_FAST 
-LOAD_FAST(var_num)

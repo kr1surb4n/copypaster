@@ -1,2 +1,0 @@
-# name: webbrowser.register 
-webbrowser.register(name, constructor, instance=None, *, preferred=False)

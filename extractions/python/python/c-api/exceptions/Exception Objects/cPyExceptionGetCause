@@ -1,2 +1,0 @@
-# name: c.PyException_GetCau 
-PyObject* PyException_GetCause(PyObject *ex)

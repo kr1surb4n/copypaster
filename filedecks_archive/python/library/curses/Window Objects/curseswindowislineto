@@ -1,2 +1,0 @@
-# name: curses.window.is_lin 
-window.is_linetouched(line)

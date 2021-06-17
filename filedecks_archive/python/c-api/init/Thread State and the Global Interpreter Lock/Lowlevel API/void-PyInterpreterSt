@@ -1,2 +1,0 @@
-# name: void _PyInterpreterS 
-void _PyInterpreterState_SetEvalFrameFunc(PyInterpreterState *interp, _PyFrameEvalFunction eval_frame);

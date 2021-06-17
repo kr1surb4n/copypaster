@@ -1,2 +1,0 @@
-# name: c.PyCodec_LookupErro 
-PyObject* PyCodec_LookupError(const char *name)

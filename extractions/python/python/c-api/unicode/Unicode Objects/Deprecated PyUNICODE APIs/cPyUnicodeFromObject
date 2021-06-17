@@ -1,2 +1,0 @@
-# name: c.PyUnicode_FromObje 
-PyObject* PyUnicode_FromObject(PyObject *obj)

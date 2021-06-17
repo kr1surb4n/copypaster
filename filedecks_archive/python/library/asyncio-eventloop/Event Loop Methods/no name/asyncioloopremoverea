@@ -1,2 +1,0 @@
-# name: asyncio.loop.remove_ 
-loop.remove_reader(fd)

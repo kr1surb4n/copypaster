@@ -1,3 +1,0 @@
-# name:  Variables are glo 
--- Variables are global by default.
-  thisIsGlobal = 5  -- Camel case is common.

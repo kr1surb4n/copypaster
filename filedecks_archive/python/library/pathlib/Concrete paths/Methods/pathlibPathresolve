@@ -1,2 +1,0 @@
-# name: pathlib.Path.resolve 
-Path.resolve(strict=False)

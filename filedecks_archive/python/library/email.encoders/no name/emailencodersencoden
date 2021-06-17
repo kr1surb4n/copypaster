@@ -1,2 +1,0 @@
-# name: email.encoders.encod 
-email.encoders.encode_noop(msg)

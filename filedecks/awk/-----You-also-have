@@ -1,3 +1,0 @@
-# name:      You also have 
-    # You also have associative arrays (actually, they're all associative arrays)
-    assoc["foo"] = "bar";

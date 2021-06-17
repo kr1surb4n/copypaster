@@ -1,2 +1,0 @@
-# name: struct.unpack_from 
-struct.unpack_from(format, /, buffer, offset=0)

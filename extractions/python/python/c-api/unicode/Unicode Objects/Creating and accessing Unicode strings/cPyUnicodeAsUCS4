@@ -1,2 +1,0 @@
-# name: c.PyUnicode_AsUCS4 
-Py_UCS4* PyUnicode_AsUCS4(PyObject *u, Py_UCS4 *buffer, Py_ssize_t buflen, int copy_null)

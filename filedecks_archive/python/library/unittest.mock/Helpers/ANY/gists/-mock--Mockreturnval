@@ -1,4 +1,0 @@
-# name: >>> mock = Mock(retu 
->>> mock = Mock(return_value=None)
->>> mock('foo', bar=object())
->>> mock.assert_called_once_with('foo', bar=ANY)

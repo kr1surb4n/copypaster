@@ -1,2 +1,0 @@
-# name: asyncio.DatagramProt 
-DatagramProtocol.error_received(exc)

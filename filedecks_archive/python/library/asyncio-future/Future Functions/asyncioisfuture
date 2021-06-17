@@ -1,2 +1,0 @@
-# name: asyncio.isfuture 
-asyncio.isfuture(obj)

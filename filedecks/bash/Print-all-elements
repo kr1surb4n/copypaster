@@ -1,4 +1,0 @@
-# name: Print all elements 
-for i in "${array0[@]}"; do
-  echo "$i"
-done

@@ -1,2 +1,0 @@
-# name: c.PyUnicode_Concat 
-PyObject* PyUnicode_Concat(PyObject *left, PyObject *right)

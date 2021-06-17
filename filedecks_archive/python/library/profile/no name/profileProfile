@@ -1,2 +1,0 @@
-# name: profile.Profile 
-class profile.Profile(timer=None, timeunit=0.0, subcalls=True, builtins=True)

@@ -1,2 +1,0 @@
-# name: test.support.patch 
-test.support.patch(test_instance, object_to_patch, attr_name, new_value)

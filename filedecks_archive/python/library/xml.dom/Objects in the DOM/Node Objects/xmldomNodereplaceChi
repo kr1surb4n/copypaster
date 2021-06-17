@@ -1,2 +1,0 @@
-# name: xml.dom.Node.replace 
-Node.replaceChild(newChild, oldChild)

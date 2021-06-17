@@ -1,2 +1,0 @@
-# name: object.__delitem__ 
-object.__delitem__(self, key)

@@ -1,2 +1,0 @@
-# name: codecs.encode 
-codecs.encode(obj, encoding='utf-8', errors='strict')

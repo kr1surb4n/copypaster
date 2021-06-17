@@ -1,2 +1,0 @@
-# name: test.support.findfil 
-test.support.findfile(filename, subdir=None)

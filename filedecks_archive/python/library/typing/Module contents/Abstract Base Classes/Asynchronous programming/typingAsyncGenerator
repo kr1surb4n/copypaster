@@ -1,2 +1,0 @@
-# name: typing.AsyncGenerato 
-class typing.AsyncGenerator(AsyncIterator[T_co], Generic[T_co, T_contra])

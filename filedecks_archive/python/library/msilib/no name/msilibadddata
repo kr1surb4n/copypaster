@@ -1,2 +1,0 @@
-# name: msilib.add_data 
-msilib.add_data(database, table, records)

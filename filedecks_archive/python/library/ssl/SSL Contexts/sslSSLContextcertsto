@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.cert_ 
-SSLContext.cert_store_stats()

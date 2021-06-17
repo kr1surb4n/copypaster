@@ -1,2 +1,0 @@
-# name: inspect.getframeinfo 
-inspect.getframeinfo(frame, context=1)

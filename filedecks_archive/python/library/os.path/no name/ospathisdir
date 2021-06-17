@@ -1,2 +1,0 @@
-# name: os.path.isdir 
-os.path.isdir(path)

@@ -1,2 +1,0 @@
-# name: select.select 
-select.select(rlist, wlist, xlist[, timeout])

@@ -1,2 +1,0 @@
-# name: c.PyErr_SetObject 
-void PyErr_SetObject(PyObject *type, PyObject *value)

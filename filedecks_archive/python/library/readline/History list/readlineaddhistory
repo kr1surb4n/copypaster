@@ -1,2 +1,0 @@
-# name: readline.add_history 
-readline.add_history(line)

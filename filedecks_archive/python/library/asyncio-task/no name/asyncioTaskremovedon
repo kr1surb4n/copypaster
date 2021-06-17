@@ -1,2 +1,0 @@
-# name: asyncio.Task.remove_ 
-asyncio.Task.remove_done_callback

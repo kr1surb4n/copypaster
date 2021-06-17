@@ -1,2 +1,0 @@
-# name: shutil.unregister_ar 
-shutil.unregister_archive_format(name)

@@ -1,2 +1,0 @@
-# name: curses.ascii.isblank 
-curses.ascii.isblank(c)

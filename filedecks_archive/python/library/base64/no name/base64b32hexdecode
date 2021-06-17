@@ -1,2 +1,0 @@
-# name: base64.b32hexdecode 
-base64.b32hexdecode(s, casefold=False)

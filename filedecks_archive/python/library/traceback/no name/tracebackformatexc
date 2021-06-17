@@ -1,2 +1,0 @@
-# name: traceback.format_exc 
-traceback.format_exc(limit=None, chain=True)

@@ -1,2 +1,0 @@
-# name: >>> from operator im 
->>> from operator import itemgetter, attrgetter

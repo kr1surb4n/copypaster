@@ -1,2 +1,0 @@
-# name: traceback.print_exc 
-traceback.print_exc(limit=None, file=None, chain=True)

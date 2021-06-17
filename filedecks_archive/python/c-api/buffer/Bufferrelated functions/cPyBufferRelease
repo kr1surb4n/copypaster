@@ -1,2 +1,0 @@
-# name: c.PyBuffer_Release 
-void PyBuffer_Release(Py_buffer *view)

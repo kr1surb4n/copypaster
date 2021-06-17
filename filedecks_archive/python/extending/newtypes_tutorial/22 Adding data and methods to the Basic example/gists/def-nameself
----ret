@@ -1,4 +1,0 @@
-# name: def name(self):
-     
-def name(self):
-    return "%s %s" % (self.first, self.last)

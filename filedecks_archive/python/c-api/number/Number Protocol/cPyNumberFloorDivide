@@ -1,2 +1,0 @@
-# name: c.PyNumber_FloorDivi 
-PyObject* PyNumber_FloorDivide(PyObject *o1, PyObject *o2)

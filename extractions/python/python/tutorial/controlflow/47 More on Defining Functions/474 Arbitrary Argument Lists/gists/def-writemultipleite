@@ -1,3 +1,0 @@
-# name: def write_multiple_i 
-def write_multiple_items(file, separator, *args):
-    file.write(separator.join(args))

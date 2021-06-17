@@ -1,2 +1,0 @@
-# name: c.PyObject_HasAttrSt 
-int PyObject_HasAttrString(PyObject *o, const char *attr_name)

@@ -1,2 +1,0 @@
-# name: asyncio.loop.shutdow 
-coroutine loop.shutdown_asyncgens()

@@ -1,4 +1,0 @@
-# name: input = UTF8_streamr 
-input = UTF8_streamreader( open( '/tmp/output', 'rb') )
-print repr(input.read())
-input.close()

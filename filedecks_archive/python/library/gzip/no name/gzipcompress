@@ -1,2 +1,0 @@
-# name: gzip.compress 
-gzip.compress(data, compresslevel=9, *, mtime=None)

@@ -1,2 +1,0 @@
-# name: python -m tokenize [ 
-python -m tokenize [-e] [filename.py]

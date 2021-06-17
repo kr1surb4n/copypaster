@@ -1,2 +1,0 @@
-# name: c.PyObject.ob_refcnt 
-Py_ssize_t PyObject.ob_refcnt

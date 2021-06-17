@@ -1,2 +1,0 @@
-# name: ArrayfromstrmatchA 
-Array.from(str.matchAll(regexp), m => m[0]);

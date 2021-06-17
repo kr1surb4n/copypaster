@@ -1,2 +1,0 @@
-# name: asyncio.Queue.put_no 
-asyncio.Queue.put_nowait

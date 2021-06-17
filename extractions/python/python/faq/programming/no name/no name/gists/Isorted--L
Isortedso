@@ -1,4 +1,0 @@
-# name: Isorted = L[:]
-Isort 
-Isorted = L[:]
-Isorted.sort(key=lambda s: int(s[10:15]))

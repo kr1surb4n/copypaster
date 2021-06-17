@@ -1,2 +1,0 @@
-# name: re.findall 
-re.findall(pattern, string, flags=0)

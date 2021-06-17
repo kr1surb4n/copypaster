@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPS 
-HTTPSHandler.https_open(req)

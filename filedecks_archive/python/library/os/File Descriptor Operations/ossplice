@@ -1,2 +1,0 @@
-# name: os.splice 
-os.splice(src, dst, count, offset_src=None, offset_dst=None)

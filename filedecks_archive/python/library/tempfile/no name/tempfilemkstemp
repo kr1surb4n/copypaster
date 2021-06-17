@@ -1,2 +1,0 @@
-# name: tempfile.mkstemp 
-tempfile.mkstemp(suffix=None, prefix=None, dir=None, text=False)

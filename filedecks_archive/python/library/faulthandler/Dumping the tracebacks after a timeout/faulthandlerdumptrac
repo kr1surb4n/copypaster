@@ -1,2 +1,0 @@
-# name: faulthandler.dump_tr 
-faulthandler.dump_traceback_later(timeout, repeat=False, file=sys.stderr, exit=False)

@@ -1,2 +1,0 @@
-# name: msilib.Control 
-class msilib.Control(dlg, name)

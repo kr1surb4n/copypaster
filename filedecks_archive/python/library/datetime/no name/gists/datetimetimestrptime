@@ -1,2 +1,0 @@
-# name: datetime(*(time.strp 
-datetime(*(time.strptime(date_string, format)[0:6]))

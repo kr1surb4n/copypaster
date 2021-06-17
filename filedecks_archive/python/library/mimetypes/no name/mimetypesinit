@@ -1,2 +1,0 @@
-# name: mimetypes.init 
-mimetypes.init(files=None)

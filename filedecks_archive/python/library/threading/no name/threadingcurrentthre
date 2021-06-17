@@ -1,2 +1,0 @@
-# name: threading.current_th 
-threading.current_thread()

@@ -1,2 +1,0 @@
-# name: gc.is_finalized 
-gc.is_finalized(obj)

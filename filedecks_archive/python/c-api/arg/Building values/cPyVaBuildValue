@@ -1,2 +1,0 @@
-# name: c.Py_VaBuildValue 
-PyObject* Py_VaBuildValue(const char *format, va_list vargs)

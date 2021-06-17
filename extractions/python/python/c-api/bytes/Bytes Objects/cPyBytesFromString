@@ -1,2 +1,0 @@
-# name: c.PyBytes_FromString 
-PyObject* PyBytes_FromString(const char *v)

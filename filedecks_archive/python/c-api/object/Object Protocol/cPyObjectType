@@ -1,2 +1,0 @@
-# name: c.PyObject_Type 
-PyObject* PyObject_Type(PyObject *o)

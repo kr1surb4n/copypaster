@@ -1,3 +1,0 @@
-# name: if matching := patte 
-if matching := pattern.search(data):
-    do_something(matching)

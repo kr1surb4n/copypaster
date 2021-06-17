@@ -1,6 +1,0 @@
-# name: >>> p = Path('setup. 
->>> p = Path('setup.py')
->>> with p.open() as f:
-...     f.readline()
-...
-'#!/usr/bin/env python3\n'

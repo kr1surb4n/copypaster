@@ -1,2 +1,0 @@
-# name: curses.use_default_c 
-curses.use_default_colors()

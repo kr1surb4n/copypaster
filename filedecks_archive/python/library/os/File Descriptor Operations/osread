@@ -1,2 +1,0 @@
-# name: os.read 
-os.read(fd, n)

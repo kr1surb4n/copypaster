@@ -1,2 +1,0 @@
-# name: typing.Counter 
-class typing.Counter(collections.Counter, Dict[T, int])

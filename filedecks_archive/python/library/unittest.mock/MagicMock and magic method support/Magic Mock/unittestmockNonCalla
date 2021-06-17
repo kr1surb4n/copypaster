@@ -1,2 +1,0 @@
-# name: unittest.mock.NonCal 
-class unittest.mock.NonCallableMagicMock(*args, **kw)

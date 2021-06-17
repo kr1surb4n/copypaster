@@ -1,2 +1,0 @@
-# name: os.readlink 
-os.readlink(path, *, dir_fd=None)

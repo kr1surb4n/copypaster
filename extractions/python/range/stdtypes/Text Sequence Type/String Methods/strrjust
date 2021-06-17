@@ -1,2 +1,0 @@
-# name: str.rjust 
-str.rjust(width[, fillchar])

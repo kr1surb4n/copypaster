@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.has_ext 
-SMTP.has_extn(name)

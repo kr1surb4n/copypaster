@@ -1,2 +1,0 @@
-# name: hmac.HMAC.update 
-HMAC.update(msg)

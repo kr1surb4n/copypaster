@@ -1,2 +1,0 @@
-# name: itertools.filterfals 
-itertools.filterfalse(predicate, iterable)

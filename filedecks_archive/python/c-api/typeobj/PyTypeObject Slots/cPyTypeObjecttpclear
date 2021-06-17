@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_cl 
-inquiry PyTypeObject.tp_clear

@@ -1,8 +1,0 @@
-# name: >>> raise CustomErro 
->>> raise CustomError('message')
-Traceback (most recent call last):
-CustomError: message
-
->>> raise CustomError('message')
-Traceback (most recent call last):
-my_module.CustomError: message

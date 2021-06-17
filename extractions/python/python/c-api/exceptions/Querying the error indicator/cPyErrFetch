@@ -1,2 +1,0 @@
-# name: c.PyErr_Fetch 
-void PyErr_Fetch(PyObject **ptype, PyObject **pvalue, PyObject **ptraceback)

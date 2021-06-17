@@ -1,2 +1,0 @@
-# name: zipfile.BadZipFile 
-exception zipfile.BadZipFile

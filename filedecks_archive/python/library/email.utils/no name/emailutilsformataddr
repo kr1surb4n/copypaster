@@ -1,2 +1,0 @@
-# name: email.utils.formatad 
-email.utils.formataddr(pair, charset='utf-8')

@@ -1,2 +1,0 @@
-# name: typing.FrozenSet 
-class typing.FrozenSet(frozenset, AbstractSet[T_co])

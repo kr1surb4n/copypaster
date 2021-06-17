@@ -1,2 +1,0 @@
-# name: concurrent.futures.t 
-exception concurrent.futures.thread.BrokenThreadPool

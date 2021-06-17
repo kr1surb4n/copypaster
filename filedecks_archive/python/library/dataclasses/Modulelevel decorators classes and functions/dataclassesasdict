@@ -1,2 +1,0 @@
-# name: dataclasses.asdict 
-dataclasses.asdict(instance, *, dict_factory=dict)

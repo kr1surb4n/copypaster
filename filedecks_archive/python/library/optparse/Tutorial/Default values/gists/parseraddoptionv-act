@@ -1,3 +1,0 @@
-# name: parser.add_option("- 
-parser.add_option("-v", action="store_true", dest="verbose", default=False)
-parser.add_option("-q", action="store_false", dest="verbose", default=True)

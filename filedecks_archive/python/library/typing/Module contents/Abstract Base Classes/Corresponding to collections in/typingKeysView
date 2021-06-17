@@ -1,2 +1,0 @@
-# name: typing.KeysView 
-class typing.KeysView(MappingView[KT_co], AbstractSet[KT_co])

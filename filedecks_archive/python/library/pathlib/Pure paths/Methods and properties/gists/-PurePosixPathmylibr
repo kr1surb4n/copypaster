@@ -1,7 +1,0 @@
-# name: >>> PurePosixPath('m 
->>> PurePosixPath('my/library.tar.gz').stem
-'library.tar'
->>> PurePosixPath('my/library.tar').stem
-'library'
->>> PurePosixPath('my/library').stem
-'library'

@@ -1,2 +1,0 @@
-# name: ast.NamedExpr 
-class ast.NamedExpr(target, value)

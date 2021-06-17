@@ -1,2 +1,0 @@
-# name: ast.Lambda 
-class ast.Lambda(args, body)

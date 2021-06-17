@@ -1,2 +1,0 @@
-# name: ctypes.PyDLL 
-class ctypes.PyDLL(name, mode=DEFAULT_MODE, handle=None)

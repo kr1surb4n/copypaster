@@ -1,2 +1,0 @@
-# name: contents = ((doc + ' 
-contents = ((doc + '\n') if doc else '')

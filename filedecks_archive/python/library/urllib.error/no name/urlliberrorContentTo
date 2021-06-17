@@ -1,2 +1,0 @@
-# name: urllib.error.Content 
-exception urllib.error.ContentTooShortError(msg, content)

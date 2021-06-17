@@ -1,2 +1,0 @@
-# name: object.__class_getit 
-classmethod object.__class_getitem__(cls, key)

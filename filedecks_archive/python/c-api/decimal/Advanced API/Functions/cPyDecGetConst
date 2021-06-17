@@ -1,2 +1,0 @@
-# name: c.PyDec_GetConst 
-const mpd_t *PyDec_GetConst(const PyObject *v)

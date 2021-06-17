@@ -1,2 +1,0 @@
-# name: object.__call__ 
-object.__call__(self[, args...])

@@ -1,2 +1,0 @@
-# name: c.PyUnicode_AS_UNICO 
-Py_UNICODE* PyUnicode_AS_UNICODE(PyObject *o)

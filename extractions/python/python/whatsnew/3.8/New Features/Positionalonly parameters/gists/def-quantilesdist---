@@ -1,3 +1,0 @@
-# name: def quantiles(dist,  
-def quantiles(dist, /, *, n=4, method='exclusive')
-    ...

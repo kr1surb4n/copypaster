@@ -1,2 +1,0 @@
-# name: os.getsid 
-os.getsid(pid)

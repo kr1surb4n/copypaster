@@ -1,2 +1,0 @@
-# name: c._PyBytes_Resize 
-int _PyBytes_Resize(PyObject **bytes, Py_ssize_t newsize)

@@ -1,5 +1,0 @@
-# name: >>> '   spacious   ' 
->>> '   spacious   '.rstrip()
-'   spacious'
->>> 'mississippi'.rstrip('ipz')
-'mississ'

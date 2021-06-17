@@ -1,2 +1,0 @@
-# name: http.cookiejar.Cooki 
-CookieJar.clear_session_cookies()

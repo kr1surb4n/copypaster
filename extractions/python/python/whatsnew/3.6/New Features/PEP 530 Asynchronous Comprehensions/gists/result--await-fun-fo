@@ -1,2 +1,0 @@
-# name: result = [await fun( 
-result = [await fun() for fun in funcs if await condition()]

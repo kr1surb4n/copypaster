@@ -1,2 +1,0 @@
-# name: logging.warning 
-logging.warning(msg, *args, **kwargs)

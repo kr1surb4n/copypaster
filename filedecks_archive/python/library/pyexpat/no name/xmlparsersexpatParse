@@ -1,2 +1,0 @@
-# name: xml.parsers.expat.Pa 
-xml.parsers.expat.ParserCreate(encoding=None, namespace_separator=None)

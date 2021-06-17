@@ -1,4 +1,0 @@
-# name: -----BEGIN CERTIFICA 
------BEGIN CERTIFICATE-----
-... (certificate in base64 PEM encoding) ...
------END CERTIFICATE-----

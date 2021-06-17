@@ -1,2 +1,0 @@
-# name: c.PyLong_FromDouble 
-PyObject* PyLong_FromDouble(double v)

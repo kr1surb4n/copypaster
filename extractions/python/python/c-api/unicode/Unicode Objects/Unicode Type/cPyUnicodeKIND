@@ -1,2 +1,0 @@
-# name: c.PyUnicode_KIND 
-int PyUnicode_KIND(PyObject *o)

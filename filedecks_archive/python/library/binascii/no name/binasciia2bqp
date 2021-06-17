@@ -1,2 +1,0 @@
-# name: binascii.a2b_qp 
-binascii.a2b_qp(data, header=False)

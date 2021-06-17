@@ -1,2 +1,0 @@
-# name: c.PyMapping_Check 
-int PyMapping_Check(PyObject *o)

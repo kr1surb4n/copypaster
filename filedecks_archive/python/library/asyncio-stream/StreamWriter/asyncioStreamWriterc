@@ -1,2 +1,0 @@
-# name: asyncio.StreamWriter 
-asyncio.StreamWriter.can_write_eof

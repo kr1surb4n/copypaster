@@ -1,2 +1,0 @@
-# name: notfirstchild 
-//ol/li[position()>1]

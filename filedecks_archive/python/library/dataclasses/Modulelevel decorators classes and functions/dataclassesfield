@@ -1,2 +1,0 @@
-# name: dataclasses.field 
-dataclasses.field(*, default=MISSING, default_factory=MISSING, repr=True, hash=None, init=True, compare=True, metadata=None)

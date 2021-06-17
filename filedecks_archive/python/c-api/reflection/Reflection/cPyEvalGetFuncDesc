@@ -1,2 +1,0 @@
-# name: c.PyEval_GetFuncDesc 
-const char* PyEval_GetFuncDesc(PyObject *func)

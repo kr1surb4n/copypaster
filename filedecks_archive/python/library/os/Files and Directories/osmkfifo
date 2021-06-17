@@ -1,2 +1,0 @@
-# name: os.mkfifo 
-os.mkfifo(path, mode=0o666, *, dir_fd=None)

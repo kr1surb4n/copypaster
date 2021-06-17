@@ -1,2 +1,0 @@
-# name: OSError 
-exception OSError([arg])

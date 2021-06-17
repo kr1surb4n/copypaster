@@ -1,2 +1,0 @@
-# name: DateprototypegetUT 
-Date.prototype.getUTCSeconds()

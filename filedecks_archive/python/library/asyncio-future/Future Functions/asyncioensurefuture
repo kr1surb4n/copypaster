@@ -1,2 +1,0 @@
-# name: asyncio.ensure_futur 
-asyncio.ensure_future(obj, *, loop=None)

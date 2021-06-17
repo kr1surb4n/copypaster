@@ -1,2 +1,0 @@
-# name: c.PyByteArray_FromSt 
-PyObject* PyByteArray_FromStringAndSize(const char *string, Py_ssize_t len)

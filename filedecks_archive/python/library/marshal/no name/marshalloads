@@ -1,2 +1,0 @@
-# name: marshal.loads 
-marshal.loads(bytes)

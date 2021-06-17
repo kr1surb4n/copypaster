@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_as 
-PyAsyncMethods* PyTypeObject.tp_as_async

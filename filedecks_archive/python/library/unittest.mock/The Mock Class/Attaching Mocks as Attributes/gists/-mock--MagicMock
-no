@@ -1,8 +1,0 @@
-# name: >>> mock = MagicMock 
->>> mock = MagicMock()
->>> not_a_child = MagicMock(name='not-a-child')
->>> mock.attribute = not_a_child
->>> mock.attribute()
-<MagicMock name='not-a-child()' id='...'>
->>> mock.mock_calls
-[]

@@ -1,2 +1,0 @@
-# name: dbm.gnu.open 
-dbm.gnu.open(filename[, flag[, mode]])

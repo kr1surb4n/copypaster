@@ -1,5 +1,0 @@
-# name: >>> l = []
->>> l.app 
->>> l = []
->>> l.append(l)
->>> del l

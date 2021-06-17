@@ -1,2 +1,0 @@
-# name: socket.CMSG_LEN 
-socket.CMSG_LEN(length)

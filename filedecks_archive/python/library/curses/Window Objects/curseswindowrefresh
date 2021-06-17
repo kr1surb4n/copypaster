@@ -1,2 +1,0 @@
-# name: curses.window.refres 
-window.refresh([pminrow, pmincol, sminrow, smincol, smaxrow, smaxcol])

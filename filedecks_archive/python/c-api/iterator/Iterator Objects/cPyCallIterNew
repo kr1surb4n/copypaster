@@ -1,2 +1,0 @@
-# name: c.PyCallIter_New 
-PyObject* PyCallIter_New(PyObject *callable, PyObject *sentinel)

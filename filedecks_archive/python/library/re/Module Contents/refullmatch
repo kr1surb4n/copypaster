@@ -1,2 +1,0 @@
-# name: re.fullmatch 
-re.fullmatch(pattern, string, flags=0)

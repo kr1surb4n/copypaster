@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPH 
-HTTPHandler.http_open(req)

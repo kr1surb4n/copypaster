@@ -1,2 +1,0 @@
-# name: c.PyEval_EvalFrame 
-PyObject* PyEval_EvalFrame(PyFrameObject *f)

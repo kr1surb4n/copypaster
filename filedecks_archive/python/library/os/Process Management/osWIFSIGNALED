@@ -1,2 +1,0 @@
-# name: os.WIFSIGNALED 
-os.WIFSIGNALED(status)

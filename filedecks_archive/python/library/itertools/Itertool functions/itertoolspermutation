@@ -1,2 +1,0 @@
-# name: itertools.permutatio 
-itertools.permutations(iterable, r=None)

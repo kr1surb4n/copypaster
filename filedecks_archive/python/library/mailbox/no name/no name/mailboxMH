@@ -1,2 +1,0 @@
-# name: mailbox.MH 
-class mailbox.MH(path, factory=None, create=True)

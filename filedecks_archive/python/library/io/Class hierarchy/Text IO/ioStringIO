@@ -1,2 +1,0 @@
-# name: io.StringIO 
-class io.StringIO(initial_value='', newline='\n')

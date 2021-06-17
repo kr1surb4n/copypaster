@@ -1,2 +1,0 @@
-# name: c.PyLong_Type 
-PyTypeObject PyLong_Type

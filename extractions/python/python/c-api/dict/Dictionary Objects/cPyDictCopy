@@ -1,2 +1,0 @@
-# name: c.PyDict_Copy 
-PyObject* PyDict_Copy(PyObject *p)

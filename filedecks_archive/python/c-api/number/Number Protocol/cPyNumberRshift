@@ -1,2 +1,0 @@
-# name: c.PyNumber_Rshift 
-PyObject* PyNumber_Rshift(PyObject *o1, PyObject *o2)

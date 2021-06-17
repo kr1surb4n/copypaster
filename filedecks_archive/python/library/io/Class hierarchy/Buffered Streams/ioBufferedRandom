@@ -1,2 +1,0 @@
-# name: io.BufferedRandom 
-class io.BufferedRandom(raw, buffer_size=DEFAULT_BUFFER_SIZE)

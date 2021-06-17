@@ -1,2 +1,0 @@
-# name: c.PyAsyncMethods.am_ 
-unaryfunc PyAsyncMethods.am_anext

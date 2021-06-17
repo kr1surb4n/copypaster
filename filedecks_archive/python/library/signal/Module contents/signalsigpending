@@ -1,2 +1,0 @@
-# name: signal.sigpending 
-signal.sigpending()

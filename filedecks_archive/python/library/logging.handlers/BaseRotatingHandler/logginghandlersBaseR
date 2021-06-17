@@ -1,2 +1,0 @@
-# name: logging.handlers.Bas 
-logging.handlers.BaseRotatingHandler.rotate

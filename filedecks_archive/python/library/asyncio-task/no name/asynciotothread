@@ -1,2 +1,0 @@
-# name: asyncio.to_thread 
-coroutine asyncio.to_thread(func, /, *args, **kwargs)

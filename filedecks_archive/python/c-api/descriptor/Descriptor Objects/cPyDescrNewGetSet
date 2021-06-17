@@ -1,2 +1,0 @@
-# name: c.PyDescr_NewGetSet 
-PyObject* PyDescr_NewGetSet(PyTypeObject *type, struct PyGetSetDef *getset)

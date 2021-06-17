@@ -1,2 +1,0 @@
-# name: c.PyRun_InteractiveL 
-int PyRun_InteractiveLoopFlags(FILE *fp, const char *filename, PyCompilerFlags *flags)

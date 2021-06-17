@@ -1,2 +1,0 @@
-# name: os.dup2 
-os.dup2(fd, fd2, inheritable=True)

@@ -1,2 +1,0 @@
-# name: datetime.timezone.fr 
-timezone.fromutc(dt)

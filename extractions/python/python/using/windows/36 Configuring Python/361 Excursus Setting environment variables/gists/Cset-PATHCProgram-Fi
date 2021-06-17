@@ -1,4 +1,0 @@
-# name: C:\>set PATH=C:\Prog 
-C:\>set PATH=C:\Program Files\Python 3.9;%PATH%
-C:\>set PYTHONPATH=%PYTHONPATH%;C:\My_python_lib
-C:\>python

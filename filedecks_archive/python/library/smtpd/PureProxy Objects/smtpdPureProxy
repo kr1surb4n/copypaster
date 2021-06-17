@@ -1,2 +1,0 @@
-# name: smtpd.PureProxy 
-class smtpd.PureProxy(localaddr, remoteaddr)

@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPC 
-class urllib.request.HTTPCookieProcessor(cookiejar=None)

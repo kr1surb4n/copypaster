@@ -1,2 +1,0 @@
-# name: codecs.register_erro 
-codecs.register_error(name, error_handler)

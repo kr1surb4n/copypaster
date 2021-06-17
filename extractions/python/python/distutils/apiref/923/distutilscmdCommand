@@ -1,2 +1,0 @@
-# name: distutils.cmd.Comman 
-class distutils.cmd.Command(dist)

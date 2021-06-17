@@ -1,2 +1,0 @@
-# name: c.PyMemoryView_GetCo 
-PyObject *PyMemoryView_GetContiguous(PyObject *obj, int buffertype, char order)

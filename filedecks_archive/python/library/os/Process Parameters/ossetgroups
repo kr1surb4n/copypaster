@@ -1,2 +1,0 @@
-# name: os.setgroups 
-os.setgroups(groups)

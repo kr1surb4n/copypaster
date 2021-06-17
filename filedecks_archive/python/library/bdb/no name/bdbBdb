@@ -1,2 +1,0 @@
-# name: bdb.Bdb 
-class bdb.Bdb(skip=None)

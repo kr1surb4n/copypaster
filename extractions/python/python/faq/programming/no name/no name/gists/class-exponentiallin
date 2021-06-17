@@ -1,5 +1,0 @@
-# name: class exponential(li 
-class exponential(linear):
-    # __init__ inherited
-    def __call__(self, x):
-        return self.a * (x ** self.b)

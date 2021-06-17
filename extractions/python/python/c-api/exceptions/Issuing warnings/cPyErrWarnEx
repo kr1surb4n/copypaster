@@ -1,2 +1,0 @@
-# name: c.PyErr_WarnEx 
-int PyErr_WarnEx(PyObject *category, const char *message, Py_ssize_t stack_level)

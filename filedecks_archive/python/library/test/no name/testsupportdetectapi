@@ -1,2 +1,0 @@
-# name: test.support.detect_ 
-test.support.detect_api_mismatch(ref_api, other_api, *, ignore=())

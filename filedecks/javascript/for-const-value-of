@@ -1,4 +1,0 @@
-# name: for const value of 
-for (const value of iterable) {
-  console.log(value);
-}

@@ -1,2 +1,0 @@
-# name: c.PyOS_getsig 
-PyOS_sighandler_t PyOS_getsig(int i)

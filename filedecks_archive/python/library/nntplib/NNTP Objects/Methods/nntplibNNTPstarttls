@@ -1,2 +1,0 @@
-# name: nntplib.NNTP.starttl 
-NNTP.starttls(context=None)

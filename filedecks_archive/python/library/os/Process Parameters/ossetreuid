@@ -1,2 +1,0 @@
-# name: os.setreuid 
-os.setreuid(ruid, euid)

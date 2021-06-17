@@ -1,2 +1,0 @@
-# name: tkinter.colorchooser 
-class tkinter.colorchooser.Chooser(master=None, **options)

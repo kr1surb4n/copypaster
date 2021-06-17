@@ -1,2 +1,0 @@
-# name: zlib.adler32 
-zlib.adler32(data[, value])

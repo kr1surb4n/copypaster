@@ -1,2 +1,0 @@
-# name: ctypes.set_last_erro 
-ctypes.set_last_error(value)

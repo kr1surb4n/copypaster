@@ -1,2 +1,0 @@
-# name: c.PyMem_RawFree 
-void PyMem_RawFree(void *p)

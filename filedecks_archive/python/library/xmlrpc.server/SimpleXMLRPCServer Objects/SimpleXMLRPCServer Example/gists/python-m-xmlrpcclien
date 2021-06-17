@@ -1,2 +1,0 @@
-# name: python -m xmlrpc.cli 
-python -m xmlrpc.client

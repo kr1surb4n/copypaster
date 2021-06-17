@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.connect 
-SMTP.connect(host='localhost', port=0)

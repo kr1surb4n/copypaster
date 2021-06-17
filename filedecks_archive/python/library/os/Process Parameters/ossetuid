@@ -1,2 +1,0 @@
-# name: os.setuid 
-os.setuid(uid)

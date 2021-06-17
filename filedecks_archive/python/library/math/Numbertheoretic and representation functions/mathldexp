@@ -1,2 +1,0 @@
-# name: math.ldexp 
-math.ldexp(x, i)

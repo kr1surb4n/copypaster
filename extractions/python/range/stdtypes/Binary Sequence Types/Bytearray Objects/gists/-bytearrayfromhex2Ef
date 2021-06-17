@@ -1,3 +1,0 @@
-# name: >>> bytearray.fromhe 
->>> bytearray.fromhex('2Ef0 F1f2  ')
-bytearray(b'.\xf0\xf1\xf2')

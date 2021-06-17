@@ -1,2 +1,0 @@
-# name: Employee = NamedTupl 
-Employee = NamedTuple('Employee', [('name', str), ('id', int)])

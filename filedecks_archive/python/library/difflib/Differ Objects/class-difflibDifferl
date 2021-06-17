@@ -1,2 +1,0 @@
-# name: class difflib.Differ 
-class difflib.Differ(linejunk=None, charjunk=None)

@@ -1,2 +1,0 @@
-# name: c.Py_ReprEnter 
-int Py_ReprEnter(PyObject *object)

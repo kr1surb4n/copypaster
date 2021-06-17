@@ -1,2 +1,0 @@
-# name: xml.sax.handler.DTDH 
-DTDHandler.unparsedEntityDecl(name, publicId, systemId, ndata)

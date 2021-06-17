@@ -1,2 +1,0 @@
-# name: spam = __import__('s 
-spam = __import__('spam.ham', globals(), locals(), [], 0)

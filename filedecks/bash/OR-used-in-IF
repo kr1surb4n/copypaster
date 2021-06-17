@@ -1,2 +1,0 @@
-# name: OR used in IF 
-if [ "$Name" == "Daniya" ] || [ "$Name" == "Zach" ]

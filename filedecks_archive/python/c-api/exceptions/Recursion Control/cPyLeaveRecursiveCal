@@ -1,2 +1,0 @@
-# name: c.Py_LeaveRecursiveC 
-void Py_LeaveRecursiveCall(void)

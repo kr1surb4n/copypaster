@@ -1,2 +1,0 @@
-# name: pathlib.Path.open 
-Path.open(mode='r', buffering=-1, encoding=None, errors=None, newline=None)

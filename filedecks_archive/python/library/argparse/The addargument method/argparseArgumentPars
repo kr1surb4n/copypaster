@@ -1,2 +1,0 @@
-# name: argparse.ArgumentPar 
-ArgumentParser.add_argument(name or flags...[, action][, nargs][, const][, default][, type][, choices][, required][, help][, metavar][, dest])

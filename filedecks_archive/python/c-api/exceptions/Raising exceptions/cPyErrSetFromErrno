@@ -1,2 +1,0 @@
-# name: c.PyErr_SetFromErrno 
-PyObject* PyErr_SetFromErrno(PyObject *type)

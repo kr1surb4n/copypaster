@@ -1,2 +1,0 @@
-# name: c.PyFunction_SetDefa 
-int PyFunction_SetDefaults(PyObject *op, PyObject *defaults)

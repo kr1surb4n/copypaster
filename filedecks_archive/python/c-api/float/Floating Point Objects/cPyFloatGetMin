@@ -1,2 +1,0 @@
-# name: c.PyFloat_GetMin 
-double PyFloat_GetMin()

@@ -1,2 +1,0 @@
-# name: mypolicy = compat32. 
-mypolicy = compat32.clone(linesep='\r\n')

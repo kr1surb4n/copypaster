@@ -1,2 +1,0 @@
-# name: http.client.HTTPResp 
-class http.client.HTTPResponse(sock, debuglevel=0, method=None, url=None)

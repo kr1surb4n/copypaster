@@ -1,2 +1,0 @@
-# name: node = YourTransform 
-node = YourTransformer().visit(node)

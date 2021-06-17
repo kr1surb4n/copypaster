@@ -1,2 +1,0 @@
-# name: taxes = linear(0.3,  
-taxes = linear(0.3, 2)

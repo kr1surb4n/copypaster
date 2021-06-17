@@ -1,2 +1,0 @@
-# name: parser.st2tuple 
-parser.st2tuple(st, line_info=False, col_info=False)

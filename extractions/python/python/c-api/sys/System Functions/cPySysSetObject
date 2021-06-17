@@ -1,2 +1,0 @@
-# name: c.PySys_SetObject 
-int PySys_SetObject(const char *name, PyObject *v)

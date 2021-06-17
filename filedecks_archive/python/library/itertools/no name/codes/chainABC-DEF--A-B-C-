@@ -1,2 +1,0 @@
-# name: chain('ABC', 'DEF')  
-chain('ABC', 'DEF') --> A B C D E F

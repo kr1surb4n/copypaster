@@ -1,2 +1,0 @@
-# name: crypt.crypt 
-crypt.crypt(word, salt=None)

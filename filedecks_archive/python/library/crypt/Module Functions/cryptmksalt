@@ -1,2 +1,0 @@
-# name: crypt.mksalt 
-crypt.mksalt(method=None, *, rounds=None)

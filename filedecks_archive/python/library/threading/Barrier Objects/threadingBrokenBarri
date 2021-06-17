@@ -1,2 +1,0 @@
-# name: threading.BrokenBarr 
-exception threading.BrokenBarrierError

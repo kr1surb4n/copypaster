@@ -1,2 +1,0 @@
-# name: c.PyMem_New 
-TYPE* PyMem_New(TYPE, size_t n)

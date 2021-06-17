@@ -1,2 +1,0 @@
-# name: os.unlink 
-os.unlink(path, *, dir_fd=None)

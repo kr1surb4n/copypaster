@@ -1,2 +1,0 @@
-# name: c.Py_IsInitialized 
-int Py_IsInitialized()

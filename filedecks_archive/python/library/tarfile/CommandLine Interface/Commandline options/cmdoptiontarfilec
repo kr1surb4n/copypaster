@@ -1,2 +1,0 @@
-# name: cmdoption-tarfile-c 
--c <tarfile> <source1> ... <sourceN>

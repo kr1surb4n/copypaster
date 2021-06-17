@@ -1,2 +1,0 @@
-# name: typing.MutableMappin 
-class typing.MutableMapping(Mapping[KT, VT])

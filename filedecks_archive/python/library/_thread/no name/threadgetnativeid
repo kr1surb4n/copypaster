@@ -1,2 +1,0 @@
-# name: _thread.get_native_i 
-_thread.get_native_id()

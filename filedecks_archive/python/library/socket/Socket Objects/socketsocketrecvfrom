@@ -1,2 +1,0 @@
-# name: socket.socket.recvfr 
-socket.recvfrom_into(buffer[, nbytes[, flags]])

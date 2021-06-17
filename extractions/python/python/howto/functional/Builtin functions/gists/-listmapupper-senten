@@ -1,5 +1,0 @@
-# name: >>> list(map(upper,  
->>> list(map(upper, ['sentence', 'fragment']))
-['SENTENCE', 'FRAGMENT']
->>> [upper(s) for s in ['sentence', 'fragment']]
-['SENTENCE', 'FRAGMENT']

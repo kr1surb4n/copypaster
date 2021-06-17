@@ -1,2 +1,0 @@
-# name: xml.sax.saxutils.esc 
-xml.sax.saxutils.escape(data, entities={})

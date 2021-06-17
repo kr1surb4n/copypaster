@@ -1,2 +1,0 @@
-# name: tracemalloc.get_obje 
-tracemalloc.get_object_traceback(obj)

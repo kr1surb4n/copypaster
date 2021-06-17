@@ -1,2 +1,0 @@
-# name: f = io.StringIO("som 
-f = io.StringIO("some initial text data")

@@ -1,2 +1,0 @@
-# name: concurrent.futures.a 
-concurrent.futures.as_completed(fs, timeout=None)

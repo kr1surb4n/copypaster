@@ -1,2 +1,0 @@
-# name: socket.socket.sendal 
-socket.sendall(bytes[, flags])

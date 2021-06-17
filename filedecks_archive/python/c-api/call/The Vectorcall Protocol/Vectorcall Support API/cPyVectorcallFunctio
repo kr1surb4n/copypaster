@@ -1,2 +1,0 @@
-# name: c.PyVectorcall_Funct 
-vectorcallfunc PyVectorcall_Function(PyObject *op)

@@ -1,2 +1,0 @@
-# name: parser.ST.tolist 
-ST.tolist(line_info=False, col_info=False)

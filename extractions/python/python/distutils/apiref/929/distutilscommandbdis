@@ -1,2 +1,0 @@
-# name: distutils.command.bd 
-class distutils.command.bdist_msi.bdist_msi

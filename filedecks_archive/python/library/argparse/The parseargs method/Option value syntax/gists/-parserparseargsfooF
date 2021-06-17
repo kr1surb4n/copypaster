@@ -1,3 +1,0 @@
-# name: >>> parser.parse_arg 
->>> parser.parse_args(['--foo=FOO'])
-Namespace(foo='FOO', x=None)

@@ -1,2 +1,0 @@
-# name: stat.S_ISLNK 
-stat.S_ISLNK(mode)

@@ -1,2 +1,0 @@
-# name: zoneinfo.reset_tzpat 
-zoneinfo.reset_tzpath(to=None)

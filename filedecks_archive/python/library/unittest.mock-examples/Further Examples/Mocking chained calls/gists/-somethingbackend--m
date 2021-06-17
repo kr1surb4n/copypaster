@@ -1,3 +1,0 @@
-# name: >>> something.backen 
->>> something.backend = mock_backend
->>> something.method()

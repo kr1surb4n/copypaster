@@ -1,2 +1,0 @@
-# name: zlib.Decompress.deco 
-Decompress.decompress(data, max_length=0)

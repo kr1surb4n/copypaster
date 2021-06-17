@@ -1,2 +1,0 @@
-# name: c.PyImport_GetModule 
-PyObject* PyImport_GetModule(PyObject *name)

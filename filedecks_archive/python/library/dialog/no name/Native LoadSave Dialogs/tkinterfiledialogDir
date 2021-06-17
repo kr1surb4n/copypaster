@@ -1,2 +1,0 @@
-# name: tkinter.filedialog.D 
-class tkinter.filedialog.Directory(master=None, **options)

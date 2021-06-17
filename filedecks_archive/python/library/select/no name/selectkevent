@@ -1,2 +1,0 @@
-# name: select.kevent 
-select.kevent(ident, filter=KQ_FILTER_READ, flags=KQ_EV_ADD, fflags=0, data=0, udata=0)

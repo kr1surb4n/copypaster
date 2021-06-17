@@ -1,2 +1,0 @@
-# name: pdb.set_trace 
-pdb.set_trace(*, header=None)

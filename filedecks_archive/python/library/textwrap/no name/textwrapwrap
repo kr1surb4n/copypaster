@@ -1,2 +1,0 @@
-# name: textwrap.wrap 
-textwrap.wrap(text, width=70, **kwargs)

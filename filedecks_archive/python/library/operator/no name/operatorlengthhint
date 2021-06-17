@@ -1,2 +1,0 @@
-# name: operator.length_hint 
-operator.length_hint(obj, default=0)

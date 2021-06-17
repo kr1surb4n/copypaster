@@ -1,7 +1,0 @@
-# name: class Film(TypedDict 
-class Film(TypedDict):
-    title: str
-    year: int
-
-is_typeddict(Film)  # => True
-is_typeddict(Union[list, str])  # => False

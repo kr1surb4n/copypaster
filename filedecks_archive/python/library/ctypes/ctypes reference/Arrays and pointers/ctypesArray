@@ -1,2 +1,0 @@
-# name: ctypes.Array 
-class ctypes.Array(*args)

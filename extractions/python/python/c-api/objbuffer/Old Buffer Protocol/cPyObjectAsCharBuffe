@@ -1,2 +1,0 @@
-# name: c.PyObject_AsCharBuf 
-int PyObject_AsCharBuffer(PyObject *obj, const char **buffer, Py_ssize_t *buffer_len)

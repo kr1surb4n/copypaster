@@ -1,2 +1,0 @@
-# name: argparse.FileType 
-class argparse.FileType(mode='r', bufsize=-1, encoding=None, errors=None)

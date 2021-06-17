@@ -1,2 +1,0 @@
-# name: array.array.fromfile 
-array.fromfile(f, n)

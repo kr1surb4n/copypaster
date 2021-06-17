@@ -1,7 +1,0 @@
-# name: -----BEGIN RSA PRIVA 
------BEGIN RSA PRIVATE KEY-----
-... (private key in base64 encoding) ...
------END RSA PRIVATE KEY-----
------BEGIN CERTIFICATE-----
-... (certificate in base64 PEM encoding) ...
------END CERTIFICATE-----

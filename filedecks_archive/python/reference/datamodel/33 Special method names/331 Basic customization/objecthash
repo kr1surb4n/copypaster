@@ -1,2 +1,0 @@
-# name: object.__hash__ 
-object.__hash__(self)

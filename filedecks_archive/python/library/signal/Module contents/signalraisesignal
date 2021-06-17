@@ -1,2 +1,0 @@
-# name: signal.raise_signal 
-signal.raise_signal(signum)

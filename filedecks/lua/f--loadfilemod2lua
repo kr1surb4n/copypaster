@@ -1,2 +1,0 @@
-# name: f  loadfilemod2lua 
-f = loadfile('mod2.lua')  -- Call f() to run it.

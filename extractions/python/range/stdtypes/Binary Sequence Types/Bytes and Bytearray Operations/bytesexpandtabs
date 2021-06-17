@@ -1,2 +1,0 @@
-# name: bytes.expandtabs 
-bytes.expandtabs(tabsize=8)

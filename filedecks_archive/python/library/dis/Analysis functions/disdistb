@@ -1,2 +1,0 @@
-# name: dis.distb 
-dis.distb(tb=None, *, file=None)

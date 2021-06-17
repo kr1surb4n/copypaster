@@ -1,7 +1,0 @@
-# name: >>> q.exists()
-True
- 
->>> q.exists()
-True
->>> q.is_dir()
-False

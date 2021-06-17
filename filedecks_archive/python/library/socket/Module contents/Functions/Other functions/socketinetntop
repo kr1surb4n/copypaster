@@ -1,2 +1,0 @@
-# name: socket.inet_ntop 
-socket.inet_ntop(address_family, packed_ip)

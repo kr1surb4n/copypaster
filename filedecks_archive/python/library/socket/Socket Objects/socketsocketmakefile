@@ -1,2 +1,0 @@
-# name: socket.socket.makefi 
-socket.makefile(mode='r', buffering=None, *, encoding=None, errors=None, newline=None)

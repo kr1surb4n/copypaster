@@ -1,2 +1,0 @@
-# name: distutils.fancy_geto 
-FancyGetopt.generate_help([header=None])

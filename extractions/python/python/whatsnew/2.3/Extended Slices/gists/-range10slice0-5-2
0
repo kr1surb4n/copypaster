@@ -1,3 +1,0 @@
-# name: >>> range(10)[slice( 
->>> range(10)[slice(0, 5, 2)]
-[0, 2, 4]

@@ -1,2 +1,0 @@
-# name: >>> cert = conn.getp 
->>> cert = conn.getpeercert()

@@ -1,2 +1,0 @@
-# name: c.PyDescr_NewClassMe 
-PyObject* PyDescr_NewClassMethod(PyTypeObject *type, PyMethodDef *method)

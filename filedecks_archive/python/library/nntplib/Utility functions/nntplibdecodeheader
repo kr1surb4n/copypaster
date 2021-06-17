@@ -1,2 +1,0 @@
-# name: nntplib.decode_heade 
-nntplib.decode_header(header_str)

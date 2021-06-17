@@ -1,3 +1,0 @@
-# name: >>> shutil.which("py 
->>> shutil.which("python")
-'C:\\Python33\\python.EXE'

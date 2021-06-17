@@ -1,2 +1,0 @@
-# name: multiprocessing.Boun 
-class multiprocessing.BoundedSemaphore([value])

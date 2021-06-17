@@ -1,2 +1,0 @@
-# name: inspect.signature 
-inspect.signature(callable, *, follow_wrapped=True)

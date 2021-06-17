@@ -1,2 +1,0 @@
-# name: c.PyTuple_GetSlice 
-PyObject* PyTuple_GetSlice(PyObject *p, Py_ssize_t low, Py_ssize_t high)

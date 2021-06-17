@@ -1,2 +1,0 @@
-# name: tarfile.TarFile.addf 
-TarFile.addfile(tarinfo, fileobj=None)

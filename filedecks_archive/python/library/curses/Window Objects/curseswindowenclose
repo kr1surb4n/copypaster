@@ -1,2 +1,0 @@
-# name: curses.window.enclos 
-window.enclose(y, x)

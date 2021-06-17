@@ -1,2 +1,0 @@
-# name: tracemalloc.stop 
-tracemalloc.stop()

@@ -1,6 +1,0 @@
-# name: >>> mock = Mock()
->> 
->>> mock = Mock()
->>> mock.__iter__ = Mock(return_value=iter([]))
->>> list(mock)
-[]

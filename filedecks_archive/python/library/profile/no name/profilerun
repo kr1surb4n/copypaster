@@ -1,2 +1,0 @@
-# name: profile.run 
-profile.run(command, filename=None, sort=-1)

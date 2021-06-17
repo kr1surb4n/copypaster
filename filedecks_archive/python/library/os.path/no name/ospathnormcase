@@ -1,2 +1,0 @@
-# name: os.path.normcase 
-os.path.normcase(path)

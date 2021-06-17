@@ -1,2 +1,0 @@
-# name: ast.Assert 
-class ast.Assert(test, msg)

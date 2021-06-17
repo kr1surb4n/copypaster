@@ -1,2 +1,0 @@
-# name: ast.literal_eval 
-ast.literal_eval(node_or_string)

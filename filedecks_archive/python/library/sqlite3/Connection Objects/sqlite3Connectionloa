@@ -1,2 +1,0 @@
-# name: sqlite3.Connection.l 
-sqlite3.Connection.load_extension

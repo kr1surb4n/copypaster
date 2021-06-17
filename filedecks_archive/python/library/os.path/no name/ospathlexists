@@ -1,2 +1,0 @@
-# name: os.path.lexists 
-os.path.lexists(path)

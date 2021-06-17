@@ -1,2 +1,0 @@
-# name: asyncio.loop.set_deb 
-loop.set_debug(enabled: bool)

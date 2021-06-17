@@ -1,2 +1,0 @@
-# name: curses.ascii.isalnum 
-curses.ascii.isalnum(c)

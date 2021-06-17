@@ -1,2 +1,0 @@
-# name: csv.register_dialect 
-csv.register_dialect(name[, dialect[, **fmtparams]])

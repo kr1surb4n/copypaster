@@ -1,2 +1,0 @@
-# name: os.sched_getaffinity 
-os.sched_getaffinity(pid)

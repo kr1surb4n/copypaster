@@ -1,2 +1,0 @@
-# name: foo: Py_ssize_t = sy 
-foo: Py_ssize_t = sys.maxsize - 1

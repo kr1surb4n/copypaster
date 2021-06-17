@@ -1,4 +1,0 @@
-# name: const regex  AZg
-c 
-const regex = /[A-Z]/g;
-const found = paragraph.match(regex);

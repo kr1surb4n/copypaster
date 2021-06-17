@@ -1,2 +1,0 @@
-# name: $ 2to3 -f imports -f 
-$ 2to3 -f imports -f has_key example.py

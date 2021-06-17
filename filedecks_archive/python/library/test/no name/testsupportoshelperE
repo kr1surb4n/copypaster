@@ -1,2 +1,0 @@
-# name: test.support.os_help 
-EnvironmentVarGuard.unset(envvar)

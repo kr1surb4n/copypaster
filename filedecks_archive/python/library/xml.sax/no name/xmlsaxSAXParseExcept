@@ -1,2 +1,0 @@
-# name: xml.sax.SAXParseExce 
-exception xml.sax.SAXParseException(msg, exception, locator)

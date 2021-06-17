@@ -1,2 +1,0 @@
-# name: unicodedata.is_norma 
-unicodedata.is_normalized(form, unistr)

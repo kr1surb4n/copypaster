@@ -1,2 +1,0 @@
-# name: logging.config.dictC 
-logging.config.dictConfig(config)

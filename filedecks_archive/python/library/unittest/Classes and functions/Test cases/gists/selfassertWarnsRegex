@@ -1,4 +1,0 @@
-# name: self.assertWarnsRege 
-self.assertWarnsRegex(DeprecationWarning,
-                      r'legacy_function\(\) is deprecated',
-                      legacy_function, 'XYZ')

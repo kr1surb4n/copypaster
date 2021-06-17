@@ -1,2 +1,0 @@
-# name: shlex.shlex 
-class shlex.shlex(instream=None, infile=None, posix=False, punctuation_chars=False)

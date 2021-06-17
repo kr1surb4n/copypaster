@@ -1,2 +1,0 @@
-# name: readline.set_complet 
-readline.set_completion_display_matches_hook([function])

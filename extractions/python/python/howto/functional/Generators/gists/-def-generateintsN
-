@@ -1,4 +1,0 @@
-# name: >>> def generate_int 
->>> def generate_ints(N):
-...    for i in range(N):
-...        yield i

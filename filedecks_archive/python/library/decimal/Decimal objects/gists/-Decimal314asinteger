@@ -1,3 +1,0 @@
-# name: >>> Decimal('-3.14') 
->>> Decimal('-3.14').as_integer_ratio()
-(-157, 50)

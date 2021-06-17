@@ -1,2 +1,0 @@
-# name: select.kqueue.contro 
-kqueue.control(changelist, max_events[, timeout]) → eventlist

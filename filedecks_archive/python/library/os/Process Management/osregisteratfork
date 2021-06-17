@@ -1,2 +1,0 @@
-# name: os.register_at_fork 
-os.register_at_fork(*, before=None, after_in_parent=None, after_in_child=None)

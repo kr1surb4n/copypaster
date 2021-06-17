@@ -1,2 +1,0 @@
-# name: c.PyCode_Check 
-int PyCode_Check(PyObject *co)

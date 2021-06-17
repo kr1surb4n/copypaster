@@ -1,2 +1,0 @@
-# name: distutils.dep_util.n 
-distutils.dep_util.newer_group(sources, target[, missing='error'])

@@ -1,2 +1,0 @@
-# name: pprint.pprint 
-pprint.pprint(object, stream=None, indent=1, width=80, depth=None, *, compact=False, sort_dicts=True)

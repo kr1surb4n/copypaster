@@ -1,2 +1,0 @@
-# name: int.from_bytes 
-classmethod int.from_bytes(bytes, byteorder, *, signed=False)

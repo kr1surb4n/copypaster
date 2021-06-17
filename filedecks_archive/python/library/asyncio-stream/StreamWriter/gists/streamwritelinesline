@@ -1,3 +1,0 @@
-# name: stream.writelines(li 
-stream.writelines(lines)
-await stream.drain()

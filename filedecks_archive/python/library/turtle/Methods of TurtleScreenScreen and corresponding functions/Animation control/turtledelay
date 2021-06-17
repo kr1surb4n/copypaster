@@ -1,2 +1,0 @@
-# name: turtle.delay 
-turtle.delay(delay=None)

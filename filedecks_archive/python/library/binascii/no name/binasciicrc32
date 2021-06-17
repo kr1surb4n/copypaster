@@ -1,2 +1,0 @@
-# name: binascii.crc32 
-binascii.crc32(data[, value])

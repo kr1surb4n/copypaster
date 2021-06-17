@@ -1,2 +1,0 @@
-# name: os.setxattr 
-os.setxattr(path, attribute, value, flags=0, *, follow_symlinks=True)

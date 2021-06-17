@@ -1,2 +1,0 @@
-# name: winreg.QueryValue 
-winreg.QueryValue(key, sub_key)

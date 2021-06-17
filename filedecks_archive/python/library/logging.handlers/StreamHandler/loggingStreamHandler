@@ -1,2 +1,0 @@
-# name: logging.StreamHandle 
-logging.StreamHandler.terminator

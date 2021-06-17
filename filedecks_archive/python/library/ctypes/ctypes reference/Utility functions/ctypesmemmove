@@ -1,2 +1,0 @@
-# name: ctypes.memmove 
-ctypes.memmove(dst, src, count)

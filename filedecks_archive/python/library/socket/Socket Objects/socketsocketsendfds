@@ -1,2 +1,0 @@
-# name: socket.socket.send_f 
-socket.send_fds(sock, buffers, fds[, flags[, address]])

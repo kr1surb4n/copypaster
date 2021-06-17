@@ -1,3 +1,0 @@
-# name: rawparam = msg.get_p 
-rawparam = msg.get_param('foo')
-param = email.utils.collapse_rfc2231_value(rawparam)

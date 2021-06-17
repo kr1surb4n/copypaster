@@ -1,8 +1,0 @@
-# name: >>> def __str__(self 
->>> def __str__(self):
-...     return 'fooble'
-...
->>> mock = Mock()
->>> mock.__str__ = __str__
->>> str(mock)
-'fooble'

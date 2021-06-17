@@ -1,2 +1,0 @@
-# name: email.utils.quote 
-email.utils.quote(str)

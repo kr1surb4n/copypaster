@@ -1,2 +1,0 @@
-# name: zipfile.ZipFile.extr 
-ZipFile.extractall(path=None, members=None, pwd=None)

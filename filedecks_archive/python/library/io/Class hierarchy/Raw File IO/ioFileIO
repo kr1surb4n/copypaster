@@ -1,2 +1,0 @@
-# name: io.FileIO 
-class io.FileIO(name, mode='r', closefd=True, opener=None)

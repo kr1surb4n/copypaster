@@ -1,2 +1,0 @@
-# name: typing.Dict 
-class typing.Dict(dict, MutableMapping[KT, VT])

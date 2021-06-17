@@ -1,2 +1,0 @@
-# name: locale.format_string 
-locale.format_string(format, val, grouping=False, monetary=False)

@@ -1,2 +1,0 @@
-# name: pickle.dumps 
-pickle.dumps(obj, protocol=None, *, fix_imports=True, buffer_callback=None)

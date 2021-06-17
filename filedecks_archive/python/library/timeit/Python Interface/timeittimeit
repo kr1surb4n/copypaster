@@ -1,2 +1,0 @@
-# name: timeit.timeit 
-timeit.timeit(stmt='pass', setup='pass', timer=<default timer>, number=1000000, globals=None)

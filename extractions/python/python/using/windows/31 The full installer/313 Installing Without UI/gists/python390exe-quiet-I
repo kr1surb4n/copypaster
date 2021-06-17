@@ -1,2 +1,0 @@
-# name: python-3.9.0.exe /qu 
-python-3.9.0.exe /quiet InstallAllUsers=1 PrependPath=1 Include_test=0

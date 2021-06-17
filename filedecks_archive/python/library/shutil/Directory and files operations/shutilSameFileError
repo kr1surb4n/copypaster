@@ -1,2 +1,0 @@
-# name: shutil.SameFileError 
-exception shutil.SameFileError

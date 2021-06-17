@@ -1,2 +1,0 @@
-# name: c.PyTuple_SetItem 
-int PyTuple_SetItem(PyObject *p, Py_ssize_t pos, PyObject *o)

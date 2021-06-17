@@ -1,3 +1,0 @@
-# name: >>> PureWindowsPath( 
->>> PureWindowsPath('//host/share').root
-'\\'

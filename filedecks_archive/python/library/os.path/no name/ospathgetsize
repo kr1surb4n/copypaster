@@ -1,2 +1,0 @@
-# name: os.path.getsize 
-os.path.getsize(path)

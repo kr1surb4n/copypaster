@@ -1,2 +1,0 @@
-# name: asyncio.loop.add_wri 
-loop.add_writer(fd, callback, *args)

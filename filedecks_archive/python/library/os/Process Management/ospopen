@@ -1,2 +1,0 @@
-# name: os.popen 
-os.popen(cmd, mode='r', buffering=-1)

@@ -1,2 +1,0 @@
-# name: os.fdopen 
-os.fdopen(fd, *args, **kwargs)

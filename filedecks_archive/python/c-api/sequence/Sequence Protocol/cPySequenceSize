@@ -1,2 +1,0 @@
-# name: c.PySequence_Size 
-Py_ssize_t PySequence_Size(PyObject *o)

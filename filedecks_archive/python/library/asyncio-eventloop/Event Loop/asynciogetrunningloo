@@ -1,2 +1,0 @@
-# name: asyncio.get_running_ 
-asyncio.get_running_loop()

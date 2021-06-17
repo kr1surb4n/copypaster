@@ -1,2 +1,0 @@
-# name: winreg.SaveKey 
-winreg.SaveKey(key, file_name)

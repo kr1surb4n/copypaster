@@ -1,2 +1,0 @@
-# name: distutils.util.execu 
-distutils.util.execute(func, args[, msg=None, verbose=0, dry_run=0])

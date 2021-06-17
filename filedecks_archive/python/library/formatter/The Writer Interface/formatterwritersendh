@@ -1,2 +1,0 @@
-# name: formatter.writer.sen 
-writer.send_hor_rule(*args, **kw)

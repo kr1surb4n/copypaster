@@ -1,4 +1,0 @@
-# name: retcode = os.spawnlp 
-retcode = os.spawnlp(os.P_WAIT, "/bin/mycmd", "mycmd", "myarg")
-==>
-retcode = call(["/bin/mycmd", "myarg"])

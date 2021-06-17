@@ -1,2 +1,0 @@
-# name: c.PyMem_Calloc 
-void* PyMem_Calloc(size_t nelem, size_t elsize)

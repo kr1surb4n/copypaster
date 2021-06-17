@@ -1,2 +1,0 @@
-# name: c._Py_c_neg 
-Py_complex _Py_c_neg(Py_complex complex)

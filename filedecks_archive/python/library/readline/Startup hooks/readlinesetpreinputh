@@ -1,2 +1,0 @@
-# name: readline.set_pre_inp 
-readline.set_pre_input_hook([function])

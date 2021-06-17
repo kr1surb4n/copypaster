@@ -1,2 +1,0 @@
-# name: curses.unget_wch 
-curses.unget_wch(ch)

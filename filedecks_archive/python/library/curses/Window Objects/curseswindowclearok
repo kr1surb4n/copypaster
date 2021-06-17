@@ -1,2 +1,0 @@
-# name: curses.window.clearo 
-window.clearok(flag)

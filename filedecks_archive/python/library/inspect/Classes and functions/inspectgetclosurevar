@@ -1,2 +1,0 @@
-# name: inspect.getclosureva 
-inspect.getclosurevars(func)

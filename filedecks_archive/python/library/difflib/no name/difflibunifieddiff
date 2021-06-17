@@ -1,2 +1,0 @@
-# name: difflib.unified_diff 
-difflib.unified_diff(a, b, fromfile='', tofile='', fromfiledate='', tofiledate='', n=3, lineterm='\n')

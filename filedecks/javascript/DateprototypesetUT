@@ -1,2 +1,0 @@
-# name: DateprototypesetUT 
-Date.prototype.setUTCSeconds()

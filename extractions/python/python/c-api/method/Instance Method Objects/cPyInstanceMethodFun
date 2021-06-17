@@ -1,2 +1,0 @@
-# name: c.PyInstanceMethod_F 
-PyObject* PyInstanceMethod_Function(PyObject *im)

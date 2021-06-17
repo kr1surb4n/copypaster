@@ -1,2 +1,0 @@
-# name: c.PyUnicode_FromForm 
-PyObject* PyUnicode_FromFormatV(const char *format, va_list vargs)

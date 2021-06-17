@@ -1,2 +1,0 @@
-# name: queue.PriorityQueue 
-class queue.PriorityQueue(maxsize=0)

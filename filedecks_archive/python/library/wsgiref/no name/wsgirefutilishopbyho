@@ -1,2 +1,0 @@
-# name: wsgiref.util.is_hop_ 
-wsgiref.util.is_hop_by_hop(header_name)

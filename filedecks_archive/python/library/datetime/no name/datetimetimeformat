@@ -1,2 +1,0 @@
-# name: datetime.time.__form 
-time.__format__(format)

@@ -1,2 +1,0 @@
-# name: queue.Queue 
-class queue.Queue(maxsize=0)

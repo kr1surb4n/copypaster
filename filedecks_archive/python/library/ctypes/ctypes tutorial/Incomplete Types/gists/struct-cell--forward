@@ -1,7 +1,0 @@
-# name: struct cell; /* forw 
-struct cell; /* forward declaration */
-
-struct cell {
-    char *name;
-    struct cell *next;
-};

@@ -1,2 +1,0 @@
-# name: object.__delattr__ 
-object.__delattr__(self, name)

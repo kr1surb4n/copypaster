@@ -1,2 +1,0 @@
-# name: logging.handlers.Que 
-logging.handlers.QueueHandler.enqueue

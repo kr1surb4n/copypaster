@@ -1,2 +1,0 @@
-# name: PyObject *Py_BuildVa 
-PyObject *Py_BuildValue(const char *format, ...);

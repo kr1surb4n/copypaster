@@ -1,2 +1,0 @@
-# name: c.PyTuple_Size 
-Py_ssize_t PyTuple_Size(PyObject *p)

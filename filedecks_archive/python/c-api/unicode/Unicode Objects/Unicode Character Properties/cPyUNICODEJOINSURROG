@@ -1,2 +1,0 @@
-# name: c.Py_UNICODE_JOIN_SU 
-Py_UNICODE_JOIN_SURROGATES(high, low)

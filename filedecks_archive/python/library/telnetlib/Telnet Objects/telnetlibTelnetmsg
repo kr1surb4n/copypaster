@@ -1,2 +1,0 @@
-# name: telnetlib.Telnet.msg 
-Telnet.msg(msg, *args)

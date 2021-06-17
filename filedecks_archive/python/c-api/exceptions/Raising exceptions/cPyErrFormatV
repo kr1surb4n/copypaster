@@ -1,2 +1,0 @@
-# name: c.PyErr_FormatV 
-PyObject* PyErr_FormatV(PyObject *exception, const char *format, va_list vargs)

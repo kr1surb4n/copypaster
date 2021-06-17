@@ -1,3 +1,0 @@
-# name: for key in sorted(my 
-for key in sorted(mydict):
-    ...  # do whatever with mydict[key]...

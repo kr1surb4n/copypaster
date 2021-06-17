@@ -1,2 +1,0 @@
-# name: urllib.parse.urlpars 
-urllib.parse.urlparse(urlstring, scheme='', allow_fragments=True)

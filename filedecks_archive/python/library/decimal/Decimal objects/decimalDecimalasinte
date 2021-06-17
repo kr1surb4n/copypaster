@@ -1,2 +1,0 @@
-# name: decimal.Decimal.as_i 
-decimal.Decimal.as_integer_ratio

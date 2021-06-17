@@ -1,2 +1,0 @@
-# name: opcode-POP_JUMP_IF_F 
-POP_JUMP_IF_FALSE(target)

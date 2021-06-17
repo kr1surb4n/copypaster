@@ -1,2 +1,0 @@
-# name: cmdoption-zipfile-c 
--c <zipfile> <source1> ... <sourceN>

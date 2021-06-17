@@ -1,2 +1,0 @@
-# name: urllib.parse.urljoin 
-urllib.parse.urljoin(base, url, allow_fragments=True)

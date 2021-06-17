@@ -1,2 +1,0 @@
-# name: mailbox.mbox 
-class mailbox.mbox(path, factory=None, create=True)

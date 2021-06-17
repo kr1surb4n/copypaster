@@ -1,2 +1,0 @@
-# name: distutils.util.split 
-distutils.util.split_quoted(s)

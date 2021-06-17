@@ -1,5 +1,0 @@
-# name: Extension(...,
-      
-Extension(...,
-          library_dirs=['/usr/X11R6/lib'],
-          libraries=['X11', 'Xt'])

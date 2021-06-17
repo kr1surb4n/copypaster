@@ -1,6 +1,0 @@
-# name:     while number   
-    while number != 0 {
-        println!("{}!", number);
-
-        number -= 1;
-    }

@@ -1,2 +1,0 @@
-# name: c.PySlice_New 
-PyObject* PySlice_New(PyObject *start, PyObject *stop, PyObject *step)

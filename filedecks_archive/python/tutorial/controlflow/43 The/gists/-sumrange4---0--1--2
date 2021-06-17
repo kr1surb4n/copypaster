@@ -1,3 +1,0 @@
-# name: >>> sum(range(4))  # 
->>> sum(range(4))  # 0 + 1 + 2 + 3
-6

@@ -1,2 +1,0 @@
-# name: sysconfig.get_makefi 
-sysconfig.get_makefile_filename()

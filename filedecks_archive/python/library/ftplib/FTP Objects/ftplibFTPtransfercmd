@@ -1,2 +1,0 @@
-# name: ftplib.FTP.transferc 
-FTP.transfercmd(cmd, rest=None)

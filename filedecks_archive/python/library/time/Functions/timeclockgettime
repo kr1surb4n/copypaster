@@ -1,2 +1,0 @@
-# name: time.clock_gettime 
-time.clock_gettime(clk_id) → float

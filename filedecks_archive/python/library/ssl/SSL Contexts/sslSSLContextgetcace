@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.get_c 
-SSLContext.get_ca_certs(binary_form=False)

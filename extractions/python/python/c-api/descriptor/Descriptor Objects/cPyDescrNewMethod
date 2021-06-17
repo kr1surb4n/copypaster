@@ -1,2 +1,0 @@
-# name: c.PyDescr_NewMethod 
-PyObject* PyDescr_NewMethod(PyTypeObject *type, struct PyMethodDef *meth)

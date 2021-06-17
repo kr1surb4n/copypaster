@@ -1,2 +1,0 @@
-# name: python setup.py bdis 
-python setup.py bdist --help-formats

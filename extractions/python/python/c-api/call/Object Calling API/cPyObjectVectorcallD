@@ -1,2 +1,0 @@
-# name: c.PyObject_Vectorcal 
-PyObject* PyObject_VectorcallDict(PyObject *callable, PyObject *const *args, size_t nargsf, PyObject *kwdict)

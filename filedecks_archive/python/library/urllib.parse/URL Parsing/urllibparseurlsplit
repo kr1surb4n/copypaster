@@ -1,2 +1,0 @@
-# name: urllib.parse.urlspli 
-urllib.parse.urlsplit(urlstring, scheme='', allow_fragments=True)

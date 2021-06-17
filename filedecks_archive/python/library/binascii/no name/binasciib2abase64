@@ -1,2 +1,0 @@
-# name: binascii.b2a_base64 
-binascii.b2a_base64(data, *, newline=True)

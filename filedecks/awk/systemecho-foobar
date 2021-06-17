@@ -1,2 +1,0 @@
-# name: systemecho foobar 
-system("echo foobar");

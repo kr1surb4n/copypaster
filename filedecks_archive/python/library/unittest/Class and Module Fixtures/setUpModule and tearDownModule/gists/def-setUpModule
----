@@ -1,7 +1,0 @@
-# name: def setUpModule():
-  
-def setUpModule():
-    createConnection()
-
-def tearDownModule():
-    closeConnection()

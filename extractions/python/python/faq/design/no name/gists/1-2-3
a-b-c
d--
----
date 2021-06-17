@@ -1,8 +1,0 @@
-# name: [1, 2, 3,]
-('a', 'b' 
-[1, 2, 3,]
-('a', 'b', 'c',)
-d = {
-    "A": [1, 5],
-    "B": [6, 7],  # last trailing comma is optional but good style
-}

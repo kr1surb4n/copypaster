@@ -1,2 +1,0 @@
-# name: os.pathconf 
-os.pathconf(path, name)

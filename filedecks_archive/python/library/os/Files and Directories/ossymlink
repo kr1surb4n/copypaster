@@ -1,2 +1,0 @@
-# name: os.symlink 
-os.symlink(src, dst, target_is_directory=False, *, dir_fd=None)

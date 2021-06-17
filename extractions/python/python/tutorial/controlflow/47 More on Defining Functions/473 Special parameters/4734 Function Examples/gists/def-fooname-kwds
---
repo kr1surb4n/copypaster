@@ -1,3 +1,0 @@
-# name: def foo(name, **kwds 
-def foo(name, **kwds):
-    return 'name' in kwds

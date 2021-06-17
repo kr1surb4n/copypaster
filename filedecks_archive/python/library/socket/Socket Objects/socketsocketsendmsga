@@ -1,2 +1,0 @@
-# name: socket.socket.sendms 
-socket.sendmsg_afalg([msg, ]*, op[, iv[, assoclen[, flags]]])

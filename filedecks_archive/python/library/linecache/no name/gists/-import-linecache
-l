@@ -1,4 +1,0 @@
-# name: >>> import linecache 
->>> import linecache
->>> linecache.getline(linecache.__file__, 8)
-'import sys\n'

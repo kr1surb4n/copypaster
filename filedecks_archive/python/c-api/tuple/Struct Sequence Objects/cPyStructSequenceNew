@@ -1,2 +1,0 @@
-# name: c.PyStructSequence_N 
-PyObject* PyStructSequence_New(PyTypeObject *type)

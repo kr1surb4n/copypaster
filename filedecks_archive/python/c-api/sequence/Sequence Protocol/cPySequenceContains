@@ -1,2 +1,0 @@
-# name: c.PySequence_Contain 
-int PySequence_Contains(PyObject *o, PyObject *value)

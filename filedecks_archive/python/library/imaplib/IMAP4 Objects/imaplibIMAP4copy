@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.copy 
-IMAP4.copy(message_set, new_mailbox)

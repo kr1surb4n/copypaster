@@ -1,2 +1,0 @@
-# name: PyObject *am_aiter(P 
-PyObject *am_aiter(PyObject *self);

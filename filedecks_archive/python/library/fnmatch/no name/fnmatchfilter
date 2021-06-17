@@ -1,2 +1,0 @@
-# name: fnmatch.filter 
-fnmatch.filter(names, pattern)

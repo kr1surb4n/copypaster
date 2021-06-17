@@ -1,2 +1,0 @@
-# name: c._Py_c_pow 
-Py_complex _Py_c_pow(Py_complex num, Py_complex exp)

@@ -1,2 +1,0 @@
-# name: zipfile.Path.read_te 
-Path.read_text(*, **)

@@ -1,3 +1,0 @@
-# name: stdscr.addstr("Prett 
-stdscr.addstr("Pretty text", curses.color_pair(1))
-stdscr.refresh()

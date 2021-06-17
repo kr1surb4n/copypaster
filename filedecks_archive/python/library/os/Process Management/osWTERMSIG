@@ -1,2 +1,0 @@
-# name: os.WTERMSIG 
-os.WTERMSIG(status)

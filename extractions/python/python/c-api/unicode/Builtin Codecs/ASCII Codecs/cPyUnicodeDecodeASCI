@@ -1,2 +1,0 @@
-# name: c.PyUnicode_DecodeAS 
-PyObject* PyUnicode_DecodeASCII(const char *s, Py_ssize_t size, const char *errors)

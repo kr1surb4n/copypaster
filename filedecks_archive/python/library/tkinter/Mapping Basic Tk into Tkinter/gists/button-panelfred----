@@ -1,2 +1,0 @@
-# name: button .panel.fred   
-button .panel.fred          =====>  fred = Button(panel)

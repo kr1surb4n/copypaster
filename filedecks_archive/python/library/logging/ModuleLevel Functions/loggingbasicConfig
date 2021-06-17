@@ -1,2 +1,0 @@
-# name: logging.basicConfig 
-logging.basicConfig(**kwargs)

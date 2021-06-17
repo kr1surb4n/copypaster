@@ -1,2 +1,0 @@
-# name: smtpd.DebuggingServe 
-class smtpd.DebuggingServer(localaddr, remoteaddr)

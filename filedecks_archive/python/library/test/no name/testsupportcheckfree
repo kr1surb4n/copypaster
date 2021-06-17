@@ -1,2 +1,0 @@
-# name: test.support.check_f 
-test.support.check_free_after_iterating(test, iter, cls, args=())

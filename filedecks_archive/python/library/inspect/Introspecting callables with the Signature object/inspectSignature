@@ -1,2 +1,0 @@
-# name: inspect.Signature 
-class inspect.Signature(parameters=None, *, return_annotation=Signature.empty)

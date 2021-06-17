@@ -1,2 +1,0 @@
-# name: c.PyCell_New 
-PyObject* PyCell_New(PyObject *ob)

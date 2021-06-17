@@ -1,2 +1,0 @@
-# name: select.epoll.fromfd 
-epoll.fromfd(fd)

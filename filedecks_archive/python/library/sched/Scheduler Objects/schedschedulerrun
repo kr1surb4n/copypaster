@@ -1,2 +1,0 @@
-# name: sched.scheduler.run 
-scheduler.run(blocking=True)

@@ -1,2 +1,0 @@
-# name: turtle.ondrag 
-turtle.ondrag(fun, btn=1, add=None)

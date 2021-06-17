@@ -1,2 +1,0 @@
-# name: Arrayprototypelast 
-Array.prototype.lastIndexOf(searchElement[, fromIndex])

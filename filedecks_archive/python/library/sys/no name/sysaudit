@@ -1,2 +1,0 @@
-# name: sys.audit 
-sys.audit(event, *args)

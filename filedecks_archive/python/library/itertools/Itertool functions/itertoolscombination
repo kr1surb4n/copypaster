@@ -1,2 +1,0 @@
-# name: itertools.combinatio 
-itertools.combinations_with_replacement(iterable, r)

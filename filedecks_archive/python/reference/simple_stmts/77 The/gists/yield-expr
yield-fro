@@ -1,4 +1,0 @@
-# name: (yield <expr>)
-(yiel 
-(yield <expr>)
-(yield from <expr>)

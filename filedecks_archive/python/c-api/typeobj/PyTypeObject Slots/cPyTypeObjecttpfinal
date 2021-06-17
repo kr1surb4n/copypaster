@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_fi 
-destructor PyTypeObject.tp_finalize

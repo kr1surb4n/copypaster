@@ -1,2 +1,0 @@
-# name: tarfile.open 
-tarfile.open(name=None, mode='r', fileobj=None, bufsize=10240, **kwargs)

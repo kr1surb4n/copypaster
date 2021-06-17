@@ -1,2 +1,0 @@
-# name: result = [obj.method 
-result = [obj.method() for obj in mylist]

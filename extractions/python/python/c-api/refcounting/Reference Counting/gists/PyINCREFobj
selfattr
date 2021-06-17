@@ -1,4 +1,0 @@
-# name: Py_INCREF(obj);
-self 
-Py_INCREF(obj);
-self->attr = obj;

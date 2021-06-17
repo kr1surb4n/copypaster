@@ -1,2 +1,0 @@
-# name: curses.window.border 
-window.border([ls[, rs[, ts[, bs[, tl[, tr[, bl[, br]]]]]]]])

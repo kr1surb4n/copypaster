@@ -1,3 +1,0 @@
-# name: python -m timeit -s  
-python -m timeit -s 'setup here' 'benchmarked code here'
-python -m timeit -h # for details

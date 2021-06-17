@@ -1,2 +1,0 @@
-# name: c.PyMapping_Items 
-PyObject* PyMapping_Items(PyObject *o)

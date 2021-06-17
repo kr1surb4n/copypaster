@@ -1,4 +1,0 @@
-# name: >>> bytes(p)
-b'/etc' 
->>> bytes(p)
-b'/etc'

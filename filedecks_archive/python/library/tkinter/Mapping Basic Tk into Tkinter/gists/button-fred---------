@@ -1,2 +1,0 @@
-# name: button .fred         
-button .fred                =====>  fred = Button()

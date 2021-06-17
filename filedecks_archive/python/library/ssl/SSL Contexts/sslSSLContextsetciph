@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.set_c 
-SSLContext.set_ciphers(ciphers)

@@ -1,2 +1,0 @@
-# name: OR used in express 
-echo "Always executed" || echo "Only executed if first command fails"

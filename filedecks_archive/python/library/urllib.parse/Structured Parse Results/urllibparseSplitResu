@@ -1,2 +1,0 @@
-# name: urllib.parse.SplitRe 
-class urllib.parse.SplitResultBytes(scheme, netloc, path, query, fragment)

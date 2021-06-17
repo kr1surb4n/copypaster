@@ -1,2 +1,0 @@
-# name: c.PyThreadState_GetD 
-PyObject* PyThreadState_GetDict()

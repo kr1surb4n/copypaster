@@ -1,2 +1,0 @@
-# name: object.__aiter__ 
-object.__aiter__(self)

@@ -1,2 +1,0 @@
-# name: copy.deepcopy 
-copy.deepcopy(x[, memo])

@@ -1,2 +1,0 @@
-# name: sqlite3.DatabaseErro 
-exception sqlite3.DatabaseError

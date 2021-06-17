@@ -1,2 +1,0 @@
-# name: Foo_Type.ob_type = & 
-Foo_Type.ob_type = &PyType_Type;

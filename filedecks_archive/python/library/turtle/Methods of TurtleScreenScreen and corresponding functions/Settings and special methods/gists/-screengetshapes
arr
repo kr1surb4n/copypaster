@@ -1,3 +1,0 @@
-# name: >>> screen.getshapes 
->>> screen.getshapes()
-['arrow', 'blank', 'circle', ..., 'turtle']

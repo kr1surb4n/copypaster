@@ -1,2 +1,0 @@
-# name: tty.setcbreak 
-tty.setcbreak(fd, when=termios.TCSAFLUSH)

@@ -1,2 +1,0 @@
-# name: rlcompleter.Complete 
-Completer.complete(text, state)

@@ -1,2 +1,0 @@
-# name: pkgutil.get_loader 
-pkgutil.get_loader(module_or_name)

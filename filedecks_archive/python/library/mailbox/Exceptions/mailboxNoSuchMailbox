@@ -1,2 +1,0 @@
-# name: mailbox.NoSuchMailbo 
-exception mailbox.NoSuchMailboxError

@@ -1,3 +1,0 @@
-# name: ctx: Context = copy_ 
-ctx: Context = copy_context()
-print(list(ctx.items()))

@@ -1,2 +1,0 @@
-# name: locale.currency 
-locale.currency(val, symbol=True, grouping=False, international=False)

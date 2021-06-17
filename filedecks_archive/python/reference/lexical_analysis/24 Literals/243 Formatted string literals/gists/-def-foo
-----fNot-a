@@ -1,7 +1,0 @@
-# name: >>> def foo():
-...   
->>> def foo():
-...     f"Not a docstring"
-...
->>> foo.__doc__ is None
-True

@@ -1,2 +1,0 @@
-# name: formatter.NullFormat 
-class formatter.NullFormatter(writer=None)

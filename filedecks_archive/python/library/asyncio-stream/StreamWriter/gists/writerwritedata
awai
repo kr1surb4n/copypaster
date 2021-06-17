@@ -1,4 +1,0 @@
-# name: writer.write(data)
-a 
-writer.write(data)
-await writer.drain()

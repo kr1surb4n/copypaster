@@ -1,2 +1,0 @@
-# name: ast.Call 
-class ast.Call(func, args, keywords, starargs, kwargs)

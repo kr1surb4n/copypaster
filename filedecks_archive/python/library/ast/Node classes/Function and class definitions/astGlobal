@@ -1,2 +1,0 @@
-# name: ast.Global 
-class ast.Global(names)

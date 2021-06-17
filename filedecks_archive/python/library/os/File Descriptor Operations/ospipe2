@@ -1,2 +1,0 @@
-# name: os.pipe2 
-os.pipe2(flags)

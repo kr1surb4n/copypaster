@@ -1,2 +1,0 @@
-# name: faulthandler.cancel_ 
-faulthandler.cancel_dump_traceback_later()

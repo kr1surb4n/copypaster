@@ -1,2 +1,0 @@
-# name: operator.setitem 
-operator.setitem(a, b, c)

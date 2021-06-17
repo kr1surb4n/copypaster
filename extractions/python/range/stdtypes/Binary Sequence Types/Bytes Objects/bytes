@@ -1,2 +1,0 @@
-# name: bytes 
-class bytes([source[, encoding[, errors]]])

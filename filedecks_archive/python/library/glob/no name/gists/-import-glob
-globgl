@@ -1,7 +1,0 @@
-# name: >>> import glob
->>>  
->>> import glob
->>> glob.glob('*.gif')
-['card.gif']
->>> glob.glob('.c*')
-['.card.gif']

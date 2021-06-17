@@ -1,2 +1,0 @@
-# name: argparse.ArgumentPar 
-ArgumentParser.convert_arg_line_to_args(arg_line)

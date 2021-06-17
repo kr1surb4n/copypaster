@@ -1,2 +1,0 @@
-# name: importlib.util.resol 
-importlib.util.resolve_name(name, package)

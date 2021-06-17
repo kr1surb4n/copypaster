@@ -1,2 +1,0 @@
-# name: fileinput.FileInput 
-class fileinput.FileInput(files=None, inplace=False, backup='', *, mode='r', openhook=None)

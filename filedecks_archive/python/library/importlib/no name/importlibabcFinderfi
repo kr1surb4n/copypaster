@@ -1,2 +1,0 @@
-# name: importlib.abc.Finder 
-importlib.abc.Finder.find_module

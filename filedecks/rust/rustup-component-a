@@ -1,2 +1,0 @@
-# name: rustup component a 
-rustup component add rustfmt --toolchain nightly

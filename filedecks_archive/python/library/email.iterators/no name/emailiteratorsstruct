@@ -1,2 +1,0 @@
-# name: email.iterators._str 
-email.iterators._structure(msg, fp=None, level=0, include_default=False)

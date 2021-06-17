@@ -1,5 +1,0 @@
-# name: class C:
-    @classm 
-class C:
-    @classmethod
-    def f(cls, arg1, arg2, ...): ...

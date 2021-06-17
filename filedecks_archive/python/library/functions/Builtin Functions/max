@@ -1,2 +1,0 @@
-# name: max 
-max(iterable, *[, key, default])

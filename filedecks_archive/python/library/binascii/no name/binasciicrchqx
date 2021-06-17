@@ -1,2 +1,0 @@
-# name: binascii.crc_hqx 
-binascii.crc_hqx(data, value)

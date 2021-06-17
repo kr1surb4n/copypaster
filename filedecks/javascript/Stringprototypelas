@@ -1,2 +1,0 @@
-# name: Stringprototypelas 
-String.prototype.lastIndexOf(searchValue [, fromIndex])

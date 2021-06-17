@@ -1,2 +1,0 @@
-# name: timeit.Timer('for i  
-timeit.Timer('for i in range(10): oct(i)', 'gc.enable()').timeit()

@@ -1,2 +1,0 @@
-# name: logger = logging.get 
-logger = logging.getLogger(__name__)

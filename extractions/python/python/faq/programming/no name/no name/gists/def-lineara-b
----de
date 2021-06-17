@@ -1,6 +1,0 @@
-# name: def linear(a, b):
-   
-def linear(a, b):
-    def result(x):
-        return a * x + b
-    return result

@@ -1,2 +1,0 @@
-# name: sys.displayhook 
-sys.displayhook(value)

@@ -1,4 +1,0 @@
-# name: if __name__ == "__ma 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()

@@ -1,2 +1,0 @@
-# name: c.PyFrozenSet_Type 
-PyTypeObject PyFrozenSet_Type

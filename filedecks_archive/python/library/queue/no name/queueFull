@@ -1,2 +1,0 @@
-# name: queue.Full 
-exception queue.Full

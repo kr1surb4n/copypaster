@@ -1,2 +1,0 @@
-# name: optparse.OptionParse 
-OptionParser.remove_option(opt_str)

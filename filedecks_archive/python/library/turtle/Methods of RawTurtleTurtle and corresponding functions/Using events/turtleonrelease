@@ -1,2 +1,0 @@
-# name: turtle.onrelease 
-turtle.onrelease(fun, btn=1, add=None)

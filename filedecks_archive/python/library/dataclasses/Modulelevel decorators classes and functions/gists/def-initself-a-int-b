@@ -1,2 +1,0 @@
-# name: def __init__(self, a 
-def __init__(self, a: int, b: int = 0):

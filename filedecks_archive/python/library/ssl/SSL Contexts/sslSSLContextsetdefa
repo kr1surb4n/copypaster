@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.set_d 
-SSLContext.set_default_verify_paths()

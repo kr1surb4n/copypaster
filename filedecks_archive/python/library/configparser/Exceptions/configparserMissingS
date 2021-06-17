@@ -1,2 +1,0 @@
-# name: configparser.Missing 
-exception configparser.MissingSectionHeaderError

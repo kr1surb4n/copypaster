@@ -1,2 +1,0 @@
-# name: $ yum install system 
-$ yum install systemtap-sdt-devel

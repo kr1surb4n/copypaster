@@ -1,2 +1,0 @@
-# name: signal.signal 
-signal.signal(signalnum, handler)

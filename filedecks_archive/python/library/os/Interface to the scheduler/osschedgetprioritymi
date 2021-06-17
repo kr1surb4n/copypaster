@@ -1,2 +1,0 @@
-# name: os.sched_get_priorit 
-os.sched_get_priority_min(policy)

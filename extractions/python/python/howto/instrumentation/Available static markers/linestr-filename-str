@@ -1,2 +1,0 @@
-# name: line(str filename, s 
-line(str filename, str funcname, int lineno)

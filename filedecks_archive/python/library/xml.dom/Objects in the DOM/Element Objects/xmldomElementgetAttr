@@ -1,2 +1,0 @@
-# name: xml.dom.Element.getA 
-Element.getAttributeNodeNS(namespaceURI, localName)

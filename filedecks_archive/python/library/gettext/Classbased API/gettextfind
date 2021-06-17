@@ -1,2 +1,0 @@
-# name: gettext.find 
-gettext.find(domain, localedir=None, languages=None, all=False)

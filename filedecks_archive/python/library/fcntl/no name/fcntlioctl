@@ -1,2 +1,0 @@
-# name: fcntl.ioctl 
-fcntl.ioctl(fd, request, arg=0, mutate_flag=True)

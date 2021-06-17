@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.starttl 
-SMTP.starttls(keyfile=None, certfile=None, context=None)

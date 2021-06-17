@@ -1,2 +1,0 @@
-# name: subprocess.Completed 
-subprocess.CompletedProcess.check_returncode

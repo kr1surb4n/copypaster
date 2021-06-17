@@ -1,2 +1,0 @@
-# name: winreg.SetValueEx 
-winreg.SetValueEx(key, value_name, reserved, type, value)

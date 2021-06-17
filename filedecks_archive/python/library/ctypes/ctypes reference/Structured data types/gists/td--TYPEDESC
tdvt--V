@@ -1,6 +1,0 @@
-# name: td = TYPEDESC()
-td.v 
-td = TYPEDESC()
-td.vt = VT_PTR
-td.lptdesc = POINTER(some_type)
-td.u.lptdesc = POINTER(some_type)

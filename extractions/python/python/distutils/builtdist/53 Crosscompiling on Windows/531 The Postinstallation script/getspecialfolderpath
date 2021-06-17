@@ -1,2 +1,0 @@
-# name: get_special_folder_p 
-get_special_folder_path(csidl_string)

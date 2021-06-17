@@ -1,2 +1,0 @@
-# name: asyncio.loop.close 
-loop.close()

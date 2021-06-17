@@ -1,2 +1,0 @@
-# name: t  nil   Undefines 
-t = nil  -- Undefines t; Lua has garbage collection.

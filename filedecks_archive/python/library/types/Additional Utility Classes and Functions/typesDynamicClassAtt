@@ -1,2 +1,0 @@
-# name: types.DynamicClassAt 
-types.DynamicClassAttribute(fget=None, fset=None, fdel=None, doc=None)

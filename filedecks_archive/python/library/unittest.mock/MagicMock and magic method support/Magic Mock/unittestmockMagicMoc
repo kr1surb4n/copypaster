@@ -1,2 +1,0 @@
-# name: unittest.mock.MagicM 
-class unittest.mock.MagicMock(*args, **kw)

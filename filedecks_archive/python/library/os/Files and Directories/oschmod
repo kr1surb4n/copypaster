@@ -1,2 +1,0 @@
-# name: os.chmod 
-os.chmod(path, mode, *, dir_fd=None, follow_symlinks=True)

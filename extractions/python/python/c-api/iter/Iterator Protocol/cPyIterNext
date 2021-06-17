@@ -1,2 +1,0 @@
-# name: c.PyIter_Next 
-PyObject* PyIter_Next(PyObject *o)

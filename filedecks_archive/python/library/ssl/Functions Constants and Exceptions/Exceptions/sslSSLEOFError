@@ -1,2 +1,0 @@
-# name: ssl.SSLEOFError 
-exception ssl.SSLEOFError

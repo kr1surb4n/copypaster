@@ -1,2 +1,0 @@
-# name: const char *tp_name; 
-const char *tp_name; /* For printing */

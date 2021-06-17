@@ -1,2 +1,0 @@
-# name: ast.Import 
-class ast.Import(names)

@@ -1,2 +1,0 @@
-# name: sysconfig.get_path 
-sysconfig.get_path(name[, scheme[, vars[, expand]]])

@@ -1,2 +1,0 @@
-# name: socket.getprotobynam 
-socket.getprotobyname(protocolname)

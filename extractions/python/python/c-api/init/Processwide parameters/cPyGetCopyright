@@ -1,2 +1,0 @@
-# name: c.Py_GetCopyright 
-const char* Py_GetCopyright()

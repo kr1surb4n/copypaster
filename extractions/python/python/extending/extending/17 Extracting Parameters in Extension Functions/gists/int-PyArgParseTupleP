@@ -1,2 +1,0 @@
-# name: int PyArg_ParseTuple 
-int PyArg_ParseTuple(PyObject *arg, const char *format, ...);

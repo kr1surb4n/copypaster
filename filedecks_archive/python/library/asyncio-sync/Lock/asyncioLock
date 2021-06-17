@@ -1,2 +1,0 @@
-# name: asyncio.Lock 
-class asyncio.Lock(*, loop=None)

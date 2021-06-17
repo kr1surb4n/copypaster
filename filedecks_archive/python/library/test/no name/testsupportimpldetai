@@ -1,2 +1,0 @@
-# name: test.support.impl_de 
-@test.support.impl_detail(msg=None, **guards)

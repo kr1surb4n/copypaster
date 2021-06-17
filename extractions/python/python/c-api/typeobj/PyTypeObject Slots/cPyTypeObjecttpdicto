@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_di 
-Py_ssize_t PyTypeObject.tp_dictoffset

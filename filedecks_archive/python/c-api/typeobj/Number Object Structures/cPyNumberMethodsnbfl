@@ -1,2 +1,0 @@
-# name: c.PyNumberMethods.nb 
-binaryfunc PyNumberMethods.nb_floor_divide

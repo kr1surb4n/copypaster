@@ -1,2 +1,0 @@
-# name: socket.socket.recvms 
-socket.recvmsg_into(buffers[, ancbufsize[, flags]])

@@ -1,2 +1,0 @@
-# name: c.PyErr_SetImportErr 
-PyObject* PyErr_SetImportError(PyObject *msg, PyObject *name, PyObject *path)

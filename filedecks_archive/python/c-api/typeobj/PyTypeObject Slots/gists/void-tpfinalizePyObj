@@ -1,2 +1,0 @@
-# name: void tp_finalize(PyO 
-void tp_finalize(PyObject *self);

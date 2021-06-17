@@ -1,7 +1,0 @@
-# name: setup(...,
-      ext 
-setup(...,
-      ext_modules=[Extension('_foo', ['foo.i'],
-                             swig_opts=['-modern', '-I../include'])],
-      py_modules=['foo'],
-     )

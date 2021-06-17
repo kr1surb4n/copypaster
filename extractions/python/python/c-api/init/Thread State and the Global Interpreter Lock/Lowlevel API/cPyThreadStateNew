@@ -1,2 +1,0 @@
-# name: c.PyThreadState_New 
-PyThreadState* PyThreadState_New(PyInterpreterState *interp)

@@ -1,2 +1,0 @@
-# name: use stdfsFile 
-use std::fs::File;

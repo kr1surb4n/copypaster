@@ -1,2 +1,0 @@
-# name: turtle.ontimer 
-turtle.ontimer(fun, t=0)

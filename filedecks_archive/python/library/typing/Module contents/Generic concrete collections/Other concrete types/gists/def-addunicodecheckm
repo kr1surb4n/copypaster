@@ -1,3 +1,0 @@
-# name: def add_unicode_chec 
-def add_unicode_checkmark(text: Text) -> Text:
-    return text + u' \u2713'

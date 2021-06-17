@@ -1,2 +1,0 @@
-# name: c.PyComplex_RealAsDo 
-double PyComplex_RealAsDouble(PyObject *op)

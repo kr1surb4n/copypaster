@@ -1,2 +1,0 @@
-# name: Scripts PID 
-echo "Scripts PID: $$"

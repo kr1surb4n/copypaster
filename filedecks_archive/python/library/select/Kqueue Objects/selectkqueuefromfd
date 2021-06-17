@@ -1,2 +1,0 @@
-# name: select.kqueue.fromfd 
-kqueue.fromfd(fd)

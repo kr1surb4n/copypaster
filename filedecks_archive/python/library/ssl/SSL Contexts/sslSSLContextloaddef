@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.load_ 
-SSLContext.load_default_certs(purpose=Purpose.SERVER_AUTH)

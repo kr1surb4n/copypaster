@@ -1,5 +1,0 @@
-# name: >>> baseline = {'mus 
->>> baseline = {'music': 'bach', 'art': 'rembrandt'}
->>> adjustments = {'art': 'van gogh', 'opera': 'carmen'}
->>> list(ChainMap(adjustments, baseline))
-['music', 'art', 'opera']

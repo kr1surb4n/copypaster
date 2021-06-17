@@ -1,2 +1,0 @@
-# name: os.makedev 
-os.makedev(major, minor)

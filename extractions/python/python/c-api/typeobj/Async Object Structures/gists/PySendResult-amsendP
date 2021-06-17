@@ -1,2 +1,0 @@
-# name: PySendResult am_send 
-PySendResult am_send(PyObject *self, PyObject *arg, PyObject **result);

@@ -1,2 +1,0 @@
-# name: code.InteractiveInte 
-class code.InteractiveInterpreter(locals=None)

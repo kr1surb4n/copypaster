@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.unsubs 
-IMAP4.unsubscribe(mailbox)

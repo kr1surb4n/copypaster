@@ -1,3 +1,0 @@
-# name: L = list(some_iterab 
-L = list(some_iterable)
-L.sort()

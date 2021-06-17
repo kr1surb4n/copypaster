@@ -1,2 +1,0 @@
-# name: python setup.py buil 
-python setup.py build --plat-name=win-amd64 bdist_wininst

@@ -1,2 +1,0 @@
-# name: queue.SimpleQueue.qs 
-SimpleQueue.qsize()

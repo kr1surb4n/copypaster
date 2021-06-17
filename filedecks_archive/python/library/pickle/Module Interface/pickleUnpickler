@@ -1,2 +1,0 @@
-# name: pickle.Unpickler 
-class pickle.Unpickler(file, *, fix_imports=True, encoding="ASCII", errors="strict", buffers=None)

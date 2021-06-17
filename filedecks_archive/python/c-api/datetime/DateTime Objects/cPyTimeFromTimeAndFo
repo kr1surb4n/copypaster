@@ -1,2 +1,0 @@
-# name: c.PyTime_FromTimeAnd 
-PyObject* PyTime_FromTimeAndFold(int hour, int minute, int second, int usecond, int fold)

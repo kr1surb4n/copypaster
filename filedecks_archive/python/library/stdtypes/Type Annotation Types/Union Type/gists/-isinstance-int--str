@@ -1,3 +1,0 @@
-# name: >>> isinstance("", i 
->>> isinstance("", int | str)
-True

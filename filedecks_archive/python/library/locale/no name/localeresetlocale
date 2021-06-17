@@ -1,2 +1,0 @@
-# name: locale.resetlocale 
-locale.resetlocale(category=LC_ALL)

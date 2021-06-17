@@ -1,2 +1,0 @@
-# name: multiprocessing.Arra 
-multiprocessing.Array(typecode_or_type, size_or_initializer, *, lock=True)

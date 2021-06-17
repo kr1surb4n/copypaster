@@ -1,2 +1,0 @@
-# name: ipaddress.ip_network 
-ipaddress.ip_network(address, strict=True)

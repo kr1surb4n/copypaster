@@ -1,2 +1,0 @@
-# name: c.PyParser_SimplePar 
-struct _node* PyParser_SimpleParseFileFlags(FILE *fp, const char *filename, int start, int flags)

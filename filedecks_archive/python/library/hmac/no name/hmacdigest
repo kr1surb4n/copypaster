@@ -1,2 +1,0 @@
-# name: hmac.digest 
-hmac.digest(key, msg, digest)

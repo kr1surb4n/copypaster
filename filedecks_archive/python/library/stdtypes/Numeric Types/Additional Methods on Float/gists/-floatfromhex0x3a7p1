@@ -1,3 +1,0 @@
-# name: >>> float.fromhex('0 
->>> float.fromhex('0x3.a7p10')
-3740.0

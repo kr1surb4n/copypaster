@@ -1,2 +1,0 @@
-# name: curses.ascii.isxdigi 
-curses.ascii.isxdigit(c)

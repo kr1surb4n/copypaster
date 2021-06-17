@@ -1,2 +1,0 @@
-# name: textwrap.TextWrapper 
-class textwrap.TextWrapper(**kwargs)

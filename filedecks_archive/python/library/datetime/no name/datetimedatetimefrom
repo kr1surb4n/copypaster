@@ -1,2 +1,0 @@
-# name: datetime.datetime.fr 
-classmethod datetime.fromisocalendar(year, week, day)

@@ -1,2 +1,0 @@
-# name: inspect.getmro 
-inspect.getmro(cls)

@@ -1,2 +1,0 @@
-# name: os.unsetenv 
-os.unsetenv(key)

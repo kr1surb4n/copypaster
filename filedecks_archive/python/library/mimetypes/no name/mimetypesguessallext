@@ -1,2 +1,0 @@
-# name: mimetypes.guess_all_ 
-mimetypes.guess_all_extensions(type, strict=True)

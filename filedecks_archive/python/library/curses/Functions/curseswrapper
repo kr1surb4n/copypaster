@@ -1,2 +1,0 @@
-# name: curses.wrapper 
-curses.wrapper(func, /, *args, **kwargs)

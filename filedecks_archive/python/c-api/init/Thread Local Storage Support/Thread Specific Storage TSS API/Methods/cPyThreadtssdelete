@@ -1,2 +1,0 @@
-# name: c.PyThread_tss_delet 
-void PyThread_tss_delete(Py_tss_t *key)

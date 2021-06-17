@@ -1,2 +1,0 @@
-# name: pathlib.Path.is_bloc 
-Path.is_block_device()

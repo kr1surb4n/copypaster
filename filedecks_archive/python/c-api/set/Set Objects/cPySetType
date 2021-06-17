@@ -1,2 +1,0 @@
-# name: c.PySet_Type 
-PyTypeObject PySet_Type

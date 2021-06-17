@@ -1,2 +1,0 @@
-# name: mimetypes.guess_type 
-mimetypes.guess_type(url, strict=True)

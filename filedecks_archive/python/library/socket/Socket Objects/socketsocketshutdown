@@ -1,2 +1,0 @@
-# name: socket.socket.shutdo 
-socket.shutdown(how)

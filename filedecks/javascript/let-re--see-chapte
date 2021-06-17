@@ -1,2 +1,0 @@
-# name: let re  see chapte 
-let re = /see (chapter \d+(\.\d)*)/i;

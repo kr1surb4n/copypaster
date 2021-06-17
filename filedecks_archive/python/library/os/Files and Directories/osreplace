@@ -1,2 +1,0 @@
-# name: os.replace 
-os.replace(src, dst, *, src_dir_fd=None, dst_dir_fd=None)

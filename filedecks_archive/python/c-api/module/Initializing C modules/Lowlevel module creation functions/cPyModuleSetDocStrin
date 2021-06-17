@@ -1,2 +1,0 @@
-# name: c.PyModule_SetDocStr 
-int PyModule_SetDocString(PyObject *module, const char *docstring)

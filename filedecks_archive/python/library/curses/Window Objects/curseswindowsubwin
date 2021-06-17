@@ -1,2 +1,0 @@
-# name: curses.window.subwin 
-window.subwin(begin_y, begin_x)

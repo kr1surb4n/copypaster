@@ -1,6 +1,0 @@
-# name: PyObject *PyCMethod( 
-PyObject *PyCMethod(PyObject *self,
-                    PyTypeObject *defining_class,
-                    PyObject *const *args,
-                    Py_ssize_t nargs,
-                    PyObject *kwnames)

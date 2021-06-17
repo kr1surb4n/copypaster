@@ -1,7 +1,0 @@
-# name: >>> cdll.LoadLibrary 
->>> cdll.LoadLibrary("libc.so.6")  
-<CDLL 'libc.so.6', handle ... at ...>
->>> libc = CDLL("libc.so.6")       
->>> libc                           
-<CDLL 'libc.so.6', handle ... at ...>
->>>

@@ -1,2 +1,0 @@
-# name: datetime.datetime.is 
-datetime.isoformat(sep='T', timespec='auto')

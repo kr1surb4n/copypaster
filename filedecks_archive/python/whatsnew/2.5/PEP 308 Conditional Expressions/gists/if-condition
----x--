@@ -1,6 +1,0 @@
-# name: if condition:
-    x  
-if condition:
-    x = true_value
-else:
-    x = false_value

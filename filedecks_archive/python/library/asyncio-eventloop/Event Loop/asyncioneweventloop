@@ -1,2 +1,0 @@
-# name: asyncio.new_event_lo 
-asyncio.new_event_loop()

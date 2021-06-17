@@ -1,2 +1,0 @@
-# name: xdrlib.Unpacker 
-class xdrlib.Unpacker(data)

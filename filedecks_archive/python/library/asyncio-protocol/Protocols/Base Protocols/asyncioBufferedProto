@@ -1,2 +1,0 @@
-# name: asyncio.BufferedProt 
-class asyncio.BufferedProtocol(BaseProtocol)

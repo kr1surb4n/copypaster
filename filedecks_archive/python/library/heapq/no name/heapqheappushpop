@@ -1,2 +1,0 @@
-# name: heapq.heappushpop 
-heapq.heappushpop(heap, item)

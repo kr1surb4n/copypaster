@@ -1,2 +1,0 @@
-# name: readline.set_startup 
-readline.set_startup_hook([function])

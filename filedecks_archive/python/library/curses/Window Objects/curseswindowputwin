@@ -1,2 +1,0 @@
-# name: curses.window.putwin 
-window.putwin(file)

@@ -1,2 +1,0 @@
-# name: re.Pattern.fullmatch 
-Pattern.fullmatch(string[, pos[, endpos]])

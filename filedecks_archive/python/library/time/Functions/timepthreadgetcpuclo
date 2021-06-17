@@ -1,2 +1,0 @@
-# name: time.pthread_getcpuc 
-time.pthread_getcpuclockid(thread_id)

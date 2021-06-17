@@ -1,7 +1,0 @@
-# name: import configparser, 
-import configparser, os
-
-config = configparser.ConfigParser()
-config.read_file(open('defaults.cfg'))
-config.read(['site.cfg', os.path.expanduser('~/.myapp.cfg')],
-            encoding='cp1250')

@@ -1,2 +1,0 @@
-# name: curses.ascii.isascii 
-curses.ascii.isascii(c)

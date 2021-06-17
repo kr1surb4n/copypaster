@@ -1,2 +1,0 @@
-# name: object.__aenter__ 
-object.__aenter__(self)

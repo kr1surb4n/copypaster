@@ -1,2 +1,0 @@
-# name: c.PyMemoryView_FromB 
-PyObject *PyMemoryView_FromBuffer(Py_buffer *view)

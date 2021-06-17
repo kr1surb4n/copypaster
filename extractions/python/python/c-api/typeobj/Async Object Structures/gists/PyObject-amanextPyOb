@@ -1,2 +1,0 @@
-# name: PyObject *am_anext(P 
-PyObject *am_anext(PyObject *self);

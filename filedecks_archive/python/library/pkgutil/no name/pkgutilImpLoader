@@ -1,2 +1,0 @@
-# name: pkgutil.ImpLoader 
-class pkgutil.ImpLoader(fullname, file, filename, etc)

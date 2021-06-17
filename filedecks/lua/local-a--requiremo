@@ -1,2 +1,0 @@
-# name: local a  requiremo 
-local a = require('mod2')  -- Prints Hi!

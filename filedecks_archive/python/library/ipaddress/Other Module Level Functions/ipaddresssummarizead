@@ -1,2 +1,0 @@
-# name: ipaddress.summarize_ 
-ipaddress.summarize_address_range(first, last)

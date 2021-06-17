@@ -1,2 +1,0 @@
-# name: c.PyTime_Check 
-int PyTime_Check(PyObject *ob)

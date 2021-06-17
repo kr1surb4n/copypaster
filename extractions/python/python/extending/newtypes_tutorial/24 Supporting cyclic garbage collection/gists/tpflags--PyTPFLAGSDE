@@ -1,2 +1,0 @@
-# name: .tp_flags = Py_TPFLA 
-.tp_flags = Py_TPFLAGS_DEFAULT | Py_TPFLAGS_BASETYPE | Py_TPFLAGS_HAVE_GC,

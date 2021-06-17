@@ -1,2 +1,0 @@
-# name: http.cookiejar.Cooki 
-Cookie.is_expired(now=None)

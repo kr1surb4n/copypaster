@@ -1,2 +1,0 @@
-# name: http.server.HTTPServ 
-class http.server.HTTPServer(server_address, RequestHandlerClass)

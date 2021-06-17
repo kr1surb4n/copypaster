@@ -1,2 +1,0 @@
-# name: str | None == typing 
-str | None == typing.Optional[str]

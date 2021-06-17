@@ -1,2 +1,0 @@
-# name: c.PyImport_ExtendIni 
-int PyImport_ExtendInittab(struct _inittab *newtab)

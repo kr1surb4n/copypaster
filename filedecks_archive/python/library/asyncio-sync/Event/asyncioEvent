@@ -1,2 +1,0 @@
-# name: asyncio.Event 
-class asyncio.Event(*, loop=None)

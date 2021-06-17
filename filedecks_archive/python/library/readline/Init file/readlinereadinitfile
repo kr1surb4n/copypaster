@@ -1,2 +1,0 @@
-# name: readline.read_init_f 
-readline.read_init_file([filename])

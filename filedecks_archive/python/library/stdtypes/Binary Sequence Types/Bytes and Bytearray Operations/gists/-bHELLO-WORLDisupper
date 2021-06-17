@@ -1,5 +1,0 @@
-# name: >>> b'HELLO WORLD'.i 
->>> b'HELLO WORLD'.isupper()
-True
->>> b'Hello world'.isupper()
-False

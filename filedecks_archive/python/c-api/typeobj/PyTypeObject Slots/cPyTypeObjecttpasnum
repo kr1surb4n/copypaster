@@ -1,2 +1,0 @@
-# name: c.PyTypeObject.tp_as 
-PyNumberMethods* PyTypeObject.tp_as_number

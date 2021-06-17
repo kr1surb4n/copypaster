@@ -1,2 +1,0 @@
-# name: c.PyUnicode_FromStri 
-PyObject *PyUnicode_FromString(const char *u)

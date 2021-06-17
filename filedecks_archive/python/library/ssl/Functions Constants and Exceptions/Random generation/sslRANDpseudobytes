@@ -1,2 +1,0 @@
-# name: ssl.RAND_pseudo_byte 
-ssl.RAND_pseudo_bytes(num)

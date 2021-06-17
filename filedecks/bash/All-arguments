@@ -1,2 +1,0 @@
-# name: All arguments 
-echo "All arguments passed to script: $@"

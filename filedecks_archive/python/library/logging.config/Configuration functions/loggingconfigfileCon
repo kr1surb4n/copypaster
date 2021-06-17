@@ -1,2 +1,0 @@
-# name: logging.config.fileC 
-logging.config.fileConfig(fname, defaults=None, disable_existing_loggers=True)

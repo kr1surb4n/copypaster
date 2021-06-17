@@ -1,2 +1,0 @@
-# name: c.PyType_Modified 
-void PyType_Modified(PyTypeObject *type)

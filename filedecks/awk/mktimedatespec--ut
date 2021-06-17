@@ -1,2 +1,0 @@
-# name: mktimedatespec  ut 
-mktime(datespec [, utc-flag ])

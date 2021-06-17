@@ -1,2 +1,0 @@
-# name: c.PyDict_Contains 
-int PyDict_Contains(PyObject *p, PyObject *key)

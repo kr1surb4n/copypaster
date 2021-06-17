@@ -1,2 +1,0 @@
-# name: curses.ascii.isgraph 
-curses.ascii.isgraph(c)

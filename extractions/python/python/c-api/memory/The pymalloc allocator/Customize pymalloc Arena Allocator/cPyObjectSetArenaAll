@@ -1,2 +1,0 @@
-# name: c.PyObject_SetArenaA 
-void PyObject_SetArenaAllocator(PyObjectArenaAllocator *allocator)

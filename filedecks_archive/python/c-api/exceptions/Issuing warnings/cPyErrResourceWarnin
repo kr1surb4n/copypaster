@@ -1,2 +1,0 @@
-# name: c.PyErr_ResourceWarn 
-int PyErr_ResourceWarning(PyObject *source, Py_ssize_t stack_level, const char *format, ...)

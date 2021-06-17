@@ -1,2 +1,0 @@
-# name: python -m cProfile [ 
-python -m cProfile [-o output_file] [-s sort_order] (-m module | myscript.py)

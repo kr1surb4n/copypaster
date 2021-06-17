@@ -1,6 +1,0 @@
-# name: >>> import shlex
->>> 
->>> import shlex
->>> s = shlex.shlex("a && b || c", punctuation_chars="|")
->>> list(s)
-['a', '&', '&', 'b', '||', 'c']

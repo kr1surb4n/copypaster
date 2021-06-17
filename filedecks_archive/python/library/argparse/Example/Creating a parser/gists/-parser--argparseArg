@@ -1,2 +1,0 @@
-# name: >>> parser = argpars 
->>> parser = argparse.ArgumentParser(description='Process some integers.')

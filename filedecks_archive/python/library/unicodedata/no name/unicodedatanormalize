@@ -1,2 +1,0 @@
-# name: unicodedata.normaliz 
-unicodedata.normalize(form, unistr)

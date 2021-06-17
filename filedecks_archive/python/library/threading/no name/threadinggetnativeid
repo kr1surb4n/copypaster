@@ -1,2 +1,0 @@
-# name: threading.get_native 
-threading.get_native_id()

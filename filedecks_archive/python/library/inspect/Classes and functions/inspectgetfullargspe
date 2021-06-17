@@ -1,2 +1,0 @@
-# name: inspect.getfullargsp 
-inspect.getfullargspec(func)

@@ -1,2 +1,0 @@
-# name: shutil.copystat 
-shutil.copystat(src, dst, *, follow_symlinks=True)

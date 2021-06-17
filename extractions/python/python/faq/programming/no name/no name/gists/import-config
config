@@ -1,4 +1,0 @@
-# name: import config
-config 
-import config
-config.x = 1

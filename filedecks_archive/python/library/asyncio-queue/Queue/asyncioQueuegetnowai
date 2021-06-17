@@ -1,2 +1,0 @@
-# name: asyncio.Queue.get_no 
-asyncio.Queue.get_nowait

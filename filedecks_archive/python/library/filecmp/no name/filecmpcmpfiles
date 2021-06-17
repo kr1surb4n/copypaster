@@ -1,2 +1,0 @@
-# name: filecmp.cmpfiles 
-filecmp.cmpfiles(dir1, dir2, common, shallow=True)

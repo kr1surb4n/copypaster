@@ -1,2 +1,0 @@
-# name: stat.S_ISDIR 
-stat.S_ISDIR(mode)

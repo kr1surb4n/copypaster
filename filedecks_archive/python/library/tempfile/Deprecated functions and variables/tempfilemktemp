@@ -1,2 +1,0 @@
-# name: tempfile.mktemp 
-tempfile.mktemp(suffix='', prefix='tmp', dir=None)

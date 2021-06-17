@@ -1,2 +1,0 @@
-# name: socket.fromfd 
-socket.fromfd(fd, family, type, proto=0)

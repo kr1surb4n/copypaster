@@ -1,2 +1,0 @@
-# name: c.PyObject_IsTrue 
-int PyObject_IsTrue(PyObject *o)

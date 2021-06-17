@@ -1,2 +1,0 @@
-# name: socket.socket.recv 
-socket.recv(bufsize[, flags])

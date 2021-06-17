@@ -1,2 +1,0 @@
-# name: c.PyObject_GetIter 
-PyObject* PyObject_GetIter(PyObject *o)

@@ -1,4 +1,0 @@
-# name: class GenProto(Proto 
-class GenProto(Protocol[T]):
-    def meth(self) -> T:
-        ...

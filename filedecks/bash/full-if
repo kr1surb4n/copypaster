@@ -1,7 +1,0 @@
-# name: full if 
-if [ "$Name" != $USER ]
-then
-    echo "Your name isn't your username"
-else
-    echo "Your name is your username"
-fi

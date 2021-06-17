@@ -1,2 +1,0 @@
-# name: traceback.FrameSumma 
-class traceback.FrameSummary(filename, lineno, name, lookup_line=True, locals=None, line=None)

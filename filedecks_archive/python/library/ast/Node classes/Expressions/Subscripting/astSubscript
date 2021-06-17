@@ -1,2 +1,0 @@
-# name: ast.Subscript 
-class ast.Subscript(value, slice, ctx)

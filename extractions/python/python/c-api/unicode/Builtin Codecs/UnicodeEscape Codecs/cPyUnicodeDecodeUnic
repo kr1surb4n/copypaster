@@ -1,2 +1,0 @@
-# name: c.PyUnicode_DecodeUn 
-PyObject* PyUnicode_DecodeUnicodeEscape(const char *s, Py_ssize_t size, const char *errors)

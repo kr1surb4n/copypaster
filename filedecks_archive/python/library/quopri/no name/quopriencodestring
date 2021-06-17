@@ -1,2 +1,0 @@
-# name: quopri.encodestring 
-quopri.encodestring(s, quotetabs=False, header=False)

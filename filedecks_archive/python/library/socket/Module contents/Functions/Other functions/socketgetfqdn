@@ -1,2 +1,0 @@
-# name: socket.getfqdn 
-socket.getfqdn([name])

@@ -1,2 +1,0 @@
-# name: webbrowser.open_new_ 
-webbrowser.open_new_tab(url)

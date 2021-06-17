@@ -1,2 +1,0 @@
-# name: socketserver.UDPServ 
-class socketserver.UDPServer(server_address, RequestHandlerClass, bind_and_activate=True)

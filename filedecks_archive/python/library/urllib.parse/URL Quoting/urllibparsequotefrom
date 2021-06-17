@@ -1,2 +1,0 @@
-# name: urllib.parse.quote_f 
-urllib.parse.quote_from_bytes(bytes, safe='/')

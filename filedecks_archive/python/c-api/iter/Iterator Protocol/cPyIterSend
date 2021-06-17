@@ -1,2 +1,0 @@
-# name: c.PyIter_Send 
-PySendResult PyIter_Send(PyObject *iter, PyObject *arg, PyObject **presult)

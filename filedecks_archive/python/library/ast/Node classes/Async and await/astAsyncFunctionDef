@@ -1,2 +1,0 @@
-# name: ast.AsyncFunctionDef 
-class ast.AsyncFunctionDef(name, args, body, decorator_list, returns, type_comment)

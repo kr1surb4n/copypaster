@@ -1,2 +1,0 @@
-# name: socket.socket.settim 
-socket.settimeout(value)

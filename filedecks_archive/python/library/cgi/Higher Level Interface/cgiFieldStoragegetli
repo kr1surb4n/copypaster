@@ -1,2 +1,0 @@
-# name: cgi.FieldStorage.get 
-FieldStorage.getlist(name)

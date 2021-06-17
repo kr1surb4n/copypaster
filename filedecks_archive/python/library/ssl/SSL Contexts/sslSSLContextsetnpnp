@@ -1,2 +1,0 @@
-# name: ssl.SSLContext.set_n 
-SSLContext.set_npn_protocols(protocols)

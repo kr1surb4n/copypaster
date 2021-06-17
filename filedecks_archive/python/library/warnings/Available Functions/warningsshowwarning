@@ -1,2 +1,0 @@
-# name: warnings.showwarning 
-warnings.showwarning(message, category, filename, lineno, file=None, line=None)

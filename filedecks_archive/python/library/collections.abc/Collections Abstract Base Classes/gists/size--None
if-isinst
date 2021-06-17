@@ -1,5 +1,0 @@
-# name: size = None
-if isins 
-size = None
-if isinstance(myvar, collections.abc.Sized):
-    size = len(myvar)

@@ -1,2 +1,0 @@
-# name: inspect.iscoroutinef 
-inspect.iscoroutinefunction(object)

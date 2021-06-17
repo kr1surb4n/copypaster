@@ -1,2 +1,0 @@
-# name: socket.socketpair 
-socket.socketpair([family[, type[, proto]]])

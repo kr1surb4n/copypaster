@@ -1,7 +1,0 @@
-# name: def o (n):
-    """>> 
-def o (n):
-    """>>> o(1)
-<__main__.C instance at 0x...>
->>>
-"""

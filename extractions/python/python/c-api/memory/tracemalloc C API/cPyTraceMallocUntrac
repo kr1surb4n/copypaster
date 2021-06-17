@@ -1,2 +1,0 @@
-# name: c.PyTraceMalloc_Untr 
-int PyTraceMalloc_Untrack(unsigned int domain, uintptr_t ptr)

@@ -1,3 +1,0 @@
-# name: if (!PyArg_ParseTupl 
-if (!PyArg_ParseTuple(args, "s", &command))
-    return NULL;

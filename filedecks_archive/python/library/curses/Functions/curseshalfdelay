@@ -1,2 +1,0 @@
-# name: curses.halfdelay 
-curses.halfdelay(tenths)

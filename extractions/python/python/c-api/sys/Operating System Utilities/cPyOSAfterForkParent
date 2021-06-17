@@ -1,2 +1,0 @@
-# name: c.PyOS_AfterFork_Par 
-void PyOS_AfterFork_Parent()

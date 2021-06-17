@@ -1,2 +1,0 @@
-# name: wsgiref.handlers.Sim 
-class wsgiref.handlers.SimpleHandler(stdin, stdout, stderr, environ, multithread=True, multiprocess=False)

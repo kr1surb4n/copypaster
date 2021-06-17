@@ -1,2 +1,0 @@
-# name: ast.FormattedValue 
-class ast.FormattedValue(value, conversion, format_spec)

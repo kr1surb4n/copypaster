@@ -1,2 +1,0 @@
-# name: sqlite3.Connection.r 
-sqlite3.Connection.rollback

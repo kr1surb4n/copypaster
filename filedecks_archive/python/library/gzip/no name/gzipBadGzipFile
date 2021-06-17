@@ -1,2 +1,0 @@
-# name: gzip.BadGzipFile 
-exception gzip.BadGzipFile

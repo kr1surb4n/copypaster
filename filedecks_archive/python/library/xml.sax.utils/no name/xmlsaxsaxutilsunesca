@@ -1,2 +1,0 @@
-# name: xml.sax.saxutils.une 
-xml.sax.saxutils.unescape(data, entities={})

@@ -1,2 +1,0 @@
-# name: function__return(str 
-function__return(str filename, str funcname, int lineno)

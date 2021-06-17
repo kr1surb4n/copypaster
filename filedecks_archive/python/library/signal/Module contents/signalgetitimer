@@ -1,2 +1,0 @@
-# name: signal.getitimer 
-signal.getitimer(which)

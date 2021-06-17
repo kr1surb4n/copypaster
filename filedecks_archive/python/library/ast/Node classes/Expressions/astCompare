@@ -1,2 +1,0 @@
-# name: ast.Compare 
-class ast.Compare(left, ops, comparators)

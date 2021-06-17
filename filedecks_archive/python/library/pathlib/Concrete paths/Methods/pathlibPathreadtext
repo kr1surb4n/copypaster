@@ -1,2 +1,0 @@
-# name: pathlib.Path.read_te 
-Path.read_text(encoding=None, errors=None)

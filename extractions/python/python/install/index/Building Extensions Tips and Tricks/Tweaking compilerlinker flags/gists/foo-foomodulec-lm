@@ -1,2 +1,0 @@
-# name: foo foomodule.c -lm 
-foo foomodule.c -lm

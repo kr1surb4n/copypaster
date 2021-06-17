@@ -1,2 +1,0 @@
-# name: c.PyErr_NoMemory 
-PyObject* PyErr_NoMemory()

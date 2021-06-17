@@ -1,2 +1,0 @@
-# name: queue.SimpleQueue.pu 
-SimpleQueue.put_nowait(item)

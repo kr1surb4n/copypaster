@@ -1,2 +1,0 @@
-# name: shutil.rmtree.avoids 
-shutil.rmtree.avoids_symlink_attacks

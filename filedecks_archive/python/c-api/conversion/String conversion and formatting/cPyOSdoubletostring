@@ -1,2 +1,0 @@
-# name: c.PyOS_double_to_str 
-char* PyOS_double_to_string(double val, char format_code, int precision, int flags, int *ptype)

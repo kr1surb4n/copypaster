@@ -1,2 +1,0 @@
-# name: shutil.copyfileobj 
-shutil.copyfileobj(fsrc, fdst[, length])

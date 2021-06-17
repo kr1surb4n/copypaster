@@ -1,2 +1,0 @@
-# name: typing.AsyncIterator 
-class typing.AsyncIterator(AsyncIterable[T_co])

@@ -1,2 +1,0 @@
-# name: test.support.open_ur 
-test.support.open_urlresource(url, *args, **kw)

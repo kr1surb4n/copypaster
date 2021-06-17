@@ -1,2 +1,0 @@
-# name: itertools.tee 
-itertools.tee(iterable, n=2)

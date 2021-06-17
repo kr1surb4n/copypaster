@@ -1,2 +1,0 @@
-# name: c.PyObject_GenericSe 
-int PyObject_GenericSetDict(PyObject *o, PyObject *value, void *context)

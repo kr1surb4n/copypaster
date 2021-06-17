@@ -1,2 +1,0 @@
-# name: sys.exit 
-sys.exit([arg])

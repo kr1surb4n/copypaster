@@ -1,7 +1,0 @@
-# name: PYTHONWARNINGS=defau 
-PYTHONWARNINGS=default  # Warn once per call location
-PYTHONWARNINGS=error    # Convert to exceptions
-PYTHONWARNINGS=always   # Warn every time
-PYTHONWARNINGS=module   # Warn once per calling module
-PYTHONWARNINGS=once     # Warn once per Python process
-PYTHONWARNINGS=ignore   # Never warn

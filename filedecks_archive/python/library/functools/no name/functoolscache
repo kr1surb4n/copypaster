@@ -1,2 +1,0 @@
-# name: functools.cache 
-@functools.cache(user_function)

@@ -1,2 +1,0 @@
-# name: os.setresuid 
-os.setresuid(ruid, euid, suid)

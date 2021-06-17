@@ -1,2 +1,0 @@
-# name: hmac.compare_digest 
-hmac.compare_digest(a, b)

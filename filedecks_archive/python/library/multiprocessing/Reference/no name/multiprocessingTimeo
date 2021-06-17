@@ -1,2 +1,0 @@
-# name: multiprocessing.Time 
-exception multiprocessing.TimeoutError

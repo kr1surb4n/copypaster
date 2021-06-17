@@ -1,2 +1,0 @@
-# name: asyncio.loop.add_rea 
-loop.add_reader(fd, callback, *args)

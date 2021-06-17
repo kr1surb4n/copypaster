@@ -1,2 +1,0 @@
-# name: $ 2to3 -x apply exam 
-$ 2to3 -x apply example.py

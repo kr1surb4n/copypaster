@@ -1,2 +1,0 @@
-# name: logging.FileHandler 
-class logging.FileHandler(filename, mode='a', encoding=None, delay=False, errors=None)

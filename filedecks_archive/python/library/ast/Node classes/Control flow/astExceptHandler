@@ -1,2 +1,0 @@
-# name: ast.ExceptHandler 
-class ast.ExceptHandler(type, name, body)

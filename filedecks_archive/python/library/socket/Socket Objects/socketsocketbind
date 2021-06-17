@@ -1,2 +1,0 @@
-# name: socket.socket.bind 
-socket.bind(address)

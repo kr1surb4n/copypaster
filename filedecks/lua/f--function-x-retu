@@ -1,2 +1,0 @@
-# name: f  function x retu 
-f = function (x) return x * x end

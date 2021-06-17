@@ -1,5 +1,0 @@
-# name: class C:
-    @static 
-class C:
-    @staticmethod
-    def f(arg1, arg2, ...): ...

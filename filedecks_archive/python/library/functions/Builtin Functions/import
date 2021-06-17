@@ -1,2 +1,0 @@
-# name: __import__ 
-__import__(name, globals=None, locals=None, fromlist=(), level=0)

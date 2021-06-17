@@ -1,7 +1,0 @@
-# name: p = re.compile( ...  
-p = re.compile( ... )
-m = p.match( 'string goes here' )
-if m:
-    print('Match found: ', m.group())
-else:
-    print('No match')

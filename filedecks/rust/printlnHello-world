@@ -1,2 +1,0 @@
-# name: printlnHello world 
-println!("Hello, world!");

@@ -1,2 +1,0 @@
-# name: zipapp.create_archiv 
-zipapp.create_archive(source, target=None, interpreter=None, main=None, filter=None, compressed=False)

@@ -1,2 +1,0 @@
-# name: ftplib.FTP.ntransfer 
-FTP.ntransfercmd(cmd, rest=None)

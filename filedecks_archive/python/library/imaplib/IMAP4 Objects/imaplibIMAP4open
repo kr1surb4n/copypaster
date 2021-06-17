@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.open 
-IMAP4.open(host, port, timeout=None)

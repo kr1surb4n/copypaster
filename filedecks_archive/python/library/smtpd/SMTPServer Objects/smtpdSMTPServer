@@ -1,2 +1,0 @@
-# name: smtpd.SMTPServer 
-class smtpd.SMTPServer(localaddr, remoteaddr, data_size_limit=33554432, map=None, enable_SMTPUTF8=False, decode_data=False)

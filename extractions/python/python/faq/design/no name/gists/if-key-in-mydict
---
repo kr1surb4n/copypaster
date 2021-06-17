@@ -1,6 +1,0 @@
-# name: if key in mydict:
-   
-if key in mydict:
-    value = mydict[key]
-else:
-    value = mydict[key] = getvalue(key)

@@ -1,3 +1,0 @@
-# name: >>> ipaddress.ip_add 
->>> ipaddress.ip_address('192.0.2.1') < ipaddress.ip_address('192.0.2.2')
-True

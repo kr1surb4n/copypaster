@@ -1,2 +1,0 @@
-# name: curses.tigetnum 
-curses.tigetnum(capname)

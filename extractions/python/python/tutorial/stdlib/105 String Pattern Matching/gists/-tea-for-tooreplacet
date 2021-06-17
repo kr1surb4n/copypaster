@@ -1,3 +1,0 @@
-# name: >>> 'tea for too'.re 
->>> 'tea for too'.replace('too', 'two')
-'tea for two'

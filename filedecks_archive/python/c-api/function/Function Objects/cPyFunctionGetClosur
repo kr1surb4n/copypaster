@@ -1,2 +1,0 @@
-# name: c.PyFunction_GetClos 
-PyObject* PyFunction_GetClosure(PyObject *op)

@@ -1,2 +1,0 @@
-# name: c.PyDec_AsUint128Tri 
-mpd_uint128_triple_t PyDec_AsUint128Triple(const PyObject *dec)

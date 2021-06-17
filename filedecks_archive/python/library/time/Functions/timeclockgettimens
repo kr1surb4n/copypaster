@@ -1,2 +1,0 @@
-# name: time.clock_gettime_n 
-time.clock_gettime_ns(clk_id) → int

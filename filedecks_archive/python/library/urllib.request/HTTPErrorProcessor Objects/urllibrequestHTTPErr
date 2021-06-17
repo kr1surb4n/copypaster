@@ -1,2 +1,0 @@
-# name: urllib.request.HTTPE 
-HTTPErrorProcessor.https_response(request, response)

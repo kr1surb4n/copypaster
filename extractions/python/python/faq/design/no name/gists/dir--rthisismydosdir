@@ -1,4 +1,0 @@
-# name: dir = r"\this\is\my\ 
-dir = r"\this\is\my\dos\dir" "\\"
-dir = r"\this\is\my\dos\dir\ "[:-1]
-dir = "\\this\\is\\my\\dos\\dir\\"

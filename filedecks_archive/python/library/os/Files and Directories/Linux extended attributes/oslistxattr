@@ -1,2 +1,0 @@
-# name: os.listxattr 
-os.listxattr(path=None, *, follow_symlinks=True)

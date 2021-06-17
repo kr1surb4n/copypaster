@@ -1,2 +1,0 @@
-# name: test.support.threadi 
-test.support.threading_helper.catch_threading_exception()

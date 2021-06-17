@@ -1,2 +1,0 @@
-# name: multiprocessing.Valu 
-multiprocessing.Value(typecode_or_type, *args, lock=True)

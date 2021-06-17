@@ -1,2 +1,0 @@
-# name: typing.Protocol 
-class typing.Protocol(Generic)

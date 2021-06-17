@@ -1,3 +1,0 @@
-# name: >>> remove_exponent( 
->>> remove_exponent(Decimal('5E+3'))
-Decimal('5000')

@@ -1,2 +1,0 @@
-# name: total = sum(b for a, 
-total = sum(b for a, b in items)

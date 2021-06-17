@@ -1,2 +1,0 @@
-# name: time.gmtime 
-time.gmtime([secs])

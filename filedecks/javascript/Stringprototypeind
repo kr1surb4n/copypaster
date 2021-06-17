@@ -1,2 +1,0 @@
-# name: Stringprototypeind 
-String.prototype.indexOf(searchValue [, fromIndex])

@@ -1,2 +1,0 @@
-# name: gc.set_threshold 
-gc.set_threshold(threshold0[, threshold1[, threshold2]])

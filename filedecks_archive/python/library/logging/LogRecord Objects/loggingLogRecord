@@ -1,2 +1,0 @@
-# name: logging.LogRecord 
-class logging.LogRecord(name, level, pathname, lineno, msg, args, exc_info, func=None, sinfo=None)

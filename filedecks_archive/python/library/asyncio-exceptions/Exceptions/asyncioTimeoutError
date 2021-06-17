@@ -1,2 +1,0 @@
-# name: asyncio.TimeoutError 
-exception asyncio.TimeoutError

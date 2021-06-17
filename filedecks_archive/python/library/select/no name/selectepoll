@@ -1,2 +1,0 @@
-# name: select.epoll 
-select.epoll(sizehint=-1, flags=0)

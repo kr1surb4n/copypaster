@@ -1,4 +1,0 @@
-# name: >>> root[0][1].text
- 
->>> root[0][1].text
-'2008'

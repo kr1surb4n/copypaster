@@ -1,2 +1,0 @@
-# name: tkinter.filedialog.O 
-class tkinter.filedialog.Open(master=None, **options)

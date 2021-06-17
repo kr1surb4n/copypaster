@@ -1,2 +1,0 @@
-# name: zipfile.ZipFile.writ 
-ZipFile.writestr(zinfo_or_arcname, data, compress_type=None, compresslevel=None)

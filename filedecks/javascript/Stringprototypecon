@@ -1,2 +1,0 @@
-# name: Stringprototypecon 
-String.prototype.concat(str [, ...strN ])

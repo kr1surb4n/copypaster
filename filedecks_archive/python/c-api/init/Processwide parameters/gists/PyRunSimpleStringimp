@@ -1,2 +1,0 @@
-# name: PyRun_SimpleString(" 
-PyRun_SimpleString("import sys; sys.path.pop(0)\n");

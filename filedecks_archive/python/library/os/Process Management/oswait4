@@ -1,2 +1,0 @@
-# name: os.wait4 
-os.wait4(pid, options)

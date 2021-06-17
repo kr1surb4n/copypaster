@@ -1,2 +1,0 @@
-# name: c.PySet_Pop 
-PyObject* PySet_Pop(PyObject *set)

@@ -1,3 +1,0 @@
-# name:         selfentry  
-        self.entry = Gtk.Entry()
-        self.entry.set_placeholder_text("Put name here or value will be used")

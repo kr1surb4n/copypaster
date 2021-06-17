@@ -1,2 +1,0 @@
-# name: functools.cmp_to_key 
-functools.cmp_to_key(func)

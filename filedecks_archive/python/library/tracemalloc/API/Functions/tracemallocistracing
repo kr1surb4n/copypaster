@@ -1,2 +1,0 @@
-# name: tracemalloc.is_traci 
-tracemalloc.is_tracing()

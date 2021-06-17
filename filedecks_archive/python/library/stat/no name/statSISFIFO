@@ -1,2 +1,0 @@
-# name: stat.S_ISFIFO 
-stat.S_ISFIFO(mode)

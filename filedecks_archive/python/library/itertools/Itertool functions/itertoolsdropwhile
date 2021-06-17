@@ -1,2 +1,0 @@
-# name: itertools.dropwhile 
-itertools.dropwhile(predicate, iterable)

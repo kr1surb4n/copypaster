@@ -1,2 +1,0 @@
-# name: sysconfig.get_config 
-sysconfig.get_config_var(name)

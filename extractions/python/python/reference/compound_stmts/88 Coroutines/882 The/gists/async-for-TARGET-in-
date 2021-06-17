@@ -1,5 +1,0 @@
-# name: async for TARGET in  
-async for TARGET in ITER:
-    SUITE
-else:
-    SUITE2

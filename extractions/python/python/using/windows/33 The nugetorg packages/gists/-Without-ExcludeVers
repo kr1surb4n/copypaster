@@ -1,8 +1,0 @@
-# name: # Without -ExcludeVe 
-# Without -ExcludeVersion
-> .\python.3.5.2\tools\python.exe -V
-Python 3.5.2
-
-# With -ExcludeVersion
-> .\python\tools\python.exe -V
-Python 3.5.2

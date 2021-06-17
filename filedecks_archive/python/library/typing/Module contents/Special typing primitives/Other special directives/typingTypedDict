@@ -1,2 +1,0 @@
-# name: typing.TypedDict 
-class typing.TypedDict(dict)

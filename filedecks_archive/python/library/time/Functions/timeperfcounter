@@ -1,2 +1,0 @@
-# name: time.perf_counter 
-time.perf_counter() → float

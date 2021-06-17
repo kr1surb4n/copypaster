@@ -1,5 +1,0 @@
-# name: >>> b'ABCabc'.isalph 
->>> b'ABCabc'.isalpha()
-True
->>> b'ABCabc1'.isalpha()
-False

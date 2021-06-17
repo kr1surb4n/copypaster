@@ -1,2 +1,0 @@
-# name: poplib.POP3 
-class poplib.POP3(host, port=POP3_PORT[, timeout])

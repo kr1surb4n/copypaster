@@ -1,2 +1,0 @@
-# name: socket.inet_pton 
-socket.inet_pton(address_family, ip_string)

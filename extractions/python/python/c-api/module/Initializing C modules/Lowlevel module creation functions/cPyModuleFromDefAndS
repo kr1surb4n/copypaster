@@ -1,2 +1,0 @@
-# name: c.PyModule_FromDefAn 
-PyObject * PyModule_FromDefAndSpec2(PyModuleDef *def, PyObject *spec, int module_api_version)

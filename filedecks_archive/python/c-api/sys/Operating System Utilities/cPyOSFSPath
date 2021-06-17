@@ -1,2 +1,0 @@
-# name: c.PyOS_FSPath 
-PyObject* PyOS_FSPath(PyObject *path)

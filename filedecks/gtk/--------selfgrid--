@@ -1,3 +1,0 @@
-# name:         selfgrid   
-        self.grid = Gtk.Grid()
-        self.grid.set_orientation(Gtk.Orientation.VERTICAL)

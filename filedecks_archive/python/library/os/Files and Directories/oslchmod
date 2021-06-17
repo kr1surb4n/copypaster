@@ -1,2 +1,0 @@
-# name: os.lchmod 
-os.lchmod(path, mode)

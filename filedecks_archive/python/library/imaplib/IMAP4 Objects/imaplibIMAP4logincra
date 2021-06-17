@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4.login_ 
-IMAP4.login_cram_md5(user, password)

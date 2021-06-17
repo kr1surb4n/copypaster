@@ -1,2 +1,0 @@
-# name: codecs.replace_error 
-codecs.replace_errors(exception)

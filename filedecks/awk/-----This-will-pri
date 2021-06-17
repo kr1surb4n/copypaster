@@ -1,3 +1,0 @@
-# name:      This will pri 
-    # This will print the second and fourth fields in the line
-    print $2, $4;

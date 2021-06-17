@@ -1,2 +1,0 @@
-# name: ast.get_docstring 
-ast.get_docstring(node, clean=True)

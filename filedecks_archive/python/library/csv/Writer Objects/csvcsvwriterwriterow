@@ -1,2 +1,0 @@
-# name: csv.csvwriter.writer 
-csvwriter.writerows(rows)

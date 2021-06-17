@@ -1,2 +1,0 @@
-# name: $ python -m tarfile  
-$ python -m tarfile -e monty.tar  other-dir/

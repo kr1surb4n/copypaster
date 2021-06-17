@@ -1,8 +1,0 @@
-# name: >>> x = 5  # ints ar 
->>> x = 5  # ints are immutable
->>> y = x
->>> x = x + 1  # 5 can't be mutated, we are creating a new object here
->>> x
-6
->>> y
-5

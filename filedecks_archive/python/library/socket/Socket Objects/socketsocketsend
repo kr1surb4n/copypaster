@@ -1,2 +1,0 @@
-# name: socket.socket.send 
-socket.send(bytes[, flags])

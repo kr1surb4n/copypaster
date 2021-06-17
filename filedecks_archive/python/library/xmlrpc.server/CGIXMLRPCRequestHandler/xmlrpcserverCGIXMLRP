@@ -1,2 +1,0 @@
-# name: xmlrpc.server.CGIXML 
-CGIXMLRPCRequestHandler.handle_request(request_text=None)

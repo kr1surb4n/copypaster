@@ -1,2 +1,0 @@
-# name: mimetypes.guess_exte 
-mimetypes.guess_extension(type, strict=True)

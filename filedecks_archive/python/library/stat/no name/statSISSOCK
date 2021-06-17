@@ -1,2 +1,0 @@
-# name: stat.S_ISSOCK 
-stat.S_ISSOCK(mode)

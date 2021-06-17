@@ -1,2 +1,0 @@
-# name: c.PyContext_Copy 
-PyObject *PyContext_Copy(PyObject *ctx)

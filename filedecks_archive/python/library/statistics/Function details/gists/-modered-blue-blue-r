@@ -1,3 +1,0 @@
-# name: >>> mode(["red", "bl 
->>> mode(["red", "blue", "blue", "red", "green", "red", "red"])
-'red'

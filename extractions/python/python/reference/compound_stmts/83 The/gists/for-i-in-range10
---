@@ -1,7 +1,0 @@
-# name: for i in range(10):
- 
-for i in range(10):
-    print(i)
-    i = 5             # this will not affect the for-loop
-                      # because i will be overwritten with the next
-                      # index in the range

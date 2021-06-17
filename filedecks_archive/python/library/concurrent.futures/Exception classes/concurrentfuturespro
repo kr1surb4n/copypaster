@@ -1,2 +1,0 @@
-# name: concurrent.futures.p 
-exception concurrent.futures.process.BrokenProcessPool

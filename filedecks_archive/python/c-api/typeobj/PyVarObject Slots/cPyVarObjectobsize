@@ -1,2 +1,0 @@
-# name: c.PyVarObject.ob_siz 
-Py_ssize_t PyVarObject.ob_size

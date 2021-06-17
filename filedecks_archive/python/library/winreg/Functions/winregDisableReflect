@@ -1,2 +1,0 @@
-# name: winreg.DisableReflec 
-winreg.DisableReflectionKey(key)

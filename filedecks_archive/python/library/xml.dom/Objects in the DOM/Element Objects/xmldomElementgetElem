@@ -1,2 +1,0 @@
-# name: xml.dom.Element.getE 
-Element.getElementsByTagNameNS(namespaceURI, localName)

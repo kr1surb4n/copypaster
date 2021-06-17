@@ -1,3 +1,0 @@
-# name: >>> print(re.match(' 
->>> print(re.match('<.*?>', s).group())
-<html>

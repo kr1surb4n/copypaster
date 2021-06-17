@@ -1,2 +1,0 @@
-# name: inspect.formatargval 
-inspect.formatargvalues(args[, varargs, varkw, locals, formatarg, formatvarargs, formatvarkw, formatvalue])

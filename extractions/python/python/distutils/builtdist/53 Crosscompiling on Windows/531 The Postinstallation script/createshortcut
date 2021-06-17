@@ -1,2 +1,0 @@
-# name: create_shortcut 
-create_shortcut(target, description, filename[, arguments[, workdir[, iconpath[, iconindex]]]])

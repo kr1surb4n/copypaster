@@ -1,2 +1,0 @@
-# name: http.cookies.SimpleC 
-class http.cookies.SimpleCookie([input])

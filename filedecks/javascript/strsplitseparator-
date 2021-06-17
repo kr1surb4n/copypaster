@@ -1,2 +1,0 @@
-# name: strsplitseparator  
-str.split([separator[, limit]])

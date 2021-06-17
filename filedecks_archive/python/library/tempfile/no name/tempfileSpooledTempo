@@ -1,2 +1,0 @@
-# name: tempfile.SpooledTemp 
-tempfile.SpooledTemporaryFile(max_size=0, mode='w+b', buffering=-1, encoding=None, newline=None, suffix=None, prefix=None, dir=None, *, errors=None)

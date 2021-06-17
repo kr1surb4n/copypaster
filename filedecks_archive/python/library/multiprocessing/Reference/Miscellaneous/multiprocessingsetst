@@ -1,2 +1,0 @@
-# name: multiprocessing.set_ 
-multiprocessing.set_start_method(method)

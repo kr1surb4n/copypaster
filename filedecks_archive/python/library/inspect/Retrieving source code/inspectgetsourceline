@@ -1,2 +1,0 @@
-# name: inspect.getsourcelin 
-inspect.getsourcelines(object)

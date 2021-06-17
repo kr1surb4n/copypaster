@@ -1,2 +1,0 @@
-# name: zipfile.Path.is_dir 
-Path.is_dir()

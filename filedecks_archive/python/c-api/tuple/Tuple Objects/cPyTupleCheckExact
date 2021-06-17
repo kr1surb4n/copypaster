@@ -1,2 +1,0 @@
-# name: c.PyTuple_CheckExact 
-int PyTuple_CheckExact(PyObject *p)

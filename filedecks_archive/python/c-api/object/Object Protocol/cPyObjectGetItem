@@ -1,2 +1,0 @@
-# name: c.PyObject_GetItem 
-PyObject* PyObject_GetItem(PyObject *o, PyObject *key)

@@ -1,3 +1,0 @@
-# name: >>> json.JSONEncoder 
->>> json.JSONEncoder().encode({"foo": ["bar", "baz"]})
-'{"foo": ["bar", "baz"]}'

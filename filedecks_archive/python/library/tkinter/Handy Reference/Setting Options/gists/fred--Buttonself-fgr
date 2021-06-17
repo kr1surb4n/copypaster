@@ -1,2 +1,0 @@
-# name: fred = Button(self,  
-fred = Button(self, fg="red", bg="blue")

@@ -1,2 +1,0 @@
-# name: c.PyCodec_Decoder 
-PyObject* PyCodec_Decoder(const char *encoding)

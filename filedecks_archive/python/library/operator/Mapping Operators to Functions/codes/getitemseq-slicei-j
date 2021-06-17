@@ -1,2 +1,0 @@
-# name: getitem(seq, slice(i 
-getitem(seq, slice(i, j))

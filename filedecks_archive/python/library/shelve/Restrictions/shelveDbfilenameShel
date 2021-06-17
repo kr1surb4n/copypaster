@@ -1,2 +1,0 @@
-# name: shelve.DbfilenameShe 
-class shelve.DbfilenameShelf(filename, flag='c', protocol=None, writeback=False)

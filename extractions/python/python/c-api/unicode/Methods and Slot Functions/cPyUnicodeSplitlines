@@ -1,2 +1,0 @@
-# name: c.PyUnicode_Splitlin 
-PyObject* PyUnicode_Splitlines(PyObject *s, int keepend)

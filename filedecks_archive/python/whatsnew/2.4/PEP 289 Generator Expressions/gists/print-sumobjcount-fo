@@ -1,2 +1,0 @@
-# name: print sum(obj.count  
-print sum(obj.count for obj in list_all_objects())

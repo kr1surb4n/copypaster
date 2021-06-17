@@ -1,2 +1,0 @@
-# name: hashlib.scrypt 
-hashlib.scrypt(password, *, salt, n, r, p, maxmem=0, dklen=64)

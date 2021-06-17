@@ -1,2 +1,0 @@
-# name: Arrayprototypefill 
-Array.prototype.fill(value[, start[, end]])

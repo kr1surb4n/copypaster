@@ -1,2 +1,0 @@
-# name: s[len(s):len(s)] = t 
-s[len(s):len(s)] = t)

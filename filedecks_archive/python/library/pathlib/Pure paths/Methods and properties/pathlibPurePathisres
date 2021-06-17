@@ -1,2 +1,0 @@
-# name: pathlib.PurePath.is_ 
-PurePath.is_reserved()

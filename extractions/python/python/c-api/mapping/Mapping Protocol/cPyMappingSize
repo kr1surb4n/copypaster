@@ -1,2 +1,0 @@
-# name: c.PyMapping_Size 
-Py_ssize_t PyMapping_Size(PyObject *o)

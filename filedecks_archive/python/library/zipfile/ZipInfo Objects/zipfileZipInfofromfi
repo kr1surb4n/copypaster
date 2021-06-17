@@ -1,2 +1,0 @@
-# name: zipfile.ZipInfo.from 
-classmethod ZipInfo.from_file(filename, arcname=None, *, strict_timestamps=True)

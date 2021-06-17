@@ -1,2 +1,0 @@
-# name: select.epoll.close 
-epoll.close()

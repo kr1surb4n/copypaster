@@ -1,2 +1,0 @@
-# name: os.get_inheritable 
-os.get_inheritable(fd)

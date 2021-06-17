@@ -1,2 +1,0 @@
-# name: typing.Deque 
-class typing.Deque(deque, MutableSequence[T])

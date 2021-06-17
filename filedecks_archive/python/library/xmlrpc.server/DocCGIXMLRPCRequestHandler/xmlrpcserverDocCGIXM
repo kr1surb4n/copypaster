@@ -1,2 +1,0 @@
-# name: xmlrpc.server.DocCGI 
-DocCGIXMLRPCRequestHandler.set_server_documentation(server_documentation)

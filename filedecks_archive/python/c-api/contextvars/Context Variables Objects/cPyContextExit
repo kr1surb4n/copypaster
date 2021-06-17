@@ -1,2 +1,0 @@
-# name: c.PyContext_Exit 
-int PyContext_Exit(PyObject *ctx)

@@ -1,2 +1,0 @@
-# name: ast.Slice 
-class ast.Slice(lower, upper, step)

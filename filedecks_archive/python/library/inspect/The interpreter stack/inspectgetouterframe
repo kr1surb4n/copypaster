@@ -1,2 +1,0 @@
-# name: inspect.getouterfram 
-inspect.getouterframes(frame, context=1)

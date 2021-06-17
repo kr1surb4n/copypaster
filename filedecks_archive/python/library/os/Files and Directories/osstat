@@ -1,2 +1,0 @@
-# name: os.stat 
-os.stat(path, *, dir_fd=None, follow_symlinks=True)

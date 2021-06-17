@@ -1,2 +1,0 @@
-# name: unittest.TextTestRes 
-class unittest.TextTestResult(stream, descriptions, verbosity)

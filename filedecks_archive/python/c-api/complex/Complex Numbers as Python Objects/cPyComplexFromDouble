@@ -1,2 +1,0 @@
-# name: c.PyComplex_FromDoub 
-PyObject* PyComplex_FromDoubles(double real, double imag)

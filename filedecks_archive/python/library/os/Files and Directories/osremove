@@ -1,2 +1,0 @@
-# name: os.remove 
-os.remove(path, *, dir_fd=None)

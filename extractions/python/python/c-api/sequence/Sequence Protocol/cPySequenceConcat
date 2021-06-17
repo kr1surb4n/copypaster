@@ -1,2 +1,0 @@
-# name: c.PySequence_Concat 
-PyObject* PySequence_Concat(PyObject *o1, PyObject *o2)

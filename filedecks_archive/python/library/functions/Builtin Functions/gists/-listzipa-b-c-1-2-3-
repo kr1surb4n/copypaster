@@ -1,3 +1,0 @@
-# name: >>> list(zip(('a', ' 
->>> list(zip(('a', 'b', 'c'), (1, 2, 3), strict=True))
-[('a', 1), ('b', 2), ('c', 3)]

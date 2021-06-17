@@ -1,2 +1,0 @@
-# name: ftplib.FTP.storlines 
-FTP.storlines(cmd, fp, callback=None)

@@ -1,3 +1,0 @@
-# name: CFLAGS="`getconf LFS 
-CFLAGS="`getconf LFS_CFLAGS`" OPT="-g -O2 $CFLAGS" \
-        ./configure

@@ -1,2 +1,0 @@
-# name: ast.walk 
-ast.walk(node)

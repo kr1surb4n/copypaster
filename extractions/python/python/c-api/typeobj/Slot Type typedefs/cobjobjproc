@@ -1,2 +1,0 @@
-# name: c.objobjproc 
-int (*objobjproc)(PyObject *, PyObject *)

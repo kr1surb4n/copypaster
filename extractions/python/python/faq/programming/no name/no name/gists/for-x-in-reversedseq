@@ -1,3 +1,0 @@
-# name: for x in reversed(se 
-for x in reversed(sequence):
-    ...  # do something with x ...

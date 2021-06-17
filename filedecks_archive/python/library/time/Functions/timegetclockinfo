@@ -1,2 +1,0 @@
-# name: time.get_clock_info 
-time.get_clock_info(name)

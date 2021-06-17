@@ -1,4 +1,0 @@
-# name: perslist = doc.getEl 
-perslist = doc.getElementsByTagName( 'PERSONA' )
-print perslist[0].toxml()
-print perslist[1].toxml()

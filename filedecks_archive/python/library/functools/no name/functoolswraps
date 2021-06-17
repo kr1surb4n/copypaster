@@ -1,2 +1,0 @@
-# name: functools.wraps 
-@functools.wraps(wrapped, assigned=WRAPPER_ASSIGNMENTS, updated=WRAPPER_UPDATES)

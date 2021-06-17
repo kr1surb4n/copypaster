@@ -1,2 +1,0 @@
-# name: curses.getwin 
-curses.getwin(file)

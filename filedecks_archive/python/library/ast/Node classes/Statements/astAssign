@@ -1,2 +1,0 @@
-# name: ast.Assign 
-class ast.Assign(targets, value, type_comment)

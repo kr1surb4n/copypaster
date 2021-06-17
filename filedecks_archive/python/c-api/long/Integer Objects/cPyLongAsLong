@@ -1,2 +1,0 @@
-# name: c.PyLong_AsLong 
-long PyLong_AsLong(PyObject *obj)

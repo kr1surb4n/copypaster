@@ -1,2 +1,0 @@
-# name: imaplib.IMAP4_stream 
-class imaplib.IMAP4_stream(command)

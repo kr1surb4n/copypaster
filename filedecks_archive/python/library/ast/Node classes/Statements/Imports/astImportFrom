@@ -1,2 +1,0 @@
-# name: ast.ImportFrom 
-class ast.ImportFrom(module, names, level)

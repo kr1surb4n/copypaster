@@ -1,2 +1,0 @@
-# name: smtplib.SMTP.login 
-SMTP.login(user, password, *, initial_response_ok=True)

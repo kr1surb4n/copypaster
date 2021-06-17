@@ -1,2 +1,0 @@
-# name: c.Py_DECREF 
-void Py_DECREF(PyObject *o)

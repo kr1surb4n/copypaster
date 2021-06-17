@@ -1,2 +1,0 @@
-# name: platform.architectur 
-platform.architecture(executable=sys.executable, bits='', linkage='')

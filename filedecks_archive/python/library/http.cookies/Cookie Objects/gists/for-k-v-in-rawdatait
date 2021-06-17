@@ -1,3 +1,0 @@
-# name: for k, v in rawdata. 
-for k, v in rawdata.items():
-    cookie[k] = v

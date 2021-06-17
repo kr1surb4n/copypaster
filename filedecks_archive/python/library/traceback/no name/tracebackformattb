@@ -1,2 +1,0 @@
-# name: traceback.format_tb 
-traceback.format_tb(tb, limit=None)

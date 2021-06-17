@@ -1,2 +1,0 @@
-# name: c.Py_GetPythonHome 
-w_char* Py_GetPythonHome()

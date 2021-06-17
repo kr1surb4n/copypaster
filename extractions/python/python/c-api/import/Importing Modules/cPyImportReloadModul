@@ -1,2 +1,0 @@
-# name: c.PyImport_ReloadMod 
-PyObject* PyImport_ReloadModule(PyObject *m)

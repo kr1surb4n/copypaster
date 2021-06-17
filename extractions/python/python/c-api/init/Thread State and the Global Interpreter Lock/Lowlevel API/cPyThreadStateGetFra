@@ -1,2 +1,0 @@
-# name: c.PyThreadState_GetF 
-PyFrameObject* PyThreadState_GetFrame(PyThreadState *tstate)

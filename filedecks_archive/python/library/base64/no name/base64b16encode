@@ -1,2 +1,0 @@
-# name: base64.b16encode 
-base64.b16encode(s)

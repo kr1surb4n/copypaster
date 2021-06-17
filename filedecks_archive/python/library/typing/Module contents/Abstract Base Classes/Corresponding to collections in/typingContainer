@@ -1,2 +1,0 @@
-# name: typing.Container 
-class typing.Container(Generic[T_co])

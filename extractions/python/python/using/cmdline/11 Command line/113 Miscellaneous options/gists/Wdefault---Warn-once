@@ -1,7 +1,0 @@
-# name: -Wdefault  # Warn on 
--Wdefault  # Warn once per call location
--Werror    # Convert to exceptions
--Walways   # Warn every time
--Wmodule   # Warn once per calling module
--Wonce     # Warn once per Python process
--Wignore   # Never warn

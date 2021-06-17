@@ -1,2 +1,0 @@
-# name: logging.handlers.SMT 
-logging.handlers.SMTPHandler.getSubject

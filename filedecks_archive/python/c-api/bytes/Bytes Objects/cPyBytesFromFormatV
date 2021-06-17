@@ -1,2 +1,0 @@
-# name: c.PyBytes_FromFormat 
-PyObject* PyBytes_FromFormatV(const char *format, va_list vargs)

@@ -1,2 +1,0 @@
-# name: DateprototypetoDat 
-Date.prototype.toDateString()

@@ -1,2 +1,0 @@
-# name: c.PyNumber_Invert 
-PyObject* PyNumber_Invert(PyObject *o)

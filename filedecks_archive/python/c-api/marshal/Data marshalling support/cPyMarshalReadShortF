@@ -1,2 +1,0 @@
-# name: c.PyMarshal_ReadShor 
-int PyMarshal_ReadShortFromFile(FILE *file)

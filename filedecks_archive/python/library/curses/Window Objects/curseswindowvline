@@ -1,2 +1,0 @@
-# name: curses.window.vline 
-window.vline(ch, n)

@@ -1,2 +1,0 @@
-# name: c.PyFloat_AsDouble 
-double PyFloat_AsDouble(PyObject *pyfloat)

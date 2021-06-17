@@ -1,2 +1,0 @@
-# name: smtpd.MailmanProxy 
-class smtpd.MailmanProxy(localaddr, remoteaddr)

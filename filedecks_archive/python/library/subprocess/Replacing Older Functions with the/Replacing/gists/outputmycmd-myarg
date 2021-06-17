@@ -1,2 +1,0 @@
-# name: output=$(mycmd myarg 
-output=$(mycmd myarg)

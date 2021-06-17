@@ -1,2 +1,0 @@
-# name: ssl.SSLContext 
-class ssl.SSLContext(protocol=PROTOCOL_TLS)

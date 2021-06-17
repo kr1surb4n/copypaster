@@ -1,2 +1,0 @@
-# name: gettext.dgettext 
-gettext.dgettext(domain, message)

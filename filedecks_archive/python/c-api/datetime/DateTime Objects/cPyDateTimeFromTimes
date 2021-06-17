@@ -1,2 +1,0 @@
-# name: c.PyDateTime_FromTim 
-PyObject* PyDateTime_FromTimestamp(PyObject *args)

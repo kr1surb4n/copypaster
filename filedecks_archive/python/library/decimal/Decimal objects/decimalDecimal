@@ -1,2 +1,0 @@
-# name: decimal.Decimal 
-class decimal.Decimal(value="0", context=None)

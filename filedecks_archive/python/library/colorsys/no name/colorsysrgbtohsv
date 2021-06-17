@@ -1,2 +1,0 @@
-# name: colorsys.rgb_to_hsv 
-colorsys.rgb_to_hsv(r, g, b)

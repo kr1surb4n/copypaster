@@ -1,2 +1,0 @@
-# name: termios.tcflow 
-termios.tcflow(fd, action)

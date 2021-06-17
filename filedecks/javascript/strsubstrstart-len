@@ -1,2 +1,0 @@
-# name: strsubstrstart len 
-str.substr(start[, length])

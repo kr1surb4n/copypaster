@@ -1,2 +1,0 @@
-# name: winreg.DeleteKey 
-winreg.DeleteKey(key, sub_key)

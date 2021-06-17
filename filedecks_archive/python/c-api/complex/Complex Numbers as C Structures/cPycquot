@@ -1,2 +1,0 @@
-# name: c._Py_c_quot 
-Py_complex _Py_c_quot(Py_complex dividend, Py_complex divisor)

@@ -1,2 +1,0 @@
-# name: curses.window.mvderw 
-window.mvderwin(y, x)

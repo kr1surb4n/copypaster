@@ -1,2 +1,0 @@
-# name: var: ContextVar[int] 
-var: ContextVar[int] = ContextVar('var', default=42)

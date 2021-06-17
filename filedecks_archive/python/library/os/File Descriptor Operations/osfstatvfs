@@ -1,2 +1,0 @@
-# name: os.fstatvfs 
-os.fstatvfs(fd)

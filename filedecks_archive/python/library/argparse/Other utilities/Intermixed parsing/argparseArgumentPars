@@ -1,2 +1,0 @@
-# name: argparse.ArgumentPar 
-ArgumentParser.parse_known_intermixed_args(args=None, namespace=None)

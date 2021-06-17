@@ -1,3 +1,0 @@
-# name: from bar import bar_ 
-from bar import bar_var
-foo_var = 1

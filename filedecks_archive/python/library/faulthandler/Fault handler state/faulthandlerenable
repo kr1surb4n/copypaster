@@ -1,2 +1,0 @@
-# name: faulthandler.enable 
-faulthandler.enable(file=sys.stderr, all_threads=True)

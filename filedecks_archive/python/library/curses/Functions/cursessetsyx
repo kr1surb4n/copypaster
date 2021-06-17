@@ -1,2 +1,0 @@
-# name: curses.setsyx 
-curses.setsyx(y, x)

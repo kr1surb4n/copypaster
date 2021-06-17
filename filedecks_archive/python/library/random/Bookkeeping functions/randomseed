@@ -1,2 +1,0 @@
-# name: random.seed 
-random.seed(a=None, version=2)

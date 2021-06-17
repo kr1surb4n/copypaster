@@ -1,2 +1,0 @@
-# name: codecs.unregister 
-codecs.unregister(search_function)

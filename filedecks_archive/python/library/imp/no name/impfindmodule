@@ -1,2 +1,0 @@
-# name: imp.find_module 
-imp.find_module(name[, path])

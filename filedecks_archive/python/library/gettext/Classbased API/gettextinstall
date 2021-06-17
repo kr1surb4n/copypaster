@@ -1,2 +1,0 @@
-# name: gettext.install 
-gettext.install(domain, localedir=None, codeset=None, names=None)

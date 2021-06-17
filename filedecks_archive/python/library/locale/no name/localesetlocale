@@ -1,2 +1,0 @@
-# name: locale.setlocale 
-locale.setlocale(category, locale=None)

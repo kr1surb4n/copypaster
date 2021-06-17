@@ -1,2 +1,0 @@
-# name: readline.clear_histo 
-readline.clear_history()

@@ -1,2 +1,0 @@
-# name: c.Py_GetExecPrefix 
-wchar_t* Py_GetExecPrefix()

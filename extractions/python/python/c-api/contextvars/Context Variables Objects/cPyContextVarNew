@@ -1,2 +1,0 @@
-# name: c.PyContextVar_New 
-PyObject *PyContextVar_New(const char *name, PyObject *def)

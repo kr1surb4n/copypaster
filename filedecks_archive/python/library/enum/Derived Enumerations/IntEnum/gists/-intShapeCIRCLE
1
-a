@@ -1,7 +1,0 @@
-# name: >>> int(Shape.CIRCLE 
->>> int(Shape.CIRCLE)
-1
->>> ['a', 'b', 'c'][Shape.CIRCLE]
-'b'
->>> [i for i in range(Shape.SQUARE)]
-[0, 1]

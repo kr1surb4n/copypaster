@@ -1,2 +1,0 @@
-# name: multiprocessing.get_ 
-multiprocessing.get_all_start_methods()

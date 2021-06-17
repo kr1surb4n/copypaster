@@ -1,5 +1,0 @@
-# name: simple object 
-function Brick() {
-  this.width = 10;
-  this.height = 20;
-}

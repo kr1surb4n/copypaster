@@ -1,2 +1,0 @@
-# name: strslice3 1   retu 
-str.slice(-3, -1)  // returns 'us'

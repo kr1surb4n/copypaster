@@ -1,2 +1,0 @@
-# name: shelve.open 
-shelve.open(filename, flag='c', protocol=None, writeback=False)

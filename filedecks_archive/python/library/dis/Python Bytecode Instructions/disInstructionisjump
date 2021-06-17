@@ -1,2 +1,0 @@
-# name: dis.Instruction.is_j 
-dis.Instruction.is_jump_target

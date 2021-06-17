@@ -1,2 +1,0 @@
-# name: multiprocessing.curr 
-multiprocessing.current_process()

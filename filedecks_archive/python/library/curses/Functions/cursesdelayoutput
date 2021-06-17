@@ -1,2 +1,0 @@
-# name: curses.delay_output 
-curses.delay_output(ms)

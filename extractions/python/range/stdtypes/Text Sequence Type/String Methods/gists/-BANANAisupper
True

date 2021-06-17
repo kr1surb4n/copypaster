@@ -1,9 +1,0 @@
-# name: >>> 'BANANA'.isupper 
->>> 'BANANA'.isupper()
-True
->>> 'banana'.isupper()
-False
->>> 'baNana'.isupper()
-False
->>> ' '.isupper()
-False

@@ -1,2 +1,0 @@
-# name: asyncio.loop.connect 
-coroutine loop.connect_read_pipe(protocol_factory, pipe)

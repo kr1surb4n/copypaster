@@ -1,2 +1,0 @@
-# name: asyncio.Condition.no 
-asyncio.Condition.notify_all

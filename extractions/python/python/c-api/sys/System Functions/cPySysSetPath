@@ -1,2 +1,0 @@
-# name: c.PySys_SetPath 
-void PySys_SetPath(const wchar_t *path)

@@ -1,2 +1,0 @@
-# name: os.path.samestat 
-os.path.samestat(stat1, stat2)

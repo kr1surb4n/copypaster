@@ -1,2 +1,0 @@
-# name: msilib.Record.GetInt 
-Record.GetInteger(field)

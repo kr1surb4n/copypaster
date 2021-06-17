@@ -1,2 +1,0 @@
-# name: termios.tcflush 
-termios.tcflush(fd, queue)

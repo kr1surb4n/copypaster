@@ -1,2 +1,0 @@
-# name: tarfile.StreamError 
-exception tarfile.StreamError

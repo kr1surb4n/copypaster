@@ -1,2 +1,0 @@
-# name: ast.arguments 
-class ast.arguments(posonlyargs, args, vararg, kwonlyargs, kw_defaults, kwarg, defaults)

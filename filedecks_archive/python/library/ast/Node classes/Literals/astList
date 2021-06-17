@@ -1,2 +1,0 @@
-# name: ast.List 
-class ast.List(elts, ctx)

@@ -1,2 +1,0 @@
-# name: $ 2to3 -f all -f idi 
-$ 2to3 -f all -f idioms example.py

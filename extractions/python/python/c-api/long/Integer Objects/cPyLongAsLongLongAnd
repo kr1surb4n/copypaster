@@ -1,2 +1,0 @@
-# name: c.PyLong_AsLongLongA 
-long long PyLong_AsLongLongAndOverflow(PyObject *obj, int *overflow)

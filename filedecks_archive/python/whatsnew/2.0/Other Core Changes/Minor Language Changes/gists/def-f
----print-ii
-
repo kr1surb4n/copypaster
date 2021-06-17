@@ -1,6 +1,0 @@
-# name: def f():
-    print " 
-def f():
-    print "i=",i
-    i = i + 1
-f()

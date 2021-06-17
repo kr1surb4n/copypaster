@@ -1,2 +1,0 @@
-# name: sqlite3.enable_callb 
-sqlite3.enable_callback_tracebacks(flag)

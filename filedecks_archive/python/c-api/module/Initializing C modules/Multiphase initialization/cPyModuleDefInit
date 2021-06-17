@@ -1,2 +1,0 @@
-# name: c.PyModuleDef_Init 
-PyObject* PyModuleDef_Init(PyModuleDef *def)

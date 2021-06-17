@@ -1,2 +1,0 @@
-# name: memoryview 
-class memoryview(obj)

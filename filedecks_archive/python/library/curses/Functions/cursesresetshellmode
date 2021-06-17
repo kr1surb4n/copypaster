@@ -1,2 +1,0 @@
-# name: curses.reset_shell_m 
-curses.reset_shell_mode()

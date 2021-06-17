@@ -1,2 +1,0 @@
-# name: turtle.tracer 
-turtle.tracer(n=None, delay=None)

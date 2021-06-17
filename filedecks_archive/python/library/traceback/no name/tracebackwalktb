@@ -1,2 +1,0 @@
-# name: traceback.walk_tb 
-traceback.walk_tb(tb)

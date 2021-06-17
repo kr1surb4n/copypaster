@@ -1,2 +1,0 @@
-# name: urllib.request.url2p 
-urllib.request.url2pathname(path)

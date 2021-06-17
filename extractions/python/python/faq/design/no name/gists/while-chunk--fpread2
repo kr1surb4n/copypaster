@@ -1,3 +1,0 @@
-# name: while chunk := fp.re 
-while chunk := fp.read(200):
-   print(chunk)

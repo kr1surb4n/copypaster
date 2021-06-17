@@ -1,2 +1,0 @@
-# name: email.utils.encode_r 
-email.utils.encode_rfc2231(s, charset=None, language=None)

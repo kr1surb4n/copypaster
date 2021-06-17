@@ -1,2 +1,0 @@
-# name: cargo build releas 
-cargo build --release 

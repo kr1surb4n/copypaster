@@ -1,2 +1,0 @@
-# name: c.PyUnicode_AsUTF16S 
-PyObject* PyUnicode_AsUTF16String(PyObject *unicode)

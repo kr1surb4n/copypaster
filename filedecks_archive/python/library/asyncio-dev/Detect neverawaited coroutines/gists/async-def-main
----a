@@ -1,4 +1,0 @@
-# name: async def main():
-   
-async def main():
-    await test()

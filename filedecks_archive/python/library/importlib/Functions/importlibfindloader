@@ -1,2 +1,0 @@
-# name: importlib.find_loade 
-importlib.find_loader(name, path=None)

@@ -1,2 +1,0 @@
-# name: telnetlib.Telnet.ope 
-Telnet.open(host, port=0[, timeout])

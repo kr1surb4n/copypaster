@@ -1,2 +1,0 @@
-# name: c.PyEval_GetBuiltins 
-PyObject* PyEval_GetBuiltins(void)

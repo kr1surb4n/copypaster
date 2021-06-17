@@ -1,3 +1,0 @@
-# name: >>> mock = MagicMock 
->>> mock = MagicMock()
->>> mock.name = "foo"

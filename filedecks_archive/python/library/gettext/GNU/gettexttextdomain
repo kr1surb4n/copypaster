@@ -1,2 +1,0 @@
-# name: gettext.textdomain 
-gettext.textdomain(domain=None)

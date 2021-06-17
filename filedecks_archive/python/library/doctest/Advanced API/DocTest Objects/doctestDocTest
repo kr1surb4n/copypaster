@@ -1,2 +1,0 @@
-# name: doctest.DocTest 
-class doctest.DocTest(examples, globs, name, filename, lineno, docstring)

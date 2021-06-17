@@ -1,2 +1,0 @@
-# name: socket.gethostbyname 
-socket.gethostbyname_ex(hostname)

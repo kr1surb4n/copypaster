@@ -1,2 +1,0 @@
-# name: ensurepip.bootstrap 
-ensurepip.bootstrap(root=None, upgrade=False, user=False, altinstall=False, default_pip=False, verbosity=0)

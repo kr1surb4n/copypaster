@@ -1,2 +1,0 @@
-# name: calendar.prmonth 
-calendar.prmonth(theyear, themonth, w=0, l=0)

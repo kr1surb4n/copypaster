@@ -1,2 +1,0 @@
-# name: c.PySys_SetArgvEx 
-void PySys_SetArgvEx(int argc, wchar_t **argv, int updatepath)

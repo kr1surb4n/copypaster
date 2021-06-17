@@ -1,2 +1,0 @@
-# name: curses.update_lines_ 
-curses.update_lines_cols()

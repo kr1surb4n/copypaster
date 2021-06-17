@@ -1,3 +1,0 @@
-# name: with self.assertRais 
-with self.assertRaises(KeyError):
-    {}['foo']
