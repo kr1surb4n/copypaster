@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* Przemek Kot
+* Przemek Kris Urbanski
 
 Contributors
 ------------
