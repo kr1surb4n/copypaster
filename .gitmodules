@@ -1,0 +1,3 @@
+[submodule "copypaster_filedecks"]
+	path = copypaster_filedecks
+	url = https://github.com/kr1surb4n/copypaster_filedecks.git

@@ -15,7 +15,7 @@ from copypaster import log, PROJECT_DIR
 tasks = queue.Queue()
 Decks = {}
 
-BACKUP_FOLDER = os.path.join(PROJECT_DIR, "filedecks")
+BACKUP_FOLDER = os.path.join(PROJECT_DIR, "copypaster_filedecks/filedecks")
 PATH_TO_SNIPPETS_FOLDER = os.environ.get('SNIPPETS_FOLDER', BACKUP_FOLDER)
 
 CLICK_COUNT = "click_count"

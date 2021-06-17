@@ -36,6 +36,14 @@ Written using Python and GTK3
 
 * Free software: MIT license
 
+Running
+-----------
+
+Run `git submodule update --init` to download the snippets from `https://github.com/kr1surb4n/copypaster_filedecks`
+
+Run `pip install -r requirements.txt && pip install -e . && copypaster`  (after this you can use only `copypaster`)
+
+
 
 Features
 --------
