@@ -135,7 +135,7 @@ def interpreter():
         container = Container(
             key=value.path, value=value, box=Rectangle(0, 0, 40, 15), element=Text
         )
-        
+
         log.debug(f"Loading object {value.name}")
         container.element.text = value.name
         index.register(container)

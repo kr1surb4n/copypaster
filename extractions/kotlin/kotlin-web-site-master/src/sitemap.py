@@ -11,7 +11,6 @@ root_folder_path = path.dirname(path.dirname(__file__))
 def generate_sitemap(pages, filename='sitemap.xml'):
     non_static_urls = []
 
-
     for url, type in pages:
         if type is None:
             continue
@@ -35,6 +34,7 @@ def generate_sitemap(pages, filename='sitemap.xml'):
 
     with open(path.join(root_folder_path, 'dist', filename), 'w') as sitemap_file:
         sitemap_file.write(sitemap_content)
+
 
 temporary_list = [
     "/docs/",
@@ -82,6 +82,7 @@ temporary_list = [
     "/docs/working-with-javascript.html",
     "/docs/working-with-klib.html",
 ]
+
 
 def generate_temporary_sitemap():
     digest = md5(''.join(temporary_list).encode('utf-8')).hexdigest()

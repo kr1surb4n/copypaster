@@ -9,7 +9,7 @@ with open(data_file, encoding="utf-8") as points_file:
     universities = yaml.load(points_file, yaml.RoundTripLoader)
 
 for n, university in enumerate(universities):
-    location = university.get("location")+ ", " + university.get("title")
+    location = university.get("location") + ", " + university.get("title")
     coordinates = geocoder.yandex(location, kind=None).json
 
     if coordinates is None or len(coordinates) == 0:
@@ -23,10 +23,7 @@ for n, university in enumerate(universities):
     if coordinates["ok"] is not True:
         raise Exception("Location not resolved: ", location)
 
-    new_geo = {
-        "lat": coordinates.get("lat"),
-        "lng": coordinates.get("lng")
-    }
+    new_geo = {"lat": coordinates.get("lat"), "lng": coordinates.get("lng")}
 
     if university.get("geo") is None:
         university['geo'] = new_geo
@@ -34,9 +31,20 @@ for n, university in enumerate(universities):
     if university['geo'] != new_geo:
         is_same = None
         while is_same is None:
-            input_text = "Will coordinates for \"" + location + """\" update? (y/n)
-    https://www.google.com/maps/search/?api=1&query=""" + new_geo['lat'] + "," + new_geo['lng'] + """
-    https://www.google.com/maps/search/?api=1&query=""" + university['geo']['lat'] + "," + university['geo']['lng']
+            input_text = (
+                "Will coordinates for \""
+                + location
+                + """\" update? (y/n)
+    https://www.google.com/maps/search/?api=1&query="""
+                + new_geo['lat']
+                + ","
+                + new_geo['lng']
+                + """
+    https://www.google.com/maps/search/?api=1&query="""
+                + university['geo']['lat']
+                + ","
+                + university['geo']['lng']
+            )
             user_input = input(input_text)
 
             if user_input == "y" or user_input == "yes":
@@ -50,4 +58,6 @@ for n, university in enumerate(universities):
                 university['geo'] = new_geo
 
 with open(data_file, 'w') as points_file:
-    yaml.dump(universities, stream=points_file, Dumper=yaml.RoundTripDumper, allow_unicode=True)
+    yaml.dump(
+        universities, stream=points_file, Dumper=yaml.RoundTripDumper, allow_unicode=True
+    )

@@ -36,6 +36,7 @@ rules = str.maketrans('', '', string.punctuation)
 
 name_counter = 1
 
+
 def placeholder_name():
     _lock = threading.Lock()
     with _lock:
@@ -44,6 +45,7 @@ def placeholder_name():
         name_counter += 1
 
     return name
+
 
 def clean_name(name: str):
 
@@ -57,11 +59,11 @@ def clean_name(name: str):
 
     return name
 
+
 def clean_filename(name: str):
 
     if name is None:
         name = "None"
-
 
     name = name.strip()
     name = name.translate(rules)
@@ -73,6 +75,7 @@ def clean_filename(name: str):
         name = placeholder_name()
 
     return name.replace(" ", "-")
+
 
 class Folder:
     def __init__(self, name="", path=""):
@@ -98,7 +101,6 @@ class Snippet:
         self.path = path
         self.content = content
 
-
     def prefix_filename_with(self, path_to_containing_folder):
         self.path = os.path.join(path_to_containing_folder, self.filename)
 
@@ -106,7 +108,7 @@ class Snippet:
     def populate(self, snippet_dictionary: dict):
         self.content = str(snippet_dictionary.get(VALUE, ""))
         self.name = str(snippet_dictionary.get(NAME, clean_name(self.content)))
-        
+
         return self
 
     def load(self, path: str):
@@ -140,10 +142,11 @@ def button_made_from(entry: os.DirEntry) -> Gtk.Button:
 
     if entry.is_dir():
         return GoTo(
-                name=entry.name,
-                position=os.path.dirname(entry.path),
-                destination=entry.path,
-            )
+            name=entry.name,
+            position=os.path.dirname(entry.path),
+            destination=entry.path,
+        )
+
 
 def prepare_decks(folder: str):
     """Will create the decks and add them to the stack"""
@@ -154,11 +157,11 @@ def prepare_decks(folder: str):
     log.info(f"Working on folder: {folder}")
 
     # remove root
-    if folder ==  PATH_TO_SNIPPETS_FOLDER:
+    if folder == PATH_TO_SNIPPETS_FOLDER:
         deck = ButtonGrid(path=folder, root=PATH_TO_SNIPPETS_FOLDER)
     else:
         deck = ButtonGrid(path=folder)
-    
+
     # TODO: here i can read a file with metadata
 
     with os.scandir(folder) as it:
@@ -171,6 +174,7 @@ def prepare_decks(folder: str):
 
     deck.show_all()
     Decks[folder] = deck
+
 
 def load_folder(deck):
     """"""
@@ -186,7 +190,7 @@ def load_folder(deck):
                 continue
 
             deck.append(button_made_from(entry))
-    
+
     deck.show_all()
 
 

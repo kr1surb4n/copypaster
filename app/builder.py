@@ -44,7 +44,7 @@ class GtkBuilder(Gtk.Builder):
 
         if type_name in self.custom_objects:
             return self.custom_objects[type_name]
-     
+
         r = Gtk.Builder.do_get_type_from_name(self, type_name)
         print('GtkBuilder: => {}\t{}'.format(type_name, r))
         return r
@@ -54,16 +54,15 @@ builder = GtkBuilder()
 __.Builder = builder
 
 
-
 def test_builder_happy_path():
     builder = GtkBuilder()
 
     missing = 'missing'
     mycustomtype = 'mycustomtype'
-    
+
     class MyCustomType:
         ...
-    
+
     builder.add_custom_object(mycustomtype, MyCustomType)
 
     assert builder.do_get_type_from_name(mycustomtype) == MyCustomType

@@ -14,6 +14,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GObject  # noqa
 
+
 class GtkBuilder(Gtk.Builder):
     def do_get_type_from_name(self, type_name):
         """
@@ -26,8 +27,7 @@ class GtkBuilder(Gtk.Builder):
         Return type: GObject.GType
 
         """
-        
-        
+
         if type_name == 'Workbench':
             return Workbench
             # return MainWindow  - in normal use, Type should be returned

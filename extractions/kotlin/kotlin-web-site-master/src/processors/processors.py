@@ -17,7 +17,7 @@ languageMimeTypeMap = {
     "json": "application/json",
     "js": "text/javascript",
     "c": "text/x-csrc",
-    "text": "text/plain"
+    "text": "text/plain",
 }
 
 
@@ -38,18 +38,15 @@ processors = {
     'h2': 'typo-header typo-h2',
     'h3': 'typo-header typo-h3',
     'h4': 'typo-header typo-h4',
-
     'ul': 'typo-list typo-list_type_simple',
     'ol': 'typo-list typo-list_type_ordered',
     'li': 'typo-list__item',
-
     'p': 'typo-para',
     'a': 'typo-link',
     'blockquote': 'typo-quote',
     'hr': 'typo-hr',
     'img': 'typo-image',
     'strong': 'typo-strong',
-
     'table': 'typo-table',
     'tr': 'typo-table__row',
     'td': 'typo-table__column',
@@ -69,6 +66,7 @@ def process_markdown_html(tree):
 
     return tree
 
+
 def process_code_blocks(tree):
     if replace_simple_code:
         # some spellcheckers may not know what to do with <code> elements,
@@ -85,14 +83,18 @@ def process_code_blocks(tree):
         if class_names is not None:
             for class_name in class_names:
                 if class_name.startswith("language-"):
-                    lang = class_name[len("language-"):]
+                    lang = class_name[len("language-") :]
 
         if lang is None:
             continue
 
         parent_div = find_closest_tag(element, 'div')
         # Skip executable samples
-        if parent_div is not None and parent_div.has_attr('class') and "sample" in parent_div['class']:
+        if (
+            parent_div is not None
+            and parent_div.has_attr('class')
+            and "sample" in parent_div['class']
+        ):
             continue
         element['data-lang'] = languageMimeTypeMap[lang]
         element['class'] = "code _highlighted"

@@ -67,12 +67,14 @@ def get_dist_pages():
     if path.isdir(dist_path):
         for root, dirnames, filenames in walk(dist_path):
             for filename in filenames:
-                prefix_path = root[len(dist_path):]
-                if not prefix_path: prefix_path = "/"
+                prefix_path = root[len(dist_path) :]
+                if not prefix_path:
+                    prefix_path = "/"
 
                 url = path.join(prefix_path, filename)
 
-                if url.endswith('index.html'): url = url[:-10]
+                if url.endswith('index.html'):
+                    url = url[:-10]
                 paths.append((url, get_dist_page_type(url)))
 
     return paths

@@ -7,7 +7,7 @@ from app.register import Register as __
 
 
 def main_function(config_file):
-    # create and run the application, 
+    # create and run the application,
     # exit with the value returned by
     # running the program
     log.debug("Initializing services...")
@@ -32,7 +32,6 @@ def main_function(config_file):
 
     __.main_window = builder.get_object("main_window")
     __.welcome_sign = builder.get_object("welcome_sign")
-
 
     log.debug("Importing stories...")
     import app.stories  # noqa

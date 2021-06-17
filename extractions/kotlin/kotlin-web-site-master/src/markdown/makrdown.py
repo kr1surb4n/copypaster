@@ -4,17 +4,24 @@ import re
 import os
 
 root_folder = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-include_regex = re.compile("^\\s*\\[\\[\\s*(import|include)\\s+([^\\]]+)\\s*\\]\\]\\s*$", re.MULTILINE)
+include_regex = re.compile(
+    "^\\s*\\[\\[\\s*(import|include)\\s+([^\\]]+)\\s*\\]\\]\\s*$", re.MULTILINE
+)
 
 
 def handle_match(m):
     include_file: str = m.group(2).strip()
 
-    if not include_file.startswith('pages/') and \
-            not include_file.startswith('pages-includes/') and \
-            not include_file.startswith('externals/'):
-        raise Exception("Invalid [[include ]] for path: " + include_file +
-                        ", only 'externals/', 'pages-includes/', or 'pages/' are allowed")
+    if (
+        not include_file.startswith('pages/')
+        and not include_file.startswith('pages-includes/')
+        and not include_file.startswith('externals/')
+    ):
+        raise Exception(
+            "Invalid [[include ]] for path: "
+            + include_file
+            + ", only 'externals/', 'pages-includes/', or 'pages/' are allowed"
+        )
 
     include_path = os.path.join(root_folder, include_file)
 
@@ -38,7 +45,7 @@ def customized_markdown(text):
         shell=True,
         stdin=subprocess.PIPE,
         stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
+        stderr=subprocess.PIPE,
     )
     text_utf8 = text.encode("utf8")
     stdout_data, stderr_data = kramdown.communicate(input=text_utf8)
@@ -46,12 +53,17 @@ def customized_markdown(text):
 
     if kramdown.returncode != 0:
         input_hash = hashlib.sha1(text_utf8).hexdigest()
-        print(" ##teamcity[buildProblem description='kramdown failed!' identity='%s'] " % input_hash)
-        html = "<pre style='font-size:14px; color:red;'><![CDATA[\n" \
-               "  kramdown FAILED!:\n" + \
-                 stderr_data.decode("utf8", errors='ignore') + \
-               "]]></pre>\n\n" + \
-               html
+        print(
+            " ##teamcity[buildProblem description='kramdown failed!' identity='%s'] "
+            % input_hash
+        )
+        html = (
+            "<pre style='font-size:14px; color:red;'><![CDATA[\n"
+            "  kramdown FAILED!:\n"
+            + stderr_data.decode("utf8", errors='ignore')
+            + "]]></pre>\n\n"
+            + html
+        )
 
     return html
 

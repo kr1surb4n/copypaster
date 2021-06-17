@@ -20,7 +20,7 @@ class LayoutEvents:
         If there is no such functions,
         create a function that will emit a signal/event
         with the name passed as argument, and return it.
-       
+
         This way GTK triggering a callback is really
         triggering it in my Signal Bus.
 
@@ -30,10 +30,11 @@ class LayoutEvents:
         except AttributeError:
             ...
 
-        def method(*args, **kwargs):    
+        def method(*args, **kwargs):
             emit(name, *args, **kwargs)
-            
+
         return method
+
 
 Layout_events = LayoutEvents()
 __.Layout_events = Layout_events

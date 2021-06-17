@@ -13,50 +13,38 @@ from src.dist import get_dist_page_xml, dist_path
 
 def initialize_analyticsreporting() -> Resource:
     credentials = ServiceAccountCredentials.from_json_keyfile_name(
-        os.environ['KEY_FILE_LOCATION'], scopes='https://www.googleapis.com/auth/analytics.readonly')
+        os.environ['KEY_FILE_LOCATION'],
+        scopes='https://www.googleapis.com/auth/analytics.readonly',
+    )
     analytics = build('analyticsreporting', 'v4', credentials=credentials)
     return analytics
 
 
 def get_report(analytics: Resource) -> Dict:
-    return analytics.reports().batchGet(
-        body={
-            "reportRequests":
-                [
+    return (
+        analytics.reports()
+        .batchGet(
+            body={
+                "reportRequests": [
                     {
                         "viewId": "85132606",
                         "samplingLevel": "LARGE",
                         "filtersExpression": "ga:hostname==kotlinlang.org;ga:pagepath!@?",
                         "pageSize": 10000,
                         "orderBys": [
-                            {
-                                "fieldName": "ga:uniquepageviews",
-                                "sortOrder": "DESCENDING"
-                            }
+                            {"fieldName": "ga:uniquepageviews", "sortOrder": "DESCENDING"}
                         ],
-                        "dateRanges":
-                            [
-                                {
-                                    "startDate": "30daysAgo",
-                                    "endDate": "yesterday"
-                                }
-                            ],
-                        "metrics":
-                            [
-                                {
-                                    "expression": "ga:uniquepageviews",
-                                    "alias": ""
-                                }
-                            ],
-                        "dimensions":
-                            [
-                                {
-                                    "name": "ga:pagePath"
-                                }
-                            ]
+                        "dateRanges": [
+                            {"startDate": "30daysAgo", "endDate": "yesterday"}
+                        ],
+                        "metrics": [{"expression": "ga:uniquepageviews", "alias": ""}],
+                        "dimensions": [{"name": "ga:pagePath"}],
                     }
                 ]
-        }).execute()
+            }
+        )
+        .execute()
+    )
 
 
 def get_page_views_statistic() -> Dict[str, int]:
@@ -75,7 +63,9 @@ def get_client():
 
 
 def get_index() -> Index:
-    index_name = os.environ['INDEX_NAME'] if 'INDEX_NAME' in os.environ else "dev_KOTLINLANG"
+    index_name = (
+        os.environ['INDEX_NAME'] if 'INDEX_NAME' in os.environ else "dev_KOTLINLANG"
+    )
     return Index(get_client(), index_name)
 
 
@@ -91,7 +81,8 @@ def group_small_content_pats(content_parts, start_index=0):
     size = len(content_parts)
 
     # ToDo: REMOVE RECURSION
-    if size > 950: content_parts = content_parts[0:950]
+    if size > 950:
+        content_parts = content_parts[0:950]
 
     for i in range(start_index, size):
         if len(content_parts[i]) < record_limit and i < size - 1:
@@ -104,9 +95,13 @@ def group_small_content_pats(content_parts, start_index=0):
             return
     if size > 1 and len(content_parts[size - 1]) < record_limit:
         content_parts[size - 2] = content_parts[size - 2].rstrip()
-        if not len(content_parts[size - 2]) == 0 and not content_parts[size - 2].endswith("."):
+        if not len(content_parts[size - 2]) == 0 and not content_parts[size - 2].endswith(
+            "."
+        ):
             content_parts[size - 2] = content_parts[size - 2] + ". "
-        content_parts[size - 2] = content_parts[size - 2] + content_parts[size - 1].lstrip()
+        content_parts[size - 2] = (
+            content_parts[size - 2] + content_parts[size - 1].lstrip()
+        )
         del content_parts[size - 1]
 
 
@@ -115,11 +110,34 @@ def get_valuable_content(page_path, content: Iterator[Tag]) -> List[str]:
     for child in content:
         if not isinstance(child, Tag):
             continue
-        if child.name in ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'li', 'span', 'strong', 'aside']:
+        if child.name in [
+            'h1',
+            'h2',
+            'h3',
+            'h4',
+            'h5',
+            'p',
+            'li',
+            'span',
+            'strong',
+            'aside',
+        ]:
             valuable_content.append(child.text)
         elif child.name in ['ul', 'ol', 'blockquote', 'div', 'section']:
             valuable_content += get_valuable_content(page_path, child.children)
-        elif child.name in ['iframe', 'pre', 'code', 'hr', 'table', 'script', 'link', 'a', 'br', 'i', 'img']:
+        elif child.name in [
+            'iframe',
+            'pre',
+            'code',
+            'hr',
+            'table',
+            'script',
+            'link',
+            'a',
+            'br',
+            'i',
+            'img',
+        ]:
             continue
         else:
             raise Exception('Unknown tag "' + child.name + '" in ' + page_path)
@@ -127,23 +145,33 @@ def get_valuable_content(page_path, content: Iterator[Tag]) -> List[str]:
     return valuable_content
 
 
-def get_page_index_objects(content: Tag, url: str, page_path: str, title: str, page_type: str,
-                           page_views: int) -> List[Dict]:
+def get_page_index_objects(
+    content: Tag, url: str, page_path: str, title: str, page_type: str, page_views: int
+) -> List[Dict]:
     index_objects = []
     for ind, page_part in enumerate(get_valuable_content(page_path, content.children)):
-        page_info = {'url': url, 'objectID': page_path + '#' + str(ind), 'content': page_part,
-                     'headings': title, 'type': page_type, 'pageViews': page_views}
+        page_info = {
+            'url': url,
+            'objectID': page_path + '#' + str(ind),
+            'content': page_part,
+            'headings': title,
+            'type': page_type,
+            'pageViews': page_views,
+        }
         index_objects.append(page_info)
     return index_objects
 
 
-def get_markdown_page_index_objects(content: Tag, url: str, page_path: str, title: str, page_type: str,
-                                    page_views: int) -> List[Dict]:
+def get_markdown_page_index_objects(
+    content: Tag, url: str, page_path: str, title: str, page_type: str, page_views: int
+) -> List[Dict]:
     headers = ['h1', 'h2', 'h3']
     index_objects = []
     children = [element for element in content.children if isinstance(element, Tag)]
     if len(children) > 0 and children[0].name not in headers:
-        return get_page_index_objects(content, url, page_path, title, page_type, page_views)
+        return get_page_index_objects(
+            content, url, page_path, title, page_type, page_views
+        )
     block_title = ""
     content = []
     url_with_href = ""
@@ -151,9 +179,15 @@ def get_markdown_page_index_objects(content: Tag, url: str, page_path: str, titl
         if child.name in headers:
             if block_title != '':
                 for ind, page_part in enumerate(get_valuable_content(page_path, content)):
-                    page_info = {'url': url_with_href, 'objectID': url_with_href + str(ind), 'content': page_part,
-                                 'headings': block_title, 'pageTitle': title, 'type': page_type,
-                                 'pageViews': page_views}
+                    page_info = {
+                        'url': url_with_href,
+                        'objectID': url_with_href + str(ind),
+                        'content': page_part,
+                        'headings': block_title,
+                        'pageTitle': title,
+                        'type': page_type,
+                        'pageViews': page_views,
+                    }
                     index_objects.append(page_info)
             url_with_href = url + '#' + child.get('id')
             block_title = child.text
@@ -163,8 +197,9 @@ def get_markdown_page_index_objects(content: Tag, url: str, page_path: str, titl
     return index_objects
 
 
-def get_webhelp_page_index_objects(content: Tag, url: str, page_path: str, title: str, page_type: str,
-                                   page_views: int) -> List[Dict]:
+def get_webhelp_page_index_objects(
+    content: Tag, url: str, page_path: str, title: str, page_type: str, page_views: int
+) -> List[Dict]:
     index_objects = []
 
     article_title_node = content.select_one('h1')
@@ -183,10 +218,16 @@ def get_webhelp_page_index_objects(content: Tag, url: str, page_path: str, title
                 next_node = next_node.next_sibling
 
         for ind, page_part in enumerate(get_valuable_content(page_path, article_content)):
-            page_info = {'url': url, 'objectID': url + str(ind), 'content': page_part,
-                         'headings': article_title, 'mainTitle': article_title, 'pageTitle': article_title,
-                         'type': page_type,
-                         'pageViews': page_views}
+            page_info = {
+                'url': url,
+                'objectID': url + str(ind),
+                'content': page_part,
+                'headings': article_title,
+                'mainTitle': article_title,
+                'pageTitle': article_title,
+                'type': page_type,
+                'pageViews': page_views,
+            }
             index_objects.append(page_info)
 
         for chapter in chapters:
@@ -198,11 +239,19 @@ def get_webhelp_page_index_objects(content: Tag, url: str, page_path: str, title
 
                 url_with_href = url + "#" + chapter_title_anchor
 
-                for ind, page_part in enumerate(get_valuable_content(page_path, chapter_content)):
-                    page_info = {'url': url_with_href, 'objectID': url_with_href + str(ind), 'content': page_part,
-                                 'headings': chapter_title, 'mainTitle': article_title, 'pageTitle': chapter_title,
-                                 'type': page_type,
-                                 'pageViews': page_views}
+                for ind, page_part in enumerate(
+                    get_valuable_content(page_path, chapter_content)
+                ):
+                    page_info = {
+                        'url': url_with_href,
+                        'objectID': url_with_href + str(ind),
+                        'content': page_part,
+                        'headings': chapter_title,
+                        'mainTitle': article_title,
+                        'pageTitle': chapter_title,
+                        'type': page_type,
+                        'pageViews': page_views,
+                    }
                     index_objects.append(page_info)
 
     return index_objects
@@ -210,8 +259,14 @@ def get_webhelp_page_index_objects(content: Tag, url: str, page_path: str, title
 
 def get_wh_index():
     if 'WH_SEARCH_USER' in os.environ and 'WH_SEARCH_KEY' in os.environ:
-        client = algoliasearch.Client(os.environ['WH_SEARCH_USER'], os.environ['WH_SEARCH_KEY'])
-        index_name = os.environ['WH_INDEX_NAME'] if 'WH_INDEX_NAME' in os.environ else "dev_KOTLINLANG_WEBHELP"
+        client = algoliasearch.Client(
+            os.environ['WH_SEARCH_USER'], os.environ['WH_SEARCH_KEY']
+        )
+        index_name = (
+            os.environ['WH_INDEX_NAME']
+            if 'WH_INDEX_NAME' in os.environ
+            else "dev_KOTLINLANG_WEBHELP"
+        )
         return Index(client, index_name)
     return None
 
@@ -244,8 +299,10 @@ def build_search_indices(pages):
 
     print("Start building index")
     for url, type in pages:
-        if not (type and type.startswith('Page')): continue
-        if url.endswith('/'): url += 'index.html'
+        if not (type and type.startswith('Page')):
+            continue
+        if url.endswith('/'):
+            url += 'index.html'
 
         title = ''
         content = ''
@@ -271,22 +328,30 @@ def build_search_indices(pages):
             for table in page_info['content']('table'):
                 table.extract()
 
-            for overload_group in page_info['content'].findAll("div", {"class": "signature"}):
+            for overload_group in page_info['content'].findAll(
+                "div", {"class": "signature"}
+            ):
                 overload_group.extract()
 
-            breadcrumbs = page_info['content'].find("div", {"class": "api-docs-breadcrumbs"})
+            breadcrumbs = page_info['content'].find(
+                "div", {"class": "api-docs-breadcrumbs"}
+            )
 
             title = page_info['title']
 
             if breadcrumbs is not None:
-                full_name_parts = list(map(lambda link: link.text, breadcrumbs.findAll("a")))
+                full_name_parts = list(
+                    map(lambda link: link.text, breadcrumbs.findAll("a"))
+                )
 
                 if "kotlin-stdlib" in full_name_parts:
                     full_name_parts.remove("kotlin-stdlib")
                 else:
                     full_name_parts.remove("kotlin.test")
 
-                title = " › ".join(full_name_parts).replace('<', '&lt;').replace('>', '&gt;')
+                title = (
+                    " › ".join(full_name_parts).replace('<', '&lt;').replace('>', '&gt;')
+                )
                 breadcrumbs.extract()
 
             page_type = "Standard Library" if "jvm/stdlib" in url else "Kotlin Test"
@@ -325,12 +390,7 @@ def build_search_indices(pages):
             print("processing " + url + ' - ' + page_type)
 
             page_indices = page_indexer(
-                content,
-                url,
-                page_path,
-                title,
-                page_type,
-                page_views
+                content, url, page_path, title, page_type, page_views
             )
 
             index_objects += page_indices

@@ -23,6 +23,7 @@ MAX_FILENAME_LENGTH = 20
 FILENAME = "stdtypes.html"
 THING = "¶"
 
+
 def placeholder_name():
     _lock = threading.Lock()
     with _lock:
@@ -32,21 +33,21 @@ def placeholder_name():
 
     return name
 
+
 def clean_folder(name: str):
     if not name:
-        name ="no name"
-
+        name = "no name"
 
     name = name.translate(rules)
     name = name.strip()
     name = name.rstrip("——")
     return name.strip()
 
+
 def clean_name(name: str):
 
     if name is None:
         name = "None"
-
 
     name.strip()
     name.strip(THING)
@@ -56,11 +57,11 @@ def clean_name(name: str):
 
     return name
 
+
 def clean_filename(name: str):
 
     if name is None:
         name = "None"
-
 
     name = name.strip()
     name = name.strip(THING)
@@ -73,7 +74,6 @@ def clean_filename(name: str):
         name = placeholder_name()
 
     return name.replace(" ", "-")
-
 
 
 class Snippet:
@@ -92,7 +92,7 @@ class Snippet:
     def populate(self, snippet_dictionary: dict):
         self.content = str(snippet_dictionary.get(VALUE, ""))
         self.name = str(snippet_dictionary.get(NAME, clean_name(self.content)))
-        
+
         return self
 
     def load(self, path: str):
@@ -120,6 +120,7 @@ class Snippet:
 
 slices = lambda sausage: sausage.split("/")
 
+
 def text_from(tree):
     return etree.tostring(tree, method="text", encoding="UTF-8").strip().decode()
 
@@ -127,6 +128,7 @@ def text_from(tree):
 def read(filename):
     with open(filename, 'r') as f:
         return f.read()
+
 
 def write(filename, content):
     with open(filename, 'w') as f:
@@ -149,20 +151,23 @@ def dt(tree):
     name = tree.get('id')
     value = text_from(tree)
 
-    if name:    
+    if name:
         return name.strip(), value
     else:
         return value, value
 
+
 def dd(tree):
     info = text_from(tree)
     return info
+
 
 def a_refs(tree):
     _code = tree.get('title')
 
     # name, value, info, tag
     return _code, _code
+
 
 def code(tree):
     _code = text_from(tree)
@@ -177,10 +182,11 @@ def definition(tree):
     name, value = dt(dt_tree)
 
     # for future, yes, i know
-    info=dd(dd_tree)
-    tag=tree.attrib.get('class')
+    info = dd(dd_tree)
+    tag = tree.attrib.get('class')
 
     return name, value
+
 
 def subdefinition(tree):
     name, value = definition(tree)
@@ -189,6 +195,7 @@ def subdefinition(tree):
     # has the full code and the value is
     # only function name
     return name, name
+
 
 def load_element(file):
     l.info("Reading file to tree")
@@ -210,7 +217,6 @@ def load_tree(file):
 
 def slashes2under(path):
     return path.replace("/", "_")
-
 
 
 def work_on_section(section, path):
@@ -249,12 +255,25 @@ def work_on_section(section, path):
         print(e)
 
     # extract all dl
-    definitions = [Snippet(*definition(dl), new_path) for dl in section.xpath(f"//*[@id='{section_id}']/dl")]
-    definitions += [Snippet(*subdefinition(dl), new_path) for dl in section.xpath(f"//*[@id='{section_id}']/dl//dl")]
+    definitions = [
+        Snippet(*definition(dl), new_path)
+        for dl in section.xpath(f"//*[@id='{section_id}']/dl")
+    ]
+    definitions += [
+        Snippet(*subdefinition(dl), new_path)
+        for dl in section.xpath(f"//*[@id='{section_id}']/dl//dl")
+    ]
 
-
-    refs = [Snippet(*a_refs(ahref), refs_path) for ahref in section.xpath(f"//*[@class='{section_id}']/p/a[@class='reference']")]
-    refs += [Snippet(*a_refs(ahref), refs_path) for ahref in section.xpath(f"//*[@class='{section_id}']/ol//p/a[@class='reference']")]
+    refs = [
+        Snippet(*a_refs(ahref), refs_path)
+        for ahref in section.xpath(f"//*[@class='{section_id}']/p/a[@class='reference']")
+    ]
+    refs += [
+        Snippet(*a_refs(ahref), refs_path)
+        for ahref in section.xpath(
+            f"//*[@class='{section_id}']/ol//p/a[@class='reference']"
+        )
+    ]
 
     # extract all code
     highlight_classes = [
@@ -273,35 +292,39 @@ def work_on_section(section, path):
             f"//*[@id='{section_id}']/div/div[@class='{highlight}']/pre",
             f"//*[@id='{section_id}']/dl//div[@class='{highlight}']/pre",
         ]
-    
+
     pres = []
     for pre_section_xpath in pre_sections:
-        pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(pre_section_xpath)]
-    
+        pres += [
+            Snippet(*code(pre), gists_path) for pre in section.xpath(pre_section_xpath)
+        ]
+
     code_sections = [
         f"//*[@id='{section_id}']/table//p/code",
     ]
     for code_sections_xpath in code_sections:
-        codes = [Snippet(*code(_codes), codes_path) for _codes in section.xpath(code_sections_xpath)]
-    
+        codes = [
+            Snippet(*code(_codes), codes_path)
+            for _codes in section.xpath(code_sections_xpath)
+        ]
+
     [snippet.save() for snippet in definitions]
     [snippet.save() for snippet in pres]
     [snippet.save() for snippet in codes]
     [snippet.save() for snippet in refs]
 
-
     return section_id, new_path
+
 
 def walk(section, path):
     global tasks
 
     section_id, new_path = work_on_section(section, path)
-    
-    for section_tree in section.xpath(
-            subsection_of(section_id)
-        ):
-    
-            tasks.put((section_tree, new_path))
+
+    for section_tree in section.xpath(subsection_of(section_id)):
+
+        tasks.put((section_tree, new_path))
+
 
 def worker():
     global tasks
@@ -314,6 +337,7 @@ def worker():
         log.debug(f'Finished {path}')
         tasks.task_done()
 
+
 def subsection_of(section):
     return f"//*[@id='{section}']/*[@class='section']"
 
@@ -325,19 +349,14 @@ def parse(filename):
 
     content_tree = load_tree(filename)
 
-
     for top_section_tree in content_tree.xpath("//*[@class='body']/*[@class='section']"):
 
         top_section = top_section_tree.get('id')  # id value is a good dict key
 
-
         work_on_section(top_section_tree, PATH)
 
+        for section_tree in top_section_tree.xpath(subsection_of(top_section)):
 
-        for section_tree in top_section_tree.xpath(
-            subsection_of(top_section)
-        ):
-    
             tasks.put((section_tree, PATH))
 
     # turn-on the worker thread
@@ -347,6 +366,7 @@ def parse(filename):
     tasks.join()
 
     print("stuff done")
+
 
 if __name__ == "__main__":
 

@@ -23,6 +23,7 @@ i need to have:
 
 """
 
+
 @subscribe
 def load_default_styles():
     global default_provider

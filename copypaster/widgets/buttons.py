@@ -11,6 +11,7 @@ from gi.repository import Gtk  # noqa
 
 MAX_LENGTH_OF_BUTTON = 20
 
+
 def camel_case_split(str):
     words = [[str[0]]]
 
@@ -22,6 +23,7 @@ def camel_case_split(str):
 
     return ["".join(word) for word in words]
 
+
 class Id:
     def hash(self):
         return hashlib.md5(repr(self.snippet).encode()).hexdigest()
@@ -30,8 +32,8 @@ class Id:
     def _id(self):
         return self.hash()
 
-class Copy(Gtk.Button, Id):
 
+class Copy(Gtk.Button, Id):
     @property
     def name(self):
         return self.snippet.name
@@ -63,7 +65,6 @@ class Copy(Gtk.Button, Id):
         super(Copy, self).__init__(label=self.style_label())
 
         self.tag = "normal"
-        
 
         button_context = self.get_style_context()
         button_context.add_class(self.tag)
@@ -97,10 +98,11 @@ class Copy(Gtk.Button, Id):
     def __str__(self):
         return f"<Copy [{self.name}] >"
 
+
 class GoTo(Gtk.Button, Id):
     def set_path(self, path):
         ...
-    
+
     def save(self):
         ...
 
@@ -114,7 +116,7 @@ class GoTo(Gtk.Button, Id):
         self.destination = destination
 
         super(Gtk.Button, self).__init__(label=name)
-        
+
         self.set_name = (
             "nested-navigation"  # TODO: styles should be moved to another class
         )
@@ -144,18 +146,19 @@ class GoTo(Gtk.Button, Id):
 
     def delete(self):
         import os
+
         os.rmdir(os.path.join(self.current_position, self.name))
+
 
 class FunctionalButton:
     ...
+
 
 class AddSnippet(Gtk.Button, Id, FunctionalButton):
     def __init__(self):
         super(Gtk.Button, self).__init__(label="Add Snippet")
         self.order = 1
-        self.set_name = (
-            "add-snippet" # TODO: styles should be moved to another class
-        )
+        self.set_name = "add-snippet"  # TODO: styles should be moved to another class
 
         button_context = self.get_style_context()
         button_context.add_class("add-snippet")
@@ -172,13 +175,12 @@ class AddSnippet(Gtk.Button, Id, FunctionalButton):
         log.debug(f"Adding Snippet")
         emit("open_add_button_dialog")
 
+
 class AddFolder(Gtk.Button, Id, FunctionalButton):
     def __init__(self):
         super(Gtk.Button, self).__init__(label="Add folder")
         self.order = 2
-        self.set_name = (
-            "add-folder" # TODO: styles should be moved to another class
-        )
+        self.set_name = "add-folder"  # TODO: styles should be moved to another class
 
         button_context = self.get_style_context()
         button_context.add_class("add-folder")

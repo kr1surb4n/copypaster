@@ -27,12 +27,10 @@ PDF_CONFIG = {
     'footer-font-size': '9',
     'footer-spacing': '7',
     'enable-smart-shrinking': '',
-    'zoom': '1.3'
+    'zoom': '1.3',
 }
 
-PDF_TOC_CONFIG = {
-    'xsl-style-sheet': path.join(pdf_folder_path, "toc.xsl")
-}
+PDF_TOC_CONFIG = {'xsl-style-sheet': path.join(pdf_folder_path, "toc.xsl")}
 
 
 def generate_pdf(name, build_mode: bool, pages, toc):
@@ -64,7 +62,7 @@ def get_pdf_content(build_mode: bool, pages: MyFlatPages, toc: Dict) -> str:
         section = {
             'id': toc_section['title'].replace(' ', '_'),
             'title': toc_section['title'],
-            'content': []
+            'content': [],
         }
         for reference in toc_section['content']:
             url = reference['url']
@@ -74,7 +72,9 @@ def get_pdf_content(build_mode: bool, pages: MyFlatPages, toc: Dict) -> str:
                 url = url[:-5]
 
             if url == "docs/reference/grammar":
-                page_html = render_template('pages/grammar.html', kotlinGrammar=get_grammar(build_mode)).replace("<br>", "<br/>")
+                page_html = render_template(
+                    'pages/grammar.html', kotlinGrammar=get_grammar(build_mode)
+                ).replace("<br>", "<br/>")
                 document = BeautifulSoup(page_html, 'html.parser')
                 document = document.find("div", {"class": "grammar"})
                 page_id = "grammar"
@@ -100,8 +100,12 @@ def get_pdf_content(build_mode: bool, pages: MyFlatPages, toc: Dict) -> str:
                             new_href = page_id + '_' + href[1:]
                         else:
                             url_path = url.path.split("/")[-1]
-                            url_path = url_path[:-5] if url_path.endswith(".html") else url_path
-                            new_href = url_path + ('_' + url.fragment if url.fragment != "" else "")
+                            url_path = (
+                                url_path[:-5] if url_path.endswith(".html") else url_path
+                            )
+                            new_href = url_path + (
+                                '_' + url.fragment if url.fragment != "" else ""
+                            )
                         element.attrs['href'] = "#" + new_href
 
                 header_regex = re.compile('^h(\d)$')
@@ -109,13 +113,14 @@ def get_pdf_content(build_mode: bool, pages: MyFlatPages, toc: Dict) -> str:
                     level = int(header_regex.match(element.name).group(1)) + 1
                     element.name = 'h' + str(level)
 
-            section['content'].append({
-                'id': page_id,
-                'title': title,
-                'content': document.decode()
-            })
+            section['content'].append(
+                {'id': page_id, 'title': title, 'content': document.decode()}
+            )
         content.append(section)
     drive, root_folder_path_rest = path.splitdrive(root_folder_path)
-    page_html = render_template('pdf.html', content=content, root_folder=(drive + root_folder_path_rest)
-                                .replace('\\', '/'))
+    page_html = render_template(
+        'pdf.html',
+        content=content,
+        root_folder=(drive + root_folder_path_rest).replace('\\', '/'),
+    )
     return page_html

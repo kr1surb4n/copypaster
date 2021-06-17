@@ -13,9 +13,11 @@ from app.register import Register as __
 from app.signal_bus import subscribe, emit, signals
 from folders.widgets.workbench import Workbench
 
+
 @subscribe
 def set_location(location):
     __.workbench_location.set_text(location.value)
+
 
 @subscribe
 def start_app():

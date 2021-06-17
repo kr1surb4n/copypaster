@@ -1,4 +1,3 @@
-
 class Feature:
     def __init__(self, content, meta):
         self._meta = meta

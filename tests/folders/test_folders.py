@@ -1,9 +1,9 @@
-
 import gi
 import pytest
 import threading
 from time import sleep
 import logging as log
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GObject  # noqa
 
@@ -12,12 +12,14 @@ from folders import PROJECT_DIR
 from folders.main import GLADE_FILE
 from folders.builder import builder
 from folders.widgets.workbench import (
-    Workbench, Canvas, 
-    build_elements, 
-    object_register, 
-    viewport, 
-    organize_elements, 
-    interpreter)  
+    Workbench,
+    Canvas,
+    build_elements,
+    object_register,
+    viewport,
+    organize_elements,
+    interpreter,
+)
 from folders.widgets.workbench.rift import Location
 
 
@@ -30,17 +32,21 @@ in python code, that are used to display
 and manipulate folders and files,
 the items on the file system.
 """
+
+
 @pytest.mark.skip()
 def test_folders_works():
     from folders.main import main_function
+
     folders = threading.Thread(target=main_function, args=(1,))
     folders.start()
 
     sleep(1)
     assert folders.is_alive()
 
+
 def test_add_workbench_to_glade():
-    WORKBENCH='Workbench'
+    WORKBENCH = 'Workbench'
 
     # builder returns Workbench class on name
     instance = builder.get_type_from_name(WORKBENCH)
@@ -48,9 +54,9 @@ def test_add_workbench_to_glade():
 
     builder.add_from_file(GLADE_FILE)
     workbench = builder.get_object(WORKBENCH.lower())
-    
+
     assert isinstance(workbench, type(Workbench()))
-    
+
 
 def test_display_workbench():
     """
@@ -59,7 +65,7 @@ def test_display_workbench():
     The background.
 
     Display it."""
-    
+
     workbench = Workbench()
     assert workbench.canvas
     assert workbench.index
@@ -70,31 +76,33 @@ def test_display_workbench():
 
     assert isinstance(workbench.canvas, type(Canvas()))
 
+
 def test_definition_of_elements():
     """Elements needs to be defined,
 
-    the folders view has:
-    - files
-    - folders
+        the folders view has:
+        - files
+        - folders
 
-    editor view (default) has:
-    - text
-    - box
+        editor view (default) has:
+        - text
+        - box
 
-    every element has label.
+        every element has label.
 
-    definitions have defined values.
-    folder and files have paths and 
-    (maybe) attributes.
-join
-    text has content.
+        definitions have defined values.
+        folder and files have paths and
+        (maybe) attributes.
+    join
+        text has content.
 
-    box has other elements.
+        box has other elements.
 
-    a loadable definition is needed.
-    Start from python code.
+        a loadable definition is needed.
+        Start from python code.
     """
     pass
+
 
 def test_use_diagram_on_workbench():
     """Try using diagram from Gaphor
@@ -106,9 +114,9 @@ def test_use_diagram_on_workbench():
     without the all the extra things """
     pass
 
-
     """Take elements from gaphor"""
     """Use Item and StyledItem for the styles"""
+
 
 def test_styles_of_elements():
     """
@@ -116,7 +124,7 @@ def test_styles_of_elements():
     need their distinct styles.
 
     Editor also needs default styles.
-    
+
     a loadable definition is needed.
     Start from python code.
     """
@@ -150,15 +158,16 @@ def test_elements_organiser():
     """
     pass
 
+
 def test_actions_on_elements():
     """
     Every type of element should have
     actions menu, that displays default
-    actions defined with 
+    actions defined with
     types(elements) definitions.
 
     action menu can also load functions defined
-    by user from outside. 
+    by user from outside.
 
     actions for view.
     actions for elements.
@@ -178,19 +187,20 @@ def test_rift():
 
     Folders open rift at 0,0,0
     Plateu open at saved position.
-    
+
     Rift can display elements at a given
-    location(workbench address) at 
+    location(workbench address) at
     the displayed rift coordinates.
     (adding stuff above the area
     you are looking at)
     """
     pass
 
+
 def test_rift():
-    """Rift saves position in coordinates,
-    """
+    """Rift saves position in coordinates,"""
     pass
+
 
 def test_move_rift_with_wsad():
     """Change the possitio of the rift
@@ -198,11 +208,12 @@ def test_move_rift_with_wsad():
     """
     pass
 
+
 def test_go_up_down_with_right_using_mouse_scroll():
     """And pageup and pagedown.
 
-        change elevation of the rift (zoom in/out) using
-        scroll and pageup/down buttons
+    change elevation of the rift (zoom in/out) using
+    scroll and pageup/down buttons
     """
     pass
 
@@ -212,21 +223,23 @@ def test_provide_button_to_go_to_center_of_rift():
     to 0,0,0"""
     pass
 
+
 def test_view_interpreter():
     """
     Interpreter is the mechanism that
     translates a given workbench addres,
     and according to the view
     represents the elements
-    
+
     folders is a view that displays
     folders and files.
 
     interpreter translates given
     entities to their corresponding
-    representations. 
+    representations.
     """
     pass
+
 
 def test_view_mainpulator():
     """
@@ -243,9 +256,9 @@ def test_workbench_has_and_address():
     A workbench has an address.
     Its a path, an url, folder, file,
     database, network - any fucking thing.
-    
+
     workbench displays that location
-    with an interpreter. 
+    with an interpreter.
 
     elements that are displayed on the
     workbench are related to the view.
@@ -253,7 +266,7 @@ def test_workbench_has_and_address():
     folders is a view that displays files
     and folders. the address is the
     path to folder. (curren folder)
-    
+
     display elements of project folder.
     """
 
@@ -261,36 +274,42 @@ def test_workbench_has_and_address():
     assert workbench.location
     assert isinstance(workbench.location, Location)
     assert workbench.location.value == PROJECT_DIR
-    
+
+
 def test_left_click_on_workbench():
     """When clicked on workbench with
-        left mouse button
-       everything is deselected. """
+     left mouse button
+    everything is deselected."""
     pass
+
 
 def test_right_click_on_workbench():
     """
-    When clicking on workbench with 
+    When clicking on workbench with
         right mouse button
        an workbenchs actions right-mouse-click menu
        is displayed"""
     pass
 
+
 def test_double_left_click_on_workbench():
     """When clicking on workbench with
-        double left click
-        an empty element of type "set as default"
-        is created under the cursor"""
+    double left click
+    an empty element of type "set as default"
+    is created under the cursor"""
     pass
+
 
 # tools are needed to operate and define
 # the default left/right click(and drag)
+
 
 def test_right_click_on_element():
     """When you click on element with right mouse button,
     an element actions right-mouse-click menu is
     displayed"""
     pass
+
 
 def test_double_left_click_on_element():
     """
@@ -300,6 +319,6 @@ def test_double_left_click_on_element():
     open a defined action
     open a defined action in view
     open insides of that element in a new window.
-    
+
     probably some abstract of that"""
     pass

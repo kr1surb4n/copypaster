@@ -23,6 +23,7 @@ MAX_FILENAME_LENGTH = 20
 FILENAME = "stdtypes.html"
 THING = "¶"
 
+
 def placeholder_name():
     _lock = threading.Lock()
     with _lock:
@@ -32,20 +33,21 @@ def placeholder_name():
 
     return name
 
+
 def clean_folder(name: str):
     if not name:
-        name ="no name"
+        name = "no name"
 
     name = name.translate(rules)
     name = name.strip()
     name = name.rstrip("——")
     return name.strip()
 
+
 def clean_name(name: str):
 
     if name is None:
         name = "None"
-
 
     name.strip()
     name.strip(THING)
@@ -55,11 +57,11 @@ def clean_name(name: str):
 
     return name
 
+
 def clean_filename(name: str):
 
     if name is None:
         name = "None"
-
 
     name = name.strip()
     name = name.strip(THING)
@@ -72,7 +74,6 @@ def clean_filename(name: str):
         name = placeholder_name()
 
     return name.replace(" ", "-")
-
 
 
 class Snippet:
@@ -91,7 +92,7 @@ class Snippet:
     def populate(self, snippet_dictionary: dict):
         self.content = str(snippet_dictionary.get(VALUE, ""))
         self.name = str(snippet_dictionary.get(NAME, clean_name(self.content)))
-        
+
         return self
 
     def load(self, path: str):
@@ -119,6 +120,7 @@ class Snippet:
 
 slices = lambda sausage: sausage.split("/")
 
+
 def text_from(tree):
     return etree.tostring(tree, method="text", encoding="UTF-8").strip().decode()
 
@@ -126,6 +128,7 @@ def text_from(tree):
 def read(filename):
     with open(filename, 'r') as f:
         return f.read()
+
 
 def write(filename, content):
     with open(filename, 'w') as f:
@@ -148,10 +151,11 @@ def dt(tree):
     name = tree.get('id')
     value = text_from(tree)
 
-    if name:    
+    if name:
         return name.strip(), value
     else:
         return value, value
+
 
 def dd(tree):
     info = text_from(tree)
@@ -171,10 +175,11 @@ def definition(tree):
     name, value = dt(dt_tree)
 
     # for future, yes, i know
-    info=dd(dd_tree)
-    tag=tree.attrib.get('class')
+    info = dd(dd_tree)
+    tag = tree.attrib.get('class')
 
     return name, value
+
 
 def subdefinition(tree):
     name, value = definition(tree)
@@ -183,6 +188,7 @@ def subdefinition(tree):
     # has the full code and the value is
     # only function name
     return name, name
+
 
 def load_element(file):
     l.info("Reading file to tree")
@@ -229,28 +235,52 @@ def walk(section, path):
     os.mkdir(codes_path)
 
     # extract all dl
-    definitions = [Snippet(*definition(dl), new_path) for dl in section.xpath(f"//*[@id='{section_id}']/dl")]
-    definitions += [Snippet(*subdefinition(dl), new_path) for dl in section.xpath(f"//*[@id='{section_id}']/dl//dl")]
-
+    definitions = [
+        Snippet(*definition(dl), new_path)
+        for dl in section.xpath(f"//*[@id='{section_id}']/dl")
+    ]
+    definitions += [
+        Snippet(*subdefinition(dl), new_path)
+        for dl in section.xpath(f"//*[@id='{section_id}']/dl//dl")
+    ]
 
     # extract all code
-    pres = [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/div[@class='highlight']/pre")]
-    pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/dl//div[@class='highlight']/pre")]
-    pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/div[@class='highlight-default']/pre")]
-    pres += [Snippet(*code(pre), gists_path) for pre in section.xpath(f"//*[@id='{section_id}']/dl//div[@class='highlight-default']/pre")]
+    pres = [
+        Snippet(*code(pre), gists_path)
+        for pre in section.xpath(f"//*[@id='{section_id}']/div[@class='highlight']/pre")
+    ]
+    pres += [
+        Snippet(*code(pre), gists_path)
+        for pre in section.xpath(
+            f"//*[@id='{section_id}']/dl//div[@class='highlight']/pre"
+        )
+    ]
+    pres += [
+        Snippet(*code(pre), gists_path)
+        for pre in section.xpath(
+            f"//*[@id='{section_id}']/div[@class='highlight-default']/pre"
+        )
+    ]
+    pres += [
+        Snippet(*code(pre), gists_path)
+        for pre in section.xpath(
+            f"//*[@id='{section_id}']/dl//div[@class='highlight-default']/pre"
+        )
+    ]
 
+    codes = [
+        Snippet(*code(_codes), codes_path)
+        for _codes in section.xpath(f"//*[@id='{section_id}']/table//p/code")
+    ]
 
-    codes = [Snippet(*code(_codes), codes_path) for _codes in section.xpath(f"//*[@id='{section_id}']/table//p/code")]
-    
     [snippet.save() for snippet in definitions]
     [snippet.save() for snippet in pres]
     [snippet.save() for snippet in codes]
-    
-    for section_tree in section.xpath(
-            subsection_of(section_id)
-        ):
-    
-            tasks.put((section_tree, new_path))
+
+    for section_tree in section.xpath(subsection_of(section_id)):
+
+        tasks.put((section_tree, new_path))
+
 
 def worker():
     global tasks
@@ -262,6 +292,7 @@ def worker():
         walk(section_tree, path)
         log.debug(f'Finished {path}')
         tasks.task_done()
+
 
 def subsection_of(section):
     return f"//*[@id='{section}']/*[@class='section']"
@@ -277,15 +308,12 @@ if __name__ == "__main__":
 
     content_tree = load_tree(FILENAME)
 
-
     for top_section_tree in content_tree.xpath("//*[@class='body']/*[@class='section']"):
 
         top_section = top_section_tree.get('id')  # id value is a good dict key
 
-        for section_tree in top_section_tree.xpath(
-            subsection_of(top_section)
-        ):
-    
+        for section_tree in top_section_tree.xpath(subsection_of(top_section)):
+
             tasks.put((section_tree, PATH))
 
     # turn-on the worker thread

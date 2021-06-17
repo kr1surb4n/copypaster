@@ -34,9 +34,8 @@ access the instance with:
 """
 import functools
 
-class ObjectRegister(dict):
-    
 
+class ObjectRegister(dict):
     def __setattr__(self, name, value):
         self[name] = value
 
@@ -50,7 +49,7 @@ Register = ObjectRegister()
 def register_instance(cls):
     """This decorator adds the object instance to the Registry,
     when the decorated object is initiated.
-    
+
     Registered object is accessible through it's class name.
 
 
@@ -61,7 +60,7 @@ def register_instance(cls):
 
         instance = cls(*args, **kwargs)
 
-        Register[cls.__name__] = instance       # hmm, this dictates the CamelCase names
+        Register[cls.__name__] = instance  # hmm, this dictates the CamelCase names
 
         return instance
 
@@ -78,7 +77,7 @@ def test_object_register():
     reg[dummy] = value
 
     assert dummy in reg  # is dummy in register?
-    assert reg.Stub      # can i access the Stub by name?
+    assert reg.Stub  # can i access the Stub by name?
     assert reg.Stub == value  # is value correct?
 
     reg.Stub = 1  # can I change the value?

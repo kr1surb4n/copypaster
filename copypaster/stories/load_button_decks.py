@@ -22,7 +22,7 @@ def initialize_snippets():
     __.Snippets.initialize(*load_snippets())
     change_button_grid("Starting", __.Snippets.root)
     __.Snippets.show()
-    
+
     __.main_window.show_all()  # redraw everything
 
 
@@ -31,7 +31,7 @@ def change_button_grid(current_position, destination):
     log.debug(f"Switch to the other branch from {current_position} to  {destination}")
 
     destination_grid = __.Snippets.tree[destination]
-    
+
     if destination_grid.is_empty:
         log.debug("Grid is empty, loading...")
 
@@ -41,5 +41,5 @@ def change_button_grid(current_position, destination):
     show_current_possition_as(destination)
 
 
-def  show_current_possition_as(destination):
+def show_current_possition_as(destination):
     __.LevelIndicator.set_text(os.path.basename(destination))

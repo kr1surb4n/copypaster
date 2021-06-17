@@ -86,7 +86,7 @@ class IconViewWindow(Gtk.Window):
         # for icon in icons:
 
         for _ in range(200):
-            
+
             pixbuf = Gtk.IconTheme.get_default().load_icon(icon, 16, 0)
             # pixbuf = GdkPixbuf.Pixbuf.new_from_file(
             #     "icons/{}.png".format(icon))

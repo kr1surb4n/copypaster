@@ -2,7 +2,7 @@ import gi
 
 
 import astor
- 
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk
 
@@ -17,21 +17,21 @@ print(ast_code)
 
 _R = {}
 
-LISTBOX='listbox'
+LISTBOX = 'listbox'
 
 CLIPBOARD = []
 
 
 class ListHandlers:
     def switch_selection_mode(self, button):
-        
+
         list_box = _R[LISTBOX]
 
         if button.get_active():
             list_box.set_selection_mode(Gtk.SelectionMode.MULTIPLE)
         else:
             list_box.set_selection_mode(Gtk.SelectionMode.SINGLE)
-        
+
     def deselect_all(self, button):
 
         _R[LISTBOX].unselect_all()
@@ -41,18 +41,18 @@ class ListHandlers:
     def copy(self, button):
         print(button.get_label())
         global CLIPBOARD
-        
+
         row = _R[LISTBOX].get_selected_row()
         CLIPBOARD = [row.data]
 
     def copy_selected(self, button):
         print(button.get_label())
         global CLIPBOARD
-        
+
         rows = _R[LISTBOX].get_selected_rows()
 
         CLIPBOARD = [row.data for row in rows]
-        
+
         [print(row.get_index()) for row in rows]
 
     def add_row_before(self, button):
@@ -96,7 +96,7 @@ class ListHandlers:
         lista = _R[LISTBOX]
 
         current_row = lista.get_selected_row()
-        
+
         new_row = ListBoxRowWithData(CLIPBOARD[0])
 
         must_append = not current_row
@@ -111,8 +111,8 @@ class ListHandlers:
             lista.insert(new_row, after)
 
         lista.show_all()
-    
-    def delete_selected(self, button): 
+
+    def delete_selected(self, button):
         print(button.get_label())
 
         lista = _R[LISTBOX]
@@ -121,6 +121,7 @@ class ListHandlers:
             lista.remove(row)
 
         lista.show_all()
+
 
 class ListBoxRowWithData(Gtk.ListBoxRow):
     def __init__(self, data):
@@ -165,7 +166,6 @@ class ListBoxWindow(Gtk.Window):
         def on_row_activated(listbox_widget, row):
             print(row.data)
 
-
         listbox_2.connect("row-activated", on_row_activated)
 
         box_outer.pack_start(listbox_2, True, True, 0)
@@ -176,4 +176,3 @@ win = ListBoxWindow()
 win.connect("destroy", Gtk.main_quit)
 win.show_all()
 Gtk.main()
-

@@ -27,10 +27,16 @@ class KTLComponentExtension(Extension):
 
         while parser.stream.current.type != "block_end":
             target = nodes.Const(parser.parse_assign_target(name_only=True).name)
-            value = parser.parse_expression() if parser.stream.skip_if("assign") else nodes.Const(True)
+            value = (
+                parser.parse_expression()
+                if parser.stream.skip_if("assign")
+                else nodes.Const(True)
+            )
             component_props.append(nodes.Pair(target, value))
 
-        result = self.call_method("_render", [component_name, nodes.Dict(component_props)], lineno=lineno)
+        result = self.call_method(
+            "_render", [component_name, nodes.Dict(component_props)], lineno=lineno
+        )
         return nodes.Output([result], lineno=lineno)
 
     def _render(self, name, props):
@@ -41,10 +47,7 @@ class KTLComponentExtension(Extension):
             props=props,
         )
 
-        return Markup(
-            "<!-- ktl_component: %s -->%s"
-            % (dumps(props_render), content)
-        )
+        return Markup("<!-- ktl_component: %s -->%s" % (dumps(props_render), content))
 
     @lru_cache(maxsize=None)
     def __exec_render(self, name, props_json):
@@ -53,7 +56,7 @@ class KTLComponentExtension(Extension):
             cwd="scripts/react-renderer",
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE
+            stderr=subprocess.PIPE,
         )
 
         stdout_data, stderr_data = nodejs.communicate()

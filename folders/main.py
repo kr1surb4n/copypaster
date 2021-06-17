@@ -16,10 +16,11 @@ from gi.repository import Gtk  # noqa
 
 GLADE_FILE = os.path.join(PROJECT_DIR, "folders/layout.glade")
 
-WORKBENCH='Workbench'
+WORKBENCH = 'Workbench'
 MAIN_WINDOW = "main_window"
 MAIN_BOX = "main_box"
 WORKBENCH_LOCATION = "workbench_location"
+
 
 def main_function(config_file):
     # create and run the application, exit with the value returned by
@@ -40,7 +41,7 @@ def main_function(config_file):
     log.debug("Loading Widgets usig GtkBuilder...")
     builder.set_application(application)  # works without it
     builder.add_from_file(GLADE_FILE)
-    
+
     __.main_window = builder.get_object(MAIN_WINDOW)
     __.main_box = builder.get_object(MAIN_BOX)
     __.workbench = builder.get_object(WORKBENCH.lower())

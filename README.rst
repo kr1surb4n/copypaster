@@ -49,7 +49,7 @@ Features
 TODO
 ----
 1. File loader should check if the file is a text file (do not load binary)
-2. Snippets loading slow. (logging is a drag)
+2. Snippets are loading slow. (logging is a drag)
    a) Do performance checks.
    b) Add some info for user that stuff is loading (splash)
 4. Load CTAGS files as functions and variable names in different tabs (add notebook)
@@ -58,6 +58,8 @@ TODO
 5. app/styles.py needs complete redesing. 
 6. implement tests for app components
 7. extract app as stand alone project
+8. edit does not work
+9. events and stuff need some fixing and organizing
 
 Credits
 -------

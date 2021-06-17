@@ -37,7 +37,7 @@ class Jimmy:
         __.AppState = __.State.AUTOSAVE
 
     def stop_autosave(self):
-        log.debug("Autosave off")    
+        log.debug("Autosave off")
         self.clip.disconnect(self.handle)
         self.handle = None
         __.AppState = __.State.NORMAL
@@ -64,6 +64,7 @@ class Jimmy:
             log.error("No value to save - aborting")
             return False
         emit("add_button", name, value)
+
 
 _Jimmy = Jimmy()
 

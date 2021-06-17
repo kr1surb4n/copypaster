@@ -19,6 +19,7 @@ I run `emit` function and this runs some functions. I don't know what happens.""
 def not_implemented(event_name):
     def wrapps(*args, **kwargs):
         raise NotImplementedError("something has not implemented " + event_name)
+
     return wrapps
 
 
@@ -55,6 +56,7 @@ class SignalBus:
 
 signal_bus = SignalBus()
 
+
 def make_subscribe(signal_bus):
     def subscriber(func):
         signal_bus.subscribe(func.__name__, func)
@@ -70,6 +72,7 @@ subscribe = make_subscribe(signal_bus)
 def make_emit(signal_bus):
     def emiter(event, *args, **kwargs):
         return signal_bus.emit(event, *args, **kwargs)
+
     return emiter
 
 
@@ -80,7 +83,6 @@ def test_signals():
     signal_bus = SignalBus()
 
     subscribe = make_subscribe(signal_bus)
-
 
     counter = 1
 

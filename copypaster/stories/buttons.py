@@ -36,13 +36,16 @@ snippet_dialog
 def preview_content(message):
     __.PreviewLabel.set_text(message)
 
+
 @subscribe
 def remove_button(button):
     __.Snippets.remove_button_from_current_grid(button)
 
+
 @subscribe
 def remove_folder(button):
     __.Snippets.remove_grid(button)
+
 
 @subscribe
 def edit_button(button_to_edit):
@@ -74,7 +77,7 @@ def save_snippet(*args, **kwargs):
 
     title = snippet_title.get_text().strip()
     content = snippet_content.get_text(
-            snippet_content.get_start_iter(), snippet_content.get_end_iter(), False
+        snippet_content.get_start_iter(), snippet_content.get_end_iter(), False
     ).strip()
 
     snippet_title.set_text("")
@@ -98,7 +101,7 @@ def add_button(title, content):
     log.debug(f"Adding copy {title}, {content} button to current button grid")
     copy_button = Copy(Snippet(title, content))
     __.Snippets.add_to_current_grid(copy_button)
-    
+
     copy_button.show()
 
     log.debug("A button has been added")
@@ -110,7 +113,7 @@ def add_button(title, content):
 def save_folder(*args, **kwargs):
     """
     a form is submited in folder_dialog
-    
+
     You have to:
     - get from Builder:
         - folder_name
@@ -121,11 +124,11 @@ def save_folder(*args, **kwargs):
 
     """
     folder_name = __.Builder.get_object('folder_name')
-    
+
     name = folder_name.get_text().strip()
-    
+
     folder_name.set_text("")
-    
+
     if not name:
         log.error("No name to use - aborting folder creation")
         emit("error_show_dialog", "Soo, the name is missing, it's required.")
@@ -146,7 +149,7 @@ def add_folder(folder_name):
     grid = ButtonGrid(path=folder.path)
 
     folder_button = GoTo(folder_name, __.Snippets.current_level, folder.path)
-    
+
     __.Snippets.tree[folder.path] = grid
     __.Snippets.add_named(grid, folder.path)
 
@@ -162,10 +165,11 @@ def open_add_button_dialog(*args):
     clipboard_content = __.Jimmy.receive()
 
     snippet_content.set_text(clipboard_content)
-    
+
     __.snippet_dialog = __.Builder.get_object('snippet_dialog')
     __.snippet_dialog.run()
     __.snippet_dialog.hide()
+
 
 @subscribe
 def open_add_folder_dialog(*args):
@@ -179,10 +183,11 @@ def open_add_folder_dialog(*args):
     clipboard_content = __.Jimmy.receive()
 
     folder_name.set_text(clipboard_content)
-    
+
     __.folder_dialog = __.Builder.get_object('folder_dialog')
     __.folder_dialog.run()
     __.folder_dialog.hide()
+
 
 @subscribe
 def error_show_dialog(message):
@@ -191,6 +196,7 @@ def error_show_dialog(message):
     label.set_text(message)
     __.error_message.run()
     __.error_message.hide()
+
 
 @subscribe
 def close_error_dialog(*args):

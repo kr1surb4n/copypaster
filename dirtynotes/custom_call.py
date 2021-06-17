@@ -1,9 +1,7 @@
-
-
-
 def emit(name, *args, **kwargs):
     print(f"Emiting {name}")
     print(name, args, kwargs)
+
 
 class Parent:
     def ryba(self):
@@ -19,9 +17,12 @@ class Proxy(Parent):
             ...
 
         print("I use method")
+
         def method(*args, **kwargs):
             emit(name, *args, **kwargs)
+
         return method
+
 
 p = Proxy()
 

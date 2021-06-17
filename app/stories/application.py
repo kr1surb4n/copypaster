@@ -24,18 +24,20 @@ def error_show_dialog(message):
 def about_button(*args):
     pass
 
+
 @subscribe
 def reload_css(*args):
     emit('reload_default_styles')
 
+
 @subscribe
 def on_quit_app(*args):
     __.Application.handle_quit('action', 'param')
-    
+
+
 @subscribe
 def quit_app(*args):
     __.Application.handle_quit('action', 'param')
-
 
 
 def test_application_stories():

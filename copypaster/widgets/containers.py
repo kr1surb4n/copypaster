@@ -25,6 +25,7 @@ do what you want.
 """
 import os
 import gi
+
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
@@ -32,25 +33,31 @@ from app.signal_bus import emit
 from copypaster.widgets.buttons import Copy, GoTo, AddFolder, AddSnippet, FunctionalButton
 from copypaster import log
 
+
 def copy_is_before_goto(first, second):
     return isinstance(first, Copy) and isinstance(second, GoTo)
+
 
 def goto_is_before_copy(first, second):
     return isinstance(first, GoTo) and isinstance(second, Copy)
 
+
 def left_is_functional(left, right):
     return isinstance(left, FunctionalButton)
+
 
 def right_is_function(left, right):
     return isinstance(right, FunctionalButton)
 
-NOTHING_CHANGES=0
 
-FIRST_GOES_SECOND=1
-FIRST_STAYS_FIRST=-1
+NOTHING_CHANGES = 0
 
-COPY_GOES_SECOND=1
-GOTO_STAYS_FIRST=-1
+FIRST_GOES_SECOND = 1
+FIRST_STAYS_FIRST = -1
+
+COPY_GOES_SECOND = 1
+GOTO_STAYS_FIRST = -1
+
 
 def sort_by_name(first, second):
     if first.name < second.name:
@@ -59,13 +66,15 @@ def sort_by_name(first, second):
         return FIRST_GOES_SECOND
     return NOTHING_CHANGES
 
+
 def sort_by_content(first, second):
     if len(first.content) < len(second.content):
         return FIRST_STAYS_FIRST
     if len(first.content) > len(second.content):
         return FIRST_GOES_SECOND
-    
+
     return sort_by_name(first, second)
+
 
 def sort_by_type(first, second):
     if copy_is_before_goto(first, second):
@@ -74,11 +83,13 @@ def sort_by_type(first, second):
         return GOTO_STAYS_FIRST
     return NOTHING_CHANGES
 
+
 def function_button_last(first, second):
     if right_is_function(first, second):
         return FIRST_STAYS_FIRST
     if left_is_functional(first, second):
         return FIRST_GOES_SECOND
+
 
 def sort_by_order(first, second):
     if first.order < second.order:
@@ -87,22 +98,20 @@ def sort_by_order(first, second):
         return FIRST_GOES_SECOND
     return NOTHING_CHANGES
 
+
 how_to_sort = {
     ("Copy", "Copy"): sort_by_content,
     ("GoTo", "GoTo"): sort_by_name,
     ("Copy", "GoTo"): sort_by_type,
     ("GoTo", "Copy"): sort_by_type,
-
     ("GoTo", "AddS"): function_button_last,
     ("AddS", "GoTo"): function_button_last,
     ("GoTo", "AddF"): function_button_last,
     ("AddF", "GoTo"): function_button_last,
-
     ("Copy", "AddS"): function_button_last,
     ("AddS", "Copy"): function_button_last,
     ("Copy", "AddF"): function_button_last,
     ("AddF", "Copy"): function_button_last,
-
     ("AddF", "AddS"): sort_by_order,
     ("AddS", "AddF"): sort_by_order,
     ("AddS", "AddS"): sort_by_order,
@@ -110,6 +119,7 @@ how_to_sort = {
 }
 
 ex = lambda x: str(x)[1:5]
+
 
 def sort_function(child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, *user_data):
     # if you have removed element using destroy
@@ -126,14 +136,15 @@ def sort_function(child1: Gtk.FlowBoxChild, child2: Gtk.FlowBoxChild, *user_data
         second = child2.get_children()[0]
     else:
         return FIRST_STAYS_FIRST
-    
+
     sort = how_to_sort[(ex(first), ex(second))]
     return sort(first, second)
 
 
 class ObjectExistsInGridException(Exception):
     ...
-    
+
+
 class ButtonGrid(Gtk.FlowBox):
     """As the name says. Generally it's a wrapper on a list
     that is displayed as a grid of buttons"""
@@ -142,7 +153,7 @@ class ButtonGrid(Gtk.FlowBox):
     def is_empty(self):
         if len(self.buttons) == 0:
             return True
-        
+
         return False
 
     def __init__(self, path: str = None, root: str = None):
@@ -166,9 +177,7 @@ class ButtonGrid(Gtk.FlowBox):
     def add_controll_buttons(self):
         if not self.root:
             up_to_parent = GoTo(
-                name="..",
-                position=self.path,
-                destination=self.parent_path
+                name="..", position=self.path, destination=self.parent_path
             )
             self.controls[GoTo] = up_to_parent
             up_to_parent.show()
@@ -199,13 +208,12 @@ class ButtonGrid(Gtk.FlowBox):
         if hasattr(button, 'delete'):
             button.delete()
         button.destroy()
-        
+
         if _id in self.buttons:
             self.buttons[_id] = 1
             del self.buttons[_id]
 
         self.invalidate_sort()
-
 
 
 class ButtonTree(Gtk.Stack):
@@ -217,7 +225,7 @@ class ButtonTree(Gtk.Stack):
 
     def __init__(self):
         Gtk.Stack.__init__(self)
-        self.current_level = "" 
+        self.current_level = ""
         self.tree = {}
         self.root = ""
 
@@ -239,7 +247,7 @@ class ButtonTree(Gtk.Stack):
 
         button.set_path(self.current_level)
         button.save()
-        
+
         self.current_grid.append(button)
 
     def remove_button_from_current_grid(self, button):

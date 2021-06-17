@@ -56,17 +56,19 @@ _nav_lock = threading.RLock()
 
 _cached_asset_version = {}
 
+
 def get_asset_version(filename):
     if filename in _cached_asset_version:
         return _cached_asset_version[filename]
 
-    filepath = (root_folder if  root_folder  else ".") + filename
+    filepath = (root_folder if root_folder else ".") + filename
     if filename and path.exists(filepath):
         with open(filepath, 'rb') as file:
             digest = md5(file.read()).hexdigest()
             _cached_asset_version[filename] = digest
             return digest
     return None
+
 
 def get_site_data():
     data = {}
@@ -78,7 +80,9 @@ def get_site_data():
         data_file_path = path.join(data_folder, data_file)
         with open(data_file_path, encoding="UTF-8") as stream:
             try:
-                file_name_without_extension = data_file[:-4] if data_file.endswith(".yml") else data_file
+                file_name_without_extension = (
+                    data_file[:-4] if data_file.endswith(".yml") else data_file
+                )
                 data[file_name_without_extension] = yaml.load(stream, Loader=FullLoader)
             except yaml.YAMLError as exc:
                 sys.stderr.write('Cant parse data file ' + data_file + ': ')
@@ -130,7 +134,9 @@ def get_kotlin_features():
             content = f.read()
             content = content.replace("\r\n", "\n")
             if file_path.endswith(".md"):
-                html_content = BeautifulSoup(jinja_aware_markdown(content, pages), 'html.parser')
+                html_content = BeautifulSoup(
+                    jinja_aware_markdown(content, pages), 'html.parser'
+                )
                 content = process_code_blocks(html_content)
             features.append(Feature(content, feature_meta))
     return features
@@ -138,9 +144,7 @@ def get_kotlin_features():
 
 @app.context_processor
 def add_year_to_context():
-    return {
-        'year': datetime.datetime.now().year
-    }
+    return {'year': datetime.datetime.now().year}
 
 
 app.jinja_env.add_extension(KTLComponentExtension)
@@ -158,20 +162,23 @@ def add_data_to_context():
             'data': site_data,
             'text_using_gradle': app.config['TEXT_USING_GRADLE'],
             'code_baseurl': app.config['CODE_URL'],
-            'contenteditable': build_contenteditable
-        }
+            'contenteditable': build_contenteditable,
+        },
     }
+
 
 @app.template_filter('get_domain')
 def get_domain(url):
     return urlparse(url).netloc
+
 
 app.jinja_env.globals['get_domain'] = get_domain
 
 
 @app.template_filter('split_chunk')
 def split_chunk(list, size):
-    return [list[i:i+size] for i in range(len(list))[::size]]
+    return [list[i : i + size] for i in range(len(list))[::size]]
+
 
 app.jinja_env.globals['split_chunk'] = split_chunk
 
@@ -179,31 +186,43 @@ app.jinja_env.globals['split_chunk'] = split_chunk
 @app.template_filter('autoversion')
 def autoversion_filter(filename):
     asset_version = get_asset_version(filename)
-    if asset_version is None: return filename
+    if asset_version is None:
+        return filename
     original = urlparse(filename)._asdict()
     original.update(query=original.get('query') + '&v=' + asset_version)
     return ParseResult(**original).geturl()
+
 
 @app.route('/data/events.json')
 def get_events():
     with open(path.join(data_folder, "events.xml"), encoding="UTF-8") as events_file:
         events = xmltodict.parse(events_file.read())['events']['event']
-        return Response(json.dumps(events, cls=DateAwareEncoder), mimetype='application/json')
+        return Response(
+            json.dumps(events, cls=DateAwareEncoder), mimetype='application/json'
+        )
 
 
 @app.route('/data/cities.json')
 def get_cities():
-    return Response(json.dumps(site_data['cities'], cls=DateAwareEncoder), mimetype='application/json')
+    return Response(
+        json.dumps(site_data['cities'], cls=DateAwareEncoder), mimetype='application/json'
+    )
 
 
 @app.route('/data/kotlinconf.json')
 def get_kotlinconf():
-    return Response(json.dumps(site_data['kotlinconf'], cls=DateAwareEncoder), mimetype='application/json')
+    return Response(
+        json.dumps(site_data['kotlinconf'], cls=DateAwareEncoder),
+        mimetype='application/json',
+    )
 
 
 @app.route('/data/universities.json')
 def get_universities():
-    return Response(json.dumps(site_data['universities'], cls=DateAwareEncoder), mimetype='application/json')
+    return Response(
+        json.dumps(site_data['universities'], cls=DateAwareEncoder),
+        mimetype='application/json',
+    )
 
 
 @app.route('/docs/reference/grammar.html')
@@ -216,7 +235,9 @@ def grammar():
 
 @app.route('/docs/videos.html')
 def videos_page():
-    return render_template('pages/videos.html', videos=process_video_nav(site_data['videos']))
+    return render_template(
+        'pages/videos.html', videos=process_video_nav(site_data['videos'])
+    )
 
 
 @app.route('/docs/kotlin-reference.pdf')
@@ -233,17 +254,17 @@ def kotlin_docs_pdf():
 def community_page():
     return render_template('pages/community.html')
 
+
 @app.route('/education/')
 def education_page():
     return render_template('pages/education/index.html')
 
+
 @app.route('/')
 def index_page():
     features = get_kotlin_features()
-    return render_template('pages/index.html',
-                           is_index_page=True,
-                           features=features
-                           )
+    return render_template('pages/index.html', is_index_page=True, features=features)
+
 
 def process_page(page_path):
     # get_nav() has side effect to copy and patch files from the `external` folder
@@ -257,7 +278,9 @@ def process_page(page_path):
         if page_path.startswith('https://') or page_path.startswith('http://'):
             return render_template('redirect.html', url=page_path)
         else:
-            return render_template('redirect.html', url=url_for('page', page_path = page_path))
+            return render_template(
+                'redirect.html', url=url_for('page', page_path=page_path)
+            )
 
     if 'date' in page.meta and page['date'] is not None:
         page.meta['formatted_date'] = page.meta['date'].strftime('%d %B %Y')
@@ -267,8 +290,13 @@ def process_page(page_path):
     if 'github_edit_url' in page.meta:
         edit_on_github_url = page.meta['github_edit_url']
     else:
-        edit_on_github_url = app.config['EDIT_ON_GITHUB_URL'] + app.config['FLATPAGES_ROOT'] + "/" + page_path + \
-                             app.config['FLATPAGES_EXTENSION']
+        edit_on_github_url = (
+            app.config['EDIT_ON_GITHUB_URL']
+            + app.config['FLATPAGES_ROOT']
+            + "/"
+            + page_path
+            + app.config['FLATPAGES_EXTENSION']
+        )
 
     assert_valid_git_hub_url(edit_on_github_url, page_path)
 
@@ -284,7 +312,6 @@ def process_page(page_path):
         page=page,
         baseurl="",
         edit_on_github_url=edit_on_github_url,
-
     )
 
 
@@ -301,12 +328,16 @@ def validate_links_weak(page, page_path):
         if endpoint != 'page' and endpoint != 'get_index_page':
             response = app.test_client().get(href.path)
             if response.status_code == 404:
-                build_errors.append("Broken link: " + str(href.path) + " on page " + page_path)
+                build_errors.append(
+                    "Broken link: " + str(href.path) + " on page " + page_path
+                )
             continue
 
         referenced_page = pages.get(params['page_path'])
         if referenced_page is None:
-            build_errors.append("Broken link: " + str(href.path) + " on page " + page_path)
+            build_errors.append(
+                "Broken link: " + str(href.path) + " on page " + page_path
+            )
             continue
 
         if href.fragment == '':
@@ -326,7 +357,9 @@ def validate_links_weak(page, page_path):
                 pass
 
         if href.fragment not in ids:
-            build_errors.append("Bad anchor: " + str(href.fragment) + " on page " + page_path)
+            build_errors.append(
+                "Bad anchor: " + str(href.fragment) + " on page " + page_path
+            )
 
     if not build_mode and len(build_errors) > 0:
         errors_copy = []
@@ -335,8 +368,12 @@ def validate_links_weak(page, page_path):
             errors_copy.append(item)
 
         build_errors.clear()
-        raise Exception("Validation errors " + str(len(errors_copy)) + ":\n\n" +
-                        "\n".join(str(item) for item in errors_copy))
+        raise Exception(
+            "Validation errors "
+            + str(len(errors_copy))
+            + ":\n\n"
+            + "\n".join(str(item) for item in errors_copy)
+        )
 
 
 @freezer.register_generator
@@ -360,7 +397,11 @@ def api_page():
     api_folder = path.join(root_folder, 'api')
     for root, dirs, files in os.walk(api_folder):
         for file in files:
-            yield {'page_path': path.join(path.relpath(root, api_folder), file).replace(os.sep, '/')}
+            yield {
+                'page_path': path.join(path.relpath(root, api_folder), file).replace(
+                    os.sep, '/'
+                )
+            }
 
 
 class RedirectTemplateView(View):
@@ -390,7 +431,10 @@ def generate_redirect_pages():
                         url_list = url_from if isinstance(url_from, list) else [url_from]
 
                         for url in url_list:
-                            app.add_url_rule(url, view_func=RedirectTemplateView.as_view(url, url=url_to))
+                            app.add_url_rule(
+                                url,
+                                view_func=RedirectTemplateView.as_view(url, url=url_to),
+                            )
 
                 except yaml.YAMLError as exc:
                     sys.stderr.write('Cant parse data file ' + file + ': ')
@@ -409,6 +453,7 @@ def page_not_found(e):
 
 app.register_error_handler(404, page_not_found)
 
+
 @app.route('/api/<path:page_path>')
 def api_page(page_path):
     path_other, ext = path.splitext(page_path)
@@ -422,10 +467,7 @@ def api_page(page_path):
 
 
 def process_api_page(page_path):
-    return render_template(
-        'api.html',
-        page=get_api_page(build_mode, page_path)
-    )
+    return render_template('api.html', page=get_api_page(build_mode, page_path))
 
 
 def respond_with_package_list(page_path):
@@ -468,6 +510,7 @@ def get_index_page(page_path):
 
 
 generate_redirect_pages()
+
 
 @app.after_request
 def add_header(request):
@@ -525,7 +568,14 @@ if __name__ == '__main__':
             print("Unknown argument: " + argv_copy[1])
             sys.exit(1)
     else:
-        app.run(host="0.0.0.0", debug=True, threaded=True, **{"extra_files": {
-            '/src/data/_nav.yml',
-            *glob.glob("/src/pages-includes/**/*", recursive=True),
-        }})
+        app.run(
+            host="0.0.0.0",
+            debug=True,
+            threaded=True,
+            **{
+                "extra_files": {
+                    '/src/data/_nav.yml',
+                    *glob.glob("/src/pages-includes/**/*", recursive=True),
+                }
+            },
+        )

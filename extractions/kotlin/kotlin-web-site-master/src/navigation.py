@@ -43,9 +43,7 @@ def process_video_nav_item(data: Dict) -> Dict:
         if is_external(data['url']):
             data['title_class'] += ' is_external'
         if 'description' in data:
-            data['title_arguments'] = {
-                'data-description': data['description']
-            }
+            data['title_arguments'] = {'data-description': data['description']}
             del data['description']
     return data
 

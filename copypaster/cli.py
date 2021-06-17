@@ -19,15 +19,13 @@ default_config_path = expanduser("~/.config/copypaster.conf")
 @click.option('--debug', is_flag=True, default=False, help='turn log level DEBUG on')
 def main(config, debug):
     """Console script for copypaster."""
-    
+
     if debug:
         applog.setLevel(logging.DEBUG)
         log.setLevel(logging.DEBUG)
 
     log.info("Started CopyPaster")
     log.info("copypaster.cli.main")
-
-
 
     try:
         main_function(config)

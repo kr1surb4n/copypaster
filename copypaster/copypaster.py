@@ -13,8 +13,8 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk  # noqa
 
 
-def main_function(config_file = None):
-    """ create and run the application, 
+def main_function(config_file=None):
+    """create and run the application,
     exit with the value returned by
     running the program"""
 
@@ -27,7 +27,7 @@ def main_function(config_file = None):
     from app.config import config  # noqa
 
     import copypaster.clipboard  # noqa
-    
+
     config.load_config_file(config_file)
 
     __.AppState = AppState
@@ -36,7 +36,8 @@ def main_function(config_file = None):
 
     log.debug("Loading Widgets usig GtkBuilder...")
 
-    from copypaster.widgets.containers import ButtonTree 
+    from copypaster.widgets.containers import ButtonTree
+
     __.Builder.add_custom_object('ButtonTree', ButtonTree)
 
     __.Builder.set_application(application)  # works without it
@@ -56,6 +57,7 @@ def main_function(config_file = None):
     __.LevelIndicator = builder.get_object("current_level")
 
     from app.layout_events import Layout_events  # noqa
+
     __.Builder.connect_signals(Layout_events)
 
     log.debug("Importing stories...")
@@ -64,7 +66,6 @@ def main_function(config_file = None):
     log.debug("Starting the Application...")
     # exit_status = application.run(sys.argv)
     exit_status = application.run()
-
 
     log.debug("Returning exit status value...")
     return exit_status

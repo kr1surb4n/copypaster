@@ -10,10 +10,8 @@ gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk  # noqa
 
 
-
-
-
 # dialogs
+
 
 @subscribe
 def enter_save_snippet(widget, event):
@@ -28,6 +26,7 @@ def enter_save_snippet(widget, event):
     if event.keyval == Gdk.KEY_Return:
         emit('save_snippet')
 
+
 @subscribe
 def enter_save_folder(widget, event):
     log.debug("During creating new folder, on enter")
@@ -36,6 +35,7 @@ def enter_save_folder(widget, event):
     if it_is_return:
         emit('save_folder')
 
+
 # rest of widgets
 
 autosave = 'autosave'
@@ -43,6 +43,7 @@ edit = 'edit'
 remove = 'remove'
 
 names = [autosave, edit, remove]
+
 
 def deactivate_all_except(activated_button):
     global names
@@ -57,6 +58,7 @@ def deactivate_all_except(activated_button):
         if button is not activated_button and is_active(button)
     ]
 
+
 @subscribe
 def autosave_on(button):
     deactivate_all_except(autosave)
@@ -65,6 +67,7 @@ def autosave_on(button):
         __.Jimmy.start_autosave()
     else:
         __.Jimmy.stop_autosave()
+
 
 @subscribe
 def edit_on(button):
@@ -77,6 +80,7 @@ def edit_on(button):
     else:
         __.AppState = __.State.NORMAL
         log.debug("Edit off")
+
 
 @subscribe
 def remove_on(button):
