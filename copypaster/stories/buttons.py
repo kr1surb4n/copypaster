@@ -48,8 +48,15 @@ def remove_folder(button):
 
 
 @subscribe
-def edit_button(button_to_edit):
+def edit_snippet_button(button_to_edit):
     dialog = __.snippet_dialog
+    
+    snippet_title = __.Builder.get_object('snippet_title')
+    snippet_content = __.Builder.get_object('snippet_content').get_buffer()
+    
+    snippet_title.set_text(button_to_edit.name)
+    snippet_content.set_text(button_to_edit.content)
+    
     dialog.run()
     dialog.hide()
 

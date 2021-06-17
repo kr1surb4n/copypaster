@@ -66,8 +66,8 @@ TODO
 5. app/styles.py needs complete redesing. 
 6. implement tests for app components
 7. extract app as stand alone project
-8. edit does not work
 9. events and stuff need some fixing and organizing
+10. Move buttons on_events functions to stories 
 
 Credits
 -------

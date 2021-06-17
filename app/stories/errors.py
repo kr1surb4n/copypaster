@@ -7,7 +7,7 @@ from app.widgets.dialogs import DialogError
 def error_show_dialog(message):
     dialog = DialogError(__.Application.win, message)
     dialog.run()
-    dialog.destroy()
+    dialog.hide()
 
 
 def test_dialog_stories():

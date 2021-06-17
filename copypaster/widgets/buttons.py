@@ -1,3 +1,15 @@
+"""
+Here are the buttons:
+
+Copy        (copy)
+GoTo        (navigation)
+
+interface FunctionalButton
+AddSnippet  (add snippet button)
+AddFolder   (add folder button)
+
+"""
+
 from copypaster import log
 from app.signal_bus import emit
 import hashlib
@@ -93,7 +105,7 @@ class Copy(Gtk.Button, Id):
 
         if __.AppState == __.State.EDIT:
             log.debug("Editing button...")
-            emit("edit_button", self)
+            emit("edit_snippet_button", self)
 
     def __str__(self):
         return f"<Copy [{self.name}] >"

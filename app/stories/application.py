@@ -17,7 +17,7 @@ def quit(*args, **kwargs):
 def error_show_dialog(message):
     dialog = DialogError(__.Application.win, message)
     dialog.run()
-    dialog.destroy()
+    dialog.hide()
 
 
 @subscribe

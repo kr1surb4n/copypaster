@@ -280,7 +280,7 @@ the inside buttons still not work. WORK NOW
 i should also fix the issue with inside buttons - DONE
 when creating new folders, buttons are not inside. ARE DONE
 
-TODO removing buttons fails.
+DONE removing buttons fails.
 first remove does something.
 second cause segmentation fault.
 
