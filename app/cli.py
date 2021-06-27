@@ -5,7 +5,6 @@ import sys
 import click
 from app import log, PROJECT_DIR
 from app.main import main_function
-import logging
 
 from os.path import expanduser
 
@@ -18,16 +17,16 @@ default_config_path = expanduser("~/.config/app.conf")
 def main(config, debug):
     """Console script for app."""
     if debug:
+        import logging
         log.setLevel(logging.DEBUG)
 
     log.info("Started Kr15 Gtk App")
 
-    try:
-        pass
-        main_function(config)
-    except Exception as e:
-        log.critical(str(e))
-        return 1
+    #try:
+    main_function(config)
+    #except Exception as e:
+    #    log.critical(str(e))
+    #    return 1
 
     return 0
 

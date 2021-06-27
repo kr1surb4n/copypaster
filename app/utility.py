@@ -5,6 +5,7 @@ from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
 def wrap(widget):
+    """Scrollwindow wrapper"""
     sw = Gtk.ScrolledWindow()
     sw.add(widget)
     sw.set_border_width(1)

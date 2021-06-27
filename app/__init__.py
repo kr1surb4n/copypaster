@@ -16,13 +16,18 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
 log = logging.getLogger("Kr15 App")
-log.setLevel(logging.WARN)
+log.setLevel(logging.INFO)
 
 
-class State:
-    INIT = "INIT"
-    NORMAL = "NORMAL"
+class sss:
+    def info(self, t):
+        print(t)
 
+    def critical(self, t):
+        print(t)
 
-# SET INITIAL STATE
-AppState = State.NORMAL  # global application state
+    def setLevel(self, x):
+        ...
+
+log = sss()
+#log.setLevel(logging.WARN)

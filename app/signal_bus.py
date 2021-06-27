@@ -1,14 +1,15 @@
 from app.register import register_instance
 from app import log
-import functools
+import app.events as event
 
 """
 SignalBus
 
 is an Event Subscribe-Emit object
 
-You need an object that implements function `on_<EVENT_NAME>`.
+You need an object that implements function `<EVENT_NAME>`.
 This object is subscribed by passing: <EVENT_NAME> and the object itself.
+Or by using a decorator `@subscribe(<EVENT_NAME>)`
 
 To emit an event you need SignalBus object and pass to emit function
 an event name and arguments. Ths will call every subscribed function.
@@ -28,19 +29,15 @@ class SignalBus:
     def __init__(self):
         self.receivers = {}
 
-    def unsubscribe(self, event_name):
-        if event_name in self.receivers:
-            del self.receivers[event_name]
-
     def subscribe(self, event_name, callback):
+        log.info(f"Subscribed {callback.__name__} for event {event_name}")
         if event_name not in self.receivers:
             self.receivers[event_name] = []
 
         self.receivers[event_name] += [callback]
 
     def emit(self, event_name, *args, **kwargs):
-
-        log.debug("Run for: " + event_name)
+        log.info(f"Emited {event_name}")
         receivers = self.receivers.get(event_name, None)
 
         if receivers is None:

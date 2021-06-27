@@ -1,8 +1,7 @@
 # -*- coding: utf-8 -*-
-import sys
 import os
 
-from app import log, CURRENT_DIR, AppState, State
+from app import log, CURRENT_DIR
 from app.register import Register as __
 
 
@@ -10,19 +9,16 @@ def main_function(config_file):
     # create and run the application,
     # exit with the value returned by
     # running the program
-    log.debug("Initializing services...")
+    log.info("Initializing services...")
 
     from app.config import config  # noqa
+    from app.state import State, INIT, NORMAL
+    from app.application import application  # noqa
+    import app.style # noqa
 
     config.load_config_file(config_file)
-    __.AppState = AppState
-    __.State = State
-    __.AppState = __.State.INIT
 
-    from app.widgets import application  # noqa
-    import app.style  # noqa
-
-    log.debug("Loading Widgets usig GtkBuilder...")
+    log.info("Loading Widgets usig GtkBuilder...")
     from app.builder import builder  # noqa
     from app.layout_events import Layout_events
 
@@ -33,13 +29,13 @@ def main_function(config_file):
     __.main_window = builder.get_object("main_window")
     __.welcome_sign = builder.get_object("welcome_sign")
 
-    log.debug("Importing stories...")
+    log.info("Importing stories...")
     import app.stories  # noqa
-
-    log.debug("Starting1 the Application...")
+    
+    log.info("Starting the Application...")
     exit_status = application.run()
 
-    log.debug("Returning exit status value...")
+    log.info("Returning exit status value...")
     return exit_status
 
 

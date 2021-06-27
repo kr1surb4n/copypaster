@@ -1,43 +1,28 @@
 from app.register import Register as __
-from app.signal_bus import subscribe, emit
-from app.widgets.dialogs import DialogError
+from app.signal_bus import subscribe, emit, event
+from app import log
 
+@subscribe
+def activate_app():
+    log.info(f"State is {__.State.current()}")
+    log.info("All green. Welcome to application.")
 
 @subscribe
 def start_app():
-    emit('load_default_styles')
+    print(__.State)
+    __.State.normal()
+    #emit(event.load_default_styles)
+    ...
 
 
 @subscribe
 def quit(*args, **kwargs):
-    pass
-
-
-@subscribe
-def error_show_dialog(message):
-    dialog = DialogError(__.Application.win, message)
-    dialog.run()
-    dialog.hide()
-
-
-@subscribe
-def about_button(*args):
-    pass
+    __.Application.handle_quit('action', 'param')
 
 
 @subscribe
 def reload_css(*args):
-    emit('reload_default_styles')
-
-
-@subscribe
-def on_quit_app(*args):
-    __.Application.handle_quit('action', 'param')
-
-
-@subscribe
-def quit_app(*args):
-    __.Application.handle_quit('action', 'param')
+    emit(event.reload_default_styles)
 
 
 def test_application_stories():

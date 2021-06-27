@@ -1,9 +1,7 @@
-from app.signal_bus import signal_bus, emit
-
+from app import log, CURRENT_DIR
+from app.signal_bus import emit, event
 from app.register import Register as __, register_instance
 
-from app import log, CURRENT_DIR
-import os
 
 import gi
 
@@ -14,37 +12,24 @@ from gi.repository import Gtk, Gdk, Gio  # noqa
 @register_instance
 class Application(Gtk.Application):
     def __init__(self):
-        Gtk.Application.__init__(self)
+        super(Gtk.Application, self).__init__()
 
     def do_activate(self):
-        log.debug("Lift off!")
-
-        log.debug("App state NORMAL")
-        __.AppState = __.State.NORMAL
-
-        log.debug("Emitting start_app...")
-        emit('start_app')
-
-        log.debug("All green. Welcome to application.")
+        log.info("Activation...")
+        emit(event.activate_app)
 
     def do_startup(self):
-        log.debug("Startup...")
-
+        log.info("Startup...")
+        emit(event.start_app)
         Gtk.Application.do_startup(self)
 
         # important part when using GtkWindow with GtkBuilder
         self.add_window(__.main_window)
         __.main_window.show_all()
 
-        log.debug('Menu loaded...')
-
     def handle_quit(self, action, parameter):
-        log.debug("Emitting quit...")
-
-        emit('quit')
+        log.info("Quiting...")
         self.quit()
-
-        log.debug("Goodbye! Application terminated.")
-
+        log.info("Goodbye! Application terminated.")
 
 application = Application()
