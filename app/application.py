@@ -1,5 +1,4 @@
 from app import log, CURRENT_DIR
-import app
 from app.signal_bus import emit, event
 from app.register import Register as __, register_instance
 
@@ -7,7 +6,7 @@ from app.register import Register as __, register_instance
 import gi
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio  # noqa
+from gi.repository import Gtk  # noqa
 
 
 @register_instance
@@ -38,6 +37,7 @@ application = Application()
 
 def test_application_object():
     # prepare the event handlers
+    application = Application()
     from app.signal_bus import signal_bus
 
     activated = False
@@ -66,4 +66,6 @@ def test_application_object():
     sleep(1)
     assert started and activated
 
+    del application
+    del tested_thread
 

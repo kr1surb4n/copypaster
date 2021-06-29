@@ -18,10 +18,12 @@ class Style:
         self.default_provider = Gtk.CssProvider()
 
     def load_styles_from_files(self):
+        log.info("Loading css files")
         for path_to_css in self.registry:
             self.default_provider.load_from_path(path_to_css)
 
     def reset_styles(self):
+        log.info("Reseting styles")
         Gtk.StyleContext.remove_provider_for_screen(
             Gdk.Screen.get_default(), self.default_provider
         )
@@ -31,6 +33,7 @@ class Style:
         self.load_styles()
 
     def load_styles(self):
+        log.info("Loading styles")
         self.load_styles_from_files()
 
         Gtk.StyleContext.add_provider_for_screen(
@@ -42,11 +45,9 @@ class Style:
         Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
 
 style = Style()
-log.info("Styles loaded")
-
 
 def test_styles():
-    # crap. i have no idea how to test that.
+    style = Style()
     assert style
 
     style.registry.append(os.path.join(CURRENT_DIR, "styles/app.css"))

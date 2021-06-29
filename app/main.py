@@ -50,7 +50,7 @@ def test_main_function():
     tested_thread = threading.Thread(target=main_function, args=("test_config",))
     tested_thread.start()
 
-    sleep(2)
+    sleep(1)
     global __
 
     assert tested_thread.is_alive()
@@ -64,6 +64,6 @@ def test_main_function():
     assert __.WelcomeSign
     assert __.WelcomeSign.get_text() == "I am Kr15 GTK App"
 
+    __.SignalBus.emit('quit')
     __.Application.handle_quit('action', 'param')
-    tested_thread.join()
-    assert not tested_thread.is_alive()
+    del tested_thread

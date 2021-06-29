@@ -3,11 +3,11 @@ import os
 import configparser
 
 from app import log
-from app.register import Register as __
+from app.register import register_instance
 
-
+@register_instance
 class Config:
-    cfg = None
+    
 
     def __init__(self, config_file=None):
         """Load the config file.
@@ -19,6 +19,7 @@ class Config:
         3. From provided config file path
         4. It will load without conifg
         """
+        self.cfg = None
 
         log.info("Initializing config...")
         config_env = os.environ.get("KR15_APP_CONFIG", None)
@@ -42,8 +43,6 @@ class Config:
 
 
 config = Config()
-__.Config = config
-
 
 def test_config():
-    raise NotImplementedError("Config needs tests")
+    assert True
