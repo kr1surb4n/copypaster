@@ -44,4 +44,20 @@ class LayoutEvents:
 Layout_events = LayoutEvents()
 
 def test_LayoutEvents():
-    raise NotImplementedError("LayoutEvents need tests")
+    
+    from app.signal_bus import signal_bus
+
+    number_of_calls = 0
+
+    def event():
+        nonlocal number_of_calls
+        number_of_calls += 1
+
+    signal_bus.subscribe('event', event)
+
+
+    assert number_of_calls == 0
+    Layout_events.event()
+    Layout_events.event()
+    Layout_events.event()
+    assert number_of_calls == 3
