@@ -20,6 +20,7 @@ def main_function(config_file):
 
     from app.application import application  # noqa
     import app.style # noqa
+    __.Style.registry.append(os.path.join(CURRENT_DIR, "styles/app.css"))
 
     log.info("Loading Widgets usig GtkBuilder...")
     from app.builder import builder  # noqa

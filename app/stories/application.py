@@ -10,19 +10,19 @@ def activate_app():
 @subscribe
 def start_app():
     __.State.normal
-    emit(event.load_default_styles)
-
-
+    emit(event.load_styles)
 
 @subscribe
 def quit(*args, **kwargs):
     __.Application.handle_quit('action', 'param')
 
+@subscribe
+def load_styles():
+    __.Style.load_styles()
 
 @subscribe
-def reload_css(*args):
-    emit(event.reload_default_styles)
-
+def reset_styles(*args):
+    __.Style.reset_styles()
 
 def test_application_stories():
     raise NotImplementedError("Tests for application stories are missing")

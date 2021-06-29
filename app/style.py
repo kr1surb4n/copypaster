@@ -1,5 +1,5 @@
 from app.signal_bus import subscribe
-from app.register import Register as __
+from app.register import Register as __, register_instance
 
 from app import log, CURRENT_DIR
 import os
@@ -7,74 +7,62 @@ import os
 import gi
 
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Gio  # noqa
+from gi.repository import Gtk, Gdk, GObject  # noqa
 
 
-styles_register = {}
-default_provider = Gtk.CssProvider()
+@register_instance
+class Style:
 
-# TODO redesign everything here.
-"""
-i need to have:
-- style_register, a list/hash, with paths to css files
-- a default style added to style_register
-- a function to add file to  style_register
-- a function to load the styles
-- a function to reload the styles
+    def __init__(self):
+        self.registry = []
+        self.default_provider = Gtk.CssProvider()
 
-"""
+    def load_styles_from_files(self):
+        for path_to_css in self.registry:
+            self.default_provider.load_from_path(path_to_css)
 
+    def reset_styles(self):
+        Gtk.StyleContext.remove_provider_for_screen(
+            Gdk.Screen.get_default(), self.default_provider
+        )
 
-@subscribe
-def load_styles():
-    global default_provider
-    default_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
+        self.default_provider = Gtk.CssProvider()
 
-    Gtk.StyleContext.add_provider_for_screen(
-        Gdk.Screen.get_default(),
-        default_provider,
-        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
-    )
+        self.load_styles()
 
+    def load_styles(self):
+        self.load_styles_from_files()
 
-@subscribe
-def load_style(filepath):
-    global default_provider
-    Gtk.StyleContext.remove_provider_for_screen(
-        Gdk.Screen.get_default(), default_provider
-    )
+        Gtk.StyleContext.add_provider_for_screen(
+            Gdk.Screen.get_default(),
+            self.default_provider,
+            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
+        )
 
-    default_provider = Gtk.CssProvider()
-    default_provider.load_from_path(filepath)
+        Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
 
-    Gtk.StyleContext.add_provider_for_screen(
-        Gdk.Screen.get_default(),
-        default_provider,
-        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
-    )
-
-    Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
-
-
-@subscribe
-def reload_default_styles():
-    global default_provider
-    Gtk.StyleContext.remove_provider_for_screen(
-        Gdk.Screen.get_default(), default_provider
-    )
-
-    default_provider = Gtk.CssProvider()
-    default_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
-
-    Gtk.StyleContext.add_provider_for_screen(
-        Gdk.Screen.get_default(),
-        default_provider,
-        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
-    )
-
-    Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
-
+style = Style()
 log.info("Styles loaded")
 
+
 def test_styles():
-    raise NotImplementedError("styles need tests")
+    # crap. i have no idea how to test that.
+    assert style
+
+    style.registry.append(os.path.join(CURRENT_DIR, "styles/app.css"))
+    assert len(style.registry) == 1
+
+    style.load_styles()
+
+    label = Gtk.Label(label="text")
+    style_context = label.get_style_context()
+
+    color = style_context.get_color(Gtk.StateFlags.NORMAL)
+    assert color.blue == 1.0 and color.red == 0.0 and color.green == 0.0
+
+    style.registry.append(os.path.join(CURRENT_DIR, "styles/test.css"))
+    assert len(style.registry) == 2
+
+    style.reset_styles()
+    color = style_context.get_color(Gtk.StateFlags.NORMAL)
+    assert color.blue == 0.0 and color.red == 1.0 and color.green == 0.0
