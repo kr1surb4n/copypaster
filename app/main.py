@@ -29,8 +29,8 @@ def main_function(config_file):
     builder.add_from_file(os.path.join(CURRENT_DIR, "layout.glade"))
     builder.connect_signals(Layout_events)
 
-    __.main_window = builder.get_object("main_window")
-    __.welcome_sign = builder.get_object("welcome_sign")
+    __.MainWindow = builder.get_object("main_window")
+    __.WelcomeSign = builder.get_object("welcome_sign")
 
     log.info("Importing stories...")
     import app.stories  # noqa
@@ -50,18 +50,19 @@ def test_main_function():
     tested_thread.start()
 
     sleep(2)
-    print(dir(tested_thread))
     global __
 
     assert tested_thread.is_alive()
+    assert __.State
     assert __.Config
     assert __.SignalBus
     assert __.Application
     assert __.Builder
-    assert __.main_window
-    assert __.welcome_sign
-    assert __.welcome_sign.get_text() == "I am Kr15 GTK App"
+    assert __.LayoutEvents
+    assert __.MainWindow
+    assert __.WelcomeSign
+    assert __.WelcomeSign.get_text() == "I am Kr15 GTK App"
 
     __.Application.handle_quit('action', 'param')
-    # assert __.Application is not None
-    # assert __.Config is not None
+    tested_thread.join()
+    assert not tested_thread.is_alive()

@@ -45,7 +45,7 @@ def main_function(config_file=None):
     __.Builder.add_from_file("copypaster/layout.glade")
     __.Builder.add_from_file("copypaster/dialogs.glade")
 
-    __.main_window = builder.get_object("main_window")
+    __.MainWindow = builder.get_object("main_window")
 
     __.error_dialog = builder.get_object("error_dialog")
     __.folder_dialog = builder.get_object("folder_dialog")

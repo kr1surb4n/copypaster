@@ -23,7 +23,7 @@ def initialize_snippets():
     change_button_grid("Starting", __.Snippets.root)
     __.Snippets.show()
 
-    __.main_window.show_all()  # redraw everything
+    __.MainWindow.show_all()  # redraw everything
 
 
 @subscribe

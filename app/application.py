@@ -25,8 +25,8 @@ class Application(Gtk.Application):
         Gtk.Application.do_startup(self)
 
         # important part when using GtkWindow with GtkBuilder
-        self.add_window(__.main_window)
-        __.main_window.show_all()
+        self.add_window(__.MainWindow)
+        __.MainWindow.show_all()
 
     def handle_quit(self, action, parameter):
         log.info("Quiting...")
