@@ -12,11 +12,14 @@ def main_function(config_file):
     log.info("Initializing services...")
 
     from app.config import config  # noqa
+    config.load_config_file(config_file)
+
+
     from app.state import State, INIT, NORMAL
+    state = State([INIT, NORMAL])
+
     from app.application import application  # noqa
     import app.style # noqa
-
-    config.load_config_file(config_file)
 
     log.info("Loading Widgets usig GtkBuilder...")
     from app.builder import builder  # noqa

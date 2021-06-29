@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Top-level package for Copypaster."""
+"""Top-level package for Kr15 Mini GTK App Framework."""
 
 # Hello!
 __author__ = """Kris Urbanski"""
@@ -15,19 +15,6 @@ CURRENT_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
+logging.basicConfig(level=logging.ERROR,format='[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s')
 log = logging.getLogger("Kr15 App")
-log.setLevel(logging.INFO)
-
-
-class sss:
-    def info(self, t):
-        print(t)
-
-    def critical(self, t):
-        print(t)
-
-    def setLevel(self, x):
-        ...
-
-log = sss()
-#log.setLevel(logging.WARN)
+log.setLevel(logging.WARN)

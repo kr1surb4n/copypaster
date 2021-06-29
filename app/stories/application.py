@@ -9,10 +9,9 @@ def activate_app():
 
 @subscribe
 def start_app():
-    print(__.State)
-    __.State.normal()
-    #emit(event.load_default_styles)
-    ...
+    __.State.normal
+    emit(event.load_default_styles)
+
 
 
 @subscribe

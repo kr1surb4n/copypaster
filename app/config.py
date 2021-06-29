@@ -14,14 +14,14 @@ class Config:
 
         Order of resoliving the path of config file:
 
-        1. Path in env variable COPYPASTER_CONFIG
+        1. Path in env variable KR15_APP_CONFIG
         2. From ~/.config/app.conf file by default
         3. From provided config file path
         4. It will load without conifg
         """
 
         log.info("Initializing config...")
-        config_env = os.environ.get("COPYPASTER_CONFIG", None)
+        config_env = os.environ.get("KR15_APP_CONFIG", None)
 
         if config_env is not None:
             log.info("loading with config_env")

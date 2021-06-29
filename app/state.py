@@ -13,10 +13,10 @@ class State:
         self.state = INIT
 
     def __getattr__(self, name: str):
-        # try:
-        #     return super().__getattr__(self, name)
-        # except AttributeError:
-        #     ...
+        try:
+            return super().__getattr__(self, name)
+        except AttributeError:
+            ...
         
         log.info(f"Switching to state {name.upper()}")
         if name.upper() in self.states:
@@ -27,5 +27,3 @@ class State:
 
     def is_(self, state):
         return state.upper() == self.state
-
-state = State([INIT, NORMAL])

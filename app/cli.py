@@ -22,11 +22,11 @@ def main(config, debug):
 
     log.info("Started Kr15 Gtk App")
 
-    #try:
-    main_function(config)
-    #except Exception as e:
-    #    log.critical(str(e))
-    #    return 1
+    try:
+        main_function(config)
+    except Exception as e:
+        log.critical(str(e))
+        return 1
 
     return 0
 
