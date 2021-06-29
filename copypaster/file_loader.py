@@ -9,7 +9,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk  # noqa
 
 from copypaster.widgets.buttons import Copy, GoTo
-from copypaster.widgets.containers import ButtonTree, ButtonGrid
+from copypaster.widgets.containers import ButtonGrid
 from copypaster import log, PROJECT_DIR
 
 tasks = queue.Queue()

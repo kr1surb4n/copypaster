@@ -1,7 +1,7 @@
 from app.register import Register as __
 from app.signal_bus import subscribe
 from app.signal_bus import emit
-from copypaster import log, State, AppState
+from copypaster import log
 from copypaster.file_loader import Copy, Snippet
 
 import gi
@@ -74,11 +74,11 @@ def edit_on(button):
     deactivate_all_except(edit)
 
     if button.get_active():
-        __.AppState = __.State.EDIT
+        __.State.edit
 
         log.debug("Edit on")
     else:
-        __.AppState = __.State.NORMAL
+        __.State.normal
         log.debug("Edit off")
 
 
@@ -87,9 +87,9 @@ def remove_on(button):
     deactivate_all_except(remove)
 
     if button.get_active():
-        __.AppState = __.State.REMOVE
+        __.State.remove
         log.debug("Remove on")
 
     else:
-        __.AppState = __.State.NORMAL
+        __.State.normal
         log.debug("Remove off")

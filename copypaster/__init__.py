@@ -18,20 +18,6 @@ PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 # initialize logger
 log = logging.getLogger("CopyPaster")
 log.setLevel(logging.WARN)
-logging.info("Start Copypaster")
-
-
-class State:
-    INIT = "INIT"
-    NORMAL = "NORMAL"
-    AUTOSAVE = "AUTOSAVE"
-    REMOVE = "REMOVE"
-    EDIT = "EDIT"
-
-
-# SET INITIAL STATE
-AppState = State.NORMAL  # global application state
-
 
 dupa_counter = 1
 

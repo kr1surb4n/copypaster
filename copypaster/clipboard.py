@@ -1,8 +1,9 @@
+from copypaster.state import AUTOSAVE
 import xerox
 from app.register import register_instance
 from app.register import Register as __
 from app.signal_bus import emit
-from copypaster import log, State, AppState
+from copypaster import log
 
 import gi
 
@@ -34,13 +35,13 @@ class Jimmy:
     def start_autosave(self):
         self.handle = self.clip.connect("owner-change", self.auto_clipboard)
         log.debug("Autosave on")
-        __.AppState = __.State.AUTOSAVE
+        __.State.autosave
 
     def stop_autosave(self):
         log.debug("Autosave off")
         self.clip.disconnect(self.handle)
         self.handle = None
-        __.AppState = __.State.NORMAL
+        __.State.normal
 
     def send(self, text):
         log.debug("Coping: {}".format(text))
@@ -56,7 +57,7 @@ class Jimmy:
         return contents if contents.strip() else ""
 
     def auto_clipboard(self, clipboard, parameter):
-        if __.AppState != __.State.AUTOSAVE:
+        if __.State.is_(AUTOSAVE):
             return False
 
         name = value = self.wait_for_data()

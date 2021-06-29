@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-import sys
 import os
-
-from copypaster import log, PROJECT_DIR, dupa, AppState, State  # noqa
+from copypaster import log, CURRENT_DIR  # noqa
 from app.register import Register as __
 
 """ Initialize services """
@@ -21,18 +19,20 @@ def main_function(config_file=None):
     log.debug("Initializing services...")
 
     import app.style  # noqa
+    __.Style.registry.append(os.path.join(CURRENT_DIR, "app.css"))
+
     import app.stories  # noqa
-    from app.widgets import application  # noqa
+    from app.application import application  # noqa
     from app.builder import builder  # noqa
     from app.config import config  # noqa
+    from app.state import State
+    from copypaster.state import INIT, NORMAL, AUTOSAVE, EDIT, REMOVE
+
+    state = State([INIT, NORMAL, EDIT, REMOVE, AUTOSAVE])
 
     import copypaster.clipboard  # noqa
 
     config.load_config_file(config_file)
-
-    __.AppState = AppState
-    __.State = State
-    __.AppState = State.INIT
 
     log.debug("Loading Widgets usig GtkBuilder...")
 

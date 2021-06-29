@@ -9,7 +9,7 @@ AddSnippet  (add snippet button)
 AddFolder   (add folder button)
 
 """
-
+from copypaster.state import AUTOSAVE, EDIT, REMOVE, INIT, NORMAL
 from copypaster import log
 from app.signal_bus import emit
 import hashlib
@@ -94,16 +94,16 @@ class Copy(Gtk.Button, Id):
     def on_copy(self, button):
         log.debug("Handling the button press...")
 
-        if __.AppState == __.State.REMOVE:
+        if __.State.is_(REMOVE):
             log.debug("Removing button...")
             emit("remove_button", self)
 
-        if __.AppState in [__.State.NORMAL, __.State.AUTOSAVE]:
+        if __.State.is_(NORMAL) or __.State.is_(AUTOSAVE):
             log.debug("Coping value...")
             emit("copy", button.content)
             emit("preview_content", button.content)
 
-        if __.AppState == __.State.EDIT:
+        if __.State.is_(EDIT):
             log.debug("Editing button...")
             emit("edit_snippet_button", self)
 
@@ -148,12 +148,12 @@ class GoTo(Gtk.Button, Id):
         logging.info(f"Going to {self.destination}")
         log.debug(f"Going to {self.destination}")
 
-        if __.AppState == __.State.REMOVE:
+        if __.State.is_(REMOVE):
             log.debug("Removing button...")
             emit("remove_button", self)
             emit("remove_folder", self)
 
-        if __.AppState != __.State.REMOVE:
+        if __.State.is_(REMOVE):
             emit("change_button_grid", self.current_position, self.destination)
 
     def delete(self):
