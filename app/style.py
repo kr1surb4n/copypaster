@@ -10,6 +10,7 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, Gdk, Gio  # noqa
 
 
+styles_register = {}
 default_provider = Gtk.CssProvider()
 
 # TODO redesign everything here.
@@ -25,7 +26,7 @@ i need to have:
 
 
 @subscribe
-def load_default_styles():
+def load_styles():
     global default_provider
     default_provider.load_from_path(os.path.join(CURRENT_DIR, "app.css"))
 
