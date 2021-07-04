@@ -1,4 +1,4 @@
-from app import log, CURRENT_DIR
+from app import log
 from app.signal_bus import emit, event
 from app.register import Register as __, register_instance
 
@@ -32,6 +32,7 @@ class Application(Gtk.Application):
         self.quit()
         log.info("Goodbye! Application terminated.")
 
+
 application = Application()
 
 
@@ -56,11 +57,13 @@ def test_application_object():
 
     assert isinstance(application, Gtk.Application)
 
-    # run and test if handlers where run    
+    # run and test if handlers where run
     from time import sleep
     import threading
+
     def run():
         application.run()
+
     tested_thread = threading.Thread(target=run)
     tested_thread.start()
     sleep(1)
@@ -68,4 +71,3 @@ def test_application_object():
 
     del application
     del tested_thread
-

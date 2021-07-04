@@ -19,6 +19,7 @@ def main_function(config_file=None):
     log.debug("Initializing services...")
 
     import app.style  # noqa
+
     __.Style.registry.append(os.path.join(CURRENT_DIR, "app.css"))
 
     import app.stories  # noqa

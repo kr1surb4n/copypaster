@@ -5,7 +5,7 @@ import copypaster.events as event
 from copypaster.file_loader import Folder, GoTo
 from copypaster.file_loader import Copy, Snippet, Folder
 from copypaster.widgets.containers import ButtonGrid
-from copypaster.state import AUTOSAVE, EDIT, REMOVE, INIT, NORMAL
+from copypaster.state import AUTOSAVE, EDIT, NORMAL, REMOVE
 
 
 @subscribe
@@ -53,13 +53,13 @@ def remove_folder(button):
 @subscribe
 def edit_snippet_button(button_to_edit):
     dialog = __.snippet_dialog
-    
+
     snippet_title = __.Builder.get_object('snippet_title')
     snippet_content = __.Builder.get_object('snippet_content').get_buffer()
-    
+
     snippet_title.set_text(button_to_edit.name)
     snippet_content.set_text(button_to_edit.content)
-    
+
     dialog.run()
     dialog.hide()
 

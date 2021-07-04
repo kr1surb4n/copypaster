@@ -12,14 +12,16 @@ def main_function(config_file):
     log.info("Initializing services...")
 
     from app.config import config  # noqa
+
     config.load_config_file(config_file)
 
-
     from app.state import State, INIT, NORMAL
+
     state = State([INIT, NORMAL])
 
     from app.application import application  # noqa
-    import app.style # noqa
+    import app.style  # noqa
+
     __.Style.registry.append(os.path.join(CURRENT_DIR, "styles/app.css"))
 
     log.info("Loading Widgets usig GtkBuilder...")
@@ -35,7 +37,7 @@ def main_function(config_file):
 
     log.info("Importing stories...")
     import app.stories  # noqa
-    
+
     log.info("Starting the Application...")
     exit_status = application.run()
 

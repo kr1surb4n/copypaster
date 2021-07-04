@@ -9,12 +9,10 @@ AddSnippet  (add snippet button)
 AddFolder   (add folder button)
 
 """
-from copypaster.state import AUTOSAVE, EDIT, REMOVE, INIT, NORMAL
 from copypaster import log
 import copypaster.events as event
 from app.signal_bus import emit
 import hashlib
-from app.register import Register as __
 import gi
 
 import logging

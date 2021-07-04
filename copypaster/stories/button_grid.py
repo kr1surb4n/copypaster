@@ -1,5 +1,5 @@
 from app.register import Register as __
-from copypaster import log, PROJECT_DIR
+from copypaster import log
 import os
 import copypaster.events as event
 from app.signal_bus import subscribe, subscribe_on

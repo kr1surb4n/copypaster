@@ -5,10 +5,9 @@ import configparser
 from app import log
 from app.register import register_instance
 
+
 @register_instance
 class Config:
-    
-
     def __init__(self, config_file=None):
         """Load the config file.
 
@@ -36,13 +35,13 @@ class Config:
 
         self.cfg = configparser.ConfigParser()
         self.cfg.read(config)
-        
 
     def load_config_file(self, filename):
         self.cfg.read(filename)
 
 
 config = Config()
+
 
 def test_config():
     assert True

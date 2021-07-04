@@ -1,21 +1,16 @@
 from deyaml import (
     rules,
     YamlFile,
-    CONTENT,
     INFO,
     NAME,
     VALUE,
     CODE_PATH,
-    CLICK_COUNT,
     BUTTONS,
     CATEGORY,
     MAX_FILENAME_LENGTH,
-    SNIPPET,
     Snippet,
 )
 import pytest
-import logging as log
-import configparser
 
 TEST_FIXTURE = "fixture.yml"
 

@@ -45,6 +45,7 @@ class ObjectRegister(dict):
 
 Register = ObjectRegister()
 
+
 def make_register_instance(Register):
     def register_instance(cls):
         """This decorator adds the object instance to the Registry,
@@ -63,9 +64,12 @@ def make_register_instance(Register):
             return instance
 
         return wrapper_decorator
+
     return register_instance
 
+
 register_instance = make_register_instance(Register)
+
 
 def test_object_register():
     """Test if the ObjectRegister works.
@@ -79,24 +83,24 @@ def test_object_register():
 
     Register[Thing] = value
 
-    assert Thing in Register  
+    assert Thing in Register
 
     # is the Thing like a property?
-    assert Register.Thing  
+    assert Register.Thing
 
     # is the value of the Thing ok?
-    assert Register.Thing == value  
+    assert Register.Thing == value
 
     # can I change the value?
-    Register.Thing = 1  
+    Register.Thing = 1
     assert Register.Thing == 1
     assert Register.Thing != value
 
     # is getter sending exceptions when asked for a wrong object?
     import pytest
+
     with pytest.raises(KeyError):
         Register.IDontExist
-
 
 
 def test_register_instance():
@@ -111,8 +115,6 @@ def test_register_instance():
 
         def __init__(self):
             self.value = 1
-
-    
 
     instance = SomeObject()
 

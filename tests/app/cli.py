@@ -3,7 +3,7 @@
 """Console script for app."""
 import sys
 import click
-from app import log, PROJECT_DIR
+from app import log
 from app.main import main_function
 
 from os.path import expanduser
@@ -18,6 +18,7 @@ def main(config, debug):
     """Console script for app."""
     if debug:
         import logging
+
         log.setLevel(logging.DEBUG)
 
     log.info("Started Kr15 Gtk App")

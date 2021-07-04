@@ -1,33 +1,29 @@
 .PHONY: clean clean-test clean-pyc clean-build docs help
-.DEFAULT_GOAL := help
+.DEFAULT_TARGET=print
 
-define BROWSER_PYSCRIPT
-import os, webbrowser, sys
+APP_NAME = copypaster
 
-try:
-	from urllib import pathname2url
-except:
-	from urllib.request import pathname2url
+TEST_FOLDERS = tests app copypaster
+CODE_FOLDERS = $(APP_NAME) $(TEST_FOLDERS)
 
-webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
-endef
-export BROWSER_PYSCRIPT
+CODE_PATHS = $(CODE_FOLDERS)
+COVERAGE_PATHS = app,copypaster
 
-define PRINT_HELP_PYSCRIPT
-import re, sys
+REMOTE_GIT_SERVER = git@github.com:kr1surb4n/copypaster.git
+ORIGIN = kris
+MASTER = main
 
-for line in sys.stdin:
-	match = re.match(r'^([a-zA-Z_-]+):.*?## (.*)$$', line)
-	if match:
-		target, help = match.groups()
-		print("%-20s %s" % (target, help))
-endef
-export PRINT_HELP_PYSCRIPT
+REQUIREMENTS = requirements.txt
+REQUIREMENTS_FREEZE = requirements_freeze.txt
+REQUIREMENTS_DEV = requirements_dev.txt
 
-BROWSER := python -c "$$BROWSER_PYSCRIPT"
+BROWSER = firefox
 
-help:
-	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+print:
+	@echo $(APP_NAME)
+	@echo $(CODE_FOLDERS)
+	@echo $(CODE_PATHS)
+	@echo $(TEST_FOLDERS)
 
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
@@ -50,14 +46,51 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 
-lint: ## check style with flake8
-	flake8 copypaster tests
+coverage: ## check code coverage quickly with the default Python
+	coverage run --omit=lib,dirtynotes --source=$(COVERAGE_PATHS) -m pytest
+	coverage report -m
 
-sec:
-	bandit -r .
+check_code:
+	pycodestyle $(CODE_PATHS)
+
+dist: clean
+	rm -rf dist/*
+	python setup.py sdist
+	python setup.py bdist_wheel
+
+dist-upload:
+	twine upload dist/*
+
+docs: ## generate Sphinx HTML documentation, including API docs
+	rm -f docs/$(APP_NAME).rst
+	rm -f docs/modules.rst
+	sphinx-apidoc -o docs/ $(CODE_PATHS)
+	$(MAKE) -C docs clean
+	$(MAKE) -C docs html
+	$(BROWSER) docs/_build/html/index.html
+
+document:
+	pycco -spi -d docs/literate $(CODE_PATHS)
 
 fmt:
-	black -qS --config black.toml  .
+	black -qS --config black.toml $(CODE_FOLDERS)
+
+install: clean ## install the package to the active Python's site-packages
+	python setup.py install
+
+flake: ## check style with flake8
+	flake8 $(CODE_FOLDERS)
+
+mypy:
+	mypy $(CODE_FOLDERS)
+
+lint: ## check style with flake8
+	pylint $(CODE_FOLDERS)
+
+pre-commit: clean fmt remove-imports lint test
+
+requirements:
+	.venv/bin/pip freeze --local > $(REQUIREMENTS_FREEZE)
 
 remove-imports:
 	autoflake -r --in-place \
@@ -65,47 +98,47 @@ remove-imports:
 		--exclude .venv,.git,.pytest_cache,__pycache__ \
 		.
 
-pre-commit: clean fmt remove-imports lint test
-
 run:
 	copypaster > last_run.log 2>&1 &
 
-test: ## run tests quickly with the default Python
-	pytest -q --no-summary --log-level=ERROR copypaster extractions dirtynotes tests
+run-debug:
+	copypaster --debug > last_run.log 2>&1 &
 
-test-all: ## run tests on every Python version with tox
-	tox
-
-coverage: ## check code coverage quickly with the default Python
-	coverage run --source copypaster -m pytest
-	coverage report -m
-	coverage html
-	$(BROWSER) htmlcov/index.html
-
-docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/copypaster.rst
-	rm -f docs/modules.rst
-	sphinx-apidoc -o docs/ copypaster
-	$(MAKE) -C docs clean
-	$(MAKE) -C docs html
-	$(BROWSER) docs/_build/html/index.html
+sec:
+	bandit -r .
 
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-release: dist ## package and upload a release
-	twine upload dist/*
 
-dist: clean ## builds source and wheel package
-	python setup.py sdist
-	python setup.py bdist_wheel
-	ls -l dist
+test: ## run tests quickly with the default Python
+	pytest -q --no-summary --log-level=ERROR copypaster extractions dirtynotes tests
 
-install: clean ## install the package to the active Python's site-packages
-	python setup.py install
+test:
+	python -m pytest \
+		-v \
+		--cov=simple \
+		--cov-report=term \
+		--cov-report=html:coverage-report \
+		$(TEST_FOLDERS)
+
+test-watcher:
+	ptw $(CODE_PATHS) $(TEST_FOLDERS)
+
+test-all: ## run tests on every Python version with tox
+	tox
 
 update:
 	pip install -r requirements.txt
 
 update-dev:
 	pip install -r requirements_dev.txt 
+
+
+virtualenv:
+	virtualenv --prompt '|> $(APP_NAME) <| ' .venv
+	.venv/bin/pip install -r $(REQUIREMENTS_DEV)
+	.venv/bin/python setup.py develop
+	@echo
+	@echo "VirtualENV Setup Complete. Now run: source .venv/bin/activate"
+	@echo

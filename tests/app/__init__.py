@@ -15,6 +15,9 @@ CURRENT_DIR = os.path.dirname(__file__)
 PROJECT_DIR = os.path.dirname(CURRENT_DIR)
 
 # initialize logger
-logging.basicConfig(level=logging.ERROR,format='[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s')
+logging.basicConfig(
+    level=logging.ERROR,
+    format='[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s',
+)
 log = logging.getLogger("Kr15 App")
 log.setLevel(logging.WARN)

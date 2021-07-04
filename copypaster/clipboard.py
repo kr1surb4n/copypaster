@@ -75,13 +75,12 @@ def test_jimmy():
     jimmy = Jimmy()
 
     test_message = "One, Two, Three"
-    
+
     def can_i_send_and_receive(test_message):
         jimmy.send(test_message)
         assert jimmy.receive() == test_message
 
     can_i_send_and_receive(test_message)
-
 
     def can_i_clean_clipboard(test_message):
         empty = ""

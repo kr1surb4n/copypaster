@@ -61,6 +61,7 @@ def make_subscribe(signal_bus):
 
     return subscriber
 
+
 def make_subscribe_on(signal_bus):
     def pass_the_event(event_name):
         def subscriber(func):
@@ -68,7 +69,9 @@ def make_subscribe_on(signal_bus):
             return func
 
         return subscriber
+
     return pass_the_event
+
 
 subscribe = make_subscribe(signal_bus)
 subscribe_on = make_subscribe_on(signal_bus)

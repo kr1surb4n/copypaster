@@ -221,5 +221,3 @@ def load_snippets() -> Tuple[dict, str]:
 
     log.info('All snippets loaded')
     return Decks, PATH_TO_SNIPPETS_FOLDER
-
-    

@@ -29,7 +29,6 @@ import gi
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
-from app.signal_bus import emit
 from copypaster.widgets.buttons import Copy, GoTo, AddFolder, AddSnippet, FunctionalButton
 from copypaster import log
 

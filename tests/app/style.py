@@ -1,5 +1,4 @@
-from app.signal_bus import subscribe
-from app.register import Register as __, register_instance
+from app.register import register_instance
 
 from app import log, CURRENT_DIR
 import os
@@ -12,7 +11,6 @@ from gi.repository import Gtk, Gdk, GObject  # noqa
 
 @register_instance
 class Style:
-
     def __init__(self):
         self.registry = []
         self.default_provider = Gtk.CssProvider()
@@ -44,7 +42,9 @@ class Style:
 
         Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
 
+
 style = Style()
+
 
 def test_styles():
     style = Style()

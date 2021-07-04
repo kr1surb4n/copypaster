@@ -9,6 +9,7 @@ import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import GObject, Gtk  # noqa
 
+
 @register_instance
 class Builder(Gtk.Builder):
     """This extends the Gtk.Builder, so that

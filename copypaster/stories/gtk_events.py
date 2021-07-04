@@ -1,4 +1,3 @@
-from app.register import Register as __
 from app.signal_bus import subscribe
 from app.signal_bus import emit
 from copypaster import log
@@ -11,6 +10,7 @@ from gi.repository import Gtk, Gdk  # noqa
 
 
 # buttons on dialogs
+
 
 @subscribe
 def enter_saves_snippet(widget, gtk_event):

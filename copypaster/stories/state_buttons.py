@@ -1,7 +1,6 @@
 from app.register import Register as __
 from app.signal_bus import subscribe
 from copypaster import log
-import copypaster.events as event
 
 import gi
 
