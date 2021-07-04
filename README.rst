@@ -59,13 +59,13 @@ TODO
 1. File loader should check if the file is a text file (do not load binary)
 2. Snippets are loading slow. (logging is a drag)
    a) Do performance checks.
+        - add vprof and profiler output
    b) Add some info for user that stuff is loading (splash)
 4. Load CTAGS files as functions and variable names in different tabs (add notebook)
    - choose file to use
    - check if changes
 6. implement test for copypaster components
 7. extract app as stand alone project
-10. Move buttons on_events functions to stories 
 
 Credits
 -------

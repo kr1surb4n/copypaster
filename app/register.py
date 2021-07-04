@@ -45,53 +45,65 @@ class ObjectRegister(dict):
 
 Register = ObjectRegister()
 
+def make_register_instance(Register):
+    def register_instance(cls):
+        """This decorator adds the object instance to the Registry,
+        when the decorated object is initiated.
 
-def register_instance(cls):
-    """This decorator adds the object instance to the Registry,
-    when the decorated object is initiated.
+        Registered object is accessible through it's class name.
+        """
 
-    Registered object is accessible through it's class name.
+        @functools.wraps(cls)
+        def wrapper_decorator(*args, **kwargs):
 
+            instance = cls(*args, **kwargs)
 
-    """
+            Register[cls.__name__] = instance  # hmm, this dictates the CamelCase names
 
-    @functools.wraps(cls)
-    def wrapper_decorator(*args, **kwargs):
+            return instance
 
-        instance = cls(*args, **kwargs)
+        return wrapper_decorator
+    return register_instance
 
-        Register[cls.__name__] = instance  # hmm, this dictates the CamelCase names
-
-        return instance
-
-    return wrapper_decorator
-
+register_instance = make_register_instance(Register)
 
 def test_object_register():
-    """First test to see if the ObjectRegister works"""
-    dummy = "Stub"
+    """Test if the ObjectRegister works.
+
+    Basic tests.
+    """
+    Thing = "Thing"
     value = " "
 
-    reg = ObjectRegister()
+    Register = ObjectRegister()
 
-    reg[dummy] = value
+    Register[Thing] = value
 
-    assert dummy in reg  # is dummy in register?
-    assert reg.Stub  # can i access the Stub by name?
-    assert reg.Stub == value  # is value correct?
+    assert Thing in Register  
 
-    reg.Stub = 1  # can I change the value?
-    assert reg.Stub == 1
+    # is the Thing like a property?
+    assert Register.Thing  
 
-    # does the setter and getter send exceptions on bad key?
+    # is the value of the Thing ok?
+    assert Register.Thing == value  
+
+    # can I change the value?
+    Register.Thing = 1  
+    assert Register.Thing == 1
+    assert Register.Thing != value
+
+    # is getter sending exceptions when asked for a wrong object?
     import pytest
-
     with pytest.raises(KeyError):
-        reg.Exception
+        Register.IDontExist
 
 
-def test_decorator():
-    """Next lets see if the register_instance works"""
+
+def test_register_instance():
+    """is the register_instance working?"""
+
+    Register = ObjectRegister()
+    register_instance = make_register_instance(Register)
 
     @register_instance
     class SomeObject:
@@ -100,11 +112,12 @@ def test_decorator():
         def __init__(self):
             self.value = 1
 
-    global Register
+    
 
     instance = SomeObject()
 
-    assert Register.SomeObject  # is object in Register?
-    assert Register.SomeObject.value == 1  # is the value correct?
+    assert Register.SomeObject
+    assert Register.SomeObject == instance
+    assert Register.SomeObject.value == 1
 
     del instance

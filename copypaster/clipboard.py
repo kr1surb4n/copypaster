@@ -1,4 +1,5 @@
 from copypaster.state import AUTOSAVE
+import copypaster.events as event
 import xerox
 from app.register import register_instance
 from app.register import Register as __
@@ -33,8 +34,8 @@ class Jimmy:
         return self.clip.wait_for_text()
 
     def start_autosave(self):
-        self.handle = self.clip.connect("owner-change", self.auto_clipboard)
         log.debug("Autosave on")
+        self.handle = self.clip.connect("owner-change", self.auto_clipboard)
         __.State.autosave
 
     def stop_autosave(self):
@@ -57,29 +58,36 @@ class Jimmy:
         return contents if contents.strip() else ""
 
     def auto_clipboard(self, clipboard, parameter):
-        if __.State.is_(AUTOSAVE):
+        if not __.State.is_(AUTOSAVE):
             return False
 
         name = value = self.wait_for_data()
         if not value:
             log.error("No value to save - aborting")
             return False
-        emit("add_button", name, value)
+        emit(event.add_button, name, value)
 
 
-_Jimmy = Jimmy()
+jimmy = Jimmy()
 
 
 def test_jimmy():
-    empty = ""
+    jimmy = Jimmy()
 
-    # can I send and receive?
     test_message = "One, Two, Three"
-    _Jimmy.send(test_message)
-    assert _Jimmy.receive() == test_message
+    
+    def can_i_send_and_receive(test_message):
+        jimmy.send(test_message)
+        assert jimmy.receive() == test_message
 
-    # can I clean clipboard?
-    _Jimmy.send(test_message)
-    _Jimmy.clean_clipboard()
-    assert _Jimmy.receive() != test_message
-    assert _Jimmy.receive() == empty
+    can_i_send_and_receive(test_message)
+
+
+    def can_i_clean_clipboard(test_message):
+        empty = ""
+        jimmy.send(test_message)
+        jimmy.clean_clipboard()
+        assert jimmy.receive() != test_message
+        assert jimmy.receive() == empty
+
+    can_i_clean_clipboard(test_message)

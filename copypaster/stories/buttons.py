@@ -1,35 +1,38 @@
 from app.register import Register as __
-from copypaster import log
 from app.signal_bus import subscribe, emit
+from copypaster import log
+import copypaster.events as event
 from copypaster.file_loader import Folder, GoTo
 from copypaster.file_loader import Copy, Snippet, Folder
 from copypaster.widgets.containers import ButtonGrid
+from copypaster.state import AUTOSAVE, EDIT, REMOVE, INIT, NORMAL
 
-"""
-ErrorDialog:
-error_dialog 
-    error_message
-    error_ok
-        signal:
-            click: error_ok_pressed
 
-folder_dialog:
-    folder_name
-            enter_save_folder
-    folder_submit
-        signal:
-            click: save_folder
-            emit   save_folder
+@subscribe
+def copy_button_pressed(button):
+    if __.State.is_(REMOVE):
+        log.debug("Removing button...")
+        emit(event.remove_button, button)
 
-snippet_dialog
-        snippet_title
-            enter_save_snippet
-        snippet_content
-            enter_save_snippet    
-        snippet_submifft:
-            click:  save_snippet
-            emit    save_snippet
-"""
+    if __.State.is_(NORMAL) or __.State.is_(AUTOSAVE):
+        log.debug("Coping value...")
+        emit(event.copy, button.content)
+        emit(event.preview_content, button.content)
+
+    if __.State.is_(EDIT):
+        log.debug("Editing button...")
+        emit(event.edit_snippet_button, button)
+
+
+@subscribe
+def goto_button_pressed(button):
+    if __.State.is_(REMOVE):
+        log.debug("Removing button...")
+        emit(event.remove_button, button)
+        emit(event.remove_folder, button)
+
+    if not __.State.is_(REMOVE):
+        emit(event.change_button_grid, button.current_position, button.destination)
 
 
 @subscribe
@@ -92,14 +95,14 @@ def save_snippet(*args, **kwargs):
 
     if not content:
         log.error("No content to save - aborting")
-        emit("error_show_dialog", "Soo, the content is missing, it's required.")
+        emit(event.error_show_dialog, "Soo, the content is missing, it's required.")
         return False
 
     if not title:
         title = content
 
     log.debug("Adding new button to grid ...")
-    emit("add_button", title, content)
+    emit(event.add_button, title, content)
     __.snippet_dialog.hide()
 
 
@@ -138,11 +141,11 @@ def save_folder(*args, **kwargs):
 
     if not name:
         log.error("No name to use - aborting folder creation")
-        emit("error_show_dialog", "Soo, the name is missing, it's required.")
+        emit(event.error_show_dialog, "Soo, the name is missing, it's required.")
         return False
 
     log.debug("Adding new GoTo button to grid ...")
-    emit("add_folder", name)
+    emit(event.add_folder, name)
     __.folder_dialog.hide()
 
 

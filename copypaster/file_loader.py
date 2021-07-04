@@ -219,6 +219,7 @@ def load_snippets() -> Tuple[dict, str]:
     # block until all tasks are done
     tasks.join()
 
+    log.info('All snippets loaded')
     return Decks, PATH_TO_SNIPPETS_FOLDER
 
-    log.info('All snippets loaded')
+    

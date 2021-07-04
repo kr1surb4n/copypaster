@@ -1,20 +1,14 @@
 from app.register import Register as __
 from copypaster import log, PROJECT_DIR
 import os
-from app.signal_bus import emit, subscribe
+import copypaster.events as event
+from app.signal_bus import subscribe, subscribe_on
 from copypaster.file_loader import load_snippets, load_folder
-from copypaster.widgets.containers import ButtonGrid, ButtonTree
 
 
-@subscribe
-def start_app():
-    initialize_snippets()
-    emit('load_style', os.path.join(PROJECT_DIR, "copypaster", "app.css"))
-
-
+@subscribe_on(event.start_app)
 def initialize_snippets():
-    """Here we load dirty notes (first) and then the rest of the
-    notes.
+    """Here we load snippets into Snippets object
 
     On event: start_app"""
     log.debug("Loading snippets")

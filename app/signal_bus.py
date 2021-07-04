@@ -57,13 +57,21 @@ signal_bus = SignalBus()
 def make_subscribe(signal_bus):
     def subscriber(func):
         signal_bus.subscribe(func.__name__, func)
-
         return func
 
     return subscriber
 
+def make_subscribe_on(signal_bus):
+    def pass_the_event(event_name):
+        def subscriber(func):
+            signal_bus.subscribe(event_name, func)
+            return func
+
+        return subscriber
+    return pass_the_event
 
 subscribe = make_subscribe(signal_bus)
+subscribe_on = make_subscribe_on(signal_bus)
 
 
 def make_emit(signal_bus):

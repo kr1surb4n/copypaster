@@ -93,7 +93,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="placeholder_text" translatable="yes">Folder Name</property>
-            <signal name="key-press-event" handler="enter_save_folder" swapped="no"/>
+            <signal name="key-press-event" handler="enter_saves_folder" swapped="no"/>
           </object>
           <packing>
             <property name="expand">True</property>
@@ -145,7 +145,7 @@
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="placeholder_text" translatable="yes">Snippet title</property>
-            <signal name="key-press-event" handler="enter_save_snippet" swapped="no"/>
+            <signal name="key-press-event" handler="enter_saves_snippet" swapped="no"/>
           </object>
           <packing>
             <property name="expand">False</property>
@@ -164,7 +164,7 @@
             <property name="hexpand">True</property>
             <property name="vexpand">True</property>
             <property name="wrap_mode">word</property>
-            <signal name="key-press-event" handler="enter_save_snippet" swapped="no"/>
+            <signal name="key-press-event" handler="enter_saves_snippet" swapped="no"/>
             <style>
               <class name="snippet_text"/>
             </style>

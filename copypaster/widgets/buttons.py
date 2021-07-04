@@ -11,6 +11,7 @@ AddFolder   (add folder button)
 """
 from copypaster.state import AUTOSAVE, EDIT, REMOVE, INIT, NORMAL
 from copypaster import log
+import copypaster.events as event
 from app.signal_bus import emit
 import hashlib
 from app.register import Register as __
@@ -94,18 +95,7 @@ class Copy(Gtk.Button, Id):
     def on_copy(self, button):
         log.debug("Handling the button press...")
 
-        if __.State.is_(REMOVE):
-            log.debug("Removing button...")
-            emit("remove_button", self)
-
-        if __.State.is_(NORMAL) or __.State.is_(AUTOSAVE):
-            log.debug("Coping value...")
-            emit("copy", button.content)
-            emit("preview_content", button.content)
-
-        if __.State.is_(EDIT):
-            log.debug("Editing button...")
-            emit("edit_snippet_button", self)
+        emit(event.copy_button_pressed, self)
 
     def __str__(self):
         return f"<Copy [{self.name}] >"
@@ -148,13 +138,7 @@ class GoTo(Gtk.Button, Id):
         logging.info(f"Going to {self.destination}")
         log.debug(f"Going to {self.destination}")
 
-        if __.State.is_(REMOVE):
-            log.debug("Removing button...")
-            emit("remove_button", self)
-            emit("remove_folder", self)
-
-        if __.State.is_(REMOVE):
-            emit("change_button_grid", self.current_position, self.destination)
+        emit(event.goto_button_pressed, self)
 
     def delete(self):
         import os
@@ -185,7 +169,7 @@ class AddSnippet(Gtk.Button, Id, FunctionalButton):
 
     def on_click(self, button: Gtk.Button):
         log.debug(f"Adding Snippet")
-        emit("open_add_button_dialog")
+        emit(event.open_add_button_dialog)
 
 
 class AddFolder(Gtk.Button, Id, FunctionalButton):
@@ -207,4 +191,4 @@ class AddFolder(Gtk.Button, Id, FunctionalButton):
 
     def on_click(self, button: Gtk.Button):
         log.debug(f"Adding Folder")
-        emit("open_add_folder_dialog")
+        emit(event.open_add_folder_dialog)
