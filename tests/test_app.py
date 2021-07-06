@@ -1,17 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-"""Tests for `copypaster` package."""
-
 import pytest
 
 from click.testing import CliRunner
 
-
-def test_copypaster_start():
+def test_app_start():
     import os
 
-    from copypaster import cli
+    from app import cli
 
     from app.signal_bus import subscribe, emit, event
 

@@ -16,7 +16,7 @@ def main_function(config_file=None):
     exit with the value returned by
     running the program"""
 
-    log.debug("Initializing services...")
+    log.info("Initializing services...")
 
     import app.style  # noqa
 
@@ -35,7 +35,7 @@ def main_function(config_file=None):
 
     config.load_config_file(config_file)
 
-    log.debug("Loading Widgets usig GtkBuilder...")
+    log.info("Loading Widgets usig GtkBuilder...")
 
     from copypaster.widgets.containers import ButtonTree
 
@@ -60,13 +60,13 @@ def main_function(config_file=None):
     from app.layout_events import Layout_events  # noqa
 
     __.Builder.connect_signals(Layout_events)
-
-    log.debug("Importing stories...")
+    raise NameError()
+    log.info("Importing stories...")
     import copypaster.stories  # noqa
 
-    log.debug("Starting the Application...")
+    log.info("Starting the Application...")
     # exit_status = application.run(sys.argv)
     exit_status = application.run()
 
-    log.debug("Returning exit status value...")
+    log.info("Returning exit status value...")
     return exit_status

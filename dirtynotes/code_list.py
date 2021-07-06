@@ -10,9 +10,9 @@ GLADE_FILE = "list_manipulation_buttons.glade"
 
 CODE_FILE = "code_list.py"
 
-ast_code = astor.code_to_ast.parse_file(CODE_FILE)
+#ast_code = astor.code_to_ast.parse_file(CODE_FILE)
 
-print(ast_code)
+#print(ast_code)
 
 
 _R = {}

@@ -1,37 +1,34 @@
 # -*- coding: utf-8 -*-
 
-"""Console script for copypaster."""
+"""Console script for app."""
 import sys
 import click
+from app import log
+from app.main import main_function
+
 from os.path import expanduser
-import logging
 
-from app import log as applog
-from copypaster import log
-from copypaster.copypaster import main_function
-
-
-default_config_path = expanduser("~/.config/copypaster.conf")
+default_config_path = expanduser("~/.config/app.conf")
 
 
 @click.command()
 @click.option("--config", default=default_config_path)
 @click.option('--debug', is_flag=True, default=False, help='turn log level DEBUG on')
-def main(config, debug):
-    """Console script for copypaster."""
-
+@click.option('--profile', is_flag=True, default=False, help='turn profiling on')
+def main(config, debug, profile):
+    """Console script for app."""
     if debug:
-        applog.setLevel(logging.DEBUG)
+        import logging
         log.setLevel(logging.DEBUG)
 
         handler = logging.StreamHandler(sys.stdout)
         handler.setLevel(logging.DEBUG)
-        formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+        formatter = logging.Formatter('%(message)s')
         handler.setFormatter(formatter)
         log.addHandler(handler)
 
-    log.info("Started CopyPaster")
-    log.info("copypaster.cli.main")
+
+    log.info("Started Kr15 Gtk App")
 
     try:
         main_function(config)
