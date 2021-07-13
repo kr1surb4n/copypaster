@@ -34,26 +34,3 @@ class State:
 
     def is_(self, state):
         return state.upper() == self.state
-
-
-def test_state():
-    import pytest
-
-    with pytest.raises(TypeError):
-        state = State()
-
-    with pytest.raises(AssertionError):
-        state = State("a")
-
-    with pytest.raises(AssertionError):
-        state = State([])
-
-    state = State([INIT, NORMAL])
-    assert state
-    assert state.current() == INIT
-
-    with pytest.raises(AttributeError):
-        state.bad
-
-    state.normal
-    assert state.is_(NORMAL)

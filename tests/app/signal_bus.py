@@ -1,98 +1,19 @@
-from app.register import register_instance
-from app import log
-import app.events as event
-
-"""
-SignalBus
-
-is an Event Subscribe-Emit object
-
-You need an object that implements function `<EVENT_NAME>`.
-This object is subscribed by passing: <EVENT_NAME> and the object itself.
-Or by using a decorator `@subscribe(<EVENT_NAME>)`
-
-To emit an event you need SignalBus object and pass to emit function
-an event name and arguments. Ths will call every subscribed function.
-
-I run `emit` function and this runs some functions. I don't know what happens."""
-
-
-def not_implemented(event_name):
-    def wrapps(*args, **kwargs):
-        raise NotImplementedError("something has not implemented " + event_name)
-
-    return wrapps
-
-
-@register_instance
-class SignalBus:
-    def __init__(self):
-        self.receivers = {}
-
-    def subscribe(self, event_name, callback):
-        log.info(f"Subscribed {callback.__name__} for event {event_name}")
-        if event_name not in self.receivers:
-            self.receivers[event_name] = []
-
-        self.receivers[event_name] += [callback]
-
-    def emit(self, event_name, *args, **kwargs):
-        log.info(f"Emited {event_name}")
-        receivers = self.receivers.get(event_name, None)
-
-        if receivers is None:
-            return False
-
-        try:
-            # TODO: maybe add async
-            [callback(*args, **kwargs) for callback in receivers]
-        except Exception as e:
-            log.critical(str(e))
-        return True
-
-
-signal_bus = SignalBus()
-
-
-def make_subscribe(signal_bus):
-    def subscriber(func):
-        signal_bus.subscribe(func.__name__, func)
-        return func
-
-    return subscriber
-
-
-def make_subscribe_on(signal_bus):
-    def pass_the_event(event_name):
-        def subscriber(func):
-            signal_bus.subscribe(event_name, func)
-            return func
-
-        return subscriber
-
-    return pass_the_event
-
-
-subscribe = make_subscribe(signal_bus)
-subscribe_on = make_subscribe_on(signal_bus)
-
-
-def make_emit(signal_bus):
-    def emiter(event, *args, **kwargs):
-        return signal_bus.emit(event, *args, **kwargs)
-
-    return emiter
-
-
-emit = make_emit(signal_bus)
-
+import pytest
+from app.signal_bus import SignalBus, make_subscribe, make_emit
 
 def test_signals():
     signal_bus = SignalBus()
 
     subscribe = make_subscribe(signal_bus)
+    emit = make_emit(signal_bus)
 
+    signal_name = 'count'
     counter = 1
+
+    # sanity checks
+    assert counter == 1
+    assert len(signal_bus.receivers.items()) == 0
+    assert signal_bus.emit(signal_bus) == False
 
     @subscribe
     def count():
@@ -100,10 +21,9 @@ def test_signals():
         counter += 1
         return counter
 
-    signal_name = count.__name__
-
-    # subscribe didn't run the function
-    assert counter == 1  # a sanity check
+    # is function subscribed?
+    assert len(signal_bus.receivers.items()) == 1
+    assert len(signal_bus.receivers[signal_name]) == 1
 
     # count workS
     assert count() == 2
@@ -111,17 +31,20 @@ def test_signals():
 
     # emit signal
     assert signal_bus.emit(signal_name)
-    assert counter == 3
-
-    emit = make_emit(signal_bus)
+    assert counter == 3 
 
     # test emit function
     assert emit(signal_name)
     assert counter == 4
 
+    @subscribe
+    def fails():
+        return 1/0
+
+    assert False == emit('fails')
 
 def test_signal_bus():
-    """Here I test the signall buss"""
+    """Here I test the signal bus"""
 
     # event names
     test_event = "test_event"

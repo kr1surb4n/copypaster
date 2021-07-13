@@ -35,5 +35,6 @@ tox
 coverage
 pytest
 pytest-runner
+pytest-watch
 
 # sudo python3 -m easy_install clonedigger

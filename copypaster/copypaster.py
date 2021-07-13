@@ -60,7 +60,7 @@ def main_function(config_file=None):
     from app.layout_events import Layout_events  # noqa
 
     __.Builder.connect_signals(Layout_events)
-    raise NameError()
+
     log.info("Importing stories...")
     import copypaster.stories  # noqa
 

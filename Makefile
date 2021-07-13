@@ -19,6 +19,9 @@ REQUIREMENTS_DEV = requirements_dev.txt
 
 BROWSER = firefox
 
+push:
+	git push $(ORIGIN) $(MASTER)
+
 print:
 	@echo $(APP_NAME)
 	@echo $(CODE_FOLDERS)

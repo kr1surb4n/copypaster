@@ -44,10 +44,12 @@ class SignalBus:
             return False
 
         try:
-            # TODO: maybe add async
+            # TODO: add async
             [callback(*args, **kwargs) for callback in receivers]
         except Exception as e:
             log.critical(str(e))
+            return False
+
         return True
 
 
@@ -85,75 +87,3 @@ def make_emit(signal_bus):
 
 
 emit = make_emit(signal_bus)
-
-
-def test_signals():
-    signal_bus = SignalBus()
-
-    subscribe = make_subscribe(signal_bus)
-
-    counter = 1
-
-    @subscribe
-    def count():
-        nonlocal counter
-        counter += 1
-        return counter
-
-    signal_name = count.__name__
-
-    # subscribe didn't run the function
-    assert counter == 1  # a sanity check
-
-    # count workS
-    assert count() == 2
-    assert counter == 2
-
-    # emit signal
-    assert signal_bus.emit(signal_name)
-    assert counter == 3
-
-    emit = make_emit(signal_bus)
-
-    # test emit function
-    assert emit(signal_name)
-    assert counter == 4
-
-
-def test_signal_bus():
-    """Here I test the signall buss"""
-
-    # event names
-    test_event = "test_event"
-    test_error = "test_error"
-
-    class Simplex:
-        """is used as an example object,
-        that demonstrates that stuff works"""
-
-        y = 0
-
-        def __init__(self):
-            self.x = 0
-
-        def test_event(self):
-            self.x += 1
-            self.y += 1
-
-    success = Simplex()
-    second = Simplex()
-
-    signal_bus = SignalBus()
-
-    signal_bus.subscribe(test_event, success.test_event)
-    assert signal_bus.emit(test_event)
-
-    assert success.x == 1
-
-    signal_bus.subscribe(test_event, second.test_event)
-    signal_bus.emit(test_event)
-
-    assert second.y == 1
-    assert success.y == 2
-
-    assert not signal_bus.emit(test_error)

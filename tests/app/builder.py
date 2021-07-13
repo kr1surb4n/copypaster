@@ -1,66 +1,76 @@
 # -*- coding: utf-8 -*-
-from app import log
-from app.register import register_instance
-
-""" Initialize services """
+from app.builder import Builder
 
 import gi
+from os.path import join, dirname
 
 gi.require_version('Gtk', '3.0')
 from gi.repository import GObject, Gtk  # noqa
 
 
-@register_instance
-class Builder(Gtk.Builder):
-    """This extends the Gtk.Builder, so that
-    you can register a custom type during init,
-    and before loading Glade file"""
 
-    def __init__(self, *args, **kwargs):
-        self.custom_objects = {}
-        super(Gtk.Builder, self).__init__(*args, **kwargs)
+def test_builder_custom_widget():
+    # given
+    class CustomWidget(Gtk.Label):
+        ...
 
-    def add_custom_object(self, name, widget_type):
-        log.info(f"Builder: Adding {name} for {widget_type}")
-        self.custom_objects[name] = widget_type
+    CUSTOM_WIDGET = 'CustomWidget'
+    TEST_GLADE_FILE = join(dirname(__file__), 'example_custom.glade')
 
-    def do_get_type_from_name(self, type_name):
-        log.info(f"Builder: Resolving object for type {type_name}")
-        """
-        Looks up a type by name, using the virtual function that Gtk.Builder
-        has for that purpose.
+    builder = Builder()
 
-        searches the type in `self.custom_objects` dictionaries.
+    # when
+    builder.add_custom_object(CUSTOM_WIDGET, CustomWidget)
+    builder.add_from_file(TEST_GLADE_FILE)
+
+    # then
+    widget = builder.get_object(CUSTOM_WIDGET)
+    assert widget
+    assert isinstance(widget, CustomWidget)
 
 
-        Parameters:  type_name (str) – type name to lookup
-        Returns:     the GObject.GType found for type_name
-                       or GObject.TYPE_INVALID if no type was found
-        Return type: GObject.GType
+def test_if_builder_fails_without_a_custom_class():
 
-        """
+    TEST_GLADE_FILE = join(dirname(__file__), 'example_custom.glade')
 
-        if type_name in self.custom_objects:
-            return self.custom_objects[type_name]
+    builder = Builder()
 
-        r = Gtk.Builder.do_get_type_from_name(self, type_name)
-        print('GtkBuilder: => {}\t{}'.format(type_name, r))
-        return r
-
-
-builder = Builder()
+    try:
+        builder.add_from_file(TEST_GLADE_FILE)
+        assert False
+    except gi.repository.GLib.GError:
+        "No CustomWidget"
+        assert True
 
 
 def test_builder_happy_path():
-    builder = Builder()
-
+    # given
     missing = 'missing'
     mycustomtype = 'mycustomtype'
 
     class MyCustomType:
         ...
 
+    builder = Builder()
+    
+    # when
     builder.add_custom_object(mycustomtype, MyCustomType)
 
-    assert builder.do_get_type_from_name(mycustomtype) == MyCustomType
+    # then there is one custom object
+    assert len(builder.custom_objects) == 1
+
+    # and it's our custom object
+    assert mycustomtype in builder.custom_objects
+
+    # and missing is not in custom object 
+    assert not missing in builder.custom_objects
+
+
+    # when we want type from name
+    type_returned = builder.do_get_type_from_name(mycustomtype)
+    
+    # then
+    assert type_returned == MyCustomType
+    # and
     assert isinstance(builder.do_get_type_from_name(missing), GObject.GType)
+
