@@ -1,4 +1,3 @@
-from app.style import Style
 
 import os
 from os.path import join, dirname
@@ -9,6 +8,8 @@ from gi.repository import Gtk, Gdk, GObject  # noqa
 
 
 def test_styles():
+    from app.style import Style
+
     label = Gtk.Label(label="text")
     style_context = label.get_style_context()
     

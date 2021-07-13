@@ -115,15 +115,18 @@ servedocs: docs ## compile the docs watching for changes
 
 
 test: ## run tests quickly with the default Python
-	pytest -q --no-summary --log-level=ERROR copypaster extractions dirtynotes tests
+	pytest -q --no-summary --log-level=ERROR tests/app/*.py
+	pytest -q --no-summary --log-level=ERROR tests/integrations/app/application.py
+	pytest -q --no-summary --log-level=ERROR tests/integrations/app/cli.py
+	pytest -q --no-summary --log-level=ERROR tests/integrations/app/main.py
 
-test:
-	python -m pytest \
-		-v \
-		--cov=simple \
-		--cov-report=term \
-		--cov-report=html:coverage-report \
-		$(TEST_FOLDERS)
+# test:
+# 	python -m pytest \
+# 		-v \
+# 		--cov=simple \
+# 		--cov-report=term \
+# 		--cov-report=html:coverage-report \
+# 		$(TEST_FOLDERS)
 
 test-watcher:
 	ptw $(CODE_PATHS) $(TEST_FOLDERS)

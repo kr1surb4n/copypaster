@@ -1,11 +1,13 @@
 import gi
-from app.utility import wrap
+
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk  # noqa
 
 
 def test_wrap():
+    from app.utility import wrap
+    
     """Test if the object wrapped is Gtk.ScrolledWindow"""
     wrapper = wrap(Gtk.Label(label="Puf"))
 

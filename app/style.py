@@ -41,6 +41,3 @@ class Style:
         )
 
         Gtk.StyleContext.reset_widgets(Gdk.Screen.get_default())
-
-
-style = Style()

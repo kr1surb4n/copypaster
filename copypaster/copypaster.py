@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from app import builder, layout_events
 import os
 from copypaster import log, CURRENT_DIR  # noqa
 from app.register import Register as __
@@ -17,23 +18,27 @@ def main_function(config_file=None):
     running the program"""
 
     log.info("Initializing services...")
-
-    import app.style  # noqa
+  
+    from app.style import Style # noqa
+    from app.application import Application  # noqa
+    from app.builder import Builder  # noqa
+    from app.layout_events import LayoutEvents  # noqa
+    from app.config import Config  # noqa
+    from app.state import State
+    from copypaster.clipboard import Jimmy # noqa
+    from copypaster.state import INIT, NORMAL, AUTOSAVE, EDIT, REMOVE
+    import app.stories  # noqa
+    
+    style = Style()
+    application =  Application()
+    builder = Builder()
+    layout_events = LayoutEvents()
+    jimmy = Jimmy()
+    state = State([INIT, NORMAL, EDIT, REMOVE, AUTOSAVE])
+    config = Config()
+    config.load_config_file(config_file)
 
     __.Style.registry.append(os.path.join(CURRENT_DIR, "app.css"))
-
-    import app.stories  # noqa
-    from app.application import application  # noqa
-    from app.builder import builder  # noqa
-    from app.config import config  # noqa
-    from app.state import State
-    from copypaster.state import INIT, NORMAL, AUTOSAVE, EDIT, REMOVE
-
-    state = State([INIT, NORMAL, EDIT, REMOVE, AUTOSAVE])
-
-    import copypaster.clipboard  # noqa
-
-    config.load_config_file(config_file)
 
     log.info("Loading Widgets usig GtkBuilder...")
 
@@ -57,9 +62,7 @@ def main_function(config_file=None):
     __.PreviewLabel = builder.get_object("preview_label")
     __.LevelIndicator = builder.get_object("current_level")
 
-    from app.layout_events import Layout_events  # noqa
-
-    __.Builder.connect_signals(Layout_events)
+    __.Builder.connect_signals(layout_events)
 
     log.info("Importing stories...")
     import copypaster.stories  # noqa

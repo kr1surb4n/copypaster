@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-from app.builder import Builder
 
 import gi
 from os.path import join, dirname
@@ -8,8 +7,9 @@ gi.require_version('Gtk', '3.0')
 from gi.repository import GObject, Gtk  # noqa
 
 
-
 def test_builder_custom_widget():
+    from app.builder import Builder
+
     # given
     class CustomWidget(Gtk.Label):
         ...
@@ -30,6 +30,7 @@ def test_builder_custom_widget():
 
 
 def test_if_builder_fails_without_a_custom_class():
+    from app.builder import Builder
 
     TEST_GLADE_FILE = join(dirname(__file__), 'example_custom.glade')
 
@@ -44,6 +45,8 @@ def test_if_builder_fails_without_a_custom_class():
 
 
 def test_builder_happy_path():
+    from app.builder import Builder
+
     # given
     missing = 'missing'
     mycustomtype = 'mycustomtype'

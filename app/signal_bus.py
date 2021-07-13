@@ -52,9 +52,11 @@ class SignalBus:
 
         return True
 
+    def unsubscribe(self, event_name):
+        log.info(f"Unsubscribe {event_name}")
+        self.receivers[event_name] = []
 
 signal_bus = SignalBus()
-
 
 def make_subscribe(signal_bus):
     def subscriber(func):

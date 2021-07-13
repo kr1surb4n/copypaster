@@ -1,7 +1,8 @@
 import pytest
-from app.signal_bus import SignalBus, make_subscribe, make_emit
 
 def test_signals():
+    from app.signal_bus import SignalBus, make_subscribe, make_emit
+
     signal_bus = SignalBus()
 
     subscribe = make_subscribe(signal_bus)
@@ -45,6 +46,8 @@ def test_signals():
 
 def test_signal_bus():
     """Here I test the signal bus"""
+    from app.signal_bus import SignalBus, make_subscribe, make_emit
+
 
     # event names
     test_event = "test_event"

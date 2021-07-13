@@ -39,9 +39,3 @@ class Config:
     def load_config_file(self, filename):
         self.cfg.read(filename)
 
-
-config = Config()
-
-
-def test_config():
-    assert True

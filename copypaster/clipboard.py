@@ -68,9 +68,6 @@ class Jimmy:
         emit(event.add_button, name, value)
 
 
-jimmy = Jimmy()
-
-
 def test_jimmy():
     jimmy = Jimmy()
 

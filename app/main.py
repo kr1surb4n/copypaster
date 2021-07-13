@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
+from app.application import Application
 import os
 
 from app import log, CURRENT_DIR
-from app.register import Register as __
-
 
 def main_function(config_file):
     # create and run the application,
@@ -11,26 +10,29 @@ def main_function(config_file):
     # running the program
     log.info("Initializing services...")
 
-    from app.config import config  # noqa
-
-    config.load_config_file(config_file)
-
+    from app.register import Register as __
+    from app.config import Config  # noqa
+    from app.application import Application  # noqa
+    from app.style import Style  # noqa
     from app.state import State, INIT, NORMAL
+    from app.builder import Builder  # noqa
+    from app.layout_events import LayoutEvents
 
+    application = Application()
+    config = Config()
+    config.load_config_file(config_file)
     state = State([INIT, NORMAL])
 
-    from app.application import application  # noqa
-    import app.style  # noqa
-
+    style = Style()
     __.Style.registry.append(os.path.join(CURRENT_DIR, "styles/app.css"))
 
     log.info("Loading Widgets usig GtkBuilder...")
-    from app.builder import builder  # noqa
-    from app.layout_events import Layout_events
+    builder = Builder()
+    layout_events = LayoutEvents()
 
     builder.set_application(application)  # works without it
     builder.add_from_file(os.path.join(CURRENT_DIR, "layout.glade"))
-    builder.connect_signals(Layout_events)
+    builder.connect_signals(layout_events)
 
     __.MainWindow = builder.get_object("main_window")
     __.WelcomeSign = builder.get_object("welcome_sign")
@@ -43,29 +45,3 @@ def main_function(config_file):
 
     log.info("Returning exit status value...")
     return exit_status
-
-
-def test_main_function():
-    from time import sleep
-    import threading
-
-    tested_thread = threading.Thread(target=main_function, args=("test_config",))
-    tested_thread.start()
-
-    sleep(1)
-    global __
-
-    assert tested_thread.is_alive()
-    assert __.State
-    assert __.Config
-    assert __.SignalBus
-    assert __.Application
-    assert __.Builder
-    assert __.LayoutEvents
-    assert __.MainWindow
-    assert __.WelcomeSign
-    assert __.WelcomeSign.get_text() == "I am Kr15 GTK App"
-
-    __.SignalBus.emit('quit')
-    __.Application.handle_quit('action', 'param')
-    del tested_thread

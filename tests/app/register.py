@@ -1,10 +1,12 @@
-from app.register import ObjectRegister, make_register_instance
 
 def test_object_register():
     """Test if the ObjectRegister works.
 
     Basic tests.
     """
+    from app.register import ObjectRegister, make_register_instance
+
+
     Thing = "Thing"
     value = " "
 
@@ -34,6 +36,7 @@ def test_object_register():
 
 def test_register_instance():
     """is the register_instance working?"""
+    from app.register import ObjectRegister, make_register_instance
 
     Register = ObjectRegister()
     register_instance = make_register_instance(Register)

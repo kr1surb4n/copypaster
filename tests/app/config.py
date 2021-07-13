@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-from app.config import Config
-
 
 def test_config():
+    from app.config import Config
+
+
     assert True

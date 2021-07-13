@@ -46,21 +46,3 @@ class Builder(Gtk.Builder):
         r = Gtk.Builder.do_get_type_from_name(self, type_name)
         print('GtkBuilder: => {}\t{}'.format(type_name, r))
         return r
-
-
-builder = Builder()
-
-
-def test_builder_happy_path():
-    builder = Builder()
-
-    missing = 'missing'
-    mycustomtype = 'mycustomtype'
-
-    class MyCustomType:
-        ...
-
-    builder.add_custom_object(mycustomtype, MyCustomType)
-
-    assert builder.do_get_type_from_name(mycustomtype) == MyCustomType
-    assert isinstance(builder.do_get_type_from_name(missing), GObject.GType)
