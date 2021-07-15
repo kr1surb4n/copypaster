@@ -115,11 +115,16 @@ servedocs: docs ## compile the docs watching for changes
 
 
 test: ## run tests quickly with the default Python
-	pytest -q --no-summary --log-level=ERROR tests/app/*.py
-	pytest -q --no-summary --log-level=ERROR tests/integrations/app/application.py
-	pytest -q --no-summary --log-level=ERROR tests/integrations/app/cli.py
-	pytest -q --no-summary --log-level=ERROR tests/integrations/app/main.py
-
+	pytest -q --log-level=ERROR tests/test_app.py
+	pytest -q --log-level=ERROR tests/test_copypaster.py
+	pytest -q --log-level=ERROR tests/app/*.py
+	pytest -q --log-level=ERROR tests/copypaster/*.py
+	pytest -q --log-level=ERROR tests/behaviors/app/*.py
+	pytest -q --log-level=ERROR tests/behaviors/copypaster/*.py
+	pytest -q --log-level=ERROR tests/integrations/app/cli.py
+	pytest -q --log-level=ERROR tests/integrations/app/main.py
+	pytest -q --log-level=ERROR tests/integrations/copypaster/cli.py
+	pytest -q --log-level=ERROR tests/integrations/copypaster/main.py
 # test:
 # 	python -m pytest \
 # 		-v \

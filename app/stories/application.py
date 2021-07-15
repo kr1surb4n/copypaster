@@ -28,7 +28,3 @@ def load_styles():
 @subscribe
 def reset_styles(*args):
     __.Style.reset_styles()
-
-
-def test_application_stories():
-    raise NotImplementedError("Tests for application stories are missing")

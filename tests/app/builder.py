@@ -15,7 +15,7 @@ def test_builder_custom_widget():
         ...
 
     CUSTOM_WIDGET = 'CustomWidget'
-    TEST_GLADE_FILE = join(dirname(__file__), 'example_custom.glade')
+    TEST_GLADE_FILE = join(dirname(dirname(__file__)), 'fixtures/example_custom.glade')
 
     builder = Builder()
 
@@ -32,7 +32,7 @@ def test_builder_custom_widget():
 def test_if_builder_fails_without_a_custom_class():
     from app.builder import Builder
 
-    TEST_GLADE_FILE = join(dirname(__file__), 'example_custom.glade')
+    TEST_GLADE_FILE = join(dirname(dirname(__file__)), 'fixtures/example_custom.glade')
 
     builder = Builder()
 
